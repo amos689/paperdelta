@@ -49,6 +49,27 @@ def parser() -> argparse.ArgumentParser:
     commands = root.add_subparsers(dest="command", required=True)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
+    guide = commands.add_parser("guide", help=tr("cli.guide"))
+    repair = commands.add_parser("repair", help=tr("cli.repair"))
+    repair_commands = repair.add_subparsers(dest="repair_command", required=True)
+    repair_scan = repair_commands.add_parser("scan", help=tr("cli.repair_scan"))
+    repair_scan.add_argument("--baseline", help=tr("cli.repair_baseline"))
+    repair_guide = repair_commands.add_parser("guide", help=tr("cli.repair_guide"))
+    repair_guide.add_argument("--baseline", help=tr("cli.repair_baseline"))
+    repair_propose = repair_commands.add_parser("propose", help=tr("cli.repair_propose"))
+    repair_propose.add_argument("--binding", required=True, help=tr("cli.repair_binding"))
+    target = repair_propose.add_mutually_exclusive_group(required=True)
+    target.add_argument("--candidate", help=tr("cli.repair_candidate"))
+    target.add_argument("--exact", help=tr("cli.repair_exact"))
+    repair_propose.add_argument("--file", help=tr("cli.repair_file"))
+    repair_propose.add_argument("--rationale", required=True, help=tr("cli.repair_rationale"))
+    repair_propose.add_argument("--baseline", help=tr("cli.repair_baseline"))
+    repair_propose.add_argument("--out", required=True)
+    repair_apply = repair_commands.add_parser("apply", help=tr("cli.repair_apply"))
+    repair_apply.add_argument("proposal")
+    repair_accept = repair_apply.add_mutually_exclusive_group()
+    repair_accept.add_argument("--accept", action="append", help=tr("cli.repair_accept"))
+    repair_accept.add_argument("--interactive", action="store_true", help=tr("cli.help.17"))
     settings = commands.add_parser("settings", help=tr("cli.settings"))
     settings.add_argument(
         "--language", choices=["en", "zh-CN", "auto"], help=tr("cli.save_language")
@@ -66,6 +87,8 @@ def parser() -> argparse.ArgumentParser:
             "review-record",
             "snapshot",
             "report",
+            "binding-draft",
+            "repair-proposal",
         ],
     )
     check = commands.add_parser("check", help=tr("cli.help.6"))
@@ -113,6 +136,11 @@ def parser() -> argparse.ArgumentParser:
     record.add_argument("--attest-reviewed", action="store_true", required=True)
     for command, default in (
         (doctor, "text"),
+        (guide, "text"),
+        (repair_scan, "json"),
+        (repair_guide, "text"),
+        (repair_propose, "text"),
+        (repair_apply, "text"),
         (settings, "text"),
         (init, "json"),
         (propose, "text"),
@@ -186,6 +214,24 @@ def _main(argv: list[str]) -> int:
     arguments = parser().parse_args(argv)
     project = Project(Path(arguments.project))
     try:
+        if arguments.command == "repair":
+            return _repair(project, arguments)
+        if arguments.command == "guide":
+            from paperdelta.guided import guide_bindings
+
+            result = guide_bindings(
+                project, arguments.config, input_stream=sys.stdin, output=sys.stderr
+            )
+            _output(
+                arguments,
+                result,
+                tr(
+                    "cli.binding_result",
+                    status=tr("status." + result["status"]),
+                    count=len(result.get("bindings", [])),
+                ),
+            )
+            return 0
         if arguments.command == "doctor":
             from paperdelta.doctor import diagnose, doctor_text
 
@@ -205,10 +251,12 @@ def _main(argv: list[str]) -> int:
             )
             return 0
         if arguments.command == "schema":
+            from paperdelta.builder import BindingDraft
             from paperdelta.models import Config
             from paperdelta.onboarding import Proposal, ProposalInput
             from paperdelta.patches import Patch
             from paperdelta.records import FigureRecord, ReviewRecord, Snapshot, StoredReport
+            from paperdelta.repairs import RepairProposal
 
             schemas = {
                 "config": Config,
@@ -219,6 +267,8 @@ def _main(argv: list[str]) -> int:
                 "review-record": ReviewRecord,
                 "snapshot": Snapshot,
                 "report": StoredReport,
+                "binding-draft": BindingDraft,
+                "repair-proposal": RepairProposal,
             }
             print(json_text(schemas[arguments.kind].model_json_schema()), end="")
             return 0
@@ -409,3 +459,69 @@ def _output(arguments, result: dict, text: str) -> None:
         )
     else:
         print(text, end="" if text.endswith("\n") else "\n")
+
+
+def _repair(project, arguments):
+    from paperdelta.repairs import (
+        accept_repairs,
+        confirm_repairs,
+        guide_repairs,
+        inspect_repair,
+        propose_repairs,
+        repair_text,
+        scan_repairs,
+    )
+
+    if arguments.repair_command == "scan":
+        result = scan_repairs(project, arguments.config, arguments.baseline)
+        _output(arguments, result, repair_text(result))
+    elif arguments.repair_command == "guide":
+        result = guide_repairs(
+            project, arguments.config, arguments.baseline, input_stream=sys.stdin, output=sys.stderr
+        )
+        _output(
+            arguments,
+            result,
+            tr(
+                "cli.binding_result",
+                status=tr("status." + result["status"]),
+                count=len(result["bindings"]),
+            ),
+        )
+    elif arguments.repair_command == "propose":
+        choice = {
+            "binding": arguments.binding,
+            "candidate_id": arguments.candidate,
+            "file": arguments.file,
+            "anchor": {"exact": arguments.exact} if arguments.exact else None,
+            "rationale": arguments.rationale,
+        }
+        proposal = propose_repairs(
+            project, [choice], config_path=arguments.config, baseline=arguments.baseline
+        )
+        project.write(arguments.out, json_text(proposal).encode("utf-8"), exclusive=True)
+        _output(
+            arguments,
+            {"status": "proposed", "path": arguments.out, "repair_id": proposal["repair_id"]},
+            tr("cli.output.1", value1=arguments.out),
+        )
+    else:
+        text, _ = project.text(arguments.proposal)
+        value = parse_json(text)
+        if arguments.accept:
+            result = accept_repairs(project, value, arguments.accept)
+        elif arguments.interactive:
+            result = confirm_repairs(project, value, input_stream=sys.stdin, output=sys.stderr)
+        else:
+            _, _, result = inspect_repair(project, value)
+        description = (
+            repair_text(result)
+            if "changes" in result
+            else tr(
+                "cli.binding_result",
+                status=tr("status." + result["status"]),
+                count=len(result.get("bindings", [])),
+            )
+        )
+        _output(arguments, result, description)
+    return 0

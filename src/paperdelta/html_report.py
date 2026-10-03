@@ -356,7 +356,7 @@ def html_report(report: dict) -> str:
         )
 
     baseline = report["baseline"]["name"] if report["baseline"] else msg("html.no_baseline")
-    impacts_html = "".join(impact_cards) or f'<p>{t("html.no_impacts")}</p>'
+    impacts_html = "".join(impact_cards) or f"<p>{t('html.no_impacts')}</p>"
     body = f"""<header><div class="topline">{t("html.eyebrow")}
 <label class="language-control">{t("html.language")} <select id="language" disabled {labels.attr("aria-label", "html.language")}>
 <option value="en" {"selected" if labels.language == "en" else ""}>English</option>

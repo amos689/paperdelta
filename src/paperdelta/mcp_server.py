@@ -52,6 +52,98 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         """Validate an unaccepted proposal. Exact JSON text preserves decimal selectors."""
         return call(session.propose_bindings, additions_json, rationale)
 
+    @server.tool(annotations=annotations, description=tr("agent.draft_start"))
+    def start_binding_draft() -> dict[str, Any]:
+        return call(session.start_binding_draft)
+
+    @server.tool(annotations=annotations, description=tr("agent.draft_source"))
+    def add_draft_source(
+        draft_json: str,
+        name: str,
+        path: str,
+        format: str,
+        columns: dict[str, str] | None = None,
+        primary_key: list[str] | None = None,
+    ) -> dict[str, Any]:
+        return call(session.add_draft_source, draft_json, name, path, format, columns, primary_key)
+
+    @server.tool(annotations=annotations, description=tr("agent.draft_metric"))
+    def add_draft_metric(
+        draft_json: str,
+        name: str,
+        source: str,
+        field: str,
+        unit: str,
+        reduce: str,
+        where: dict[str, str] | None = None,
+        expected_count: int | None = None,
+        seed_column: str = "seed",
+        expected_seeds: list[str] | None = None,
+    ) -> dict[str, Any]:
+        return call(
+            session.add_draft_metric,
+            draft_json,
+            name,
+            source,
+            field,
+            unit,
+            reduce,
+            where,
+            expected_count,
+            seed_column,
+            expected_seeds,
+        )
+
+    @server.tool(annotations=annotations, description=tr("agent.draft_derived"))
+    def add_draft_derived(
+        draft_json: str, name: str, operation: str, left: str, right: str
+    ) -> dict[str, Any]:
+        return call(session.add_draft_derived, draft_json, name, operation, left, right)
+
+    @server.tool(annotations=annotations, description=tr("agent.draft_locations"))
+    def add_draft_locations(
+        draft_json: str,
+        metric: str,
+        candidate_ids: list[str],
+        names: list[str],
+        display_kind: str,
+        places: int,
+        percent_symbol: bool,
+        rationale: str,
+    ) -> dict[str, Any]:
+        return call(
+            session.add_draft_locations,
+            draft_json,
+            metric,
+            candidate_ids,
+            names,
+            display_kind,
+            places,
+            percent_symbol,
+            rationale,
+        )
+
+    @server.tool(annotations=annotations, description=tr("agent.draft_finish"))
+    def finish_binding_draft(draft_json: str) -> dict[str, Any]:
+        return call(session.finish_binding_draft, draft_json)
+
+    @server.tool(annotations=annotations, description=tr("agent.repair_scan"))
+    def scan_binding_repairs(baseline: str | None = None) -> dict[str, Any]:
+        return call(session.scan_binding_repairs, baseline)
+
+    @server.tool(annotations=annotations, description=tr("agent.repair_propose"))
+    def propose_binding_repair(
+        binding: str,
+        rationale: str,
+        candidate_id: str | None = None,
+        file: str | None = None,
+        exact: str | None = None,
+        baseline: str | None = None,
+    ) -> dict[str, Any]:
+        return call(
+            session.propose_binding_repair, binding, rationale, candidate_id, file, exact, baseline
+        )
+
     @server.tool(annotations=annotations, description=tr("agent.explain"))
     def explain_finding(finding_id: str) -> dict[str, Any]:
         """Recheck and return a finding's text, comparison and selected evidence."""

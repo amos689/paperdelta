@@ -5,6 +5,7 @@ from __future__ import annotations
 from copy import deepcopy
 from decimal import Decimal
 
+from paperdelta import builder
 from paperdelta.analysis import check_project
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import current_language, msg, tr, translated
@@ -60,6 +61,139 @@ class AgentSession:
             "proposal_id": value["proposal_id"],
             "proposal_json": json_text(value),
             "next": tr("agent.next_binding"),
+        }
+
+    def _draft_view(self, value):
+        preview = builder.inspect_draft(self.project, value)
+        for state in preview["metrics"].values():
+            for source in state["evidence"]:
+                source["records"] = source["records"][:10]
+                source["locations"] = source["locations"][:10]
+        return {
+            "status": "draft",
+            "draft_json": json_text(value),
+            "preview": _wire(preview),
+            "next": tr("agent.next_draft"),
+        }
+
+    def start_binding_draft(self):
+        value = builder.start_draft(self.project, self.config_path)
+        return {**self._draft_view(value), "discovery": self.scan_project()}
+
+    def add_draft_source(self, draft_json, name, path, format, columns, primary_key):
+        return self._draft_view(
+            builder.add_source(
+                self.project,
+                parse_json(draft_json),
+                name=name,
+                path=path,
+                format=format,
+                columns=columns,
+                primary_key=primary_key,
+            )
+        )
+
+    def add_draft_metric(
+        self,
+        draft_json,
+        name,
+        source,
+        field,
+        unit,
+        reduce,
+        where,
+        expected_count,
+        seed_column,
+        expected_seeds,
+    ):
+        return self._draft_view(
+            builder.add_metric(
+                self.project,
+                parse_json(draft_json),
+                name=name,
+                source=source,
+                field=field,
+                unit=unit,
+                reduce=reduce,
+                where=where,
+                expected_count=expected_count,
+                seed_column=seed_column,
+                expected_seeds=expected_seeds,
+            )
+        )
+
+    def add_draft_derived(self, draft_json, name, operation, left, right):
+        return self._draft_view(
+            builder.add_derived(
+                self.project,
+                parse_json(draft_json),
+                name=name,
+                operation=operation,
+                left=left,
+                right=right,
+            )
+        )
+
+    def add_draft_locations(
+        self,
+        draft_json,
+        metric,
+        candidate_ids,
+        names,
+        display_kind,
+        places,
+        percent_symbol,
+        rationale,
+    ):
+        return self._draft_view(
+            builder.add_occurrences(
+                self.project,
+                parse_json(draft_json),
+                metric=metric,
+                candidate_ids=candidate_ids,
+                names=names,
+                display_kind=display_kind,
+                places=places,
+                percent_symbol=percent_symbol,
+                rationale=rationale,
+            )
+        )
+
+    def finish_binding_draft(self, draft_json):
+        value = builder.finalize_draft(self.project, parse_json(draft_json))
+        return {
+            "status": "proposed",
+            "proposal_id": value["proposal_id"],
+            "proposal_json": json_text(value),
+            "next": tr("agent.next_binding"),
+        }
+
+    def scan_binding_repairs(self, baseline=None):
+        from paperdelta.repairs import scan_repairs
+
+        return _wire(translated(scan_repairs(self.project, self.config_path, baseline)))
+
+    def propose_binding_repair(self, binding, rationale, candidate_id, file, exact, baseline):
+        from paperdelta.repairs import inspect_repair, propose_repairs
+
+        choice = {
+            "binding": binding,
+            "rationale": rationale,
+            "candidate_id": candidate_id,
+            "file": file,
+            "anchor": {"exact": exact} if exact is not None else None,
+        }
+        proposal = propose_repairs(
+            self.project, [choice], config_path=self.config_path, baseline=baseline
+        )
+        _, _, preview = inspect_repair(self.project, proposal)
+        return {
+            "status": "proposed",
+            "repair_json": json_text(proposal),
+            "repair_id": proposal["repair_id"],
+            "changes": _wire(preview["changes"]),
+            "preview": compact_report(preview["preview"]),
+            "next": tr("agent.next_repair"),
         }
 
     def explain_finding(self, finding_id: str) -> dict:
