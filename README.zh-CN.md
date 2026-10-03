@@ -1,11 +1,24 @@
-# PaperDelta
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/paperdelta-logo-dark.svg">
+    <img src="docs/assets/brand/paperdelta-logo.svg" alt="PaperDelta" width="440">
+  </picture>
+</h1>
 
-[English](README.md)
+<p align="center">
+  <strong>检查实验结果变化影响了现有论文的哪些位置。</strong>
+</p>
 
-[![检查状态](https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg)](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
-[下载发行版](https://github.com/amos689/paperdelta/releases) · [反馈问题](https://github.com/amos689/paperdelta/issues/new/choose)
+<p align="center">
+  <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
+</p>
 
-**检查实验结果变化影响了现有论文的哪些位置。**
+<p align="center">
+  <a href="README.md">English</a> · <strong>简体中文</strong> ·
+  <a href="docs/zh-CN/quickstart.md">快速开始</a> ·
+  <a href="https://github.com/amos689/paperdelta/releases">下载发行版</a> ·
+  <a href="https://github.com/amos689/paperdelta/issues/new/choose">问题反馈</a>
+</p>
 
 准确率从 **84.1% 变成 80.9%**，论文的摘要、表格和附录却还保留旧值，正文仍报告
 **3.1 个百分点**的提升、声称优于 **81.0%** 的基线，结果图也没有更新。PaperDelta

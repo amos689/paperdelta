@@ -2,6 +2,7 @@
 
 import json
 import re
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -9,10 +10,27 @@ ROOT = Path(__file__).resolve().parents[1]
 LINK = re.compile(r"!?\[[^\]\n]*\]\(([^)\n]+)\)")
 
 
+class HTMLLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.targets = []
+
+    def handle_starttag(self, tag, attrs):
+        for name, value in attrs:
+            if value and name in {"href", "src"}:
+                self.targets.append(value)
+            elif value and name == "srcset":
+                self.targets.extend(
+                    item.strip().split()[0] for item in value.split(",") if item.strip()
+                )
+
+
 def local_links(path):
     text = re.sub(r"```.*?```", "", path.read_text("utf-8"), flags=re.DOTALL)
-    for match in LINK.finditer(text):
-        target = match[1].split(' "', 1)[0].strip("<>")
+    markup = HTMLLinks()
+    markup.feed(text)
+    targets = [match[1].split(' "', 1)[0].strip("<>") for match in LINK.finditer(text)]
+    for target in [*targets, *markup.targets]:
         parsed = urlsplit(target)
         if parsed.scheme or parsed.netloc or not parsed.path:
             continue

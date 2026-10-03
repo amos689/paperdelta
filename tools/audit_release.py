@@ -165,6 +165,7 @@ def main():
     required += [name for pair in translations["pairs"] for name in pair.values()]
     required += translations["aliases"] + ["docs/translations.json"]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.2").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix()
         for case in ("ambiguous-table", "unicode-macro")

@@ -1,11 +1,24 @@
-# PaperDelta
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/paperdelta-logo-dark.svg">
+    <img src="docs/assets/brand/paperdelta-logo.svg" alt="PaperDelta" width="440">
+  </picture>
+</h1>
 
-[简体中文](README.zh-CN.md)
+<p align="center">
+  <strong>Review how experiment changes affect an existing research paper.</strong>
+</p>
 
-[![Checks](https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg)](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
-[Releases](https://github.com/amos689/paperdelta/releases) · [Report a problem](https://github.com/amos689/paperdelta/issues/new/choose)
+<p align="center">
+  <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
+</p>
 
-**Review how experiment changes affect an existing research paper.**
+<p align="center">
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="docs/quickstart.md">Quick start</a> ·
+  <a href="https://github.com/amos689/paperdelta/releases">Releases</a> ·
+  <a href="https://github.com/amos689/paperdelta/issues/new/choose">Feedback</a>
+</p>
 
 An accuracy value changes from **84.1% to 80.9%**. The paper still repeats the old
 number in its abstract, table and appendix, reports a **3.1 percentage point**
