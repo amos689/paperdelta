@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-03T07:45:09.641782+00:00",
+  "file": "paperdelta-0.2.0a1-mac-codex-transfer.zip",
+  "bytes": 10183054,
+  "sha256": "19eda37658d7ff9e78f802053374a95531610819f9115c3c026461b60ad3f4f7",
+  "members_verified": 1061,
+  "manifest_files_verified": 1060,
+  "unchanged_runtime_files": 32,
+  "unchanged_test_files": 26,
+  "unchanged_tool_files": 29,
+  "unchanged_wheel_sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78",
+  "base_transfer_sha256": "3988c81368d18ff32f6993ad61719189b58b5f69dfd23153cee003b91dc832fd",
+  "source_commit": "5ea7d27e28e5308f6ef3cf5ab4c7f807fb575f64",
+  "documentation_overlays": [
+    "MAC_CODEX_HANDOFF.md",
+    "MAC_CODEX_HANDOFF.en.md",
+    "START_ON_MAC.md",
+    "START_ON_MAC.en.md",
+    "docs/translations.json"
+  ],
+  "reference_supplements": 21,
+  "restored_frozen_evaluation_files": 87,
+  "extracted_documentation_check": {
+    "pairs": 29,
+    "pages": 59,
+    "local_links": 539
+  },
+  "contains_host_environments_or_model_weights": false,
+  "macos_execution_verified": false,
+  "validation_scope": "Windows archive integrity, source identity and extracted documentation; no Mac execution"
+}

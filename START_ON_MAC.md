@@ -2,16 +2,98 @@
 
 [English](START_ON_MAC.en.md)
 
-已通过本地验收的 v0.2 候选对应迁移包位于开发目录的
-`build/mac-transfer-v0.2/paperdelta-0.2.0a1-mac-transfer.zip`。
-请使用这个 0.2.0a1 包，0.1.0a2 迁移包保留为历史版本。以下步骤适用于匹配源码和 wheel
-的便携包，具体版本见包内 `TRANSFER.json`。包包含源码、文档、测试、
-原创示例和 Python wheel；不含 Windows 虚拟环境、临时结果或本地模型权重。
-尚未取得真实 Mac 的运行结果，下面的命令用于开始使用及补充验证。
+**交给 Mac 上的 Codex 工作，请使用新增的 Codex 交接版：**
+`build/mac-transfer-v0.2-codex/paperdelta-0.2.0a1-mac-codex-transfer.zip`。
+同目录的 `SHA256SUMS` 是校验文件；两个文件一起拷贝。原先的
+`build/mac-transfer-v0.2/` 保留不动。
+
+交接版保留已验收 0.2.0a1 wheel 和运行源码，补充双语交接提示词、完整文档引用材料
+及修改基线。包含源码、测试、示例和历史证据，不含 Windows 虚拟环境、模型权重或
+Git 历史。论文评测材料保留[各自的许可证](THIRD_PARTY_NOTICES.zh-CN.md)。
+尚未取得真实 Mac 的运行结果；这是让 Mac Codex 开始验证和必要修复的工作包。
+
+## 推荐：把项目交给 Mac Codex
+
+### 1. 在 Windows 拷贝两个文件
+
+在资源管理器打开本项目的 `build/mac-transfer-v0.2-codex` 文件夹。
+把 ZIP 和 `SHA256SUMS` 一起复制到能在两台电脑上使用的 U 盘、移动硬盘或你已有的网盘。
+不用拷贝整个 Windows 工作目录，也不用先把项目上传 GitHub。
+
+### 2. 在 Mac 保存并解压
+
+把这两个文件先复制到 Mac 本机，例如“下载”中的 `PaperDelta-transfer` 文件夹。
+双击 ZIP，得到 `paperdelta-0.2.0a1` 文件夹。把它移动到一个长期保存的位置，
+例如个人目录下的 `Developer` 文件夹；没有 `Developer` 就在 Finder 中创建。
+建议使用本机磁盘上的目录。
+
+确认打开项目文件夹后直接看见 `pyproject.toml`、`src`、`tests`、`install`、
+`MAC_CODEX_HANDOFF.md` 和 `TRANSFER.json`。如果只看见另一个同名文件夹，继续进入一层。
+保留原 ZIP 和校验文件，后面可能需要核对修改前的内容。
+
+可选手动校验：打开“终端”，输入 `cd `（末尾保留空格），将**存放 ZIP 和
+SHA256SUMS 的文件夹**拖入终端，按回车，再执行：
+
+```sh
+shasum -a 256 -c SHA256SUMS
+```
+
+应出现 `paperdelta-0.2.0a1-mac-codex-transfer.zip: OK`。
+不熟悉终端可以跳过这一步，提示词会让 Codex 核对解压后每个文件。
+
+### 3. 在 Mac 的 Codex 中打开本地项目
+
+打开并登录 Mac 上的 Codex。通过“添加项目/打开文件夹”一类的入口，选择刚才的
+`paperdelta-0.2.0a1` 文件夹，然后在这个项目中新建对话。
+如果界面使用“Projects → 项目菜单 → Edit project → Add folder”，将同一文件夹
+添加为本地项目的主目录。不同版本名称可能不同，关键是让对话实际访问这个本机目录。
+只把 ZIP 当附件发给一个普通聊天，不能代替打开本地项目。
+这里使用的是[官方文档中的本地项目工作方式](https://learn.chatgpt.com/docs/projects)。
+
+### 4. 原样发送这段启动提示词
+
+```text
+当前打开的文件夹是 PaperDelta 的 Mac 交接项目。请先完整阅读
+MAC_CODEX_HANDOFF.md，再核对 TRANSFER.json 和 handoff/BASELINE.json。
+按照交接文件完成本机原生 macOS 验证、必要的兼容性修复和中英文文档同步。
+我授权你在这个项目内创建环境、安装项目依赖、修改必要代码并运行测试；
+由你作为开发者和第一位使用者验收，不安排真人用户测试。
+不要发布或推送。请保留真实失败记录，最终生成交接文件要求的回传 ZIP、
+SHA256 校验文件、中英文报告、代码差异和测试证据，告诉我应拷贝哪两个文件回 Windows。
+先检查项目和环境，然后直接开始；只有确实需要我操作系统安装或授权时再说明原因。
+```
+
+完整的[中文交接提示词](MAC_CODEX_HANDOFF.md)和[英文版](MAC_CODEX_HANDOFF.en.md)
+已随包保存。那边可以通过这两份文件取得背景，不需要你重述整个开发过程。
+
+### 5. 等 Mac Codex 完成并带回结果
+
+Codex 会检查 Mac 架构、Python 和 Git，建立 Mac 自己的环境，再运行安装包测试。
+如缺少合适 Python 或 Git，让它说明最少需要你完成的安装；不必提前安装整套开发工具。
+安装依赖需要联网，PaperDelta 的日常检查本身不需要模型密钥、GPU 或 TeX。
+
+完成后，它应给出两个文件：`PaperDelta-Mac-Return-时间戳.zip` 和对应的
+`.sha256`。ZIP 应包含双语结论、修复文件和补丁、安装包身份、测试日志、JUnit、
+未解决项；没有代码修改时也要返回测试证据。中途失败也应保留并回传记录。
+
+把这两个文件复制回 Windows 本项目新建的 `build/mac-return-inbox/` 目录，
+不要直接覆盖现有源码。然后在**Windows 这条对话**发送：
+
+```text
+Mac 的 Codex 已完成本轮工作，回传文件放在 build/mac-return-inbox/。
+请先核对回传包、基线、修改和测试证据，再合并必要修复，运行 Windows 回归，
+更新双语说明和发布候选。如果仍有 Mac 未验证项，请明确列出。
+```
+
+回传包是两边衔接的依据；不要依赖新对话自动知道本次历史或自动发送结果。
+
+## 手动操作参考
+
+以下步骤可由 Mac Codex 执行，你采用上述交接方式时无需再手动运行一遍。
 
 ## 1. 拷贝和解压
 
-将新构建的 `paperdelta-VERSION-mac-transfer.zip` 通过 U 盘、移动硬盘或网盘复制到
+将交接 ZIP 通过 U 盘、移动硬盘或网盘复制到
 Mac，双击解压，把解压后的 `paperdelta-VERSION` 文件夹放到希望保存的位置。
 不要从 Windows 复制 `.venv`：Python 环境要在 Mac 上重新建立。
 
@@ -81,5 +163,5 @@ Apple Silicon 请使用原生 arm64 Python；脚本发现 Rosetta 转译时会�
 无需上传整个虚拟环境。
 
 详细的架构与验证范围见 [macOS 适配说明](docs/zh-CN/macos.md)。
-`install/paperdelta-evaluation-VERSION.zip` 是可选的真实论文评测材料，
-有单独的许可说明；上述使用和测试步骤不要求解压它。
+`install/paperdelta-evaluation-VERSION.zip` 保存真实论文评测材料及其许可。
+Codex 交接版已经按原路径补齐文档所引用的冻结材料，无需再解压此内层 ZIP。

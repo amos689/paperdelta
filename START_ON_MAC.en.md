@@ -2,17 +2,108 @@
 
 [简体中文](START_ON_MAC.md)
 
-The locally accepted v0.2 candidate has a matching transfer at
-`build/mac-transfer-v0.2/paperdelta-0.2.0a1-mac-transfer.zip` in the development checkout.
-Use this 0.2.0a1 package; the 0.1.0a2 transfer remains historical. These steps apply
-to the portable source/wheel package;
-its version is in `TRANSFER.json`. It includes source, docs, tests, owned examples
-and a Python wheel, excluding Windows environments, temporary results and model
-weights. No native Mac pass has been recorded.
+**To work with Codex on the Mac, use the new Codex handoff edition:**
+`build/mac-transfer-v0.2-codex/paperdelta-0.2.0a1-mac-codex-transfer.zip`.
+Copy its neighboring `SHA256SUMS` too. The original `build/mac-transfer-v0.2/`
+is preserved.
+
+This edition retains the accepted 0.2.0a1 wheel and runtime source, adding bilingual
+handoff prompts, referenced documentation materials and a change baseline. It
+contains source, tests, examples and historical evidence, without Windows
+environments, model weights or Git history. Paper materials retain their
+[individual licenses](THIRD_PARTY_NOTICES.md). Native Mac execution is still pending;
+this is a working package for validation and necessary fixes on the Mac.
+
+## Recommended: hand the project to Mac Codex
+
+### 1. Copy two files from Windows
+
+Open `build/mac-transfer-v0.2-codex` in File Explorer. Copy the ZIP and `SHA256SUMS`
+using a drive accessible to both computers or your existing cloud drive. There is
+no need to copy the whole Windows workspace or upload the project to GitHub first.
+
+### 2. Save and extract on the Mac
+
+Copy both files onto the Mac, for example into `PaperDelta-transfer` in Downloads.
+Double-click the ZIP. Move the resulting `paperdelta-0.2.0a1` folder to a permanent
+local location, such as a `Developer` folder in your home directory. Create that
+folder in Finder if necessary.
+
+The project folder should directly contain `pyproject.toml`, `src`, `tests`,
+`install`, `MAC_CODEX_HANDOFF.md` and `TRANSFER.json`. If you see only another folder
+with the same name, open that inner folder. Keep the original ZIP and checksum.
+
+Optional manual checksum: in Terminal type `cd ` with a trailing space, drag the
+**folder containing the ZIP and SHA256SUMS** into Terminal, press Return, then run:
+
+```sh
+shasum -a 256 -c SHA256SUMS
+```
+
+Expect `paperdelta-0.2.0a1-mac-codex-transfer.zip: OK`. You can leave this to Codex
+if unfamiliar with Terminal; the prompt also requires checking every extracted file.
+
+### 3. Open a local project in Mac Codex
+
+Open Codex and sign in. Use its Add project/Open folder entry to choose the
+extracted `paperdelta-0.2.0a1` directory, then start a chat in that project. If your
+version uses Projects → project menu → Edit project → Add folder, add the same
+folder as the local project's primary directory. Labels vary by version; the chat
+must have access to that local folder. Attaching a ZIP to an ordinary chat does
+not replace opening the local project. See the
+[official local-project documentation](https://learn.chatgpt.com/docs/projects).
+
+### 4. Send this starter prompt
+
+```text
+The open folder is the PaperDelta Mac handoff project. Read MAC_CODEX_HANDOFF.en.md
+in full, then verify TRANSFER.json and handoff/BASELINE.json. Follow the handoff
+to perform native macOS validation, necessary compatibility fixes and bilingual
+documentation updates. I authorize project-local environments, dependency installs,
+necessary code changes and tests. Act as developer and first user; no human user
+study is required. Do not publish or push. Preserve real failures. Return the
+required ZIP, SHA256 file, English/Chinese reports, code diff and test evidence,
+and identify the two files to copy back to Windows. Inspect the project and host,
+then proceed; explain only system installations or approvals that require me.
+```
+
+The full [English handoff](MAC_CODEX_HANDOFF.en.md) and
+[Chinese handoff](MAC_CODEX_HANDOFF.md) contain the background, so you do not need
+to reconstruct the development conversation.
+
+### 5. Bring the result back
+
+Codex checks the architecture, Python and Git, creates fresh environments and runs
+the installed-wheel checks. If Python or Git is missing, let it explain the minimum
+installation needed; you do not need to install an entire development toolchain
+in advance. Dependency installation uses the network; everyday PaperDelta checks
+need no model key, GPU or TeX.
+
+Expect `PaperDelta-Mac-Return-TIMESTAMP.zip` and its `.sha256` file. The ZIP should
+contain bilingual conclusions, changed files and a patch, artifact identities,
+logs, JUnit and unresolved issues. Return evidence even when no code changed or a
+run failed.
+
+Copy the two files to a new `build/mac-return-inbox/` directory in the Windows
+project, preserving the existing source. Send this in **the original Windows chat**:
+
+```text
+Mac Codex has finished this round. The return files are in build/mac-return-inbox/.
+Please verify the package, baseline, changes and test evidence, then merge necessary
+fixes, run Windows regressions, and update bilingual docs and the release candidate.
+List any Mac checks still unverified.
+```
+
+The return package connects the two workspaces. Do not depend on a new chat knowing
+this conversation or automatically sending its results back.
+
+## Manual reference
+
+Mac Codex can run the steps below; you need not repeat them yourself.
 
 ## Copy and extract
 
-Copy the rebuilt `paperdelta-VERSION-mac-transfer.zip` using a USB drive, external
+Copy the handoff ZIP using a USB drive, external
 disk or cloud drive. Extract it and put `paperdelta-VERSION` where you want to keep
 the project. Recreate the Python environment; do not copy Windows `.venv`.
 
@@ -72,5 +163,6 @@ for repeated runs to preserve evidence.
 Send the final terminal result back to this chat. On failure keep
 `build/mac-validation/evidence.json` and its `.log` files; there is no need to upload
 the virtual environments. [macOS preparation](docs/macos.md) explains the scope.
-`install/paperdelta-evaluation-VERSION.zip` contains optional separately licensed
-paper evaluation materials and is not needed for these checks.
+`install/paperdelta-evaluation-VERSION.zip` retains the paper evaluation materials
+and their licenses. The Codex edition already includes the frozen materials used
+by documentation links at their original paths; do not extract the inner ZIP again.
