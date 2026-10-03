@@ -2,6 +2,8 @@
 
 [简体中文](zh-CN/demo.md)
 
+Current release: [0.3.0](v0.3.md), including the [installed demo and new workflows](workflows.md). Earlier version-specific records below remain historical.
+
 Watch the v0.2 report in [English](assets/v0.2/demo.en.webm) or
 [Simplified Chinese](assets/v0.2/demo.zh-CN.webm). Each recording has matching interface
 text and captions. The report itself switches languages in the same offline file.

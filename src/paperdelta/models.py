@@ -6,7 +6,15 @@ import re
 from decimal import Decimal
 from typing import Annotated, Literal, Self
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    StrictInt,
+    StrictStr,
+    model_serializer,
+    model_validator,
+)
 
 from paperdelta.errors import validation_error
 from paperdelta.i18n import msg
@@ -85,14 +93,32 @@ class DerivedMetric(StrictModel):
     args: Annotated[list[Identifier], Field(min_length=2, max_length=2)]
 
 
+class TableCellAnchor(StrictModel):
+    headers: Annotated[list[str], Field(min_length=1, max_length=20)]
+    row_prefix: Annotated[list[str], Field(min_length=1, max_length=20)]
+    column: Annotated[int, Field(ge=1, le=100)]
+    percent_symbol: bool = False
+
+
 class Anchor(StrictModel):
     exact: str | None = None
     prefix: str | None = None
     suffix: str | None = None
+    table: TableCellAnchor | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if self.table is None:
+            value.pop("table", None)
+        return value
 
     @model_validator(mode="after")
     def exactly_one_mode(self) -> Self:
-        if self.exact is not None:
+        if self.table is not None:
+            if any(item is not None for item in (self.exact, self.prefix, self.suffix)):
+                raise validation_error(msg("validation.models.8"))
+        elif self.exact is not None:
             if not self.exact or self.prefix is not None or self.suffix is not None:
                 raise validation_error(msg("validation.models.8"))
         elif not self.prefix or not self.suffix:
@@ -150,8 +176,34 @@ class Figure(StrictModel):
     record: str | None = None
 
 
+class ReviewScope(StrictModel):
+    files: list[str] = Field(default_factory=list)
+    regions: list[Literal["abstract", "table"]] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def nonempty_selection(self) -> Self:
+        if not self.files and not self.regions:
+            raise validation_error(msg("scope.empty"))
+        if len(set(self.files)) != len(self.files) or len(set(self.regions)) != len(self.regions):
+            raise validation_error(msg("scope.duplicate"))
+        return self
+
+
+class CoverageExclusion(StrictModel):
+    file: str
+    anchor: Anchor
+    reason: str = Field(min_length=1, max_length=2000)
+    context_hash: Hash
+
+    @model_validator(mode="after")
+    def meaningful_reason(self) -> Self:
+        if not self.reason.strip():
+            raise validation_error(msg("scope.reason_required"))
+        return self
+
+
 class Config(StrictModel):
-    schema_version: VersionOne
+    schema_version: Annotated[int, Field(ge=1, le=2)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -160,9 +212,20 @@ class Config(StrictModel):
     claims: dict[Identifier, Claim] = Field(default_factory=dict)
     figures: dict[Identifier, Figure] = Field(default_factory=dict)
     require_complete_coverage: bool = False
+    review_scope: ReviewScope | None = None
+    coverage_exclusions: dict[Identifier, CoverageExclusion] = Field(default_factory=dict)
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if self.schema_version == 1 and (
+            self.review_scope
+            or self.coverage_exclusions
+            or any(
+                item.anchor.table is not None
+                for item in [*self.occurrences.values(), *self.claims.values()]
+            )
+        ):
+            raise validation_error(msg("scope.version"))
         dependencies: dict[str, list[str]] = {}
         for name, metric in self.metrics.items():
             if isinstance(metric, SourceMetric):

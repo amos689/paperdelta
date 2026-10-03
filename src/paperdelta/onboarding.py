@@ -234,6 +234,12 @@ def _merge(config: Config, additions: Additions) -> Config:
                 msg("error.BINDING_CONFLICT", group=group, value2=sorted(duplicates)),
             )
         value[group].update(entries)
+    if any(
+        item["anchor"].get("table")
+        for group in ("occurrences", "claims")
+        for item in value[group].values()
+    ):
+        value["schema_version"] = 2
     return validate_record(Config, value, "PROPOSAL_CONFIG")
 
 

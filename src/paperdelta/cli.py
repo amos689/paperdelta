@@ -47,6 +47,15 @@ def parser() -> argparse.ArgumentParser:
     root.add_argument("-C", "--project", default=".", help=tr("cli.help.2"))
     root.add_argument("--config", default="paperdelta.yaml", help=tr("cli.help.3"))
     commands = root.add_subparsers(dest="command", required=True)
+    from paperdelta.batch_cli import register_commands as register_batch
+    from paperdelta.coverage import register_commands as register_scope
+    from paperdelta.demo import register_commands as register_demo
+    from paperdelta.watch import register_commands as register_watch
+
+    register_scope(commands)
+    register_batch(commands)
+    register_watch(commands)
+    register_demo(commands)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
     guide = commands.add_parser("guide", help=tr("cli.guide"))
@@ -89,6 +98,9 @@ def parser() -> argparse.ArgumentParser:
             "report",
             "binding-draft",
             "repair-proposal",
+            "batch-request",
+            "batch-catalog",
+            "batch-selection",
         ],
     )
     check = commands.add_parser("check", help=tr("cli.help.6"))
@@ -214,6 +226,22 @@ def _main(argv: list[str]) -> int:
     arguments = parser().parse_args(argv)
     project = Project(Path(arguments.project))
     try:
+        if arguments.command == "demo":
+            from paperdelta.demo import run_command
+
+            return run_command(project, arguments)
+        if arguments.command == "watch":
+            from paperdelta.watch import run_command
+
+            return run_command(project, arguments)
+        if arguments.command == "batch":
+            from paperdelta.batch_cli import run_command
+
+            return run_command(project, arguments)
+        if arguments.command == "scope":
+            from paperdelta.coverage import run_command
+
+            return run_command(project, arguments)
         if arguments.command == "repair":
             return _repair(project, arguments)
         if arguments.command == "guide":
@@ -251,6 +279,7 @@ def _main(argv: list[str]) -> int:
             )
             return 0
         if arguments.command == "schema":
+            from paperdelta.batch import BatchCatalog, BatchRequest, BatchSelection
             from paperdelta.builder import BindingDraft
             from paperdelta.models import Config
             from paperdelta.onboarding import Proposal, ProposalInput
@@ -269,6 +298,9 @@ def _main(argv: list[str]) -> int:
                 "report": StoredReport,
                 "binding-draft": BindingDraft,
                 "repair-proposal": RepairProposal,
+                "batch-request": BatchRequest,
+                "batch-catalog": BatchCatalog,
+                "batch-selection": BatchSelection,
             }
             print(json_text(schemas[arguments.kind].model_json_schema()), end="")
             return 0

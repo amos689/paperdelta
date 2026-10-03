@@ -1,9 +1,9 @@
-# Report interchange contract, version 1
+# Report interchange contract, version 2
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records this alpha's contract.
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1 and 2).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
 
@@ -50,7 +50,7 @@ their ratio as result recall.
 
 The MCP/agent response adds `agent_view`, truncates evidence rows to ten, records
 their original totals, and encodes Decimals as strings for host compatibility.
-It is a **presentation view**, not a complete version-1 stored report. Do not
+It is a **presentation view**, not a complete stored report. Do not
 save it as a baseline or feed it to the stored-report validator. Obtain full JSON
 with the CLI/API for archival or independent verification.
 
@@ -58,10 +58,19 @@ Python consumers validating with `StoredReport` should call
 `model_dump(by_alias=True)` to preserve the wire field `coverage.pass`. Raw checker
 results already use wire names. Hashes identify content; they are not signatures.
 
-Stored version-1 JSON retains canonical English messages and stable machine codes.
+Stored JSON retains canonical English messages and stable machine codes.
 CLI text, Markdown, HTML and MCP explanations are localized presentation surfaces;
 original manuscript/data text is never translated. The same offline HTML switches
 languages while retaining its filter and disclosure state. See [language compatibility](languages.md).
 
 Breaking changes require a new schema version and migration documentation.
-Version 1 describes this alpha's interface; it does not imply release acceptance.
+New reports from 0.3.0 use version 2, adding `actions`, optional `watch` state, and
+`coverage.review_scope`, `outside_scope_numbers` and `exclusions`. Version 1 remains
+readable with those fields defaulted. Pending watch results have exit code 2 even
+when their retained earlier findings passed. Consumers must check the top-level
+exit code and watch state, not infer freshness from verdict counts.
+
+Configuration schema 2 adds scope/exclusions and table-cell anchors. Existing
+version-1 configurations keep their semantics and baseline identity; explicit
+acceptance of a new feature upgrades the configuration with a backup. See
+[workflow migration](workflows.md).

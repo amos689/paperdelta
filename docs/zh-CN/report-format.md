@@ -1,9 +1,9 @@
-# 报告交换约定：版本 1
+# 报告交换约定：版本 2
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录本预览版约定。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1 和 2。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
 
 报告包含 `report_schema_version`、`tool_version` 和 `ruleset_version`。未知字段和
@@ -36,7 +36,7 @@
 ## Agent 视图的区别
 
 MCP/Agent 响应增加 `agent_view`，将证据截断到十行，记录原始总数，并把 Decimal
-编码成字符串以兼容宿主。这是**展示视图**，不是完整版本 1 存储报告。不要将其
+编码成字符串以兼容宿主。这是**展示视图**，不是完整存储报告。不要将其
 保存为基线或送进存储报告校验器；归档和独立验证请通过 CLI/API 获取完整 JSON。
 
 Python 使用 `StoredReport` 验证后，应调用 `model_dump(by_alias=True)` 保留传输字段
@@ -46,5 +46,10 @@ Python 使用 `StoredReport` 验证后，应调用 `model_dump(by_alias=True)` �
 解释属于本地化展示层，论文与数据原文不翻译。离线 HTML 在同一文件内切换语言，
 保留筛选和展开状态，详见[语言兼容说明](languages.md)。
 
-破坏性修改需要新 schema 版本及迁移文档。版本 1 描述本预览版接口，不代表发行
-验收已通过。
+破坏性修改需要新 schema 版本及迁移文档。0.3.0 的新报告使用版本 2，新增 `actions`、可选 `watch`，以及
+`coverage.review_scope`、`outside_scope_numbers` 和 `exclusions`。版本 1 仍可读取，
+新字段使用默认值。等待重查时退出码为 2，即使保留的旧发现全部通过。消费者应
+检查顶层退出码及监听状态，不能从通过计数推断结果是否新鲜。
+
+配置版本 2 增加范围、排除及表格单元格锚点。旧配置保留语义和基线身份；明确接受
+新特性后才升级并备份。详见[工作流迁移](workflows.md)。

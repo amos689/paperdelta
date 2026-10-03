@@ -2,8 +2,10 @@
 
 [简体中文](zh-CN/ci.md)
 
-The execution counts below are historical a2 evidence. Current v0.2 acceptance is
-tracked separately in the [delivery ledger](v0.2-plan.md).
+The execution counts below are historical a2 evidence. Current release validation
+is tracked separately in the [0.3.0 release notes](v0.3.md). Use a 0.3.0-or-newer
+checker commit for schema-2 scope, exclusion and table-cell configurations.
+The adapter reports exclusion changes by ID and scope changes with other settings.
 
 The checked-in `.github/workflows/ci.yml` is the **tool development** matrix:
 Windows, Linux and macOS, Python 3.11–3.14, read-only repository permissions,

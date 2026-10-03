@@ -9,6 +9,12 @@
 *.js text eol=lf
 *.css text eol=lf
 *.svg text eol=lf
+*.toml text eol=lf
+*.rst text eol=lf
+MANIFEST.in text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE -text
 *.pdf binary
 *.png binary
 *.webm binary

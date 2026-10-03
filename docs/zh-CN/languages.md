@@ -2,9 +2,9 @@
 
 [English](../languages.md)
 
-v0.2 开发版已为命令行帮助、终端确认、诊断、文字/Markdown 报告及 MCP 说明提供
+PaperDelta 已为命令行帮助、终端确认、诊断、文字/Markdown 报告及 MCP 说明提供
 英文 `en` 和简体中文 `zh-CN`。离线 HTML 也已内置两种语言。维护文档已成对注册，
-并由 `tools/check_docs.py` 检查；具体状态见[交付记录](v0.2-plan.md)。
+并由 `tools/check_docs.py` 检查；具体状态见[当前发行版](v0.3.md)。
 
 ## 选择语言
 
@@ -62,13 +62,14 @@ MCP 工具名称、参数、ID 和属性保持统一；说明、解释及下一�
 第三方原始诊断可能作为翻译说明下的技术详情保留。
 
 继续读取原有版本 1 配置、报告和快照；历史快照用于比较，不重写原记录。
-提案及补丁仍绑定工具版本：a2 的提案/补丁需要在 v0.2 重新生成并复核后再确认或
+提案及补丁仍绑定工具版本：旧提案/补丁需要在当前发行版重新生成并复核后再确认或
 写入。既有事务日志的恢复仍须通过原有的字节身份校验。
 
 所有操作命令均可使用 `--format json`，包括 `propose`、`fix`、`apply`、`recover`、
 `snapshot create`、`review record`、`init`、`bind`、`settings` 和 `doctor`。
 结果保留原有字段，并增加 `command_result_version: 1` 和 `command`。成功应用补丁
-会直接返回 `transaction_id`。`check`/`scan` 的 JSON schema 保持不变；`schema`
+会直接返回 `transaction_id`。新 `check` 报告采用 schema 版本 2，读取器兼容版本 1；批量和范围命令支持 JSON，
+监听逐行输出 JSON 事件；`schema`
 始终输出 JSON；`mcp` 的标准输出仅用于协议。
 
 明确指定 `--format json` 时，错误以 JSON 输出到标准输出，含稳定的 `error` 代码、

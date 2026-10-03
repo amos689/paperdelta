@@ -155,9 +155,10 @@ def _coverage(counts, labels):
         ("unbound_numbers", "unbound"),
         ("unsupported", "unsupported"),
         ("unregistered_figures", "unregistered"),
+        ("outside_scope_numbers", "outside_scope"),
     ):
         groups = defaultdict(list)
-        for item in counts[name]:
+        for item in counts.get(name, []):
             groups[(item["file"], item.get("code", ""))].append(item)
         contents = []
         for (file, code), items in sorted(groups.items()):
@@ -180,7 +181,7 @@ def _coverage(counts, labels):
                     )
                     + "</ul>"
                 )
-            elif name == "unbound_numbers":
+            elif name in {"unbound_numbers", "outside_scope_numbers"}:
                 contents.append(
                     "<ul>"
                     + "".join(
@@ -204,9 +205,29 @@ def _coverage(counts, labels):
                     )
             contents.append("</details>")
         blocks.append(
-            f'<details id="coverage-{name}"><summary>{t("html." + title, count=len(counts[name]))}</summary>'
+            f'<details id="coverage-{name}"><summary>{t("html." + title, count=len(counts.get(name, [])))}</summary>'
             + ("".join(contents) or f"<p>{t('html.empty')}</p>")
             + "</details>"
+        )
+    exclusions = counts.get("exclusions", [])
+    blocks.append(
+        f'<details id="coverage-exclusions"><summary>{t("html.exclusions", count=len(exclusions))}</summary><ul>'
+        + "".join(
+            f"<li><code>{esc(item['id'])}</code> · {t('scope.exclusion_' + item['status'])} · {esc(item['reason'])}"
+            + (
+                f" · <code>{esc(item['location']['file'])}:{item['location']['line']} · {esc(item['location']['text'])}</code>"
+                if item.get("location")
+                else ""
+            )
+            + "</li>"
+            for item in exclusions
+        )
+        + "</ul></details>"
+    )
+    if counts.get("review_scope"):
+        blocks.insert(
+            0,
+            f"<p>{t('report.selected_scope', value=json.dumps(counts['review_scope'], ensure_ascii=False))}</p>",
         )
     return "".join(blocks)
 
@@ -215,6 +236,8 @@ def html_report(report: dict) -> str:
     labels = Labels()
     t = labels.label
     counts = report["coverage"]
+    watch = report.get("watch")
+    live = bool(watch and watch["state"] != "stopped")
     subject_groups = defaultdict(list)
     for impact in report["impact_groups"]:
         for group, prefix in (
@@ -357,16 +380,57 @@ def html_report(report: dict) -> str:
 
     baseline = report["baseline"]["name"] if report["baseline"] else msg("html.no_baseline")
     impacts_html = "".join(impact_cards) or f"<p>{t('html.no_impacts')}</p>"
+    queue = (
+        '<section id="review-actions"><h2>'
+        + t("actions.title")
+        + "</h2><ul>"
+        + "".join(
+            "<li><b>"
+            + t("actions." + action["kind"])
+            + "</b> · "
+            + t("actions.count", count=len(action["subjects"]))
+            + "<p>"
+            + t("actions.detail_" + action["kind"])
+            + "</p>"
+            + (
+                location_link(action["subjects"][0], t("actions.open"))
+                if action["subjects"] and action["subjects"][0] in first_subjects
+                else ""
+            )
+            + "</li>"
+            for action in report.get("actions", [])
+        )
+        + "</ul></section>"
+        if report.get("actions")
+        else ""
+    )
+    watch_banner = (
+        (
+            '<aside class="next-action" id="watch-status">'
+            + t(
+                "watch.banner",
+                state=msg("watch.state_" + watch["state"]),
+                generation=watch["generation"],
+            )
+            + "<p>"
+            + t("watch.live" if live else "watch.finished")
+            + "</p></aside>"
+        )
+        if watch
+        else ""
+    )
     body = f"""<header><div class="topline">{t("html.eyebrow")}
 <label class="language-control">{t("html.language")} <select id="language" disabled {labels.attr("aria-label", "html.language")}>
 <option value="en" {"selected" if labels.language == "en" else ""}>English</option>
 <option value="zh-CN" {"selected" if labels.language == "zh-CN" else ""}>简体中文</option></select></label></div>
 <h1>PaperDelta<span class="dot">.</span></h1><p>{t("html.subtitle")}</p></header>
 <noscript><p>{t("html.noscript")}</p></noscript>
+{watch_banner}
 <section class="stats">{summary}</section>
 <p class="scope">{t("html.scope", baseline=baseline)}<br>
 {t("html.coverage_counts", unbound=len(counts["unbound_numbers"]), unsupported=len(counts["unsupported"]), figures=len(counts["unregistered_figures"]))}</p>
 <aside class="next-action"><b>{t("html.next")}</b><p>{t(next_action)}</p></aside>
+{queue}
 <section><h2>{t("report.changes")}</h2><table><thead><tr>
 {"".join(f"<th>{t('html.' + key)}</th>" for key in ("metric", "change", "before", "after", "unit"))}
 </tr></thead><tbody>{changes or f'<tr><td colspan="5">{t("html.no_changes")}</td></tr>'}</tbody></table></section>
@@ -398,6 +462,11 @@ def html_report(report: dict) -> str:
     return (
         f'<!doctype html><html lang="{labels.language}"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
+        + (
+            '<meta name="paperdelta-live" content="3"><meta http-equiv="refresh" content="3">'
+            if live
+            else ""
+        )
         + title
         + '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; '
         "style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'\">"

@@ -10,6 +10,7 @@ from paperdelta.storage import Project, json_text
 
 def text_report(report: dict) -> str:
     counts = report["coverage"]
+    watch = report.get("watch")
     lines = [
         tr("report.title"),
         tr(
@@ -26,6 +27,41 @@ def text_report(report: dict) -> str:
         ),
         tr("report.figures", count=len(counts["unregistered_figures"])),
     ]
+    if watch:
+        lines.insert(
+            1,
+            tr(
+                "watch.banner",
+                state=tr("watch.state_" + watch["state"]),
+                generation=watch["generation"],
+            ),
+        )
+    lines.append(
+        tr(
+            "report.scope_counts",
+            outside=len(counts.get("outside_scope_numbers", [])),
+            excluded=sum(item["status"] == "active" for item in counts.get("exclusions", [])),
+        )
+    )
+    if counts.get("review_scope"):
+        lines.append(tr("report.selected_scope", value=json_text(counts["review_scope"]).strip()))
+    for exclusion in counts.get("exclusions", []):
+        lines.append(
+            tr(
+                "report.exclusion",
+                name=exclusion["id"],
+                status=tr("scope.exclusion_" + exclusion["status"]),
+                reason=exclusion["reason"],
+            )
+        )
+    for action in report.get("actions", []):
+        lines.append(
+            tr(
+                "actions.item",
+                action=tr("actions." + action["kind"]),
+                count=len(action["subjects"]),
+            )
+        )
     for item in report["diagnostics"]:
         location = item.get("location", {})
         where = f"{location['file']}:{location['line']}" if location else item["subject"]
@@ -73,6 +109,7 @@ def write_reports(project: Project, directory: str, report: dict) -> None:
         "report.html": html_report(report),
     }
     protected = {project.path(name) for name in report["input_hashes"]}
+    protected.add(project.path(report["config_path"]))
     for name in outputs:
         if project.path(f"{directory}/{name}") in protected:
             raise PaperDeltaError("REPORT_OVERWRITE", msg("error.REPORT_OVERWRITE"))

@@ -60,5 +60,41 @@
       if (evidence) evidence.open = true;
     });
   }
+  // Persist only presentation state within this tab when a live report reloads.
+  // Scientific inputs and verdicts always come from the newly generated report.
+  if (document.querySelector('meta[name="paperdelta-live"]') || document.querySelector('#watch-status')) {
+    const key = 'paperdelta-live:' + location.pathname;
+    const fields = [language, search, level, ...selectors];
+    const detailKey = node => node.id || (node.closest('article') || {}).id;
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(key) || 'null');
+      if (saved && typeof saved === 'object') {
+        for (const field of fields) {
+          const value = saved.fields && saved.fields[field.id];
+          if (typeof value !== 'string') continue;
+          if (field.tagName !== 'SELECT' || [...field.options].some(option => option.value === value)) field.value = value;
+        }
+        for (const node of document.querySelectorAll('details')) {
+          if (Array.isArray(saved.open) && saved.open.includes(detailKey(node))) node.open = true;
+        }
+        switchLanguage();
+        if (typeof saved.focus === 'string') {
+          const node = document.getElementById(saved.focus);
+          if (node && fields.includes(node)) node.focus({preventScroll: true});
+        }
+        if (Number.isFinite(saved.scroll)) requestAnimationFrame(() => scrollTo(0, saved.scroll));
+      }
+    } catch (_) { /* Storage may be unavailable for local files. */ }
+    window.addEventListener('pagehide', () => {
+      try {
+        sessionStorage.setItem(key, JSON.stringify({
+          fields: Object.fromEntries(fields.map(field => [field.id, field.value])),
+          open: [...document.querySelectorAll('details[open]')].map(detailKey).filter(Boolean),
+          focus: document.activeElement && document.activeElement.id,
+          scroll: scrollY
+        }));
+      } catch (_) { /* Reading the report never depends on persistent storage. */ }
+    });
+  }
   filter();
 })();

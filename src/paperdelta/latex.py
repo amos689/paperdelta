@@ -5,6 +5,7 @@ from __future__ import annotations
 import bisect
 import re
 from dataclasses import dataclass
+from functools import cached_property
 from pathlib import Path
 
 from pylatexenc.latexwalker import (
@@ -146,6 +147,7 @@ class TexDocument:
         self.includes: list[tuple[str, int]] = []
         self.graphics: list[str] = []
         self.priority_regions: list[tuple[int, int, str]] = []
+        self.table_regions: list[tuple[int, int]] = []
         self.context = get_default_latex_context_db()
         self.context.add_context_category(
             "paperdelta-standard",
@@ -198,6 +200,10 @@ class TexDocument:
                 self.blocked.append((start, end, "literal-environment"))
                 continue
             if isinstance(node, LatexEnvironmentNode):
+                if node.environmentname in {"tabular", "tabular*", "longtable"} and node.nodelist:
+                    self.table_regions.append(
+                        (node.nodelist[0].pos, node.nodelist[-1].pos + node.nodelist[-1].len)
+                    )
                 if node.environmentname == "abstract":
                     self.priority_regions.append((start, end, "abstract"))
                 elif node.environmentname in {
@@ -304,6 +310,10 @@ class TexDocument:
         )
 
     def locate(self, anchor: Anchor) -> Span:
+        if anchor.table is not None:
+            from paperdelta.tables import locate_cell
+
+            return locate_cell(self, anchor.table)
         candidates: list[tuple[int, int]] = []
         if anchor.exact is not None:
             for match in re.finditer(re.escape(anchor.exact), self.text):
@@ -330,12 +340,18 @@ class TexDocument:
             )
         return self.span(start, end)
 
-    def numbers(self) -> list[Span]:
-        return [
+    @cached_property
+    def _number_spans(self) -> tuple[Span, ...]:
+        # A document belongs to one immutable input read. A subsequent check
+        # creates a new document; no result is cached across file changes.
+        return tuple(
             self.span(*match.span())
             for match in NUMBER_PATTERN.finditer(self.text)
             if self.checkable(*match.span())
-        ]
+        )
+
+    def numbers(self) -> list[Span]:
+        return list(self._number_spans)
 
     def validate_numeric_span(self, span: Span) -> None:
         overlapping = [

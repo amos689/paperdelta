@@ -29,7 +29,7 @@ available for authorized scripted workflows.
 
 ## Optional MCP
 
-Install `python -m pip install -e '.[mcp]'`. The adapter uses official
+Install `python -m pip install 'paperdelta[mcp]'` (or `-e '.[mcp]'` in a checkout). The adapter uses official
 [MCP Python SDK 2.2](https://github.com/modelcontextprotocol/python-sdk) stdio APIs;
 the extra is constrained to 2.x. The core checker does not import the SDK.
 
@@ -61,8 +61,12 @@ for the session; tool arguments cannot select a different root.
 | `finish_binding_draft` | Revalidated unaccepted proposal |
 | `scan_binding_repairs` | Broken locations, previous context and current candidates |
 | `propose_binding_repair` | Explicit old/new location proposal with input hashes |
+| `start_batch_binding` | Shared CSV choices and an in-memory session ID |
+| `list_batch_candidates` | Paginated metric/location candidates |
+| `select_batch_bindings` | Explicit selection or correction inside the session |
+| `finish_batch_binding` | Revalidated unaccepted batch proposal |
 
-All thirteen tools are read-only. They do not save proposals, apply changes, accept
+All seventeen tools are read-only with respect to project files. They do not save proposals, apply changes, accept
 bindings, create snapshots or attest review. The caller can save returned text
 for author inspection through the CLI. The server never sends content to a model
 service; the host's own model and data handling still applies.
@@ -86,11 +90,34 @@ No interface infers significance, chooses a statistical test or verifies global
 SOTA. A local review record is a declaration tied to content, not authentication
 or proof of scientific correctness.
 
+## Compact batch sessions
+
+1. Call `start_batch_binding` with `source`, `fields`, `group_by`, `unit`, `reduce`
+   and `expected_count`. Specify fixed `where` selectors and expected seeds when
+   applicable. For a new source also provide `source_path`, `columns` and
+   `primary_key`. Choose `display_kind`, `places` and `percent_symbol` explicitly.
+2. Keep the returned `session_id`; use `list_batch_candidates` with `kind` set to
+   `metrics` or `locations`. Pages contain at most 50 entries and expose
+   `next_offset`. Review missing identity information and raw context.
+3. Call `select_batch_bindings` with a `choice_id`, explicit `candidate_ids` and a
+   rationale. A repeated choice/display pair replaces that selection; an empty
+   candidate list removes all selections for that metric. Invalid corrections
+   preserve the previous valid selection. Different display rules may be selected
+   separately for a table and prose occurrences.
+4. Call `finish_batch_binding`, save `proposal_json` verbatim, and present it for
+   `bind --interactive` or explicitly authorized `bind --accept` in the CLI.
+
+There are at most 32 sessions, each expiring one hour after creation. A restart
+loses them; changed project inputs invalidate them. Start again rather than
+inventing IDs. Handles avoid repeatedly sending the complete draft. No tool
+accepts a binding, writes a paper, or turns an unresolved identity into a fact.
+The same implementation powers the [batch terminal workflow](workflows.md).
+
 ## Evaluate saved mapping proposals
 
 The [mapping suite](../evaluations/mapping-v1/README.md) supplies a separate
 evaluation format. Its original lock pins the a2-era implementation; the commands
-below require that matching historical checkout, not the current v0.2 code:
+below require that matching historical checkout, not the current release:
 
 ```sh
 python tools/evaluate_mappings.py export --out build/mapping-inputs

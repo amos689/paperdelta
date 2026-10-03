@@ -210,15 +210,40 @@
           "title": "Confirmed",
           "type": "integer"
         },
+        "exclusions": {
+          "items": {
+            "$ref": "#/$defs/ExclusionState"
+          },
+          "title": "Exclusions",
+          "type": "array"
+        },
         "mismatch": {
           "minimum": 0,
           "title": "Mismatch",
           "type": "integer"
         },
+        "outside_scope_numbers": {
+          "items": {
+            "$ref": "#/$defs/SourceLocation"
+          },
+          "title": "Outside Scope Numbers",
+          "type": "array"
+        },
         "pass": {
           "minimum": 0,
           "title": "Pass",
           "type": "integer"
+        },
+        "review_scope": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewScope"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "unbound_numbers": {
           "items": {
@@ -505,6 +530,58 @@
         "locations"
       ],
       "title": "Evidence",
+      "type": "object"
+    },
+    "ExclusionState": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "stale"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "reason",
+        "status"
+      ],
+      "title": "ExclusionState",
       "type": "object"
     },
     "FigureState": {
@@ -931,6 +1008,46 @@
       "title": "OccurrenceState",
       "type": "object"
     },
+    "ReviewAction": {
+      "additionalProperties": false,
+      "properties": {
+        "findings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Findings",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "wait_for_check",
+            "resolve_evidence",
+            "repair_bindings",
+            "review_exclusions",
+            "review_claims",
+            "update_numbers",
+            "update_figures",
+            "complete_coverage"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "subjects": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Subjects",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "subjects",
+        "findings"
+      ],
+      "title": "ReviewAction",
+      "type": "object"
+    },
     "ReviewRecord": {
       "additionalProperties": false,
       "properties": {
@@ -987,6 +1104,31 @@
         "assertion"
       ],
       "title": "ReviewRecord",
+      "type": "object"
+    },
+    "ReviewScope": {
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "array"
+        },
+        "regions": {
+          "items": {
+            "enum": [
+              "abstract",
+              "table"
+            ],
+            "type": "string"
+          },
+          "title": "Regions",
+          "type": "array"
+        }
+      },
+      "title": "ReviewScope",
       "type": "object"
     },
     "SourceLocation": {
@@ -1230,10 +1372,50 @@
       ],
       "title": "UnsupportedRegion",
       "type": "object"
+    },
+    "WatchState": {
+      "additionalProperties": false,
+      "properties": {
+        "changed_paths": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Changed Paths",
+          "type": "array"
+        },
+        "generation": {
+          "minimum": 0,
+          "title": "Generation",
+          "type": "integer"
+        },
+        "state": {
+          "enum": [
+            "running",
+            "pending",
+            "stopped"
+          ],
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "generation",
+        "changed_paths"
+      ],
+      "title": "WatchState",
+      "type": "object"
     }
   },
   "additionalProperties": false,
   "properties": {
+    "actions": {
+      "items": {
+        "$ref": "#/$defs/ReviewAction"
+      },
+      "title": "Actions",
+      "type": "array"
+    },
     "baseline": {
       "anyOf": [
         {
@@ -1371,7 +1553,7 @@
       "title": "Removed Bindings"
     },
     "report_schema_version": {
-      "maximum": 1,
+      "maximum": 2,
       "minimum": 1,
       "title": "Report Schema Version",
       "type": "integer"
@@ -1383,6 +1565,17 @@
     "tool_version": {
       "title": "Tool Version",
       "type": "string"
+    },
+    "watch": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/WatchState"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     }
   },
   "required": [

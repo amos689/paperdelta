@@ -98,7 +98,7 @@ def main():
             "重放通过归档实现验证原协议，保留首次留出失败，不把已见论文称作新留出样本。\n\n"
             "tests/corpus/active-study.json 标识保存的 a2 协议及更早原实现。锁核验源码、"
             "评测器和输入身份。论文配的是合成证据，不是复现原实验。"
-            "失败及限制见 docs/zh-CN/evaluation.md；当前 v0.2 验收另行记录。\n",
+            "失败及限制见 docs/zh-CN/evaluation.md；各发行版验收另行记录。\n",
         )
     print(
         json.dumps(

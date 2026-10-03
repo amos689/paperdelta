@@ -22,7 +22,7 @@ PaperDelta 提供确定性证据与提案校验。数字相同不能证明科学
 
 ## 可选 MCP
 
-安装 `python -m pip install -e '.[mcp]'`。适配器使用官方
+安装 `python -m pip install 'paperdelta[mcp]'`（源码开发可使用 `-e '.[mcp]'`）。适配器使用官方
 [MCP Python SDK 2.2](https://github.com/modelcontextprotocol/python-sdk) 的 stdio API，
 额外依赖限定为 2.x；核心检查器不导入 SDK。按宿主文档配置以下命令和参数：
 
@@ -51,8 +51,12 @@ Windows 使用虚拟环境的 `Scripts/python.exe`。`-C` 固定会话项目根�
 | `finish_binding_draft` | 重新验证后的未确认提案 |
 | `scan_binding_repairs` | 失效位置、之前的上下文与当前候选 |
 | `propose_binding_repair` | 带输入哈希的明确新旧位置提案 |
+| `start_batch_binding` | 共享 CSV 选择及内存会话 ID |
+| `list_batch_candidates` | 分页指标和位置候选 |
+| `select_batch_bindings` | 会话内明确选择或纠正 |
+| `finish_batch_binding` | 重新校验的未接受批量提案 |
 
-十三个工具全部只读：不保存提案、不应用修改、不确认绑定、不创建快照、不声明
+十七个工具对项目文件全部只读：不保存提案、不应用修改、不确认绑定、不创建快照、不声明
 审阅。调用方可原样保存返回文本，再通过 CLI 让作者检查。服务自身不向模型发送
 内容；宿主所用模型及其数据处理方式仍然适用。
 
@@ -69,10 +73,27 @@ Windows 使用虚拟环境的 `Scripts/python.exe`。`-C` 固定会话项目根�
 任何接口都不推断显著性、不选择统计检验、不验证全局 SOTA。本地审阅记录是绑定
 具体内容的声明，不是身份认证或科学正确性的证明。
 
+## 精简批量会话
+
+1. 调用 `start_batch_binding`，提供 `source`、`fields`、`group_by`、`unit`、`reduce`
+   和 `expected_count`，按需声明固定 `where` 及预期种子。新来源还需 `source_path`、
+   `columns` 和 `primary_key`；明确选择 `display_kind`、`places` 和 `percent_symbol`。
+2. 保留 `session_id`，用 `list_batch_candidates` 的 `kind=metrics` 或 `locations`
+   浏览候选，每页最多 50 项，返回 `next_offset`。核对缺少的身份及原文上下文。
+3. 用 `select_batch_bindings` 传入 `choice_id`、明确的 `candidate_ids` 和理由。
+   相同指标/显示规则的再次选择替换原选择；空候选列表移除该指标全部选择。
+   无效纠正保留之前有效选择。表格和正文可分别选择不同显示格式。
+4. 调用 `finish_batch_binding`，原样保存 `proposal_json`，交给 CLI 的
+   `bind --interactive` 或已明确授权的 `bind --accept` 复核接受。
+
+最多保留 32 个会话，每个从创建起一小时后失效；服务重启会丢失，输入变化后也
+必须重新开始，不编造 ID。会话句柄避免反复传输完整草稿。工具不接受绑定、不写
+论文，也不将未解决身份变成事实，与[终端批量工作流](workflows.md)使用相同实现。
+
 ## 评估已保存的映射提案
 
 [原始映射评测](../../evaluations/mapping-v1/README.md)采用独立评测格式。其锁文件
-固定 a2 时期的实现；以下命令必须在匹配的历史检出版本中执行，不能直接用于当前 v0.2：
+固定 a2 时期的实现；以下命令必须在匹配的历史检出版本中执行，不能直接用于当前发行版：
 
 ```sh
 python tools/evaluate_mappings.py export --out build/mapping-inputs

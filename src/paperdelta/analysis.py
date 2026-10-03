@@ -70,7 +70,7 @@ def _diagnostic(
 
 def empty_report(config_path: str) -> dict:
     return {
-        "report_schema_version": 1,
+        "report_schema_version": 2,
         "tool_version": __version__,
         "ruleset_version": "1",
         "created_at": datetime.now(UTC).isoformat(),
@@ -93,6 +93,9 @@ def empty_report(config_path: str) -> dict:
             "unbound_numbers": [],
             "unregistered_figures": [],
             "unsupported": [],
+            "review_scope": None,
+            "outside_scope_numbers": [],
+            "exclusions": [],
         },
         "exit_code": 2,
     }
@@ -124,7 +127,12 @@ def check_configuration(
     report = empty_report(config_path)
     try:
         report["input_hashes"][config_path] = config_hash
-        report["config_fingerprint"] = fingerprint(config)
+        # Preserve the identity of unchanged version-1 declarations after upgrading.
+        report["config_fingerprint"] = fingerprint(
+            config.model_dump(exclude={"review_scope", "coverage_exclusions"})
+            if config.schema_version == 1
+            else config
+        )
         paper = PaperIndex(project, config.paper)
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
@@ -268,15 +276,9 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                         else "missing or ambiguous",
                     }
                 )
-    numbers = [span for doc in paper.documents.values() for span in doc.numbers()]
-    report["coverage"]["candidate_numbers"] = len(numbers)
-    report["coverage"]["unbound_numbers"] = [
-        span.to_dict()
-        for span in numbers
-        if not any(
-            low <= span.start and span.end <= high for low, high in covered.get(span.file, [])
-        )
-    ]
+    from paperdelta.coverage import apply_coverage
+
+    apply_coverage(config, paper, report, covered)
     if config.require_complete_coverage and (
         report["coverage"]["unbound_numbers"]
         or paper.issues
@@ -400,6 +402,8 @@ def _compare_baseline(report: dict, baseline: dict) -> None:
 
 
 def _finish(report: dict) -> None:
+    from paperdelta.actions import review_actions
+
     coverage = report["coverage"]
     for group in ("occurrences", "claims", "figures"):
         for state in report[group].values():
@@ -416,6 +420,7 @@ def _finish(report: dict) -> None:
         )
     severities = {finding["severity"] for finding in report["diagnostics"]}
     report["exit_code"] = 2 if "unknown" in severities else 1 if "error" in severities else 0
+    report["actions"] = review_actions(report)
 
 
 def _group_impacts(report: dict) -> None:

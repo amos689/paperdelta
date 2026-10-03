@@ -29,6 +29,10 @@ def test_mcp_exposes_only_read_only_tools(project):
                 "finish_binding_draft",
                 "scan_binding_repairs",
                 "propose_binding_repair",
+                "start_batch_binding",
+                "list_batch_candidates",
+                "select_batch_bindings",
+                "finish_batch_binding",
             }
             assert all(tool.annotations.read_only_hint for tool in listing.tools)
             schemas = {tool.name: tool.input_schema for tool in listing.tools}
@@ -84,6 +88,78 @@ def test_stdio_cli_handshake_and_data_only_change(project, change_results):
             assert result.structured_content["claims"]["main_comparison"]["status"] == "mismatch"
 
     asyncio.run(run())
+
+
+def test_mcp_batch_handle_recovery_and_final_proposal_remain_read_only(project):
+    from paperdelta.config import config_text, load_config
+
+    store = Project(project)
+    config, _ = load_config(store)
+    config.occurrences, config.claims, config.metrics = {}, {}, {}
+    store.write("paperdelta.yaml", config_text(config).encode())
+    before = {path: path.read_bytes() for path in project.rglob("*") if path.is_file()}
+
+    async def run():
+        async with mcp.Client(create_server(store)) as client:
+            start = await client.call_tool(
+                "start_batch_binding",
+                {
+                    "source": "benchmark",
+                    "fields": ["accuracy"],
+                    "group_by": ["model"],
+                    "where": {"dataset": "Data-A", "split": "test"},
+                    "unit": "fraction",
+                    "reduce": "mean",
+                    "expected_count": 3,
+                    "expected_seeds": ["1", "2", "3"],
+                    "display_kind": "percent",
+                    "percent_symbol": False,
+                },
+            )
+            assert not start.is_error, start.content
+            state = start.structured_content
+            session_id = state["session_id"]
+            choice = next(
+                item for item in state["items"] if item["definition"]["where"]["model"] == "Ours"
+            )
+            locations = await client.call_tool(
+                "list_batch_candidates", {"session_id": session_id, "kind": "locations"}
+            )
+            assert not locations.is_error, locations.content
+            candidate = next(
+                item
+                for item in locations.structured_content["items"]
+                if item["kind"] == "table" and item["row"].split("&")[0].strip().endswith("Ours")
+            )
+            bad = await client.call_tool(
+                "select_batch_bindings",
+                {
+                    "session_id": session_id,
+                    "choice_id": choice["choice_id"],
+                    "candidate_ids": ["sha256:" + "f" * 64],
+                    "rationale": "Invalid candidate",
+                },
+            )
+            assert bad.is_error
+            selected = await client.call_tool(
+                "select_batch_bindings",
+                {
+                    "session_id": session_id,
+                    "choice_id": choice["choice_id"],
+                    "candidate_ids": [candidate["candidate_id"]],
+                    "rationale": "Ours accuracy, Data-A test, seeds 1–3.",
+                },
+            )
+            assert not selected.is_error, selected.content
+            finished = await client.call_tool("finish_batch_binding", {"session_id": session_id})
+            assert not finished.is_error, finished.content
+            proposal = parse_json(finished.structured_content["proposal_json"])
+            assert len(proposal["additions"]["occurrences"]) == 1
+            unchanged = await client.call_tool("check_project")
+            assert unchanged.structured_content["coverage"]["confirmed"] == 0
+
+    asyncio.run(run())
+    assert {path: path.read_bytes() for path in project.rglob("*") if path.is_file()} == before
 
 
 def test_staged_mcp_proposal_roundtrip_never_accepts_or_writes(project):

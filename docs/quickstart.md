@@ -2,7 +2,10 @@
 
 [简体中文](zh-CN/quickstart.md)
 
-Install the checkout in a Python 3.11+ environment: `python -m pip install -e .`.
+Install in a Python 3.11+ environment: `python -m pip install paperdelta`.
+Run `paperdelta demo --out paperdelta-demo --open` for an included offline report.
+For a results table, see [batch binding, scopes and watching](workflows.md).
+A source checkout can still use `python -m pip install -e .`.
 The examples below run in your paper project's root. To run elsewhere, place
 `-C /path/to/project` before the subcommand.
 

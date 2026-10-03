@@ -210,13 +210,18 @@ def _add_metric(project, draft, config, name, metric):
     return _seal(project, body, store.hashes)
 
 
-def anchor_for_span(document: TexDocument, span: Span) -> Anchor:
+def anchor_for_span(document: TexDocument, span: Span, identity_values=()) -> Anchor:
     """Use only the explicitly selected span, never a same-number heuristic.
 
     Context anchors survive numeric corrections. A contextless boundary or truly
     indistinguishable repetition requires an author edit, not a positional guess.
     """
     document.validate_numeric_span(span)
+    from paperdelta.tables import anchor_for_cell
+
+    table_anchor = anchor_for_cell(document, span, identity_values)
+    if table_anchor is not None:
+        return table_anchor
     numbers = document.numbers()
     low = max((item.end for item in numbers if item.end <= span.start), default=0)
     high = min(
@@ -308,7 +313,13 @@ def add_occurrences(
                 "BUILDER_OVERLAP", msg("builder.overlap", file=span.file, line=span.line)
             )
         occupied.append(span)
-        anchor = anchor_for_span(document, span)
+        definition = config.metrics[metric]
+        identity_values = (
+            {str(value) for value in definition.where.values()}
+            if isinstance(definition, SourceMetric)
+            else ()
+        )
+        anchor = anchor_for_span(document, span, identity_values)
         body["additions"]["occurrences"][name] = {
             "file": span.file,
             "anchor": anchor.model_dump(),

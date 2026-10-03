@@ -2,6 +2,8 @@
 
 [简体中文](zh-CN/development-plan.md)
 
+Current release: [0.3.0](v0.3.md), including the [installed demo and new workflows](workflows.md). Earlier version-specific records below remain historical.
+
 Scope baseline 0.1, originally planned 2026-10-02; acceptance policy amended
 2026-10-03. This is the historical design plan. Current interfaces are in README,
 evidence in [progress](progress.md), and new work in the [v0.2 ledger](v0.2-plan.md).

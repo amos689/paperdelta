@@ -2,6 +2,19 @@
 
 [English](START_ON_MAC.en.md)
 
+## 安装发行版
+
+Mac 已有 Python 3.11 以上版本时，创建并激活虚拟环境，然后运行：
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install paperdelta
+paperdelta --lang zh-CN demo --out paperdelta-demo --open
+```
+
+安装包自带演示和报告；需要继续开发时使用下面的 GitHub 源码方式。
+
 ## 从 GitHub 安装
 
 使用 Python 3.11 以上版本，在 Mac 终端执行：

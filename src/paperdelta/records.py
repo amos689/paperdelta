@@ -14,6 +14,7 @@ from paperdelta.models import (
     DerivedMetric,
     Hash,
     Identifier,
+    ReviewScope,
     Scalar,
     SourceMetric,
     StrictModel,
@@ -301,6 +302,14 @@ class UnregisteredFigure(StrictModel):
     reason: Literal["not registered", "missing or ambiguous"]
 
 
+class ExclusionState(StrictModel):
+    id: Identifier
+    reason: str
+    status: Literal["active", "stale"]
+    location: SourceLocation | None = None
+    error: str | None = None
+
+
 class Coverage(StrictModel):
     confirmed: Nonnegative
     pass_: Nonnegative = Field(alias="pass")
@@ -310,6 +319,9 @@ class Coverage(StrictModel):
     unbound_numbers: list[SourceLocation]
     unregistered_figures: list[UnregisteredFigure]
     unsupported: list[UnsupportedRegion]
+    review_scope: ReviewScope | None = None
+    outside_scope_numbers: list[SourceLocation] = Field(default_factory=list)
+    exclusions: list[ExclusionState] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def counted_checks(self):
@@ -320,8 +332,29 @@ class Coverage(StrictModel):
         return self
 
 
+class ReviewAction(StrictModel):
+    kind: Literal[
+        "wait_for_check",
+        "resolve_evidence",
+        "repair_bindings",
+        "review_exclusions",
+        "review_claims",
+        "update_numbers",
+        "update_figures",
+        "complete_coverage",
+    ]
+    subjects: list[str]
+    findings: list[str]
+
+
+class WatchState(StrictModel):
+    state: Literal["running", "pending", "stopped"]
+    generation: Nonnegative
+    changed_paths: list[str]
+
+
 class StoredReport(TimestampedRecord):
-    report_schema_version: VersionOne
+    report_schema_version: Annotated[int, Field(ge=1, le=2)]
     tool_version: str
     ruleset_version: str
     config_path: str
@@ -339,6 +372,8 @@ class StoredReport(TimestampedRecord):
     config_fingerprint: Hash | None = None
     configuration_changed: bool | None = None
     removed_bindings: dict[str, list[str]] | None = None
+    watch: WatchState | None = None
+    actions: list[ReviewAction] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def counted_verdicts(self):

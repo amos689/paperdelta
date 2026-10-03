@@ -114,7 +114,7 @@ def _card(output, binding, proposal, config, report, project, full=False):
 
 
 def confirm_bindings(
-    project: Project, value: dict, *, input_stream: TextIO, output: TextIO
+    project: Project, value: dict, *, input_stream: TextIO, output: TextIO, batch=False
 ) -> dict:
     if not input_stream.isatty() or not output.isatty():
         raise PaperDeltaError(
@@ -130,7 +130,27 @@ def confirm_bindings(
     selected = []
     output.write(tr("interactive.text.1"))
     try:
-        for index, binding in enumerate(bindings, 1):
+        if batch:
+            for index, binding in enumerate(bindings, 1):
+                output.write(f"\n[{index}/{len(bindings)}]\n")
+                _card(output, binding, proposal, config, report, project)
+            while True:
+                choice = _answer(input_stream, output, tr("batch.confirm_selection"))
+                if choice in {"", "q", "取消"}:
+                    return {"status": "cancelled", "bindings": [], "reason": "quit"}
+                if choice in {"all", "全部"}:
+                    selected = list(bindings)
+                    break
+                parts = choice.split(",")
+                if all(part.strip().isascii() and part.strip().isdigit() for part in parts):
+                    indices = [int(part.strip()) for part in parts]
+                    if len(set(indices)) == len(indices) and all(
+                        1 <= index <= len(bindings) for index in indices
+                    ):
+                        selected = [bindings[index - 1] for index in indices]
+                        break
+                output.write(tr("guide.invalid_choice") + "\n")
+        for index, binding in enumerate([] if batch else bindings, 1):
             output.write(f"\n[{index}/{len(bindings)}]\n")
             _card(output, binding, proposal, config, report, project)
             while True:

@@ -78,10 +78,19 @@ def main():
     assert '<html lang="zh-CN"' in (scratch / "build/changed-zh/report.html").read_text("utf-8")
     chinese_optional = command("mcp", language="zh-CN")
     assert chinese_optional.returncode == 2 and "MCP_NOT_INSTALLED" in chinese_optional.stderr
+    for language in ("en", "zh-CN"):
+        demo = command(
+            "demo", "--out", f"bundled-demo-{language}", "--format", "json", language=language
+        )
+        assert demo.returncode == 0, demo.stdout + demo.stderr
+        demo_result = json.loads(demo.stdout)
+        assert demo_result["check_exit_code"] == 1
+        assert (scratch / demo_result["report"]).is_file()
     runtime_files = [
         path
         for path in installed.parent.rglob("*")
-        if path.is_file() and path.suffix in {".py", ".json", ".css", ".js"}
+        if path.is_file()
+        and path.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf"}
     ]
     for path in runtime_files:
         relative = path.relative_to(installed.parent)
@@ -100,6 +109,7 @@ def main():
         "optional_mcp_error": "MCP_NOT_INSTALLED",
         "languages": ["en", "zh-CN"],
         "language_independent_stored_reports": True,
+        "bundled_demo_without_extras": True,
         "installed_sources_sha256": {
             path.relative_to(installed.parent).as_posix(): sha256(path.read_bytes()).hexdigest()
             for path in sorted(runtime_files)

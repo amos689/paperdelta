@@ -2,7 +2,10 @@
 
 [English](../quickstart.md)
 
-在 Python 3.11+ 环境中安装当前仓库：`python -m pip install -e .`。以下命令在论文
+在 Python 3.11+ 环境安装：`python -m pip install paperdelta`。
+运行 `paperdelta --lang zh-CN demo --out paperdelta-demo --open` 即可查看内置报告。
+结果表可用[批量绑定、范围和监听](workflows.md)；源码开发仍支持 `python -m pip install -e .`。
+以下命令在论文
 项目根目录执行；若从其他目录运行，将 `-C /path/to/project` 放在子命令之前。
 `--lang zh-CN` 同样放在子命令之前；可用 `settings --language zh-CN` 保存偏好。
 

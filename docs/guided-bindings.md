@@ -2,6 +2,8 @@
 
 [简体中文](zh-CN/guided-bindings.md)
 
+Current release: [0.3.0](v0.3.md), including the [installed demo and new workflows](workflows.md). Earlier version-specific records below remain historical.
+
 The v0.2 `guide` command constructs a proposal in memory and then opens the same
 explicit review used by `bind --interactive`. It does not require nested JSON.
 Use a terminal: redirected input is rejected. Choose a language before the command.

@@ -2,6 +2,8 @@
 
 [English](../demo.md)
 
+当前发行版：[0.3.0](v0.3.md)，包含[安装包演示和新工作流](workflows.md)。下文明确标注旧版本的记录保留为历史。
+
 观看 v0.2 的[简体中文录像](../assets/v0.2/demo.zh-CN.webm)或
 [英文录像](../assets/v0.2/demo.en.webm)。每份录像的界面和字幕使用对应语言；报告
 本身则在同一个离线文件内切换。[记录](../evidence/v0.2-media.json)标识视频、报告

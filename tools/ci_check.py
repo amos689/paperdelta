@@ -32,7 +32,7 @@ from paperdelta.snapshots import snapshot_path
 from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
 
 METADATA_DIRECTORIES = (".paperdelta/baselines", ".paperdelta/reviews")
-NAMED_SECTIONS = ("sources", "metrics", "occurrences", "claims", "figures")
+NAMED_SECTIONS = ("sources", "metrics", "occurrences", "claims", "figures", "coverage_exclusions")
 LIMIT = 32 * 1024 * 1024
 
 

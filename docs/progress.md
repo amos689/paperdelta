@@ -2,7 +2,9 @@
 
 [简体中文](zh-CN/progress.md)
 
-Started 2026-10-02; updated 2026-10-03 Sydney time. The active scope is the
+Current release: [0.3.0](v0.3.md), including the [installed demo and new workflows](workflows.md). Earlier version-specific records below remain historical.
+
+Started 2026-10-02; updated 2026-10-03 Sydney time. The v0.2 history is recorded in the
 [v0.2 ledger](v0.2-plan.md). The earlier a2 alpha has a
 [local acceptance decision](release-acceptance.md); new features require their own
 validation. The owner accepts local machine tests and developer/first-user

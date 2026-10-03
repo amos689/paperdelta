@@ -2,6 +2,22 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.3.0 — batch binding and continuous review
+
+- Ship a complete offline `demo` in the core wheel and support PyPI installation.
+- Reuse explicit CSV experiment definitions across batch metrics and paper locations;
+  support bounded literal table cells and all/subset/cancel confirmation.
+- Add numeric review scopes and reasoned, context-bound exclusions without hiding
+  accepted failures. Preserve backups when adopting configuration schema 2.
+- Watch content changes, mark pending checks, refresh reports and show a linked review queue.
+- Add four in-memory batch MCP tools (seventeen overall), with pagination, correction,
+  stale-input checks and explicit author acceptance through the CLI.
+- Write report schema 2 while reading version 1, and maintain bilingual UI and guides.
+- Publish stable versions from verified GitHub assets through PyPI Trusted Publishing.
+  Remove Related work from both READMEs; retain historical evaluation records.
+
+See [workflows](docs/workflows.md) and [release notes](docs/v0.3.md).
+
 ## 0.2.0a1 — first public alpha
 
 - Trace changed CSV/JSON evidence to declared numeric occurrences, comparisons

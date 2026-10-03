@@ -57,8 +57,12 @@ ConfigDumper.add_representer(
 
 
 def config_text(config: Config) -> str:
+    value = config.model_dump(exclude_none=True)
+    if config.schema_version == 1:
+        value.pop("review_scope", None)
+        value.pop("coverage_exclusions", None)
     return yaml.dump(
-        config.model_dump(exclude_none=True),
+        value,
         Dumper=ConfigDumper,
         allow_unicode=True,
         sort_keys=False,

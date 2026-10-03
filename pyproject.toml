@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "0.2.0a1"
+version = "0.3.0"
 description = "Review how experiment changes affect an existing research paper."
-readme = "README.md"
+readme = "docs/package-description.rst"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
@@ -38,7 +38,12 @@ Releases = "https://github.com/amos689/paperdelta/releases"
 where = ["src"]
 
 [tool.setuptools.package-data]
-paperdelta = ["locales/*.json", "assets/*.css", "assets/*.js"]
+paperdelta = [
+  "locales/*.json", "assets/*.css", "assets/*.js",
+  "demo_project/*.yaml", "demo_project/paper/*.tex", "demo_project/results/*.csv",
+  "demo_project/paper/figures/*.pdf", "demo_project/paper/figures/*.json",
+  "demo_project/scripts/*.py",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -127,7 +127,8 @@ def main():
     core_files = [
         p
         for p in (ROOT / "src/paperdelta").rglob("*")
-        if p.is_file() and p.suffix in {".py", ".json", ".css", ".js"}
+        if p.is_file()
+        and p.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf"}
     ]
     for path in core_files:
         raw = path.read_bytes()
@@ -139,6 +140,7 @@ def main():
     required = [
         "LICENSE",
         "README.md",
+        "docs/package-description.rst",
         "CONTRIBUTING.md",
         "THIRD_PARTY_NOTICES.md",
         "pyproject.toml",
@@ -146,6 +148,7 @@ def main():
         ".gitattributes",
         ".gitignore",
         ".github/workflows/ci.yml",
+        ".github/workflows/release.yml",
         "docs/evaluation.md",
         "docs/progress.md",
         "docs/ci.md",
@@ -165,6 +168,7 @@ def main():
     required += [name for pair in translations["pairs"] for name in pair.values()]
     required += translations["aliases"] + ["docs/translations.json"]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.2").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.3").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")

@@ -42,8 +42,14 @@ def compact_report(report: dict) -> dict:
 
 class AgentSession:
     def __init__(self, project: Project, config_path="paperdelta.yaml"):
+        from paperdelta.batch_agent import BatchSessions
+
         self.project = project
         self.config_path = config_path
+        self.batch = BatchSessions(project, config_path)
+
+    def batch_call(self, method, *args):
+        return _wire(translated(getattr(self.batch, method)(*args)))
 
     def scan_project(self) -> dict:
         return _wire(translated(scan_project(self.project, self.config_path)))

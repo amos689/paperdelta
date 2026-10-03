@@ -112,7 +112,7 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
     if (
         not isinstance(report, dict)
         or type(report.get("report_schema_version")) is not int
-        or report.get("report_schema_version") != 1
+        or report.get("report_schema_version") not in {1, 2}
     ):
         raise PaperDeltaError("REPORT_SCHEMA", msg("error.REPORT_SCHEMA"))
     config_path = report.get("config_path")
@@ -202,8 +202,8 @@ def preview_patch(project: Project, value: dict) -> str:
 
 
 @contextmanager
-def _write_lock(project: Project):
-    path = project.path(".paperdelta/transactions.lock")
+def _write_lock(project: Project, *, lock_path=".paperdelta/transactions.lock"):
+    path = project.path(lock_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a+b") as stream:
         if path.stat().st_size == 0:

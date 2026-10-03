@@ -2,6 +2,19 @@
 
 [简体中文](START_ON_MAC.md)
 
+## Install the release
+
+With Python 3.11+ on the Mac, create and activate a virtual environment, then run:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install paperdelta
+paperdelta demo --out paperdelta-demo --open
+```
+
+The demo and report are included in the package. Use the GitHub checkout below for development.
+
 ## Install from GitHub
 
 Use Python 3.11+ and run in a Mac terminal:

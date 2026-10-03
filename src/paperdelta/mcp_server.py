@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
 from paperdelta import __version__
 from paperdelta.agent import AgentSession
@@ -44,6 +44,70 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
                 return function(*args)
             except PaperDeltaError as exc:
                 raise ToolError(f"{exc.code}: {exc.render()}") from exc
+
+    @server.tool(annotations=annotations, description=tr("batch.mcp_start"))
+    def start_batch_binding(
+        source: str,
+        fields: list[str],
+        group_by: list[str],
+        unit: Unit,
+        reduce: Aggregation,
+        expected_count: int,
+        where: dict[str, str] | None = None,
+        expected_seeds: list[str] | None = None,
+        seed_column: str = "seed",
+        display_kind: DisplayKind = "decimal",
+        places: int = 1,
+        percent_symbol: bool = True,
+        source_path: str | None = None,
+        columns: dict[str, ColumnType] | None = None,
+        primary_key: list[str] | None = None,
+    ) -> dict[str, Any]:
+        request = {
+            "source": source,
+            "fields": fields,
+            "group_by": group_by,
+            "unit": unit,
+            "reduce": reduce,
+            "expected_count": expected_count,
+            "where": where or {},
+            "expected_seeds": expected_seeds,
+            "seed_column": seed_column,
+            "display": {"kind": display_kind, "places": places, "percent_symbol": percent_symbol},
+        }
+        return call(session.batch_call, "start", request, source_path, columns, primary_key)
+
+    @server.tool(annotations=annotations, description=tr("batch.mcp_list"))
+    def list_batch_candidates(
+        session_id: str,
+        kind: Literal["metrics", "locations"] = "metrics",
+        offset: int = 0,
+        limit: int = 20,
+    ) -> dict[str, Any]:
+        return call(session.batch_call, "list", session_id, kind, offset, limit)
+
+    @server.tool(annotations=annotations, description=tr("batch.mcp_select"))
+    def select_batch_bindings(
+        session_id: str,
+        choice_id: str,
+        candidate_ids: list[str],
+        rationale: str,
+        display_kind: DisplayKind | None = None,
+        places: int = 1,
+        percent_symbol: bool = True,
+    ) -> dict[str, Any]:
+        display = (
+            {"kind": display_kind, "places": places, "percent_symbol": percent_symbol}
+            if display_kind
+            else None
+        )
+        return call(
+            session.batch_call, "select", session_id, choice_id, candidate_ids, rationale, display
+        )
+
+    @server.tool(annotations=annotations, description=tr("batch.mcp_finish"))
+    def finish_batch_binding(session_id: str) -> dict[str, Any]:
+        return call(session.batch_call, "finish", session_id)
 
     @server.tool(annotations=annotations, description=tr("agent.scan"))
     def scan_project() -> dict[str, Any]:

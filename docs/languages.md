@@ -2,11 +2,11 @@
 
 [简体中文](zh-CN/languages.md)
 
-The v0.2 development version supports English (`en`) and Simplified Chinese
+PaperDelta supports English (`en`) and Simplified Chinese
 (`zh-CN`) for CLI help, terminal confirmation, diagnostics, text/Markdown reports
 and MCP descriptions and explanations. Offline HTML reports also include both
 languages. Maintained documentation is paired and checked by `tools/check_docs.py`;
-see the [delivery ledger](v0.2-plan.md).
+see the [current release](v0.3.md).
 
 ## Choose a language
 
@@ -72,15 +72,15 @@ can appear as original technical detail below a translated explanation.
 
 Previously supported configuration/report/snapshot version 1 remains readable.
 Historical snapshots are used for comparison without rewriting them. Proposals and
-patches remain bound to the tool version: regenerate a2 proposals/patches with v0.2
+patches remain bound to the tool version: regenerate older proposals/patches with the current release
 and review them again before accepting or writing. Existing transaction journals
 remain subject to their original byte-identity and recovery checks.
 
 All action commands accept `--format json`, including `propose`, `fix`, `apply`,
 `recover`, `snapshot create`, `review record`, `init`, `bind`, `settings` and `doctor`.
 Their result objects retain existing result fields and add `command_result_version: 1`
-and `command`. An applied patch reports `transaction_id` directly. The default
-`check`/`scan` JSON schemas are unchanged. `schema` always emits JSON and `mcp`
+and `command`. An applied patch reports `transaction_id` directly. New `check` reports use schema version 2; the reader accepts version 1. Batch and
+scope commands also support JSON; watch emits one JSON event per line. `schema` always emits JSON and `mcp`
 reserves standard output for its protocol.
 
 Explicit `--format json` sends a JSON error to standard output with a stable
