@@ -1,0 +1,507 @@
+{
+  "checked_at": "2026-10-03T06:53:16.754780+00:00",
+  "platform": "Linux-6.18.52-0-virt-x86_64-with-glibc2.39",
+  "uname": [
+    "Linux",
+    "localhost",
+    "6.18.52-0-virt",
+    "#1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48",
+    "x86_64",
+    "x86_64"
+  ],
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "commands": [
+    {
+      "name": "venv-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11"
+      ],
+      "exit_code": 0,
+      "seconds": 29.63
+    },
+    {
+      "name": "install-core-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 21.78
+    },
+    {
+      "name": "core-smoke-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build/core-smoke-3.11.json"
+      ],
+      "exit_code": 0,
+      "seconds": 13.42
+    },
+    {
+      "name": "install-extras-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 55.32
+    },
+    {
+      "name": "pip-check-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 3.73
+    },
+    {
+      "name": "venv-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12"
+      ],
+      "exit_code": 0,
+      "seconds": 19.39
+    },
+    {
+      "name": "install-core-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 18.54
+    },
+    {
+      "name": "core-smoke-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build/core-smoke-3.12.json"
+      ],
+      "exit_code": 0,
+      "seconds": 13.03
+    },
+    {
+      "name": "install-extras-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 40.79
+    },
+    {
+      "name": "pip-check-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 2.37
+    },
+    {
+      "name": "venv-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13"
+      ],
+      "exit_code": 0,
+      "seconds": 20.36
+    },
+    {
+      "name": "install-core-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 14.67
+    },
+    {
+      "name": "core-smoke-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build/core-smoke-3.13.json"
+      ],
+      "exit_code": 0,
+      "seconds": 12.38
+    },
+    {
+      "name": "install-extras-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 35.58
+    },
+    {
+      "name": "pip-check-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.82
+    },
+    {
+      "name": "venv-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14"
+      ],
+      "exit_code": 0,
+      "seconds": 24.05
+    },
+    {
+      "name": "install-core-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 15.31
+    },
+    {
+      "name": "core-smoke-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build/core-smoke-3.14.json"
+      ],
+      "exit_code": 0,
+      "seconds": 11.98
+    },
+    {
+      "name": "install-extras-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 39.42
+    },
+    {
+      "name": "pip-check-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.83
+    },
+    {
+      "name": "matrix",
+      "args": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "--out",
+        "build/v02-matrix"
+      ],
+      "exit_code": 1,
+      "seconds": 858.72
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+      "sha256": "67f0e6dca44b90ee236096f209512809361bc6cad0dce95f11631fd43ce5c888",
+      "bytes": 106173
+    },
+    {
+      "name": "paperdelta-0.2.0a1.tar.gz",
+      "sha256": "6b2999b22c2e6440b84439ef5b6f25268d8b5ca1c4915d6b3418a799ea37f47b",
+      "bytes": 8514031
+    }
+  ],
+  "remote_github_jobs": 0,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "supplemental_files": [],
+  "core_only_smoke": [
+    {
+      "checked_at": "2026-10-03T06:54:25.223699+00:00",
+      "python": "3.11.17",
+      "platform": "Linux",
+      "version": "0.2.0a1",
+      "installed_wheel_used": true,
+      "mcp_installed": false,
+      "core_check_exit": 0,
+      "data_only_change_exit": 1,
+      "mismatches": 5,
+      "html_report_written": true,
+      "optional_mcp_error": "MCP_NOT_INSTALLED",
+      "languages": [
+        "en",
+        "zh-CN"
+      ],
+      "language_independent_stored_reports": true,
+      "installed_sources_sha256": {
+        "__init__.py": "af8995c9a4e238d5cba356932844d2205762dda060e095a25a0feb60c4df3a49",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "70fef3b69b37c40c57ce5fe0e9fa9b2454d0686225bb77504ae1d96fc652893c",
+        "analysis.py": "42802fefb21b7988bda52351b1978a454e1135fe4ffdd094c0539c3173a2ac80",
+        "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+        "assets/report.css": "b88e290989b1a1bcb7fd69f1135c0806949887437060b7f06a61e00592466e71",
+        "assets/report.js": "0a6ed053caf5e214b1847b5f48a2d74d1a1f4874a54f914d223cb11500897e3f",
+        "builder.py": "f8787ee9a600693bd0bb033b5e5797fc844f635e132214a2830bdaa55c9f471c",
+        "cli.py": "db16843b56b5a87fc05bf7647b75f5949cea88e8c8225743435bd976f608f46f",
+        "config.py": "0ced6df5cc5a205d86d0e26314e088a4e669fac9289674ce2c477bd86ff4dc65",
+        "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+        "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+        "guided.py": "1f78b96cb40620d2da972bf5072ea0065e6d5b897658a340cee464ef9e288fde",
+        "html_report.py": "c17d8b48aeed9b03ca877d37e24e0963e7dbd4816174199436e63f879e860125",
+        "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+        "interactive.py": "8fcaf0a82d17fe37b01dfc586f98c12f07b9ebcf252ec33f35c40d49cba3a305",
+        "latex.py": "fb97fb2509bef97d9e92013acf3aed02055904a002638c3b1421c12edfe00ff5",
+        "locales/en.json": "d4a6ce2c94e43b9ef1a6fc45702e04bf5a34e92b9b321404facd54e1c6655bee",
+        "locales/zh-CN.json": "215262e9e07091265d41fe0d812ae4496fd02875ef7bd63c38e1f3b6634a5cc7",
+        "mcp_server.py": "4be4fc685961ff7fe425f72a70c8f325f6789e8ceeba362427189a79a8582e5f",
+        "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+        "models.py": "34abd7c86b9f108b39a94e6b790312228c83a03de552d2486b0a89ab165552c3",
+        "onboarding.py": "b18291226f495e21a7242463d731c5161c0af5fec65fbb206f5a54eadcfec538",
+        "patches.py": "e793aa71ee60dc73bd6b6574d440ce236b1e6fd68ee7ceac7314c3101105e5da",
+        "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+        "records.py": "f39a6bea13a88219115221eed38401715cc54134bcc610addf4cc523c6e6eb9a",
+        "repairs.py": "4646371751a914e3a1a21c81709180fe24b0f30937f7a01c154197668f4cffd2",
+        "reports.py": "b827c37806fb3b9470db590c0802330ebb60645dad076eada3e5851f403c6d21",
+        "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+        "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+        "sources.py": "be0274093f4debfc55b981eb43991d5d46311f3ec3f52bd9add659a234ff533f",
+        "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c"
+      }
+    },
+    {
+      "checked_at": "2026-10-03T06:56:15.293600+00:00",
+      "python": "3.12.15",
+      "platform": "Linux",
+      "version": "0.2.0a1",
+      "installed_wheel_used": true,
+      "mcp_installed": false,
+      "core_check_exit": 0,
+      "data_only_change_exit": 1,
+      "mismatches": 5,
+      "html_report_written": true,
+      "optional_mcp_error": "MCP_NOT_INSTALLED",
+      "languages": [
+        "en",
+        "zh-CN"
+      ],
+      "language_independent_stored_reports": true,
+      "installed_sources_sha256": {
+        "__init__.py": "af8995c9a4e238d5cba356932844d2205762dda060e095a25a0feb60c4df3a49",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "70fef3b69b37c40c57ce5fe0e9fa9b2454d0686225bb77504ae1d96fc652893c",
+        "analysis.py": "42802fefb21b7988bda52351b1978a454e1135fe4ffdd094c0539c3173a2ac80",
+        "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+        "assets/report.css": "b88e290989b1a1bcb7fd69f1135c0806949887437060b7f06a61e00592466e71",
+        "assets/report.js": "0a6ed053caf5e214b1847b5f48a2d74d1a1f4874a54f914d223cb11500897e3f",
+        "builder.py": "f8787ee9a600693bd0bb033b5e5797fc844f635e132214a2830bdaa55c9f471c",
+        "cli.py": "db16843b56b5a87fc05bf7647b75f5949cea88e8c8225743435bd976f608f46f",
+        "config.py": "0ced6df5cc5a205d86d0e26314e088a4e669fac9289674ce2c477bd86ff4dc65",
+        "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+        "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+        "guided.py": "1f78b96cb40620d2da972bf5072ea0065e6d5b897658a340cee464ef9e288fde",
+        "html_report.py": "c17d8b48aeed9b03ca877d37e24e0963e7dbd4816174199436e63f879e860125",
+        "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+        "interactive.py": "8fcaf0a82d17fe37b01dfc586f98c12f07b9ebcf252ec33f35c40d49cba3a305",
+        "latex.py": "fb97fb2509bef97d9e92013acf3aed02055904a002638c3b1421c12edfe00ff5",
+        "locales/en.json": "d4a6ce2c94e43b9ef1a6fc45702e04bf5a34e92b9b321404facd54e1c6655bee",
+        "locales/zh-CN.json": "215262e9e07091265d41fe0d812ae4496fd02875ef7bd63c38e1f3b6634a5cc7",
+        "mcp_server.py": "4be4fc685961ff7fe425f72a70c8f325f6789e8ceeba362427189a79a8582e5f",
+        "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+        "models.py": "34abd7c86b9f108b39a94e6b790312228c83a03de552d2486b0a89ab165552c3",
+        "onboarding.py": "b18291226f495e21a7242463d731c5161c0af5fec65fbb206f5a54eadcfec538",
+        "patches.py": "e793aa71ee60dc73bd6b6574d440ce236b1e6fd68ee7ceac7314c3101105e5da",
+        "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+        "records.py": "f39a6bea13a88219115221eed38401715cc54134bcc610addf4cc523c6e6eb9a",
+        "repairs.py": "4646371751a914e3a1a21c81709180fe24b0f30937f7a01c154197668f4cffd2",
+        "reports.py": "b827c37806fb3b9470db590c0802330ebb60645dad076eada3e5851f403c6d21",
+        "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+        "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+        "sources.py": "be0274093f4debfc55b981eb43991d5d46311f3ec3f52bd9add659a234ff533f",
+        "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c"
+      }
+    },
+    {
+      "checked_at": "2026-10-03T06:57:45.977328+00:00",
+      "python": "3.13.16",
+      "platform": "Linux",
+      "version": "0.2.0a1",
+      "installed_wheel_used": true,
+      "mcp_installed": false,
+      "core_check_exit": 0,
+      "data_only_change_exit": 1,
+      "mismatches": 5,
+      "html_report_written": true,
+      "optional_mcp_error": "MCP_NOT_INSTALLED",
+      "languages": [
+        "en",
+        "zh-CN"
+      ],
+      "language_independent_stored_reports": true,
+      "installed_sources_sha256": {
+        "__init__.py": "af8995c9a4e238d5cba356932844d2205762dda060e095a25a0feb60c4df3a49",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "70fef3b69b37c40c57ce5fe0e9fa9b2454d0686225bb77504ae1d96fc652893c",
+        "analysis.py": "42802fefb21b7988bda52351b1978a454e1135fe4ffdd094c0539c3173a2ac80",
+        "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+        "assets/report.css": "b88e290989b1a1bcb7fd69f1135c0806949887437060b7f06a61e00592466e71",
+        "assets/report.js": "0a6ed053caf5e214b1847b5f48a2d74d1a1f4874a54f914d223cb11500897e3f",
+        "builder.py": "f8787ee9a600693bd0bb033b5e5797fc844f635e132214a2830bdaa55c9f471c",
+        "cli.py": "db16843b56b5a87fc05bf7647b75f5949cea88e8c8225743435bd976f608f46f",
+        "config.py": "0ced6df5cc5a205d86d0e26314e088a4e669fac9289674ce2c477bd86ff4dc65",
+        "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+        "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+        "guided.py": "1f78b96cb40620d2da972bf5072ea0065e6d5b897658a340cee464ef9e288fde",
+        "html_report.py": "c17d8b48aeed9b03ca877d37e24e0963e7dbd4816174199436e63f879e860125",
+        "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+        "interactive.py": "8fcaf0a82d17fe37b01dfc586f98c12f07b9ebcf252ec33f35c40d49cba3a305",
+        "latex.py": "fb97fb2509bef97d9e92013acf3aed02055904a002638c3b1421c12edfe00ff5",
+        "locales/en.json": "d4a6ce2c94e43b9ef1a6fc45702e04bf5a34e92b9b321404facd54e1c6655bee",
+        "locales/zh-CN.json": "215262e9e07091265d41fe0d812ae4496fd02875ef7bd63c38e1f3b6634a5cc7",
+        "mcp_server.py": "4be4fc685961ff7fe425f72a70c8f325f6789e8ceeba362427189a79a8582e5f",
+        "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+        "models.py": "34abd7c86b9f108b39a94e6b790312228c83a03de552d2486b0a89ab165552c3",
+        "onboarding.py": "b18291226f495e21a7242463d731c5161c0af5fec65fbb206f5a54eadcfec538",
+        "patches.py": "e793aa71ee60dc73bd6b6574d440ce236b1e6fd68ee7ceac7314c3101105e5da",
+        "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+        "records.py": "f39a6bea13a88219115221eed38401715cc54134bcc610addf4cc523c6e6eb9a",
+        "repairs.py": "4646371751a914e3a1a21c81709180fe24b0f30937f7a01c154197668f4cffd2",
+        "reports.py": "b827c37806fb3b9470db590c0802330ebb60645dad076eada3e5851f403c6d21",
+        "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+        "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+        "sources.py": "be0274093f4debfc55b981eb43991d5d46311f3ec3f52bd9add659a234ff533f",
+        "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c"
+      }
+    },
+    {
+      "checked_at": "2026-10-03T06:59:14.786037+00:00",
+      "python": "3.14.8",
+      "platform": "Linux",
+      "version": "0.2.0a1",
+      "installed_wheel_used": true,
+      "mcp_installed": false,
+      "core_check_exit": 0,
+      "data_only_change_exit": 1,
+      "mismatches": 5,
+      "html_report_written": true,
+      "optional_mcp_error": "MCP_NOT_INSTALLED",
+      "languages": [
+        "en",
+        "zh-CN"
+      ],
+      "language_independent_stored_reports": true,
+      "installed_sources_sha256": {
+        "__init__.py": "af8995c9a4e238d5cba356932844d2205762dda060e095a25a0feb60c4df3a49",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "70fef3b69b37c40c57ce5fe0e9fa9b2454d0686225bb77504ae1d96fc652893c",
+        "analysis.py": "42802fefb21b7988bda52351b1978a454e1135fe4ffdd094c0539c3173a2ac80",
+        "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+        "assets/report.css": "b88e290989b1a1bcb7fd69f1135c0806949887437060b7f06a61e00592466e71",
+        "assets/report.js": "0a6ed053caf5e214b1847b5f48a2d74d1a1f4874a54f914d223cb11500897e3f",
+        "builder.py": "f8787ee9a600693bd0bb033b5e5797fc844f635e132214a2830bdaa55c9f471c",
+        "cli.py": "db16843b56b5a87fc05bf7647b75f5949cea88e8c8225743435bd976f608f46f",
+        "config.py": "0ced6df5cc5a205d86d0e26314e088a4e669fac9289674ce2c477bd86ff4dc65",
+        "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+        "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+        "guided.py": "1f78b96cb40620d2da972bf5072ea0065e6d5b897658a340cee464ef9e288fde",
+        "html_report.py": "c17d8b48aeed9b03ca877d37e24e0963e7dbd4816174199436e63f879e860125",
+        "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+        "interactive.py": "8fcaf0a82d17fe37b01dfc586f98c12f07b9ebcf252ec33f35c40d49cba3a305",
+        "latex.py": "fb97fb2509bef97d9e92013acf3aed02055904a002638c3b1421c12edfe00ff5",
+        "locales/en.json": "d4a6ce2c94e43b9ef1a6fc45702e04bf5a34e92b9b321404facd54e1c6655bee",
+        "locales/zh-CN.json": "215262e9e07091265d41fe0d812ae4496fd02875ef7bd63c38e1f3b6634a5cc7",
+        "mcp_server.py": "4be4fc685961ff7fe425f72a70c8f325f6789e8ceeba362427189a79a8582e5f",
+        "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+        "models.py": "34abd7c86b9f108b39a94e6b790312228c83a03de552d2486b0a89ab165552c3",
+        "onboarding.py": "b18291226f495e21a7242463d731c5161c0af5fec65fbb206f5a54eadcfec538",
+        "patches.py": "e793aa71ee60dc73bd6b6574d440ce236b1e6fd68ee7ceac7314c3101105e5da",
+        "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+        "records.py": "f39a6bea13a88219115221eed38401715cc54134bcc610addf4cc523c6e6eb9a",
+        "repairs.py": "4646371751a914e3a1a21c81709180fe24b0f30937f7a01c154197668f4cffd2",
+        "reports.py": "b827c37806fb3b9470db590c0802330ebb60645dad076eada3e5851f403c6d21",
+        "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+        "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+        "sources.py": "be0274093f4debfc55b981eb43991d5d46311f3ec3f52bd9add659a234ff533f",
+        "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c"
+      }
+    }
+  ],
+  "execution": "Ubuntu Base userspace on ext4 in disposable Alpine-kernel QEMU TCG guest",
+  "scope": "New core/full wheel installations and actual Linux tests; not native Ubuntu, macOS, remote CI, or human evidence.",
+  "status": "failed",
+  "error": "Traceback (most recent call last):\n  File \"/root/validate-resume.py\", line 78, in <module>\n    run('matrix', args, timeout=1600)\n  File \"/root/validate-resume.py\", line 44, in run\n    assert result.returncode == 0, f'{name}: exit {result.returncode}'\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: matrix: exit 1\n",
+  "finished_at": "2026-10-03T07:14:14.959521+00:00"
+}

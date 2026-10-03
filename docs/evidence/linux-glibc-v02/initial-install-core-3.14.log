@@ -1,0 +1,25 @@
+Processing /root/paperdelta-validation/paperdelta-0.2.0a1-py3-none-any.whl
+Collecting pydantic<3,>=2.10 (from paperdelta==0.2.0a1)
+  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting PyYAML<7,>=6.0.2 (from paperdelta==0.2.0a1)
+  Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting pylatexenc<3,>=2.11 (from paperdelta==0.2.0a1)
+  Using cached pylatexenc-2.11-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.10->paperdelta==0.2.0a1)
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic<3,>=2.10->paperdelta==0.2.0a1)
+  Using cached pydantic_core-2.46.5-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting typing-extensions>=4.14.1 (from pydantic<3,>=2.10->paperdelta==0.2.0a1)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic<3,>=2.10->paperdelta==0.2.0a1)
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
+Using cached pydantic_core-2.46.5-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Using cached pylatexenc-2.11-py2.py3-none-any.whl (137 kB)
+Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (794 kB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Installing collected packages: pylatexenc, typing-extensions, PyYAML, annotated-types, typing-inspection, pydantic-core, pydantic, paperdelta
+
+Successfully installed PyYAML-6.0.3 annotated-types-0.8.0 paperdelta-0.2.0a1 pydantic-2.13.5 pydantic-core-2.46.5 pylatexenc-2.11 typing-extensions-4.16.0 typing-inspection-0.4.4

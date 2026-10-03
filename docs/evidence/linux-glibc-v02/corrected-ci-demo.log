@@ -1,0 +1,80 @@
+{
+  "cases": {
+    "changed-declarations": {
+      "all_tex_bytes_unchanged": true,
+      "check_exit": 0,
+      "configuration": {
+        "sections": [
+          {
+            "added": [],
+            "changed": [],
+            "removed": [
+              "abstract_accuracy",
+              "appendix_accuracy",
+              "gain_text",
+              "table_accuracy"
+            ],
+            "section": "occurrences"
+          },
+          {
+            "added": [],
+            "changed": [],
+            "removed": [
+              "main_comparison"
+            ],
+            "section": "claims"
+          }
+        ],
+        "settings": [],
+        "status": "changed"
+      },
+      "confirmed": 1,
+      "mismatch": 0,
+      "original_tex_hashes": {
+        "paper/abstract.tex": "sha256:b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "sha256:292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/main.tex": "sha256:a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899",
+        "paper/results.tex": "sha256:0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac"
+      },
+      "policy_changes": [
+        {
+          "change": "modified",
+          "current_hash": "sha256:f1408311973616e943d419b4a949eff5187d2aad36970c0b5563d3a5d0caffc3",
+          "kind": "baseline",
+          "path": ".paperdelta/baselines/submitted-v1.json",
+          "target_hash": "sha256:322103226f1a7e95d442ca23e5b50c3e973efb327d3711668b0a0ce5d164f9b9"
+        },
+        {
+          "change": "modified",
+          "current_hash": "sha256:ab1928eccf89ca11a01b6cb23c623d32fb528321ad3e109900f9c5286d9016d3",
+          "kind": "configuration",
+          "path": "paperdelta.yaml",
+          "target_hash": "sha256:ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769"
+        }
+      ],
+      "target_commit": "c521cbe572cd23225d433a4f73006e5b39edcd68"
+    },
+    "data-only": {
+      "all_tex_bytes_unchanged": true,
+      "check_exit": 1,
+      "configuration": {
+        "sections": [],
+        "settings": [],
+        "status": "unchanged"
+      },
+      "confirmed": 6,
+      "mismatch": 5,
+      "original_tex_hashes": {
+        "paper/abstract.tex": "sha256:b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "sha256:292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/main.tex": "sha256:a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899",
+        "paper/results.tex": "sha256:0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac"
+      },
+      "policy_changes": [],
+      "target_commit": "9ed0219764eac19aa7214a038b0a97bd94163252"
+    }
+  },
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "Synthetic local Git scenarios, not a remote GitHub workflow execution."
+}

@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-03T07:26:41.770020+00:00",
+  "file": "paperdelta-0.2.0a1-mac-transfer.zip",
+  "bytes": 9745673,
+  "sha256": "3988c81368d18ff32f6993ad61719189b58b5f69dfd23153cee003b91dc832fd",
+  "members_verified": 947,
+  "contains_host_environments_or_model_weights": false,
+  "macos_execution_verified": false,
+  "candidate_artifacts": [
+    {
+      "path": "build/release-candidate-v0.2/paperdelta-0.2.0a1-py3-none-any.whl",
+      "bytes": 106130,
+      "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+    },
+    {
+      "path": "build/release-candidate-v0.2/paperdelta-0.2.0a1.tar.gz",
+      "bytes": 8630806,
+      "sha256": "0f4ea0ee2f73955c31f5fad6a66d9bb5fc32e6c3990cf58b1c9948dbafd3b3d4"
+    },
+    {
+      "path": "build/release-candidate-v0.2/paperdelta-evaluation-0.2.0a1.zip",
+      "bytes": 357706,
+      "sha256": "41533cf314eb50d06916e2e33aa8f31dd8ed600f95eeb5385d8c9b018c5cd811"
+    }
+  ]
+}

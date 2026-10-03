@@ -1,0 +1,105 @@
+"""Correct a guest devpts mount; keep original matrix failures and test bytes."""
+import hashlib
+import json
+import os
+import platform
+import shutil
+import subprocess
+import sys
+import tarfile
+import time
+import traceback
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import UTC, datetime
+from pathlib import Path
+
+BASE = sys.argv[1]
+manifest = json.load(urllib.request.urlopen(BASE + '/inputs.json', timeout=60))
+WORK = Path('/root/paperdelta-validation')
+project = WORK / '论文 project/paperdelta-0.2.0a1'
+PREVIOUS = WORK / ('evidence-v02-' + manifest['resume_from'])
+OUT = WORK / ('evidence-pty-' + manifest['run_id'])
+OUT.mkdir()
+ENV = {**os.environ, 'PYTHONUTF8': '1', 'PIP_DISABLE_PIP_VERSION_CHECK': '1'}
+ENV.pop('PYTHONPATH', None)
+prior = json.loads((PREVIOUS / 'evidence.json').read_text())
+prior_matrix = json.loads((PREVIOUS / 'matrix.json').read_text())
+assert prior['status'] == 'failed' and prior['artifacts'] == manifest['artifacts']
+assert len(prior_matrix['results']) == 4
+assert all(r['tests'] == {'tests':237,'failures':2,'errors':0,'skipped':0} for r in prior_matrix['results'])
+RECORD = {'started_at': datetime.now(UTC).isoformat(), 'platform': platform.platform(),
+    'libc': list(platform.libc_ver()), 'artifacts': manifest['artifacts'], 'commands': [],
+    'prior_run': manifest['resume_from'], 'prior_matrix_sha256': hashlib.sha256((PREVIOUS/'matrix.json').read_bytes()).hexdigest(),
+    'correction': 'Mount devpts inside the disposable chroot; no runtime/test/harness source modifications.',
+    'scope': 'One full Python 3.12 suite and affected platform cases on three other installed versions; retain prior full matrices with two environment failures each.',
+    'independent_participants':0, 'model_runs':0, 'remote_ci_jobs':0}
+def run(name, args, timeout=400):
+    print('Running ' + name, flush=True)
+    started = time.monotonic()
+    with (OUT / (name+'.log')).open('w', encoding='utf-8') as log:
+        result = subprocess.run([str(a) for a in args], cwd=project, env=ENV, stdout=log, stderr=subprocess.STDOUT, timeout=timeout)
+    RECORD['commands'].append({'name':name,'args':[str(a) for a in args],'exit_code':result.returncode,'seconds':round(time.monotonic()-started,2)})
+    print((OUT / (name+'.log')).read_text()[-1800:], flush=True)
+    assert result.returncode == 0, (name, result.returncode)
+
+exit_code = 1
+try:
+    # Verify every runtime/test byte against the installed candidate's source archive.
+    with tarfile.open(WORK / 'paperdelta-0.2.0a1.tar.gz') as archive:
+        count = 0
+        for member in archive.getmembers():
+            relative = '/'.join(Path(member.name).parts[1:])
+            if member.isfile() and relative.startswith(('src/paperdelta/','tests/','tools/')):
+                assert (project / relative).read_bytes() == archive.extractfile(member).read(), relative
+                count += 1
+    RECORD['runtime_test_and_tool_files_unchanged'] = count
+    master, slave = os.openpty()
+    assert os.isatty(slave)
+    os.close(master); os.close(slave)
+    RECORD['actual_openpty_probe'] = 'passed'
+    (OUT/'devpts.log').write_text('\n'.join(line for line in Path('/proc/mounts').read_text().splitlines() if 'devpts' in line)+'\n')
+    python = project / '.venv-3.12/bin/python'
+    matrix_out = 'build/pty-full-' + manifest['run_id']
+    run('full-3.12', [sys.executable,'-X','utf8','tools/validate_python_matrix.py','--python',python,'--out',matrix_out])
+    matrix_dir = project / matrix_out
+    matrix = json.loads((matrix_dir/'evidence.json').read_text())
+    assert len(matrix['results']) == 1 and matrix['results'][0]['tests'] == {'tests':237,'failures':0,'errors':0,'skipped':0}
+    shutil.copyfile(matrix_dir/'evidence.json', OUT/'full-matrix.json')
+    full = matrix['results'][0]
+    for name in ('junit.xml','stdout.log','stderr.log'):
+        shutil.copyfile(matrix_dir/full['python']/name, OUT/(full['python']+'-'+name))
+    RECORD['full_suite'] = {'python': full['python'], **full['tests']}
+    focused = []
+    for minor in ('3.11','3.13','3.14'):
+        executable = project / f'.venv-{minor}/bin/python'
+        junit = OUT/(minor+'-platform.xml')
+        run('platform-'+minor,[executable,'-X','utf8','tools/run_tests.py','-q','tests/test_platform_io.py','--junitxml',junit])
+        suites = ET.parse(junit).getroot().findall('.//testsuite')
+        counts = {k:sum(int(s.get(k,0)) for s in suites) for k in ('tests','failures','errors','skipped')}
+        assert counts['tests'] >= 3 and counts['failures'] == counts['errors'] == counts['skipped'] == 0
+        names = [t.attrib['name'] for t in ET.parse(junit).getroot().findall('.//testcase')]
+        assert 'test_actual_posix_terminal_binding[accept]' in names and 'test_actual_posix_terminal_binding[cancel]' in names
+        focused.append({'python_minor':minor,'selection':'tests/test_platform_io.py',**counts})
+    RECORD['focused_followups'] = focused
+    for name, script in [('examples','validate_examples.py'),('ci-demo','demo_ci.py')]:
+        relative = 'build/pty-'+name+'-'+manifest['run_id']
+        run(name,[python,'-X','utf8','tools/'+script,'--out',relative])
+        shutil.copyfile(project/relative/'evidence.json',OUT/(name+'.json'))
+    RECORD['status'] = 'passed'
+    exit_code = 0
+except BaseException:
+    RECORD['status'] = 'failed'
+    RECORD['error'] = traceback.format_exc()
+    print(RECORD['error'],flush=True)
+finally:
+    RECORD['finished_at'] = datetime.now(UTC).isoformat()
+    (OUT/'evidence.json').write_text(json.dumps(RECORD,indent=2)+'\n')
+    bundle = OUT.with_suffix('.tar.gz')
+    with tarfile.open(bundle,'w:gz') as archive:
+        for file in sorted(OUT.iterdir()):
+            if file.is_file(): archive.add(file,arcname=file.name)
+    request = urllib.request.Request(BASE+'/evidence.tar.gz',data=bundle.read_bytes(),method='POST',headers={'Content-Type':'application/gzip'})
+    with urllib.request.urlopen(request,timeout=60) as response: assert response.status == 201
+    print(json.dumps({'status':RECORD['status'],'full':RECORD.get('full_suite'),'focused':RECORD.get('focused_followups')}),flush=True)
+raise SystemExit(exit_code)

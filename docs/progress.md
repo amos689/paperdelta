@@ -20,12 +20,14 @@ deferred until product convergence; remote CI and external publication have not 
 | Location repair | Explicit old/new context and selection, fresh hashes, metric/claim definitions preserved | Cancellation, ambiguity, overlap, stale input and partial acceptance tests |
 | Shared builder / MCP | Thirteen read-only tools, enum choices and available stages; no acceptance or paper writes | [Builder checkpoint](evidence/v0.2-builder.json): 226 passed, 3 POSIX skips; real stdio staged proposal test |
 | Local model follow-ups | Separate v2/v3 protocols and raw failures | [Results](staged-model-evaluation.md): v2 0/12 valid actions, v3 3/15; neither produced a valid complete proposal or required abstention |
-| Documentation | Paired maintained pages, executable bilingual tutorial, current screenshots and demo captions | [Contribution rules](../CONTRIBUTING.md); final package check pending |
+| Documentation | 28 paired maintained pages, executable bilingual tutorial, current screenshots and demo captions | [Contribution rules](../CONTRIBUTING.md), [final acceptance](v0.2-acceptance.md) |
 | Privacy | Repository commit email and maintainer metadata use the verified GitHub noreply address | `101008326+amos689@users.noreply.github.com`; no global identity changes |
 
-These checkpoints are not the final installed-package/platform acceptance of v0.2.
-The [delivery ledger](v0.2-plan.md) lists remaining checks. No human observations,
-general model accuracy or automatic-mapper approval follow from these runs.
+The [final acceptance](v0.2-acceptance.md) now adds Windows installed-wheel matrices,
+Linux execution and environment correction, corpus/compatibility/browser/performance,
+actual developer use and artifact identities. Earlier checkpoints retain their own
+scope. The [delivery ledger](v0.2-plan.md) marks native Mac execution as deferred.
+No human observations, general model accuracy or automatic-mapper approval follow.
 
 ## Preserved a1/a2 evidence
 

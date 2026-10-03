@@ -5,8 +5,8 @@
 The source, pure-Python PaperDelta wheel and owned examples can be transferred
 using the [Mac quick start](../START_ON_MAC.en.md). Recreate the environment on the Mac;
 Windows virtual environments, executables and local inference models are excluded.
-The old transfer contains the locally accepted 0.1.0a2 core. v0.2 has changed that
-implementation and needs a rebuilt candidate after product convergence.
+The rebuilt 0.2.0a1 transfer contains the current locally accepted core. The old
+0.1.0a2 transfer remains historical; use the matching version in `TRANSFER.json`.
 
 **Status: native macOS execution is pending.** Neither a workflow definition,
 a Windows test nor POSIX execution on Linux counts as a Mac result.

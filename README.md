@@ -16,23 +16,22 @@ optional MCP · no model key, GPU or TeX installation required for checking.
 
 ![English review of numbers, a false comparison and changed figure inputs](docs/assets/v0.2/report.en.png)
 
-**v0.2 development alpha (0.2.0a1).** The earlier 0.1.0a2 has a recorded local
-acceptance decision; the v0.2 release is still being validated. New features include
+**v0.2 development alpha (0.2.0a1), locally accepted.** New features include
 English/Chinese interfaces, an offline report language switch, environment diagnosis,
 guided mapping, explicit location repair and staged agent tools. Follow the
 [v0.2 delivery ledger](docs/v0.2-plan.md). A small
 [real-text evaluation](docs/evaluation.md) records both supported and unknown
 cases. A [local CLI comparison](docs/comparison.md) exercises Calkit and
 scitexlintr as well. Pre-release acceptance uses local machine tests and developer
-review; see the [historical acceptance decision](docs/release-acceptance.md). Windows
-and Linux have a2 evidence; current v0.2 checks are being recorded separately.
+review; see the [v0.2 acceptance decision](docs/v0.2-acceptance.md). Windows
+3.11–3.14 and local Linux have current installed-package evidence with exact run limits.
 macOS and remote CI remain unverified.
 Independent first-use feedback is planned after launch. No package-index publication yet.
 See the [evidence ledger](docs/progress.md) for measured results and follow-up work.
 
-**Mac validation is deferred until product convergence.** The existing transfer
-package is an a2 artifact. The [Mac quick start](START_ON_MAC.en.md) will be used
-with a rebuilt candidate; native results are still pending.
+**Native Mac validation remains deferred.** A matching 0.2.0a1 transfer package has
+been rebuilt after local acceptance. Use the [Mac quick start](START_ON_MAC.en.md)
+when ready; native results are still pending.
 
 ## Try it from this checkout
 

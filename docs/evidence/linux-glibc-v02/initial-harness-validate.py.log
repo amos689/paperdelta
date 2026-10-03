@@ -1,0 +1,113 @@
+"""New v0.2 installations in an overlay of the retained local Linux guest."""
+import hashlib
+import json
+import os
+import platform
+import shutil
+import subprocess
+import sys
+import tarfile
+import time
+import traceback
+import urllib.request
+from datetime import UTC, datetime
+from pathlib import Path
+
+BASE = sys.argv[1]
+manifest = json.load(urllib.request.urlopen(BASE + '/inputs.json', timeout=60))
+WORK = Path('/root/paperdelta-validation')
+OUT = WORK / ('evidence-v02-' + manifest['run_id'])
+OUT.mkdir()
+project = WORK / '论文 project/paperdelta-0.2.0a1'
+assert not project.exists()
+ENV = {**os.environ, 'PYTHONUTF8': '1', 'PIP_DISABLE_PIP_VERSION_CHECK': '1'}
+ENV.pop('PYTHONPATH', None)
+RECORD = {
+    'checked_at': datetime.now(UTC).isoformat(), 'platform': platform.platform(),
+    'uname': list(platform.uname()), 'os_release': Path('/etc/os-release').read_text(),
+    'libc': list(platform.libc_ver()), 'commands': [], 'artifacts': manifest['artifacts'],
+    'remote_github_jobs': 0, 'independent_participants': 0, 'model_runs': 0,
+    'supplemental_files': [], 'core_only_smoke': [],
+    'execution': 'Ubuntu Base userspace on ext4 in disposable Alpine-kernel QEMU TCG guest',
+    'scope': 'New core/full wheel installations and actual Linux tests; not native Ubuntu, macOS, remote CI, or human evidence.',
+}
+
+def run(name, args, timeout=600):
+    print('Running ' + name, flush=True)
+    started = time.monotonic()
+    with (OUT / (name + '.log')).open('w', encoding='utf-8') as log:
+        result = subprocess.run([str(a) for a in args], cwd=project, env=ENV,
+                                stdout=log, stderr=subprocess.STDOUT, timeout=timeout)
+    RECORD['commands'].append({'name': name, 'args': [str(a) for a in args],
+        'exit_code': result.returncode, 'seconds': round(time.monotonic() - started, 2)})
+    print((OUT / (name + '.log')).read_text('utf-8')[-1500:], flush=True)
+    assert result.returncode == 0, f'{name}: exit {result.returncode}'
+
+exit_code = 1
+try:
+    for entry in manifest['artifacts']:
+        raw = urllib.request.urlopen(BASE + '/' + entry['name'], timeout=60).read()
+        assert hashlib.sha256(raw).hexdigest() == entry['sha256']
+        (WORK / entry['name']).write_bytes(raw)
+    with tarfile.open(WORK / 'paperdelta-0.2.0a1.tar.gz') as archive:
+        for member in archive.getmembers():
+            path = Path(member.name)
+            assert path.parts[0] == project.name and '..' not in path.parts
+            assert member.isfile() or member.isdir()
+        archive.extractall(project.parent, filter='data')
+    wheel = WORK / 'paperdelta-0.2.0a1-py3-none-any.whl'
+    interpreters = []
+    for minor in ('3.11', '3.12', '3.13', '3.14'):
+        previous = WORK / f'论文 project/paperdelta-0.1.0a2/.venv-{minor}/bin/python'
+        directory = project / f'.venv-{minor}'
+        run('venv-' + minor, [previous, '-m', 'venv', directory])
+        python = directory / 'bin/python'
+        interpreters.append(python)
+        run('install-core-' + minor, [python, '-m', 'pip', 'install', wheel])
+        relative = f'build/core-smoke-{minor}.json'
+        run('core-smoke-' + minor, [python, '-X', 'utf8', 'tools/package_smoke.py', '--out', relative])
+        shutil.copyfile(project / relative, OUT / f'core-smoke-{minor}.json')
+        RECORD['core_only_smoke'].append(json.loads((project / relative).read_text()))
+        run('install-extras-' + minor, [python, '-m', 'pip', 'install', str(wheel) + '[dev,mcp]'])
+        run('pip-check-' + minor, [python, '-m', 'pip', 'check'])
+    args = [sys.executable, '-X', 'utf8', 'tools/validate_python_matrix.py']
+    for python in interpreters:
+        args.extend(['--python', python])
+    args.extend(['--out', 'build/v02-matrix'])
+    try:
+        run('matrix', args, timeout=1600)
+    finally:
+        matrix_dir = project / 'build/v02-matrix'
+        if (matrix_dir / 'evidence.json').exists():
+            shutil.copyfile(matrix_dir / 'evidence.json', OUT / 'matrix.json')
+        if matrix_dir.exists():
+            for path in matrix_dir.glob('*/*'):
+                if path.is_file():
+                    shutil.copyfile(path, OUT / (path.parent.name + '-' + path.name))
+    matrix = json.loads((OUT / 'matrix.json').read_text())
+    RECORD['matrix_tests'] = [{'python': r['python'], **r['tests']} for r in matrix['results']]
+    assert len(matrix['results']) == 4
+    assert all(r['tests'] == {'tests': 237, 'failures': 0, 'errors': 0, 'skipped': 0} for r in matrix['results'])
+    for name, script in [('examples', 'validate_examples.py'), ('ci-demo', 'demo_ci.py')]:
+        run(name, [interpreters[1], '-X', 'utf8', 'tools/' + script, '--out', 'build/v02-' + name])
+        shutil.copyfile(project / ('build/v02-' + name + '/evidence.json'), OUT / (name + '.json'))
+    RECORD['status'] = 'passed'
+    exit_code = 0
+except BaseException:
+    RECORD['status'] = 'failed'
+    RECORD['error'] = traceback.format_exc()
+    print(RECORD['error'], flush=True)
+finally:
+    RECORD['finished_at'] = datetime.now(UTC).isoformat()
+    (OUT / 'evidence.json').write_text(json.dumps(RECORD, indent=2) + '\n', encoding='utf-8')
+    bundle = OUT.with_suffix('.tar.gz')
+    with tarfile.open(bundle, 'w:gz') as archive:
+        for path in sorted(OUT.iterdir()):
+            if path.is_file():
+                archive.add(path, arcname=path.name)
+    request = urllib.request.Request(BASE + '/evidence.tar.gz', data=bundle.read_bytes(),
+        method='POST', headers={'Content-Type': 'application/gzip'})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        assert response.status == 201
+    print(json.dumps({'status': RECORD['status'], 'tests': RECORD.get('matrix_tests')}), flush=True)
+raise SystemExit(exit_code)

@@ -2,9 +2,10 @@
 
 [简体中文](START_ON_MAC.md)
 
-Native Mac validation is scheduled after v0.2 product convergence. The existing
-0.1.0a2 transfer is historical and cannot validate the new implementation. Rebuild
-a matching candidate first. These steps apply to a portable source/wheel package;
+The locally accepted v0.2 candidate has a matching transfer at
+`build/mac-transfer-v0.2/paperdelta-0.2.0a1-mac-transfer.zip` in the development checkout.
+Use this 0.2.0a1 package; the 0.1.0a2 transfer remains historical. These steps apply
+to the portable source/wheel package;
 its version is in `TRANSFER.json`. It includes source, docs, tests, owned examples
 and a Python wheel, excluding Windows environments, temporary results and model
 weights. No native Mac pass has been recorded.

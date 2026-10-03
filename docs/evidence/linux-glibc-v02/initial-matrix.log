@@ -1,0 +1,72 @@
+Python 3.11.17: full installed-package suite
+ raise OSError('out of pty devices')
+E   OSError: out of pty devices
+__________________ test_actual_posix_terminal_binding[cancel] __________________
+tests/test_platform_io.py:94: in test_actual_posix_terminal_binding
+    master, slave = pty.openpty()
+                    ^^^^^^^^^^^^^
+../../pythons/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/pty.py:34: in openpty
+    master_fd, slave_name = _open_terminal()
+                            ^^^^^^^^^^^^^^^^
+../../pythons/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/pty.py:64: in _open_terminal
+    raise OSError('out of pty devices')
+E   OSError: out of pty devices
+=========================== short test summary info ============================
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[accept]
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[cancel]
+2 failed, 235 passed in 211.34s (0:03:31)
+
+Python 3.12.15: full installed-package suite
+ raise OSError('out of pty devices')
+E   OSError: out of pty devices
+__________________ test_actual_posix_terminal_binding[cancel] __________________
+tests/test_platform_io.py:94: in test_actual_posix_terminal_binding
+    master, slave = pty.openpty()
+                    ^^^^^^^^^^^^^
+../../pythons/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pty.py:34: in openpty
+    master_fd, slave_name = _open_terminal()
+                            ^^^^^^^^^^^^^^^^
+../../pythons/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/pty.py:67: in _open_terminal
+    raise OSError('out of pty devices')
+E   OSError: out of pty devices
+=========================== short test summary info ============================
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[accept]
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[cancel]
+2 failed, 235 passed in 223.17s (0:03:43)
+
+Python 3.13.16: full installed-package suite
+ raise OSError('out of pty devices')
+E   OSError: out of pty devices
+__________________ test_actual_posix_terminal_binding[cancel] __________________
+tests/test_platform_io.py:94: in test_actual_posix_terminal_binding
+    master, slave = pty.openpty()
+                    ^^^^^^^^^^^^^
+../../pythons/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/pty.py:34: in openpty
+    master_fd, slave_name = _open_terminal()
+                            ^^^^^^^^^^^^^^^^
+../../pythons/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/pty.py:67: in _open_terminal
+    raise OSError('out of pty devices')
+E   OSError: out of pty devices
+=========================== short test summary info ============================
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[accept]
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[cancel]
+2 failed, 235 passed in 206.62s (0:03:26)
+
+Python 3.14.8: full installed-package suite
+   raise OSError('out of pty devices')
+E   OSError: out of pty devices
+__________________ test_actual_posix_terminal_binding[cancel] __________________
+tests/test_platform_io.py:94: in test_actual_posix_terminal_binding
+    master, slave = pty.openpty()
+                    ^^^^^^^^^^^^^
+../../pythons/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/pty.py:34: in openpty
+    master_fd, slave_name = _open_terminal()
+                            ^^^^^^^^^^^^^^^^
+../../pythons/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/pty.py:58: in _open_terminal
+    raise OSError('out of pty devices')
+E   OSError: out of pty devices
+=========================== short test summary info ============================
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[accept]
+FAILED tests/test_platform_io.py::test_actual_posix_terminal_binding[cancel]
+2 failed, 235 passed in 200.52s (0:03:20)
+

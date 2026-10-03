@@ -1,0 +1,152 @@
+{
+  "started_at": "2026-10-03T07:17:30.040851+00:00",
+  "platform": "Linux-6.18.52-0-virt-x86_64-with-glibc2.39",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "artifacts": [
+    {
+      "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+      "sha256": "67f0e6dca44b90ee236096f209512809361bc6cad0dce95f11631fd43ce5c888",
+      "bytes": 106173
+    },
+    {
+      "name": "paperdelta-0.2.0a1.tar.gz",
+      "sha256": "6b2999b22c2e6440b84439ef5b6f25268d8b5ca1c4915d6b3418a799ea37f47b",
+      "bytes": 8514031
+    }
+  ],
+  "commands": [
+    {
+      "name": "full-3.12",
+      "args": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "--out",
+        "build/pty-full-266fa1f54af7444bb477d7375a72cdbf"
+      ],
+      "exit_code": 0,
+      "seconds": 234.66
+    },
+    {
+      "name": "platform-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.11/bin/python",
+        "-X",
+        "utf8",
+        "tools/run_tests.py",
+        "-q",
+        "tests/test_platform_io.py",
+        "--junitxml",
+        "/root/paperdelta-validation/evidence-pty-266fa1f54af7444bb477d7375a72cdbf/3.11-platform.xml"
+      ],
+      "exit_code": 0,
+      "seconds": 9.58
+    },
+    {
+      "name": "platform-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.13/bin/python",
+        "-X",
+        "utf8",
+        "tools/run_tests.py",
+        "-q",
+        "tests/test_platform_io.py",
+        "--junitxml",
+        "/root/paperdelta-validation/evidence-pty-266fa1f54af7444bb477d7375a72cdbf/3.13-platform.xml"
+      ],
+      "exit_code": 0,
+      "seconds": 8.57
+    },
+    {
+      "name": "platform-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.14/bin/python",
+        "-X",
+        "utf8",
+        "tools/run_tests.py",
+        "-q",
+        "tests/test_platform_io.py",
+        "--junitxml",
+        "/root/paperdelta-validation/evidence-pty-266fa1f54af7444bb477d7375a72cdbf/3.14-platform.xml"
+      ],
+      "exit_code": 0,
+      "seconds": 9.66
+    },
+    {
+      "name": "examples",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-X",
+        "utf8",
+        "tools/validate_examples.py",
+        "--out",
+        "build/pty-examples-266fa1f54af7444bb477d7375a72cdbf"
+      ],
+      "exit_code": 0,
+      "seconds": 2.38
+    },
+    {
+      "name": "ci-demo",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.2.0a1/.venv-3.12/bin/python",
+        "-X",
+        "utf8",
+        "tools/demo_ci.py",
+        "--out",
+        "build/pty-ci-demo-266fa1f54af7444bb477d7375a72cdbf"
+      ],
+      "exit_code": 0,
+      "seconds": 3.33
+    }
+  ],
+  "prior_run": "bc9558792af544b3ae8bd51c582344b0",
+  "prior_matrix_sha256": "aa68bdcfd69d02d4da85d3632eaeba3ef55afe1dbca1958103816056e76ac3b0",
+  "correction": "Mount devpts inside the disposable chroot; no runtime/test/harness source modifications.",
+  "scope": "One full Python 3.12 suite and affected platform cases on three other installed versions; retain prior full matrices with two environment failures each.",
+  "independent_participants": 0,
+  "model_runs": 0,
+  "remote_ci_jobs": 0,
+  "runtime_test_and_tool_files_unchanged": 87,
+  "actual_openpty_probe": "passed",
+  "full_suite": {
+    "python": "3.12.15",
+    "tests": 237,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focused_followups": [
+    {
+      "python_minor": "3.11",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python_minor": "3.13",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python_minor": "3.14",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "status": "passed",
+  "finished_at": "2026-10-03T07:21:59.789240+00:00"
+}

@@ -2,8 +2,9 @@
 
 [English](START_ON_MAC.en.md)
 
-Mac 实机验证安排在 v0.2 产品收敛之后。现有 0.1.0a2 迁移包属于历史版本，不能
-用于验证新的 v0.2 实现；需要先重新构建候选包。以下步骤适用于匹配源码和 wheel
+已通过本地验收的 v0.2 候选对应迁移包位于开发目录的
+`build/mac-transfer-v0.2/paperdelta-0.2.0a1-mac-transfer.zip`。
+请使用这个 0.2.0a1 包，0.1.0a2 迁移包保留为历史版本。以下步骤适用于匹配源码和 wheel
 的便携包，具体版本见包内 `TRANSFER.json`。包包含源码、文档、测试、
 原创示例和 Python wheel；不含 Windows 虚拟环境、临时结果或本地模型权重。
 尚未取得真实 Mac 的运行结果，下面的命令用于开始使用及补充验证。

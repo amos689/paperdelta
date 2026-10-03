@@ -1,0 +1,576 @@
+{
+  "archived_at": "2026-10-03T07:24:10.583238+00:00",
+  "status": "passed-after-guest-environment-correction",
+  "runtime_files_matched": 32,
+  "runtime_or_test_modifications": 0,
+  "initial_full_matrix": [
+    {
+      "python": "3.11.17",
+      "tests": 237,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.12.15",
+      "tests": 237,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.16",
+      "tests": 237,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.14.8",
+      "tests": 237,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "corrected_full_suite": {
+    "python": "3.12.15",
+    "tests": 237,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "corrected_platform_followups": [
+    {
+      "python_minor": "3.11",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python_minor": "3.13",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python_minor": "3.14",
+      "selection": "tests/test_platform_io.py",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "core_only_installations": 4,
+  "artifacts": [
+    {
+      "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+      "sha256": "67f0e6dca44b90ee236096f209512809361bc6cad0dce95f11631fd43ce5c888",
+      "bytes": 106173
+    },
+    {
+      "name": "paperdelta-0.2.0a1.tar.gz",
+      "sha256": "6b2999b22c2e6440b84439ef5b6f25268d8b5ca1c4915d6b3418a799ea37f47b",
+      "bytes": 8514031
+    }
+  ],
+  "correction": "Mount devpts inside the disposable chroot; no runtime/test/harness source modifications.",
+  "runs": [
+    {
+      "phase": "initial",
+      "host_run": "build/glibc-validation/bc9558792af544b3ae8bd51c582344b0",
+      "host_result": {
+        "guest_exit_code": 1,
+        "guest_evidence_received": true,
+        "shutdown": "guest-poweroff",
+        "started_at": "2026-10-03T06:53:02.964279+00:00",
+        "finished_at": "2026-10-03T07:14:20.895545+00:00",
+        "qemu_exit_code": 0,
+        "services_closed": true
+      },
+      "qemu_arguments": [
+        "<checkout>\\.tools\\linux-vm\\qemu\\qemu-system-x86_64.exe",
+        "-L",
+        "share",
+        "-accel",
+        "tcg,thread=multi",
+        "-cpu",
+        "max",
+        "-m",
+        "3072",
+        "-smp",
+        "2",
+        "-display",
+        "none",
+        "-monitor",
+        "none",
+        "-no-reboot",
+        "-kernel",
+        "../alpine/boot/vmlinuz-virt",
+        "-initrd",
+        "../alpine/boot/initramfs-virt",
+        "-append",
+        "modules=loop,squashfs,sd-mod,usb-storage console=ttyS0,115200 quiet",
+        "-cdrom",
+        "../downloads/alpine-virt-3.24.2-x86_64.iso",
+        "-drive",
+        "file=../../../build/glibc-validation/bc9558792af544b3ae8bd51c582344b0/guest-data.qcow2,format=qcow2,if=virtio",
+        "-nic",
+        "user,model=virtio-net-pci",
+        "-chardev",
+        "socket,id=serial,host=127.0.0.1,port=64990,server=on,wait=off",
+        "-serial",
+        "chardev:serial"
+      ],
+      "inputs": {
+        "run_id": "bc9558792af544b3ae8bd51c582344b0",
+        "artifacts": [
+          {
+            "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+            "sha256": "67f0e6dca44b90ee236096f209512809361bc6cad0dce95f11631fd43ce5c888",
+            "bytes": 106173
+          },
+          {
+            "name": "paperdelta-0.2.0a1.tar.gz",
+            "sha256": "6b2999b22c2e6440b84439ef5b6f25268d8b5ca1c4915d6b3418a799ea37f47b",
+            "bytes": 8514031
+          }
+        ],
+        "downloads": {
+          "checked_at": "2026-10-02T20:23:23.419169+00:00",
+          "downloads": [
+            {
+              "name": "ubuntu-base-24.04.5-base-amd64.tar.gz",
+              "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+              "sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86",
+              "digest_source": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/SHA256SUMS",
+              "bytes": 30028293,
+              "verified": true
+            },
+            {
+              "name": "uv-x86_64-unknown-linux-gnu.tar.gz",
+              "url": "https://github.com/astral-sh/uv/releases/download/0.12.22/uv-x86_64-unknown-linux-gnu.tar.gz",
+              "sha256": "b9980552309f09c15172b8be828555e375097f16deb459795ce7bfd200380f0b",
+              "digest_source": "https://api.github.com/repos/astral-sh/uv/releases/tags/0.12.22",
+              "bytes": 19916278,
+              "verified": true
+            }
+          ]
+        },
+        "resume_from": "cd93af22529541e9b1c03645fbcf0ee4",
+        "supplemental_files": [],
+        "guest_harness_sha256": "9bb7a8cc56ccc9e1b6c736ac300c294cbf9d2d40866b63637426a4a54267985e",
+        "scope": "New environments and candidate; only OS, Python installations and pip cache reused in a disposable overlay."
+      }
+    },
+    {
+      "phase": "corrected",
+      "host_run": "build/glibc-validation/266fa1f54af7444bb477d7375a72cdbf",
+      "host_result": {
+        "guest_exit_code": 0,
+        "guest_evidence_received": true,
+        "shutdown": "guest-poweroff",
+        "started_at": "2026-10-03T07:17:18.244447+00:00",
+        "finished_at": "2026-10-03T07:22:05.623969+00:00",
+        "qemu_exit_code": 0,
+        "services_closed": true
+      },
+      "qemu_arguments": [
+        "<checkout>\\.tools\\linux-vm\\qemu\\qemu-system-x86_64.exe",
+        "-L",
+        "share",
+        "-accel",
+        "tcg,thread=multi",
+        "-cpu",
+        "max",
+        "-m",
+        "3072",
+        "-smp",
+        "2",
+        "-display",
+        "none",
+        "-monitor",
+        "none",
+        "-no-reboot",
+        "-kernel",
+        "../alpine/boot/vmlinuz-virt",
+        "-initrd",
+        "../alpine/boot/initramfs-virt",
+        "-append",
+        "modules=loop,squashfs,sd-mod,usb-storage console=ttyS0,115200 quiet",
+        "-cdrom",
+        "../downloads/alpine-virt-3.24.2-x86_64.iso",
+        "-drive",
+        "file=../../../build/glibc-validation/266fa1f54af7444bb477d7375a72cdbf/guest-data.qcow2,format=qcow2,if=virtio",
+        "-nic",
+        "user,model=virtio-net-pci",
+        "-chardev",
+        "socket,id=serial,host=127.0.0.1,port=55914,server=on,wait=off",
+        "-serial",
+        "chardev:serial"
+      ],
+      "inputs": {
+        "run_id": "266fa1f54af7444bb477d7375a72cdbf",
+        "artifacts": [
+          {
+            "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+            "sha256": "67f0e6dca44b90ee236096f209512809361bc6cad0dce95f11631fd43ce5c888",
+            "bytes": 106173
+          },
+          {
+            "name": "paperdelta-0.2.0a1.tar.gz",
+            "sha256": "6b2999b22c2e6440b84439ef5b6f25268d8b5ca1c4915d6b3418a799ea37f47b",
+            "bytes": 8514031
+          }
+        ],
+        "downloads": {
+          "checked_at": "2026-10-02T20:23:23.419169+00:00",
+          "downloads": [
+            {
+              "name": "ubuntu-base-24.04.5-base-amd64.tar.gz",
+              "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+              "sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86",
+              "digest_source": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/SHA256SUMS",
+              "bytes": 30028293,
+              "verified": true
+            },
+            {
+              "name": "uv-x86_64-unknown-linux-gnu.tar.gz",
+              "url": "https://github.com/astral-sh/uv/releases/download/0.12.22/uv-x86_64-unknown-linux-gnu.tar.gz",
+              "sha256": "b9980552309f09c15172b8be828555e375097f16deb459795ce7bfd200380f0b",
+              "digest_source": "https://api.github.com/repos/astral-sh/uv/releases/tags/0.12.22",
+              "bytes": 19916278,
+              "verified": true
+            }
+          ]
+        },
+        "resume_from": "bc9558792af544b3ae8bd51c582344b0",
+        "supplemental_files": [],
+        "guest_harness_sha256": "3069403ea0e0661b0fff8137b5048b7519f0e094fff27c2522bb921a84de1298",
+        "scope": "Same candidate and prior installed environments; correct the missing devpts mount, rerun affected terminal checks plus one full suite."
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "initial-3.11.17-junit.xml",
+      "sha256": "8956c43b53ca43cbee0a20b95cfec15da9b16cb48a87c5dce3a875753364efbc",
+      "bytes": 31360
+    },
+    {
+      "path": "initial-3.11.17-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-3.11.17-stdout.log",
+      "sha256": "9f39b73d311f6e3eb92e3d998cfc825970ea6c1ffd93677d328e6774712dadb5",
+      "bytes": 1786
+    },
+    {
+      "path": "initial-3.12.15-junit.xml",
+      "sha256": "89931ed97a327abbaf37b1abf7f2e0880019c5e190312e8f10aff9d49febec11",
+      "bytes": 31361
+    },
+    {
+      "path": "initial-3.12.15-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-3.12.15-stdout.log",
+      "sha256": "3ac172c8d84b8c14ee65aff38c5c48da9a81f637c7837411f66c96f9ddd1878b",
+      "bytes": 1786
+    },
+    {
+      "path": "initial-3.13.16-junit.xml",
+      "sha256": "ef698d40145eed335836c4fa54713c6e9ace1716e76f2e290f6851098e91b3ab",
+      "bytes": 31361
+    },
+    {
+      "path": "initial-3.13.16-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-3.13.16-stdout.log",
+      "sha256": "07f4396b0eddfc4a625dc3619f15cb4a039aba4bc7b8d357c5a18535727f150d",
+      "bytes": 1786
+    },
+    {
+      "path": "initial-3.14.8-junit.xml",
+      "sha256": "44a11c0669fb6806895f69359ad7bf07a53be56ae14f731db5517087f8ec3879",
+      "bytes": 31358
+    },
+    {
+      "path": "initial-3.14.8-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-3.14.8-stdout.log",
+      "sha256": "a851f2f8d7c2b6ffa1d3bc2199cb1a421a7e114eb96e805a5e54096bb5f30865",
+      "bytes": 1782
+    },
+    {
+      "path": "initial-core-smoke-3.11.json",
+      "sha256": "85a64dc625ce4e51b8352610c49b48f53f4bc8302db9d761e59e08ed44b01073",
+      "bytes": 3246
+    },
+    {
+      "path": "initial-core-smoke-3.11.log",
+      "sha256": "2e4eeb8ee8b1fefb6d31c1060103df25670b28e27f04c47cb65cfef3806c5e55",
+      "bytes": 3072
+    },
+    {
+      "path": "initial-core-smoke-3.12.json",
+      "sha256": "f9caf9ebb9d7929f944cf8acab60bb027f95d6bf59c0effe3a317eadf2a779f7",
+      "bytes": 3246
+    },
+    {
+      "path": "initial-core-smoke-3.12.log",
+      "sha256": "6321ab7080b46311071ccbf34ce6492d51ce12603aaf2a97e44dbe57a396d5a8",
+      "bytes": 3072
+    },
+    {
+      "path": "initial-core-smoke-3.13.json",
+      "sha256": "bb792272af7baf8593be31adeac913d5a8b782a8bab47d1a4a9544ff8741ee16",
+      "bytes": 3246
+    },
+    {
+      "path": "initial-core-smoke-3.13.log",
+      "sha256": "0520e525f8d3c8ac6dc2dfccff2f4cd3b9d3cf2437000f413761b26dda215b80",
+      "bytes": 3072
+    },
+    {
+      "path": "initial-core-smoke-3.14.json",
+      "sha256": "71e59174ea6bff69ebe406760520288504d400eb75437ef56e4692303e447510",
+      "bytes": 3245
+    },
+    {
+      "path": "initial-core-smoke-3.14.log",
+      "sha256": "a9abcddaf1549be569792673d08c37641102d4f9d92fe1cf52aceed4442bd656",
+      "bytes": 3071
+    },
+    {
+      "path": "initial-evidence.json",
+      "sha256": "795e6ba07d6e5212bb9d98433cb053d5fe1c4516066066e70e29db38637a9c1c",
+      "bytes": 22933
+    },
+    {
+      "path": "initial-install-core-3.11.log",
+      "sha256": "e67c1d5f54ff7ba780d25bd000d917604e6a5d5d8f041f496a099bf8f8ef5fc2",
+      "bytes": 2002
+    },
+    {
+      "path": "initial-install-core-3.12.log",
+      "sha256": "091619183c64f09d2b6ca09ba9bb3cbeac770aecfecafe7986e8f51cf7ebb9fc",
+      "bytes": 2002
+    },
+    {
+      "path": "initial-install-core-3.13.log",
+      "sha256": "161b26709445705b11507f8131ec38b9d941bda7897e8081f6a7bd8399873330",
+      "bytes": 2003
+    },
+    {
+      "path": "initial-install-core-3.14.log",
+      "sha256": "dd760fdf3c58f4ea1dcb147d95cbd6a57a7591953745c313d5e24f68fa2838d2",
+      "bytes": 2003
+    },
+    {
+      "path": "initial-install-extras-3.11.log",
+      "sha256": "afd006f8fb156e736e52a92da7a6b4b8168b4794d743397678732ab22360253c",
+      "bytes": 9764
+    },
+    {
+      "path": "initial-install-extras-3.12.log",
+      "sha256": "5ee6ae49d03307136ad4934bcb99c3923a697b82a2bd3cc86e1a7ba606ed242b",
+      "bytes": 9297
+    },
+    {
+      "path": "initial-install-extras-3.13.log",
+      "sha256": "c3166fdebb1e104a6af6c5c4ec24b911b6290690353e84339b3be7ef81a6aef4",
+      "bytes": 9299
+    },
+    {
+      "path": "initial-install-extras-3.14.log",
+      "sha256": "e5e0c543c1e56911767fd7b5ac97f4fc9a74f93dfaf0ad4850cc45317e338079",
+      "bytes": 9303
+    },
+    {
+      "path": "initial-matrix.json",
+      "sha256": "aa68bdcfd69d02d4da85d3632eaeba3ef55afe1dbca1958103816056e76ac3b0",
+      "bytes": 14464
+    },
+    {
+      "path": "initial-matrix.log",
+      "sha256": "39c61203b5531d88fb4300e307d4f27f91333db00dc21cd7b1ecf7a16c7ccefb",
+      "bytes": 3783
+    },
+    {
+      "path": "initial-pip-check-3.11.log",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "bytes": 30
+    },
+    {
+      "path": "initial-pip-check-3.12.log",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "bytes": 30
+    },
+    {
+      "path": "initial-pip-check-3.13.log",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "bytes": 30
+    },
+    {
+      "path": "initial-pip-check-3.14.log",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "bytes": 30
+    },
+    {
+      "path": "initial-venv-3.11.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-venv-3.12.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-venv-3.13.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-venv-3.14.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "initial-harness-bootstrap.sh.log",
+      "sha256": "e5f5a30e86f85afbbdfc5d6e3185824bb13806462ac2d570eeee0ab3220a8405",
+      "bytes": 446
+    },
+    {
+      "path": "initial-harness-validate.py.log",
+      "sha256": "9bb7a8cc56ccc9e1b6c736ac300c294cbf9d2d40866b63637426a4a54267985e",
+      "bytes": 5744
+    },
+    {
+      "path": "initial-harness-inputs.json.log",
+      "sha256": "7d85b0b4e75ecdc7ace9a7a9dde2453ed7fef2ef39d240d537766a2853efc42d",
+      "bytes": 1428
+    },
+    {
+      "path": "corrected-3.11-platform.xml",
+      "sha256": "4f43b2744be5a1d7bb14fb6918917838e70ada0274d574c3a273adc592597fde",
+      "bytes": 809
+    },
+    {
+      "path": "corrected-3.12.15-junit.xml",
+      "sha256": "e818d478f2f2144747c39dd1fcbd52aab99041812eeac03810b020e7dcc6194d",
+      "bytes": 30286
+    },
+    {
+      "path": "corrected-3.12.15-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "corrected-3.12.15-stdout.log",
+      "sha256": "017ebafc822614c50f7064a9e0b6be9511e764fad6994b76ccae99567143e7a7",
+      "bytes": 352
+    },
+    {
+      "path": "corrected-3.13-platform.xml",
+      "sha256": "d445a95ccf18741cb5dc6448f04ac5fcac1ab416a291e7759b329e89c06b2c8e",
+      "bytes": 809
+    },
+    {
+      "path": "corrected-3.14-platform.xml",
+      "sha256": "1c2fd49560eaee5e87a30e400dfb4c09bb645ebc0da4bc6caeab17eb1ba78e1a",
+      "bytes": 809
+    },
+    {
+      "path": "corrected-ci-demo.json",
+      "sha256": "f581d49f88e2c5a0bc3f87a545d05480b6b2a5bb2160a6b442948a5e4b54be0f",
+      "bytes": 2894
+    },
+    {
+      "path": "corrected-ci-demo.log",
+      "sha256": "f581d49f88e2c5a0bc3f87a545d05480b6b2a5bb2160a6b442948a5e4b54be0f",
+      "bytes": 2894
+    },
+    {
+      "path": "corrected-devpts.log",
+      "sha256": "863a6a23978ebd66ef945d12fe9be4f8ce86d74bb3b27f246a61ec3eccd29e7a",
+      "bytes": 61
+    },
+    {
+      "path": "corrected-evidence.json",
+      "sha256": "69134feb3f20030001437d4aaf843b625a2f7600acacd500f3a80b5147bf79d4",
+      "bytes": 4291
+    },
+    {
+      "path": "corrected-examples.json",
+      "sha256": "0024972327d316136e6d5f4e713259be3cb5bc19b7f2210ef1a5e4723a69db63",
+      "bytes": 1819
+    },
+    {
+      "path": "corrected-examples.log",
+      "sha256": "0024972327d316136e6d5f4e713259be3cb5bc19b7f2210ef1a5e4723a69db63",
+      "bytes": 1819
+    },
+    {
+      "path": "corrected-full-3.12.log",
+      "sha256": "61e958686959ab79a455a369dd41e77310385d76d062e64ea5282ef10ec5f404",
+      "bytes": 398
+    },
+    {
+      "path": "corrected-full-matrix.json",
+      "sha256": "2bbf8c4948e45839b12ce5102a76c111f4373e6056d760bbee15157f99b391fa",
+      "bytes": 3867
+    },
+    {
+      "path": "corrected-platform-3.11.log",
+      "sha256": "691978c1e98addcad2ca47e5ecfaee4f831d677c6e370dd1e2bd5a6d93e60d8b",
+      "bytes": 98
+    },
+    {
+      "path": "corrected-platform-3.13.log",
+      "sha256": "39517c3ecb8acfae218f4cfb2e86ff139d0af48ee6522c5eedc8e01e53d8b65f",
+      "bytes": 98
+    },
+    {
+      "path": "corrected-platform-3.14.log",
+      "sha256": "f1460d8f5d6a780f1bcd0960267f3b575f80d96bcb71302c954094506d6aa13a",
+      "bytes": 98
+    },
+    {
+      "path": "corrected-harness-bootstrap.sh.log",
+      "sha256": "8520914286798fe80e7776d05c5fa5b088bbdbe29339e55cb91865e959a6b7b7",
+      "bytes": 516
+    },
+    {
+      "path": "corrected-harness-validate.py.log",
+      "sha256": "3069403ea0e0661b0fff8137b5048b7519f0e094fff27c2522bb921a84de1298",
+      "bytes": 6160
+    },
+    {
+      "path": "corrected-harness-inputs.json.log",
+      "sha256": "08870376d763cbeb9b23bf11f9363c4a10f66d6e94f86543b71c7deb4a43d15a",
+      "bytes": 1455
+    }
+  ],
+  "scope": "Four full suites initially each had 235 passes and two devpts-environment failures. After mounting devpts, Python 3.12 ran all 237 successfully; the three other versions each passed all five platform cases including both failed PTY cases. No claim of four newly rerun green full suites.",
+  "limits": [
+    "Ubuntu Base 24.04.5/glibc 2.39 userspace under Alpine 6.18.52 in local QEMU TCG.",
+    "Not native Ubuntu, macOS, remote CI, independent users, or performance evidence."
+  ]
+}
