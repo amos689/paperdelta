@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-03T08:31:34.324Z",
+  "host": {
+    "system": "Windows_NT",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "node": "v24.19.0"
+  },
+  "browser": "154.0.8037.93",
+  "viewport_desktop": [
+    1365,
+    1000
+  ],
+  "viewport_mobile": [
+    375,
+    812
+  ],
+  "findings": 6,
+  "figure_included": true,
+  "filters": [
+    "file",
+    "rule",
+    "source",
+    "result-dependencies",
+    "text"
+  ],
+  "source_details_expansion": true,
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "language_switch_preserves_state": true,
+  "language_switch_preserves_focus": true,
+  "keyboard_evidence_toggle": true,
+  "keyboard_focus_advances": true,
+  "bilingual_search": true,
+  "evidence_navigation": true,
+  "no_javascript_readable": true,
+  "external_requests": [],
+  "mobile_horizontal_overflow": false,
+  "javascript_errors": [],
+  "scope": "Headless browser on the recorded local host; not a multi-platform CI run or independent user trial."
+}

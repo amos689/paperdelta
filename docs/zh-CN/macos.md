@@ -7,8 +7,10 @@
 重新构建的 0.2.0a1 迁移包包含当前已通过本地验收的核心。旧 0.1.0a2 包保留为历史
 版本，请核对 `TRANSFER.json` 使用匹配的包。
 
-**真实 macOS 运行仍待验证**。工作流定义、Windows 测试或 Linux 上的 POSIX 运行
-都不算 Mac 证据。项目方有 Mac，迁移包和验证命令用于之后取得实际结果。
+**2026-10-03 原生验证通过**：Apple Silicon arm64、macOS 27.0.1，Python
+3.12.14 和 3.14.6 最终各 241 项通过，零失败、零错误、零跳过。Chrome
+154.0.8037.97 的离线双语、桌面/窄屏和键盘检查也通过。详见[执行记录](macos-validation-2026-10-03.md)。
+本轮未验证 Intel、其他 macOS/Python 组合、Safari 或远程 CI。
 
 ## 架构和安装
 
@@ -53,6 +55,9 @@ python3 tools/validate_platform.py --wheel build/release-candidate/paperdelta-*-
 
 Apple Silicon 增加 `--expected-arch arm64`，Intel 增加 `--expected-arch x86_64`。
 macOS CI 同时检查系统和架构，拒绝把 Rosetta 运行算作原生 Apple Silicon 证据。
+验证器保留 sysctl 的退出码和输出；查询受限或键缺失时记为未知（`null`），不能记为
+已确认原生。本轮另行记录 `hw.optional.arm64=1`、`hw.machine=arm64` 和
+`sysctl.proc_translated=0`。
 
 路径使用项目中存储的原始拼写和大小写。Unicode 测试保持每种声明拼写一致，不
 声称所有文件系统都可互换 NFC/NFD 别名或大小写。网络磁盘和断电耐久性不在
@@ -66,5 +71,5 @@ macOS CI 同时检查系统和架构，拒绝把 Rosetta 运行算作原生 Appl
 `SHA256SUMS`。安装步骤不修改系统 Python。
 
 完整验证脚本在 Windows 上的成功只能验证脚本本身及 Windows 路径。
-[历史准备记录](../evidence/macos-preparation.json)列出此前实际检查；Mac 实机结果
-必须另行记录。
+[历史准备记录](../evidence/macos-preparation.json)保持不变；本轮新增的
+[原生 Mac 记录](macos-validation-2026-10-03.md)单独保存。

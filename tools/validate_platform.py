@@ -38,8 +38,14 @@ def host_info():
             timeout=10,
             check=False,
         )
-        # This optional key is absent on Intel macOS; only a returned 1 denotes Rosetta.
-        info["rosetta_translated"] = probe.returncode == 0 and probe.stdout.strip() == "1"
+        # Keep denied/absent probes distinct from a confirmed native process.
+        info["rosetta_probe"] = {
+            "exit_code": probe.returncode,
+            "stdout": probe.stdout.strip(),
+            "stderr": probe.stderr.strip(),
+        }
+        if probe.returncode == 0 and probe.stdout.strip() in {"0", "1"}:
+            info["rosetta_translated"] = probe.stdout.strip() == "1"
     return info
 
 

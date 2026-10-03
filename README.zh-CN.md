@@ -20,11 +20,13 @@
 [真实文本评测](docs/zh-CN/evaluation.md)同时保留支持和未知案例，
 [本地命令行对比](docs/zh-CN/comparison.md)也运行了 Calkit 和 scitexlintr。
 上线前采用机器测试及开发者判断，详见 [v0.2 验收决定](docs/zh-CN/v0.2-acceptance.md)。
-Windows 3.11–3.14 和本地 Linux 均有当前安装包证据，并记录准确范围。macOS 和远程 CI 尚未验证，
+Windows 3.11–3.14、本地 Linux，以及 Apple Silicon macOS 27.0.1 的 Python
+3.12.14 / 3.14.6 均有安装包证据。Intel macOS 和远程 CI 尚未验证，
 独立真人反馈放到上线后，尚未发布到包索引。实测与后续工作见[证据记录](docs/zh-CN/progress.md)。
 
-**Mac 实机验证仍按安排延后**。本地验收后已重新构建匹配的 0.2.0a1 迁移包，
-准备好时可按 [Mac 快速开始](START_ON_MAC.md)执行，实机结果仍待补充。
+**2026-10-03 已完成本机原生 Mac 验证**。两个 Python 版本最终各 241 项通过，
+零跳过；运行代码及已验收 wheel 未修改。详见[Mac 结果与范围](docs/zh-CN/macos-validation-2026-10-03.md)，
+复现与回传仍按 [Mac 快速开始](START_ON_MAC.md)执行。
 
 ## 在当前仓库运行
 

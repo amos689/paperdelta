@@ -3,8 +3,8 @@
 [English](../languages.md)
 
 v0.2 开发版已为命令行帮助、终端确认、诊断、文字/Markdown 报告及 MCP 说明提供
-英文 `en` 和简体中文 `zh-CN`。离线 HTML 也已内置两种语言。全部文档的对应译文仍在实施，
-具体状态见[交付记录](v0.2-plan.md)。
+英文 `en` 和简体中文 `zh-CN`。离线 HTML 也已内置两种语言。维护文档已成对注册，
+并由 `tools/check_docs.py` 检查；具体状态见[交付记录](v0.2-plan.md)。
 
 ## 选择语言
 

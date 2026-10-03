@@ -6,6 +6,13 @@ This file accompanies the project owner's transfer to Codex on a Mac. After the
 owner sends the starter prompt, use this as the task brief and verify it against
 the actual files and host. Prepared on 2026-10-03.
 
+**Subsequent status:** the native Apple Silicon handoff is complete and its return
+has been checked on Windows; see [Mac acceptance](docs/macos-validation-2026-10-03.md).
+The background and 237-test baseline below describe the original transfer, which
+remains unchanged. Four added validator regressions make the merged suite 241 tests.
+For another handoff, verify its manifest and actual version before using historical
+pending-status statements as current guidance.
+
 ## Project and baseline
 
 PaperDelta is an open-source Python CLI with optional read-only MCP tools. It

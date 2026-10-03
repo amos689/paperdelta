@@ -8,10 +8,11 @@ Windows virtual environments, executables and local inference models are exclude
 The rebuilt 0.2.0a1 transfer contains the current locally accepted core. The old
 0.1.0a2 transfer remains historical; use the matching version in `TRANSFER.json`.
 
-**Status: native macOS execution is pending.** Neither a workflow definition,
-a Windows test nor POSIX execution on Linux counts as a Mac result.
-The project owner has a Mac; the transfer ZIP and validation command provide
-the next step for obtaining actual evidence.
+**Native validation passed on 2026-10-03:** Apple Silicon arm64, macOS 27.0.1,
+Python 3.12.14 and 3.14.6, each 241 passed with zero failures/errors/skips.
+Chrome 154.0.8037.97 also passed offline bilingual desktop/mobile and keyboard checks.
+See the [execution record](macos-validation-2026-10-03.md). Intel, other macOS/Python
+combinations, Safari and remote CI remain untested in this round.
 
 ## Architecture and installation
 
@@ -61,6 +62,9 @@ python3 tools/validate_platform.py --wheel build/release-candidate/paperdelta-*-
 For Apple Silicon, add `--expected-arch arm64`; for Intel, add
 `--expected-arch x86_64`. The macOS CI uses both the host and architecture guards.
 Rosetta execution is refused rather than counted as native Apple Silicon evidence.
+The validator retains the sysctl exit code and output; a denied or absent probe stays
+unknown (`null`), not a confirmed native result. This run independently recorded
+`hw.optional.arm64=1`, `hw.machine=arm64` and `sysctl.proc_translated=0`.
 
 Use paths with the spelling stored in the project, including filename case.
 The Unicode tests use each declared spelling consistently; they do not claim
@@ -78,4 +82,5 @@ ZIP member, retains per-file SHA256 values in `TRANSFER.json` and emits
 The full validation script's Windows execution only verifies the script and the
 Windows-compatible paths. The current
 [preparation evidence](evidence/macos-preparation.json) identifies the actual
-checks completed here; native Mac results must be recorded separately.
+historical preparation checks. The [native Mac record](macos-validation-2026-10-03.md)
+adds new evidence without changing those frozen files.

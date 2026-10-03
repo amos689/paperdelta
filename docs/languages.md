@@ -5,7 +5,8 @@
 The v0.2 development version supports English (`en`) and Simplified Chinese
 (`zh-CN`) for CLI help, terminal confirmation, diagnostics, text/Markdown reports
 and MCP descriptions and explanations. Offline HTML reports also include both
-languages. Complete documentation pairing is in progress; see the [delivery ledger](v0.2-plan.md).
+languages. Maintained documentation is paired and checked by `tools/check_docs.py`;
+see the [delivery ledger](v0.2-plan.md).
 
 ## Choose a language
 

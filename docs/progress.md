@@ -6,8 +6,9 @@ Started 2026-10-02; updated 2026-10-03 Sydney time. The active scope is the
 [v0.2 ledger](v0.2-plan.md). The earlier a2 alpha has a
 [local acceptance decision](release-acceptance.md); new features require their own
 validation. The owner accepts local machine tests and Codex developer/first-user
-judgment before launch. Independent feedback follows launch. Native Mac work is
-deferred until product convergence; remote CI and external publication have not run.
+judgment before launch. Independent feedback follows launch. Native Apple Silicon Mac
+validation is now [recorded](macos-validation-2026-10-03.md); Intel, remote CI and
+external publication remain unperformed.
 
 ## v0.2 implementation and recorded checkpoints
 
@@ -26,7 +27,7 @@ deferred until product convergence; remote CI and external publication have not 
 The [final acceptance](v0.2-acceptance.md) now adds Windows installed-wheel matrices,
 Linux execution and environment correction, corpus/compatibility/browser/performance,
 actual developer use and artifact identities. Earlier checkpoints retain their own
-scope. The [delivery ledger](v0.2-plan.md) marks native Mac execution as deferred.
+scope. The [delivery ledger](v0.2-plan.md) now includes native Apple Silicon execution.
 No human observations, general model accuracy or automatic-mapper approval follow.
 
 ## Preserved a1/a2 evidence
@@ -68,7 +69,8 @@ had already succeeded; the same transaction was then checked/recovered, not reap
   A review cannot make a false predicate pass; a file hash is not execution proof.
 - Real feedback and independent onboarding/comparison time follow the
   [post-launch protocol](first-use-trial.md). Three users/ten minutes remain targets.
-- Native Mac validation follows convergence using the [transfer guide](../START_ON_MAC.en.md).
+- Native Apple Silicon validation passed; see the [exact scope](macos-validation-2026-10-03.md)
+  and [transfer guide](../START_ON_MAC.en.md). Intel remains untested.
   Remote CI and GitHub/package publication remain separate unperformed actions.
 
 The original PD-101–104, PD-201–205 and PD-301–304 have local functional evidence.

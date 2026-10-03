@@ -1,0 +1,105 @@
+{
+  "checked_at": "2026-10-03T08:27:02.183916+00:00",
+  "bundle": "PaperDelta-Mac-Return-20261003T081428Z.zip",
+  "sha256": "826d4e5d3f00b080d8007e77dc610f65d8da5c0df7bdde619d980103ef218d6b",
+  "members_verified": 321,
+  "manifest_files_verified": 320,
+  "changed_files_before_and_after_verified": 21,
+  "source_transfer_and_baseline_verified": true,
+  "runtime_files_and_original_wheel_unchanged": 32,
+  "original_tests_retained": 237,
+  "added_validator_test_cases": 4,
+  "mac_suites": [
+    {
+      "python": "3.12.14",
+      "counts": {
+        "tests": 241,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "junit": "evidence/build/mac-validation-final-py312-01/suite/3.12.14/junit.xml"
+    },
+    {
+      "python": "3.14.6",
+      "counts": {
+        "tests": 241,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "junit": "evidence/build/mac-validation-final-py314-01/suite/3.14.6/junit.xml"
+    }
+  ],
+  "scope": "Windows-side audit of supplied Mac evidence; no native Mac re-execution here",
+  "reviewed_at": "2026-10-03T08:35:57.572325+00:00",
+  "decision": "accepted and merged",
+  "original_return_archive": "docs/evidence/macos-native-20261003/return.zip",
+  "archive_sha256": "826d4e5d3f00b080d8007e77dc610f65d8da5c0df7bdde619d980103ef218d6b",
+  "public_provenance_files_verified": 288,
+  "original_run_hash_links_verified": 5,
+  "applied_mac_patch_byte_exact_before_documentation_followup": true,
+  "runtime_changes": false,
+  "followup_changes": [
+    "Preserve original Mac return ZIP as an explicit source-distribution input",
+    "Record Windows regression and browser results",
+    "Update bilingual acceptance, handoff status and candidate location"
+  ],
+  "windows_regression": {
+    "python": "3.12.14",
+    "passed": 238,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 3,
+    "skip_reason": "POSIX-only symlink/mode and two actual terminal cases",
+    "installed_runtime": "original accepted 0.2.0a1 wheel"
+  },
+  "windows_browser": {
+    "version": "154.0.8037.93",
+    "passed": true
+  },
+  "checks": {
+    "ruff_check": "passed",
+    "ruff_format_files": 92,
+    "documentation_pairs_before_integration_links": 30
+  },
+  "public_records": [
+    {
+      "source": "build/mac-return-windows-regression/evidence.json",
+      "public": "windows-regression.json",
+      "original_sha256": "ebeee84bd4929cf20dc19569eea17440e16c712908ce16090d30ac49b295ddb3",
+      "public_sha256": "ebeee84bd4929cf20dc19569eea17440e16c712908ce16090d30ac49b295ddb3"
+    },
+    {
+      "source": "build/mac-return-windows-regression/3.12.14/junit.xml",
+      "public": "windows-py312/junit.xml",
+      "original_sha256": "d50c66110669ea31cc23f7bb358031983cf5d0bfa11bf267bbadc3b90a75e295",
+      "public_sha256": "65346f3d328c4c8109ef29c4eae046d191973717aac673999c28cf049d9a927c"
+    },
+    {
+      "source": "build/mac-return-windows-regression/3.12.14/stdout.log",
+      "public": "windows-py312/stdout.log",
+      "original_sha256": "361035ea47ad8a75791c934a69941059535dffd8b60c2966d8a39106b7d4b816",
+      "public_sha256": "361035ea47ad8a75791c934a69941059535dffd8b60c2966d8a39106b7d4b816"
+    },
+    {
+      "source": "build/mac-return-windows-regression/3.12.14/stderr.log",
+      "public": "windows-py312/stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "build/mac-return-windows-browser/evidence.json",
+      "public": "windows-browser.json",
+      "original_sha256": "dd6009012edab8b9bd1d2a9b5265988b29c46c750f683bf2ae68479382e42ce2",
+      "public_sha256": "dd6009012edab8b9bd1d2a9b5265988b29c46c750f683bf2ae68479382e42ce2"
+    }
+  ],
+  "limitations": [
+    "Intel Mac untested",
+    "Mac Python 3.11 and 3.13 untested",
+    "Other macOS releases and browsers untested",
+    "No new Linux run for validator changes",
+    "No remote CI or publication"
+  ]
+}

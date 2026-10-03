@@ -11,8 +11,9 @@ This edition retains the accepted 0.2.0a1 wheel and runtime source, adding bilin
 handoff prompts, referenced documentation materials and a change baseline. It
 contains source, tests, examples and historical evidence, without Windows
 environments, model weights or Git history. Paper materials retain their
-[individual licenses](THIRD_PARTY_NOTICES.md). Native Mac execution is still pending;
-this is a working package for validation and necessary fixes on the Mac.
+[individual licenses](THIRD_PARTY_NOTICES.md). This handoff originally had no native
+Mac results. The [2026-10-03 Mac return](docs/macos-validation-2026-10-03.md) records
+Apple Silicon macOS 27.0.1 with Python 3.12.14 / 3.14.6; Intel remains untested.
 
 ## Recommended: hand the project to Mac Codex
 

@@ -10,7 +10,8 @@
 交接版保留已验收 0.2.0a1 wheel 和运行源码，补充双语交接提示词、完整文档引用材料
 及修改基线。包含源码、测试、示例和历史证据，不含 Windows 虚拟环境、模型权重或
 Git 历史。论文评测材料保留[各自的许可证](THIRD_PARTY_NOTICES.zh-CN.md)。
-尚未取得真实 Mac 的运行结果；这是让 Mac Codex 开始验证和必要修复的工作包。
+此交接包最初没有 Mac 实测记录；[2026-10-03 Mac 回传](docs/zh-CN/macos-validation-2026-10-03.md)
+现已补充 Apple Silicon macOS 27.0.1、Python 3.12.14 / 3.14.6 的原生结果，Intel 尚未验证。
 
 ## 推荐：把项目交给 Mac Codex
 

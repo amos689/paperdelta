@@ -2,6 +2,7 @@
 const { chromium } = require(process.env.PAPERDELTA_PLAYWRIGHT || 'playwright');
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const os = require('node:os');
 const { pathToFileURL } = require('node:url');
 
 (async () => {
@@ -44,8 +45,10 @@ const { pathToFileURL } = require('node:url');
     await page.fill('#search', '80.9');
     const selectedCard = page.locator('#findings article:visible');
     await selectedCard.locator('details summary').click();
+    await page.locator('#language').focus();
     for (const locale of ['zh-CN', 'en', 'zh-CN']) {
       await page.selectOption('#language', locale);
+      if (await page.evaluate(() => document.activeElement.id) !== 'language') throw new Error('Language switch lost focus');
       if (await page.locator('html').getAttribute('lang') !== locale) throw new Error('Document language failed');
       if (await count() !== 1) throw new Error('Language switch changed filtered findings');
       if (await page.inputValue('#search') !== '80.9' || await page.inputValue('#file') !== 'paper/abstract.tex'
@@ -62,6 +65,13 @@ const { pathToFileURL } = require('node:url');
     if (await count() !== 1) throw new Error('Chinese search in English view failed');
     await page.click('#clear-filters');
     if (await count() !== expectedFindings) throw new Error('Clear filters failed');
+    const keyboardSummary = page.locator('#findings details summary').first();
+    await keyboardSummary.focus();
+    const wasOpen = await keyboardSummary.evaluate(node => node.parentElement.open);
+    await page.keyboard.press('Enter');
+    if (await keyboardSummary.evaluate(node => node.parentElement.open) === wasOpen) throw new Error('Keyboard evidence toggle failed');
+    await page.keyboard.press('Tab');
+    if (await keyboardSummary.evaluate(node => document.activeElement === node)) throw new Error('Keyboard focus did not advance');
     await page.selectOption('#rule', 'VALUE_MISMATCH');
     await page.locator('[data-finding-link]').first().click();
     if (await count() !== expectedFindings) throw new Error('Evidence navigation did not reveal findings');
@@ -90,7 +100,7 @@ const { pathToFileURL } = require('node:url');
     await staticPage.close();
     if (errors.length) throw new Error(errors.join('\n'));
     if (externalRequests.length) throw new Error('Report requested external resources');
-    const result = { checked_at: new Date().toISOString(), browser: await browser.version(), viewport_desktop: [1365, 1000], viewport_mobile: [375, 812], findings: expectedFindings, figure_included: withFigure, filters: ['file', 'rule', 'source', 'result-dependencies', 'text'], source_details_expansion: true, languages: ['en', 'zh-CN'], language_switch_preserves_state: true, bilingual_search: true, evidence_navigation: true, no_javascript_readable: true, external_requests: externalRequests, mobile_horizontal_overflow: false, javascript_errors: errors, scope: 'Headless Chrome on this Windows host; not a multi-platform CI run.' };
+    const result = { checked_at: new Date().toISOString(), host: { system: os.type(), release: os.release(), arch: os.arch(), node: process.version }, browser: await browser.version(), viewport_desktop: [1365, 1000], viewport_mobile: [375, 812], findings: expectedFindings, figure_included: withFigure, filters: ['file', 'rule', 'source', 'result-dependencies', 'text'], source_details_expansion: true, languages: ['en', 'zh-CN'], language_switch_preserves_state: true, language_switch_preserves_focus: true, keyboard_evidence_toggle: true, keyboard_focus_advances: true, bilingual_search: true, evidence_navigation: true, no_javascript_readable: true, external_requests: externalRequests, mobile_horizontal_overflow: false, javascript_errors: errors, scope: 'Headless browser on the recorded local host; not a multi-platform CI run or independent user trial.' };
     await fs.writeFile(path.join(output, 'evidence.json'), JSON.stringify(result, null, 2) + '\n');
     process.stdout.write(JSON.stringify(result));
   } finally { await browser.close(); }

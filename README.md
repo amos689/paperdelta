@@ -25,13 +25,15 @@ cases. A [local CLI comparison](docs/comparison.md) exercises Calkit and
 scitexlintr as well. Pre-release acceptance uses local machine tests and developer
 review; see the [v0.2 acceptance decision](docs/v0.2-acceptance.md). Windows
 3.11–3.14 and local Linux have current installed-package evidence with exact run limits.
-macOS and remote CI remain unverified.
+Native Apple Silicon macOS 27.0.1 now has installed-wheel evidence on Python 3.12.14
+and 3.14.6. Intel macOS and remote CI remain unverified.
 Independent first-use feedback is planned after launch. No package-index publication yet.
 See the [evidence ledger](docs/progress.md) for measured results and follow-up work.
 
-**Native Mac validation remains deferred.** A matching 0.2.0a1 transfer package has
-been rebuilt after local acceptance. Use the [Mac quick start](START_ON_MAC.en.md)
-when ready; native results are still pending.
+**Native Mac validation completed on 2026-10-03.** Both tested Python versions pass
+all 241 final tests without skips. Runtime code and the accepted wheel are unchanged;
+see the [Mac results and limits](docs/macos-validation-2026-10-03.md). The
+[Mac quick start](START_ON_MAC.en.md) remains the reproduction and return guide.
 
 ## Try it from this checkout
 

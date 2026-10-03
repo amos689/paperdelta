@@ -1,0 +1,216 @@
+{
+  "checked_at": "2026-10-03T08:09:09.234592+00:00",
+  "status": "passed",
+  "scope": "Native local developer acceptance, Apple Silicon only; no publication, remote CI or independent users.",
+  "receipt_files": 1060,
+  "receipt_passed": 1060,
+  "transfer_sha256": "b72ce8454eb7a292b0e5ceeb2bc3f4305560f02a39273893d486b8d46917add9",
+  "baseline_sha256": "5326f8b8741d4f140ff3a129b06b92ca29aa686a769d18889b13f716c6ba3a26",
+  "windows_source_commit": "5ea7d27e28e5308f6ef3cf5ab4c7f807fb575f64",
+  "local_receipt_commit": "722c0032d88ba2692f6737c48e86272dd293e735",
+  "runtime_changed": false,
+  "runtime_files": 32,
+  "wheel_rebuilt": false,
+  "runs": [
+    {
+      "path": "build/mac-validation-original-01/evidence.json",
+      "sha256": "e505e0d953c75cd919bde787c6d6955f2de7b6d0201d7a2823ae7e54dd02b2ff",
+      "status": "failed",
+      "host": {
+        "system": "Darwin",
+        "release": "27.0.0",
+        "machine": "arm64",
+        "python": "3.14.6",
+        "macos_version": "27.0.1",
+        "rosetta_translated": false
+      },
+      "wheel": {
+        "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+        "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+      },
+      "tests": null,
+      "error": "RuntimeError: install-core failed with exit 1; see install-core.log"
+    },
+    {
+      "path": "build/mac-validation-original-02/evidence.json",
+      "sha256": "67cbab7fa6ed80707e7618323cb2f62447d29ec36d0abe6b979980e4367f335c",
+      "status": "passed",
+      "host": {
+        "system": "Darwin",
+        "release": "27.0.0",
+        "machine": "arm64",
+        "python": "3.14.6",
+        "macos_version": "27.0.1",
+        "rosetta_translated": false
+      },
+      "wheel": {
+        "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+        "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+      },
+      "tests": {
+        "tests": 237,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "error": null
+    },
+    {
+      "path": "build/mac-validation-py312-original-01/evidence.json",
+      "sha256": "dd0371de1361a78fc3ec9b43cbcbfc43c8371266525e398b0622358ef89e5534",
+      "status": "passed",
+      "host": {
+        "system": "Darwin",
+        "release": "27.0.0",
+        "machine": "arm64",
+        "python": "3.12.14",
+        "macos_version": "27.0.1",
+        "rosetta_translated": false
+      },
+      "wheel": {
+        "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+        "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+      },
+      "tests": {
+        "tests": 237,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "error": null
+    },
+    {
+      "path": "build/mac-validation-final-py314-01/evidence.json",
+      "sha256": "09a6a7cb1498166ee6348eed0e9365935318568e537e88071bdb8d4b3e2d9fbe",
+      "status": "passed",
+      "host": {
+        "system": "Darwin",
+        "release": "27.0.0",
+        "machine": "arm64",
+        "python": "3.14.6",
+        "macos_version": "27.0.1",
+        "rosetta_translated": false,
+        "rosetta_probe": {
+          "exit_code": 0,
+          "stdout": "0",
+          "stderr": ""
+        }
+      },
+      "wheel": {
+        "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+        "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+      },
+      "tests": {
+        "tests": 241,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "error": null
+    },
+    {
+      "path": "build/mac-validation-final-py312-01/evidence.json",
+      "sha256": "007dad1cbe7fc3ee54348603aac7b404b11de54f43b3d9e548ceccc08bd9139d",
+      "status": "passed",
+      "host": {
+        "system": "Darwin",
+        "release": "27.0.0",
+        "machine": "arm64",
+        "python": "3.12.14",
+        "macos_version": "27.0.1",
+        "rosetta_translated": false,
+        "rosetta_probe": {
+          "exit_code": 0,
+          "stdout": "0",
+          "stderr": ""
+        }
+      },
+      "wheel": {
+        "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+        "sha256": "c6f119ad4ded3e7866dd0f7efd233cac9466fd26cf9d9afe0eefdd7b6cf80c78"
+      },
+      "tests": {
+        "tests": 241,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "error": null
+    }
+  ],
+  "browser": {
+    "checked_at": "2026-10-03T08:01:14.068Z",
+    "host": {
+      "system": "Darwin",
+      "release": "27.0.0",
+      "arch": "arm64",
+      "node": "v24.19.0"
+    },
+    "browser": "154.0.8037.97",
+    "viewport_desktop": [
+      1365,
+      1000
+    ],
+    "viewport_mobile": [
+      375,
+      812
+    ],
+    "findings": 6,
+    "figure_included": true,
+    "filters": [
+      "file",
+      "rule",
+      "source",
+      "result-dependencies",
+      "text"
+    ],
+    "source_details_expansion": true,
+    "languages": [
+      "en",
+      "zh-CN"
+    ],
+    "language_switch_preserves_state": true,
+    "language_switch_preserves_focus": true,
+    "keyboard_evidence_toggle": true,
+    "keyboard_focus_advances": true,
+    "bilingual_search": true,
+    "evidence_navigation": true,
+    "no_javascript_readable": true,
+    "external_requests": [],
+    "mobile_horizontal_overflow": false,
+    "javascript_errors": [],
+    "scope": "Headless browser on the recorded local host; not a multi-platform CI run or independent user trial."
+  },
+  "first_use": {
+    "path": "build/mac-first-use/02/evidence.json",
+    "checks": {
+      "read_only_bilingual_help_doctor_check": true,
+      "language_precedence_and_scientific_config_unchanged": true,
+      "data_only_change_detected": true,
+      "guide_real_pty_chinese_leading_zero_cancel_final_confirm_10_bindings": true,
+      "patch_preview_apply_recheck_recover_bom_crlf_exact": true,
+      "location_repair_preserves_sources_metrics_units_claim_definitions": true,
+      "location_repair_preview_no_write": true,
+      "stdio_mcp_13_tools_read_only": true
+    }
+  },
+  "unresolved": [],
+  "untested": [
+    "Intel macOS",
+    "Python 3.11/3.13 on Mac",
+    "other macOS versions",
+    "Safari/Firefox",
+    "remote CI",
+    "independent users",
+    "power loss",
+    "network filesystems"
+  ],
+  "archive_evidence_prefix": "evidence/",
+  "preserved_failures": [
+    "build/mac-validation-original-01/evidence.json",
+    "build/mac-receipt/environment-sandbox.json",
+    "build/mac-browser-original-01/evidence.json",
+    "build/mac-first-use/01/evidence.json",
+    "build/mac-first-use/01/assertion-diagnosis.json"
+  ]
+}
