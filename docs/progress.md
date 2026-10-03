@@ -5,7 +5,7 @@
 Started 2026-10-02; updated 2026-10-03 Sydney time. The active scope is the
 [v0.2 ledger](v0.2-plan.md). The earlier a2 alpha has a
 [local acceptance decision](release-acceptance.md); new features require their own
-validation. The owner accepts local machine tests and Codex developer/first-user
+validation. The owner accepts local machine tests and developer/first-user
 judgment before launch. Independent feedback follows launch. Native Apple Silicon Mac
 validation is now [recorded](macos-validation-2026-10-03.md). Subsequent remote
 validation is tracked by [commit in Actions](https://github.com/amos689/paperdelta/actions/workflows/ci.yml);

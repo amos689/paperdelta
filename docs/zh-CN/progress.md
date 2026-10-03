@@ -4,7 +4,7 @@
 
 2026-10-02 开始，2026-10-03 悉尼时间更新。当前范围以 [v0.2 记录](v0.2-plan.md)为准。
 a2 有独立[本地验收决定](release-acceptance.md)，新功能须单独验证。项目方接受机器
-本地测试及 Codex 开发者/首位使用者判断，真人反馈放到上线后。Apple Silicon Mac
+本地测试及开发者/首位使用者判断，真人反馈放到上线后。Apple Silicon Mac
 原生验证已[单独记录](macos-validation-2026-10-03.md)。后续远程验证按提交保存在
 [Actions](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)，公开安装产物及
 各版限制见 [GitHub Releases](https://github.com/amos689/paperdelta/releases)。

@@ -2,6 +2,33 @@
 
 [简体中文](START_ON_MAC.md)
 
+## Install from GitHub
+
+Use Python 3.11+ and run in a Mac terminal:
+
+```sh
+git clone https://github.com/amos689/paperdelta.git
+cd paperdelta
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+paperdelta --lang en -C examples/research-paper doctor
+python tools/demo.py --out build/demo
+```
+
+Open `build/demo/comparison-reversed/review/report.html`. Connect your own paper
+with the [quick start](docs/quickstart.md); see
+[Actions](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) for each
+Mac architecture's results. To continue development, open the cloned `paperdelta`
+folder as the project in Codex on the Mac. Development dependencies and checks are
+in [Contributing](CONTRIBUTING.md).
+
+## Historical transfer for the first native validation
+
+The steps below preserve the original Windows → Mac handoff and return procedure.
+Its `build/` archives were generated locally and are not part of a GitHub clone;
+new installations can use the repository workflow above.
+
 **To work with Codex on the Mac, use the new Codex handoff edition:**
 `build/mac-transfer-v0.2-codex/paperdelta-0.2.0a1-mac-codex-transfer.zip`.
 Copy its neighboring `SHA256SUMS` too. The original `build/mac-transfer-v0.2/`
@@ -13,9 +40,10 @@ contains source, tests, examples and historical evidence, without Windows
 environments, model weights or Git history. Paper materials retain their
 [individual licenses](THIRD_PARTY_NOTICES.md). This handoff originally had no native
 Mac results. The [2026-10-03 Mac return](docs/macos-validation-2026-10-03.md) records
-Apple Silicon macOS 27.0.1 with Python 3.12.14 / 3.14.6; Intel remains untested.
+Apple Silicon macOS 27.0.1 with Python 3.12.14 / 3.14.6. That local return contains
+no Intel tests; subsequent CI results are recorded separately.
 
-## Recommended: hand the project to Mac Codex
+## Historical handoff: give the transfer archive to Mac Codex
 
 ### 1. Copy two files from Windows
 

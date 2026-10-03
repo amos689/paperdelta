@@ -2,11 +2,11 @@
 
 [简体中文](zh-CN/macos.md)
 
-The source, pure-Python PaperDelta wheel and owned examples can be transferred
-using the [Mac quick start](../START_ON_MAC.en.md). Recreate the environment on the Mac;
-Windows virtual environments, executables and local inference models are excluded.
-The rebuilt 0.2.0a1 transfer contains the current locally accepted core. The old
-0.1.0a2 transfer remains historical; use the matching version in `TRANSFER.json`.
+Install from the public repository using the [Mac quick start](../START_ON_MAC.en.md),
+or use a wheel from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
+Create a new environment on the Mac. The quick start also preserves the original
+local transfer procedure for reproducing the first native validation; those
+historical transfer archives are not included in a GitHub clone.
 
 **Native validation passed on 2026-10-03:** Apple Silicon arm64, macOS 27.0.1,
 Python 3.12.14 and 3.14.6, each 241 passed with zero failures/errors/skips.
@@ -26,7 +26,9 @@ The macOS workflow has eight explicit cells:
 These labels follow the
 [GitHub runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners).
 They pin the OS family and architecture, not an immutable image. Actual host
-and interpreter versions are recorded per run. There has been no remote CI run.
+and interpreter versions are recorded per run. See
+[Actions results and artifacts](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+for remote execution; those results are separate from the local return above.
 
 The [Python macOS installers](https://docs.python.org/3/using/mac.html) provide
 universal2 builds for Apple Silicon and Intel. Use a native interpreter and a

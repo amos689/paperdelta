@@ -2,6 +2,31 @@
 
 [English](START_ON_MAC.en.md)
 
+## 从 GitHub 安装
+
+使用 Python 3.11 以上版本，在 Mac 终端执行：
+
+```sh
+git clone https://github.com/amos689/paperdelta.git
+cd paperdelta
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+paperdelta --lang zh-CN -C examples/research-paper doctor
+python tools/demo.py --out build/demo
+```
+
+打开 `build/demo/comparison-reversed/review/report.html`，选择简体中文。
+接入自己的论文见[快速开始](docs/zh-CN/quickstart.md)，各 Mac 架构的运行结果见
+[Actions](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)。
+若要继续开发，将克隆后的 `paperdelta` 文件夹作为 Mac 上 Codex 的项目目录；
+开发依赖和检查命令见[贡献指南](CONTRIBUTING.zh-CN.md)。
+
+## 首次实机验证的历史迁移方式
+
+下文保留最初 Windows → Mac 交接及回传步骤。所列 `build/` 文件是当时本地生成的
+迁移包，不随 GitHub 克隆分发；新的安装可直接使用上面的仓库流程。
+
 **交给 Mac 上的 Codex 工作，请使用新增的 Codex 交接版：**
 `build/mac-transfer-v0.2-codex/paperdelta-0.2.0a1-mac-codex-transfer.zip`。
 同目录的 `SHA256SUMS` 是校验文件；两个文件一起拷贝。原先的
@@ -11,9 +36,10 @@
 及修改基线。包含源码、测试、示例和历史证据，不含 Windows 虚拟环境、模型权重或
 Git 历史。论文评测材料保留[各自的许可证](THIRD_PARTY_NOTICES.zh-CN.md)。
 此交接包最初没有 Mac 实测记录；[2026-10-03 Mac 回传](docs/zh-CN/macos-validation-2026-10-03.md)
-现已补充 Apple Silicon macOS 27.0.1、Python 3.12.14 / 3.14.6 的原生结果，Intel 尚未验证。
+现已补充 Apple Silicon macOS 27.0.1、Python 3.12.14 / 3.14.6 的原生结果；
+这份本地回传不包含 Intel 测试，后续 CI 另行记录。
 
-## 推荐：把项目交给 Mac Codex
+## 历史交接：把迁移包交给 Mac Codex
 
 ### 1. 在 Windows 拷贝两个文件
 

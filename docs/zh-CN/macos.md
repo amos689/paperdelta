@@ -2,10 +2,10 @@
 
 [English](../macos.md)
 
-源码、纯 Python wheel 和原创样例可以按 [Mac 快速开始](../../START_ON_MAC.md)
-迁移。Mac 上需重新创建环境，不复制 Windows 虚拟环境、可执行文件或推理模型。
-重新构建的 0.2.0a1 迁移包包含当前已通过本地验收的核心。旧 0.1.0a2 包保留为历史
-版本，请核对 `TRANSFER.json` 使用匹配的包。
+按 [Mac 快速开始](../../START_ON_MAC.md)从公开仓库安装，或使用
+[GitHub 发行版](https://github.com/amos689/paperdelta/releases)中的 wheel，并在 Mac
+重新创建环境。快速开始还保留了首次原生验证的本地迁移步骤；这些历史迁移包不随
+GitHub 克隆分发。
 
 **2026-10-03 原生验证通过**：Apple Silicon arm64、macOS 27.0.1，Python
 3.12.14 和 3.14.6 最终各 241 项通过，零失败、零错误、零跳过。Chrome
@@ -22,8 +22,9 @@ macOS 工作流配置了八种组合：
 | `macos-15-intel` | Intel `x86_64` | 3.11、3.12、3.13、3.14 |
 
 标签来自 [GitHub 运行器说明](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)，
-指定系统系列及架构，并非固定镜像。每次运行记录实际主机和解释器版本，目前
-没有远程 CI 成功记录。
+指定系统系列及架构，并非固定镜像。每次运行记录实际主机和解释器版本，远程执行
+见 [Actions 结果与产物](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)，
+与上面的本地回传记录分开保存。
 
 [Python macOS 安装器](https://docs.python.org/3/using/mac.html)提供支持两种架构的
 universal2 构建。使用原生解释器和项目虚拟环境。检查器不需要 Homebrew、CUDA、
