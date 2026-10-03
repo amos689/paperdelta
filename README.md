@@ -43,7 +43,15 @@ even when no LaTeX file changed.
 Local Python CLI · existing LaTeX · exact decimal arithmetic · offline HTML · optional MCP.
 Checking needs no model key, GPU or TeX installation.
 
-![An offline report with a review queue, changed results and evidence](docs/assets/v0.3/report.png)
+<p>
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.3/report.png">
+    <img src="docs/assets/v0.3/demo.en.gif" alt="PaperDelta walkthrough: accuracy drops from 84.1% to 80.9%; the report flags affected numbers and a false comparison, then reveals the three source CSV rows." width="960">
+  </picture>
+</p>
+
+A 20-second walkthrough of real demo reports, paced for readability.
+[View the static screenshot](docs/assets/v0.3/report.png).
 
 **0.3.0** adds batch table binding, explicit numeric review scopes, traceable
 exclusions, continuous checks and compact Agent sessions. See the

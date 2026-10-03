@@ -2,7 +2,7 @@ include LICENSE *.md
 include docs/package-description.rst
 include .gitattributes .gitignore
 recursive-include .github *.yml *.md
-recursive-include docs *.md *.json *.svg *.png *.webm *.log *.xml
+recursive-include docs *.md *.json *.svg *.png *.gif *.webm *.log *.xml
 include docs/evidence/macos-native-20261003/return.zip
 recursive-include examples *.yaml *.yml *.tex *.csv *.json *.py *.pdf *.png *.md
 recursive-include tools *.py *.cjs

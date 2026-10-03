@@ -17,6 +17,7 @@ MANIFEST.in text eol=lf
 LICENSE -text
 *.pdf binary
 *.png binary
+*.gif binary
 *.webm binary
 # Frozen inputs and historical source snapshots require exact original bytes.
 tests/corpus/** -text

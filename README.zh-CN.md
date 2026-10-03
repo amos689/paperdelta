@@ -41,7 +41,15 @@
 本地 Python 命令行 · 现有 LaTeX · 精确十进制计算 · 离线 HTML · 可选 MCP。
 检查不需要模型密钥、GPU 或 TeX 安装。
 
-![离线报告中的待处理清单、结果变化与来源证据](docs/assets/v0.3/report.zh-CN.png)
+<p>
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.3/report.zh-CN.png">
+    <img src="docs/assets/v0.3/demo.zh-CN.gif" alt="PaperDelta 流程演示：准确率从 84.1% 降至 80.9%，报告指出受影响的数字和失效比较，并展开三条 CSV 来源记录。" width="960">
+  </picture>
+</p>
+
+约 20 秒的真实示例报告演示，播放节奏经过编排以便阅读。
+[查看静态截图](docs/assets/v0.3/report.zh-CN.png)。
 
 **0.3.0** 增加批量表格绑定、明确的数字审查范围、可追踪排除、持续检查及精简的
 Agent 会话。详见[工作流指南](docs/zh-CN/workflows.md)与[发行及升级说明](docs/zh-CN/v0.3.md)。
