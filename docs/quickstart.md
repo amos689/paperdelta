@@ -1,5 +1,7 @@
 # Quick start
 
+[简体中文](zh-CN/quickstart.md)
+
 Install the checkout in a Python 3.11+ environment: `python -m pip install -e .`.
 The examples below run in your paper project's root. To run elsewhere, place
 `-C /path/to/project` before the subcommand.
@@ -27,6 +29,11 @@ Create the discovery configuration and inspect candidates:
 paperdelta init --paper paper/main.tex --data results/metrics.csv
 paperdelta scan
 ```
+
+For an interactive first mapping, run `paperdelta --lang en guide`. It asks for
+source types, identity, unit, aggregation and positions, then shows a final review.
+See the [guided tutorial](guided-bindings.md). The following JSON route exposes
+the same proposal contract for scripts and agents.
 
 Save the following as `mapping-input.json`. A person or an existing agent can
 draft this input; the checker derives the value from the actual data.
@@ -103,6 +110,10 @@ Direct edits to that file are accepted project declarations. Proposal boundaries
 cannot prevent an agent with separate filesystem access from editing it directly.
 
 ## Update and repair
+
+If a paragraph was rewritten or moved, use `paperdelta repair guide` to propose
+an explicit location change. It retains the metric and claim definitions and
+does not declare that the scientific result is correct. See [location repair](guided-bindings.md).
 
 Save a snapshot before changing results with `paperdelta snapshot create before-rerun`.
 After the update, run:

@@ -1,5 +1,7 @@
 # Ambiguous handwritten table
 
+[简体中文](README.zh-CN.md)
+
 This is an intentional refusal example. The declared anchor matches two table
 cells; equal values cannot identify the correct model. From the checkout root:
 

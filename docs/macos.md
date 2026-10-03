@@ -1,9 +1,12 @@
 # macOS preparation and native validation
 
+[简体中文](zh-CN/macos.md)
+
 The source, pure-Python PaperDelta wheel and owned examples can be transferred
-using the [Mac quick start](../START_ON_MAC.md). Recreate the environment on the Mac;
+using the [Mac quick start](../START_ON_MAC.en.md). Recreate the environment on the Mac;
 Windows virtual environments, executables and local inference models are excluded.
-Runtime source is unchanged from the locally accepted 0.1.0a2 core.
+The old transfer contains the locally accepted 0.1.0a2 core. v0.2 has changed that
+implementation and needs a rebuilt candidate after product convergence.
 
 **Status: native macOS execution is pending.** Neither a workflow definition,
 a Windows test nor POSIX execution on Linux counts as a Mac result.
@@ -52,7 +55,7 @@ environments. No human trial is required.
 For an audited source checkout rather than the transfer ZIP:
 
 ```sh
-python3 tools/validate_platform.py --wheel build/release-candidate/paperdelta-0.1.0a2-py3-none-any.whl --out build/mac-validation --require-system Darwin
+python3 tools/validate_platform.py --wheel build/release-candidate/paperdelta-*-py3-none-any.whl --out build/mac-validation --require-system Darwin
 ```
 
 For Apple Silicon, add `--expected-arch arm64`; for Intel, add

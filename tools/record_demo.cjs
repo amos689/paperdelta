@@ -7,6 +7,16 @@ const { pathToFileURL } = require('node:url');
 (async () => {
   const demo = path.resolve(process.argv[2] || 'build/demo');
   const output = path.resolve(process.argv[3] || 'build/recorded-demo');
+  const language = process.argv[4] || 'en';
+  if (!['en', 'zh-CN'].includes(language)) throw new Error('Choose en or zh-CN');
+  const chinese = [
+    ['1. 实验更新前的论文', '七项已声明检查与给定证据一致。Ours：84.1%；基线：81.0%。'],
+    ['2. 只改 CSV，所有 LaTeX 文件保持不变', 'Ours 降到 80.9%。四处数字、一项比较及已记录来源的图表需要复核。'],
+    ['3. 查看原始证据行', '摘要仍写着 84.1%。报告展示选中的测试记录及其均值。'],
+    ['4. 比较结论也发生变化', '80.9% 已不再优于 81.0%。关联数值补丁等待作者处理比较结论。'],
+    ['5. 图表的输入已经变化', '记录的 CSV 身份已不同。请明确重新绘图；哈希不能证明视觉内容正确。'],
+    ['6. 独立的数值更新：84.1% → 84.5%', '三个文件的四处受保护替换通过重查，演示随后恢复原始字节。'],
+  ];
   await fs.mkdir(output, { recursive: false });
   const browser = await chromium.launch({
     executablePath: process.env.PAPERDELTA_BROWSER_EXECUTABLE || undefined,
@@ -21,6 +31,7 @@ const { pathToFileURL } = require('node:url');
     const page = await context.newPage();
     const video = page.video();
     const caption = async (title, explanation, seconds) => {
+      if (language === 'zh-CN') [title, explanation] = chinese[steps.length];
       await page.evaluate(({ title, explanation }) => {
         document.getElementById('tour-caption')?.remove();
         const panel = document.createElement('aside');
@@ -41,6 +52,7 @@ const { pathToFileURL } = require('node:url');
     };
     const open = async relative => {
       await page.goto(pathToFileURL(path.join(demo, relative)).href);
+      await page.selectOption('#language', language);
       await page.evaluate(() => window.scrollTo(0, 0));
     };
     await open('comparison-reversed/before/report.html');
@@ -71,7 +83,7 @@ const { pathToFileURL } = require('node:url');
     await video.saveAs(path.join(output, 'paperdelta-demo.webm'));
     await fs.writeFile(path.join(output, 'recording.json'), JSON.stringify({
       recorded_at: new Date().toISOString(), browser: await browser.version(),
-      source: path.relative(path.resolve(__dirname, '..'), demo).split(path.sep).join('/'),
+      source: path.relative(path.resolve(__dirname, '..'), demo).split(path.sep).join('/'), language,
       captions: steps, planned_caption_seconds: 44,
       scope: 'Actual local HTML reports; captions are presentation annotations. Synthetic demonstration, not a user trial.',
     }, null, 2) + '\n');

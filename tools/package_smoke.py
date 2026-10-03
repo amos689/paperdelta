@@ -32,9 +32,19 @@ def main():
         ignore=lambda _, names: [name for name in names if name in {"build", ".paperdelta"}],
     )
 
-    def command(*args):
+    def command(*args, language="en"):
         return subprocess.run(
-            [sys.executable, "-I", "-m", "paperdelta", "-C", str(scratch), *args],
+            [
+                sys.executable,
+                "-I",
+                "-m",
+                "paperdelta",
+                "--lang",
+                language,
+                "-C",
+                str(scratch),
+                *args,
+            ],
             capture_output=True,
             encoding="utf-8",
             check=False,
@@ -42,6 +52,8 @@ def main():
 
     before = command("check", "--format", "json", "--report", "build/review")
     assert before.returncode == 0, before.stderr
+    chinese_before = command("check", "--format", "json", language="zh-CN")
+    assert chinese_before.returncode == 0, chinese_before.stderr
     data = scratch / "results/metrics.csv"
     text = data.read_text(encoding="utf-8")
     for old, new in (("0.839", "0.807"), ("0.841", "0.809"), ("0.843", "0.811")):
@@ -54,6 +66,26 @@ def main():
     assert "Record identity" in (scratch / "build/changed/report.html").read_text(encoding="utf-8")
     optional = command("mcp")
     assert optional.returncode == 2 and "MCP_NOT_INSTALLED" in optional.stderr
+    chinese_after = command(
+        "check", "--format", "json", "--report", "build/changed-zh", language="zh-CN"
+    )
+    assert chinese_after.returncode == 1, chinese_after.stderr
+    for english, chinese in ((before, chinese_before), (after, chinese_after)):
+        left, right = json.loads(english.stdout), json.loads(chinese.stdout)
+        left.pop("created_at")
+        right.pop("created_at")
+        assert left == right
+    assert '<html lang="zh-CN"' in (scratch / "build/changed-zh/report.html").read_text("utf-8")
+    chinese_optional = command("mcp", language="zh-CN")
+    assert chinese_optional.returncode == 2 and "MCP_NOT_INSTALLED" in chinese_optional.stderr
+    runtime_files = [
+        path
+        for path in installed.parent.rglob("*")
+        if path.is_file() and path.suffix in {".py", ".json", ".css", ".js"}
+    ]
+    for path in runtime_files:
+        relative = path.relative_to(installed.parent)
+        assert path.read_bytes() == (repository / "src/paperdelta" / relative).read_bytes()
     result = {
         "checked_at": datetime.now(UTC).isoformat(),
         "python": platform.python_version(),
@@ -66,9 +98,11 @@ def main():
         "mismatches": 5,
         "html_report_written": True,
         "optional_mcp_error": "MCP_NOT_INSTALLED",
+        "languages": ["en", "zh-CN"],
+        "language_independent_stored_reports": True,
         "installed_sources_sha256": {
-            path.name: sha256(path.read_bytes()).hexdigest()
-            for path in sorted(installed.parent.glob("*.py"))
+            path.relative_to(installed.parent).as_posix(): sha256(path.read_bytes()).hexdigest()
+            for path in sorted(runtime_files)
         },
     }
     target.parent.mkdir(parents=True, exist_ok=True)

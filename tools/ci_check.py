@@ -4,19 +4,29 @@ Run this wrapper from a trusted PaperDelta checkout/installation environment,
 not a version supplied by an untrusted paper PR. It executes Git reads only.
 """
 
-import argparse
 import os
 import re
 import subprocess
+import sys
 from html import escape
 from pathlib import Path
 
 import yaml
 
 from paperdelta.analysis import check_project
+from paperdelta.arguments import ArgumentParser, json_errors
 from paperdelta.config import ConfigLoader
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import (
+    UnsupportedLanguage,
+    language_context,
+    msg,
+    resolve_language,
+    tr,
+    translated,
+)
 from paperdelta.models import Config
+from paperdelta.preferences import read_preferences
 from paperdelta.reports import write_reports
 from paperdelta.snapshots import snapshot_path
 from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
@@ -60,13 +70,11 @@ def _target_metadata(project, commit, config_path):
             continue
         mode, kind, identity = header.decode("ascii").split()
         if kind != "blob" or mode not in {"100644", "100755"}:
-            raise PaperDeltaError(
-                "CI_METADATA_TYPE", f"Target metadata is not a regular file: {name}"
-            )
+            raise PaperDeltaError("CI_METADATA_TYPE", msg("ci.error.type_target", name=name))
         size = int(git_read(project.root, "cat-file", "-s", identity))
         total += size
         if size > LIMIT or total > 2 * LIMIT or len(files) >= 2000:
-            raise PaperDeltaError("CI_METADATA_LIMIT", "Target metadata exceeds the CI read limit")
+            raise PaperDeltaError("CI_METADATA_LIMIT", msg("ci.error.limit_target"))
         files[name] = git_read(project.root, "cat-file", "blob", identity)
     return files
 
@@ -77,34 +85,34 @@ def _current_metadata(project, config_path):
         for path in project.path(directory).rglob("*.json"):
             names.add(path.relative_to(project.root).as_posix())
     if len(names) > 2000:
-        raise PaperDeltaError("CI_METADATA_LIMIT", "More than 2000 current metadata files")
+        raise PaperDeltaError("CI_METADATA_LIMIT", msg("ci.error.count"))
     files = {}
     total = 0
     for name in sorted(names):
         path = project.path(name)
         if path.exists():
             if not path.is_file():
-                raise PaperDeltaError("CI_METADATA_TYPE", f"Metadata is not a file: {name}")
+                raise PaperDeltaError("CI_METADATA_TYPE", msg("ci.error.type_current", name=name))
             raw = project.read(name, LIMIT)
             total += len(raw)
             if total > 2 * LIMIT:
-                raise PaperDeltaError("CI_METADATA_LIMIT", "Current metadata exceeds 64 MiB")
+                raise PaperDeltaError("CI_METADATA_LIMIT", msg("ci.error.limit_current"))
             files[name] = raw
     return files
 
 
 def _configuration_changes(before, after):
     if before is None or after is None:
-        return {"status": "unavailable", "reason": "Configuration missing on one side"}
+        return {"status": "unavailable", "reason": msg("ci.config_missing")}
     configurations = []
     for side, raw in (("target", before), ("current", after)):
         try:
             if len(raw) > 1024 * 1024:
-                raise ValueError("Configuration exceeds 1 MiB")
+                raise PaperDeltaError("CI_CONFIG", msg("ci.config_limit"))
             data = yaml.load(raw.decode("utf-8-sig"), Loader=ConfigLoader)
             configurations.append(Config.model_validate(data).model_dump())
         except (PaperDeltaError, yaml.YAMLError, ValueError, RecursionError) as exc:
-            return {"status": "unavailable", "reason": f"{side}: {exc}"}
+            return {"status": "unavailable", "reason": msg("ci.parse", side=side, detail=exc)}
     old, new = configurations
     sections = []
     for section in NAMED_SECTIONS:
@@ -155,9 +163,9 @@ def _policy_changes(before, after, config_path):
 
 
 def _cell(value):
-    value = str(value)
+    value = str(translated(value))
     if len(value) > 512:
-        value = value[:512] + "… [truncated; full value in artifacts]"
+        value = value[:512] + tr("ci.truncated_value")
     text = re.sub(
         r"[\x00-\x1f\x7f\u202a-\u202e\u2066-\u2069]",
         lambda match: f"\\u{ord(match[0]):04x}",
@@ -167,80 +175,91 @@ def _cell(value):
 
 
 def ci_summary(result):
-    """A bounded Markdown summary; full evidence remains in the report artifacts."""
+    """Localized presentation; stored report/context fields remain canonical."""
     context, report = result["context"], result["report"]
     coverage = report["coverage"]
     lines = [
-        "# PaperDelta CI review",
+        tr("ci.title"),
         "",
-        f"Current check exit code: **{report['exit_code']}**.",
-        f"{coverage['confirmed']} confirmed: {coverage['pass']} pass, "
-        f"{coverage['mismatch']} mismatch, {coverage['unknown']} unknown.",
-        f"{len(coverage['unbound_numbers'])} unbound numeric candidates; "
-        f"{len(coverage['unsupported'])} unsupported regions; "
-        f"{len(coverage['unregistered_figures'])} unregistered figure references.",
+        tr("ci.exit", code=report["exit_code"]),
+        tr(
+            "ci.counts",
+            confirmed=coverage["confirmed"],
+            passed=coverage["pass"],
+            mismatch=coverage["mismatch"],
+            unknown=coverage["unknown"],
+        ),
+        tr(
+            "ci.coverage",
+            unbound=len(coverage["unbound_numbers"]),
+            unsupported=len(coverage["unsupported"]),
+            figures=len(coverage["unregistered_figures"]),
+        ),
         "",
-        f"Target commit: {_cell(context['base_commit'])}.",
-        f"Historical baseline: {_cell(context['baseline_status'])}.",
+        tr("ci.target", value=_cell(context["base_commit"])),
+        tr("ci.baseline", value=_cell(tr("ci.status." + context["baseline_status"]))),
         "",
-        "## Repository declaration changes",
+        tr("ci.changes_title"),
         "",
-        "Compared with the target commit. These changes are separate from numerical "
-        "consistency; snapshot and review files are declarations, not authenticated approval.",
+        tr("ci.changes_note"),
         "",
-        "| Kind | Path | Change | Target SHA256 | Current SHA256 |",
+        tr("ci.table"),
         "| --- | --- | --- | --- | --- |",
     ]
     changes = context["policy_changes"]
     for item in changes[:50]:
-        lines.append(
-            "| "
-            + " | ".join(
-                _cell(item[key])
-                for key in ("kind", "path", "change", "target_hash", "current_hash")
-            )
-            + " |"
-        )
+        cells = [
+            tr("ci.status." + item["kind"]),
+            item["path"],
+            tr("ci.status." + item["change"]),
+            item["target_hash"],
+            item["current_hash"],
+        ]
+        lines.append("| " + " | ".join(_cell(value) for value in cells) + " |")
     if not changes:
-        lines.append("| — | No declaration file changes | — | — | — |")
+        lines.append(tr("ci.no_changes"))
     if len(changes) > 50:
-        lines.extend(["", f"Showing 50 of {len(changes)} changes; see ci-context.json for all."])
+        lines.extend(["", tr("ci.more_changes", count=len(changes))])
     configuration = context["configuration"]
-    lines.extend(["", f"Configuration semantics: **{configuration['status']}**.", ""])
+    lines.extend(["", tr("ci.semantics", status=tr("ci.status." + configuration["status"])), ""])
     if configuration["status"] == "unavailable":
         lines.append(_cell(configuration["reason"]))
     else:
         for section in configuration["sections"]:
             lines.append(
-                f"- {_cell(section['section'])}: added {_cell(section['added'][:50])}; "
-                f"removed {_cell(section['removed'][:50])}; "
-                f"changed {_cell(section['changed'][:50])}."
+                tr(
+                    "ci.section",
+                    section=_cell(section["section"]),
+                    added=_cell(section["added"][:50]),
+                    removed=_cell(section["removed"][:50]),
+                    changed=_cell(section["changed"][:50]),
+                )
             )
         if configuration["settings"]:
-            lines.append("- Changed settings: " + _cell(configuration["settings"]) + ".")
-        lines.append("Named-ID lists show at most 50 entries per category; full lists are in JSON.")
-    lines.extend(["", "## Current findings", ""])
+            lines.append(tr("ci.settings", value=_cell(configuration["settings"])))
+        lines.append(tr("ci.lists_note"))
+    lines.extend(["", tr("ci.findings_title"), ""])
     for item in report["diagnostics"][:50]:
         location = item.get("location", {})
         where = f"{location['file']}:{location['line']}" if location else item["subject"]
-        lines.append(f"- {_cell(item['rule'])} at {_cell(where)}: {_cell(item['message'])}")
+        lines.append(
+            tr(
+                "ci.finding",
+                rule=_cell(item["rule"]),
+                where=_cell(where),
+                message=_cell(item["message"]),
+            )
+        )
     if not report["diagnostics"]:
-        lines.append("No diagnostics from the declared checks.")
+        lines.append(tr("ci.no_findings"))
     if len(report["diagnostics"]) > 50:
-        lines.append(f"Showing 50 of {len(report['diagnostics'])} diagnostics.")
-    lines.extend(
-        [
-            "",
-            "Full artifacts: report.html, report.json, report.md and ci-context.json.",
-            "A successful check covers confirmed bindings; it does not certify the whole paper.",
-            "",
-        ]
-    )
+        lines.append(tr("ci.more_findings", count=len(report["diagnostics"])))
+    lines.extend(["", tr("ci.artifacts"), tr("ci.scope"), ""])
     summary = "\n".join(lines)
     encoded = summary.encode("utf-8")
     if len(encoded) > 900 * 1024:
         summary = encoded[: 900 * 1024].decode("utf-8", errors="ignore").rsplit("\n", 1)[0]
-        summary += "\n\nSummary truncated; download the full report artifacts.\n"
+        summary += "\n\n" + tr("ci.truncated") + "\n"
     return summary
 
 
@@ -249,14 +268,14 @@ def run_ci(root, base_commit, name, output, config_path="paperdelta.yaml"):
     project.path(config_path)
     config_path = Path(config_path.replace("\\", "/")).as_posix()
     if ".." in Path(config_path).parts:
-        raise PaperDeltaError("CI_CONFIG", "Use a canonical project-relative configuration path")
+        raise PaperDeltaError("CI_CONFIG", msg("ci.error.config"))
     if not re.fullmatch(r"[a-fA-F0-9]{40}|[a-fA-F0-9]{64}", base_commit):
-        raise PaperDeltaError("CI_BASE", "Supply the full target commit SHA, not an expression")
+        raise PaperDeltaError("CI_BASE", msg("ci.error.sha"))
     top = git_read(project.root, "rev-parse", "--show-toplevel").decode("utf-8").strip()
     if Path(top).resolve() != project.root:
-        raise PaperDeltaError("CI_ROOT", "Run at the paper repository root")
+        raise PaperDeltaError("CI_ROOT", msg("ci.error.root"))
     if git_read(project.root, "cat-file", "-t", base_commit).strip() != b"commit":
-        raise PaperDeltaError("CI_BASE", "The target identity must name a commit")
+        raise PaperDeltaError("CI_BASE", msg("ci.error.commit"))
     path = snapshot_path(name)
     target = _target_metadata(project, base_commit, config_path)
     current = _current_metadata(project, config_path)
@@ -275,13 +294,13 @@ def run_ci(root, base_commit, name, output, config_path="paperdelta.yaml"):
         context.update({"baseline_status": "read_from_target_commit", "snapshot_hash": sha256(raw)})
     report = check_project(project.root, config_path, baseline)
     if _current_metadata(project, config_path) != current:
-        raise PaperDeltaError("CI_INPUT_CHANGED", "Declaration files changed while checking")
+        raise PaperDeltaError("CI_INPUT_CHANGED", msg("ci.error.changed"))
     protected = {project.path(p) for p in report["input_hashes"]} | {
         project.path(p) for p in target.keys() | current.keys()
     }
     for filename in ("report.json", "report.md", "report.html", "ci-context.json", "ci-summary.md"):
         if project.path((Path(output) / filename).as_posix()) in protected:
-            raise PaperDeltaError("CI_OUTPUT", "CI output would overwrite a checked declaration")
+            raise PaperDeltaError("CI_OUTPUT", msg("ci.error.output"))
     result = {"context": context, "report": report}
     write_reports(project, output, report)
     project.write((Path(output) / "ci-context.json").as_posix(), json_text(context).encode("utf-8"))
@@ -295,32 +314,85 @@ def _append_job_summary(content, path):
             stream.write("\n" + content)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project", required=True)
-    parser.add_argument("--base-commit", required=True)
-    parser.add_argument("--snapshot", required=True)
-    parser.add_argument("--report", default="build/paperdelta")
-    parser.add_argument("--config", default="paperdelta.yaml")
-    parser.add_argument("--summary-file", default=os.environ.get("GITHUB_STEP_SUMMARY"))
-    args = parser.parse_args()
+def main(argv=None):
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
+    def early(name):
+        values = [
+            value.split("=", 1)[1]
+            if "=" in value
+            else (arguments[i + 1] if i + 1 < len(arguments) else None)
+            for i, value in enumerate(arguments)
+            if value == name or value.startswith(name + "=")
+        ]
+        return values[-1] if values else None
+
+    try:
+        requested = early("--lang")
+        root = early("--project")
+        preferences = {}
+        if (
+            root
+            and requested in (None, "auto")
+            and os.environ.get("PAPERDELTA_LANG") in (None, "", "auto")
+        ):
+            preferences = read_preferences(Project(root))
+        selected = resolve_language(requested, preferences=preferences)
+    except (UnsupportedLanguage, PaperDeltaError, OSError) as exc:
+        print(
+            json_text(
+                {
+                    "code": getattr(
+                        exc,
+                        "code",
+                        "LANGUAGE" if isinstance(exc, UnsupportedLanguage) else "IO_ERROR",
+                    ),
+                    "error": str(exc),
+                }
+            )
+        )
+        return 2
+    token = json_errors.set(True)
+    try:
+        with language_context(selected):
+            return _main(arguments)
+    finally:
+        json_errors.reset(token)
+
+
+def _main(argv):
+    parser = ArgumentParser(description=tr("ci.description"))
+    parser.add_argument("--project", required=True, help=tr("ci.help.project"))
+    parser.add_argument("--base-commit", required=True, help=tr("ci.help.base"))
+    parser.add_argument("--snapshot", required=True, help=tr("ci.help.snapshot"))
+    parser.add_argument("--report", default="build/paperdelta", help=tr("ci.help.report"))
+    parser.add_argument("--config", default="paperdelta.yaml", help=tr("ci.help.config"))
+    parser.add_argument(
+        "--summary-file", default=os.environ.get("GITHUB_STEP_SUMMARY"), help=tr("ci.help.summary")
+    )
+    parser.add_argument("--lang", help=tr("ci.help.language"))
+    args = parser.parse_args(argv)
     summary_file = None
     try:
         if args.summary_file:
             candidate = Path(args.summary_file).resolve()
             if candidate.is_relative_to(Path(args.project).resolve()):
-                raise PaperDeltaError("CI_OUTPUT", "The job summary must be outside the paper root")
+                raise PaperDeltaError("CI_OUTPUT", msg("ci.error.summary"))
             summary_file = candidate
         result = run_ci(args.project, args.base_commit, args.snapshot, args.report, args.config)
         _append_job_summary(ci_summary(result), summary_file)
     except (PaperDeltaError, UnicodeDecodeError, OSError) as exc:
         code = getattr(exc, "code", "IO_ERROR")
-        message = "# PaperDelta CI incomplete\n\n" + _cell(code + ": " + str(exc)) + "\n"
+        detail = translated(getattr(exc, "message", str(exc)))
+        message = tr("ci.incomplete") + "\n\n" + _cell(code + ": " + detail) + "\n"
         try:
             _append_job_summary(message, summary_file)
         except OSError:
             pass
-        print(json_text({"code": code, "error": str(exc)}))
+        print(json_text({"code": code, "error": str(exc), "display_message": detail}))
         return 2
     print(json_text(result))
     return result["report"]["exit_code"]

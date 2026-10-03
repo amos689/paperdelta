@@ -1,12 +1,11 @@
-include LICENSE README.md CONTRIBUTING.md THIRD_PARTY_NOTICES.md
-include START_ON_MAC.md
+include LICENSE *.md
 include .gitattributes .gitignore
 recursive-include .github *.yml
 recursive-include docs *.md *.json *.png *.webm *.log *.xml
 recursive-include examples *.yaml *.yml *.tex *.csv *.json *.py *.pdf *.png *.md
 recursive-include tools *.py *.cjs
 recursive-include tests *.py
-recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py
+recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
 prune tests/corpus
 exclude docs/evidence/corpus*.json
 # Artifact hashes are sidecars, avoiding self-referential distribution contents.

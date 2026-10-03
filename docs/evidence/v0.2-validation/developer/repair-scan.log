@@ -1,0 +1,208 @@
+{
+  "broken": [
+    {
+      "binding": "occurrences:result_10",
+      "message": "Anchor no longer exists in paper.tex",
+      "old_definition": {
+        "anchor": {
+          "exact": null,
+          "prefix": "cation J score: ",
+          "suffix": ".\r"
+        },
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 1
+        },
+        "file": "paper.tex",
+        "metric": "score"
+      },
+      "previous_location": {
+        "byte_end": 270,
+        "byte_start": 264,
+        "column": 19,
+        "end": 268,
+        "file": "paper.tex",
+        "line": 10,
+        "start": 262,
+        "text": "84.1\\%"
+      },
+      "reason": "ANCHOR_MISSING"
+    }
+  ],
+  "candidates": [
+    {
+      "byte_end": 25,
+      "byte_start": 21,
+      "candidate_id": "sha256:d76d283d43fa71fd3136f69e951ff6688c7e7cb45e1a1dee61cc10c20908081c",
+      "column": 20,
+      "context_after": "\\%.\r\nLocation B score: 84.1\\%.\r\nLocation C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLoca",
+      "context_before": "﻿Location A score: ",
+      "end": 23,
+      "file": "paper.tex",
+      "line": 1,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 19,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 52,
+      "byte_start": 48,
+      "candidate_id": "sha256:af41d350a931bec3219e8b28a5abb2017f6b989aec0ae2bbdfda374de901d824",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLoca",
+      "context_before": "﻿Location A score: 84.1\\%.\r\nLocation B score: ",
+      "end": 50,
+      "file": "paper.tex",
+      "line": 2,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 46,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 79,
+      "byte_start": 75,
+      "candidate_id": "sha256:ac62cc0ba69debaee405cab2b40372950b16c171ae3e2b5a45a5149bd4c40764",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLoca",
+      "context_before": "﻿Location A score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocation C score: ",
+      "end": 77,
+      "file": "paper.tex",
+      "line": 3,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 73,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 106,
+      "byte_start": 102,
+      "candidate_id": "sha256:e2012545939f69c02237d7c53e7efbfdd1a656bcb1d995da9fde66a32daec1f8",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLoca",
+      "context_before": "A score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocation C score: 84.1\\%.\r\nLocation D score: ",
+      "end": 104,
+      "file": "paper.tex",
+      "line": 4,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 100,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 133,
+      "byte_start": 129,
+      "candidate_id": "sha256:2a90c0b8538135da4093c86f2f3b5afe013fc9384e13e2595b0455ea4d133e64",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLoca",
+      "context_before": "B score: 84.1\\%.\r\nLocation C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: ",
+      "end": 131,
+      "file": "paper.tex",
+      "line": 5,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 127,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 160,
+      "byte_start": 156,
+      "candidate_id": "sha256:c42d7427d581e16d05afbec1aecd79906b943b439ea623ec30ad2cb7dcd40804",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nFina",
+      "context_before": "C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F score: ",
+      "end": 158,
+      "file": "paper.tex",
+      "line": 6,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 154,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 187,
+      "byte_start": 183,
+      "candidate_id": "sha256:39368d2630964d122e9b55bc4bb7e617dd31d920e07d104efa0007874b252451",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nFinal held-out summary score: 8",
+      "context_before": "D score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G score: ",
+      "end": 185,
+      "file": "paper.tex",
+      "line": 7,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 181,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 214,
+      "byte_start": 210,
+      "candidate_id": "sha256:896d64bfbeda8c0de23ad33d95e26bd256bfe6d94a432d64bb0dbc314731a0c6",
+      "column": 19,
+      "context_after": "\\%.\r\nLocation I score: 84.1\\%.\r\nFinal held-out summary score: 84.1\\%.\r\n",
+      "context_before": "E score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H score: ",
+      "end": 212,
+      "file": "paper.tex",
+      "line": 8,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 208,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 241,
+      "byte_start": 237,
+      "candidate_id": "sha256:8935b65accb1858a25a0f1cc09711b27aabdc45e61b34d604658b445b8a35764",
+      "column": 19,
+      "context_after": "\\%.\r\nFinal held-out summary score: 84.1\\%.\r\n",
+      "context_before": "F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I score: ",
+      "end": 239,
+      "file": "paper.tex",
+      "line": 9,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 235,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 280,
+      "byte_start": 276,
+      "candidate_id": "sha256:26570ec0cd1911a8b452de0635d3d90e9b5dc37aa00fbddda0a4a77160b8abba",
+      "column": 31,
+      "context_after": "\\%.\r\n",
+      "context_before": "1\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nFinal held-out summary score: ",
+      "end": 278,
+      "file": "paper.tex",
+      "line": 10,
+      "priority_hint": "repeated",
+      "same_text_count": 10,
+      "start": 274,
+      "text": "84.1"
+    }
+  ],
+  "command": "repair",
+  "command_result_version": 1,
+  "diagnostics": [
+    {
+      "id": "occurrence:result_10/ANCHOR_MISSING",
+      "message": "Anchor no longer exists in paper.tex",
+      "rule": "ANCHOR_MISSING",
+      "severity": "unknown",
+      "subject": "occurrence:result_10"
+    }
+  ],
+  "files": [
+    "paper.tex"
+  ],
+  "input_hashes": {
+    ".paperdelta/baselines/before-edit.json": "sha256:50efb1d0611034ab44551f82af15b28a655972aac6850a25c812408c7f4a772d",
+    ".paperdelta/onboarding.json": "sha256:7621b5d83f5afc4e3069950ea4e365b875799c1b5a9b9f6d7d45dcd27c76c28b",
+    "paper.tex": "sha256:293b08f61b940c8f0c73d3a7914f1db7d165491a4833ce129dc11eed7f4a1b62",
+    "paperdelta.yaml": "sha256:438038484596b160525cf5b5e14839257b8f7ce74b453d61a461289c29bf3d2e",
+    "results.csv": "sha256:bd6ae7da4fcd3fc953d1b19758cdfcb610aa9c015e19d5fffe5cdf88c0557fdb"
+  },
+  "notice": "Select each replacement location explicitly. Equal text or numbers do not identify a binding. Only paper locations can change; metric definitions, units and claim predicates stay fixed.",
+  "repair_scan_version": 1
+}

@@ -3,23 +3,36 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 from paperdelta.storage import Project, parse_json
 
 
-def test_published_quickstart_inputs_run_through_real_cli(tmp_path):
-    text = (Path(__file__).resolve().parents[1] / "docs/quickstart.md").read_text(encoding="utf-8")
+@pytest.mark.parametrize("language", ["en", "zh-CN"])
+def test_published_quickstart_inputs_run_through_real_cli(tmp_path, language):
+    name = "docs/quickstart.md" if language == "en" else "docs/zh-CN/quickstart.md"
+    text = (Path(__file__).resolve().parents[1] / name).read_text(encoding="utf-8")
     store = Project(tmp_path)
-    for language, path in (
+    for fence_language, path in (
         ("tex", "paper/main.tex"),
         ("csv", "results/metrics.csv"),
         ("json", "mapping-input.json"),
     ):
-        content = re.findall(r"```" + language + r"\n(.*?)\n```", text, flags=re.DOTALL)[0]
+        content = re.findall(r"```" + fence_language + r"\n(.*?)\n```", text, flags=re.DOTALL)[0]
         store.write(path, (content + "\n").encode("utf-8"))
 
     def command(*arguments):
         result = subprocess.run(
-            [sys.executable, "-m", "paperdelta", "-C", str(tmp_path), *arguments],
+            [
+                sys.executable,
+                "-m",
+                "paperdelta",
+                "--lang",
+                language,
+                "-C",
+                str(tmp_path),
+                *arguments,
+            ],
             capture_output=True,
             encoding="utf-8",
             check=False,

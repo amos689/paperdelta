@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "pairs": [
+    {
+      "en": "README.md",
+      "zh-CN": "README.zh-CN.md"
+    },
+    {
+      "en": "CONTRIBUTING.md",
+      "zh-CN": "CONTRIBUTING.zh-CN.md"
+    },
+    {
+      "en": "THIRD_PARTY_NOTICES.md",
+      "zh-CN": "THIRD_PARTY_NOTICES.zh-CN.md"
+    },
+    {
+      "en": "START_ON_MAC.en.md",
+      "zh-CN": "START_ON_MAC.md"
+    },
+    {
+      "en": "docs/agent-guide.md",
+      "zh-CN": "docs/zh-CN/agent-guide.md"
+    },
+    {
+      "en": "docs/ci.md",
+      "zh-CN": "docs/zh-CN/ci.md"
+    },
+    {
+      "en": "docs/comparison.md",
+      "zh-CN": "docs/zh-CN/comparison.md"
+    },
+    {
+      "en": "docs/development-plan.md",
+      "zh-CN": "docs/zh-CN/development-plan.md"
+    },
+    {
+      "en": "docs/evaluation.md",
+      "zh-CN": "docs/zh-CN/evaluation.md"
+    },
+    {
+      "en": "docs/first-use-trial.md",
+      "zh-CN": "docs/zh-CN/first-use-trial.md"
+    },
+    {
+      "en": "docs/guided-bindings.md",
+      "zh-CN": "docs/zh-CN/guided-bindings.md"
+    },
+    {
+      "en": "docs/languages.md",
+      "zh-CN": "docs/zh-CN/languages.md"
+    },
+    {
+      "en": "docs/local-model-evaluation.md",
+      "zh-CN": "docs/zh-CN/local-model-evaluation.md"
+    },
+    {
+      "en": "docs/local-validation.md",
+      "zh-CN": "docs/zh-CN/local-validation.md"
+    },
+    {
+      "en": "docs/macos.md",
+      "zh-CN": "docs/zh-CN/macos.md"
+    },
+    {
+      "en": "docs/progress.md",
+      "zh-CN": "docs/zh-CN/progress.md"
+    },
+    {
+      "en": "docs/quickstart.md",
+      "zh-CN": "docs/zh-CN/quickstart.md"
+    },
+    {
+      "en": "docs/release-acceptance.md",
+      "zh-CN": "docs/zh-CN/release-acceptance.md"
+    },
+    {
+      "en": "docs/report-format.md",
+      "zh-CN": "docs/zh-CN/report-format.md"
+    },
+    {
+      "en": "docs/research.md",
+      "zh-CN": "docs/zh-CN/research.md"
+    },
+    {
+      "en": "docs/rules.md",
+      "zh-CN": "docs/zh-CN/rules.md"
+    },
+    {
+      "en": "docs/staged-model-evaluation.md",
+      "zh-CN": "docs/zh-CN/staged-model-evaluation.md"
+    },
+    {
+      "en": "docs/v0.2-plan.md",
+      "zh-CN": "docs/zh-CN/v0.2-plan.md"
+    },
+    {
+      "en": "examples/ambiguous-table/README.md",
+      "zh-CN": "examples/ambiguous-table/README.zh-CN.md"
+    },
+    {
+      "en": "examples/figure-support/README.md",
+      "zh-CN": "examples/figure-support/README.zh-CN.md"
+    },
+    {
+      "en": "examples/unicode-macro/README.md",
+      "zh-CN": "examples/unicode-macro/README.zh-CN.md"
+    },
+    {
+      "en": "docs/demo.md",
+      "zh-CN": "docs/zh-CN/demo.md"
+    },
+    {
+      "en": "docs/v0.2-acceptance.md",
+      "zh-CN": "docs/zh-CN/v0.2-acceptance.md"
+    }
+  ],
+  "aliases": [
+    "docs/zh-CN.md"
+  ],
+  "frozen_materials": {
+    "paths": [
+      "docs/evidence/**",
+      "tests/corpus/**",
+      "evaluations/**",
+      "LICENSE"
+    ],
+    "en": "Original licenses, frozen study inputs and raw execution records retain their bytes. Maintained bilingual guides explain them without rewriting evidence.",
+    "zh-CN": "原始许可、冻结试验输入和原始执行记录保留原字节，由双语维护文档说明，不重写证据。"
+  }
+}

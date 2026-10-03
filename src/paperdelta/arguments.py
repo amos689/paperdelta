@@ -41,7 +41,10 @@ def argument_message(text):
 
 class HelpFormatter(argparse.HelpFormatter):
     def add_usage(self, usage, actions, groups, prefix=None):
-        return super().add_usage(usage, actions, groups, prefix or tr("argparse.usage"))
+        # argparse uses an explicitly empty prefix when deriving a subcommand's prog.
+        return super().add_usage(
+            usage, actions, groups, tr("argparse.usage") if prefix is None else prefix
+        )
 
 
 class ArgumentParser(argparse.ArgumentParser):

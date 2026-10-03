@@ -1,5 +1,7 @@
 # Contributing
 
+[简体中文](CONTRIBUTING.zh-CN.md)
+
 Use Python 3.11+ and install `python -m pip install -e '.[dev,mcp]'`.
 Run `python tools/run_tests.py -q`, `python -m ruff check src tests tools` and
 `python -m ruff format --check src tests tools`. Tests use fresh project-local
@@ -24,3 +26,13 @@ Current code was written for this project; related work is in `docs/research.md`
 The default license is MIT. Schema changes should include a migration decision,
 version behavior and examples. Cross-platform CI configuration is checked in;
 only actual successful runs count as compatibility evidence.
+
+Add English and Simplified Chinese messages together; preserve placeholders and
+machine identifiers. Pair maintained documentation pages and link to their matching
+translation. See [language conventions](docs/languages.md). Keep original licenses
+and frozen study records intact. New studies pin a new implementation identity;
+do not update an old lock to make a changed implementation appear reproduced.
+
+Use a GitHub noreply address in this repository's local Git configuration when
+contributing with email privacy. Do not place personal addresses in fixtures or
+published logs. Third-party author credits and license texts remain intact.

@@ -10,6 +10,8 @@ import pytest
 from paperdelta.analysis import check_project
 from paperdelta.config import config_text, load_config
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import language_context
+from paperdelta.preferences import save_language
 from paperdelta.reviews import record_review
 from paperdelta.snapshots import create_snapshot
 from paperdelta.storage import Project, json_text, parse_json
@@ -259,3 +261,35 @@ def test_ci_summary_renders_untrusted_labels_as_text(project, git_repo):
     assert "<img" not in rendered and "&lt;img" in rendered
     assert "&#124;" in rendered and "\n# injected" not in rendered
     assert "\u202e" not in rendered and "\\u202e" in rendered
+
+
+def test_ci_languages_preserve_machine_results_and_localize_summaries(
+    project, change_results, git_repo
+):
+    base, _ = _commit_baseline(project, git_repo)
+    change_results(project)
+    values = []
+    for language in ("en", "zh-CN"):
+        with language_context(language):
+            values.append(run_ci(project, base, "submitted-v1", "build/" + language))
+    for value in values:
+        value["report"].pop("created_at")
+    assert json_text(values[0]) == json_text(values[1])
+    chinese = (project / "build/zh-CN/ci-summary.md").read_text("utf-8")
+    assert "仓库声明变化" in chinese and "应根据指标" in chinese
+    assert "VALUE_MISMATCH" in chinese and "paper/abstract.tex" in chinese
+    result = _ci_cli(project, "bad-commit", "--lang", "zh-CN")
+    assert result.returncode == 2
+    error = json.loads(result.stdout)
+    assert error["code"] == "CI_BASE" and "完整目标提交" in error["display_message"]
+    assert error["error"] == "Supply the full target commit SHA, not an expression"
+    save_language(Project(project), "zh-CN")
+    env = {**os.environ, "PAPERDELTA_LANG": "auto"}
+    preferred = _ci_cli(project, base, "--report", "build/preferred", env=env)
+    assert preferred.returncode == 1
+    assert "当前检查退出码" in (project / "build/preferred/ci-summary.md").read_text("utf-8")
+    overridden = _ci_cli(project, base, "--lang", "en", "--report", "build/override", env=env)
+    assert overridden.returncode == 1
+    assert "Current check exit code" in (project / "build/override/ci-summary.md").read_text(
+        "utf-8"
+    )

@@ -1,0 +1,430 @@
+用法：用法：paperdelta bind [-h] --proposal PROPOSAL
+                      [--accept ACCEPT | --interactive] [--format {text,json}]
+[terminal title omitted]用法：paperdelta bind：错误：缺少必填参数：--proposal
+
+无需编辑 JSON 即可构建映射。最终确认前不写入任何文件；构造阶段随时输入 :q 可取消。
+[terminal title omitted]选择或定义指标。
+  1. 定义新的来源指标
+请选择一个序号： 
+:q
+已取消，未保存映射。
+绑定状态：已取消；所选绑定数：0
+
+无需编辑 JSON 即可构建映射。最终确认前不写入任何文件；构造阶段随时输入 :q 可取消。
+[terminal title omitted]选择或定义指标。
+  1. 定义新的来源指标
+请选择一个序号： 
+1
+数据来源
+  1. results.csv
+  2. 选择项目内的其他来源路径
+请选择一个序号： 1
+  来源原始样本: [ { "model": "001", "score": "0.840", "seed": "1" }, { "model": "001", "score": "0.842", "seed": "2" }, { "model": "002", "score": "0.123", "seed": "1" } ]
+新来源标识符： experiment
+选择可唯一标识每条 CSV 记录的列。
+  1. model
+  2. seed
+  3. score
+请输入序号，多个序号以英文逗号分隔： 1,2
+列：model
+声明此列的类型。001 等标识符应保留为字符串。
+  1. 字符串（保留身份文本）
+  2. 整数
+  3. 精确十进制数
+请选择一个序号： 1
+列：seed
+声明此列的类型。001 等标识符应保留为字符串。
+  1. 字符串（保留身份文本）
+  2. 整数
+  3. 精确十进制数
+请选择一个序号： 2
+列：score
+声明此列的类型。001 等标识符应保留为字符串。
+  1. 字符串（保留身份文本）
+  2. 整数
+  3. 精确十进制数
+请选择一个序号： 3
+新指标标识符： score
+选择结果字段。
+  1. model
+  2. seed
+  3. score
+请选择一个序号： 3
+model 的精确筛选值（留空表示所有值）： 001
+seed 的精确筛选值（留空表示所有值）：
+声明来源单位。例如比例 0.841 可按百分比显示为 84.1。
+  1. scalar · 标量
+  2. fraction · 比例
+  3. percent · 百分比
+  4. percentage_point · 百分点
+  5. count · 计数
+  6. ratio · 比值
+请选择一个序号： 2
+选择选中记录的聚合方式。
+  1. unique · 唯一值
+  2. mean · 均值
+  3. sum · 求和
+  4. count · 计数
+请选择一个序号： 2
+选中记录的预期数量： 2
+如果实验定义了种子，请选择种子列。
+  1. 不声明种子集合（仍检查记录数）
+  2. model
+  3. seed
+请选择一个序号： 3
+预期种子，以英文逗号分隔，并保留原始文本： 1,2
+  选中的证据（每个来源显示前 10 条记录）: { "dependencies": [], "evidence": [ { 
+ "count": 2, "field": "score", "locations": [ { "key": { "model": "001", "seed": 
+ 1 }, "line": 2 }, { "key": { "model": "001", "seed": 2 }, "line": 3 } ], "path":
+: "results.csv", "records": [ { "key": { "model": "001", "seed": 1 }, "value": 0.
+.840 }, { "key": { "model": "001", "seed": 2 }, "value": 0.842 } ], "reduce": "me
+ean", "source": "experiment", "where": { "model": "001" } } ], "fingerprint": "sh
+ha256:5fdd0700f72d1c689de990f65d3fca104ff9eb7ad9d6600ab5c181c1f2a521df", "unit": 
+ "fraction", "value": "0.841" }
+按文字或文件筛选位置（留空表示全部）： 
+
+选择论文中的准确位置。数值相同本身不能证明实验身份一致。
+  1. paper.tex:1 · \ufeffLocation A score:  ⟦84.1⟧\%.\u000d\u000aLocation B scor
+re: 84.1\%.\u000d\u000aLocation C score: 84.1\%.\u000d\u000aLocation D score: 84.
+.1\%.\u000d\u000aLoca
+  2. paper.tex:2 · \ufeffLocation A score: 84.1\%.\u000d\u000aLocation B score: 
+  ⟦84.1⟧\%.\u000d\u000aLocation C score: 84.1\%.\u000d\u000aLocation D score: 84.
+.1\%.\u000d\u000aLocation E score: 84.1\%.\u000d\u000aLoca
+  3. paper.tex:3 · \ufeffLocation A score: 84.1\%.\u000d\u000aLocation B score: 
+ 84.1\%.\u000d\u000aLocation C score:  ⟦84.1⟧\%.\u000d\u000aLocation D score: 84.
+.1\%.\u000d\u000aLocation E score: 84.1\%.\u000d\u000aLocation F score: 84.1\%.\u
+u000d\u000aLoca
+  4. paper.tex:4 · A score: 84.1\%.\u000d\u000aLocation B score: 84.1\%.\u000d\u
+u000aLocation C score: 84.1\%.\u000d\u000aLocation D score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation E score: 84.1\%.\u000d\u000aLocation F score: 84.1\%.\u000d\u000aLocat
+tion G score: 84.1\%.\u000d\u000aLoca
+  5. paper.tex:5 · B score: 84.1\%.\u000d\u000aLocation C score: 84.1\%.\u000d\u
+u000aLocation D score: 84.1\%.\u000d\u000aLocation E score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation F score: 84.1\%.\u000d\u000aLocation G score: 84.1\%.\u000d\u000aLocat
+tion H score: 84.1\%.\u000d\u000aLoca
+  6. paper.tex:6 · C score: 84.1\%.\u000d\u000aLocation D score: 84.1\%.\u000d\u
+u000aLocation E score: 84.1\%.\u000d\u000aLocation F score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation G score: 84.1\%.\u000d\u000aLocation H score: 84.1\%.\u000d\u000aLocat
+tion I score: 84.1\%.\u000d\u000aLoca
+  7. paper.tex:7 · D score: 84.1\%.\u000d\u000aLocation E score: 84.1\%.\u000d\u
+u000aLocation F score: 84.1\%.\u000d\u000aLocation G score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation H score: 84.1\%.\u000d\u000aLocation I score: 84.1\%.\u000d\u000aLocat
+tion J score: 84.1\%.\u000d\u000a
+  8. paper.tex:8 · E score: 84.1\%.\u000d\u000aLocation F score: 84.1\%.\u000d\u
+u000aLocation G score: 84.1\%.\u000d\u000aLocation H score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation I score: 84.1\%.\u000d\u000aLocation J score: 84.1\%.\u000d\u000a     
+  9. paper.tex:9 · F score: 84.1\%.\u000d\u000aLocation G score: 84.1\%.\u000d\u
+u000aLocation H score: 84.1\%.\u000d\u000aLocation I score:  ⟦84.1⟧\%.\u000d\u000
+0aLocation J score: 84.1\%.\u000d\u000a
+  10. paper.tex:10 · G score: 84.1\%.\u000d\u000aLocation H score: 84.1\%.\u000d
+d\u000aLocation I score: 84.1\%.\u000d\u000aLocation J score:  ⟦84.1⟧\%.\u000d\u0
+000a
+请输入序号，多个序号以英文逗号分隔：
+1,2,3,4,5,6,7,8,9,10
+绑定标识符（多个位置将添加 _1、_2 等后缀）： result
+选择论文中的数值显示方式。
+  1. 小数
+  2. 百分比
+  3. 整数
+  4. 科学计数法
+请选择一个序号： 2
+小数位数（0–15）： 1
+是否包含 LaTeX 百分号？
+  1. 是
+  2. 否
+请选择一个序号： 1
+请说明实验身份以及这些位置为何使用该指标： 模型001在种子1、2的平均准确率，十处为
+为同一实验结果的重复引用。
+继续构建还是复核提案？
+  1. 复核提案
+  2. 添加另一组位置
+请选择一个序号： 1
+请复核映射提案。数值相同不能证明实验身份一致。
+请先选择映射，再在最后保存。确认绑定不会修改论文，也不表示已完成作者复核。      
+
+[1/10]
+  绑定: "occurrences:result_1"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": ": ", "suffix": ".\r\nLocation B 
+ sc" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "f
+file": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: "Location A score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocat
+tion C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消]
+是
+
+[2/10]
+  绑定: "occurrences:result_2"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation B score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: "Location A score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocat
+tion C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%
+%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[3/10]
+  绑定: "occurrences:result_3"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation C score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: "Location A score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocat
+tion C score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%
+%.\r\nLocation F score: 84.1\\%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[4/10]
+  绑定: "occurrences:result_4"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation D score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation B score: 84.1\\%.\r\nLocation C scor
+re: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocat
+tion F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[5/10]
+  绑定: "occurrences:result_5"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation E score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation C score: 84.1\\%.\r\nLocation D scor
+re: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocat
+tion G score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[6/10]
+  绑定: "occurrences:result_6"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation F score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation D score: 84.1\\%.\r\nLocation E scor
+re: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocat
+tion H score: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nLocatio"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[7/10]
+  绑定: "occurrences:result_7"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation G score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation E score: 84.1\\%.\r\nLocation F scor
+re: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocat
+tion I score: 84.1\\%.\r\nLocation J score: 84.1\\%.\r\n"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[8/10]
+  绑定: "occurrences:result_8"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation H score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation F score: 84.1\\%.\r\nLocation G scor
+re: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nLocat
+tion J score: 84.1\\%.\r\n"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[9/10]
+  绑定: "occurrences:result_9"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation I score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation G score: 84.1\\%.\r\nLocation H scor
+re: 84.1\\%.\r\nLocation I score: 84.1\\%.\r\nLocation J score: 84.1\\%.\r\n"    
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消] 是
+
+[10/10]
+  绑定: "occurrences:result_10"
+  理由: "模型001在种子1、2的平均准确率，十处为同一实验结果的重复引用。"
+  映射: { "anchor": { "exact": null, "prefix": "cation J score: ", "suffix": ".\
+\r" }, "display": { "kind": "percent", "percent_symbol": true, "places": 1 }, "fi
+ile": "paper.tex", "metric": "score" }
+  当前一致性: "通过"
+  论文上下文: " score: 84.1\\%.\r\nLocation H score: 84.1\\%.\r\nLocation I scor
+re: 84.1\\%.\r\nLocation J score: 84.1\\%.\r\n"
+  论文中的数值: "84.1\\%"
+  预期显示值: "84.1\\%"
+  指标 score: { "unit": "fraction", "value": "0.841" }
+  计算: { "expected_count": 2, "expected_seeds": [ 1, 2 ], "field": "score", "re
+educe": "mean", "seed_column": "seed", "source": "experiment", "unit": "fraction"
+", "where": { "model": "001" } }
+  来源: { "columns": { "model": "string", "score": "decimal", "seed": "integer" 
+ }, "format": "csv", "path": "results.csv", "primary_key": [ "model", "seed" ] } 
+  筛选: { "count": 2, "field": "score", "path": "results.csv", "reduce": "mean",
+, "source": "experiment", "where": { "model": "001" } }
+  已选记录：
+  记录: { "key": { "model": "001", "seed": 1 }, "value": 0.840 }
+  记录: { "key": { "model": "001", "seed": 2 }, "value": 0.842 }
+  来源位置: [ { "key": { "model": "001", "seed": 1 }, "line": 2 }, { "key": { "m
+model": "001", "seed": 2 }, "line": 3 } ]
+选择此映射？[y/是，N/否，e/证据，q/取消]
+是
+
+已选映射：
+  occurrences:result_1
+  occurrences:result_2
+  occurrences:result_3
+  occurrences:result_4
+  occurrences:result_5
+  occurrences:result_6
+  occurrences:result_7
+  occurrences:result_8
+  occurrences:result_9
+  occurrences:result_10
+配置：paperdelta.yaml
+输入“确认”或 accept 保存这些映射；直接回车取消：
+确认
+正在重新检查输入并保存所选映射。
+绑定状态：已确认；所选绑定数：10
+

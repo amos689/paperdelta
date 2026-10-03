@@ -1,5 +1,7 @@
 # Figure provenance fixture
 
+[简体中文](README.zh-CN.md)
+
 The original synthetic chart uses `research-paper/results/metrics.csv`. Its PDF,
 PNG preview and sidecar were produced by `plot_accuracy.py` with Matplotlib.
 The full comparison-reversal demo copies these artifacts into its project.

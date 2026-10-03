@@ -1,16 +1,21 @@
-# 中文路径与显式宏参数
+# Chinese paths and explicit macro arguments
 
-这个原创小例子使用中文文件名、中文上下文、JSON Pointer 和一个已声明的字面量宏参数。
-从仓库根目录执行：
+[简体中文](README.zh-CN.md)
+
+This original example uses Chinese filenames and text, JSON Pointer and an
+explicitly declared literal macro argument. From the repository root:
 
 ```sh
 paperdelta -C examples/unicode-macro check --report build/review
 ```
 
-预期退出码为 **0**，一个绑定通过。`/test/accuracy` 指向测试结果；训练结果 0.990
-不参与检查，注释里的 99.0 也不是候选。宏 `score` 的一个参数被显式声明为可检查文本，
-不意味着支持任意宏展开。
+Expected exit **0**, with one passing binding. `/test/accuracy` selects the test
+result; the training value 0.990 is excluded, and the commented 99.0 is not a
+candidate. One `score` argument is declared checkable literal text. This does not
+enable arbitrary macro expansion.
 
-在副本中将测试结果改为 0.845，会报告 84.1 应改为 84.5，并能产生局部补丁。
-`tools/validate_examples.py` 会在副本中加入 UTF-8 BOM 和 CRLF，再实际应用和恢复，
-核对范围外字节保持一致。此例验证源文件检查，不声称已配置中文 PDF 字体或排版。
+Changing the test result to 0.845 in a copy reports that 84.1 should become 84.5
+and produces a local patch. `tools/validate_examples.py` adds UTF-8 BOM and CRLF
+in a copy, applies and recovers the patch, and verifies unchanged bytes outside
+its range. This checks source files; it does not configure Chinese PDF fonts or
+typesetting.

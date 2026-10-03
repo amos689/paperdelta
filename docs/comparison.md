@@ -1,5 +1,7 @@
 # Local workflow comparison
 
+[简体中文](zh-CN/comparison.md)
+
 This is a developer-prepared command-line comparison, run on Windows with
 Python 3.12.14, Calkit 0.47.12, scitexlintr 0.2.1 and PaperDelta 0.1.0a1.
 [Recorded commands and outputs](evidence/reference-workflows.json) include

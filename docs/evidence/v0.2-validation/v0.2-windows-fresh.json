@@ -1,0 +1,74 @@
+{
+  "started_at": "2026-10-03T06:43:05.433407+00:00",
+  "host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "wheel": {
+    "name": "paperdelta-0.2.0a1-py3-none-any.whl",
+    "sha256": "70aaa083bda646bf09ad4b7036d643570594924cd5ae5e4c237f445e5edc0853"
+  },
+  "commands": [
+    {
+      "step": "install-core",
+      "args": [
+        "<checkout>\\build\\v0.2-windows-fresh\\venv-core\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\v0.2-validation-candidate\\paperdelta-0.2.0a1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 2.36
+    },
+    {
+      "step": "core-smoke",
+      "args": [
+        "<checkout>\\build\\v0.2-windows-fresh\\venv-core\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build\\v0.2-windows-fresh\\core-smoke.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.484
+    },
+    {
+      "step": "install-full",
+      "args": [
+        "<checkout>\\build\\v0.2-windows-fresh\\venv-full\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\v0.2-validation-candidate\\paperdelta-0.2.0a1-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 6.172
+    },
+    {
+      "step": "lint",
+      "args": [
+        "<checkout>\\build\\v0.2-windows-fresh\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 1,
+      "seconds": 0.625
+    }
+  ],
+  "status": "failed",
+  "scope": "Actual installed-wheel execution on the recorded host, not independent users.",
+  "error": "RuntimeError: lint failed with exit 1; see lint.log",
+  "finished_at": "2026-10-03T06:43:19.495808+00:00"
+}

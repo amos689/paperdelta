@@ -1,0 +1,143 @@
+{
+  "recorded_at": "2026-10-03T06:22:25.361731+00:00",
+  "scope": "Actual v0.2 synthetic-report recordings with captions; no user or accuracy measurements.",
+  "videos": {
+    "en": {
+      "path": "docs/assets/v0.2/demo.en.webm",
+      "bytes": 3619919,
+      "sha256": "b9e3850a8b0616155b3ea7dd28d9a156fc2c12f7e5b6b322c8fc28eaa4994dfd",
+      "duration_seconds": 51.96,
+      "visually_reviewed_frame_seconds": 38,
+      "recording": {
+        "recorded_at": "2026-10-03T06:13:05.522Z",
+        "browser": "154.0.8037.93",
+        "source": "build/v0.2-demo-final",
+        "language": "en",
+        "captions": [
+          {
+            "title": "1. A paper before the experiment update",
+            "explanation": "Seven declared checks agree with the supplied evidence. Ours: 84.1%; baseline: 81.0%.",
+            "seconds": 6
+          },
+          {
+            "title": "2. Change the CSV; leave every LaTeX file untouched",
+            "explanation": "Ours falls to 80.9%. Four numeric references, one comparison and a recorded figure need attention.",
+            "seconds": 7
+          },
+          {
+            "title": "3. Inspect the original source rows",
+            "explanation": "The abstract still says 84.1%. The report shows the selected test records and their mean.",
+            "seconds": 8
+          },
+          {
+            "title": "4. The comparison also changed",
+            "explanation": "80.9% no longer beats 81.0%. Related numeric patches wait for the author to review the claim.",
+            "seconds": 8
+          },
+          {
+            "title": "5. The figure has changed inputs",
+            "explanation": "Its recorded CSV identity differs. Re-run the plot explicitly; hashes do not prove visual correctness.",
+            "seconds": 8
+          },
+          {
+            "title": "6. A separate numeric-only update: 84.1% to 84.5%",
+            "explanation": "Four guarded replacements across three files recheck successfully. The demo then restores the original bytes.",
+            "seconds": 7
+          }
+        ],
+        "planned_caption_seconds": 44,
+        "scope": "Actual local HTML reports; captions are presentation annotations. Synthetic demonstration, not a user trial."
+      }
+    },
+    "zh-CN": {
+      "path": "docs/assets/v0.2/demo.zh-CN.webm",
+      "bytes": 3419574,
+      "sha256": "0e82442bacf09fc9b4e9e986e2a643c7cee4653ca3501de0a14b415a5ac252fa",
+      "duration_seconds": 51.12,
+      "visually_reviewed_frame_seconds": 17,
+      "recording": {
+        "recorded_at": "2026-10-03T06:13:04.616Z",
+        "browser": "154.0.8037.93",
+        "source": "build/v0.2-demo-final",
+        "language": "zh-CN",
+        "captions": [
+          {
+            "title": "1. 实验更新前的论文",
+            "explanation": "七项已声明检查与给定证据一致。Ours：84.1%；基线：81.0%。",
+            "seconds": 6
+          },
+          {
+            "title": "2. 只改 CSV，所有 LaTeX 文件保持不变",
+            "explanation": "Ours 降到 80.9%。四处数字、一项比较及已记录来源的图表需要复核。",
+            "seconds": 7
+          },
+          {
+            "title": "3. 查看原始证据行",
+            "explanation": "摘要仍写着 84.1%。报告展示选中的测试记录及其均值。",
+            "seconds": 8
+          },
+          {
+            "title": "4. 比较结论也发生变化",
+            "explanation": "80.9% 已不再优于 81.0%。关联数值补丁等待作者处理比较结论。",
+            "seconds": 8
+          },
+          {
+            "title": "5. 图表的输入已经变化",
+            "explanation": "记录的 CSV 身份已不同。请明确重新绘图；哈希不能证明视觉内容正确。",
+            "seconds": 8
+          },
+          {
+            "title": "6. 独立的数值更新：84.1% → 84.5%",
+            "explanation": "三个文件的四处受保护替换通过重查，演示随后恢复原始字节。",
+            "seconds": 7
+          }
+        ],
+        "planned_caption_seconds": 44,
+        "scope": "Actual local HTML reports; captions are presentation annotations. Synthetic demonstration, not a user trial."
+      }
+    }
+  },
+  "preparation": "Initial recorder invocation lacked PLAYWRIGHT_BROWSERS_PATH; retried using the existing project-local FFmpeg helper without installation.",
+  "browser_check": {
+    "checked_at": "2026-10-03T06:20:01.942Z",
+    "browser": "154.0.8037.93",
+    "viewport_desktop": [
+      1365,
+      1000
+    ],
+    "viewport_mobile": [
+      375,
+      812
+    ],
+    "findings": 6,
+    "figure_included": true,
+    "filters": [
+      "file",
+      "rule",
+      "source",
+      "result-dependencies",
+      "text"
+    ],
+    "source_details_expansion": true,
+    "languages": [
+      "en",
+      "zh-CN"
+    ],
+    "language_switch_preserves_state": true,
+    "bilingual_search": true,
+    "evidence_navigation": true,
+    "no_javascript_readable": true,
+    "external_requests": [],
+    "mobile_horizontal_overflow": false,
+    "javascript_errors": [],
+    "scope": "Headless Chrome on this Windows host; not a multi-platform CI run."
+  },
+  "report_sha256": {
+    "build/v0.2-demo-final/comparison-reversed/before/report.html": "b4d7a0139c7dc758c7e406bbddf5b6aeabaccca72af2dc6c2f76dd3d89183975",
+    "build/v0.2-demo-final/comparison-reversed/review/report.html": "9236c72322ac19308c6534a7da1000736054eff71677e922138ed7d6b48acf57",
+    "build/v0.2-demo-final/numeric-update/after/report.html": "b7b9f5ed7641ca2bebe344dd86c73db1465af9720f8eb0380631d8d3cb68d7ed",
+    "build/v0.2-demo-final/numeric-update/before/report.html": "a6d2b19b3e55019c943a2934d710427554ef5f4338f785fce9a7f35007ae779a",
+    "build/v0.2-demo-final/numeric-update/review/report.html": "d956040a42e6178e3e86b96e1b907bef1d3a0aa8432fab4b1e29e4bb8469ee68"
+  },
+  "recorder_sha256": "b79874fac4b73f0c23d81e36932faf67ce41bfc503ed9dad3ba556c049bf2910"
+}

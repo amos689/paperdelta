@@ -60,10 +60,14 @@ def main():
         assert environment.is_relative_to(ROOT), "Expected a project-local virtual environment"
         package = Path(record.pop("package_path"))
         sources = {}
-        for original in sorted((ROOT / "src/paperdelta").glob("*.py")):
+        source_root = ROOT / "src/paperdelta"
+        for original in sorted(source_root.rglob("*")):
+            if not original.is_file() or original.suffix not in {".py", ".json", ".css", ".js"}:
+                continue
             raw = original.read_bytes()
-            assert (package / original.name).read_bytes() == raw
-            sources[original.name] = sha256(raw).hexdigest()
+            relative = original.relative_to(source_root)
+            assert (package / relative).read_bytes() == raw
+            sources[relative.as_posix()] = sha256(raw).hexdigest()
         record["installed_sources_sha256"] = sources
         case = out / record["python"]
         case.mkdir()

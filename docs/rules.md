@@ -1,7 +1,9 @@
 # Rules, file contracts and limitations
 
+[简体中文](zh-CN/rules.md)
+
 Use `paperdelta schema KIND` for configuration, proposal-input, proposal, patch,
-figure-record, review-record, snapshot and stored-report JSON schemas. Unknown
+binding-draft, repair-proposal, figure-record, review-record, snapshot and stored-report JSON schemas. Unknown
 fields and unsupported versions are rejected. JSON/YAML duplicate keys and
 executable YAML tags are rejected. Nested evidence, diagnostics, positions and
 coverage now use the strict [version-1 report contract](report-format.md).
@@ -20,6 +22,8 @@ that structure automatically.
 `unique` requires one result. `mean`, `sum` and `count` require explicit selection;
 `expected_count` and `expected_seeds` can make missing or duplicate runs unknown.
 A mean over available runs is not a substitute for an expected seed-set contract.
+The guided/staged builder requires an explicit `expected_count` for aggregations;
+older hand-written configurations retain the version-1 optional-count contract.
 Nonfinite numbers, unsupported magnitudes and division by zero are errors.
 
 Metrics use Decimal arithmetic. Fraction, percent, percentage point, scalar, count
@@ -41,6 +45,8 @@ numeric token and a supported numeric display. Exact anchors need rebinding when
 their text changes; surrounding prefix/suffix anchors usually survive a numeric
 update. UTF-8 byte spans preserve BOM, Chinese characters and original line endings.
 Paths must resolve inside the chosen root, including symlink targets.
+Location repair proposals require an explicit target and fresh input hashes.
+They preserve metric definitions, units, sources, predicates and comparison scope.
 
 Current limits include 200 included files, 40 levels of inclusion, 4 MiB per LaTeX
 file, 1 MiB configuration, 32 MiB ordinary inputs, 10,000 selected records per

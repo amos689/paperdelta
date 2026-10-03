@@ -38,6 +38,11 @@ def test_cli_help_and_argument_failures_are_chinese(project, arguments, expected
     result = cli(project, "zh-CN", *arguments)
     assert result.returncode == (0 if "--help" in arguments else 2)
     assert expected in result.stdout + result.stderr
+    assert "用法：用法：" not in result.stdout + result.stderr
+    assert not any(
+        line.startswith("用法：paperdelta") and "错误：" in line
+        for line in result.stderr.splitlines()
+    )
     assert "invalid choice:" not in result.stderr
     assert "arguments are required:" not in result.stderr
 

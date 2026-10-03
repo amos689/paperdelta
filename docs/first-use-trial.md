@@ -1,41 +1,52 @@
-# 上线后首次使用反馈方案
+# Post-launch first-use feedback
 
-根据项目方 2026-10-03 的安排，上线前采用机器本地测试及 Codex 开发者审查验收，
-当前不安排真人试用。这份方案保留用于上线后收集首次使用反馈，不是当前发布门槛。
-**目前没有已完成的独立参与者数据**。
-开发者自己的操作、自动化脚本、测试通过和 AI 模拟操作都不能计为独立试用。
+[简体中文](zh-CN/first-use-trial.md)
 
-试用者应会使用 Python、Git 和 LaTeX，但此前未使用 PaperDelta。每人独立使用一份
-新目录，不共享前一位的映射。允许使用其平时的 agent，但记录宿主和模型；不把它
-生成的提案默认当作正确答案。使用公开或自有样例即可，无需提供未发表论文。
+Under the owner's 2026-10-03 instruction, pre-launch acceptance uses local machine
+tests and Codex developer assessment. No human trial is currently scheduled. This
+protocol is retained for feedback after launch, not as a current release gate.
+**There are no completed independent-participant observations.** Developer operation,
+automated tests and AI-simulated use do not count as independent trials.
 
-## 任务和计时
+Participants should know Python, Git and LaTeX but have never used PaperDelta.
+Give each a fresh directory without earlier participants' mappings. Their usual
+agent is allowed; record its host/model and do not assume its proposals are correct.
+Use public or owned examples; unpublished manuscripts are unnecessary.
 
-1. 从本地候选源码包开始，按 README 安装；单独记录安装耗时和失败。
-2. 用自己的小论文，或由维护者准备且未附答案的样例，接入 10 个数值位置。
-   应包含摘要、主表和重复引用；声明数据集、split、种子、单位和聚合。
-3. 从首次打开输入文件起计时，到 10 个绑定得到试用者确认且检查完成为止。
-   记录是否在 10 分钟内完成、接受/纠正的提案数量，以及中途求助。
-   可以使用 `bind --interactive` 或显式 `--accept`，记录实际使用的入口和版本。
-4. 只修改结果数据，保持 TeX 不动，重新检查。让试用者说明哪些位置受影响、
-   哪些结论需要人审查、哪些内容尚未检查。
-5. 预览一项可独立修改的数字补丁，应用、重新检查并恢复；记录卡点。
+## Tasks and timing
 
-不要提前演示同一份输入的正确映射。提供的帮助及花费时间必须记录。若停止或失败，
-保留结果，不用第四个人的成功替代前三个人中的失败。三人只是早期可用性诊断，
-不能据此推断大群体采用率。
+1. Install from the candidate source archive following README. Record installation
+   duration and failures separately.
+2. Connect ten numeric locations in a small personal paper or an answer-free example.
+   Include the abstract, main table and repeated references; declare dataset,
+   split, seeds, unit and aggregation.
+3. Time from first opening the inputs until ten bindings are confirmed and checked.
+   Record the ten-minute outcome, accepted/corrected suggestions and assistance.
+   Record the actual entry point/version, such as `guide`, `bind --interactive`
+   or explicit `--accept`.
+4. Change only result data, leaving TeX unchanged. Ask the participant to explain
+   affected locations, claims needing review and unchecked content.
+5. Preview an independently eligible numeric patch, apply, recheck and recover;
+   record obstacles.
 
-## 记录表
+Do not demonstrate the correct mapping of these inputs beforehand. Record all
+assistance and time. Preserve failures and withdrawals instead of replacing a failed
+participant with a later success. Three participants are early usability diagnosis,
+not evidence for population adoption.
 
-每位试用者填写一份 [JSON 记录模板](first-use-result.template.json)。用 U01/U02/U03
-等代号，不需要姓名或联系方式。时间单位统一为秒；未测量用 null，不填 0。
-保留其确认后的配置、脱敏后的检查报告和问题列表。只有真实观察到的完成记录才
-写入 progress.md。
+## Recording
 
-初步目标是 3 人都能确认 10 个绑定并解释一次数据变更；10 分钟是原计划的接入
-目标，不是结果。终端逐项确认已加入，但没有证明它减少首次接入时间。
-如果失败集中在配置书写，先改进提案生成和证据展示；如果失败
-集中在解析覆盖，先缩窄模板支持。不得以放宽身份检查或自动接受提案换取耗时达标。
+Use the [JSON template](first-use-result.template.json) per participant. Codes such
+as U01/U02/U03 suffice; names/contact details are unnecessary. Use seconds, and null
+for unmeasured values rather than zero. Retain accepted configurations, redacted
+reports and issues. Only actual observations enter the evidence ledger.
 
-竞品比较须另行安排独立输入、适合各工具的配置，并平衡使用顺序。此轮试用不能
-单独证明 PaperDelta 比 Calkit/scitexlintr 更容易接入。
+The initial target is three participants confirming ten bindings and explaining
+one data change. Ten minutes is a target, not an observed result. Terminal guidance
+exists but has not demonstrated reduced onboarding time. If configuration dominates
+failures, improve proposals/evidence presentation; if parsing dominates, narrow the
+supported template scope. Do not relax identity checks or auto-accept proposals to
+meet a time target.
+
+Competitor comparisons need separate inputs, suitable configurations and balanced
+tool order. This trial alone cannot establish easier adoption than Calkit/scitexlintr.

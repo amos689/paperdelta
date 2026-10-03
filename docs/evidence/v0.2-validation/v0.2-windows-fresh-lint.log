@@ -1,0 +1,23 @@
+E501 Line too long (103 > 100)
+   --> tools\audit_release.py:208:101
+    |
+206 |         for name, identity in protocol["initial_prompt_sha256"].items():
+207 |             assert (
+208 |                 "sha256:" + sha256(sdist[f"{study_directory}/initial-prompts/{name}.json"]).hexdigest()
+    |                                                                                                     ^^^
+209 |                 == identity
+210 |             )
+    |
+
+E501 Line too long (105 > 100)
+   --> tools\audit_release.py:216:101
+    |
+214 |             ("execution_sha256", "execution.json"),
+215 |         ):
+216 |             assert score[field] == "sha256:" + sha256(sdist[f"{study_directory}/{filename}"]).hexdigest()
+    |                                                                                                     ^^^^^
+217 |     original_model = json.loads(sdist["docs/evidence/local-model-v1/protocol.json"])
+218 |     for name, identity in original_model["guide_hashes"].items():
+    |
+
+Found 2 errors.

@@ -43,7 +43,15 @@ def main():
     files.update(
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/evidence").glob("corpus*.json")
     )
-    files.update({"LICENSE", "THIRD_PARTY_NOTICES.md", "docs/evaluation.md"})
+    files.update(
+        {
+            "LICENSE",
+            "THIRD_PARTY_NOTICES.md",
+            "THIRD_PARTY_NOTICES.zh-CN.md",
+            "docs/evaluation.md",
+            "docs/zh-CN/evaluation.md",
+        }
+    )
     manifest = {
         "bundle_schema_version": 1,
         "paperdelta_version": project["version"],
@@ -65,20 +73,32 @@ def main():
         bundle.writestr("evaluation-bundle.json", json.dumps(manifest, indent=2) + "\n")
         bundle.writestr(
             "EVALUATION_README.md",
-            "# PaperDelta evaluation materials\n\n"
+            "# PaperDelta evaluation materials\n\n[简体中文](EVALUATION_README.zh-CN.md)\n\n"
             "Read THIRD_PARTY_NOTICES.md before reusing paper sources. Each work retains "
             "its license and author notices; PaperDelta's MIT license covers its original code.\n\n"
             "The Python wheel and source distribution exclude this corpus. To reproduce "
             "the evaluation, unpack this bundle at the root of the matching PaperDelta "
             f"{project['version']} source checkout, preserving the directories. "
-            "Run `python tools/evaluate_corpus.py --split all --out build/corpus-replay`. "
+            "Run `python tools/replay_study.py corpus-a2 --out build/corpus-replay`. "
             "Use a fresh output directory. Do not replace the recorded first held-out results.\n\n"
-            "The current run is a regression on already observed papers. "
+            "The preserved a2 run is a regression on already observed papers. "
             "tests/corpus/active-study.json identifies its lock and the preserved "
             "original implementation; see tests/corpus/README.md for historical replay.\n\n"
             "The protocol lock checks the exact core, evaluator and input identities. "
             "The papers are paired with controlled synthetic evidence, not reproduced "
             "original experiments. See docs/evaluation.md for failures and limits.\n",
+        )
+        bundle.writestr(
+            "EVALUATION_README.zh-CN.md",
+            "# PaperDelta 评测材料\n\n[English](EVALUATION_README.md)\n\n"
+            "复用论文前阅读 THIRD_PARTY_NOTICES.zh-CN.md。每篇保留原许可和作者声明，"
+            "PaperDelta 的 MIT 许可只覆盖原创代码。Python wheel/源码包排除此论文语料。\n\n"
+            f"将本包按原路径解压到匹配的 PaperDelta {project['version']} 源码根目录。运行 "
+            "`python tools/replay_study.py corpus-a2 --out build/corpus-replay`，使用新输出目录。"
+            "重放通过归档实现验证原协议，保留首次留出失败，不把已见论文称作新留出样本。\n\n"
+            "tests/corpus/active-study.json 标识保存的 a2 协议及更早原实现。锁核验源码、"
+            "评测器和输入身份。论文配的是合成证据，不是复现原实验。"
+            "失败及限制见 docs/zh-CN/evaluation.md；当前 v0.2 验收另行记录。\n",
         )
     print(
         json.dumps(

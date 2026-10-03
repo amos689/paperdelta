@@ -185,7 +185,8 @@ def main():
         },
         "implementation": {
             p.relative_to(ROOT).as_posix(): sha256(p.read_bytes())
-            for p in (ROOT / "src/paperdelta").glob("*.py")
+            for p in (ROOT / "src/paperdelta").rglob("*")
+            if p.is_file() and p.suffix in {".py", ".json", ".css", ".js"}
         },
     }
     (output / "evidence.json").write_text(json_text(evidence), encoding="utf-8")

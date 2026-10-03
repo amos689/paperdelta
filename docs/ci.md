@@ -1,5 +1,10 @@
 # CI and data-only changes
 
+[简体中文](zh-CN/ci.md)
+
+The execution counts below are historical a2 evidence. Current v0.2 acceptance is
+tracked separately in the [delivery ledger](v0.2-plan.md).
+
 The checked-in `.github/workflows/ci.yml` is the **tool development** matrix:
 Windows, Linux and macOS, Python 3.11–3.14, read-only repository permissions,
 tests, lint, owned-example validation, separate code/evaluation package builds,
@@ -71,6 +76,11 @@ PR comments and remote writes are outside the current adapter; downloadable
 reports do not need such permissions.
 
 ## Target-commit snapshot wrapper
+
+Use `--lang en` or `--lang zh-CN` for the wrapper's help, diagnostics, report and job
+summary. It shares the CLI's flag/environment/project-preference/system precedence.
+The stored report and `ci-context.json` retain canonical machine fields and identities.
+Raw Git or other third-party error details are preserved in their original language.
 
 `tools/ci_check.py` is an adapter to run from a **trusted PaperDelta copy**,
 using an environment with the matching package installed:

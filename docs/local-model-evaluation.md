@@ -1,5 +1,10 @@
 # Local model proposal experiment
 
+[简体中文](zh-CN/local-model-evaluation.md)
+
+This is the preserved one-request a2-era baseline. The v0.2
+[staged experiments](staged-model-evaluation.md) have separate protocols and results.
+
 On 2026-10-03, one local **Qwen3-8B Q4_K_M** run produced twelve JSON answers.
 All twelve proposals were invalid; none were accepted. This configuration is
 **not recommended for unattended mapping**. Its three required abstentions were
@@ -86,7 +91,7 @@ developer; it is neither a replacement model score nor an independent user trial
 
 ## Reproduce the run structure
 
-Use the matching source distribution and a separately installed loopback model
+Use the matching historical a2 source distribution and a separately installed loopback model
 server. Record the actual model/runtime provenance as JSON, then:
 
 ```sh

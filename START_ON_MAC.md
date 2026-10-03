@@ -1,13 +1,17 @@
 # 在 Mac 上开始使用 PaperDelta
 
-这是从 Windows 项目整理的便携源码包，版本 0.1.0a2。包含源码、文档、测试、
+[English](START_ON_MAC.en.md)
+
+Mac 实机验证安排在 v0.2 产品收敛之后。现有 0.1.0a2 迁移包属于历史版本，不能
+用于验证新的 v0.2 实现；需要先重新构建候选包。以下步骤适用于匹配源码和 wheel
+的便携包，具体版本见包内 `TRANSFER.json`。包包含源码、文档、测试、
 原创示例和 Python wheel；不含 Windows 虚拟环境、临时结果或本地模型权重。
 尚未取得真实 Mac 的运行结果，下面的命令用于开始使用及补充验证。
 
 ## 1. 拷贝和解压
 
-将 `paperdelta-0.1.0a2-mac-transfer.zip` 通过 U 盘、移动硬盘或网盘复制到 Mac，
-双击解压。把解压后的 `paperdelta-0.1.0a2` 文件夹放到你希望保存项目的位置。
+将新构建的 `paperdelta-VERSION-mac-transfer.zip` 通过 U 盘、移动硬盘或网盘复制到
+Mac，双击解压，把解压后的 `paperdelta-VERSION` 文件夹放到希望保存的位置。
 不要从 Windows 复制 `.venv`：Python 环境要在 Mac 上重新建立。
 
 打开 Mac 的“终端”，输入 `cd `（末尾有一个空格），把解压后的项目文件夹拖进
@@ -32,8 +36,9 @@ python3 --version
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install ./install/paperdelta-0.1.0a2-py3-none-any.whl
-.venv/bin/python -m paperdelta -C examples/research-paper check --report build/review
+.venv/bin/python -m pip install ./install/paperdelta-*-py3-none-any.whl
+.venv/bin/python -m paperdelta --lang zh-CN -C examples/research-paper doctor
+.venv/bin/python -m paperdelta --lang zh-CN -C examples/research-paper check --report build/review
 open examples/research-paper/build/review/report.html
 ```
 
@@ -74,6 +79,6 @@ Apple Silicon 请使用原生 arm64 Python；脚本发现 Rosetta 转译时会�
 `build/mac-validation/evidence.json` 及对应的 `.log`；这些记录能定位实际兼容问题。
 无需上传整个虚拟环境。
 
-详细的架构与验证范围见 [macOS 适配说明](docs/macos.md)。
-`install/paperdelta-evaluation-0.1.0a2.zip` 是可选的真实论文评测材料，
+详细的架构与验证范围见 [macOS 适配说明](docs/zh-CN/macos.md)。
+`install/paperdelta-evaluation-VERSION.zip` 是可选的真实论文评测材料，
 有单独的许可说明；上述使用和测试步骤不要求解压它。

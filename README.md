@@ -1,5 +1,7 @@
 # PaperDelta
 
+[简体中文](README.zh-CN.md)
+
 **Review how experiment changes affect an existing research paper.**
 
 An accuracy value changes from **84.1% to 80.9%**. The paper still repeats the old
@@ -12,20 +14,25 @@ review—even when no LaTeX file changed.
 Local Python CLI · existing LaTeX · exact decimal arithmetic · offline HTML ·
 optional MCP · no model key, GPU or TeX installation required for checking.
 
-![Data-only review of numbers, a false comparison and changed figure inputs](docs/assets/report-preview.png)
+![English review of numbers, a false comparison and changed figure inputs](docs/assets/v0.2/report.en.png)
 
-**Locally accepted alpha (0.1.0a2).** The local workflow is implemented. A small
+**v0.2 development alpha (0.2.0a1).** The earlier 0.1.0a2 has a recorded local
+acceptance decision; the v0.2 release is still being validated. New features include
+English/Chinese interfaces, an offline report language switch, environment diagnosis,
+guided mapping, explicit location repair and staged agent tools. Follow the
+[v0.2 delivery ledger](docs/v0.2-plan.md). A small
 [real-text evaluation](docs/evaluation.md) records both supported and unknown
 cases. A [local CLI comparison](docs/comparison.md) exercises Calkit and
 scitexlintr as well. Pre-release acceptance uses local machine tests and developer
-review; see the [acceptance decision](docs/release-acceptance.md). Windows and Linux
-have local evidence; macOS and remote CI are unverified.
+review; see the [historical acceptance decision](docs/release-acceptance.md). Windows
+and Linux have a2 evidence; current v0.2 checks are being recorded separately.
+macOS and remote CI remain unverified.
 Independent first-use feedback is planned after launch. No package-index publication yet.
 See the [evidence ledger](docs/progress.md) for measured results and follow-up work.
 
-**Moving this project to a Mac?** Use the [Mac quick start](START_ON_MAC.md).
-The transfer package includes a wheel and native validation script, with separate
-Apple Silicon and Intel CI jobs. Native macOS results are still pending.
+**Mac validation is deferred until product convergence.** The existing transfer
+package is an a2 artifact. The [Mac quick start](START_ON_MAC.en.md) will be used
+with a rebuilt candidate; native results are still pending.
 
 ## Try it from this checkout
 
@@ -33,6 +40,7 @@ Use Python 3.11+ in a virtual environment, then run from the repository root:
 
 ```sh
 python -m pip install -e .
+paperdelta --lang en -C examples/research-paper doctor
 paperdelta -C examples/research-paper check --report build/review
 python tools/demo.py --out build/demo
 ```
@@ -47,7 +55,7 @@ of the supplied original fixture, changes only their data, and produces two case
 
 The demo preserves existing output; choose a different `--out` when repeating it.
 It is a synthetic regression example, not an accuracy benchmark on real papers.
-Watch the [52-second recording](docs/assets/paperdelta-demo.webm).
+The [bilingual v0.2 recordings](docs/demo.md) show the current report and review workflow.
 The first case includes an actually generated PDF and an imported source record;
 the second isolates the numeric patch workflow. Checking never executes the plot
 script. To explicitly regenerate the first case's figure, install `.[demo]` and
@@ -62,22 +70,23 @@ support a verified BOM/CRLF patch-and-recovery check.
 
 ```sh
 paperdelta init --paper paper/main.tex --data results/metrics.csv
-paperdelta scan --format json
-paperdelta schema proposal-input
-paperdelta propose --input mapping-input.json --out proposed-mapping.json
-paperdelta bind --proposal proposed-mapping.json
-paperdelta bind --proposal proposed-mapping.json --interactive
+paperdelta --lang en guide
 paperdelta check --report build/paperdelta
 ```
 
 `init` records discovery hints and creates an empty mapping configuration. CSV
 column types, record keys, experiment scope, units and mappings need explicit
 declarations. `scan` shows candidates; equal numbers do not establish a match.
-`bind` previews evidence. In a terminal, `--interactive` shows each mapping's
-paper context and selected data; choose `y` or `n` and type `accept` at the end
-to save the selection. Scripted workflows can instead use repeated
-`--accept occurrences:ID` options.
-See the [quick start](docs/quickstart.md) for a complete mapping input.
+`guide` selects these declarations step by step, supports multiple locations and
+shows the resulting evidence. Choose each binding and type `accept` at the final
+prompt to save it. For moved files or rewritten sentences, use `repair guide`.
+The [guided workflow](docs/guided-bindings.md) explains both. Existing JSON proposals
+and explicit `bind --accept occurrences:ID` remain supported; the
+[quick start](docs/quickstart.md) includes a complete programmatic example.
+
+Use `--lang zh-CN` for Chinese, or save `settings --language zh-CN` independently
+of the evidence configuration. The offline report switches languages in the same
+file while preserving filters and expanded evidence. See [language behavior](docs/languages.md).
 
 ## Review the next experiment update
 
@@ -114,14 +123,17 @@ python -m pip install -e '.[mcp]'
 paperdelta -C /path/to/paper-project mcp
 ```
 
-Its five tools scan, propose bindings, check, explain findings and propose patches.
+Its thirteen read-only tools include the original five operations, six staged
+construction steps and two repair operations.
 They do not write files, accept mappings or record author review. See the
 [agent guide](docs/agent-guide.md).
 
 For saved-proposal evaluation, a [12-case mapping suite](evaluations/mapping-v1/README.md)
 separates numeric consistency from experiment identity. A
 [local Qwen3-8B experiment](docs/local-model-evaluation.md) produced twelve invalid
-proposals, all rejected; this model setup is not an automatic mapping solution.
+proposals in the original one-request setup, all rejected. That failure record remains
+available. The separate [staged evaluations](docs/staged-model-evaluation.md) also
+produced no complete valid mappings; the model is not an accepted automatic mapper.
 The documented explicit workflow passed a ten-binding developer walkthrough.
 Independent model accuracy and user confirmation times remain unmeasured.
 
@@ -167,6 +179,6 @@ python -m build
 For separate code/evaluation artifacts and content verification, follow
 [local validation and candidate builds](docs/local-validation.md).
 
-[中文指南](docs/zh-CN.md) · [Development plan](docs/development-plan.md) ·
+[中文指南](README.zh-CN.md) · [Development plan](docs/v0.2-plan.md) ·
 [Contributing](CONTRIBUTING.md) · [MIT license for original code](LICENSE) ·
 [Third-party fixture licenses](THIRD_PARTY_NOTICES.md)

@@ -1,5 +1,7 @@
 # Third-party research fixtures
 
+[简体中文说明](THIRD_PARTY_NOTICES.zh-CN.md)
+
 PaperDelta's original code is MIT-licensed. Paper sources under
 `tests/corpus/papers/` retain the licenses below; the project's MIT license does
 not relicense them. No author or upstream project endorses PaperDelta.

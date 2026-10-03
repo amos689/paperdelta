@@ -1,0 +1,333 @@
+{
+  "archived_at": "2026-10-03T06:59:10.120268+00:00",
+  "files": [
+    {
+      "source": "build/v0.2-corpus-final/evidence.json",
+      "published": "docs/evidence/corpus-bilingual-v3.json",
+      "original_sha256": "7c6bec13ac2a156cc4cc18ec5d1f520e2577e1b6a3bc13de21033bfec1962601",
+      "published_sha256": "7c6bec13ac2a156cc4cc18ec5d1f520e2577e1b6a3bc13de21033bfec1962601",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-corpus-final/protocol.json",
+      "published": "docs/evidence/corpus-bilingual-v3-protocol.json",
+      "original_sha256": "842a9a73bdff6daf84288365711e511a7414e03e1592dc8af57eaaed708f69e2",
+      "published_sha256": "842a9a73bdff6daf84288365711e511a7414e03e1592dc8af57eaaed708f69e2",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-performance-final/evidence.json",
+      "published": "docs/evidence/v0.2-performance.json",
+      "original_sha256": "cf03421c52a3351bfbe852ab0a26b904ca002184e128bfd9d528a891f8c9d030",
+      "published_sha256": "cf03421c52a3351bfbe852ab0a26b904ca002184e128bfd9d528a891f8c9d030",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-core-final.json",
+      "published": "docs/evidence/v0.2-validation/windows-core.json",
+      "original_sha256": "b1831ea6185c725b5848acb8cf8a9562ebb8f5c28df0d0167b69ec90d9b41c21",
+      "published_sha256": "b1831ea6185c725b5848acb8cf8a9562ebb8f5c28df0d0167b69ec90d9b41c21",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-replay-mapping-v1/replay.json",
+      "published": "docs/evidence/v0.2-validation/replay-mapping-v1.json",
+      "original_sha256": "89a5c96870fd538c6a3aa1561c3942e2cb7a84564f341b77c64c270ca520a05e",
+      "published_sha256": "89a5c96870fd538c6a3aa1561c3942e2cb7a84564f341b77c64c270ca520a05e",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-replay-staged-v2/replay.json",
+      "published": "docs/evidence/v0.2-validation/replay-staged-v2.json",
+      "original_sha256": "c09e2ba59dc5aca5b611c76f86cb7cee91b893f36e8c3a45e6c7beb4279250da",
+      "published_sha256": "c09e2ba59dc5aca5b611c76f86cb7cee91b893f36e8c3a45e6c7beb4279250da",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-replay-staged-v3/replay.json",
+      "published": "docs/evidence/v0.2-validation/replay-staged-v3.json",
+      "original_sha256": "522cea7a6093d5e762dd8542ed19204fa224057f77ed145cb71944f6d8bd27b9",
+      "published_sha256": "522cea7a6093d5e762dd8542ed19204fa224057f77ed145cb71944f6d8bd27b9",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-replay-corpus-a2/replay.json",
+      "published": "docs/evidence/v0.2-validation/replay-corpus-a2.json",
+      "original_sha256": "26c3ad53ea23cb1cd0405f6ca7e311df97d360d43a453e2da2825fa1c9b3a533",
+      "published_sha256": "26c3ad53ea23cb1cd0405f6ca7e311df97d360d43a453e2da2825fa1c9b3a533",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/apply.log",
+      "published": "docs/evidence/v0.2-validation/developer/apply.log",
+      "original_sha256": "f3dcf068a4f47c092612618d12a4720800479b0b24a47b290894ebeda118a632",
+      "published_sha256": "f3dcf068a4f47c092612618d12a4720800479b0b24a47b290894ebeda118a632",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/changed.log",
+      "published": "docs/evidence/v0.2-validation/developer/changed.log",
+      "original_sha256": "b45c7ac6baa82044a3483854cbf13a893fae0d1ac48257317193b89633c01f4d",
+      "published_sha256": "b45c7ac6baa82044a3483854cbf13a893fae0d1ac48257317193b89633c01f4d",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/doctor.log",
+      "published": "docs/evidence/v0.2-validation/developer/doctor.log",
+      "original_sha256": "4b8bcfcee93f2f9078b8ff67f8cb9c1fb00a6a523a679e23bc029dfd27e8f1f9",
+      "published_sha256": "4b8bcfcee93f2f9078b8ff67f8cb9c1fb00a6a523a679e23bc029dfd27e8f1f9",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/dry-run.log",
+      "published": "docs/evidence/v0.2-validation/developer/dry-run.log",
+      "original_sha256": "69501b891eee10f43444ceb2842d0ee4d7289a7c6185d809557579c676ed2406",
+      "published_sha256": "69501b891eee10f43444ceb2842d0ee4d7289a7c6185d809557579c676ed2406",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/evidence.json",
+      "published": "docs/evidence/v0.2-validation/developer/evidence.json",
+      "original_sha256": "a07d6485363159a0be6018ba008d33196938c6105ce7174252588bdc433fe18b",
+      "published_sha256": "a07d6485363159a0be6018ba008d33196938c6105ce7174252588bdc433fe18b",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/final.log",
+      "published": "docs/evidence/v0.2-validation/developer/final.log",
+      "original_sha256": "1ff1991e3e5f8571513a94c6798d1d1a10d5706244a4e433b73cd24a0cb30834",
+      "published_sha256": "1ff1991e3e5f8571513a94c6798d1d1a10d5706244a4e433b73cd24a0cb30834",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/fix.log",
+      "published": "docs/evidence/v0.2-validation/developer/fix.log",
+      "original_sha256": "db1d6525e3fff533ec94331fe9683580d201fd65412aa39391af9b0998e400b6",
+      "published_sha256": "db1d6525e3fff533ec94331fe9683580d201fd65412aa39391af9b0998e400b6",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/initial-en.log",
+      "published": "docs/evidence/v0.2-validation/developer/initial-en.log",
+      "original_sha256": "89fdc843690a436100b1404b1f4afb6a73416ba86a12ee69102de4e7010790cf",
+      "published_sha256": "89fdc843690a436100b1404b1f4afb6a73416ba86a12ee69102de4e7010790cf",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/initial-zh.log",
+      "published": "docs/evidence/v0.2-validation/developer/initial-zh.log",
+      "original_sha256": "00009b4e3ff03e4b61527c948a26d8761a5efc6d754bc5d41f0683a7af724962",
+      "published_sha256": "00009b4e3ff03e4b61527c948a26d8761a5efc6d754bc5d41f0683a7af724962",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/recover-preview.log",
+      "published": "docs/evidence/v0.2-validation/developer/recover-preview.log",
+      "original_sha256": "a8e368ea61a8c21822e80318842ce7f79c26c1c806b6265622a8773d95148c5b",
+      "published_sha256": "a8e368ea61a8c21822e80318842ce7f79c26c1c806b6265622a8773d95148c5b",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/recover-write.log",
+      "published": "docs/evidence/v0.2-validation/developer/recover-write.log",
+      "original_sha256": "e4208bf88bfd4293b471a638689c29cddaf7e922914d8caa3ef4b3153be394ea",
+      "published_sha256": "e4208bf88bfd4293b471a638689c29cddaf7e922914d8caa3ef4b3153be394ea",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/repair-accept.log",
+      "published": "docs/evidence/v0.2-validation/developer/repair-accept.log",
+      "original_sha256": "12ee49e5e1fe75188be23740b25fe68100100c93189f5bb0fdc1bd36d31eb48e",
+      "published_sha256": "12ee49e5e1fe75188be23740b25fe68100100c93189f5bb0fdc1bd36d31eb48e",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/repair-preview.log",
+      "published": "docs/evidence/v0.2-validation/developer/repair-preview.log",
+      "original_sha256": "9dc803afdc3a5b186f46c0e7eb7379aa667695bbfb5da5a41b5193b8a188d29e",
+      "published_sha256": "9dc803afdc3a5b186f46c0e7eb7379aa667695bbfb5da5a41b5193b8a188d29e",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/repair-propose.log",
+      "published": "docs/evidence/v0.2-validation/developer/repair-propose.log",
+      "original_sha256": "ac1504a4f11533246b1f011e10dc764ebb28fb439ef7d07b56ae5a0ec217c0a5",
+      "published_sha256": "ac1504a4f11533246b1f011e10dc764ebb28fb439ef7d07b56ae5a0ec217c0a5",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/repair-scan.log",
+      "published": "docs/evidence/v0.2-validation/developer/repair-scan.log",
+      "original_sha256": "252b2e6165aadc066c2edace27cf32406b92be10c9cef72ae52e800356de9d7f",
+      "published_sha256": "252b2e6165aadc066c2edace27cf32406b92be10c9cef72ae52e800356de9d7f",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/reworded.log",
+      "published": "docs/evidence/v0.2-validation/developer/reworded.log",
+      "original_sha256": "d2a0d77c0e834403b67a96970af35b6910eaa46d2badac4b9d2a37e1b72bc953",
+      "published_sha256": "d2a0d77c0e834403b67a96970af35b6910eaa46d2badac4b9d2a37e1b72bc953",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/snapshot.log",
+      "published": "docs/evidence/v0.2-validation/developer/snapshot.log",
+      "original_sha256": "7308ceca4c11cee122c2ca221526d4e55c1d588e841caf179191900cd4586971",
+      "published_sha256": "7308ceca4c11cee122c2ca221526d4e55c1d588e841caf179191900cd4586971",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-first-use/terminal.log",
+      "published": "docs/evidence/v0.2-validation/developer/terminal.log",
+      "original_sha256": "c91a8af181b3e66717e1a6aa1e4cdce3f4a7800dfbd230d09a4b34d5509177fc",
+      "published_sha256": "c91a8af181b3e66717e1a6aa1e4cdce3f4a7800dfbd230d09a4b34d5509177fc",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/evidence.json",
+      "published": "docs/evidence/v0.2-validation/windows-matrix.json",
+      "original_sha256": "98b05d2eef276b66865723ac71fa5d40cebf3381708ef18d3bd2f55f4c1d9db1",
+      "published_sha256": "98b05d2eef276b66865723ac71fa5d40cebf3381708ef18d3bd2f55f4c1d9db1",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.11.17/junit.xml",
+      "published": "docs/evidence/v0.2-validation/windows-3.11.17-junit.xml",
+      "original_sha256": "85d308d289644419a17962ceb0ef48c349a277dc1ff76c69e0dc2737fd88b755",
+      "published_sha256": "0c2bec5f9259f1a26d2e2adbf04713f2bcd6e2c7a59d8153b60d3840d3781a5d",
+      "transformations": [
+        "Replace JUnit hostname with windows-local; XML serialization.",
+        "Replace local checkout path with <checkout>."
+      ]
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.11.17/stdout.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.11.17-stdout.log",
+      "original_sha256": "aa8ab39fd7a486198d3dc6c333d301ca2c6441d67f7409555dd76d2c6c7d1246",
+      "published_sha256": "aa8ab39fd7a486198d3dc6c333d301ca2c6441d67f7409555dd76d2c6c7d1246",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.11.17/stderr.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.11.17-stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.12.14/junit.xml",
+      "published": "docs/evidence/v0.2-validation/windows-3.12.14-junit.xml",
+      "original_sha256": "68dcb2a330575792e3c30bd64eab6ea9f9c72ed8c078622e4b2d2980a35752e5",
+      "published_sha256": "32ff9c837dcf788bb4d97e581334af72a69aa740e22bf8f4d488f346caa796fe",
+      "transformations": [
+        "Replace JUnit hostname with windows-local; XML serialization.",
+        "Replace local checkout path with <checkout>."
+      ]
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.12.14/stdout.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.12.14-stdout.log",
+      "original_sha256": "63f28260964abec65abd938209b65ed3d1abe3cba17ee0ee6d4295af4dd9b07d",
+      "published_sha256": "63f28260964abec65abd938209b65ed3d1abe3cba17ee0ee6d4295af4dd9b07d",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.12.14/stderr.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.12.14-stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.13.16/junit.xml",
+      "published": "docs/evidence/v0.2-validation/windows-3.13.16-junit.xml",
+      "original_sha256": "cd1a80f3a5415bfa6ab3ae95a0b9efc04bbdb77376ce7a3cc3fd24a770517d8f",
+      "published_sha256": "82b6e679742b7624cbd6641ad14031ae7c91dacddb3e3c457a11435c6c13782a",
+      "transformations": [
+        "Replace JUnit hostname with windows-local; XML serialization.",
+        "Replace local checkout path with <checkout>."
+      ]
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.13.16/stdout.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.13.16-stdout.log",
+      "original_sha256": "3edc861c8b56aac7f54ceb20163bdefac831b578efd95da03b79a61a1e30cbff",
+      "published_sha256": "3edc861c8b56aac7f54ceb20163bdefac831b578efd95da03b79a61a1e30cbff",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.13.16/stderr.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.13.16-stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.14.8/junit.xml",
+      "published": "docs/evidence/v0.2-validation/windows-3.14.8-junit.xml",
+      "original_sha256": "cb43d398bc0a6beea9fcc2815f532b3584c65408e071f1511fe2f6acea7919a6",
+      "published_sha256": "3c008dd5d6971b113b71cb495f71120a0a92aa60d4ee7393a1ee37fd1bb74050",
+      "transformations": [
+        "Replace JUnit hostname with windows-local; XML serialization.",
+        "Replace local checkout path with <checkout>."
+      ]
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.14.8/stdout.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.14.8-stdout.log",
+      "original_sha256": "208541108c5ada2417d260ed931cd2f558d3ae634501de4d430f836a5febf392",
+      "published_sha256": "208541108c5ada2417d260ed931cd2f558d3ae634501de4d430f836a5febf392",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-final-matrix/3.14.8/stderr.log",
+      "published": "docs/evidence/v0.2-validation/windows-3.14.8-stderr.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh/evidence.json",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh.json",
+      "original_sha256": "4748fbf5203a3252546e8ecc8e346e14cedbbb508f4097dee6bd966841200c3a",
+      "published_sha256": "4748fbf5203a3252546e8ecc8e346e14cedbbb508f4097dee6bd966841200c3a",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh/lint.log",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh-lint.log",
+      "original_sha256": "8a45010c60803aa9b7712e81d633a1ba837d9482125967f036381d2a54e47a92",
+      "published_sha256": "8a45010c60803aa9b7712e81d633a1ba837d9482125967f036381d2a54e47a92",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh-ready/evidence.json",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh-ready.json",
+      "original_sha256": "5217f71412914ab7209f7db5bc1ee0b8b48101bd47cf8d3e36b6f4cff781265b",
+      "published_sha256": "5217f71412914ab7209f7db5bc1ee0b8b48101bd47cf8d3e36b6f4cff781265b",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh-ready/lint.log",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh-ready-lint.log",
+      "original_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "published_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh-ready/examples.log",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh-ready-examples.log",
+      "original_sha256": "2a4fd394cfcc01e8da6489d1f7e2bcc3e69562ab194c26fbfd4a3ab403e606e7",
+      "published_sha256": "2a4fd394cfcc01e8da6489d1f7e2bcc3e69562ab194c26fbfd4a3ab403e606e7",
+      "transformations": []
+    },
+    {
+      "source": "build/v0.2-windows-fresh-ready/ci-demo.log",
+      "published": "docs/evidence/v0.2-validation/v0.2-windows-fresh-ready-ci-demo.log",
+      "original_sha256": "2c06e2f1572c71712503866ffd0cb0a045673ed73d7a5c8075fc79016b7198ed",
+      "published_sha256": "2c06e2f1572c71712503866ffd0cb0a045673ed73d7a5c8075fc79016b7198ed",
+      "transformations": []
+    }
+  ],
+  "scope": "Preserved new machine/developer evidence with declared local-path/hostname redactions; historical evidence is unchanged."
+}

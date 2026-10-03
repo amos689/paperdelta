@@ -81,12 +81,16 @@ def check_metadata(raw, project):
     dependencies = metadata.get_all("Requires-Dist", [])
     # Installed dependency libraries are not bundled in these archives.
     assert len([d for d in dependencies if ";" not in d]) == len(project["dependencies"])
+    expected_email = project["maintainers"][0]["email"]
+    assert expected_email.endswith("@users.noreply.github.com")
+    assert expected_email in metadata["Maintainer-email"]
     return {
         "version": metadata["Version"],
         "requires_python": metadata["Requires-Python"],
         "license_expression": metadata["License-Expression"],
         "extras": extras,
         "requirements": dependencies,
+        "maintainer_email": expected_email,
     }
 
 
@@ -120,7 +124,11 @@ def main():
     )
     assert metadata == check_metadata(sdist["PKG-INFO"], project)
 
-    core_files = list((ROOT / "src/paperdelta").glob("*.py"))
+    core_files = [
+        p
+        for p in (ROOT / "src/paperdelta").rglob("*")
+        if p.is_file() and p.suffix in {".py", ".json", ".css", ".js"}
+    ]
     for path in core_files:
         raw = path.read_bytes()
         assert wheel[path.relative_to(ROOT / "src").as_posix()] == raw, path
@@ -153,6 +161,10 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.py")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.cjs")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tests").glob("*.py")]
+    translations = json.loads((ROOT / "docs/translations.json").read_text("utf-8"))
+    required += [name for pair in translations["pairs"] for name in pair.values()]
+    required += translations["aliases"] + ["docs/translations.json"]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.2").glob("*")]
     required += [
         p.relative_to(ROOT).as_posix()
         for case in ("ambiguous-table", "unicode-macro")
@@ -168,9 +180,46 @@ def main():
     for path in mapping_files:
         name = path.relative_to(ROOT).as_posix()
         assert sdist.get(name) == path.read_bytes(), name
+    registry_path = "evaluations/implementations/registry.json"
+    assert sdist[registry_path] == (ROOT / registry_path).read_bytes()
+    archives = json.loads(sdist[registry_path])["implementations"]
+    for implementation, record in archives.items():
+        for name, identity in record["identities"].items():
+            archived = f"evaluations/implementations/{implementation}/{name}"
+            assert sdist[archived] == (ROOT / archived).read_bytes(), archived
+            assert "sha256:" + sha256(sdist[archived]).hexdigest() == identity, archived
+
+    def frozen_bytes(name, implementation):
+        if name in archives[implementation]["identities"]:
+            return sdist[f"evaluations/implementations/{implementation}/{name}"]
+        return sdist[name] if name in sdist else evaluation[name]
+
     mapping_lock = json.loads(sdist["evaluations/mapping-v1/protocol-lock.json"])
     for name, digest in mapping_lock["identities"].items():
-        assert "sha256:" + sha256(sdist[name]).hexdigest() == digest, name
+        assert "sha256:" + sha256(frozen_bytes(name, "a2")).hexdigest() == digest, name
+    for implementation in ("staged-v2", "staged-v3"):
+        study_directory = f"docs/evidence/local-model-{implementation}"
+        protocol = json.loads(sdist[f"{study_directory}/protocol.json"])
+        assert protocol["implementation_sha256"] == archives[implementation]["identities"]
+        for name, identity in protocol["frozen_case_sha256"].items():
+            assert "sha256:" + sha256(sdist[name]).hexdigest() == identity, name
+        for name, identity in protocol["initial_prompt_sha256"].items():
+            prompt = sdist[f"{study_directory}/initial-prompts/{name}.json"]
+            assert "sha256:" + sha256(prompt).hexdigest() == identity
+        score = json.loads(sdist[f"{study_directory}/score.json"])
+        for field, filename in (
+            ("protocol_sha256", "protocol.json"),
+            ("execution_sha256", "execution.json"),
+        ):
+            raw = sdist[f"{study_directory}/{filename}"]
+            assert score[field] == "sha256:" + sha256(raw).hexdigest()
+    original_model = json.loads(sdist["docs/evidence/local-model-v1/protocol.json"])
+    for name, identity in original_model["guide_hashes"].items():
+        assert "sha256:" + sha256(frozen_bytes(name, "a2")).hexdigest() == identity
+    assert (
+        "sha256:" + sha256(frozen_bytes("tools/run_local_mapping_eval.py", "a2")).hexdigest()
+        == original_model["harness_sha256"]
+    )
 
     manifest = json.loads(evaluation["tests/corpus/manifest.json"])
     corpus_count = corpus_bytes = 0
@@ -194,7 +243,7 @@ def main():
     frozen = json.loads(evaluation[study["protocol_lock"]])
     assert frozen["study"] == study
     for name, digest in frozen["identities"].items():
-        raw = evaluation[name] if name.startswith("tests/corpus/") else sdist[name]
+        raw = frozen_bytes(name, "a2")
         assert "sha256:" + sha256(raw).hexdigest() == digest, name
     original = json.loads(evaluation[study["previous_protocol"]])
     history = study["previous_implementation"]
@@ -223,6 +272,10 @@ def main():
         "required_support_files_match_checkout": len(set(required)),
         "owned_mapping_suite_files_match_checkout": len(mapping_files),
         "mapping_protocol_identity_count": len(mapping_lock["identities"]),
+        "historical_implementation_identity_counts": {
+            name: len(record["identities"]) for name, record in archives.items()
+        },
+        "bilingual_document_pairs": len(translations["pairs"]),
         "corpus": {
             "papers": len(manifest["papers"]),
             "files": corpus_count,

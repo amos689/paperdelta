@@ -1,52 +1,60 @@
-# PaperDelta 0.1.0a2 上线前验收
+# PaperDelta 0.1.0a2 pre-launch acceptance
 
-日期：2026-10-03。验收者：Codex，以 AI 开发者和首位本地使用者身份。
+[简体中文](zh-CN/release-acceptance.md)
 
-**决定：通过本地 alpha 候选版的功能验收。** 依据项目方本日明确授权，
-上线前以机器本地测试及开发者判断验收，不再等待独立真人试用。
-验收范围是已有论文的显式绑定、确定性检查、变更报告、受保护修改与 agent 接口。
-外部 GitHub/PyPI 发布尚未执行；最终发行包须附带通过检查的 `package-audit.json`。
+Historical decision dated 2026-10-03, by Codex as AI developer and first local user.
+For subsequent v0.2 work, see the [current delivery ledger](v0.2-plan.md).
 
-## 验收依据
+**Decision: accept the local alpha candidate's scoped functionality.** The owner
+authorized local machine tests and developer judgment instead of waiting for
+independent user trials. This covers explicit mappings for existing papers,
+deterministic checks, impact reports, guarded edits and agent interfaces. GitHub/PyPI
+publication had not occurred. Distribution requires its passing `package-audit.json`.
 
-| 项目 | 实际证据与判断 |
+## Evidence
+
+| Area | Actual evidence and assessment |
 | --- | --- |
-| 核心正确性 | Windows 3.11/3.12 各通过 162 项完整测试；glibc Linux 的 Python 3.11–3.14 各通过 162 项，零失败、错误或跳过。[具体环境](local-validation.md) |
-| 首次接入 | 我通过 CLI 完成 `init → scan → propose → preview → accept → check`，确认 10 处绑定，论文保持不变。随后数据更新触发 8 处不一致，修改后 10 处全部通过，恢复后原文字节一致。[输入、13 步输出与记录](evidence/developer-first-use/evidence.json) |
-| 变更审查 | 新运行的主示例定位四处数字、失效比较和图来源变化；比较失效时关联数值补丁被阻止。[示例结果](evidence/developer-first-use/change-demo.json) |
-| 修改保护 | 过期输入、重叠与不完整位置拒绝写入；部分写入、竞争进程与进程终止后的恢复已有 Windows/Linux 记录。[进程验证](evidence/process-writes-windows.json) |
-| Agent 接口 | CLI、提案 schema、五个只读 MCP 工具有实际测试；确认绑定、改论文和作者审阅仍为独立显式动作。[接口说明](agent-guide.md) |
-| 本地模型 | 12 份小模型提案全部被拒绝，保留原始失败；本配置不通过自动映射质量验收，不作为发行版内置自动能力。[模型评测](local-model-evaluation.md) |
-| 性能 | 当前 20 个核心源码文件对应的 500 绑定、20 个 TeX 文件、10 MB CSV 测量，20 次暖运行 P95 为 1.866 秒，低于 3 秒目标。[本机记录](evidence/performance-final.json) |
-| 文本、报告与分发 | 许可明确的真实文本、中文/BOM/CRLF 示例、离线 HTML、编译回归、文档、演示视频及包内容均有记录。[完整证据](progress.md) |
+| Correctness | Windows Python 3.11/3.12 each passed 162 tests; glibc Linux Python 3.11–3.14 each passed 162 with no failures, errors or skips. [Environments](local-validation.md) |
+| First connection | Actual `init → scan → propose → preview → accept → check`, ten bindings with the paper unchanged; data changes found eight mismatches, all ten passed after patching, original bytes recovered. [Thirteen steps](evidence/developer-first-use/evidence.json) |
+| Impact review | Four numeric sites, false comparison and figure dependency changes; related numeric fixes blocked when the comparison was false. [Demo](evidence/developer-first-use/change-demo.json) |
+| Write protection | Stale inputs, overlaps and partial numeric ranges rejected; partial writes, competing processes and killed-process recovery tested on Windows/Linux. [Process record](evidence/process-writes-windows.json) |
+| Agent interface | Actual CLI/schema/five read-only MCP tool tests. Binding acceptance, paper changes and author review remain separate explicit actions. [Guide](agent-guide.md) |
+| Local model | All twelve proposals rejected, raw failures retained. This model fails automatic-mapping quality acceptance and is not a built-in automatic capability. [Experiment](local-model-evaluation.md) |
+| Performance | Twenty then-current core files; 500 bindings, 20 TeX files, 10 MB CSV; 20 warm runs P95 1.866 s, below the 3 s target. [Record](evidence/performance-final.json) |
+| Reports/distribution | Licensed real text, Unicode/BOM/CRLF, offline HTML, compilation, docs, video and package content have scoped records. [Ledger](progress.md) |
 
-十处绑定的输入和映射由我编写，再经真实命令执行。这是开发者工作流验收，
-不声称首次接触本工具、独立用户正确率或真人接入耗时。记录脚本曾错误地期待
-`apply` 输出 JSON；CLI 已正常修改并给出事务号。我保留输出，用该事务继续检查和恢复，
-没有重跑已完成的写入，也没有因此修改产品代码。
+Codex authored the ten-binding inputs and mappings before executing real commands.
+This is developer workflow acceptance, not novice use, independent accuracy or human
+timing. The recording helper wrongly expected `apply` to return JSON; the CLI had
+already succeeded and printed its transaction ID. That same transaction was checked
+and recovered without repeating the write or changing product code.
 
-## 开发者使用判断
+## Developer judgment
 
-当前工具可以完成承诺的主要工作：在论文没有修改时发现实验结果造成的影响，
-展示来源，保留未知状态，并对已确认数字做局部修改与恢复。
-我据此接受它作为可供公开试用的 alpha。
+The tool performs the promised workflow: it detects result-driven impact before
+paper changes, shows sources/unknowns, and locally edits/restores confirmed numbers.
+This supports an alpha for public trials within the tested scope.
 
-接入仍要求正确声明来源 ID、实验身份、单位、种子和定位锚点。完整
-[快速开始](quickstart.md) 可以照做，提案错误也会给出诊断；复杂 schema 对小模型
-仍有明显负担。因此发布说明应突出“已有 agent 提案、显式确认、后续确定性检查”，
-不承诺小模型直接读入论文就能自动完成可靠映射。
+Onboarding still requires correct source IDs, experiment identity, units, seeds and
+anchors. The complete [quick start](quickstart.md) is executable and proposal errors
+are diagnosed, but complex schemas burden this small model. Release messaging should
+describe agent proposals plus explicit confirmation and subsequent deterministic
+checks, without promising reliable automatic mapping from a raw paper.
 
-已知范围继续保留：真实文本的首次保留组为 51/75 完整预期匹配，
-两篇动态 TeX 文本不能完整处理；这些输入返回未知并拒绝不可靠修改。
-这项小样本受控试验不能证明整篇论文准确率。macOS、实际远程 CI、
-断电和网络文件系统行为尚未验证，不扩大发行兼容性声明。
+The first held-out real-text group matched 51/75 complete expectations; two dynamic
+TeX manuscripts remain unsupported/unknown and refuse unsafe edits. This small
+controlled study cannot establish whole-paper accuracy. Native macOS, remote CI,
+power loss and network filesystems were not verified.
 
-## 发布交付与后续
+## Candidate and follow-up
 
-本地候选目录为 `build/release-candidate-final`，包含 wheel、源码包、独立许可的
-论文评测材料包和逐包哈希审计。模型权重、原生运行程序及临时环境不进入发行包。
-候选包的核心与已测源码逐字节核对；任何后续源码改动都需要相应重验。
+Historical directory: `build/release-candidate-final`, containing wheel, source
+archive, separately licensed corpus bundle and exact-artifact audit. Model weights,
+native runtimes and temporary environments are excluded. Candidate core files match
+tested bytes; later changes need relevant revalidation.
 
-真人反馈、三次首次使用及接入耗时、竞品操作耗时对比、macOS 和远程 CI
-放到后续工作，不是本次验收的待完成条件。收集真实反馈时继续使用
-[上线后反馈方案](first-use-trial.md)，不将本次机器记录计作真人数据。
+Independent users, three first-use observations, onboarding/comparison timings,
+macOS and remote CI are follow-up work, not incomplete gates for this historical
+acceptance. Use the [post-launch protocol](first-use-trial.md) for actual feedback;
+do not count machine records as human data.

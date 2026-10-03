@@ -1,5 +1,16 @@
 # Measured behavior and limits
 
+[简体中文](zh-CN/evaluation.md)
+
+The original corpus/performance studies below retain their a1/a2 identities.
+The v0.2 [regression](evidence/corpus-bilingual-v3.json) reproduces all 150 outcomes
+(126 full expectations pass; 24 known failures remain). Its 20-run warm P95 is
+1.731 s on the recorded laptop ([performance](evidence/v0.2-performance.json)).
+These use previously seen inputs, not new held-out samples. See the
+[v0.2 acceptance record](v0.2-acceptance.md) and [staged model results](staged-model-evaluation.md).
+Replay old studies with their preserved implementations via `tools/replay_study.py`;
+run `tools/regress_corpus.py --out build/new-regression` for the current runtime.
+
 These are development measurements, initially on Windows 11 / Python 3.12.14.
 Protocols, source hashes, failures and raw per-case outcomes are retained so the
 numbers can be examined independently. The separate
@@ -79,7 +90,7 @@ The [a2 regression](evidence/corpus-interactive-v2.json) and
 [original implementation replay](evidence/corpus-original-replay.json) both
 matched every original per-case outcome, including the 24 complete-expectation
 failures. Neither run adds unseen samples.
-The [corpus README](../tests/corpus/README.md) describes both current and historical
+The [corpus README](../tests/corpus/README.md) describes both a2 and original
 replay commands.
 
 ## Performance

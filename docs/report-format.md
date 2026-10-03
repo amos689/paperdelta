@@ -1,5 +1,7 @@
 # Report interchange contract, version 1
 
+[简体中文](zh-CN/report-format.md)
+
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
 The checked-in [schema](schemas/report.schema.json) records this alpha's contract.
 Configuration, proposals, snapshots, figure records, author-review records and
@@ -55,6 +57,11 @@ with the CLI/API for archival or independent verification.
 Python consumers validating with `StoredReport` should call
 `model_dump(by_alias=True)` to preserve the wire field `coverage.pass`. Raw checker
 results already use wire names. Hashes identify content; they are not signatures.
+
+Stored version-1 JSON retains canonical English messages and stable machine codes.
+CLI text, Markdown, HTML and MCP explanations are localized presentation surfaces;
+original manuscript/data text is never translated. The same offline HTML switches
+languages while retaining its filter and disclosure state. See [language compatibility](languages.md).
 
 Breaking changes require a new schema version and migration documentation.
 Version 1 describes this alpha's interface; it does not imply release acceptance.

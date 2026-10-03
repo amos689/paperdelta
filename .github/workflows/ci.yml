@@ -27,6 +27,7 @@ jobs:
       - run: python -m pip install '.[dev,mcp]'
       - run: python -m ruff check src tests tools
       - run: python -m ruff format --check src tests tools
+      - run: python -X utf8 tools/check_docs.py
       - run: python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml
       - run: python -X utf8 tools/validate_examples.py --out build/examples-validation
       - run: python -X utf8 tools/build_release.py --out build/release-candidate
