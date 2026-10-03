@@ -1,0 +1,293 @@
+{
+  "completed_at": "2026-10-03T05:13:01.385962+00:00",
+  "outcomes": {
+    "C01": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.4060000000026776,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:78735ff4138daeeed3c58aa3431814bc0ac2621673e1e427177df5730c3bfe96",
+          "response_sha256": "sha256:94dad6b030eefc8019bbc6de1bc4c2ad5b07b69898b44fe3a3c390a8647bea11",
+          "usage": {
+            "completion_tokens": 253,
+            "prompt_tokens": 1977,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2230
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C02": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.139999999999418,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:531d6285d1b72d09caf30df55410d933d32360a4377a23e24e15b4e6221d6d40",
+          "response_sha256": "sha256:6ecf097e264bf4dd043455361dcdd2b13024fbcb89e20daa296f0d7b127b1be3",
+          "usage": {
+            "completion_tokens": 228,
+            "prompt_tokens": 1974,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2202
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C03": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.577999999994063,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:cb4231645ff3af17dab7bab09a2026d8a051cc085e2d6540242c7d2970203027",
+          "response_sha256": "sha256:3894fd63cd98d18e221ee6b50953006ee5282da61911d05d9eff7dcd85d621c3",
+          "usage": {
+            "completion_tokens": 247,
+            "prompt_tokens": 1993,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2240
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C04": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.202999999994063,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:5e136d4f7ef5c2bee1b805806cb38d13acd9f92435bcba6bb8d2fe1ab18445d9",
+          "response_sha256": "sha256:4d9c3960ec800eaea58d13488865aca071d4d56a8ab6af02efeca3edc71856ed",
+          "usage": {
+            "completion_tokens": 219,
+            "prompt_tokens": 1963,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2182
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C05": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.3589999999967404,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:2231459f27cce3492377872e77512b8b5ce5587b93108d3d41682b33eced7d33",
+          "response_sha256": "sha256:5684dde29d6e821900c75cddf52c54fc3b5f42cdcb5136cee261ae19e09f6733",
+          "usage": {
+            "completion_tokens": 198,
+            "prompt_tokens": 1978,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2176
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C06": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.6089999999967404,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:0a0def5f5ddafd563ff0a84af89f6658fd406f93b393d9d19bf9c0a795a3f531",
+          "response_sha256": "sha256:ce46dc9822cf06bc2b56cca9f45793090d48830472b62e85bb47f0f353a2187d",
+          "usage": {
+            "completion_tokens": 54,
+            "prompt_tokens": 1992,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2046
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C07": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.7660000000032596,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:601511967e120dc255f6a48def0cdfa9331ded5431333392b1d87ab158fcc7be",
+          "response_sha256": "sha256:a311d9fbae20be4aeb8d8244e5eb3b1fb5585eb5cb71abe5cd7b36a6040fc115",
+          "usage": {
+            "completion_tokens": 64,
+            "prompt_tokens": 1993,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2057
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C08": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.9219999999913853,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:607c7e06d9d53945b02c70f4cd9f43ec737a2a1667f85499d51d9fa9eab8292b",
+          "response_sha256": "sha256:d6646bdc468576d31429a596f0a7c0d340d83f345af17b29aaee6308124d40ea",
+          "usage": {
+            "completion_tokens": 223,
+            "prompt_tokens": 1943,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2166
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C09": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.937000000005355,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='latex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:d2e0a18633b33424eee4a4194c82ad07e152eb8442a5c15938fd210f6c4a21b1",
+          "response_sha256": "sha256:280d271665fa5c97f4f2cee6be25095f380fceb18c8263b886db5f41a6e6d83f",
+          "usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 2222,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2282
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C10": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.5309999999881256,
+          "error": "BUILDER_SELECTION",
+          "finish_reason": "stop",
+          "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+          "request_sha256": "sha256:569f48f5894c76d4dac3fc7bb9eed07f33ec0a32d51a77dcb836132d3f9023f0",
+          "response_sha256": "sha256:b9636482d4c428be5c18b757abff036734dc01e07b50d5b36b5d304670d40990",
+          "usage": {
+            "completion_tokens": 193,
+            "prompt_tokens": 1964,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2157
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C11": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.8280000000086147,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "5 validation errors for Source\ncolumns.dataset\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='dataset', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.model\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='model', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.split\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='split', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.seed\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='seed', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.accuracy\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='accuracy', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:9e8d37c993f1d50b064930a7f43221bbb8bd30fe913ab5b47e4824dfe2fccc66",
+          "response_sha256": "sha256:60822d8a1dabd6018f528da4aadf69fc04fc5cb13371365f8b61a97205a8b806",
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 1923,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2042
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C12": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.8280000000086147,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:e117dbbec65435d2518f206baac3464b23b11e77d41ffb91320b8616c047a6d9",
+          "response_sha256": "sha256:87fb4207d889529e4ccf96026dd4a07aa4afdcae746a91ebb858844ed40b319a",
+          "usage": {
+            "completion_tokens": 55,
+            "prompt_tokens": 1974,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2029
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    }
+  }
+}

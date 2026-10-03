@@ -1,0 +1,24 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action_index": 1,
+      "elapsed_seconds": 2.8280000000086147,
+      "error": "DRAFT_SOURCE",
+      "finish_reason": "stop",
+      "message": "5 validation errors for Source\ncolumns.dataset\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='dataset', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.model\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='model', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.split\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='split', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.seed\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='seed', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\ncolumns.accuracy\n  Input should be 'string', 'integer' or 'decimal' [type=literal_error, input_value='accuracy', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+      "request_sha256": "sha256:9e8d37c993f1d50b064930a7f43221bbb8bd30fe913ab5b47e4824dfe2fccc66",
+      "response_sha256": "sha256:60822d8a1dabd6018f528da4aadf69fc04fc5cb13371365f8b61a97205a8b806",
+      "usage": {
+        "completion_tokens": 119,
+        "prompt_tokens": 1923,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2042
+      },
+      "valid": false
+    }
+  ],
+  "status": "invalid_action"
+}

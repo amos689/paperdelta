@@ -1,0 +1,24 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action_index": 1,
+      "elapsed_seconds": 3.9219999999913853,
+      "error": "BUILDER_SELECTION",
+      "finish_reason": "stop",
+      "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names.",
+      "request_sha256": "sha256:607c7e06d9d53945b02c70f4cd9f43ec737a2a1667f85499d51d9fa9eab8292b",
+      "response_sha256": "sha256:d6646bdc468576d31429a596f0a7c0d340d83f345af17b29aaee6308124d40ea",
+      "usage": {
+        "completion_tokens": 223,
+        "prompt_tokens": 1943,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2166
+      },
+      "valid": false
+    }
+  ],
+  "status": "invalid_action"
+}
