@@ -6,9 +6,10 @@ from pydantic import Field
 
 from paperdelta import __version__
 from paperdelta.config import load_config
+from paperdelta.documents import Document, LocatedText, PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
-from paperdelta.latex import PaperIndex, Span, TexDocument
+from paperdelta.locations import location_label
 from paperdelta.models import (
     Aggregation,
     Anchor,
@@ -210,13 +211,15 @@ def _add_metric(project, draft, config, name, metric):
     return _seal(project, body, store.hashes)
 
 
-def anchor_for_span(document: TexDocument, span: Span, identity_values=()) -> Anchor:
+def anchor_for_span(document: Document, span: LocatedText, identity_values=()) -> Anchor:
     """Use only the explicitly selected span, never a same-number heuristic.
 
     Context anchors survive numeric corrections. A contextless boundary or truly
     indistinguishable repetition requires an author edit, not a positional guess.
     """
     document.validate_numeric_span(span)
+    if hasattr(document, "anchor_for_span"):
+        return document.anchor_for_span(span, identity_values)
     from paperdelta.tables import anchor_for_cell
 
     table_anchor = anchor_for_cell(document, span, identity_values)
@@ -245,14 +248,14 @@ def anchor_for_span(document: TexDocument, span: Span, identity_values=()) -> An
     raise PaperDeltaError("BUILDER_ANCHOR", msg("builder.anchor", file=span.file, line=span.line))
 
 
-def candidate_span(document: TexDocument, choice: dict, display: Display) -> Span:
+def candidate_span(document: Document, choice: dict, display: Display) -> LocatedText:
     span = document.span(choice["start"], choice["end"])
     if (
         display.kind == "percent"
         and display.percent_symbol
-        and document.text[span.end :].startswith(r"\%")
+        and document.text[span.end :].startswith(document.percent_token)
     ):
-        span = document.span(span.start, span.end + 2)
+        span = document.span(span.start, span.end + len(document.percent_token))
     return span
 
 
@@ -310,7 +313,7 @@ def add_occurrences(
             for other in occupied
         ):
             raise PaperDeltaError(
-                "BUILDER_OVERLAP", msg("builder.overlap", file=span.file, line=span.line)
+                "BUILDER_OVERLAP", msg("document.overlap", location=location_label(span.to_dict()))
             )
         occupied.append(span)
         definition = config.metrics[metric]

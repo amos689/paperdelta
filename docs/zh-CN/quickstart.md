@@ -2,6 +2,9 @@
 
 [English](../quickstart.md)
 
+安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
+参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
+
 在 Python 3.11+ 环境安装：`python -m pip install paperdelta`。
 运行 `paperdelta --lang zh-CN demo --out paperdelta-demo --open` 即可查看内置报告。
 结果表可用[批量绑定、范围和监听](workflows.md)；源码开发仍支持 `python -m pip install -e .`。

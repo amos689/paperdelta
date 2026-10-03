@@ -17,6 +17,9 @@ def register_commands(commands):
     demo = commands.add_parser("demo", help=tr("demo.help"))
     demo.add_argument("--out", default="paperdelta-demo", help=tr("demo.out"))
     demo.add_argument(
+        "--document", choices=["latex", "docx"], default="latex", help=tr("demo.document")
+    )
+    demo.add_argument(
         "--scenario",
         choices=["changed", "baseline", "safe-update"],
         default="changed",
@@ -26,9 +29,20 @@ def register_commands(commands):
     demo.add_argument("--format", choices=["text", "json"], default="text")
 
 
-def create_demo(parent: Project, output: str, scenario: str = "changed") -> dict:
+def create_demo(
+    parent: Project, output: str, scenario: str = "changed", document: str = "latex"
+) -> dict:
     if scenario not in {"changed", "baseline", "safe-update"}:
         raise PaperDeltaError("DEMO_SCENARIO", msg("demo.invalid_scenario"))
+    if document not in {"latex", "docx"}:
+        raise PaperDeltaError("DOCUMENT_FORMAT", msg("document.format", file=document))
+    if document == "docx":
+        from paperdelta.docx_document import DocxDocument
+
+        # Diagnose absent optional dependencies before creating the output directory.
+        DocxDocument(
+            "paper.docx", files("paperdelta").joinpath("demo_word/paper.docx").read_bytes()
+        )
     target = parent.path(output)
     try:
         target.mkdir(parents=True, exist_ok=False)
@@ -45,7 +59,9 @@ def create_demo(parent: Project, output: str, scenario: str = "changed") -> dict
             elif not child.name.endswith((".pyc", ".pyo")):
                 project.write(name, child.read_bytes(), exclusive=True)
 
-    copy_resources(files("paperdelta").joinpath("demo_project"))
+    copy_resources(
+        files("paperdelta").joinpath("demo_word" if document == "docx" else "demo_project")
+    )
     before = check_project(target)
     if before["exit_code"] != 0:
         raise PaperDeltaError("DEMO_INVALID", msg("demo.invalid"))
@@ -69,7 +85,7 @@ def create_demo(parent: Project, output: str, scenario: str = "changed") -> dict
         raise PaperDeltaError("DEMO_INVALID", msg("demo.invalid"))
     write_reports(project, "review", report)
     patch_path = None
-    if scenario == "safe-update":
+    if scenario == "safe-update" and document == "latex":
         patch = create_patch(project, report)
         patch_path = "changes.pdpatch.json"
         project.write(patch_path, json_text(patch).encode("utf-8"), exclusive=True)
@@ -86,13 +102,19 @@ def create_demo(parent: Project, output: str, scenario: str = "changed") -> dict
 
 
 def run_command(project, arguments):
-    result = create_demo(project, arguments.out, arguments.scenario)
+    result = create_demo(project, arguments.out, arguments.scenario, arguments.document)
     if arguments.format == "json":
         print(json_text({"command_result_version": 1, "command": "demo", **result}), end="")
     else:
         print(tr("demo.created", project=result["project"], report=result["report"]))
         print(tr("demo.result", code=result["check_exit_code"]))
-        print(tr("demo." + arguments.scenario))
+        print(
+            tr(
+                "document.manual_update"
+                if arguments.document == "docx"
+                else "demo." + arguments.scenario
+            )
+        )
     if arguments.open:
         import webbrowser
 

@@ -129,6 +129,8 @@ class Span:
 
 
 class TexDocument:
+    percent_token = r"\%"
+
     def __init__(self, file: str, raw: bytes, macros: dict[str, int] | None = None):
         self.file = file
         self.raw = raw
@@ -310,6 +312,8 @@ class TexDocument:
         )
 
     def locate(self, anchor: Anchor) -> Span:
+        if anchor.block is not None:
+            raise PaperDeltaError("DOCUMENT_ANCHOR_FORMAT", msg("document.anchor_format"))
         if anchor.table is not None:
             from paperdelta.tables import locate_cell
 

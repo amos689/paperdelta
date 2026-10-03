@@ -14,9 +14,9 @@ from pydantic import Field
 from paperdelta import __version__
 from paperdelta.analysis import check_configuration
 from paperdelta.config import config_text, load_config
+from paperdelta.documents import PaperIndex
 from paperdelta.errors import PaperDeltaError, error_message
 from paperdelta.i18n import msg
-from paperdelta.latex import PaperIndex
 from paperdelta.models import (
     Claim,
     Config,
@@ -137,7 +137,10 @@ def init_project(
     config_path="paperdelta.yaml",
     macros: dict[str, int] | None = None,
 ) -> dict:
-    config = Config(schema_version=1, paper=Paper(entry=paper, macros=macros or {}))
+    config = Config(
+        schema_version=1 if paper.lower().endswith(".tex") else 3,
+        paper=Paper(entry=paper, macros=macros or {}),
+    )
     PaperIndex(project, config.paper)
     for path in data:
         _source_summary(project, path)
@@ -207,11 +210,11 @@ def scan_project(
         key=lambda item: (
             {"abstract": 0, "table": 1, "repeated": 2, "body": 3}[item["priority_hint"]],
             item["file"],
-            item["byte_start"],
+            item["start"],
         )
     )
     return {
-        "scan_schema_version": 1,
+        "scan_schema_version": 1 if paper.format == "latex" else 2,
         "config_path": config_path,
         "input_hashes": hashes,
         "sources": sources,
@@ -239,7 +242,7 @@ def _merge(config: Config, additions: Additions) -> Config:
         for group in ("occurrences", "claims")
         for item in value[group].values()
     ):
-        value["schema_version"] = 2
+        value["schema_version"] = max(2, value["schema_version"])
     return validate_record(Config, value, "PROPOSAL_CONFIG")
 
 

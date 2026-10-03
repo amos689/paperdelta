@@ -7,7 +7,9 @@ from paperdelta.batch import build_proposal, create_catalog, inspect_catalog
 from paperdelta.errors import PaperDeltaError
 from paperdelta.guided import Questions, _source
 from paperdelta.i18n import msg, tr
+from paperdelta.i18n import translated as translate_location
 from paperdelta.interactive import _safe, _show, confirm_bindings
+from paperdelta.locations import location_label
 from paperdelta.storage import json_text, parse_json
 
 
@@ -62,7 +64,7 @@ def _selection(preview, choice, questions, default_display):
         [
             (
                 item["candidate_id"],
-                f"{item['file']}:{item['line']} · {item['context_before']} "
+                f"{translate_location(location_label(item))} · {item['context_before']} "
                 f"⟦{item['text']}⟧{item['context_after']}",
             )
             for item in locations

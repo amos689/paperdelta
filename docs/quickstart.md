@@ -2,6 +2,9 @@
 
 [简体中文](zh-CN/quickstart.md)
 
+Word manuscripts use the same review workflow with the optional `docx` extra.
+See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
+
 Install in a Python 3.11+ environment: `python -m pip install paperdelta`.
 Run `paperdelta demo --out paperdelta-demo --open` for an included offline report.
 For a results table, see [batch binding, scopes and watching](workflows.md).

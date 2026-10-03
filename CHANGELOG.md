@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.4.0 — read-only Word manuscript review
+
+- Add the optional `docx` parser and an installed `demo --document docx`.
+- Read paragraphs, split runs, headings, captions and ordinary tables with native locations.
+- Share binding, batch selection, repairs, claims, scopes, snapshots, watch and MCP checks.
+- Report unsupported Word structures explicitly and refuse native-document writeback.
+- Add schema 3 while preserving LaTeX schema 1/2 behavior and historical records.
+- Ship bilingual guides/reports and 22 structural fixtures with 110 labelled positions.
+
+See the [Word guide](docs/word.md) and [release notes](docs/v0.4.md).
+
 ## 0.3.0 — batch binding and continuous review
 
 - Ship a complete offline `demo` in the core wheel and support PyPI installation.

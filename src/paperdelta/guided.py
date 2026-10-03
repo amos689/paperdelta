@@ -7,7 +7,9 @@ from pathlib import Path
 from paperdelta import builder
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr
+from paperdelta.i18n import translated as translate_location
 from paperdelta.interactive import _safe, _show, confirm_bindings
+from paperdelta.locations import location_label
 from paperdelta.onboarding import _source_summary, scan_project
 
 
@@ -220,7 +222,7 @@ def _stage(project, draft, questions):
         [
             (
                 item["candidate_id"],
-                f"{item['file']}:{item['line']} · {item['context_before']} "
+                f"{translate_location(location_label(item))} · {item['context_before']} "
                 f"⟦{item['text']}⟧{item['context_after']}",
             )
             for item in candidates

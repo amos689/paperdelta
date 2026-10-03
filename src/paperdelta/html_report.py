@@ -8,6 +8,7 @@ from html import escape
 from importlib.resources import files
 
 from paperdelta.i18n import LANGUAGES, Message, catalog, current_language, msg
+from paperdelta.locations import location_label
 from paperdelta.storage import sha256
 
 
@@ -75,6 +76,8 @@ def _action(item):
     if rule == "CLAIM_FALSE":
         return "html.next_claim"
     if rule == "VALUE_MISMATCH":
+        if item.get("location", {}).get("format") in {"docx", "pdf"}:
+            return "document.manual_update"
         return "html.action_numeric"
     if rule in {"FIGURE_CHANGED", "PROVENANCE_UNKNOWN", "FIGURE_RECORD"}:
         return "html.action_figure"
@@ -185,7 +188,7 @@ def _coverage(counts, labels):
                 contents.append(
                     "<ul>"
                     + "".join(
-                        f"<li><code>{esc(file)}:{item['line']}:{item['column']}</code> · "
+                        f"<li><code>{labels.text(location_label(item))}</code> · "
                         f"<code>{esc(item['text'])}</code></li>"
                         for item in items
                     )
@@ -215,7 +218,7 @@ def _coverage(counts, labels):
         + "".join(
             f"<li><code>{esc(item['id'])}</code> · {t('scope.exclusion_' + item['status'])} · {esc(item['reason'])}"
             + (
-                f" · <code>{esc(item['location']['file'])}:{item['location']['line']} · {esc(item['location']['text'])}</code>"
+                f" · <code>{labels.text(location_label(item['location']))} · {esc(item['location']['text'])}</code>"
                 if item.get("location")
                 else ""
             )
@@ -251,7 +254,7 @@ def html_report(report: dict) -> str:
     file_names, sources, rules = set(), set(), set()
     for item in sorted(report["diagnostics"], key=_priority):
         location = item.get("location", {})
-        where = f"{location['file']}:{location['line']}" if location else item["subject"]
+        where = location_label(location) if location else item["subject"]
         group, _, name = item["subject"].partition(":")
         collection = {
             "occurrence": "occurrences",
@@ -287,6 +290,7 @@ def html_report(report: dict) -> str:
             patch = f'<div class="diff"><del>{esc(state["actual"])}</del> → <ins>{esc(suggestion["replacement"])}</ins></div>'
             if suggestion["blocked_by"]:
                 patch += f'<p class="warning">{t("html.blocked", claims=", ".join(suggestion["blocked_by"]))}</p>'
+        action = "html.next_claim" if suggestion and suggestion["blocked_by"] else _action(item)
         anchor = ""
         if item["subject"] not in first_subjects:
             anchor = f' id="{_subject_id(item["subject"])}"'
@@ -295,11 +299,15 @@ def html_report(report: dict) -> str:
             f'<article{anchor} data-level="{esc(item["severity"])}" data-file="{esc(file)}" '
             f'data-rule="{esc(item["rule"])}" data-sources="{esc(json.dumps(selected_sources))}" '
             f'data-impacts="{esc(json.dumps(subject_groups[item["subject"]]))}"><div class="meta">'
-            f"<b>{labels.enum('status', item['severity'])}</b> · {esc(item['rule'])} · {esc(where)}</div>"
+            f"<b>{labels.enum('status', item['severity'])}</b> · {esc(item['rule'])} · {labels.text(where)}</div>"
             f"<h3>{labels.text(item['message'])}</h3>"
-            + (f"<blockquote>{esc(location['text'])}</blockquote>" if location else "")
+            + (
+                f"<blockquote>{esc(location.get('context', location['text']))}</blockquote>"
+                if location
+                else ""
+            )
             + patch
-            + f'<p class="action">{t(_action(item))}</p>'
+            + f'<p class="action">{t(action)}</p>'
             + (
                 f"<details><summary>{t('html.evidence')}</summary>{evidence}</details>"
                 if evidence
@@ -323,7 +331,7 @@ def html_report(report: dict) -> str:
             item = report["occurrences"][name]
             location = item.get("location", {})
             text = (
-                f"<code>{esc(location.get('file', name))}:{esc(location.get('line', '?'))}</code> · "
+                f"<code>{labels.text(location_label(location)) if location else esc(name)}</code> · "
                 f"{labels.value(item.get('actual'))} → {labels.value(item.get('expected'))} "
                 f"<b>{labels.enum('status', item['status'])}</b>"
             )

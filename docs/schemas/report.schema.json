@@ -126,13 +126,17 @@
         "location": {
           "anyOf": [
             {
-              "$ref": "#/$defs/SourceLocation"
+              "$ref": "#/$defs/LatexLocation"
+            },
+            {
+              "$ref": "#/$defs/DocxLocation"
             },
             {
               "type": "null"
             }
           ],
-          "default": null
+          "default": null,
+          "title": "Location"
         },
         "matching_reviews": {
           "items": {
@@ -224,7 +228,14 @@
         },
         "outside_scope_numbers": {
           "items": {
-            "$ref": "#/$defs/SourceLocation"
+            "anyOf": [
+              {
+                "$ref": "#/$defs/LatexLocation"
+              },
+              {
+                "$ref": "#/$defs/DocxLocation"
+              }
+            ]
           },
           "title": "Outside Scope Numbers",
           "type": "array"
@@ -247,7 +258,14 @@
         },
         "unbound_numbers": {
           "items": {
-            "$ref": "#/$defs/SourceLocation"
+            "anyOf": [
+              {
+                "$ref": "#/$defs/LatexLocation"
+              },
+              {
+                "$ref": "#/$defs/DocxLocation"
+              }
+            ]
           },
           "title": "Unbound Numbers",
           "type": "array"
@@ -398,13 +416,17 @@
         "location": {
           "anyOf": [
             {
-              "$ref": "#/$defs/SourceLocation"
+              "$ref": "#/$defs/LatexLocation"
+            },
+            {
+              "$ref": "#/$defs/DocxLocation"
             },
             {
               "type": "null"
             }
           ],
-          "default": null
+          "default": null,
+          "title": "Location"
         },
         "message": {
           "title": "Message",
@@ -436,6 +458,143 @@
         "message"
       ],
       "title": "Diagnostic",
+      "type": "object"
+    },
+    "DocxLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "context": {
+          "title": "Context",
+          "type": "string"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "format": {
+          "const": "docx",
+          "title": "Format",
+          "type": "string"
+        },
+        "locator": {
+          "$ref": "#/$defs/DocxLocator"
+        },
+        "parser": {
+          "minLength": 1,
+          "title": "Parser",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "start",
+        "end",
+        "text",
+        "format",
+        "parser",
+        "locator",
+        "context"
+      ],
+      "title": "DocxLocation",
+      "type": "object"
+    },
+    "DocxLocator": {
+      "additionalProperties": false,
+      "properties": {
+        "block": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Block",
+          "type": "string"
+        },
+        "cell": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cell"
+        },
+        "offset": {
+          "minimum": 0,
+          "title": "Offset",
+          "type": "integer"
+        },
+        "paragraph": {
+          "minimum": 1,
+          "title": "Paragraph",
+          "type": "integer"
+        },
+        "part": {
+          "const": "word/document.xml",
+          "title": "Part",
+          "type": "string"
+        },
+        "row": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Row"
+        },
+        "section": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Section",
+          "type": "array"
+        },
+        "style": {
+          "title": "Style",
+          "type": "string"
+        },
+        "table": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table"
+        }
+      },
+      "required": [
+        "part",
+        "paragraph",
+        "style",
+        "section",
+        "block",
+        "offset"
+      ],
+      "title": "DocxLocator",
       "type": "object"
     },
     "Evidence": {
@@ -555,13 +714,17 @@
         "location": {
           "anyOf": [
             {
-              "$ref": "#/$defs/SourceLocation"
+              "$ref": "#/$defs/LatexLocation"
+            },
+            {
+              "$ref": "#/$defs/DocxLocation"
             },
             {
               "type": "null"
             }
           ],
-          "default": null
+          "default": null,
+          "title": "Location"
         },
         "reason": {
           "title": "Reason",
@@ -762,6 +925,61 @@
         "index"
       ],
       "title": "JsonRecord",
+      "type": "object"
+    },
+    "LatexLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_end": {
+          "minimum": 0,
+          "title": "Byte End",
+          "type": "integer"
+        },
+        "byte_start": {
+          "minimum": 0,
+          "title": "Byte Start",
+          "type": "integer"
+        },
+        "column": {
+          "minimum": 1,
+          "title": "Column",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "line": {
+          "minimum": 1,
+          "title": "Line",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "start",
+        "end",
+        "byte_start",
+        "byte_end",
+        "line",
+        "column",
+        "text"
+      ],
+      "title": "LatexLocation",
       "type": "object"
     },
     "MetricState": {
@@ -967,13 +1185,17 @@
         "location": {
           "anyOf": [
             {
-              "$ref": "#/$defs/SourceLocation"
+              "$ref": "#/$defs/LatexLocation"
+            },
+            {
+              "$ref": "#/$defs/DocxLocation"
             },
             {
               "type": "null"
             }
           ],
-          "default": null
+          "default": null,
+          "title": "Location"
         },
         "metric": {
           "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
@@ -1026,6 +1248,7 @@
             "review_exclusions",
             "review_claims",
             "update_numbers",
+            "update_document",
             "update_figures",
             "complete_coverage"
           ],
@@ -1129,61 +1352,6 @@
         }
       },
       "title": "ReviewScope",
-      "type": "object"
-    },
-    "SourceLocation": {
-      "additionalProperties": false,
-      "properties": {
-        "byte_end": {
-          "minimum": 0,
-          "title": "Byte End",
-          "type": "integer"
-        },
-        "byte_start": {
-          "minimum": 0,
-          "title": "Byte Start",
-          "type": "integer"
-        },
-        "column": {
-          "minimum": 1,
-          "title": "Column",
-          "type": "integer"
-        },
-        "end": {
-          "minimum": 0,
-          "title": "End",
-          "type": "integer"
-        },
-        "file": {
-          "title": "File",
-          "type": "string"
-        },
-        "line": {
-          "minimum": 1,
-          "title": "Line",
-          "type": "integer"
-        },
-        "start": {
-          "minimum": 0,
-          "title": "Start",
-          "type": "integer"
-        },
-        "text": {
-          "title": "Text",
-          "type": "string"
-        }
-      },
-      "required": [
-        "file",
-        "start",
-        "end",
-        "byte_start",
-        "byte_end",
-        "line",
-        "column",
-        "text"
-      ],
-      "title": "SourceLocation",
       "type": "object"
     },
     "SourceMetric": {
@@ -1553,7 +1721,7 @@
       "title": "Removed Bindings"
     },
     "report_schema_version": {
-      "maximum": 2,
+      "maximum": 3,
       "minimum": 1,
       "title": "Report Schema Version",
       "type": "integer"

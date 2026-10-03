@@ -2,6 +2,9 @@
 
 [简体中文](zh-CN/workflows.md)
 
+Word manuscripts use the same review workflow with the optional `docx` extra.
+See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
+
 These workflows are available in PaperDelta 0.3.0. Run commands in your paper
 project, or put `-C /path/to/project` before the subcommand. Add `--lang zh-CN`
 before the subcommand for Chinese prompts. A check never runs experiment or plot code.

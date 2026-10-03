@@ -21,6 +21,8 @@ def review_actions(report):
             kind = (
                 "review_claims"
                 if state.get("suggestion", {}).get("blocked_by")
+                else "update_document"
+                if state.get("location", {}).get("format") in {"docx", "pdf"}
                 else "update_numbers"
             )
         elif group == "claim" and rule == "CLAIM_FALSE":
@@ -29,6 +31,8 @@ def review_actions(report):
             kind = "update_figures"
         elif rule.startswith("ANCHOR_") or rule in {
             "UNREACHABLE_TEX",
+            "UNREACHABLE_DOCUMENT",
+            "NUMERIC_SPAN",
             "NUMERIC_ANCHOR",
             "UNSUPPORTED_SPAN",
         }:
@@ -50,6 +54,7 @@ def review_actions(report):
         "review_exclusions",
         "review_claims",
         "update_numbers",
+        "update_document",
         "update_figures",
         "complete_coverage",
     )

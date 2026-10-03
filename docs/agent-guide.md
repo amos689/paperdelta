@@ -2,6 +2,9 @@
 
 [简体中文](zh-CN/agent-guide.md)
 
+Word manuscripts use the same review workflow with the optional `docx` extra.
+See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
+
 PaperDelta supplies deterministic evidence and proposal validation. Matching
 numbers alone do not establish a correct scientific mapping.
 

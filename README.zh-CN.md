@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.3.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.3.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.4.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.4.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -38,7 +38,7 @@
 **提高 3.1 个百分点**及**优于基线**的结论也不再成立。PaperDelta 将这些表述关联到
 明确声明的 CSV/JSON 证据，集中展示需要复核的位置，即使 LaTeX 文件本身没有变化。
 
-本地 Python 命令行 · 现有 LaTeX · 精确十进制计算 · 离线 HTML · 可选 MCP。
+本地 Python 命令行 · LaTeX + 可选 Word · 精确十进制计算 · 离线 HTML · 可选 MCP。
 检查不需要模型密钥、GPU 或 TeX 安装。
 
 <p>
@@ -52,12 +52,17 @@
 [打开原尺寸动图](docs/assets/v0.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.3/report.zh-CN.png)。
 
-**0.3.0** 增加批量表格绑定、明确的数字审查范围、可追踪排除、持续检查及精简的
-Agent 会话。详见[工作流指南](docs/zh-CN/workflows.md)与[发行及升级说明](docs/zh-CN/v0.3.md)。
+**0.4.0** 增加只读 Word 稿件检查：段落、拆分格式片段、普通表格和原生位置，
+沿用相同的绑定、修复和监听流程。详见 [Word 指南](docs/zh-CN/word.md)与
+[发行及升级说明](docs/zh-CN/v0.4.md)。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 从本版开始采用正式版本号。
 
 ## 安装并查看第一份报告
+
+试用 Word 示例：安装 `paperdelta[docx]`，然后运行
+`paperdelta --lang zh-CN demo --document docx --out word-demo --open`。
+Word 检查为只读，[支持结构与原生位置](docs/zh-CN/word.md)均有明确说明。
 
 使用 Python 3.11 以上版本，在虚拟环境中运行：
 
@@ -80,7 +85,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-0.3.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-0.4.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -154,12 +159,14 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 
 支持字面 LaTeX `input/include`、已声明字面宏参数、限定的字面表格单元格、CSV/JSON、
 明确聚合、带单位派生值、有限比较和图表来源。动态 TeX、任意宏展开、统计推断及
-全局 SOTA 验证仍不在支持范围内，详见[规则与限制](docs/zh-CN/rules.md)。
+全局 SOTA 验证仍不在支持范围内。安装 `paperdelta[docx]` 可检查 Word 段落和普通
+表格；修订、域和复杂排版仍标为未验证。详见[规则与限制](docs/zh-CN/rules.md)及
+[Word 支持边界](docs/zh-CN/word.md)。
 
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.3.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v0.4.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

@@ -33,3 +33,9 @@ Python wheel 和源码发行包包含原创代码，不包含第三方论文语�
 或图像。没有发现独立论文授权时，上表仓库 MIT 授权适用于其相关源码说明。
 作者和版权声明仍保留在原文件中。依赖及既有工作的探测记录另见
 [调研记录](docs/zh-CN/research.md)和[包元数据](docs/evidence/package-metadata.json)。
+
+## 可选 Word 依赖
+
+`docx` 扩展使用 python-docx（MIT）及其 lxml 依赖（BSD）。它们作为独立包安装，
+保留各自附带的许可说明；PaperDelta 不内嵌这些依赖的源码。生成的 Word 演示与
+原生测试样例属于本项目原创材料，与第三方论文语料分开。

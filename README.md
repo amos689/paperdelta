@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.3.0"><img src="docs/assets/badges/release.svg" alt="Release 0.3.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.4.0"><img src="docs/assets/badges/release.svg" alt="Release 0.4.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -40,7 +40,7 @@ an **outperforms baseline** claim no longer hold. PaperDelta traces those statem
 to declared CSV/JSON evidence and brings the affected locations together for review,
 even when no LaTeX file changed.
 
-Local Python CLI · existing LaTeX · exact decimal arithmetic · offline HTML · optional MCP.
+Local Python CLI · LaTeX + optional Word · exact decimal arithmetic · offline HTML · optional MCP.
 Checking needs no model key, GPU or TeX installation.
 
 <p>
@@ -54,13 +54,17 @@ A 20-second walkthrough of real demo reports, paced for readability.
 [Open the full-size animation](docs/assets/v0.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.3/report.png).
 
-**0.3.0** adds batch table binding, explicit numeric review scopes, traceable
-exclusions, continuous checks and compact Agent sessions. See the
-[workflow guide](docs/workflows.md) and [release and upgrade notes](docs/v0.3.md).
+**0.4.0** adds read-only Word manuscript review: paragraphs, split formatting runs,
+ordinary tables and native positions, with the same binding, repair and watch workflow.
+See the [Word guide](docs/word.md) and [release and upgrade notes](docs/v0.4.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
 ## Install and see the first report
+
+For a Word example, install `paperdelta[docx]` and run
+`paperdelta demo --document docx --out word-demo --open`.
+Word review is read-only; [supported structures and positions](docs/word.md) are explicit.
 
 Use Python 3.11 or newer. In a virtual environment:
 
@@ -87,7 +91,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.3.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-0.4.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -175,12 +179,14 @@ Supported inputs include literal LaTeX `input/include`, declared literal macro
 arguments, bounded literal table cells, CSV/JSON, explicit aggregation, derived
 values with units, limited comparisons and figure provenance. Dynamic TeX,
 arbitrary macro expansion, statistical inference and global SOTA verification
-remain outside the supported contract. See [rules and limits](docs/rules.md).
+remain outside the supported contract. Word paragraphs and ordinary tables are supported
+with `paperdelta[docx]`; revisions, fields and complex layouts remain unverified.
+See [rules and limits](docs/rules.md) and the [Word boundary](docs/word.md).
 
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.3.md) distinguish what each run established.
+and [current release checks](docs/v0.4.md) distinguish what each run established.
 
 ## Development
 

@@ -2,6 +2,9 @@
 
 [English](../agent-guide.md)
 
+安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
+参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
+
 PaperDelta 提供确定性证据与提案校验。数字相同不能证明科学映射正确。
 
 ## 建议给 Agent 的指令

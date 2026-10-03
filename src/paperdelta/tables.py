@@ -17,6 +17,9 @@ def clean(text):
 
 
 def literal_tables(document):
+    if hasattr(document, "native_tables"):
+        yield from document.native_tables
+        return
     for low, high in document.table_regions:
         text = document.text
         if re.search(
@@ -59,10 +62,13 @@ def literal_tables(document):
 
 
 def _row_values(document, row):
-    return [clean(document.text[a:b]) for a, b in row]
+    cleaner = (lambda text: " ".join(text.split())) if hasattr(document, "native_tables") else clean
+    return [cleaner(document.text[a:b]) for a, b in row]
 
 
 def _numbers(document, cell):
+    if hasattr(document, "numbers_in"):
+        return document.numbers_in(*cell)
     return [span for span in document.numbers() if cell[0] <= span.start and span.end <= cell[1]]
 
 
@@ -91,9 +97,9 @@ def locate_cell(document, anchor):
                 continue
             span = spans[0]
             if anchor.percent_symbol:
-                if not document.text[span.end :].startswith(r"\%"):
+                if not document.text[span.end :].startswith(document.percent_token):
                     continue
-                span = document.span(span.start, span.end + 2)
+                span = document.span(span.start, span.end + len(document.percent_token))
             if document.checkable(span.start, span.end):
                 found.append(span)
     if len(found) != 1:
@@ -117,17 +123,17 @@ def anchor_for_cell(document, span, identity_values=()):
             prefix = []
             for index, cell in enumerate(row[:column]):
                 if _numbers(document, cell) and not (
-                    index == 0 and clean(document.text[cell[0] : cell[1]]) in identity_values
+                    index == 0 and _row_values(document, [cell])[0] in identity_values
                 ):
                     break
-                prefix.append(clean(document.text[cell[0] : cell[1]]))
+                prefix.append(_row_values(document, [cell])[0])
                 if not any(prefix):
                     continue
                 anchor = TableCellAnchor(
                     headers=headers,
                     row_prefix=list(prefix),
                     column=column,
-                    percent_symbol=span.text.endswith(r"\%"),
+                    percent_symbol=span.text.endswith(document.percent_token),
                 )
                 try:
                     located = locate_cell(document, anchor)

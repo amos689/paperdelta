@@ -2,6 +2,9 @@
 
 [English](../workflows.md)
 
+安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
+参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
+
 以下工作流适用于 PaperDelta 0.3.0。在论文项目目录运行命令，或在子命令前加
 `-C /path/to/project`。子命令前加 `--lang zh-CN` 使用中文提示。检查不会执行实验或绘图代码。
 

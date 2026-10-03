@@ -2,6 +2,9 @@
 
 [English](../rules.md)
 
+安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
+参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
+
 `paperdelta schema KIND` 提供 configuration、proposal-input、proposal、patch、
 binding-draft、repair-proposal、figure-record、review-record、snapshot 和 report
 的 JSON schema。未知字段、未支持版本、JSON/YAML 重复键和可执行 YAML 标签均被

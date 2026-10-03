@@ -8,9 +8,9 @@ from typing import Annotated
 from pydantic import Field, model_validator
 
 from paperdelta import builder
+from paperdelta.documents import PaperIndex
 from paperdelta.errors import PaperDeltaError, validation_error
 from paperdelta.i18n import msg
-from paperdelta.latex import PaperIndex
 from paperdelta.models import (
     Aggregation,
     Display,
@@ -103,6 +103,8 @@ def _cells(text, offset):
 
 
 def _location_context(document, candidate):
+    if hasattr(document, "location_context"):
+        return document.location_context(candidate)
     start, end = candidate["start"], candidate["end"]
     regions = [
         (low, high)

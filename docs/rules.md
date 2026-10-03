@@ -2,6 +2,9 @@
 
 [简体中文](zh-CN/rules.md)
 
+Word manuscripts use the same review workflow with the optional `docx` extra.
+See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
+
 Use `paperdelta schema KIND` for configuration, proposal-input, proposal, patch,
 binding-draft, repair-proposal, figure-record, review-record, snapshot and stored-report JSON schemas. Unknown
 fields and unsupported versions are rejected. JSON/YAML duplicate keys and

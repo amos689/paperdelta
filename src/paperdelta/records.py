@@ -28,7 +28,7 @@ CheckStatus = Literal["pass", "mismatch", "unknown"]
 ChangeKind = Literal["added", "changed", "unchanged", "unavailable", "definition_changed"]
 
 
-class SourceLocation(StrictModel):
+class LatexLocation(StrictModel):
     file: str
     start: Nonnegative
     end: Nonnegative
@@ -47,6 +47,46 @@ class SourceLocation(StrictModel):
         if self.byte_end - self.byte_start != len(self.text.encode("utf-8")):
             raise validation_error(msg("validation.records.3"))
         return self
+
+
+class DocxLocator(StrictModel):
+    part: Literal["word/document.xml"]
+    paragraph: Positive
+    style: str
+    section: list[str]
+    table: Positive | None = None
+    row: Positive | None = None
+    cell: Positive | None = None
+    block: Hash
+    offset: Nonnegative
+
+    @model_validator(mode="after")
+    def complete_cell(self):
+        if any(v is not None for v in (self.table, self.row, self.cell)) and any(
+            v is None for v in (self.table, self.row, self.cell)
+        ):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+class DocxLocation(StrictModel):
+    file: str
+    start: Nonnegative
+    end: Nonnegative
+    text: str
+    format: Literal["docx"]
+    parser: str = Field(min_length=1)
+    locator: DocxLocator
+    context: str
+
+    @model_validator(mode="after")
+    def ordered_span(self):
+        if self.end <= self.start or self.end - self.start != len(self.text):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+SourceLocation = LatexLocation | DocxLocation
 
 
 class EvidenceDatum(StrictModel):
@@ -340,6 +380,7 @@ class ReviewAction(StrictModel):
         "review_exclusions",
         "review_claims",
         "update_numbers",
+        "update_document",
         "update_figures",
         "complete_coverage",
     ]
@@ -354,7 +395,7 @@ class WatchState(StrictModel):
 
 
 class StoredReport(TimestampedRecord):
-    report_schema_version: Annotated[int, Field(ge=1, le=2)]
+    report_schema_version: Annotated[int, Field(ge=1, le=3)]
     tool_version: str
     ruleset_version: str
     config_path: str
@@ -377,6 +418,19 @@ class StoredReport(TimestampedRecord):
 
     @model_validator(mode="after")
     def counted_verdicts(self):
+        locations = [
+            *(
+                item.location
+                for item in [*self.occurrences.values(), *self.claims.values(), *self.diagnostics]
+            ),
+            *self.coverage.unbound_numbers,
+            *self.coverage.outside_scope_numbers,
+            *(item.location for item in self.coverage.exclusions),
+        ]
+        if self.report_schema_version < 3 and any(
+            isinstance(item, DocxLocation) for item in locations
+        ):
+            raise validation_error(msg("document.report_schema"))
         states = [*self.occurrences.values(), *self.claims.values(), *self.figures.values()]
         if len(states) != self.coverage.confirmed or any(
             sum(item.status == status for item in states) != count

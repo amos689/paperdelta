@@ -5,6 +5,8 @@ from __future__ import annotations
 from paperdelta.errors import PaperDeltaError
 from paperdelta.html_report import html_report as html_report
 from paperdelta.i18n import msg, tr, translated
+from paperdelta.i18n import translated as translate_location
+from paperdelta.locations import location_label
 from paperdelta.storage import Project, json_text
 
 
@@ -64,7 +66,7 @@ def text_report(report: dict) -> str:
         )
     for item in report["diagnostics"]:
         location = item.get("location", {})
-        where = f"{location['file']}:{location['line']}" if location else item["subject"]
+        where = translate_location(location_label(location)) if location else item["subject"]
         severity = tr("status." + item["severity"]).upper()
         lines.append(f"{severity} {where} [{item['rule']}] {translated(item['message'])}")
     if report["baseline"]:

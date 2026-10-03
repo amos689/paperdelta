@@ -1,9 +1,9 @@
-# 报告交换约定：版本 2
+# 报告交换约定，版本 3
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1 和 2。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1、2 和 3。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
 
 报告包含 `report_schema_version`、`tool_version` 和 `ruleset_version`。未知字段和
@@ -21,6 +21,11 @@
 文件中的字节偏移。结束位置均不包含在范围内，行列从 1 开始。原文及两种长度
 必须匹配，保留 BOM 和 CRLF。位置本身不授权写入；数值补丁须重新推导，所有输入
 哈希也必须仍匹配。
+
+Word 位置使用 `format: docx`、`parser`、`context` 和 `locator`，记录 OOXML
+部件、段落序号、样式、章节及可选的表、行、列。它们的 `start/end` 指向提取文本，
+绝不是文件包字节。原生位置没有源码行号或字节地址，需要报告 schema 3。
+上述 UTF-8 字节与行列说明仅适用于 LaTeX，详见 [Word 位置约定](word.md)。
 
 ## 分开的状态维度
 
@@ -46,10 +51,10 @@ Python 使用 `StoredReport` 验证后，应调用 `model_dump(by_alias=True)` �
 解释属于本地化展示层，论文与数据原文不翻译。离线 HTML 在同一文件内切换语言，
 保留筛选和展开状态，详见[语言兼容说明](languages.md)。
 
-破坏性修改需要新 schema 版本及迁移文档。0.3.0 的新报告使用版本 2，新增 `actions`、可选 `watch`，以及
+破坏性修改需要新 schema 版本及迁移文档。0.3.0 的新报告使用版本 3，新增 `actions`、可选 `watch`，以及
 `coverage.review_scope`、`outside_scope_numbers` 和 `exclusions`。版本 1 仍可读取，
 新字段使用默认值。等待重查时退出码为 2，即使保留的旧发现全部通过。消费者应
 检查顶层退出码及监听状态，不能从通过计数推断结果是否新鲜。
 
-配置版本 2 增加范围、排除及表格单元格锚点。旧配置保留语义和基线身份；明确接受
+配置版本 3 增加范围、排除及表格单元格锚点。旧配置保留语义和基线身份；明确接受
 新特性后才升级并备份。详见[工作流迁移](workflows.md)。

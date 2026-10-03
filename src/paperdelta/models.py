@@ -105,23 +105,28 @@ class Anchor(StrictModel):
     prefix: str | None = None
     suffix: str | None = None
     table: TableCellAnchor | None = None
+    block: Hash | None = None
 
     @model_serializer(mode="wrap")
     def preserve_legacy_identity(self, handler):
         value = handler(self)
         if self.table is None:
             value.pop("table", None)
+        if self.block is None:
+            value.pop("block", None)
         return value
 
     @model_validator(mode="after")
     def exactly_one_mode(self) -> Self:
         if self.table is not None:
-            if any(item is not None for item in (self.exact, self.prefix, self.suffix)):
+            if any(item is not None for item in (self.exact, self.prefix, self.suffix, self.block)):
                 raise validation_error(msg("validation.models.8"))
         elif self.exact is not None:
             if not self.exact or self.prefix is not None or self.suffix is not None:
                 raise validation_error(msg("validation.models.8"))
-        elif not self.prefix or not self.suffix:
+        elif (self.prefix is None or self.suffix is None) or (
+            self.block is None and (not self.prefix or not self.suffix)
+        ):
             raise validation_error(msg("validation.models.9"))
         return self
 
@@ -203,7 +208,7 @@ class CoverageExclusion(StrictModel):
 
 
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=2)]
+    schema_version: Annotated[int, Field(ge=1, le=3)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -217,6 +222,18 @@ class Config(StrictModel):
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if self.schema_version < 3 and (
+            not self.paper.entry.lower().endswith(".tex")
+            or any(
+                item.anchor.block is not None
+                for item in [
+                    *self.occurrences.values(),
+                    *self.claims.values(),
+                    *self.coverage_exclusions.values(),
+                ]
+            )
+        ):
+            raise validation_error(msg("document.schema"))
         if self.schema_version == 1 and (
             self.review_scope
             or self.coverage_exclusions

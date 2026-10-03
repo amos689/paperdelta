@@ -7,9 +7,9 @@ from pathlib import Path
 
 from paperdelta import __version__
 from paperdelta.config import load_config
+from paperdelta.documents import LocatedText, PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
-from paperdelta.latex import PaperIndex, Span
 from paperdelta.metrics import Quantity, comparable, display_matches, render
 from paperdelta.models import Config, Predicate, Threshold
 from paperdelta.records import FigureRecord, Snapshot, StoredReport, validate_record
@@ -54,7 +54,7 @@ def evaluate_predicate(predicate: Predicate, evidence: EvidenceStore) -> bool:
 
 
 def _diagnostic(
-    rule: str, subject: str, severity: str, message: str, span: Span | None = None
+    rule: str, subject: str, severity: str, message: str, span: LocatedText | None = None
 ) -> dict:
     result = {
         "id": f"{subject}/{rule}",
@@ -134,6 +134,8 @@ def check_configuration(
             else config
         )
         paper = PaperIndex(project, config.paper)
+        if paper.format != "latex":
+            report["report_schema_version"] = 3
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
         attach_reviews(project, report)
@@ -186,6 +188,14 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
             covered.setdefault(span.file, []).append((span.start, span.end))
             result = evidence.resolve(occurrence.metric)
             expected = render(result.quantity, occurrence.display, config.rounding)
+            actual = span.text
+            if getattr(doc, "format", "latex") != "latex":
+                expected = expected.replace(r"\%", "%")
+                # Keep LaTeX display parsing unchanged; normalize native percentages only here.
+                actual = actual.replace("%", r"\%")
+                comparable_expected = expected.replace("%", r"\%")
+            else:
+                comparable_expected = expected
             state.update(
                 {
                     "expected": expected,
@@ -193,7 +203,7 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                     "evidence_fingerprint": result.fingerprint,
                 }
             )
-            state["status"] = "pass" if display_matches(span.text, expected) else "mismatch"
+            state["status"] = "pass" if display_matches(actual, comparable_expected) else "mismatch"
             if state["status"] == "mismatch":
                 diagnostics.append(
                     _diagnostic(

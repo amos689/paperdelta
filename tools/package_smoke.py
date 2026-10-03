@@ -25,6 +25,7 @@ def main():
     installed = Path(paperdelta.__file__).resolve()
     assert installed.is_relative_to(Path(sys.prefix).resolve()), "Must test an installed wheel"
     assert importlib.util.find_spec("mcp") is None, "Use a clean environment without the MCP extra"
+    assert importlib.util.find_spec("docx") is None, "Use a clean core-only environment"
     scratch = repository / "build/package-smoke" / uuid.uuid4().hex
     shutil.copytree(
         repository / "examples/research-paper",
@@ -76,6 +77,12 @@ def main():
         right.pop("created_at")
         assert left == right
     assert '<html lang="zh-CN"' in (scratch / "build/changed-zh/report.html").read_text("utf-8")
+    for language in ("en", "zh-CN"):
+        word = command(
+            "demo", "--document", "docx", "--out", "missing-word-parser", language=language
+        )
+        assert word.returncode == 2 and "DOCUMENT_DEPENDENCY" in word.stderr
+        assert not (scratch / "missing-word-parser").exists()
     chinese_optional = command("mcp", language="zh-CN")
     assert chinese_optional.returncode == 2 and "MCP_NOT_INSTALLED" in chinese_optional.stderr
     for language in ("en", "zh-CN"):
@@ -90,7 +97,7 @@ def main():
         path
         for path in installed.parent.rglob("*")
         if path.is_file()
-        and path.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf"}
+        and path.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf", ".docx"}
     ]
     for path in runtime_files:
         relative = path.relative_to(installed.parent)
@@ -107,6 +114,8 @@ def main():
         "mismatches": 5,
         "html_report_written": True,
         "optional_mcp_error": "MCP_NOT_INSTALLED",
+        "docx_installed": False,
+        "optional_docx_error": "DOCUMENT_DEPENDENCY",
         "languages": ["en", "zh-CN"],
         "language_independent_stored_reports": True,
         "bundled_demo_without_extras": True,

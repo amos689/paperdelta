@@ -2,6 +2,9 @@
 
 [English](../guided-bindings.md)
 
+安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
+参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
+
 当前发行版：[0.3.0](v0.3.md)，包含[安装包演示和新工作流](workflows.md)。下文明确标注旧版本的记录保留为历史。
 
 v0.2 的 `guide` 命令在内存中构建提案，随后使用与 `bind --interactive` 相同的

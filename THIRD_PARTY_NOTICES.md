@@ -40,3 +40,10 @@ separate manuscript grant was found. Original author and copyright notices
 remain in the sources. Dependencies and prior-art probes are listed separately
 in [research notes](docs/research.md) and
 [package metadata](docs/evidence/package-metadata.json).
+
+## Optional Word dependencies
+
+The `docx` extra uses python-docx (MIT) and its lxml dependency (BSD). They are
+installed as separate packages and retain their own bundled notices. PaperDelta
+does not vendor their source. The generated Word demonstration and native test
+fixtures are original project material, separate from the third-party paper corpus.

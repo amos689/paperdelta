@@ -95,6 +95,12 @@ def _safe_changes(report: dict, selected: list[str] | None = None) -> list[dict]
                 )
             continue
         span = state["location"]
+        if span.get("format") in {"docx", "pdf"}:
+            if selected is not None:
+                raise PaperDeltaError(
+                    "DOCUMENT_READ_ONLY", msg("document.read_only", file=span["file"])
+                )
+            continue
         changes.append(
             {
                 "occurrence": name,
@@ -112,7 +118,7 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
     if (
         not isinstance(report, dict)
         or type(report.get("report_schema_version")) is not int
-        or report.get("report_schema_version") not in {1, 2}
+        or report.get("report_schema_version") not in {1, 2, 3}
     ):
         raise PaperDeltaError("REPORT_SCHEMA", msg("error.REPORT_SCHEMA"))
     config_path = report.get("config_path")
@@ -124,6 +130,15 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
     # Derive every replacement again. Edited report suggestions have no authority.
     changes = _safe_changes(current, selected)
     if not changes:
+        native = [
+            s.get("location", {})
+            for s in current["occurrences"].values()
+            if s.get("suggestion") and s.get("location", {}).get("format") in {"docx", "pdf"}
+        ]
+        if native:
+            raise PaperDeltaError(
+                "DOCUMENT_READ_ONLY", msg("document.read_only", file=native[0]["file"])
+            )
         raise PaperDeltaError("NO_SAFE_FIXES", msg("error.NO_SAFE_FIXES"))
     body = {
         "patch_schema_version": 1,

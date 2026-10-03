@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "0.3.0"
+version = "0.4.0"
 description = "Review how experiment changes affect an existing research paper."
 readme = "docs/package-description.rst"
 requires-python = ">=3.11"
@@ -12,7 +12,7 @@ license = "MIT"
 license-files = ["LICENSE"]
 authors = [{name = "amos689"}]
 maintainers = [{name = "amos689", email = "101008326+amos689@users.noreply.github.com"}]
-keywords = ["latex", "research", "reproducibility", "agents", "scientific-writing"]
+keywords = ["latex", "docx", "research", "reproducibility", "agents", "scientific-writing"]
 dependencies = [
   "pydantic>=2.10,<3",
   "PyYAML>=6.0.2,<7",
@@ -20,7 +20,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<10", "ruff>=0.12", "build>=1.2"]
+dev = ["pytest>=8,<10", "ruff>=0.12", "build>=1.2", "python-docx>=1.2,<2"]
+docx = ["python-docx>=1.2,<2"]
 spike = ["TexSoup==0.3.3"]
 mcp = ["mcp>=2.2,<3"]
 demo = ["matplotlib>=3.9,<4"]
@@ -40,6 +41,7 @@ where = ["src"]
 [tool.setuptools.package-data]
 paperdelta = [
   "locales/*.json", "assets/*.css", "assets/*.js",
+  "demo_word/*.docx", "demo_word/*.yaml", "demo_word/results/*.csv",
   "demo_project/*.yaml", "demo_project/paper/*.tex", "demo_project/results/*.csv",
   "demo_project/paper/figures/*.pdf", "demo_project/paper/figures/*.json",
   "demo_project/scripts/*.py",

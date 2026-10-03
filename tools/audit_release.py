@@ -128,7 +128,7 @@ def main():
         p
         for p in (ROOT / "src/paperdelta").rglob("*")
         if p.is_file()
-        and p.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf"}
+        and p.suffix in {".py", ".json", ".css", ".js", ".tex", ".yaml", ".csv", ".pdf", ".docx"}
     ]
     for path in core_files:
         raw = path.read_bytes()

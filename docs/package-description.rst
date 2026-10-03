@@ -32,7 +32,12 @@ MCP tools are available through ``python -m pip install 'paperdelta[mcp]'``.
 `Agent guide <https://github.com/amos689/paperdelta/blob/main/docs/agent-guide.md>`_ ·
 `Limits <https://github.com/amos689/paperdelta/blob/main/docs/rules.md>`_
 
-Checks cover declared evidence and supported static LaTeX. They do not certify
+Optional Word review: install ``paperdelta[docx]`` and run
+``paperdelta demo --document docx --out word-demo --open``. Paragraphs and ordinary
+tables use native positions; Word files are read-only and unsupported structures
+remain explicit.
+
+Checks cover declared evidence and supported LaTeX/Word structures. They do not certify
 scientific truth or infer a correct mapping from matching numbers alone. The
 original implementation is MIT licensed; separately licensed paper evaluation
 sources are excluded from the Python distributions.
@@ -64,5 +69,9 @@ sources are excluded from the Python distributions.
 `Agent 指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/agent-guide.md>`_ ·
 `限制 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/rules.md>`_
 
-检查限于已声明证据和受支持的静态 LaTeX，不认证科学正确性，也不以数字相同证明
+可选 Word 检查：安装 ``paperdelta[docx]`` 后运行
+``paperdelta --lang zh-CN demo --document docx --out word-demo --open``。
+段落和普通表格使用原生位置；Word 文件保持只读，不支持的结构会明确报告。
+
+检查限于已声明证据和受支持的 LaTeX/Word 结构，不认证科学正确性，也不以数字相同证明
 映射正确。原创实现采用 MIT 许可；单独许可的论文评测源码不包含在 Python 发行包中。

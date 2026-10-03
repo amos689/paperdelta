@@ -19,6 +19,8 @@ from paperdelta.i18n import (
     tr,
     translated,
 )
+from paperdelta.i18n import translated as translate_location
+from paperdelta.locations import location_label
 from paperdelta.onboarding import (
     accept_bindings,
     init_project,
@@ -333,7 +335,7 @@ def _main(argv: list[str]) -> int:
                 )
                 for item in result["candidates"]:
                     hint = tr("hint." + item["priority_hint"])
-                    print(f"{item['file']}:{item['line']}: {item['text']} ({hint})")
+                    print(f"{translate_location(location_label(item))}: {item['text']} ({hint})")
                 for item in result["unsupported"]:
                     print(f"{item['file']}: {item['code']}: {translated(item['message'])}")
             return 0 if not result["unsupported"] else 2

@@ -5,9 +5,9 @@ from __future__ import annotations
 import uuid
 
 from paperdelta.config import config_text, load_config
+from paperdelta.documents import PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr
-from paperdelta.latex import PaperIndex
 from paperdelta.models import Anchor, Config, CoverageExclusion, ReviewScope
 from paperdelta.patches import _write_lock
 from paperdelta.records import validate_record
@@ -126,7 +126,7 @@ def change_scope(
 
     config, identity = load_config(project, config_path)
     value = config.model_dump()
-    value["schema_version"] = 2
+    value["schema_version"] = max(2, value["schema_version"])
     if action == "set":
         value["review_scope"] = validate_record(
             ReviewScope,

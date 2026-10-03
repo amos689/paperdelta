@@ -11,9 +11,11 @@ from paperdelta import __version__
 from paperdelta.analysis import check_configuration, check_project
 from paperdelta.builder import anchor_for_span, candidate_span
 from paperdelta.config import config_text, load_config
+from paperdelta.documents import PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr, translated
-from paperdelta.latex import PaperIndex
+from paperdelta.i18n import translated as translate_location
+from paperdelta.locations import location_label
 from paperdelta.models import Anchor, Config, Hash, StrictModel, VersionOne
 from paperdelta.onboarding import scan_project
 from paperdelta.patches import _write_lock
@@ -150,7 +152,8 @@ def _derive(project, selections, config_path, baseline):
                 for item in occupied
             ):
                 raise PaperDeltaError(
-                    "BUILDER_OVERLAP", msg("builder.overlap", file=span.file, line=span.line)
+                    "BUILDER_OVERLAP",
+                    msg("document.overlap", location=location_label(span.to_dict())),
                 )
             occupied.append(span)
             anchor = anchor_for_span(document, span)
@@ -336,7 +339,7 @@ def guide_repairs(project, config_path, baseline, *, input_stream, output):
                     [
                         (
                             candidate["candidate_id"],
-                            f"{candidate['file']}:{candidate['line']} · "
+                            f"{translate_location(location_label(candidate))} · "
                             f"{candidate['context_before']} ⟦{candidate['text']}⟧"
                             f"{candidate['context_after']}",
                         )
