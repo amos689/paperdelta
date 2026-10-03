@@ -36,3 +36,8 @@ CI 配置，但只有真实成功运行才算兼容性证据。
 
 需要邮箱隐私时，在本仓库的 Git 局部配置中使用自己的 GitHub noreply 邮箱。
 不要在样例或公开日志中写入个人邮箱；第三方作者署名及许可证原文保持完整。
+
+README Logo 和静态徽章是随仓库维护的 SVG 文件。修改包版本或 Python 要求后，
+执行 `python tools/build_badges.py` 重新生成；`python tools/check_docs.py` 会核对
+它们是否与配置一致。CI 徽章展示 GitHub 的实时结果，其他徽章应与真实依赖和平台
+验证证据保持一致。

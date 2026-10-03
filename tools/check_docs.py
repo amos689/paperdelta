@@ -6,6 +6,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+from build_badges import badge_files
+
 ROOT = Path(__file__).resolve().parents[1]
 LINK = re.compile(r"!?\[[^\]\n]*\]\(([^)\n]+)\)")
 
@@ -38,6 +40,11 @@ def local_links(path):
 
 
 def check():
+    for name, contents in badge_files().items():
+        target = ROOT / name
+        assert target.is_file() and target.read_text("utf-8") == contents, (
+            f"Stale badge: {name}; run python tools/build_badges.py"
+        )
     manifest = json.loads((ROOT / "docs/translations.json").read_text("utf-8"))
     registered = set(manifest["aliases"])
     for pair in manifest["pairs"]:

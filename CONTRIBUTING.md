@@ -47,3 +47,9 @@ do not update an old lock to make a changed implementation appear reproduced.
 Use a GitHub noreply address in this repository's local Git configuration when
 contributing with email privacy. Do not place personal addresses in fixtures or
 published logs. Third-party author credits and license texts remain intact.
+
+README logos and static badges are repository-owned SVG assets. Regenerate badges
+with `python tools/build_badges.py` after changing package version or Python
+requirements; `python tools/check_docs.py` checks they match the configuration.
+The CI badge displays live GitHub results. Keep badge claims tied to declared
+dependencies and actual platform evidence.

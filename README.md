@@ -11,6 +11,20 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.2.0a1"><img src="docs/assets/badges/release.svg" alt="Alpha release 0.2.0a1"></a>
+  <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
+</p>
+
+<p align="center">
+  <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="Python 3.11 or newer"></a>
+  <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x data validation"></a>
+  <a href="docs/rules.md"><img src="docs/assets/badges/latex.en.svg" alt="Supported static LaTeX inputs"></a>
+  <a href="docs/agent-guide.md"><img src="docs/assets/badges/mcp.en.svg" alt="Optional read-only MCP tools"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="docs/assets/badges/platforms.en.svg" alt="Tested on Windows, Linux and macOS"></a>
+  <a href="docs/languages.md"><img src="docs/assets/badges/languages.en.svg" alt="English and Simplified Chinese"></a>
 </p>
 
 <p align="center">

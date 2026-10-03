@@ -11,6 +11,20 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.2.0a1"><img src="docs/assets/badges/release.svg" alt="Alpha 预览版 0.2.0a1"></a>
+  <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
+</p>
+
+<p align="center">
+  <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="需要 Python 3.11 以上版本"></a>
+  <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x 数据校验"></a>
+  <a href="docs/zh-CN/rules.md"><img src="docs/assets/badges/latex.zh-CN.svg" alt="受支持的静态 LaTeX 输入"></a>
+  <a href="docs/zh-CN/agent-guide.md"><img src="docs/assets/badges/mcp.zh-CN.svg" alt="可选的只读 MCP 工具"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="docs/assets/badges/platforms.zh-CN.svg" alt="已在 Windows、Linux、macOS 测试"></a>
+  <a href="docs/zh-CN/languages.md"><img src="docs/assets/badges/languages.zh-CN.svg" alt="支持英文与简体中文"></a>
 </p>
 
 <p align="center">

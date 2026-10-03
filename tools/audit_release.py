@@ -167,6 +167,9 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.2").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
+        p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")
+    ]
+    required += [
         p.relative_to(ROOT).as_posix()
         for case in ("ambiguous-table", "unicode-macro")
         for p in (ROOT / "examples" / case).rglob("*")
