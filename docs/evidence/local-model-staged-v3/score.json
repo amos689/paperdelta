@@ -1,0 +1,85 @@
+{
+  "accepted_bindings": 0,
+  "action_count": 15,
+  "case_count": 12,
+  "core_valid_proposals": 0,
+  "exact_reference_matches": 0,
+  "execution_sha256": "sha256:a67578ac9269d901376af84e118471a01bc4ff5a68c6fef251be023061751e9d",
+  "expected_abstentions": 0,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "identity_contract_matches": 0,
+  "independent_participants": 0,
+  "mappable_cases": 9,
+  "outcomes": {
+    "C01": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C02": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C03": {
+      "action_count": 2,
+      "status": "invalid_action",
+      "valid_action_count": 1
+    },
+    "C04": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C05": {
+      "action_count": 2,
+      "status": "invalid_action",
+      "valid_action_count": 1
+    },
+    "C06": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C07": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C08": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C09": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C10": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    },
+    "C11": {
+      "action_count": 2,
+      "status": "invalid_action",
+      "valid_action_count": 1
+    },
+    "C12": {
+      "action_count": 1,
+      "status": "invalid_action",
+      "valid_action_count": 0
+    }
+  },
+  "protocol_id": "paperdelta-staged-mapping-v3",
+  "protocol_sha256": "sha256:82e99dc6a3e55840cbf3dd5af425b498a0d8a978f0fe6cc41e06cbda9a450807",
+  "required_abstentions": 3,
+  "scope": "Author-owned synthetic tasks with a harness-managed staged draft. Validity, reference identity and abstention are separate. Identity comparison ignores only expected_count because the builder adds a mandatory count guard. All other reference fields remain exact. No independent human or general model-accuracy claim.",
+  "scored_at": "2026-10-03T05:24:15.291467+00:00",
+  "statuses": {
+    "invalid_action": 12
+  },
+  "valid_action_count": 3
+}

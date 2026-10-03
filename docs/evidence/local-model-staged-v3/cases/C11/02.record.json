@@ -1,0 +1,18 @@
+{
+  "action_index": 2,
+  "elapsed_seconds": 3.452999999994063,
+  "error": "ValidationError",
+  "finish_reason": "stop",
+  "message": "1 validation error for MetricStage\nwhere.seed\n  Input should be a valid string [type=string_type, input_value=['1', '2', '3'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+  "request_sha256": "sha256:353b1e999b7b43be08e446569b5aa59ddf056c08197709067ebdf929ed5b136d",
+  "response_sha256": "sha256:60e57eea23aa1a2a1b2b7d6ba6dd2ec95fc503559ca0a55669cec044be7aac63",
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 2652,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2796
+  },
+  "valid": false
+}

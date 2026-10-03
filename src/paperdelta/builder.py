@@ -10,14 +10,20 @@ from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
 from paperdelta.latex import PaperIndex, Span, TexDocument
 from paperdelta.models import (
+    Aggregation,
     Anchor,
+    ColumnType,
     Config,
     DerivedMetric,
+    DerivedOperation,
     Display,
+    DisplayKind,
     Hash,
     Source,
+    SourceFormat,
     SourceMetric,
     StrictModel,
+    Unit,
     VersionOne,
 )
 from paperdelta.onboarding import Additions, _merge, propose_bindings, scan_project
@@ -95,8 +101,8 @@ def add_source(
     *,
     name: str,
     path: str,
-    format: str,
-    columns: dict[str, str] | None = None,
+    format: SourceFormat,
+    columns: dict[str, ColumnType] | None = None,
     primary_key: list[str] | None = None,
 ) -> dict:
     draft, config = resume_draft(project, value)
@@ -127,8 +133,8 @@ def add_metric(
     name: str,
     source: str,
     field: str,
-    unit: str,
-    reduce: str,
+    unit: Unit,
+    reduce: Aggregation,
     where: dict[str, str] | None = None,
     expected_count: int | None = None,
     seed_column: str = "seed",
@@ -183,7 +189,7 @@ def add_derived(
     value: dict,
     *,
     name: str,
-    operation: str,
+    operation: DerivedOperation,
     left: str,
     right: str,
 ) -> dict:
@@ -252,7 +258,7 @@ def add_occurrences(
     metric: str,
     candidate_ids: list[str],
     names: list[str],
-    display_kind: str,
+    display_kind: DisplayKind,
     places: int,
     percent_symbol: bool,
     rationale: str,
@@ -324,7 +330,17 @@ def inspect_draft(project: Project, value: dict) -> dict:
     for name in draft.additions.metrics:
         metrics[name] = store.resolve(name).to_dict()
     _unchanged(project, draft.input_hashes)
+    stages = ["source"]
+    if config.sources:
+        stages.append("metric")
+    if config.metrics:
+        stages.extend(["derived", "locations"])
+    if draft.additions.occurrences or draft.additions.claims or draft.additions.figures:
+        stages.append("finish")
     return {
+        "available_stages": stages,
+        "available_sources": list(config.sources),
+        "available_metrics": list(config.metrics),
         "draft_id": draft.draft_id,
         "metrics": metrics,
         "rationale": draft.rationale,

@@ -80,3 +80,30 @@ def test_identity_comparison_ignores_only_count_guards_and_keeps_scope_unit_seed
     ]:
         candidate = {**guarded, "metric": {**guarded["metric"], key: wrong}}
         assert evaluation.without_count(candidate) != evaluation.without_count(reference)
+
+
+def test_stage_schemas_publish_allowed_values_and_start_state_has_no_invented_metrics(tmp_path):
+    from paperdelta.builder import inspect_draft
+    from paperdelta.onboarding import init_project
+
+    models = evaluation.stage_models()
+    assert models["metric"].model_json_schema()["properties"]["unit"]["enum"] == [
+        "scalar",
+        "fraction",
+        "percent",
+        "percentage_point",
+        "count",
+        "ratio",
+    ]
+    assert models["locations"].model_json_schema()["properties"]["display_kind"]["enum"] == [
+        "decimal",
+        "percent",
+        "integer",
+        "scientific",
+    ]
+    store = Project(tmp_path)
+    store.write("paper.tex", b"Result: 1.0.\n")
+    init_project(store, "paper.tex", [])
+    view = inspect_draft(store, start_draft(store))
+    assert view["available_stages"] == ["source"]
+    assert view["available_metrics"] == view["available_sources"] == []

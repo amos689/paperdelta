@@ -1,0 +1,344 @@
+{
+  "completed_at": "2026-10-03T05:24:15.021496+00:00",
+  "outcomes": {
+    "C01": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.6089999999967404,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:4e1970ba421f9458d046158f38e6c9c1c349a3ed3a2d72c1ad3ba39c3d4cd304",
+          "response_sha256": "sha256:b90da72494ba7a3651e2b2c0fc9991543ce496367fd2739c9a7c83705b4af7fd",
+          "usage": {
+            "completion_tokens": 95,
+            "prompt_tokens": 2305,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2400
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C02": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.0,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\n  CSV sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...al'}, 'primary_key': []}, input_type=dict]",
+          "request_sha256": "sha256:769d829e90351e241614a2d5054385970944033a556fa6c9aa8e75ba3b236f9d",
+          "response_sha256": "sha256:f94b1c594db5c0e36caa522b634eab5ab28a74c4119e778d65719bc089d7ee27",
+          "usage": {
+            "completion_tokens": 112,
+            "prompt_tokens": 2302,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2414
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C03": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 2.7030000000086147,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:8937c269ad6537df5dd35cb0ce18a55ce462024e059c22dd2fac6fd1d3222aa9",
+          "response_sha256": "sha256:3bfa1d064ef0a40b695c29626d908b08b6c385a1f145c0b53db5e521dd959c0e",
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 2321,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2470
+          },
+          "valid": true
+        },
+        {
+          "action_index": 2,
+          "elapsed_seconds": 2.561999999990803,
+          "error": "BUILDER_EXPECTATION",
+          "finish_reason": "stop",
+          "message": "An aggregation requires an explicitly expected record count.",
+          "request_sha256": "sha256:73e3fdf3129b5257a09ee7816339c03202d7c861660367191aaf3c2902b4da2e",
+          "response_sha256": "sha256:f6260cb8756ce8cf921448e9ba5a88c96a7c37e1c00ac2699e8b39be442c57b6",
+          "usage": {
+            "completion_tokens": 147,
+            "prompt_tokens": 2746,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2893
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C04": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 1.562000000005355,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:3d1d82bb23a626b6940013d8cabf8398c6c4352346d222a4f97d12796f6f887b",
+          "response_sha256": "sha256:3cff8fc71a44ba7911003210a846270a6b92196276ccc1211421b89da5b06e53",
+          "usage": {
+            "completion_tokens": 73,
+            "prompt_tokens": 2291,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2364
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C05": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 2.25,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:76b629b411566a8fceb261d58d9469e6fbf81ecc4584a1cc02cedf95693f5786",
+          "response_sha256": "sha256:bde2136829bcfe9b0400dcf3bf58042fbee118582b462640fad018e45334eea4",
+          "usage": {
+            "completion_tokens": 131,
+            "prompt_tokens": 2306,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2437
+          },
+          "valid": true
+        },
+        {
+          "action_index": 2,
+          "elapsed_seconds": 2.672000000005937,
+          "error": "BUILDER_EXPECTATION",
+          "finish_reason": "stop",
+          "message": "An aggregation requires an explicitly expected record count.",
+          "request_sha256": "sha256:0058a54bb6e41eb65932ce3031cb55c55caf2325b97dd69943971e04e5bc8457",
+          "response_sha256": "sha256:43bb3461d99b1741d1c08a1bdf057a3c618d078e82f3ed0168bb2e9d4532a97b",
+          "usage": {
+            "completion_tokens": 143,
+            "prompt_tokens": 2699,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2842
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C06": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.1410000000032596,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\n  CSV sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...al'}, 'primary_key': []}, input_type=dict]",
+          "request_sha256": "sha256:2f19d2f4e0f003d6ed83149a30a8095ace07205271e1a08671f532ec66a60f41",
+          "response_sha256": "sha256:efd918a09b3e1b0093f2e1ce7a0cb4392e7eeaecbaf4c19e8790837a1451aa25",
+          "usage": {
+            "completion_tokens": 108,
+            "prompt_tokens": 2320,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2428
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C07": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.562999999994645,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:5c999e965c21c3096ca95363d63add77a5628d21d94e505004a30938dd80638c",
+          "response_sha256": "sha256:dd347778b61127c724ecd33604f42153b3a1cc01cfaf6c6c8cb5318daf8e6ce6",
+          "usage": {
+            "completion_tokens": 114,
+            "prompt_tokens": 2321,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2435
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C08": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.7179999999934807,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\n  CSV sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...al'}, 'primary_key': []}, input_type=dict]",
+          "request_sha256": "sha256:cd0507f4f91e798061d9b7275b247dd8881d80a96147610c3c5d0c7449ea1cb3",
+          "response_sha256": "sha256:c1b2b1921405c875bcf51fbf76ee8fcd6d60bd5e57a1003bbfbc073387beda8b",
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 2274,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2393
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C09": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 3.062000000005355,
+          "error": "DRAFT_SOURCE",
+          "finish_reason": "stop",
+          "message": "1 validation error for Source\n  CSV sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...al'}, 'primary_key': []}, input_type=dict]",
+          "request_sha256": "sha256:840f4dd50caf5a119fd9bc679c5598c3f9fbee7dcef8d0db1187d47bb14d9a12",
+          "response_sha256": "sha256:9d3bdc1120e98b4428cedcd2635240d408336530a1069ada4f390248e43425fa",
+          "usage": {
+            "completion_tokens": 114,
+            "prompt_tokens": 2552,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2666
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C10": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.875,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:dadfa1b1f5b53a25cf363d944fd28557b4769d0c1a07589f2b6d997987cb3297",
+          "response_sha256": "sha256:a2d1f55a4a8d59a0d7c5283dd9c778ef1a4af5e38ab022382f7499f44424a9a4",
+          "usage": {
+            "completion_tokens": 105,
+            "prompt_tokens": 2294,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2399
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C11": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.3280000000086147,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:909e8d86966aef3c6236e69aa364f213ebcaba9abe694864a630ca59ab57ed75",
+          "response_sha256": "sha256:6c53a510e5b123de499ff8bd604ef8b4b05d1bbc9d5c09ac4ddbb92f30a27978",
+          "usage": {
+            "completion_tokens": 135,
+            "prompt_tokens": 2251,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2386
+          },
+          "valid": true
+        },
+        {
+          "action_index": 2,
+          "elapsed_seconds": 3.452999999994063,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for MetricStage\nwhere.seed\n  Input should be a valid string [type=string_type, input_value=['1', '2', '3'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type",
+          "request_sha256": "sha256:353b1e999b7b43be08e446569b5aa59ddf056c08197709067ebdf929ed5b136d",
+          "response_sha256": "sha256:60e57eea23aa1a2a1b2b7d6ba6dd2ec95fc503559ca0a55669cec044be7aac63",
+          "usage": {
+            "completion_tokens": 144,
+            "prompt_tokens": 2652,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2796
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    },
+    "C12": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action_index": 1,
+          "elapsed_seconds": 2.5460000000020955,
+          "error": "ValidationError",
+          "finish_reason": "stop",
+          "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+          "request_sha256": "sha256:b542ca48ce5a25dedf5c851188fca682a9f1167a2e0251176752f4e5f47ce526",
+          "response_sha256": "sha256:f148327d57d972b455d232768ea46989e1340adec3b9cfee6d5dac3378cf7d1c",
+          "usage": {
+            "completion_tokens": 94,
+            "prompt_tokens": 2306,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 2400
+          },
+          "valid": false
+        }
+      ],
+      "status": "invalid_action"
+    }
+  }
+}

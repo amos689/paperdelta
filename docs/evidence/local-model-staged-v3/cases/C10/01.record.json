@@ -1,0 +1,18 @@
+{
+  "action_index": 1,
+  "elapsed_seconds": 2.875,
+  "error": "ValidationError",
+  "finish_reason": "stop",
+  "message": "1 validation error for SourceStage\nformat\n  Input should be 'csv' or 'json' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error",
+  "request_sha256": "sha256:dadfa1b1f5b53a25cf363d944fd28557b4769d0c1a07589f2b6d997987cb3297",
+  "response_sha256": "sha256:a2d1f55a4a8d59a0d7c5283dd9c778ef1a4af5e38ab022382f7499f44424a9a4",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 2294,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2399
+  },
+  "valid": false
+}

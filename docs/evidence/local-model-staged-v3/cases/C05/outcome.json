@@ -1,0 +1,41 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.25,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:76b629b411566a8fceb261d58d9469e6fbf81ecc4584a1cc02cedf95693f5786",
+      "response_sha256": "sha256:bde2136829bcfe9b0400dcf3bf58042fbee118582b462640fad018e45334eea4",
+      "usage": {
+        "completion_tokens": 131,
+        "prompt_tokens": 2306,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2437
+      },
+      "valid": true
+    },
+    {
+      "action_index": 2,
+      "elapsed_seconds": 2.672000000005937,
+      "error": "BUILDER_EXPECTATION",
+      "finish_reason": "stop",
+      "message": "An aggregation requires an explicitly expected record count.",
+      "request_sha256": "sha256:0058a54bb6e41eb65932ce3031cb55c55caf2325b97dd69943971e04e5bc8457",
+      "response_sha256": "sha256:43bb3461d99b1741d1c08a1bdf057a3c618d078e82f3ed0168bb2e9d4532a97b",
+      "usage": {
+        "completion_tokens": 143,
+        "prompt_tokens": 2699,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2842
+      },
+      "valid": false
+    }
+  ],
+  "status": "invalid_action"
+}

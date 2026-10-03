@@ -2,24 +2,33 @@
 
 [简体中文](zh-CN/staged-model-evaluation.md)
 
-On 2026-10-03, Qwen3-8B Q4_K_M completed a separately recorded staged experiment.
-All twelve cases stopped at an invalid first action. There were no valid proposals,
-no reference identity matches and no successful required abstentions. Nothing was
-accepted. This does not establish that the model can use the staged interface reliably.
+On 2026-10-03, Qwen3-8B Q4_K_M completed two separately recorded staged experiments.
+The v2 run stopped at an invalid first action in all twelve cases. After publishing
+enum choices and available stages, v3 produced three valid actions across fifteen
+actions, but all twelve cases still ended at an invalid action. Neither run produced
+a valid proposal, reference identity match or required abstention. Nothing was
+accepted. This model has not demonstrated reliable use of the staged interface.
 
 The author-written controls constructed all nine reference mappings through the
 same builder. The three scripted abstentions are controls, not model measurements.
 Structural correctness of that builder is distinct from a model's ability to use it.
 
-| Measurement | Staged v2 run |
-| --- | ---: |
-| Cases / actions returned | 12 / 12 |
-| Valid actions / core-valid proposals | 0 / 0 |
-| Identity contract matches | 0 of 9 mappable cases |
-| Expected abstentions | 0 of 3 |
-| Retries / response repairs / accepted bindings | 0 / 0 / 0 |
-| Independent participants | 0 |
-| Human precision / confirmation time | Unmeasured |
+| Measurement | Staged v2 | Staged v3 |
+| --- | ---: | ---: |
+| Cases / actions returned | 12 / 12 | 12 / 15 |
+| Valid actions / core-valid proposals | 0 / 0 | 3 / 0 |
+| Identity contract matches | 0 of 9 | 0 of 9 |
+| Expected abstentions | 0 of 3 | 0 of 3 |
+| Retries / response repairs / accepted bindings | 0 / 0 / 0 | 0 / 0 / 0 |
+| Independent participants | 0 | 0 |
+| Human precision / confirmation time | Unmeasured | Unmeasured |
+
+The v3 [protocol](evidence/local-model-staged-v3/protocol.json),
+[score](evidence/local-model-staged-v3/score.json),
+[controls](evidence/local-model-staged-v3/controls.json) and
+[raw execution](evidence/local-model-staged-v3/) preserve the follow-up separately.
+Examples of remaining errors are an unsupported source format and an aggregation
+without an explicit expected record count. Both local servers were stopped.
 
 The [protocol](evidence/local-model-staged-v2/protocol.json) pins source bytes,
 all frozen v1 case bytes, initial prompts and model/runtime provenance. Every
@@ -52,8 +61,12 @@ controlled causal comparison of interface quality.
 
 The first run exposed an interface issue worth improving independently of this model:
 stage schemas used broad strings for several enum arguments, and the response did
-not explicitly list currently available stages. Any subsequent revision must create
-a new run and preserve this failed one.
+not explicitly list currently available stages. The v3 run tests those improvements
+with the same budgets and sampling settings. It is an observed follow-up, not an
+independent held-out study. The failed v2 run and original v1 run remain unchanged.
+
+Use commit `fb8b00e` for the exact v2 implementation. The current v3 protocol pins
+its own files; a later checkout can replay it only when those hashes match.
 
 Reproduce a matching checkout with:
 

@@ -13,6 +13,13 @@ from paperdelta.i18n import msg
 
 Scalar = StrictStr | StrictInt | Decimal
 Unit = Literal["scalar", "fraction", "percent", "percentage_point", "count", "ratio"]
+SourceFormat = Literal["csv", "json"]
+ColumnType = Literal["string", "integer", "decimal"]
+Aggregation = Literal["unique", "mean", "sum", "count"]
+DisplayKind = Literal["decimal", "percent", "integer", "scientific"]
+DerivedOperation = Literal[
+    "difference", "ratio", "percentage_point_difference", "relative_change_percent"
+]
 Identifier = Annotated[str, Field(pattern=r"^[A-Za-z][A-Za-z0-9_.-]{0,99}$")]
 Hash = Annotated[str, Field(pattern=r"^sha256:[a-f0-9]{64}$")]
 VersionOne = Annotated[int, Field(ge=1, le=1)]
@@ -35,9 +42,9 @@ class Paper(StrictModel):
 
 class Source(StrictModel):
     path: str
-    format: Literal["csv", "json"]
+    format: SourceFormat
     primary_key: list[str] = Field(default_factory=list)
-    columns: dict[str, Literal["string", "integer", "decimal"]] = Field(default_factory=dict)
+    columns: dict[str, ColumnType] = Field(default_factory=dict)
 
     @model_validator(mode="after")
     def validate_format(self) -> Self:
@@ -57,7 +64,7 @@ class SourceMetric(StrictModel):
     source: Identifier
     field: str
     where: dict[str, Scalar] = Field(default_factory=dict)
-    reduce: Literal["unique", "mean", "sum", "count"] = "unique"
+    reduce: Aggregation = "unique"
     expected_seeds: list[StrictStr | StrictInt] | None = None
     seed_column: str = "seed"
     expected_count: Annotated[int, Field(ge=1)] | None = None
@@ -74,7 +81,7 @@ class SourceMetric(StrictModel):
 
 
 class DerivedMetric(StrictModel):
-    op: Literal["difference", "ratio", "percentage_point_difference", "relative_change_percent"]
+    op: DerivedOperation
     args: Annotated[list[Identifier], Field(min_length=2, max_length=2)]
 
 
@@ -94,7 +101,7 @@ class Anchor(StrictModel):
 
 
 class Display(StrictModel):
-    kind: Literal["decimal", "percent", "integer", "scientific"] = "decimal"
+    kind: DisplayKind = "decimal"
     places: Annotated[int, Field(ge=0, le=15)] = 1
     percent_symbol: bool = True
 

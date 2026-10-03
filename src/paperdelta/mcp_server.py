@@ -8,6 +8,14 @@ from paperdelta import __version__
 from paperdelta.agent import AgentSession
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import current_language, language_context, msg, tr
+from paperdelta.models import (
+    Aggregation,
+    ColumnType,
+    DerivedOperation,
+    DisplayKind,
+    SourceFormat,
+    Unit,
+)
 from paperdelta.storage import Project
 
 
@@ -61,8 +69,8 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         draft_json: str,
         name: str,
         path: str,
-        format: str,
-        columns: dict[str, str] | None = None,
+        format: SourceFormat,
+        columns: dict[str, ColumnType] | None = None,
         primary_key: list[str] | None = None,
     ) -> dict[str, Any]:
         return call(session.add_draft_source, draft_json, name, path, format, columns, primary_key)
@@ -73,8 +81,8 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         name: str,
         source: str,
         field: str,
-        unit: str,
-        reduce: str,
+        unit: Unit,
+        reduce: Aggregation,
         where: dict[str, str] | None = None,
         expected_count: int | None = None,
         seed_column: str = "seed",
@@ -96,7 +104,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
 
     @server.tool(annotations=annotations, description=tr("agent.draft_derived"))
     def add_draft_derived(
-        draft_json: str, name: str, operation: str, left: str, right: str
+        draft_json: str, name: str, operation: DerivedOperation, left: str, right: str
     ) -> dict[str, Any]:
         return call(session.add_draft_derived, draft_json, name, operation, left, right)
 
@@ -106,7 +114,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         metric: str,
         candidate_ids: list[str],
         names: list[str],
-        display_kind: str,
+        display_kind: DisplayKind,
         places: int,
         percent_symbol: bool,
         rationale: str,

@@ -1,0 +1,24 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action_index": 1,
+      "elapsed_seconds": 2.1410000000032596,
+      "error": "DRAFT_SOURCE",
+      "finish_reason": "stop",
+      "message": "1 validation error for Source\n  CSV sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...al'}, 'primary_key': []}, input_type=dict]",
+      "request_sha256": "sha256:2f19d2f4e0f003d6ed83149a30a8095ace07205271e1a08671f532ec66a60f41",
+      "response_sha256": "sha256:efd918a09b3e1b0093f2e1ce7a0cb4392e7eeaecbaf4c19e8790837a1451aa25",
+      "usage": {
+        "completion_tokens": 108,
+        "prompt_tokens": 2320,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 2428
+      },
+      "valid": false
+    }
+  ],
+  "status": "invalid_action"
+}

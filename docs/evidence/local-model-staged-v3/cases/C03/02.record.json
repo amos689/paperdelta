@@ -1,0 +1,18 @@
+{
+  "action_index": 2,
+  "elapsed_seconds": 2.561999999990803,
+  "error": "BUILDER_EXPECTATION",
+  "finish_reason": "stop",
+  "message": "An aggregation requires an explicitly expected record count.",
+  "request_sha256": "sha256:73e3fdf3129b5257a09ee7816339c03202d7c861660367191aaf3c2902b4da2e",
+  "response_sha256": "sha256:f6260cb8756ce8cf921448e9ba5a88c96a7c37e1c00ac2699e8b39be442c57b6",
+  "usage": {
+    "completion_tokens": 147,
+    "prompt_tokens": 2746,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2893
+  },
+  "valid": false
+}
