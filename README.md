@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.5.0"><img src="docs/assets/badges/release.svg" alt="Release 0.5.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.6.0"><img src="docs/assets/badges/release.svg" alt="Release 0.6.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -55,10 +55,10 @@ A 20-second walkthrough of real demo reports, paced for readability.
 [Open the full-size animation](docs/assets/v0.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.3/report.png).
 
-**0.5.0** adds text-PDF review with original-page highlights and shared metrics across
-LaTeX, Word and PDF. It can flag a corrected source whose exported PDF is still stale.
-See the [PDF and multiple-manuscript guide](docs/pdf.md), [Word guide](docs/word.md)
-and [release and upgrade notes](docs/v0.5.md).
+**0.6.0** adds a local visual binding workbench: inspect CSV/JSON, calculate metrics,
+select LaTeX/Word/PDF positions, then preview and explicitly save individual bindings.
+Run `paperdelta studio` to start. It includes English/Chinese switching and exact draft
+restoration. See the [workbench guide](docs/studio.md) and [upgrade notes](docs/v0.6.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -97,9 +97,14 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.5.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-0.6.0-py3-none-any.whl`.
 
 ## Connect an existing paper
+
+Run `paperdelta studio` in the paper folder to create a configuration, declare evidence,
+select locations and explicitly confirm bindings in a local browser. No hand-written YAML
+is needed for this workflow. Start with the [workbench guide](docs/studio.md).
+The CLI workflow remains available:
 
 ```sh
 paperdelta init --paper paper/main.tex --data results/metrics.csv
@@ -197,7 +202,7 @@ relations. See the [PDF boundary and workflow](docs/pdf.md).
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.5.md) distinguish what each run established.
+and [current release checks](docs/v0.6.md) distinguish what each run established.
 
 ## Development
 

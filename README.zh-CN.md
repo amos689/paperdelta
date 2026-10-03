@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.5.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.5.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.6.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.6.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -53,10 +53,10 @@
 [打开原尺寸动图](docs/assets/v0.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.3/report.zh-CN.png)。
 
-**0.5.0** 增加文字型 PDF 检查、原页高亮，以及 LaTeX、Word、PDF 共享指标的多稿件
-审查，能够指出源稿已更新、导出 PDF 仍过期的情况。详见
-[PDF 与多稿件指南](docs/zh-CN/pdf.md)、[Word 指南](docs/zh-CN/word.md)和
-[发行及升级说明](docs/zh-CN/v0.5.md)。
+**0.6.0** 增加本地可视化绑定工作台：在浏览器里查看 CSV/JSON、计算指标、
+选择 LaTeX/Word/PDF 位置，预览后逐项保存，支持中英文切换和精确草稿恢复。
+运行 `paperdelta --lang zh-CN studio` 即可开始。详见
+[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v0.6.md)。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 从本版开始采用正式版本号。
 
@@ -91,9 +91,13 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-0.5.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-0.6.0-py3-none-any.whl`。
 
 ## 接入已有论文
+
+在论文目录运行 `paperdelta --lang zh-CN studio`，即可通过本地浏览器完成配置创建、
+证据声明、位置选择和明确确认，无需手写 YAML。新用户可从[工作台指南](docs/zh-CN/studio.md)开始。
+以下 CLI 流程也继续可用：
 
 ```sh
 paperdelta init --paper paper/main.tex --data results/metrics.csv
@@ -176,7 +180,7 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.5.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v0.6.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

@@ -2,6 +2,8 @@
 
 [简体中文](zh-CN/quickstart.md)
 
+**Visual onboarding:** run `paperdelta studio` to declare evidence and confirm numeric bindings in your browser. See the [workbench guide](studio.md). The full CLI / JSON tutorial follows.
+
 Word manuscripts use the same review workflow with the optional `docx` extra.
 See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
 

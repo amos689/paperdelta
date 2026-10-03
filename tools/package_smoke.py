@@ -1,12 +1,14 @@
 """Run with a clean environment's Python after installing the built wheel."""
 
 import argparse
+import http.client
 import importlib.util
 import json
 import platform
 import shutil
 import subprocess
 import sys
+import threading
 import uuid
 from datetime import UTC, datetime
 from hashlib import sha256
@@ -95,6 +97,36 @@ def main():
         demo_result = json.loads(demo.stdout)
         assert demo_result["check_exit_code"] == 1
         assert (scratch / demo_result["report"]).is_file()
+    from paperdelta.storage import Project
+    from paperdelta.studio_server import StudioServer
+
+    with StudioServer(Project(scratch)) as server:
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=10)
+            connection.request("GET", "/studio.js")
+            response = connection.getresponse()
+            assert response.status == 200 and b"draft-import" in response.read()
+            connection.close()
+            connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=10)
+            connection.request(
+                "POST",
+                "/api",
+                json.dumps({"action": "state", "language": "zh-CN"}),
+                {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + server.token,
+                    "Origin": server.origin,
+                },
+            )
+            response = connection.getresponse()
+            state = json.loads(response.read())["state"]
+            assert response.status == 200 and state["initialized"] and state["candidates"]
+            connection.close()
+        finally:
+            server.shutdown()
+            thread.join(timeout=5)
     runtime_files = [
         path
         for path in installed.parent.rglob("*")
@@ -123,6 +155,7 @@ def main():
         "languages": ["en", "zh-CN"],
         "language_independent_stored_reports": True,
         "bundled_demo_without_extras": True,
+        "installed_studio_http_and_assets_without_extras": True,
         "installed_sources_sha256": {
             path.relative_to(installed.parent).as_posix(): sha256(path.read_bytes()).hexdigest()
             for path in sorted(runtime_files)

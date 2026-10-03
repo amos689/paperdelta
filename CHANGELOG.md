@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.6.0 — local visual binding workbench
+
+- Add `studio`: initialize projects, inspect CSV/JSON, declare metrics and select paper positions in a local browser.
+- Reuse exact calculations, typed selectors, stable anchors, previews and explicit subset acceptance.
+- Add original-PDF point selection/enlargement and native Word/multiple-manuscript positions.
+- Support undo, exact draft download/restore, current report downloads and live English/Chinese switching.
+- Guard input/session revisions and back up accepted configurations; preserve read-only paper/data and MCP boundaries.
+- Add real HTTP, three-format session and six bilingual browser acceptance workflows.
+
+See the [workbench guide](docs/studio.md) and [upgrade notes](docs/v0.6.md).
+
 ## 0.5.0 — PDF and multiple-manuscript review
 
 - Add optional text-PDF parsing with original page/box positions and extraction identity.

@@ -114,3 +114,9 @@ Add both translations for a new user-facing message. Preserve placeholders and
 literal command/configuration names. Run the language tests and catalog check as
 part of the normal test suite. Original license texts and frozen evidence logs
 retain their original bytes; translate their explanatory documentation instead.
+
+## Local workbench
+
+The browser opened by `paperdelta studio` switches between English and Chinese while
+preserving explicit candidate, selector and review selections. Evidence, Decimal values
+and experiment IDs do not change with language. See the [workbench guide](studio.md).

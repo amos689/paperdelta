@@ -163,6 +163,7 @@ def main():
     ]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.py")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.cjs")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.cjs")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tests").glob("*.py")]
     translations = json.loads((ROOT / "docs/translations.json").read_text("utf-8"))
     required += [name for pair in translations["pairs"] for name in pair.values()]
@@ -171,6 +172,7 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.3").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.4").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.5").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.6").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")

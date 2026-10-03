@@ -2,6 +2,8 @@
 
 [English](../quickstart.md)
 
+**可视化接入：** 运行 `paperdelta --lang zh-CN studio`，在浏览器中声明证据和确认数字绑定；详见[工作台指南](studio.md)。以下保留完整 CLI / JSON 教程。
+
 安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
 参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
 
