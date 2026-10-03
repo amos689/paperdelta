@@ -51,6 +51,7 @@ Checking needs no model key, GPU or TeX installation.
 </p>
 
 A 20-second walkthrough of real demo reports, paced for readability.
+[Open the full-size animation](docs/assets/v0.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.3/report.png).
 
 **0.3.0** adds batch table binding, explicit numeric review scopes, traceable
