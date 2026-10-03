@@ -11,3 +11,5 @@
 *.webm binary
 # Frozen inputs and historical source snapshots require exact original bytes.
 tests/corpus/** -text
+docs/evidence/** -text
+evaluations/** -text

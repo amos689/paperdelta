@@ -1,75 +1,75 @@
-{
-  "checked_at": "2026-10-03T02:56:46.361682+00:00",
-  "cases": {
-    "research-paper": {
-      "exit_code": 0,
-      "coverage": {
-        "confirmed": 6,
-        "pass": 6,
-        "mismatch": 0,
-        "unknown": 0,
-        "candidate_numbers": 5,
-        "unbound_numbers": [],
-        "unregistered_figures": [],
-        "unsupported": []
-      },
-      "rules": []
-    },
-    "ambiguous-table": {
-      "exit_code": 2,
-      "coverage": {
-        "confirmed": 1,
-        "pass": 0,
-        "mismatch": 0,
-        "unknown": 1,
-        "candidate_numbers": 2,
-        "unbound_numbers": [
-          {
-            "file": "paper.tex",
-            "start": 93,
-            "end": 97,
-            "byte_start": 93,
-            "byte_end": 97,
-            "line": 5,
-            "column": 8,
-            "text": "84.1"
-          },
-          {
-            "file": "paper.tex",
-            "start": 109,
-            "end": 113,
-            "byte_start": 109,
-            "byte_end": 113,
-            "line": 6,
-            "column": 9,
-            "text": "84.1"
-          }
-        ],
-        "unregistered_figures": [],
-        "unsupported": []
-      },
-      "rules": [
-        "ANCHOR_AMBIGUOUS"
-      ]
-    },
-    "unicode-macro": {
-      "exit_code": 0,
-      "coverage": {
-        "confirmed": 1,
-        "pass": 1,
-        "mismatch": 0,
-        "unknown": 0,
-        "candidate_numbers": 1,
-        "unbound_numbers": [],
-        "unregistered_figures": [],
-        "unsupported": []
-      },
-      "rules": [],
-      "bom_crlf_changed_check_exit": 1,
-      "patched_check_exit": 0,
-      "outside_bytes_preserved": true,
-      "recovered_sha256": "2098ce0158d1102d881959e9af91f1a31f3f3f8bc35a1c5e89bac7d4c9d5b087"
-    }
-  },
-  "scope": "Owned fixtures, automated local validation; no independent users."
-}
+{
+  "checked_at": "2026-10-03T02:56:46.361682+00:00",
+  "cases": {
+    "research-paper": {
+      "exit_code": 0,
+      "coverage": {
+        "confirmed": 6,
+        "pass": 6,
+        "mismatch": 0,
+        "unknown": 0,
+        "candidate_numbers": 5,
+        "unbound_numbers": [],
+        "unregistered_figures": [],
+        "unsupported": []
+      },
+      "rules": []
+    },
+    "ambiguous-table": {
+      "exit_code": 2,
+      "coverage": {
+        "confirmed": 1,
+        "pass": 0,
+        "mismatch": 0,
+        "unknown": 1,
+        "candidate_numbers": 2,
+        "unbound_numbers": [
+          {
+            "file": "paper.tex",
+            "start": 93,
+            "end": 97,
+            "byte_start": 93,
+            "byte_end": 97,
+            "line": 5,
+            "column": 8,
+            "text": "84.1"
+          },
+          {
+            "file": "paper.tex",
+            "start": 109,
+            "end": 113,
+            "byte_start": 109,
+            "byte_end": 113,
+            "line": 6,
+            "column": 9,
+            "text": "84.1"
+          }
+        ],
+        "unregistered_figures": [],
+        "unsupported": []
+      },
+      "rules": [
+        "ANCHOR_AMBIGUOUS"
+      ]
+    },
+    "unicode-macro": {
+      "exit_code": 0,
+      "coverage": {
+        "confirmed": 1,
+        "pass": 1,
+        "mismatch": 0,
+        "unknown": 0,
+        "candidate_numbers": 1,
+        "unbound_numbers": [],
+        "unregistered_figures": [],
+        "unsupported": []
+      },
+      "rules": [],
+      "bom_crlf_changed_check_exit": 1,
+      "patched_check_exit": 0,
+      "outside_bytes_preserved": true,
+      "recovered_sha256": "2098ce0158d1102d881959e9af91f1a31f3f3f8bc35a1c5e89bac7d4c9d5b087"
+    }
+  },
+  "scope": "Owned fixtures, automated local validation; no independent users."
+}
