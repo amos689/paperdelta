@@ -4,8 +4,8 @@
 
 The v0.2 development version supports English (`en`) and Simplified Chinese
 (`zh-CN`) for CLI help, terminal confirmation, diagnostics, text/Markdown reports
-and MCP descriptions and explanations. The offline HTML switch and complete
-documentation pairing are still being implemented; see the [delivery ledger](v0.2-plan.md).
+and MCP descriptions and explanations. Offline HTML reports also include both
+languages. Complete documentation pairing is in progress; see the [delivery ledger](v0.2-plan.md).
 
 ## Choose a language
 
@@ -53,6 +53,14 @@ Separate server instances retain their own language. A localized MCP view is sti
 a presentation view, not a complete stored report or writable proposal.
 
 ## Scientific records and command results
+
+The report's language selector switches the same offline HTML file. Filters,
+search terms and expanded evidence remain in place; search covers both languages.
+The initial language follows the command that generated the report. No network,
+browser storage or external translation service is required. With JavaScript disabled,
+the initially selected version remains readable. Impact links reveal the corresponding
+finding and its evidence. Coverage details group by file and rule while retaining
+all occurrence counts. Unknown inputs and invalid claims appear before numeric fixes.
 
 Configuration keys, enum values, schema fields, identifiers, file paths and exact
 numeric values are language independent. Original manuscript, data and author text

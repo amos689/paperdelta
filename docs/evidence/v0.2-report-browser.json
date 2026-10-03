@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-03T04:21:05.785Z",
+  "browser": "154.0.8037.93",
+  "viewport_desktop": [
+    1365,
+    1000
+  ],
+  "viewport_mobile": [
+    375,
+    812
+  ],
+  "findings": 6,
+  "figure_included": true,
+  "filters": [
+    "file",
+    "rule",
+    "source",
+    "result-dependencies",
+    "text"
+  ],
+  "source_details_expansion": true,
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "language_switch_preserves_state": true,
+  "bilingual_search": true,
+  "evidence_navigation": true,
+  "no_javascript_readable": true,
+  "external_requests": [],
+  "mobile_horizontal_overflow": false,
+  "javascript_errors": [],
+  "scope": "Headless Chrome on this Windows host; not a multi-platform CI run.",
+  "report_sha256": "9236c72322ac19308c6534a7da1000736054eff71677e922138ed7d6b48acf57",
+  "implementation_sha256": {
+    "src/paperdelta/html_report.py": "717f8c091b0f2a813d651856ec5e8b10766b194236b2573ffb2badf813869402",
+    "src/paperdelta/assets/report.js": "0a6ed053caf5e214b1847b5f48a2d74d1a1f4874a54f914d223cb11500897e3f",
+    "src/paperdelta/assets/report.css": "b88e290989b1a1bcb7fd69f1135c0806949887437060b7f06a61e00592466e71",
+    "src/paperdelta/locales/en.json": "3f3645bc23ac876a0ddae691a1f6a393db78396f251c44be2a606239507db14c",
+    "src/paperdelta/locales/zh-CN.json": "209f341ad0657ada288dbb53f36f964b415bd742fec8b39e2f80486b6afb5047"
+  },
+  "kind": "Development checkpoint, not final v0.2 acceptance"
+}
