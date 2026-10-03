@@ -1,0 +1,532 @@
+{
+  "checked_at": "2026-10-03T02:01:05.132424+00:00",
+  "host_run": "build/glibc-validation/cd93af22529541e9b1c03645fbcf0ee4",
+  "host_result": {
+    "guest_exit_code": 0,
+    "guest_evidence_received": true,
+    "shutdown": "guest-poweroff",
+    "started_at": "2026-10-03T01:51:49.425733+00:00",
+    "finished_at": "2026-10-03T02:00:15.485471+00:00",
+    "qemu_exit_code": 0,
+    "services_closed": true
+  },
+  "resumed_from": {
+    "host_run": "build/glibc-validation/bbd335f1777f43c38bdc1527a35c0c6c",
+    "host_result": {
+      "guest_exit_code": 1,
+      "guest_evidence_received": true,
+      "shutdown": "guest-poweroff",
+      "started_at": "2026-10-03T01:38:50.160158+00:00",
+      "finished_at": "2026-10-03T01:46:47.488710+00:00",
+      "qemu_exit_code": 0,
+      "services_closed": true
+    },
+    "disk": "New qcow2 overlay; the previous installation disk was retained as its backing file.",
+    "reason": "Correct public matrix helper's POSIX virtual-environment path handling."
+  },
+  "qemu_arguments": [
+    "<checkout>\\.tools\\linux-vm\\qemu\\qemu-system-x86_64.exe",
+    "-L",
+    "share",
+    "-accel",
+    "tcg,thread=multi",
+    "-cpu",
+    "max",
+    "-m",
+    "3072",
+    "-smp",
+    "2",
+    "-display",
+    "none",
+    "-monitor",
+    "none",
+    "-no-reboot",
+    "-kernel",
+    "../alpine/boot/vmlinuz-virt",
+    "-initrd",
+    "../alpine/boot/initramfs-virt",
+    "-append",
+    "modules=loop,squashfs,sd-mod,usb-storage console=ttyS0,115200 quiet",
+    "-cdrom",
+    "../downloads/alpine-virt-3.24.2-x86_64.iso",
+    "-drive",
+    "file=../../../build/glibc-validation/cd93af22529541e9b1c03645fbcf0ee4/guest-data.qcow2,format=qcow2,if=virtio",
+    "-nic",
+    "user,model=virtio-net-pci",
+    "-chardev",
+    "socket,id=serial,host=127.0.0.1,port=56082,server=on,wait=off",
+    "-serial",
+    "chardev:serial"
+  ],
+  "download_provenance": {
+    "checked_at": "2026-10-02T20:23:23.419169+00:00",
+    "downloads": [
+      {
+        "name": "ubuntu-base-24.04.5-base-amd64.tar.gz",
+        "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+        "sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86",
+        "digest_source": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/SHA256SUMS",
+        "bytes": 30028293,
+        "verified": true
+      },
+      {
+        "name": "uv-x86_64-unknown-linux-gnu.tar.gz",
+        "url": "https://github.com/astral-sh/uv/releases/download/0.12.22/uv-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "b9980552309f09c15172b8be828555e375097f16deb459795ce7bfd200380f0b",
+        "digest_source": "https://api.github.com/repos/astral-sh/uv/releases/tags/0.12.22",
+        "bytes": 19916278,
+        "verified": true
+      }
+    ]
+  },
+  "qemu_and_kernel_provenance": {
+    "checked_at": "2026-10-02T18:56:15.922413+00:00",
+    "official_entry_points": [
+      "https://www.qemu.org/download/",
+      "https://qemu.weilnetz.de/w64/",
+      "https://www.7-zip.org/download.html",
+      "https://api.github.com/repos/ip7z/7zip/releases/tags/26.03",
+      "https://www.alpinelinux.org/downloads/"
+    ],
+    "downloads": [
+      {
+        "name": "7zr.exe",
+        "url": "https://github.com/ip7z/7zip/releases/download/26.03/7zr.exe",
+        "algorithm": "sha256",
+        "digest": "ad4c82fadcbdf93c03b4fc440f300509c7d60c5c2f4d183e35d9d70d6957037d",
+        "bytes": 602624,
+        "verified": true
+      },
+      {
+        "name": "7z2603-x64.exe",
+        "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-x64.exe",
+        "algorithm": "sha256",
+        "digest": "0859c524b8a63551848f0c246abddcb1d0b7b656b0fbfe879f8d85e61a9e6edd",
+        "bytes": 1661239,
+        "verified": true
+      },
+      {
+        "name": "qemu-w64-setup-20260811.exe",
+        "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20260811.exe",
+        "algorithm": "sha512",
+        "digest": "5bcf9eed634e8575a37b74f445af41a2fe4106da512d0c30c368301d4c105037fdfab40a5287367a28a957624cddebbc8c07e16c88ab6634f554cdf3d16bf543",
+        "bytes": 206615928,
+        "verified": true
+      },
+      {
+        "name": "alpine-virt-3.24.2-x86_64.iso",
+        "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.2-x86_64.iso",
+        "algorithm": "sha256",
+        "digest": "3ab424762af704b2c2a9e57df1dc37f982af260071504d977f2fb96822e7130b",
+        "bytes": 69206016,
+        "verified": true
+      }
+    ]
+  },
+  "submitted_scripts_sha256": {
+    "bootstrap.sh": "8113e7f0224a3547a2268ede0e34321f377b00e3d0ba54182c636d45bbdd1adc",
+    "validate.py": "36f765c596f22ed0565fe46150c8425802eee8ac6bf234d6832b3324d586a991",
+    "inputs.json": "7c63d7a261656afee89d5af769bfd672a4cfd53d0d75f67769a6f30f08185899",
+    "validate_python_matrix.py": "d7c152c6b70402840eba9b00217519c68381b9e43d24b703da5eba472f81e322"
+  },
+  "artifacts": [
+    {
+      "name": "paperdelta-0.1.0a2-py3-none-any.whl",
+      "sha256": "7cbaf7726f11418aa339e4a0684eae1d68731799b03271cedbac6e4162710b2d",
+      "bytes": 55617
+    },
+    {
+      "name": "paperdelta-0.1.0a2.tar.gz",
+      "sha256": "7755491b1574f778c5ff2dde3a8870251ba79f752086bbd96cec6dda2d7ad69a",
+      "bytes": 3046475
+    }
+  ],
+  "supplemental_files": [
+    {
+      "name": "validate_python_matrix.py",
+      "path": "tools/validate_python_matrix.py",
+      "sha256": "d7c152c6b70402840eba9b00217519c68381b9e43d24b703da5eba472f81e322",
+      "target_sha256_before": "f35e03cb5aed512d5e6454b294896dd49aa5456a4c90f74df1751e866de7839d",
+      "resume_expected_sha256": "0a18e0dc5e71111e559b0f70f267011feecface5056a9a94e142aa43f4402f9b"
+    }
+  ],
+  "installed_runtime_core_files_matched": 20,
+  "windows_harness_regression": {
+    "python": "3.11.17",
+    "tests": {
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "record": "windows-evidence.json",
+    "sanitization": [
+      {
+        "path": "windows-junit.xml",
+        "original_sha256": "35c799370523cab09b2ea2948e25b1ed12db7a2e9b896913c30cf682242ec3f4",
+        "published_sha256": "8765f182934e0797d8ddfe60238918eb8f5cea55030377545386beac6c3eda6c",
+        "transformation": "Replace only testsuite hostname with windows-local."
+      }
+    ]
+  },
+  "all_local_git_demo_scenarios_match_windows": true,
+  "owned_loopback_services_verified_closed": true,
+  "evidence_files": [
+    {
+      "path": "3.11.17-junit.xml",
+      "bytes": 20361,
+      "sha256": "229c6d2f8d77c66f17dd6002064f7bdfe4d8b07a8319fd03043d205f1a20bfd7"
+    },
+    {
+      "path": "3.11.17-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3.11.17-stdout.log",
+      "bytes": 272,
+      "sha256": "889daa5fdba7c84a37316c6a44df241f9e7d910c7af14770b6b67a785e21e5ab"
+    },
+    {
+      "path": "3.12.15-junit.xml",
+      "bytes": 20361,
+      "sha256": "da8979376f2b0a048590f0659a0404a04a33a0403f54428717e0fb9b80d15d86"
+    },
+    {
+      "path": "3.12.15-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3.12.15-stdout.log",
+      "bytes": 272,
+      "sha256": "47edd688bb910865f9207807a79f59c292e3d967dec6e5e526089815fa6517a3"
+    },
+    {
+      "path": "3.13.16-junit.xml",
+      "bytes": 20360,
+      "sha256": "eb3bde4402da3de01ef7b24264332e8ff3db97c756dbf1e77cc37f162f676b45"
+    },
+    {
+      "path": "3.13.16-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3.13.16-stdout.log",
+      "bytes": 272,
+      "sha256": "0e4c7062ee72aa8d0c0b3ee244241e52a1a6b77764926f07692589bd2e984940"
+    },
+    {
+      "path": "3.14.8-junit.xml",
+      "bytes": 20360,
+      "sha256": "746c762d7c9b2aab7c003308bd37f0893c3f7182128985971536c93c78f4abeb"
+    },
+    {
+      "path": "3.14.8-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3.14.8-stdout.log",
+      "bytes": 272,
+      "sha256": "d349a364ce692fa952c42e406defa5e83042aa4cc5a4b59ae93f9de1ff3f5e7a"
+    },
+    {
+      "path": "ci-demo.json",
+      "bytes": 2894,
+      "sha256": "bdddfdf9fbd791cac1e6b42904710de47aaad8b6c3e59fc1bff58d4cee80f37d"
+    },
+    {
+      "path": "ci-demo.log",
+      "bytes": 2910,
+      "sha256": "ed914914512071b042ec9a5580a33a32715ac05fecc67e2e4cd3fd43b6be4ba1"
+    },
+    {
+      "path": "evidence.json",
+      "bytes": 5181,
+      "sha256": "b6308790169b1d11ab33ce067509195f1eee296d5735fec023957d707497c575"
+    },
+    {
+      "path": "examples.json",
+      "bytes": 1819,
+      "sha256": "7a66eaa6136756d65304793f0f9ef8548e900b44a35fb43f38779138f82c7a9f"
+    },
+    {
+      "path": "examples.log",
+      "bytes": 1835,
+      "sha256": "e16402e61542fbcf4ff8a8211e55ca8973ef8b6ddff8cac8a847aa5e56bfbc88"
+    },
+    {
+      "path": "matrix.json",
+      "bytes": 10158,
+      "sha256": "0df62be0a80c64f3c166e404e6efc357b8e734c65db084a7bfa93fc2b54b754a"
+    },
+    {
+      "path": "matrix.log",
+      "bytes": 1271,
+      "sha256": "2edc6b9b3ecc5252f1d82496777ab26f7f942d659f36736a0226872375dbcfcd"
+    },
+    {
+      "path": "setup-core-check-3.11.log",
+      "bytes": 13868,
+      "sha256": "6cf7a16f317c479571d421b99248bdd629284848543e5d7d29f5b5a8bc56f577"
+    },
+    {
+      "path": "setup-core-check-3.12.log",
+      "bytes": 13868,
+      "sha256": "cbbaed7a48319881983111c29b55e61ed6ef3c840d5f67f1f37b583dd2c1f3b6"
+    },
+    {
+      "path": "setup-core-check-3.13.log",
+      "bytes": 13868,
+      "sha256": "510c589bdbfbd9377b63f0505009f32266ae1cbd2e6d310b4259fdcea210f0bb"
+    },
+    {
+      "path": "setup-core-check-3.14.log",
+      "bytes": 13868,
+      "sha256": "75201574f0b1d05d89abc85bb8ebeaa8c8a0ed7c74b5ce23794875b09022a267"
+    },
+    {
+      "path": "setup-core-data-change-3.11.log",
+      "bytes": 16786,
+      "sha256": "d31a0e2de5cfcb873d915220201ef98fa91bc4908c848c9f17d6be4b4e3dac1c"
+    },
+    {
+      "path": "setup-core-data-change-3.12.log",
+      "bytes": 16786,
+      "sha256": "44ee1cc0d4a1a0be2f6682e99e5149adf23f92a67bdc8f4b696fe721bf8cd8f1"
+    },
+    {
+      "path": "setup-core-data-change-3.13.log",
+      "bytes": 16786,
+      "sha256": "93c2950987c2ca258b95bb50fc5b794bbb41ed66d6f1081d00927949313dd71f"
+    },
+    {
+      "path": "setup-core-data-change-3.14.log",
+      "bytes": 16786,
+      "sha256": "80d84bd011b32678151418dcf78ecf49f5dc7201955c625b6dd7a2aba6618545"
+    },
+    {
+      "path": "setup-evidence.json",
+      "bytes": 19025,
+      "sha256": "236b0ec6a8a15a6cabb1cea4c09ab2cd028f8a90e2c3249704d158d6ae78b06e"
+    },
+    {
+      "path": "setup-find-3.11.log",
+      "bytes": 97,
+      "sha256": "1e84e3d340bd07b1f1a46eb3d9fce8faa09550a2123394952e1a235ec4231466"
+    },
+    {
+      "path": "setup-find-3.12.log",
+      "bytes": 97,
+      "sha256": "66ea9db84b860ea68fbb612094c705954c81b8a9af368c353d4b52b6a753a760"
+    },
+    {
+      "path": "setup-find-3.13.log",
+      "bytes": 97,
+      "sha256": "c4b9bbc57228fe71d1fedac4d82de6211a0c8bb853b9975075383ff59f41f32d"
+    },
+    {
+      "path": "setup-find-3.14.log",
+      "bytes": 97,
+      "sha256": "068296bd9abc2e1ae7499ae41b8197a142646aa6eefffebf579e1d4360528d28"
+    },
+    {
+      "path": "setup-install-core-3.11.log",
+      "bytes": 2931,
+      "sha256": "9454dd5b9d17d86787d71deaf62e5c1dbb32724b060d6ef11266876eae32584d"
+    },
+    {
+      "path": "setup-install-core-3.12.log",
+      "bytes": 2306,
+      "sha256": "08ab9411e74b76c67e41b3764e100b6d1f71f8498965f629f502a79ad36e0dd3"
+    },
+    {
+      "path": "setup-install-core-3.13.log",
+      "bytes": 2301,
+      "sha256": "60978e23e41d196634e884689e4bdb323d633e45506b5ef1344ccdd6cb334188"
+    },
+    {
+      "path": "setup-install-core-3.14.log",
+      "bytes": 2301,
+      "sha256": "29f0d2ffbdc9afe563c294b5dfc075a4ee86b9b2890972cc779b4eeafbca3650"
+    },
+    {
+      "path": "setup-install-extras-3.11.log",
+      "bytes": 9765,
+      "sha256": "40703ce8340e21ba19dddd590c99f369e6968fda1a226e6609db389bf93480f1"
+    },
+    {
+      "path": "setup-install-extras-3.12.log",
+      "bytes": 6805,
+      "sha256": "451d7289cda525c14ccdfcb4b7c169b80ae17348808159c515667dca07845422"
+    },
+    {
+      "path": "setup-install-extras-3.13.log",
+      "bytes": 6806,
+      "sha256": "e8c7ddfd2d0b4560b7223dee9411a489e01976fc14d8ad85771c70c9df1501c7"
+    },
+    {
+      "path": "setup-install-extras-3.14.log",
+      "bytes": 6810,
+      "sha256": "126f11505bcb00f478a3be5a9aba6b6dc22327313bfd3a831f50a1b7647b4a68"
+    },
+    {
+      "path": "setup-install-pythons.log",
+      "bytes": 676,
+      "sha256": "ad9101780acbf335fa06b0bc27a9b018793199ac6223683b9331c7f21ae55247"
+    },
+    {
+      "path": "setup-matrix.log",
+      "bytes": 524,
+      "sha256": "4269f5daf938e3e5a85c7182ab9d6b47d68607c70d5b8e3fbfa34c12abea85b4"
+    },
+    {
+      "path": "setup-optional-mcp-absent-3.11.log",
+      "bytes": 101,
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f"
+    },
+    {
+      "path": "setup-optional-mcp-absent-3.12.log",
+      "bytes": 101,
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f"
+    },
+    {
+      "path": "setup-optional-mcp-absent-3.13.log",
+      "bytes": 101,
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f"
+    },
+    {
+      "path": "setup-optional-mcp-absent-3.14.log",
+      "bytes": 101,
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f"
+    },
+    {
+      "path": "setup-pip-check-3.11.log",
+      "bytes": 46,
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883"
+    },
+    {
+      "path": "setup-pip-check-3.12.log",
+      "bytes": 46,
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883"
+    },
+    {
+      "path": "setup-pip-check-3.13.log",
+      "bytes": 46,
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883"
+    },
+    {
+      "path": "setup-pip-check-3.14.log",
+      "bytes": 46,
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883"
+    },
+    {
+      "path": "setup-python-downloads.log",
+      "bytes": 1688,
+      "sha256": "1af84f611b212e60934025a01d3e0f3090875aed970e6e5449e22673bbdf8477"
+    },
+    {
+      "path": "setup-uv-version.log",
+      "bytes": 54,
+      "sha256": "bd502c79d2a0d7b084f3f30efc6bb53ecdd84fbc2b111af15c85025e94e2242d"
+    },
+    {
+      "path": "setup-venv-3.11.log",
+      "bytes": 16,
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb"
+    },
+    {
+      "path": "setup-venv-3.12.log",
+      "bytes": 16,
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb"
+    },
+    {
+      "path": "setup-venv-3.13.log",
+      "bytes": 16,
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb"
+    },
+    {
+      "path": "setup-venv-3.14.log",
+      "bytes": 16,
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb"
+    },
+    {
+      "path": "windows-evidence.json",
+      "bytes": 2752,
+      "sha256": "5e24e8555a5dfd32464d335330924c74e6a74f806b137c6664fbfe4fcc088141"
+    },
+    {
+      "path": "windows-junit.xml",
+      "bytes": 20362,
+      "sha256": "8765f182934e0797d8ddfe60238918eb8f5cea55030377545386beac6c3eda6c"
+    },
+    {
+      "path": "windows-stdout.log",
+      "bytes": 265,
+      "sha256": "759a8f1b43a68d3a6927382edeabb32d1821d0ca4f4c733d361a9de6c80846bf"
+    },
+    {
+      "path": "windows-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "guest-setup.log",
+      "bytes": 446,
+      "sha256": "8113e7f0224a3547a2268ede0e34321f377b00e3d0ba54182c636d45bbdd1adc"
+    },
+    {
+      "path": "initial-guest-setup.log",
+      "bytes": 1505,
+      "sha256": "7df1e94cd1d90a5d469235deb976f29d67465a1c5a2b4a5ace2145e2121e01df"
+    }
+  ],
+  "earlier_attempts": [
+    {
+      "run": "7fac623eb57440148acdac7fdc286643",
+      "result": "Host stdout could not encode a partial UTF-8 progress sequence in GBK.",
+      "correction": "The host harness now uses UTF-8 stdout; raw serial bytes are retained.",
+      "product_tests_started": false,
+      "host_result": {
+        "shutdown": "owned-process-terminated",
+        "started_at": "2026-10-03T01:36:10.661667+00:00",
+        "finished_at": "2026-10-03T01:36:23.580658+00:00",
+        "qemu_exit_code": 1,
+        "services_closed": true
+      }
+    },
+    {
+      "run": "de41a27afa644115b49571cf518f3fab",
+      "result": "Automatic filesystem mount returned Invalid argument.",
+      "correction": "Explicitly load ext4 and request the ext4 filesystem for the owned disk.",
+      "product_tests_started": false,
+      "host_result": {
+        "guest_exit_code": 255,
+        "shutdown": "guest-poweroff",
+        "started_at": "2026-10-03T01:37:18.663188+00:00",
+        "finished_at": "2026-10-03T01:37:35.513437+00:00",
+        "qemu_exit_code": 0,
+        "services_closed": true
+      }
+    },
+    {
+      "run": "bbd335f1777f43c38bdc1527a35c0c6c",
+      "result": "Core-only smoke checks passed on all four versions; matrix setup rejected a POSIX venv symlink.",
+      "correction": "Preserve the invoked interpreter path and check its actual virtual-environment prefix.",
+      "full_suite_started": false,
+      "core_only_smoke_completed": true,
+      "record": "setup-evidence.json"
+    }
+  ],
+  "limits": [
+    "Ubuntu Base 24.04.5 userspace and glibc 2.39 under an Alpine 6.18.52 kernel.",
+    "Python builds are uv-managed python-build-standalone, not Ubuntu's packaged Python.",
+    "The candidate was installed noneditably; no runtime or test files were substituted.",
+    "The sole supplemental file fixes POSIX venv path handling and generalizes matrix metadata.",
+    "Local QEMU TCG, 2 virtual CPUs, 3 GiB RAM, owned ext4 virtual disk.",
+    "Not a native Ubuntu boot, remote GitHub job, macOS run, model trial or human trial.",
+    "Emulated timings are diagnostics, not performance measurements."
+  ]
+}

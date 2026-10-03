@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-03T02:04:30.200483+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-glibc/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55617,
+      "sha256": "8b0e05a444fdf8e0307f0b1f55118efb6c33856318a10d201ac53b2069a2f864"
+    },
+    {
+      "path": "build/release-candidate-glibc/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 3082392,
+      "sha256": "06bc8daafe12a2970868f15a1aecedcf3424e5a9565239e3c352239516b4820d"
+    },
+    {
+      "path": "build/release-candidate-glibc/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 341207,
+      "sha256": "dd54c4366d91531726ee18ee977c8eb3e08f6dafa9633a082d58c46afa41c515"
+    }
+  ],
+  "source_members_changed": [
+    "docs/local-validation.md",
+    "docs/progress.md",
+    "src/paperdelta.egg-info/SOURCES.txt",
+    "tools/validate_python_matrix.py"
+  ],
+  "source_members_added": [
+    "docs/evidence/linux-glibc-a2/3.11.17-junit.xml",
+    "docs/evidence/linux-glibc-a2/3.11.17-stderr.log",
+    "docs/evidence/linux-glibc-a2/3.11.17-stdout.log",
+    "docs/evidence/linux-glibc-a2/3.12.15-junit.xml",
+    "docs/evidence/linux-glibc-a2/3.12.15-stderr.log",
+    "docs/evidence/linux-glibc-a2/3.12.15-stdout.log",
+    "docs/evidence/linux-glibc-a2/3.13.16-junit.xml",
+    "docs/evidence/linux-glibc-a2/3.13.16-stderr.log",
+    "docs/evidence/linux-glibc-a2/3.13.16-stdout.log",
+    "docs/evidence/linux-glibc-a2/3.14.8-junit.xml",
+    "docs/evidence/linux-glibc-a2/3.14.8-stderr.log",
+    "docs/evidence/linux-glibc-a2/3.14.8-stdout.log",
+    "docs/evidence/linux-glibc-a2/ci-demo.json",
+    "docs/evidence/linux-glibc-a2/ci-demo.log",
+    "docs/evidence/linux-glibc-a2/evidence.json",
+    "docs/evidence/linux-glibc-a2/examples.json",
+    "docs/evidence/linux-glibc-a2/examples.log",
+    "docs/evidence/linux-glibc-a2/guest-setup.log",
+    "docs/evidence/linux-glibc-a2/initial-guest-setup.log",
+    "docs/evidence/linux-glibc-a2/matrix.json",
+    "docs/evidence/linux-glibc-a2/matrix.log",
+    "docs/evidence/linux-glibc-a2/provenance.json",
+    "docs/evidence/linux-glibc-a2/setup-core-check-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-core-check-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-core-check-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-core-check-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-core-data-change-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-core-data-change-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-core-data-change-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-core-data-change-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-evidence.json",
+    "docs/evidence/linux-glibc-a2/setup-find-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-find-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-find-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-find-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-install-core-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-install-core-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-install-core-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-install-core-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-install-extras-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-install-extras-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-install-extras-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-install-extras-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-install-pythons.log",
+    "docs/evidence/linux-glibc-a2/setup-matrix.log",
+    "docs/evidence/linux-glibc-a2/setup-optional-mcp-absent-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-optional-mcp-absent-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-optional-mcp-absent-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-optional-mcp-absent-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-pip-check-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-pip-check-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-pip-check-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-pip-check-3.14.log",
+    "docs/evidence/linux-glibc-a2/setup-python-downloads.log",
+    "docs/evidence/linux-glibc-a2/setup-uv-version.log",
+    "docs/evidence/linux-glibc-a2/setup-venv-3.11.log",
+    "docs/evidence/linux-glibc-a2/setup-venv-3.12.log",
+    "docs/evidence/linux-glibc-a2/setup-venv-3.13.log",
+    "docs/evidence/linux-glibc-a2/setup-venv-3.14.log",
+    "docs/evidence/linux-glibc-a2/windows-evidence.json",
+    "docs/evidence/linux-glibc-a2/windows-junit.xml",
+    "docs/evidence/linux-glibc-a2/windows-stderr.log",
+    "docs/evidence/linux-glibc-a2/windows-stdout.log"
+  ],
+  "source_members_removed": [],
+  "all_wheel_member_bytes_identical_to_tested_candidate": true,
+  "all_frozen_evaluation_bundle_bytes_identical": true,
+  "runtime_core_files_matched": 20,
+  "test_files_identical_to_executed_archive": 17,
+  "matrix_helper_matches_executed_supplement": true,
+  "linux_tests": [
+    {
+      "python": "3.11.17",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.12.15",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.16",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.14.8",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "windows_harness_regression": {
+    "python": "3.11.17",
+    "tests": {
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "record": "windows-evidence.json",
+    "sanitization": [
+      {
+        "path": "windows-junit.xml",
+        "original_sha256": "35c799370523cab09b2ea2948e25b1ed12db7a2e9b896913c30cf682242ec3f4",
+        "published_sha256": "8765f182934e0797d8ddfe60238918eb8f5cea55030377545386beac6c3eda6c",
+        "transformation": "Replace only testsuite hostname with windows-local."
+      }
+    ]
+  },
+  "examples_and_ci_demo_record": "docs/evidence/linux-glibc-a2/evidence.json",
+  "local_links_checked": 147,
+  "remote_github_jobs": 0,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "Archive byte-identity audit tied to retained executions; the source candidate adds documentation and evidence without another runtime or test change."
+}

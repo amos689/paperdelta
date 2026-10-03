@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+
+% === Packages ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!70!black
+}
+
+\onehalfspacing
+
+% === Title ===
+\title{Machine Learning in Quantitative Finance:\\A Systematic Review of Methods, Applications, and Open Challenges (2015--2025)}
+
+\author{
+    Akram Khan\thanks{Independent Researcher. ORCID: \href{https://orcid.org/0009-0002-7521-8648}{0009-0002-7521-8648}. Email: \href{mailto:1819ak@gmail.com}{1819ak@gmail.com}. Replication code and survey database: \href{https://github.com/ayk5511/ml-finance-survey}{github.com/ayk5511/ml-finance-survey}. SSRN: \href{https://ssrn.com/abstract=6562398}{ssrn.com/abstract=6562398}.}
+}
+
+\date{April 2026 (Revised)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper surveys 227 studies that apply machine learning to quantitative finance and were published between 2015 and 2025. The studies are organized along two axes: six application domains (return prediction, risk management, portfolio optimization, derivatives pricing, market microstructure, and alternative data) and five method families (tree-based methods, deep learning, reinforcement learning, NLP, and hybrids). Three generational shifts run through the period. Gradient-boosted trees establish themselves as the workhorse for tabular financial data (2015--2018). Attention mechanisms and transformers then displace recurrent networks (2018--2022). Large language models enter financial applications last (2022--2025). The headline takeaways are blunt. Tree-based ensembles are still hard to beat for cross-sectional return prediction. The strongest ML gains over traditional methods sit in derivatives pricing and volatility forecasting, not return prediction. Reinforcement learning for portfolio management has attracted more papers than evidence. Only about one in five studies ships replication code. We propose a Reproducibility Disclosure Score (RDS), a 0--2 rubric for quantifying disclosure quality, and apply it to a 99-paper sub-sample: mean RDS is 0.78, and only 16\% of those studies disclose both code and openly accessible data. Standardized comparison tables for each of the six domains appear in the appendix, and the full annotated 227-study database is released as supplementary material. The paper closes with ten open problems. The argument we end on is that the field's most pressing need is not bigger models, but better benchmarks, stricter reproducibility norms, and audit-grade artifacts for regulator-defensible deployment.
+
+\medskip
+\noindent\textbf{Keywords:} machine learning, quantitative finance, systematic review, deep learning, return prediction, portfolio optimization, risk management, NLP in finance
+
+\medskip
+\noindent\textbf{JEL Classification:} G11, G12, G14, G17, C45, C55
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% === Section 1: Introduction ===
+\input{sections/01_introduction}
+
+% === Section 2: Methodology ===
+\input{sections/02_methodology}
+
+% === Section 3: Taxonomy of Methods ===
+\input{sections/03_taxonomy}
+
+% === Section 4: Return Prediction ===
+\input{sections/04_return_prediction}
+
+% === Section 5: Risk Management ===
+\input{sections/05_risk_management}
+
+% === Section 6: Portfolio Optimization ===
+\input{sections/06_portfolio_optimization}
+
+% === Section 7: Derivatives Pricing ===
+\input{sections/07_derivatives}
+
+% === Section 8: Market Microstructure ===
+\input{sections/08_microstructure}
+
+% === Section 9: Alternative Data & NLP ===
+\input{sections/09_alternative_data}
+
+% === Section 10: Cross-Cutting Themes ===
+\input{sections/10_cross_cutting}
+
+% === Section 11: Open Problems ===
+\input{sections/11_open_problems}
+
+% === Section 12: Conclusion ===
+\input{sections/12_conclusion}
+
+% === References ===
+\bibliographystyle{apalike}
+\bibliography{bib/references}
+
+% === Appendix ===
+\appendix
+\input{sections/appendix_a_tables}
+
+\end{document}

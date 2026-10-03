@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+modprobe virtio_blk
+modprobe ext4
+mkdir -p /mnt/glibc
+mount -t ext4 /dev/vda /mnt/glibc
+mount --bind /dev /mnt/glibc/dev
+mount -t proc proc /mnt/glibc/proc
+mount -t sysfs sys /mnt/glibc/sys
+cp /etc/resolv.conf /mnt/glibc/etc/resolv.conf
+wget -q http://10.0.2.2:56081/validate.py -O /mnt/glibc/root/validate-resume.py
+chroot /mnt/glibc /usr/bin/env PYTHONUTF8=1 /usr/bin/python3 -u /root/validate-resume.py http://10.0.2.2:56081

@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-02T17:37:53.863816+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate/paperdelta-0.1.0a1-py3-none-any.whl",
+      "bytes": 52564,
+      "sha256": "8deffeeba04856db68f8f61b9546e812a34bf14509af4e9bfdba83d0ae098b01"
+    },
+    {
+      "path": "build/release-candidate/paperdelta-0.1.0a1.tar.gz",
+      "bytes": 2870351,
+      "sha256": "52cb7a58405a446af4bd8bedfb1e16c70e91805a744fcf2b3ec2c2cdeeb3fb59"
+    },
+    {
+      "path": "build/release-candidate/paperdelta-evaluation-0.1.0a1.zip",
+      "bytes": 264465,
+      "sha256": "def830e6856691968d071a08e54e41ad8ae6828fd05e9343c2af7292617a070d"
+    }
+  ],
+  "commands": [
+    {
+      "name": "source-archive-tests",
+      "exit_code": 0,
+      "log": "build/release-replay/source-archive-tests.log"
+    },
+    {
+      "name": "corpus-replay",
+      "exit_code": 1,
+      "log": "build/release-replay/corpus-replay.log"
+    }
+  ],
+  "source_archive_tests": 125,
+  "corpus_cases": 150,
+  "matched_expectations": 126,
+  "outcomes_match_original_development_and_first_heldout": true,
+  "scope": "Packaging/replay validation, not an additional unseen test set."
+}

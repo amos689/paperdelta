@@ -1,0 +1,12 @@
+E501 Line too long (104 > 100)
+  --> tools\build_transfer.py:43:101
+   |
+41 |         "kind": "Portable project transfer; create a new environment on the destination",
+42 |         "macos_execution_verified": False,
+43 |         "licenses": "Original source/wheel MIT; evaluation ZIP retains its separately listed licenses.",
+   |                                                                                                     ^^^^
+44 |         "files": {name: sha256(raw).hexdigest() for name, raw in sorted(files.items())},
+45 |     }
+   |
+
+Found 1 error.

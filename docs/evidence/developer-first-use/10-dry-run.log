@@ -1,0 +1,33 @@
+--- a/paper/abstract.tex
++++ b/paper/abstract.tex
+@@ -1,4 +1,4 @@
+ \begin{abstract}
+-On Local-Data, Ours achieves 84.1\% test accuracy.
+-The improvement is 3.1 percentage points.
++On Local-Data, Ours achieves 83.9\% test accuracy.
++The improvement is 2.9 percentage points.
+ \end{abstract}
+--- a/paper/appendix.tex
++++ b/paper/appendix.tex
+@@ -1,5 +1,5 @@
+ \section{Appendix}
+-Recomputed mean test accuracy: 84.1\%.
++Recomputed mean test accuracy: 83.9\%.
+ Baseline mean test accuracy: 81.0\%.
+-The aggregate gain is 3.1 percentage points.
+-Ours repeated summary: 84.1\%.
++The aggregate gain is 2.9 percentage points.
++Ours repeated summary: 83.9\%.
+--- a/paper/results.tex
++++ b/paper/results.tex
+@@ -1,7 +1,7 @@
+ \begin{tabular}{lr}
+ Model & Accuracy (\%) \\
+-Ours & 84.1 \\
++Ours & 83.9 \\
+ Baseline & 81.0 \\
+ \end{tabular}
+-Held-out test accuracy for Ours: 84.1\%.
+-Ours' gain is 3.1 percentage points.
++Held-out test accuracy for Ours: 83.9\%.
++Ours' gain is 2.9 percentage points.

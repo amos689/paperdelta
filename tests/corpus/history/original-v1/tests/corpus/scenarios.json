@@ -1,0 +1,21 @@
+{
+  "scenario_schema_version": 1,
+  "evidence_contract": "Three synthetic records with seeds 1/2/3 whose mean equals the selected literal; model=target, split=test, dataset=paper ID. Train and decoy rows are separate identities. Scalar display preserves the original literal's decimal places. These are test fixtures, not recovered experimental records.",
+  "cases": [
+    {"id": "unchanged", "expected": "pass", "purpose": "Correct predeclared mapping and display"},
+    {"id": "changed_test", "expected": "mismatch", "purpose": "Change selected test data without editing TeX"},
+    {"id": "unrelated_model", "expected": "pass", "purpose": "Equal-looking decoy model changes independently"},
+    {"id": "changed_train", "expected": "pass", "purpose": "Train results do not replace a test binding"},
+    {"id": "missing_seed", "expected": "unknown", "error": "SEED_SET", "purpose": "No silent mean over fewer records"},
+    {"id": "duplicate_key", "expected": "unknown", "error": "DUPLICATE_RECORD", "purpose": "Duplicate identities are rejected"},
+    {"id": "missing_column", "expected": "unknown", "error": "MISSING_COLUMN", "purpose": "Declared field is missing"},
+    {"id": "nonfinite", "expected": "unknown", "error": "NONFINITE_NUMBER", "purpose": "NaN cannot become scientific evidence"},
+    {"id": "empty_selection", "expected": "unknown", "error": "SEED_SET", "purpose": "An empty selected seed set is rejected"},
+    {"id": "anchor_missing", "expected": "unknown", "error": "ANCHOR_MISSING", "purpose": "Rewritten context is not silently rebound"},
+    {"id": "ambiguous_anchor", "expected": "unknown", "error": "ANCHOR_AMBIGUOUS", "purpose": "Do not select the first matching occurrence"},
+    {"id": "unsupported_macro", "expected": "unknown", "error": "UNSUPPORTED_SPAN", "purpose": "Undeclared generated content is not a literal numeric result"},
+    {"id": "low_bit_change", "expected": "pass", "purpose": "Same displayed value still has changed evidence"},
+    {"id": "patch_roundtrip", "expected": "mismatch", "purpose": "Change exactly the selected UTF-8 bytes, recheck, then recover"},
+    {"id": "stale_patch", "expected": "mismatch", "purpose": "Reject a prepared patch after any input identity changes"}
+  ]
+}

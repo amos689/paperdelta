@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-02T18:47:57.739921+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-mapping/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55480,
+      "sha256": "fead994c4e4ea5f583dd45bb01d7864b9b163ba99a52bfccfe0362cffb6236a5"
+    },
+    {
+      "path": "build/release-candidate-mapping/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 2980873,
+      "sha256": "ed36a55c998bfadc16c2d1fceb2507a035f70336fc1fced022c56e6d74af9a8c"
+    },
+    {
+      "path": "build/release-candidate-mapping/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 341137,
+      "sha256": "054f2bcb861c49003f4636f7cea2dc006bf1530f1d44891b7a6584150859100e"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "tools/run_tests.py",
+        "-q",
+        "--junitxml=build/tests.xml"
+      ],
+      "exit_code": 0,
+      "log": "build/release-replay-mapping/source-tests.log"
+    },
+    {
+      "command": [
+        "tools/validate_mapping_controls.py",
+        "--out",
+        "build/mapping-controls"
+      ],
+      "exit_code": 0,
+      "log": "build/release-replay-mapping/mapping-controls.log"
+    },
+    {
+      "command": [
+        "tools/evaluate_mappings.py",
+        "export",
+        "--out",
+        "build/mapping-inputs"
+      ],
+      "exit_code": 0,
+      "log": "build/release-replay-mapping/mapping-export.log"
+    }
+  ],
+  "source_archive_tests": {
+    "tests": 151,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_archive_scorer_controls_match": true,
+  "exported_oracle_files": 0,
+  "runtime_wheel_files_identical_to_prior_a2": true,
+  "real_text_corpus_protocol_and_inputs_identical_to_prior_a2": true,
+  "model_runs": 0,
+  "independent_participants": 0,
+  "scope": "Local artifact replay; prior real-text regression reused by exact identity."
+}

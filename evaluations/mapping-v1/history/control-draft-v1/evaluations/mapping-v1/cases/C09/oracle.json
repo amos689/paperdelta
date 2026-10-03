@@ -1,0 +1,73 @@
+{
+  "category": "same_table_values",
+  "expected_decision": "map",
+  "expected_reference_status": "pass",
+  "reason": "Bind the Ours cell in this Data-A test table, using its mean over seeds 1, 2 and 3. Table values are percentage accuracy without the percent symbol.",
+  "reference_inputs": [
+    {
+      "additions": {
+        "metrics": {
+          "target": {
+            "expected_seeds": [
+              1,
+              2,
+              3
+            ],
+            "field": "accuracy",
+            "reduce": "mean",
+            "source": "results",
+            "unit": "fraction",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "result": {
+            "anchor": {
+              "prefix": "Ours & ",
+              "suffix": " \\\\"
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": false,
+              "places": 1
+            },
+            "file": "paper/main.tex",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "results": {
+            "columns": {
+              "accuracy": "decimal",
+              "dataset": "string",
+              "model": "string",
+              "seed": "integer",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/metrics.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+      }
+    }
+  ],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "84.1",
+    "prefix": "Ours & ",
+    "suffix": " \\\\"
+  }
+}

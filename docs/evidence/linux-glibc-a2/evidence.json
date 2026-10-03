@@ -1,0 +1,167 @@
+{
+  "checked_at": "2026-10-03T01:52:00.938056+00:00",
+  "platform": "Linux-6.18.52-0-virt-x86_64-with-glibc2.39",
+  "uname": [
+    "Linux",
+    "localhost",
+    "6.18.52-0-virt",
+    "#1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48",
+    "x86_64",
+    "x86_64"
+  ],
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "execution": "Ubuntu Base chroot on ext4 in disposable Alpine-kernel QEMU TCG guest",
+  "commands": [
+    {
+      "name": "matrix",
+      "args": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "--out",
+        "build/glibc-matrix-cd93af22529541e9b1c03645fbcf0ee4"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 480.65
+    },
+    {
+      "name": "examples",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-X",
+        "utf8",
+        "tools/validate_examples.py",
+        "--out",
+        "build/glibc-examples"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 2.63
+    },
+    {
+      "name": "ci-demo",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-X",
+        "utf8",
+        "tools/demo_ci.py",
+        "--out",
+        "build/glibc-ci-demo"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 3.75
+    }
+  ],
+  "remote_github_jobs": 0,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "glibc Linux installed-wheel evidence; not a booted Ubuntu kernel or remote CI",
+  "artifacts": [
+    {
+      "name": "paperdelta-0.1.0a2-py3-none-any.whl",
+      "sha256": "7cbaf7726f11418aa339e4a0684eae1d68731799b03271cedbac6e4162710b2d",
+      "bytes": 55617
+    },
+    {
+      "name": "paperdelta-0.1.0a2.tar.gz",
+      "sha256": "7755491b1574f778c5ff2dde3a8870251ba79f752086bbd96cec6dda2d7ad69a",
+      "bytes": 3046475
+    }
+  ],
+  "supplemental_files": [
+    {
+      "name": "validate_python_matrix.py",
+      "path": "tools/validate_python_matrix.py",
+      "sha256": "d7c152c6b70402840eba9b00217519c68381b9e43d24b703da5eba472f81e322",
+      "target_sha256_before": "f35e03cb5aed512d5e6454b294896dd49aa5456a4c90f74df1751e866de7839d",
+      "resume_expected_sha256": "0a18e0dc5e71111e559b0f70f267011feecface5056a9a94e142aa43f4402f9b"
+    }
+  ],
+  "resume_from": "bbd335f1777f43c38bdc1527a35c0c6c",
+  "core_only_smoke": [
+    {
+      "python_minor": "3.11",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.12",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.13",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.14",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    }
+  ],
+  "core_only_smoke_origin": {
+    "record": "setup-evidence.json",
+    "sha256": "236b0ec6a8a15a6cabb1cea4c09ab2cd028f8a90e2c3249704d158d6ae78b06e",
+    "scope": "Actual earlier installations/smokes; not repeated after extras were installed."
+  },
+  "matrix_tests": [
+    {
+      "python": "3.11.17",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.12.15",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.16",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.14.8",
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "status": "passed",
+  "finished_at": "2026-10-03T02:00:08.799911+00:00"
+}

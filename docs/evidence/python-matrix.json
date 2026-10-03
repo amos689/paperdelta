@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-10-02T17:25:41.936318+00:00",
+  "host": "Windows-11-10.0.26200-SP0",
+  "results": [
+    {
+      "python": "3.11.17",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "implementation": "CPython",
+      "installed_package": true,
+      "versions": {
+        "paperdelta": "0.1.0a1",
+        "pydantic": "2.13.5",
+        "PyYAML": "6.0.3",
+        "pylatexenc": "2.11",
+        "mcp": "2.2.0",
+        "pytest": "9.1.1"
+      },
+      "installed_sources_sha256": {
+        "__init__.py": "e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+        "analysis.py": "68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+        "cli.py": "5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+        "config.py": "c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+        "errors.py": "908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+        "latex.py": "e35c7f082e9dee32677c2a965857326d4c5f776a73e7276d323467c64da356df",
+        "mcp_server.py": "52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+        "metrics.py": "0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+        "models.py": "3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+        "onboarding.py": "f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+        "patches.py": "c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+        "records.py": "7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+        "reports.py": "b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+        "reviews.py": "801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+        "snapshots.py": "314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+        "sources.py": "2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+        "storage.py": "6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d"
+      },
+      "exit_code": 0,
+      "junit": "build/python-matrix/3.11.17/junit.xml",
+      "tests": {
+        "tests": 125,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "seconds": 19.867
+    },
+    {
+      "python": "3.13.16",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "implementation": "CPython",
+      "installed_package": true,
+      "versions": {
+        "paperdelta": "0.1.0a1",
+        "pydantic": "2.13.5",
+        "PyYAML": "6.0.3",
+        "pylatexenc": "2.11",
+        "mcp": "2.2.0",
+        "pytest": "9.1.1"
+      },
+      "installed_sources_sha256": {
+        "__init__.py": "e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+        "analysis.py": "68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+        "cli.py": "5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+        "config.py": "c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+        "errors.py": "908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+        "latex.py": "e35c7f082e9dee32677c2a965857326d4c5f776a73e7276d323467c64da356df",
+        "mcp_server.py": "52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+        "metrics.py": "0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+        "models.py": "3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+        "onboarding.py": "f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+        "patches.py": "c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+        "records.py": "7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+        "reports.py": "b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+        "reviews.py": "801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+        "snapshots.py": "314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+        "sources.py": "2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+        "storage.py": "6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d"
+      },
+      "exit_code": 0,
+      "junit": "build/python-matrix/3.13.16/junit.xml",
+      "tests": {
+        "tests": 125,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "seconds": 18.959
+    },
+    {
+      "python": "3.14.8",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "implementation": "CPython",
+      "installed_package": true,
+      "versions": {
+        "paperdelta": "0.1.0a1",
+        "pydantic": "2.13.5",
+        "PyYAML": "6.0.3",
+        "pylatexenc": "2.11",
+        "mcp": "2.2.0",
+        "pytest": "9.1.1"
+      },
+      "installed_sources_sha256": {
+        "__init__.py": "e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+        "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+        "agent.py": "a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+        "analysis.py": "68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+        "cli.py": "5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+        "config.py": "c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+        "errors.py": "908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+        "latex.py": "e35c7f082e9dee32677c2a965857326d4c5f776a73e7276d323467c64da356df",
+        "mcp_server.py": "52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+        "metrics.py": "0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+        "models.py": "3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+        "onboarding.py": "f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+        "patches.py": "c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+        "records.py": "7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+        "reports.py": "b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+        "reviews.py": "801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+        "snapshots.py": "314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+        "sources.py": "2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+        "storage.py": "6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d"
+      },
+      "exit_code": 0,
+      "junit": "build/python-matrix/3.14.8/junit.xml",
+      "tests": {
+        "tests": 125,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "seconds": 18.196
+    }
+  ],
+  "scope": "Local Windows runs; not Linux/macOS or remote CI evidence."
+}

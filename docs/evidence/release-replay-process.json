@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-02T19:38:57.685815+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-process/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55480,
+      "sha256": "36141d1d1ecec975d5b70d439370fc291c0275c2ba8d7abc19f3a9c212d68e96"
+    },
+    {
+      "path": "build/release-candidate-process/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 3016488,
+      "sha256": "f480fd0954eab26147ebf5f4efe8d74140b916142aead3e07b97937fa9be4cf4"
+    },
+    {
+      "path": "build/release-candidate-process/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 341207,
+      "sha256": "5a4896535d11720c98f0932b5646ce2f4042300b424761ffe39bd22ba79bfda0"
+    }
+  ],
+  "comparison_base": "docs/evidence/release-replay-linux.json",
+  "all_26_wheel_member_bytes_identical": true,
+  "all_evaluation_bundle_member_bytes_identical": true,
+  "all_existing_tests_tools_examples_mapping_inputs_identical": true,
+  "source_members_changed": [
+    "docs/local-validation.md",
+    "docs/progress.md",
+    "src/paperdelta.egg-info/SOURCES.txt"
+  ],
+  "source_members_added": [
+    "docs/evidence/process-writes-linux/core-check.log",
+    "docs/evidence/process-writes-linux/core-data-change.log",
+    "docs/evidence/process-writes-linux/create-venv.log",
+    "docs/evidence/process-writes-linux/evidence.json",
+    "docs/evidence/process-writes-linux/install-core-wheel.log",
+    "docs/evidence/process-writes-linux/install-test-dependencies.log",
+    "docs/evidence/process-writes-linux/installed-identity.log",
+    "docs/evidence/process-writes-linux/junit.xml",
+    "docs/evidence/process-writes-linux/optional-mcp-absent.log",
+    "docs/evidence/process-writes-linux/pip-check.log",
+    "docs/evidence/process-writes-linux/provenance.json",
+    "docs/evidence/process-writes-linux/tests.log",
+    "docs/evidence/process-writes-linux/versions.log",
+    "docs/evidence/process-writes-windows.json",
+    "docs/evidence/process-writes-windows/3.11/junit.xml",
+    "docs/evidence/process-writes-windows/3.11/tests.log",
+    "docs/evidence/process-writes-windows/3.12/junit.xml",
+    "docs/evidence/process-writes-windows/3.12/tests.log",
+    "docs/evidence/process-writes-windows/3.13/junit.xml",
+    "docs/evidence/process-writes-windows/3.13/tests.log",
+    "docs/evidence/process-writes-windows/3.14/junit.xml",
+    "docs/evidence/process-writes-windows/3.14/tests.log",
+    "tests/test_process_writes.py"
+  ],
+  "source_members_removed": [],
+  "new_test_file": {
+    "path": "tests/test_process_writes.py",
+    "sha256": "58b9d60da430ffd310cda552e601834d06bfc814383c18e9b1b19494ef1a4805",
+    "matches_linux_and_windows_executed_bytes": true,
+    "git_clean_bytes_unchanged": true
+  },
+  "windows_full_suite": {
+    "tests": 153,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "windows_focused_python_versions": [
+    "3.11.17",
+    "3.13.16",
+    "3.14.8"
+  ],
+  "linux_prior_full_suite": {
+    "tests": 151,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "linux_additional_focused_tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "linux_full_153_test_run_claimed": false,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "Archive identity inspection linked to retained executions, not a new execution."
+}

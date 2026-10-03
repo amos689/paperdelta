@@ -1,0 +1,99 @@
+{
+  "python": "3.12.14",
+  "versions": {
+    "pylatexenc": "2.11",
+    "TexSoup": "0.3.3"
+  },
+  "cases": [
+    {
+      "case": "plain",
+      "pylatexenc_target": "84.1",
+      "byte_roundtrip": true,
+      "seconds": 0.0015405000012833625,
+      "texsoup_top_level": [
+        {
+          "text": "The result is 84.1 percent.\n",
+          "position": 0
+        }
+      ]
+    },
+    {
+      "case": "unicode_crlf",
+      "pylatexenc_target": "84.1",
+      "byte_roundtrip": true,
+      "seconds": 0.00015359999815700576,
+      "texsoup_top_level": [
+        {
+          "text": "﻿实验结果：84.1",
+          "position": 0
+        },
+        {
+          "text": "\\%",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "case": "custom_macro",
+      "pylatexenc_target": "84.1",
+      "byte_roundtrip": true,
+      "seconds": 0.00016029999824240804,
+      "texsoup_top_level": [
+        {
+          "text": "Result: ",
+          "position": 0
+        },
+        {
+          "text": "\\score{84.1}",
+          "position": 8
+        },
+        {
+          "text": ".",
+          "position": 20
+        }
+      ]
+    },
+    {
+      "case": "nested_format",
+      "pylatexenc_target": "84.1",
+      "byte_roundtrip": true,
+      "seconds": 0.00016089999917312525,
+      "texsoup_top_level": [
+        {
+          "text": "Result: ",
+          "position": 0
+        },
+        {
+          "text": "\\textbf{\\emph{84.1}}",
+          "position": 8
+        },
+        {
+          "text": ".",
+          "position": 28
+        }
+      ]
+    }
+  ],
+  "included_files": [
+    "paper/main.tex",
+    "paper/abstract.tex",
+    "paper/results.tex",
+    "paper/appendix.tex"
+  ],
+  "candidate_values": {
+    "paper/main.tex": [],
+    "paper/abstract.tex": [
+      "84.1"
+    ],
+    "paper/results.tex": [
+      "84.1",
+      "81.0",
+      "3.1"
+    ],
+    "paper/appendix.tex": [
+      "84.1"
+    ]
+  },
+  "selection": "pylatexenc: typed node spans and explicit macro specifications",
+  "limitations": "Small authored cases; not a real-paper coverage benchmark. Both parsers parsed all four cases."
+}

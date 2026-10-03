@@ -1,0 +1,29 @@
+Processing ./paperdelta-0.1.0a2-py3-none-any.whl
+Collecting pydantic<3,>=2.10 (from paperdelta==0.1.0a2)
+  Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting PyYAML<7,>=6.0.2 (from paperdelta==0.1.0a2)
+  Downloading pyyaml-6.0.3-cp314-cp314-musllinux_1_2_x86_64.whl.metadata (2.4 kB)
+Collecting pylatexenc<3,>=2.11 (from paperdelta==0.1.0a2)
+  Downloading pylatexenc-2.11-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.10->paperdelta==0.1.0a2)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic<3,>=2.10->paperdelta==0.1.0a2)
+  Downloading pydantic_core-2.46.5-cp314-cp314-musllinux_1_1_x86_64.whl.metadata (6.6 kB)
+Collecting typing-extensions>=4.14.1 (from pydantic<3,>=2.10->paperdelta==0.1.0a2)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic<3,>=2.10->paperdelta==0.1.0a2)
+  Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.5-cp314-cp314-musllinux_1_1_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 21.4 MB/s  0:00:00
+Downloading pylatexenc-2.11-py2.py3-none-any.whl (137 kB)
+Downloading pyyaml-6.0.3-cp314-cp314-musllinux_1_2_x86_64.whl (789 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 789.2/789.2 kB 21.9 MB/s  0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Installing collected packages: pylatexenc, typing-extensions, PyYAML, annotated-types, typing-inspection, pydantic-core, pydantic, paperdelta
+
+Successfully installed PyYAML-6.0.3 annotated-types-0.8.0 paperdelta-0.1.0a2 pydantic-2.13.5 pydantic-core-2.46.5 pylatexenc-2.11 typing-extensions-4.16.0 typing-inspection-0.4.4
+
+--- STDERR ---

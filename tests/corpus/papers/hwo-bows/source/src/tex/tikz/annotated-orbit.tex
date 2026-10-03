@@ -1,0 +1,137 @@
+\documentclass[10pt, crop, margin=0.5mm, dvipsnames]{standalone}
+
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+\usepackage{tikz}
+\usetikzlibrary{
+    calc,
+    positioning,
+    shapes,
+}
+
+\usepackage{xcolor}
+
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Define command for the "eye" symbol
+    \newcommand*\lateraleye{%
+       \scalebox{0.15}{
+    \tikzset{every picture/.style={line width=0.75pt}}
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    \draw  [line width=1.5]  (300,100.33) .. controls (326,122) and (352,135) .. (378,139.33) .. controls (352,143.67) and (326,156.67) .. (300,178.33) ;
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (308.94,116.33) .. controls (313.87,116.33) and (317.86,125.51) .. (317.85,136.83) .. controls (317.84,148.15) and (313.84,157.33) .. (308.91,157.33) .. controls (303.99,157.32) and (300,148.14) .. (300.01,136.82) .. controls (300.02,125.5) and (304.02,116.32) .. (308.94,116.33) -- cycle ;
+    \draw  [draw opacity=0][line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) -- (331.14,139.55) -- cycle ; \draw  [line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (304.43,124.2) .. controls (306.09,124.25) and (307.32,128.01) .. (307.18,132.6) .. controls (307.05,137.19) and (305.59,140.88) .. (303.93,140.83) .. controls (302.27,140.78) and (301.03,137.02) .. (301.17,132.43) .. controls (301.31,127.83) and (302.76,124.15) .. (304.43,124.2) -- cycle ;
+    \end{tikzpicture}
+    }\,}
+
+    % Command for planet dayside
+    % Arguments: center, radius, color, rotation (-180,...,180)
+    \newcommand\dayside[4]
+    {%
+      \ifnum #4 > 0
+        \pgfmathsetmacro\lb{ #2} % left  arc, horizontal axis
+        \pgfmathsetmacro\rb{ #2*(90-#4)/90} % right arc, horizontal axis
+      \else
+        \pgfmathsetmacro\lb{-#2*(90+#4)/90} % left  arc, horizontal axis
+        \pgfmathsetmacro\rb{-#2} % right arc, horizontal axis
+      \fi
+      \draw[thick,#3,fill=white] #1 circle (#2);
+      \fill[#3,opacity=0.75] ($#1+(0,#2)$) arc (90:270:\lb cm and #2 cm) arc (270:90:\rb cm and #2 cm);
+    }
+
+    % Define color scheme
+    \definecolor{CBF1}{HTML}{EE6677} % blue
+    \definecolor{CBF2}{HTML}{CCBB44} % orange
+    \definecolor{CBF3}{HTML}{228833} % red
+    \definecolor{CBF4}{HTML}{66CCEE} % purple
+
+    % Background (to center stuff)
+    \draw [fill=white, draw=none] (-3.3, 0) rectangle (3.3, 0);
+
+    % Plot what's blocked by the coronagraph
+    \draw [fill=black!10, draw=none] (-1, -4.5) rectangle (1, 4.5);
+    \node [align=center, black!30, font=\small] at (0, 5) {Blocked by\\ the coronagraph};
+
+    % Define radius
+    \def\radius{3.5}
+
+    % Command for arc with phase angle convention
+    \def\phasearc[#1](#2)(#3:#4:#5){
+        \begin{scope}[xscale=-1]
+            \draw[#1, rotate=90] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);
+        \end{scope}
+    }
+    \newcommand{\phasenode}[3]{
+        \node [#2, anchor=south, font=\small, rotate=-#1] at (90 - #1:\radius+0.3) {#3};
+        \draw [#2, ultra thick] (90 - #1:\radius) -- (90 - #1:\radius+0.3);
+    }
+
+    % Color-code the orbit
+
+    % Glories: (0, 5, 10)
+    \phasearc [CBF1, line width=3mm](0, 0)(0:10:\radius);
+    \phasearc [CBF1, line width=3mm](0, 0)(0:-10:\radius);
+    \phasenode{5}{CBF1}{Glories};
+
+    % Rainbow: (22, 42, 63)
+    \phasearc [CBF2, line width=3mm](0, 0)(22:63:\radius);
+    \phasearc [CBF2, line width=3mm](0, 0)(-22:-63:\radius);
+    \phasenode{42}{CBF2}{Rainbows};
+
+    % Rayleigh: (50, 70, 110)
+    \phasearc [CBF3, line width=3mm](0, 0)(50:110:\radius);
+    \phasearc [CBF3, line width=3mm](0, 0)(-50:-110:\radius);
+    \phasenode{70}{CBF3}{Rayleigh};
+
+    % Overlap between rainbows and Rayleigh
+    \phasearc [CBF2, dash pattern=on 1.5pt off 1.5pt, dash phase=1.4pt, line width=3mm](0, 0)(50:63:\radius);
+    \phasearc [CBF2, dash pattern=on 1.5pt off 1.5pt, dash phase=1.4pt, line width=3mm](0, 0)(-50:-63:\radius);
+
+    % Glint: (130, 150, 170)
+    \phasearc [CBF4, line width=3mm](0, 0)(130:170:\radius);
+    \phasearc [CBF4, line width=3mm](0, 0)(-130:-170:\radius);
+    \phasenode{150}{CBF4}{Ocean glint};
+
+    % Plot the orbit
+    \draw [dotted, black, thick] (0, 0) circle (\radius);
+
+    % Star, planet position, and observer
+    \node [star, fill=Dandelion, star points=5, inner sep=1mm] (star) (star) at (0, 0) {};
+    \node [Dandelion, right=0.5mm of star] {Star};
+    \node [] (planet) at (135:\radius+0.2) {};
+    \node [] (seclipse) at (90:\radius) {};
+    \node [black, left=1mm of planet.west] {planet};
+    \node [circle, anchor=center, align=center, rotate=-90, inner sep=0mm] (observer) at (0, -6) {\lateraleye};
+    \node [black, anchor=east, xshift=-2mm] at (observer) {Observer};
+
+    % Plot some lines
+    % \draw [shorten <= 1mm, shorten >= 3mm, densely dashed] (star) -- node [pos=0.45, font=\scriptsize, below=0mm, rotate=-45] {semi-major axis} (-45:\radius);
+    \draw [shorten >= 5mm, shorten <= 2mm, gray] (star) -- (planet);
+    \draw [shorten >= 3mm, shorten <= 2mm, gray] (star) -- (seclipse);
+    \draw [shorten >= 1mm, shorten <= 2mm, gray] (star) -- (observer);
+    \begin{scope}[yshift=-5cm]
+        \draw [white, thick] (0, 0) -- (0, 0.1);
+        \draw [gray] (-0.2, -0.1) -- (0.2, 0.1);
+        \draw [gray] (-0.2, 0) -- (0.2, 0.2);
+    \end{scope}
+
+
+    % Plot planets (daysides)
+    \foreach\i in {-180,-135,...,180} {
+        \dayside{(\i+90:\radius)}{0.3}{black}{\i};
+    }
+
+    % Plot the scattering angle in red
+    \draw [draw=red, thick, shorten >= 1mm, shorten <= 1mm, <->] ($(0, 0)+({1.2*cos(135)},{1.2*sin(135)})$) arc (135:270:1.2);
+    \node [red] at (202.5:0.9) {$\varphi$};
+
+    % Plot the phase angle in blue
+    \draw [draw=blue, thick, shorten >= 1mm, shorten <= 1mm, <->] ($(0, 0)+({1.2*cos(90)},{1.2*sin(90)})$) arc (90:135:1.2);
+    \node [blue] at (112.5:0.9) {$\alpha$};
+
+\end{tikzpicture}
+\end{document}

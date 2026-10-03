@@ -1,0 +1,28 @@
+{
+  "identities": {
+    "src/paperdelta/__init__.py": "sha256:e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+    "src/paperdelta/__main__.py": "sha256:47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/agent.py": "sha256:a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+    "src/paperdelta/analysis.py": "sha256:68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+    "src/paperdelta/cli.py": "sha256:5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+    "src/paperdelta/config.py": "sha256:c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+    "src/paperdelta/errors.py": "sha256:908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+    "src/paperdelta/latex.py": "sha256:e35c7f082e9dee32677c2a965857326d4c5f776a73e7276d323467c64da356df",
+    "src/paperdelta/mcp_server.py": "sha256:52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+    "src/paperdelta/metrics.py": "sha256:0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+    "src/paperdelta/models.py": "sha256:3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+    "src/paperdelta/onboarding.py": "sha256:f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+    "src/paperdelta/patches.py": "sha256:c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+    "src/paperdelta/records.py": "sha256:7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+    "src/paperdelta/reports.py": "sha256:b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+    "src/paperdelta/reviews.py": "sha256:801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+    "src/paperdelta/snapshots.py": "sha256:314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+    "src/paperdelta/sources.py": "sha256:2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+    "src/paperdelta/storage.py": "sha256:6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d",
+    "tests/corpus/annotations.json": "sha256:705f7bb906756d44d62e13f6960df5eb8fb71a7bf498bdc5d167d093a02915d5",
+    "tests/corpus/manifest.json": "sha256:4ac44f0bab71cbcb3c1473a339902d0a3414fd25b2398431203ef90c3fe7b72b",
+    "tests/corpus/scenarios.json": "sha256:0de52467d40e4de4e3ab0fdaafe72d5e9ecb1e7d3e43686de7232c16c16edf8f",
+    "tools/evaluate_corpus.py": "sha256:218fd0692c733e0f596854312e2904ce726e6f611aa78911701dfbc9a62c4702"
+  },
+  "locked_at": "2026-10-02T16:33:57.716725+00:00"
+}

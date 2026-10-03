@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-02T17:39:42.286076+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-v2/paperdelta-0.1.0a1-py3-none-any.whl",
+      "bytes": 52564,
+      "sha256": "87dfb1db4767986c80737b7a9a13565cddb8c160c8fc41cf2972451549018ff7"
+    },
+    {
+      "path": "build/release-candidate-v2/paperdelta-0.1.0a1.tar.gz",
+      "bytes": 2870956,
+      "sha256": "b8a1d3ec174a1cc602042cc2b66996e01284e2132c61f2eedae13f4a2e22f9f5"
+    },
+    {
+      "path": "build/release-candidate-v2/paperdelta-evaluation-0.1.0a1.zip",
+      "bytes": 264465,
+      "sha256": "81a224fcb6ad24d85d67fa9010e40b6c81a337bb09a39e86eaea62ae04d9b76e"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0a1",
+    "requires_python": ">=3.11",
+    "license_expression": "MIT",
+    "extras": [
+      "dev",
+      "spike",
+      "mcp",
+      "demo"
+    ],
+    "requirements": [
+      "pydantic<3,>=2.10",
+      "PyYAML<7,>=6.0.2",
+      "pylatexenc<3,>=2.11",
+      "pytest<10,>=8; extra == \"dev\"",
+      "ruff>=0.12; extra == \"dev\"",
+      "build>=1.2; extra == \"dev\"",
+      "TexSoup==0.3.3; extra == \"spike\"",
+      "mcp<3,>=2.2; extra == \"mcp\"",
+      "matplotlib<4,>=3.9; extra == \"demo\""
+    ]
+  },
+  "wheel_files": 25,
+  "sdist_files": 119,
+  "evaluation_bundle_files": 61,
+  "evaluation_license_expression": "MIT AND CC-BY-4.0 AND CC-BY-SA-4.0",
+  "core_source_files_match_checkout": 19,
+  "required_support_files_match_checkout": 58,
+  "corpus": {
+    "papers": 10,
+    "files": 48,
+    "bytes": 650293,
+    "every_retained_file_digest_matches": true,
+    "license_notices_present": true
+  },
+  "frozen_protocol_identity_count": 23,
+  "wheel_record_verified": true,
+  "excluded": [
+    "virtual environments",
+    "scratch trees",
+    "transactions",
+    "native executables"
+  ],
+  "scope": "Content and metadata inspection of these exact locally built artifacts."
+}

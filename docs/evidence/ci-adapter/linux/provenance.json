@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-10-02T20:06:03.335140+00:00",
+  "base_provenance": "docs/evidence/linux-alpine-a2/provenance.json",
+  "host_result": {
+    "guest_exit_code": 0,
+    "guest_evidence_received": true,
+    "shutdown": "guest-poweroff",
+    "started_at": "2026-10-02T19:59:14.932828+00:00",
+    "finished_at": "2026-10-02T20:01:35.125087+00:00",
+    "qemu_exit_code": 0,
+    "services_closed": true
+  },
+  "loopback_ports_verified_closed": true,
+  "supplemental_files": [
+    {
+      "name": "ci_check.py",
+      "path": "tools/ci_check.py",
+      "sha256": "46e616ab1092ad62b8d41d1bcc41cf61e5bca92f604691a10726aeecfbc70625",
+      "bytes": 13752,
+      "target_sha256_before": "90841b797c5ec0943c3549558590d19d57383512f8f8218a9f09cc4432f0f3ba"
+    },
+    {
+      "name": "test_ci_wrapper.py",
+      "path": "tests/test_ci_wrapper.py",
+      "sha256": "8b05e14f480fb515ab2c30fb43322e6bc74c09a90b3cc5c3b1ff78dfab9a0878",
+      "bytes": 10340,
+      "target_sha256_before": "b12f3e6ce1a617171003038ed723e207bc48713a0b4a664ee0dfff3a5ab11250"
+    }
+  ],
+  "method": "Verified replacement of the CI helper and test in the old source archive; core unchanged",
+  "validation_runner_sha256": "8da03a19db21e39fd8feaef41859f060e34600b334783f2be9fd25f134e9fe67",
+  "guest_evidence_bundle_sha256": "41c7138df342f193923adf29830ba587952e3ef42e79aef820bf5b83250f8630",
+  "scope": "Ten focused Linux tests; not a new full-suite or remote workflow run"
+}

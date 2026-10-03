@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-10-02T20:13:29.535688+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-ci/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55617,
+      "sha256": "7cbaf7726f11418aa339e4a0684eae1d68731799b03271cedbac6e4162710b2d"
+    },
+    {
+      "path": "build/release-candidate-ci/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 3046475,
+      "sha256": "7755491b1574f778c5ff2dde3a8870251ba79f752086bbd96cec6dda2d7ad69a"
+    },
+    {
+      "path": "build/release-candidate-ci/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 341207,
+      "sha256": "a981323b436217ca1aacdffe4abac2cc876963eaec70db32fe855dae5b79e0a6"
+    }
+  ],
+  "source_members_changed": [
+    "MANIFEST.in",
+    "PKG-INFO",
+    "README.md",
+    "docs/ci.md",
+    "docs/local-validation.md",
+    "docs/progress.md",
+    "src/paperdelta.egg-info/PKG-INFO",
+    "src/paperdelta.egg-info/SOURCES.txt",
+    "tests/test_ci_wrapper.py",
+    "tools/audit_release.py",
+    "tools/ci_check.py"
+  ],
+  "source_members_added": [
+    "docs/evidence/ci-adapter/actionlint.json",
+    "docs/evidence/ci-adapter/changed-declarations/ci-context.json",
+    "docs/evidence/ci-adapter/changed-declarations/ci-summary.md",
+    "docs/evidence/ci-adapter/changed-declarations/report.json",
+    "docs/evidence/ci-adapter/changed-declarations/report.md",
+    "docs/evidence/ci-adapter/data-only/ci-context.json",
+    "docs/evidence/ci-adapter/data-only/ci-summary.md",
+    "docs/evidence/ci-adapter/data-only/report.json",
+    "docs/evidence/ci-adapter/data-only/report.md",
+    "docs/evidence/ci-adapter/evidence.json",
+    "docs/evidence/ci-adapter/linux/core-check.log",
+    "docs/evidence/ci-adapter/linux/core-data-change.log",
+    "docs/evidence/ci-adapter/linux/create-venv.log",
+    "docs/evidence/ci-adapter/linux/evidence.json",
+    "docs/evidence/ci-adapter/linux/install-core-wheel.log",
+    "docs/evidence/ci-adapter/linux/install-test-dependencies.log",
+    "docs/evidence/ci-adapter/linux/installed-identity.log",
+    "docs/evidence/ci-adapter/linux/junit.xml",
+    "docs/evidence/ci-adapter/linux/optional-mcp-absent.log",
+    "docs/evidence/ci-adapter/linux/pip-check.log",
+    "docs/evidence/ci-adapter/linux/provenance.json",
+    "docs/evidence/ci-adapter/linux/tests.log",
+    "docs/evidence/ci-adapter/linux/versions.log",
+    "docs/evidence/ci-adapter/scenarios.json",
+    "docs/evidence/ci-adapter/windows/3.11.log",
+    "docs/evidence/ci-adapter/windows/3.11.xml",
+    "docs/evidence/ci-adapter/windows/3.12.xml",
+    "docs/evidence/ci-adapter/windows/3.13.log",
+    "docs/evidence/ci-adapter/windows/3.13.xml",
+    "docs/evidence/ci-adapter/windows/3.14.log",
+    "docs/evidence/ci-adapter/windows/3.14.xml",
+    "docs/evidence/ci-adapter/windows/evidence.json",
+    "examples/ci/paper-check.yml",
+    "tools/demo_ci.py"
+  ],
+  "source_members_removed": [],
+  "wheel_members_changed": [
+    "paperdelta-0.1.0a2.dist-info/METADATA",
+    "paperdelta-0.1.0a2.dist-info/RECORD"
+  ],
+  "wheel_changes_reason": "README description and its RECORD digest; all 20 core files identical",
+  "all_frozen_evaluation_bundle_bytes_identical": true,
+  "adapter_and_test_bytes_match_windows_and_linux_runs": true,
+  "windows_full_suite": {
+    "tests": 162,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "linux_focused_tests": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_full_linux_suite_run_claimed": false,
+  "source_archive_demo": {
+    "exit_code": 0,
+    "scenarios_match": true,
+    "used_noneditable_core_only_environment": true,
+    "installed_core_files_matched": 20,
+    "case_exit_codes": {
+      "changed-declarations": 0,
+      "data-only": 1
+    }
+  },
+  "remote_github_jobs": 0,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "Archive identities, retained test evidence and a new extracted-source demo replay"
+}

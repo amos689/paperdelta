@@ -1,0 +1,622 @@
+{
+  "preview": {
+    "baseline": null,
+    "changes": [],
+    "claims": {},
+    "config_fingerprint": "sha256:236b11de2f1a476c6aaf07937ac2a47df5ec98edd4cfcf15ccac365e518fae8d",
+    "config_path": "paperdelta.yaml",
+    "coverage": {
+      "candidate_numbers": 10,
+      "confirmed": 10,
+      "mismatch": 0,
+      "pass": 10,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "created_at": "2026-10-03T02:34:05.055212+00:00",
+    "diagnostics": [],
+    "exit_code": 0,
+    "figures": {},
+    "impact_groups": [
+      {
+        "change": "unavailable",
+        "claims": [],
+        "figures": [],
+        "metric": "baseline",
+        "metrics": [
+          "baseline",
+          "gain"
+        ],
+        "occurrences": [
+          "abstract_gain",
+          "appendix_baseline",
+          "appendix_gain",
+          "body_gain",
+          "table_baseline"
+        ],
+        "sources": [
+          "results/metrics.csv"
+        ]
+      },
+      {
+        "change": "unavailable",
+        "claims": [],
+        "figures": [],
+        "metric": "ours",
+        "metrics": [
+          "gain",
+          "ours"
+        ],
+        "occurrences": [
+          "abstract_accuracy",
+          "abstract_gain",
+          "appendix_accuracy",
+          "appendix_gain",
+          "appendix_repeat",
+          "body_accuracy",
+          "body_gain",
+          "table_ours"
+        ],
+        "sources": [
+          "results/metrics.csv"
+        ]
+      }
+    ],
+    "input_hashes": {
+      "paper/abstract.tex": "sha256:6e91f6859d0dc8a0426e77a12f1474e95a56ffc88fdac2ff9f9d361a2cb09017",
+      "paper/appendix.tex": "sha256:3bfbd01914820823becb7cca2fa69e0924c0a25ac839f1f90f1bc905895daa74",
+      "paper/main.tex": "sha256:da7988c87b221f325847f20cf32153a3441bda9634ad1adade5d3860246b5af0",
+      "paper/results.tex": "sha256:2080da04da6334b35f378d53fa8948e51956b9ed87a4df50fc61ebd74a088c6e",
+      "paperdelta.yaml": "sha256:033ad60cab79726bae7a8e90731bfde2dfe8246c06e432593f2dd2e470f94854",
+      "results/metrics.csv": "sha256:3f8ee38fc817fd203d77a0a87e4ef12eb9a6f1358d47faa8f63646bc0a16d723"
+    },
+    "metrics": {
+      "baseline": {
+        "definition": {
+          "expected_count": null,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "runs",
+          "unit": "fraction",
+          "where": {
+            "dataset": "Local-Data",
+            "model": "Baseline",
+            "split": "test"
+          }
+        },
+        "definition_fingerprint": "sha256:378955151ce8c5eb4175cef61c0a334e2fc1ed7f9994461c4a6a9d660b9b3284",
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 5
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 6
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 7
+              }
+            ],
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": 0.808
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": 0.810
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": 0.812
+              }
+            ],
+            "reduce": "mean",
+            "source": "runs",
+            "where": {
+              "dataset": "Local-Data",
+              "model": "Baseline",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:59da1f5c9c8e726063ed06d7446df1959e46939162136321cf8e8263d866ba72",
+        "status": "ok",
+        "unit": "fraction",
+        "value": "0.810"
+      },
+      "gain": {
+        "definition": {
+          "args": [
+            "ours",
+            "baseline"
+          ],
+          "op": "percentage_point_difference"
+        },
+        "definition_fingerprint": "sha256:6521ddafb2384027eccaa8402a0d0425e2d70aa1cf54099fdcab73d709668e7e",
+        "dependencies": [
+          "ours",
+          "baseline"
+        ],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": 0.839
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": 0.841
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": 0.843
+              }
+            ],
+            "reduce": "mean",
+            "source": "runs",
+            "where": {
+              "dataset": "Local-Data",
+              "model": "Ours",
+              "split": "test"
+            }
+          },
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 5
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 6
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 7
+              }
+            ],
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": 0.808
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": 0.810
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Baseline",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": 0.812
+              }
+            ],
+            "reduce": "mean",
+            "source": "runs",
+            "where": {
+              "dataset": "Local-Data",
+              "model": "Baseline",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:8f7e271499e8912180b67d225d4ea0eb64a4cd47a55bc83a3dc25589a6344694",
+        "status": "ok",
+        "unit": "percentage_point",
+        "value": "3.100"
+      },
+      "ours": {
+        "definition": {
+          "expected_count": null,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "runs",
+          "unit": "fraction",
+          "where": {
+            "dataset": "Local-Data",
+            "model": "Ours",
+            "split": "test"
+          }
+        },
+        "definition_fingerprint": "sha256:d74604c7b2deb008bd642c089e880bb758a6269630a155cc04c810cc052061b7",
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": 0.839
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": 0.841
+              },
+              {
+                "key": {
+                  "dataset": "Local-Data",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": 0.843
+              }
+            ],
+            "reduce": "mean",
+            "source": "runs",
+            "where": {
+              "dataset": "Local-Data",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "status": "ok",
+        "unit": "fraction",
+        "value": "0.841"
+      }
+    },
+    "occurrences": {
+      "abstract_accuracy": {
+        "actual": "84.1\\%",
+        "evidence_fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "expected": "84.1\\%",
+        "location": {
+          "byte_end": 52,
+          "byte_start": 46,
+          "column": 30,
+          "end": 52,
+          "file": "paper/abstract.tex",
+          "line": 2,
+          "start": 46,
+          "text": "84.1\\%"
+        },
+        "metric": "ours",
+        "status": "pass"
+      },
+      "abstract_gain": {
+        "actual": "3.1",
+        "evidence_fingerprint": "sha256:8f7e271499e8912180b67d225d4ea0eb64a4cd47a55bc83a3dc25589a6344694",
+        "expected": "3.1",
+        "location": {
+          "byte_end": 90,
+          "byte_start": 87,
+          "column": 20,
+          "end": 90,
+          "file": "paper/abstract.tex",
+          "line": 3,
+          "start": 87,
+          "text": "3.1"
+        },
+        "metric": "gain",
+        "status": "pass"
+      },
+      "appendix_accuracy": {
+        "actual": "84.1\\%",
+        "evidence_fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "expected": "84.1\\%",
+        "location": {
+          "byte_end": 56,
+          "byte_start": 50,
+          "column": 32,
+          "end": 56,
+          "file": "paper/appendix.tex",
+          "line": 2,
+          "start": 50,
+          "text": "84.1\\%"
+        },
+        "metric": "ours",
+        "status": "pass"
+      },
+      "appendix_baseline": {
+        "actual": "81.0\\%",
+        "evidence_fingerprint": "sha256:59da1f5c9c8e726063ed06d7446df1959e46939162136321cf8e8263d866ba72",
+        "expected": "81.0\\%",
+        "location": {
+          "byte_end": 93,
+          "byte_start": 87,
+          "column": 30,
+          "end": 93,
+          "file": "paper/appendix.tex",
+          "line": 3,
+          "start": 87,
+          "text": "81.0\\%"
+        },
+        "metric": "baseline",
+        "status": "pass"
+      },
+      "appendix_gain": {
+        "actual": "3.1",
+        "evidence_fingerprint": "sha256:8f7e271499e8912180b67d225d4ea0eb64a4cd47a55bc83a3dc25589a6344694",
+        "expected": "3.1",
+        "location": {
+          "byte_end": 120,
+          "byte_start": 117,
+          "column": 23,
+          "end": 120,
+          "file": "paper/appendix.tex",
+          "line": 4,
+          "start": 117,
+          "text": "3.1"
+        },
+        "metric": "gain",
+        "status": "pass"
+      },
+      "appendix_repeat": {
+        "actual": "84.1\\%",
+        "evidence_fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "expected": "84.1\\%",
+        "location": {
+          "byte_end": 169,
+          "byte_start": 163,
+          "column": 24,
+          "end": 169,
+          "file": "paper/appendix.tex",
+          "line": 5,
+          "start": 163,
+          "text": "84.1\\%"
+        },
+        "metric": "ours",
+        "status": "pass"
+      },
+      "body_accuracy": {
+        "actual": "84.1\\%",
+        "evidence_fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "expected": "84.1\\%",
+        "location": {
+          "byte_end": 132,
+          "byte_start": 126,
+          "column": 34,
+          "end": 132,
+          "file": "paper/results.tex",
+          "line": 6,
+          "start": 126,
+          "text": "84.1\\%"
+        },
+        "metric": "ours",
+        "status": "pass"
+      },
+      "body_gain": {
+        "actual": "3.1",
+        "evidence_fingerprint": "sha256:8f7e271499e8912180b67d225d4ea0eb64a4cd47a55bc83a3dc25589a6344694",
+        "expected": "3.1",
+        "location": {
+          "byte_end": 151,
+          "byte_start": 148,
+          "column": 15,
+          "end": 151,
+          "file": "paper/results.tex",
+          "line": 7,
+          "start": 148,
+          "text": "3.1"
+        },
+        "metric": "gain",
+        "status": "pass"
+      },
+      "table_baseline": {
+        "actual": "81.0",
+        "evidence_fingerprint": "sha256:59da1f5c9c8e726063ed06d7446df1959e46939162136321cf8e8263d866ba72",
+        "expected": "81.0",
+        "location": {
+          "byte_end": 75,
+          "byte_start": 71,
+          "column": 12,
+          "end": 75,
+          "file": "paper/results.tex",
+          "line": 4,
+          "start": 71,
+          "text": "81.0"
+        },
+        "metric": "baseline",
+        "status": "pass"
+      },
+      "table_ours": {
+        "actual": "84.1",
+        "evidence_fingerprint": "sha256:cdaa08cfe52a09a7d4a332f46f2af0516cf96db8dfe5f6a3119e8a757b88e048",
+        "expected": "84.1",
+        "location": {
+          "byte_end": 56,
+          "byte_start": 52,
+          "column": 8,
+          "end": 56,
+          "file": "paper/results.tex",
+          "line": 3,
+          "start": 52,
+          "text": "84.1"
+        },
+        "metric": "ours",
+        "status": "pass"
+      }
+    },
+    "report_schema_version": 1,
+    "ruleset_version": "1",
+    "tool_version": "0.1.0a2"
+  },
+  "rationale": {
+    "occurrences:abstract_accuracy": "Developer-declared ours for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:abstract_gain": "Developer-declared gain for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:appendix_accuracy": "Developer-declared ours for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:appendix_baseline": "Developer-declared baseline for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:appendix_gain": "Developer-declared gain for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:appendix_repeat": "Developer-declared ours for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:body_accuracy": "Developer-declared ours for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:body_gain": "Developer-declared gain for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:table_baseline": "Developer-declared baseline for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points.",
+    "occurrences:table_ours": "Developer-declared ours for Local-Data test, seeds 1, 2, 3; gain is Ours minus Baseline in percentage points."
+  },
+  "status": "proposed"
+}

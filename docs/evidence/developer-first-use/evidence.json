@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-03T02:35:00.922167+00:00",
+  "operator": "Codex, AI developer acting as the first local user",
+  "study_type": "Authored non-blind workflow demonstration, not independent onboarding or model accuracy",
+  "provenance": "The developer authored both these synthetic inputs and their mapping; no benchmark answers were replaced.",
+  "independent_participants": 0,
+  "human_confirmation_seconds": null,
+  "steps": [
+    "01-init",
+    "02-scan",
+    "03-propose",
+    "04-preview",
+    "05-accept",
+    "06-check",
+    "07-snapshot",
+    "08-data-update",
+    "09-fix",
+    "10-dry-run",
+    "11-apply",
+    "12-recheck",
+    "13-recover"
+  ],
+  "confirmed_bindings": 10,
+  "initial_passes": 10,
+  "changed_mismatches": 8,
+  "patch_changes": 8,
+  "passes_after_write": 10,
+  "preview_does_not_write": true,
+  "bind_preserves_paper": true,
+  "restored_byte_exactly": true,
+  "tex_sha256_before_and_after_recovery": {
+    "paper/abstract.tex": "6e91f6859d0dc8a0426e77a12f1474e95a56ffc88fdac2ff9f9d361a2cb09017",
+    "paper/appendix.tex": "3bfbd01914820823becb7cca2fa69e0924c0a25ac839f1f90f1bc905895daa74",
+    "paper/main.tex": "da7988c87b221f325847f20cf32153a3441bda9634ad1adade5d3860246b5af0",
+    "paper/results.tex": "2080da04da6334b35f378d53fa8948e51956b9ed87a4df50fc61ebd74a088c6e"
+  },
+  "recorder_failure": {
+    "step": "After successful CLI apply",
+    "problem": "The recording helper expected a JSON apply response; the CLI correctly emitted its documented text and transaction ID.",
+    "resolution": "Parsed that existing transaction ID, rechecked the already-applied project, then recovered it; earlier outputs and applied transaction were not rerun.",
+    "product_change": false
+  },
+  "developer_judgment": "Explicit mapping, evidence preview, data-only impact, guarded writes and recovery are usable locally. Source IDs, units and rationale keys require care; use the complete quick-start example. No automatic mapping-quality guarantee."
+}

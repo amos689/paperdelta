@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-02T20:03:02.991508+00:00",
+  "results": [
+    {
+      "python": "Python 3.11.17",
+      "selection": "CI adapter only",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pytest_seconds": 7.078,
+      "junit_original_sha256": "f9a0ef2f1d66da9b50246ee84e5d0bba218667f8e57b80f0f3e6602b444446ad",
+      "junit_published_sha256": "9f560111733cbbfd392912600d5ff669023ab99ae41725097a520df2684852ba",
+      "junit": "docs/evidence/ci-adapter/windows/3.11.xml"
+    },
+    {
+      "python": "Python 3.12.14",
+      "selection": "full suite",
+      "counts": {
+        "tests": 162,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pytest_seconds": 30.853,
+      "junit_original_sha256": "92ff4461b8e99c2f2b471e34cfc2bd30fda6b9ca7add9c34c698ce66c252d093",
+      "junit_published_sha256": "4757d9d85283b335d1a187a31e0a338d32e65631819556988eb42ce07d2a67a7",
+      "junit": "docs/evidence/ci-adapter/windows/3.12.xml"
+    },
+    {
+      "python": "Python 3.13.16",
+      "selection": "CI adapter only",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pytest_seconds": 6.934,
+      "junit_original_sha256": "19171c7f6a3bc387212dad838f6a601b4cf68b1cd161ccd258e3fbcd1bb3165d",
+      "junit_published_sha256": "499b1309344d6daac48e19dfe6252f101c9a8b474a5d7ae05bac44344cc03144",
+      "junit": "docs/evidence/ci-adapter/windows/3.13.xml"
+    },
+    {
+      "python": "Python 3.14.8",
+      "selection": "CI adapter only",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pytest_seconds": 7.068,
+      "junit_original_sha256": "3cb54cb2269caad14a02b4fcdb1e87dec2daa4bd554d9b222bc467b87592825f",
+      "junit_published_sha256": "17dd30ff044977ebe32b6ef88b825ca5672bd50c5dab3b16f1756bb2bb812f1c",
+      "junit": "docs/evidence/ci-adapter/windows/3.14.xml"
+    }
+  ],
+  "file_hashes": {
+    "tools/ci_check.py": "46e616ab1092ad62b8d41d1bcc41cf61e5bca92f604691a10726aeecfbc70625",
+    "tests/test_ci_wrapper.py": "8b05e14f480fb515ab2c30fb43322e6bc74c09a90b3cc5c3b1ff78dfab9a0878"
+  },
+  "runtime_core_changed": false,
+  "published_record_notes": "JUnit hostnames and checkout paths are replaced; original hashes retained."
+}

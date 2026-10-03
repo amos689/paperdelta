@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperdelta"
+version = "0.1.0a2"
+description = "Review how experiment changes affect an existing research paper."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "PaperDelta contributors"}]
+keywords = ["latex", "research", "reproducibility", "agents", "scientific-writing"]
+dependencies = [
+  "pydantic>=2.10,<3",
+  "PyYAML>=6.0.2,<7",
+  "pylatexenc>=2.11,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.12", "build>=1.2"]
+spike = ["TexSoup==0.3.3"]
+mcp = ["mcp>=2.2,<3"]
+demo = ["matplotlib>=3.9,<4"]
+
+[project.scripts]
+paperdelta = "paperdelta.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["tests/corpus/history"] # Immutable implementation snapshots.
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/paperdelta/reports.py" = ["E501"] # Embedded offline HTML/CSS/JS literals.
+

@@ -1,0 +1,340 @@
+{
+  "checked_at": "2026-10-02T17:10:53.719891+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "calkit-python": "0.47.12",
+    "scitexlintr": "0.2.1",
+    "dvc": "3.67.1"
+  },
+  "script_sha256": "2f438972598bfef820d636ee26fbbb1d6eee39aff628446d74100f85102e76bc",
+  "exporter_sha256": "aa4ad32a3c7018afb7afbcbac32f17d9c938984cf7faa07e37a7213afb0c402e",
+  "scenario": "Five numeric sites plus one comparison; Ours 84.1% -> 80.9%; Baseline 81.0%.",
+  "results": {
+    "paperdelta": {
+      "rewritten_result_sites": 0,
+      "rewritten_existing_tex_files": 0,
+      "preamble_include_added": false,
+      "numeric_mismatches": 4,
+      "false_comparisons": 1,
+      "related_numeric_patch_withheld": true,
+      "source_unchanged_during_check": true,
+      "retained_inputs": {
+        "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/main.tex": "a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899",
+        "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+        "paperdelta.yaml": "ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769",
+        "results/metrics.csv": "fd25d565f1f521e14f75b9b8ddd07e648983fbe152cf5f5b79bc00fe7ea70ef6"
+      }
+    },
+    "calkit": {
+      "rewritten_result_sites": 6,
+      "rewritten_existing_tex_files": 4,
+      "preamble_include_added": true,
+      "upstream_csv_change_detected": true,
+      "generated_values_changed": true,
+      "conditional_answer_reversed": true,
+      "declared_paper_template_unchanged": true,
+      "retained_inputs": {
+        "calkit.yaml": "5ade99e167203b3d14ed7006d73deaa3770e2105000eee44768baa47b95da93c",
+        "dvc.lock": "38f6c4085e9f9ffc5e9a848b6ed1d4a99ce6bc072396239cdb0906706600c343",
+        "dvc.yaml": "cea8645b9b013d83d3dbcd80255d420c32fc292cc342d9dccae8a3bcc2b31a57",
+        "export_values.py": "aa4ad32a3c7018afb7afbcbac32f17d9c938984cf7faa07e37a7213afb0c402e",
+        "generated/results.json": "d8fa28e2654053067f37c6db1eb354d1d96af77fae84bde55de7f3c047a856b0",
+        "generated/values.tex": "b36c5007988819e64ffc57b876d4a2235060c93f3c27b3cf30866822d8049810",
+        "paper/abstract.tex": "dd0b36a88ef4b0152843f22a7a86914cb82d5e811e37362c44cca1dce587689f",
+        "paper/appendix.tex": "f3d099e35bf2e52b1c8d88b615289afcf6af28afbab3f984ea5fb18cd2a3f8e5",
+        "paper/main.tex": "010c6eec19a6805bcef66ab1ad6e35bee692c07c2bf1c1dcd8c6fe9a50676305",
+        "paper/results.tex": "9703dcaafbc86fdba1bd1e065ab26b2a4f4f21658ac29e833f42eb96ea382ecf",
+        "results/metrics.csv": "fd25d565f1f521e14f75b9b8ddd07e648983fbe152cf5f5b79bc00fe7ea70ef6"
+      }
+    },
+    "scitexlintr": {
+      "rewritten_result_sites": 6,
+      "rewritten_existing_tex_files": 4,
+      "preamble_include_added": true,
+      "snapshot_mismatches": 5,
+      "text_snapshot_included": true,
+      "after_repair_exit": 0,
+      "changed_source_files": 3,
+      "condition_evaluated_by": "owned exporter; scitexlintr checks its resulting manifest",
+      "retained_inputs": {
+        "export_values.py": "aa4ad32a3c7018afb7afbcbac32f17d9c938984cf7faa07e37a7213afb0c402e",
+        "generated/manifest.json": "a652da3413475a5514be8d99df484ae3adfbae44cfb6bae5e0484da7cff0e58d",
+        "generated/values.tex": "008b2ed5a3e4a8e2eacd18b365e124276cbb3ec093893568c82737b6d3ba7af0",
+        "paper/abstract.tex": "dee8c6cb77e0ca4cf6adcfd57c87f0e795072ac361a4b01bb73b54d995963bb9",
+        "paper/appendix.tex": "0134796adf60e6a1a516405dbbe0f570e6463fbdcc7e7634beabc1c63a42c31a",
+        "paper/main.tex": "010c6eec19a6805bcef66ab1ad6e35bee692c07c2bf1c1dcd8c6fe9a50676305",
+        "paper/results.tex": "89026754a9e907c4c509e65370485a03991926dc1e04f5e0dc3a14b9e2d63dd4",
+        "results/metrics.csv": "fd25d565f1f521e14f75b9b8ddd07e648983fbe152cf5f5b79bc00fe7ea70ef6"
+      }
+    }
+  },
+  "commands": [
+    {
+      "tool": "paperdelta",
+      "label": "before",
+      "command": [
+        "<checkout>\\.venv\\Scripts\\paperdelta.exe",
+        "check",
+        "--report",
+        "build/before",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2354,
+      "stdout": "{\n  \"baseline\": null,\n  \"changes\": [],\n  \"claims\": {\n    \"main_comparison\": {\n      \"location\": {\n        \"byte_end\": 340,\n        \"byte_start\": 298,\n        \"column\": 1,\n        \"end\": 340,\n        \"file\": \"paper/results.tex\",\n        \"line\": 17,\n        \"start\": 298,\n        \"text\": \"Our method outperforms Baseline on Data-A.\"\n      },\n      \"matching_reviews\": [],\n      \"metrics\": [\n        \"ours\",\n        \"baseline\"\n      ],\n      \"review\": \"unreviewed\",\n      \"review_records\": [],\n      \"state_fingerprint\": \"sha256:ee2c66e42881d14eac4af62b24bc8d27644a93773c14e0ba6704433badf48ba5\",\n      \"status\": \"pass\"\n    }\n  },\n  \"config_fingerprint\": \"sha256:1ea1216cbff9b516d12a73e5aefa729d184f129cc54ad15cf7c8d7a754e3161d\",\n  \"config_path\": \"paperdelta.yaml\",\n  \"coverage\": {\n    \"candidate_numbers\": 5,\n    \"confirmed\": 6,\n    \"mismatch\": 0,\n    \"pass\": 6,\n    \"unbound_numbers\": [],\n    \"unknown\": 0,\n    \"unregistered_figures\": [],\n    \"unsupported\": []\n  },\n  \"created_at\": \"2026-10-02T17:10:45.564295+00:00\",\n  \"diagnostics\": [],\n  \"exit_code\": 0,\n  \"figures\": {},\n  \"impact_groups\": [\n    {\n      \"change\": \"unavailable\",\n      \"claims\": [\n        \"main_comparison\"\n      ],\n      \"figures\": [],\n      \"metric\": \"ours\",\n      \"metrics\": [\n        \"ours\",\n        \"gain\"\n      ],\n      \"occurrences\": [\n        \"abstract_accuracy\",\n        \"table_accuracy\",\n        \"gain_text\",\n        \"appendix_accuracy\"\n      ],\n      \"sources\": [\n        \"results/metrics.csv\"\n      ]\n    },\n    {\n      \"change\": \"unavailable\",\n      \"claims\": [\n        \"main_comparison\"\n      ],\n      \"figures\": [],\n      \"metric\": \"baseline\",\n      \"metrics\": [\n        \"baseline\",\n        \"gain\"\n      ],\n      \"occurrences\": [\n        \"table_baseline\",\n        \"gain_text\"\n      ],\n      \"sources\": [\n        \"results/metrics.csv\"\n      ]\n    }\n  ],\n  \"input_hashes\": {\n    \"paper/abstract.tex\": \"sha256:b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493\",\n    \"paper/appendix.tex\": \"sha256:292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf\",\n    \"paper/main.tex\": \"sha256:a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899\",\n    \"paper/results.tex\": \"sha256:0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac\",\n    \"paperdelta.yaml\": \"sha256:ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769\",\n    \"results/metrics.csv\": \"sha256:ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46\"\n  },\n  \"metrics\": {\n    \"baseline\": {\n      \"definition\": {\n        \"expected_count\": null,\n        \"expected_seeds\": [\n          1,\n          2,\n          3\n        ],\n        \"field\": \"accuracy\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"benchmark\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"dataset\": \"Data-A\",\n          \"model\": \"Baseline\",\n          \"split\": \"test\"\n        }\n      },\n      \"definition_fingerprint\": \"sha256:f3a6bfd4450a07c8acc0cf440c5326be609429f301cb653d7567c641b80b2631\",\n      \"dependencies\": [],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 5\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 6\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 7\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.810\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Baseline\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1\",\n      \"status\": \"ok\",\n      \"unit\": \"fraction\",\n      \"value\": \"0.810\"\n    },\n    \"gain\": {\n      \"definition\": {\n        \"args\": [\n          \"ours\",\n          \"baseline\"\n        ],\n        \"op\": \"percentage_point_difference\"\n      },\n      \"definition_fingerprint\": \"sha256:6521ddafb2384027eccaa8402a0d0425e2d70aa1cf54099fdcab73d709668e7e\",\n      \"dependencies\": [\n        \"ours\",\n        \"baseline\"\n      ],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 2\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 3\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 4\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.839\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.841\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.843\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Ours\",\n            \"split\": \"test\"\n          }\n        },\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 5\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 6\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 7\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.810\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Baseline\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:469724c1e9eb40cfe7c24920ed37dbcb5cb7ddaaf2cc470b2b7237d5e396ad29\",\n      \"status\": \"ok\",\n      \"unit\": \"percentage_point\",\n      \"value\": \"3.100\"\n    },\n    \"ours\": {\n      \"definition\": {\n        \"expected_count\": null,\n        \"expected_seeds\": [\n          1,\n          2,\n          3\n        ],\n        \"field\": \"accuracy\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"benchmark\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"dataset\": \"Data-A\",\n          \"model\": \"Ours\",\n          \"split\": \"test\"\n        }\n      },\n      \"definition_fingerprint\": \"sha256:a52d093ef5e16a13f31345d12d407a0d0a33e98a2cb0aaf921f5c4e4ac797ce0\",\n      \"dependencies\": [],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 2\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 3\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 4\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.839\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.841\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.843\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Ours\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248\",\n      \"status\": \"ok\",\n      \"unit\": \"fraction\",\n      \"value\": \"0.841\"\n    }\n  },\n  \"occurrences\": {\n    \"abstract_accuracy\": {\n      \"actual\": \"84.1\\\\%\",\n      \"evidence_fingerprint\": \"sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248\",\n      \"expected\": \"84.1\\\\%\",\n      \"location\": {\n        \"byte_end\": 43,\n        \"byte_start\": 37,\n        \"column\": 21,\n        \"end\": 43,\n        \"file\": \"paper/abstract.tex\",\n        \"line\": 2,\n        \"start\": 37,\n        \"text\": \"84.1\\\\%\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"pass\"\n    },\n    \"appendix_accuracy\": {\n      \"actual\": \"84.1\",\n      \"evidence_fingerprint\": \"sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248\",\n      \"expected\": \"84.1\",\n      \"location\": {\n        \"byte_end\": 133,\n        \"byte_start\": 129,\n        \"column\": 27,\n        \"end\": 133,\n        \"file\": \"paper/appendix.tex\",\n        \"line\": 4,\n        \"start\": 129,\n        \"text\": \"84.1\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"pass\"\n    },\n    \"gain_text\": {\n      \"actual\": \"3.1\",\n      \"evidence_fingerprint\": \"sha256:469724c1e9eb40cfe7c24920ed37dbcb5cb7ddaaf2cc470b2b7237d5e396ad29\",\n      \"expected\": \"3.1\",\n      \"location\": {\n        \"byte_end\": 264,\n        \"byte_start\": 261,\n        \"column\": 24,\n        \"end\": 264,\n        \"file\": \"paper/results.tex\",\n        \"line\": 16,\n        \"start\": 261,\n        \"text\": \"3.1\"\n      },\n      \"metric\": \"gain\",\n      \"status\": \"pass\"\n    },\n    \"table_accuracy\": {\n      \"actual\": \"84.1\",\n      \"evidence_fingerprint\": \"sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248\",\n      \"expected\": \"84.1\",\n      \"location\": {\n        \"byte_end\": 117,\n        \"byte_start\": 113,\n        \"column\": 8,\n        \"end\": 117,\n        \"file\": \"paper/results.tex\",\n        \"line\": 8,\n        \"start\": 113,\n        \"text\": \"84.1\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"pass\"\n    },\n    \"table_baseline\": {\n      \"actual\": \"81.0\",\n      \"evidence_fingerprint\": \"sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1\",\n      \"expected\": \"81.0\",\n      \"location\": {\n        \"byte_end\": 136,\n        \"byte_start\": 132,\n        \"column\": 12,\n        \"end\": 136,\n        \"file\": \"paper/results.tex\",\n        \"line\": 9,\n        \"start\": 132,\n        \"text\": \"81.0\"\n      },\n      \"metric\": \"baseline\",\n      \"status\": \"pass\"\n    }\n  },\n  \"report_schema_version\": 1,\n  \"ruleset_version\": \"1\",\n  \"tool_version\": \"0.1.0a1\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "paperdelta",
+      "label": "snapshot",
+      "command": [
+        "<checkout>\\.venv\\Scripts\\paperdelta.exe",
+        "snapshot",
+        "create",
+        "before"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2359,
+      "stdout": "Recorded .paperdelta/baselines/before.json. A snapshot is not an approval of the paper.\n",
+      "stderr": ""
+    },
+    {
+      "tool": "paperdelta",
+      "label": "changed",
+      "command": [
+        "<checkout>\\.venv\\Scripts\\paperdelta.exe",
+        "check",
+        "--baseline",
+        "before",
+        "--report",
+        "build/changed",
+        "--format",
+        "json"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.2474,
+      "stdout": "{\n  \"baseline\": {\n    \"created_at\": \"2026-10-02T17:10:45.866040+00:00\",\n    \"name\": \"before\"\n  },\n  \"changes\": [\n    {\n      \"after\": \"0.809\",\n      \"before\": \"0.841\",\n      \"claims\": [\n        \"main_comparison\"\n      ],\n      \"kind\": \"changed\",\n      \"metric\": \"ours\",\n      \"occurrences\": [\n        \"abstract_accuracy\",\n        \"table_accuracy\",\n        \"appendix_accuracy\"\n      ],\n      \"unit\": \"fraction\"\n    },\n    {\n      \"after\": \"-0.100\",\n      \"before\": \"3.100\",\n      \"claims\": [],\n      \"kind\": \"changed\",\n      \"metric\": \"gain\",\n      \"occurrences\": [\n        \"gain_text\"\n      ],\n      \"unit\": \"percentage_point\"\n    }\n  ],\n  \"claims\": {\n    \"main_comparison\": {\n      \"location\": {\n        \"byte_end\": 340,\n        \"byte_start\": 298,\n        \"column\": 1,\n        \"end\": 340,\n        \"file\": \"paper/results.tex\",\n        \"line\": 17,\n        \"start\": 298,\n        \"text\": \"Our method outperforms Baseline on Data-A.\"\n      },\n      \"matching_reviews\": [],\n      \"metrics\": [\n        \"ours\",\n        \"baseline\"\n      ],\n      \"review\": \"unreviewed\",\n      \"review_records\": [],\n      \"state_fingerprint\": \"sha256:8c0d2aae3e504b816460213bde37a184908012d379d364b5685d4d8c8cda2e33\",\n      \"status\": \"mismatch\"\n    }\n  },\n  \"config_fingerprint\": \"sha256:1ea1216cbff9b516d12a73e5aefa729d184f129cc54ad15cf7c8d7a754e3161d\",\n  \"config_path\": \"paperdelta.yaml\",\n  \"configuration_changed\": false,\n  \"coverage\": {\n    \"candidate_numbers\": 5,\n    \"confirmed\": 6,\n    \"mismatch\": 5,\n    \"pass\": 1,\n    \"unbound_numbers\": [],\n    \"unknown\": 0,\n    \"unregistered_figures\": [],\n    \"unsupported\": []\n  },\n  \"created_at\": \"2026-10-02T17:10:46.056235+00:00\",\n  \"diagnostics\": [\n    {\n      \"id\": \"occurrence:abstract_accuracy/VALUE_MISMATCH\",\n      \"location\": {\n        \"byte_end\": 43,\n        \"byte_start\": 37,\n        \"column\": 21,\n        \"end\": 43,\n        \"file\": \"paper/abstract.tex\",\n        \"line\": 2,\n        \"start\": 37,\n        \"text\": \"84.1\\\\%\"\n      },\n      \"message\": \"'84.1\\\\\\\\%' should display '80.9\\\\\\\\%' from metric ours\",\n      \"rule\": \"VALUE_MISMATCH\",\n      \"severity\": \"error\",\n      \"subject\": \"occurrence:abstract_accuracy\"\n    },\n    {\n      \"id\": \"occurrence:table_accuracy/VALUE_MISMATCH\",\n      \"location\": {\n        \"byte_end\": 117,\n        \"byte_start\": 113,\n        \"column\": 8,\n        \"end\": 117,\n        \"file\": \"paper/results.tex\",\n        \"line\": 8,\n        \"start\": 113,\n        \"text\": \"84.1\"\n      },\n      \"message\": \"'84.1' should display '80.9' from metric ours\",\n      \"rule\": \"VALUE_MISMATCH\",\n      \"severity\": \"error\",\n      \"subject\": \"occurrence:table_accuracy\"\n    },\n    {\n      \"id\": \"occurrence:gain_text/VALUE_MISMATCH\",\n      \"location\": {\n        \"byte_end\": 264,\n        \"byte_start\": 261,\n        \"column\": 24,\n        \"end\": 264,\n        \"file\": \"paper/results.tex\",\n        \"line\": 16,\n        \"start\": 261,\n        \"text\": \"3.1\"\n      },\n      \"message\": \"'3.1' should display '-0.1' from metric gain\",\n      \"rule\": \"VALUE_MISMATCH\",\n      \"severity\": \"error\",\n      \"subject\": \"occurrence:gain_text\"\n    },\n    {\n      \"id\": \"occurrence:appendix_accuracy/VALUE_MISMATCH\",\n      \"location\": {\n        \"byte_end\": 133,\n        \"byte_start\": 129,\n        \"column\": 27,\n        \"end\": 133,\n        \"file\": \"paper/appendix.tex\",\n        \"line\": 4,\n        \"start\": 129,\n        \"text\": \"84.1\"\n      },\n      \"message\": \"'84.1' should display '80.9' from metric ours\",\n      \"rule\": \"VALUE_MISMATCH\",\n      \"severity\": \"error\",\n      \"subject\": \"occurrence:appendix_accuracy\"\n    },\n    {\n      \"id\": \"claim:main_comparison/CLAIM_FALSE\",\n      \"location\": {\n        \"byte_end\": 340,\n        \"byte_start\": 298,\n        \"column\": 1,\n        \"end\": 340,\n        \"file\": \"paper/results.tex\",\n        \"line\": 17,\n        \"start\": 298,\n        \"text\": \"Our method outperforms Baseline on Data-A.\"\n      },\n      \"message\": \"The confirmed comparison no longer holds for the selected evidence\",\n      \"rule\": \"CLAIM_FALSE\",\n      \"severity\": \"error\",\n      \"subject\": \"claim:main_comparison\"\n    }\n  ],\n  \"exit_code\": 1,\n  \"figures\": {},\n  \"impact_groups\": [\n    {\n      \"change\": \"changed\",\n      \"claims\": [\n        \"main_comparison\"\n      ],\n      \"figures\": [],\n      \"metric\": \"ours\",\n      \"metrics\": [\n        \"ours\",\n        \"gain\"\n      ],\n      \"occurrences\": [\n        \"abstract_accuracy\",\n        \"table_accuracy\",\n        \"gain_text\",\n        \"appendix_accuracy\"\n      ],\n      \"sources\": [\n        \"results/metrics.csv\"\n      ]\n    },\n    {\n      \"change\": \"unchanged\",\n      \"claims\": [\n        \"main_comparison\"\n      ],\n      \"figures\": [],\n      \"metric\": \"baseline\",\n      \"metrics\": [\n        \"baseline\",\n        \"gain\"\n      ],\n      \"occurrences\": [\n        \"table_baseline\",\n        \"gain_text\"\n      ],\n      \"sources\": [\n        \"results/metrics.csv\"\n      ]\n    }\n  ],\n  \"input_hashes\": {\n    \"paper/abstract.tex\": \"sha256:b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493\",\n    \"paper/appendix.tex\": \"sha256:292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf\",\n    \"paper/main.tex\": \"sha256:a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899\",\n    \"paper/results.tex\": \"sha256:0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac\",\n    \"paperdelta.yaml\": \"sha256:ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769\",\n    \"results/metrics.csv\": \"sha256:fd25d565f1f521e14f75b9b8ddd07e648983fbe152cf5f5b79bc00fe7ea70ef6\"\n  },\n  \"metrics\": {\n    \"baseline\": {\n      \"change\": \"unchanged\",\n      \"definition\": {\n        \"expected_count\": null,\n        \"expected_seeds\": [\n          1,\n          2,\n          3\n        ],\n        \"field\": \"accuracy\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"benchmark\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"dataset\": \"Data-A\",\n          \"model\": \"Baseline\",\n          \"split\": \"test\"\n        }\n      },\n      \"definition_fingerprint\": \"sha256:f3a6bfd4450a07c8acc0cf440c5326be609429f301cb653d7567c641b80b2631\",\n      \"dependencies\": [],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 5\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 6\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 7\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.810\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Baseline\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1\",\n      \"status\": \"ok\",\n      \"unit\": \"fraction\",\n      \"value\": \"0.810\"\n    },\n    \"gain\": {\n      \"change\": \"changed\",\n      \"definition\": {\n        \"args\": [\n          \"ours\",\n          \"baseline\"\n        ],\n        \"op\": \"percentage_point_difference\"\n      },\n      \"definition_fingerprint\": \"sha256:6521ddafb2384027eccaa8402a0d0425e2d70aa1cf54099fdcab73d709668e7e\",\n      \"dependencies\": [\n        \"ours\",\n        \"baseline\"\n      ],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 2\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 3\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 4\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.807\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Ours\",\n            \"split\": \"test\"\n          }\n        },\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 5\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 6\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 7\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.810\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Baseline\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Baseline\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:effc4390c743de2ab3b368f5853919550a0ac8f9a09dcc10ef9396a0772a1226\",\n      \"status\": \"ok\",\n      \"unit\": \"percentage_point\",\n      \"value\": \"-0.100\"\n    },\n    \"ours\": {\n      \"change\": \"changed\",\n      \"definition\": {\n        \"expected_count\": null,\n        \"expected_seeds\": [\n          1,\n          2,\n          3\n        ],\n        \"field\": \"accuracy\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"benchmark\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"dataset\": \"Data-A\",\n          \"model\": \"Ours\",\n          \"split\": \"test\"\n        }\n      },\n      \"definition_fingerprint\": \"sha256:a52d093ef5e16a13f31345d12d407a0d0a33e98a2cb0aaf921f5c4e4ac797ce0\",\n      \"dependencies\": [],\n      \"evidence\": [\n        {\n          \"count\": 3,\n          \"field\": \"accuracy\",\n          \"locations\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"line\": 2\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"line\": 3\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"line\": 4\n            }\n          ],\n          \"path\": \"results/metrics.csv\",\n          \"records\": [\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 1,\n                \"split\": \"test\"\n              },\n              \"value\": 0.807\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 2,\n                \"split\": \"test\"\n              },\n              \"value\": 0.809\n            },\n            {\n              \"key\": {\n                \"dataset\": \"Data-A\",\n                \"model\": \"Ours\",\n                \"seed\": 3,\n                \"split\": \"test\"\n              },\n              \"value\": 0.811\n            }\n          ],\n          \"reduce\": \"mean\",\n          \"source\": \"benchmark\",\n          \"where\": {\n            \"dataset\": \"Data-A\",\n            \"model\": \"Ours\",\n            \"split\": \"test\"\n          }\n        }\n      ],\n      \"fingerprint\": \"sha256:b761f349cb7ff70c8c4da39fb2897800af3170e09a74defabc03a7571463109e\",\n      \"status\": \"ok\",\n      \"unit\": \"fraction\",\n      \"value\": \"0.809\"\n    }\n  },\n  \"occurrences\": {\n    \"abstract_accuracy\": {\n      \"actual\": \"84.1\\\\%\",\n      \"evidence_fingerprint\": \"sha256:b761f349cb7ff70c8c4da39fb2897800af3170e09a74defabc03a7571463109e\",\n      \"expected\": \"80.9\\\\%\",\n      \"location\": {\n        \"byte_end\": 43,\n        \"byte_start\": 37,\n        \"column\": 21,\n        \"end\": 43,\n        \"file\": \"paper/abstract.tex\",\n        \"line\": 2,\n        \"start\": 37,\n        \"text\": \"84.1\\\\%\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"mismatch\",\n      \"suggestion\": {\n        \"blocked_by\": [\n          \"claim:main_comparison\"\n        ],\n        \"replacement\": \"80.9\\\\%\"\n      }\n    },\n    \"appendix_accuracy\": {\n      \"actual\": \"84.1\",\n      \"evidence_fingerprint\": \"sha256:b761f349cb7ff70c8c4da39fb2897800af3170e09a74defabc03a7571463109e\",\n      \"expected\": \"80.9\",\n      \"location\": {\n        \"byte_end\": 133,\n        \"byte_start\": 129,\n        \"column\": 27,\n        \"end\": 133,\n        \"file\": \"paper/appendix.tex\",\n        \"line\": 4,\n        \"start\": 129,\n        \"text\": \"84.1\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"mismatch\",\n      \"suggestion\": {\n        \"blocked_by\": [\n          \"claim:main_comparison\"\n        ],\n        \"replacement\": \"80.9\"\n      }\n    },\n    \"gain_text\": {\n      \"actual\": \"3.1\",\n      \"evidence_fingerprint\": \"sha256:effc4390c743de2ab3b368f5853919550a0ac8f9a09dcc10ef9396a0772a1226\",\n      \"expected\": \"-0.1\",\n      \"location\": {\n        \"byte_end\": 264,\n        \"byte_start\": 261,\n        \"column\": 24,\n        \"end\": 264,\n        \"file\": \"paper/results.tex\",\n        \"line\": 16,\n        \"start\": 261,\n        \"text\": \"3.1\"\n      },\n      \"metric\": \"gain\",\n      \"status\": \"mismatch\",\n      \"suggestion\": {\n        \"blocked_by\": [\n          \"claim:main_comparison\"\n        ],\n        \"replacement\": \"-0.1\"\n      }\n    },\n    \"table_accuracy\": {\n      \"actual\": \"84.1\",\n      \"evidence_fingerprint\": \"sha256:b761f349cb7ff70c8c4da39fb2897800af3170e09a74defabc03a7571463109e\",\n      \"expected\": \"80.9\",\n      \"location\": {\n        \"byte_end\": 117,\n        \"byte_start\": 113,\n        \"column\": 8,\n        \"end\": 117,\n        \"file\": \"paper/results.tex\",\n        \"line\": 8,\n        \"start\": 113,\n        \"text\": \"84.1\"\n      },\n      \"metric\": \"ours\",\n      \"status\": \"mismatch\",\n      \"suggestion\": {\n        \"blocked_by\": [\n          \"claim:main_comparison\"\n        ],\n        \"replacement\": \"80.9\"\n      }\n    },\n    \"table_baseline\": {\n      \"actual\": \"81.0\",\n      \"evidence_fingerprint\": \"sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1\",\n      \"expected\": \"81.0\",\n      \"location\": {\n        \"byte_end\": 136,\n        \"byte_start\": 132,\n        \"column\": 12,\n        \"end\": 136,\n        \"file\": \"paper/results.tex\",\n        \"line\": 9,\n        \"start\": 132,\n        \"text\": \"81.0\"\n      },\n      \"metric\": \"baseline\",\n      \"status\": \"pass\"\n    }\n  },\n  \"removed_bindings\": {\n    \"claims\": [],\n    \"figures\": [],\n    \"metrics\": [],\n    \"occurrences\": []\n  },\n  \"report_schema_version\": 1,\n  \"ruleset_version\": \"1\",\n  \"tool_version\": \"0.1.0a1\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "paperdelta",
+      "label": "guarded-fix",
+      "command": [
+        "<checkout>\\.venv\\Scripts\\paperdelta.exe",
+        "fix",
+        "--report",
+        "build/changed/report.json",
+        "--out",
+        "proposed.json"
+      ],
+      "exit_code": 2,
+      "wall_seconds": 0.2424,
+      "stdout": "",
+      "stderr": "PaperDelta: NO_SAFE_FIXES: No independent numeric fixes; review related claims or unknowns first\n"
+    },
+    {
+      "tool": "calkit",
+      "label": "git-init",
+      "command": [
+        "git",
+        "init",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0334,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "init",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "init",
+        "--no-commit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.788,
+      "stdout": "Initialized DVC repository.\n\nYou can now commit the changes to git.\n\nWhat's next?\n------------\n- Check out the documentation: <https://dvc.org/doc>\n- Get help and share ideas: <https://dvc.org/chat>\n- Star us on GitHub: <https://github.com/treeverse/dvc>\n",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "before-run",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "run"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.8611,
+      "stdout": "\ud83d\udcbb Getting system information\n\ud83d\udd17 Checking system-level requirements\n\ud83d\udce6 Checking environments\n\ud83d\udcd3 Cleaning notebooks\n\ud83d\udd00 Compiling DVC pipeline\nRunning stage 'export':\n> python export_values.py --format calkit\nGenerating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\nRunning stage 'qa':\n> calkit latex from-questions --output generated/values.tex --command qa\nUpdating lock file 'dvc.lock'\nPipeline completed successfully \u2705\n",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "before-evidence",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "check",
+        "questions",
+        "--json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7876,
+      "stdout": "{\n  \"questions\": [\n    {\n      \"index\": 1,\n      \"question\": \"What is the declared ours-percent result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.841,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 2,\n      \"question\": \"What is the declared ours-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours_percent\",\n          \"name\": \"ours_percent\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 84.1,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 3,\n      \"question\": \"What is the declared baseline-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline_percent\",\n          \"name\": \"baseline_percent\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 81.0,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 4,\n      \"question\": \"What is the declared gain result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"gain\",\n          \"name\": \"gain\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 3.1,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 5,\n      \"question\": \"What is the declared comparison result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.841,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        },\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline\",\n          \"name\": \"baseline\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.81,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "stale-evidence",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "check",
+        "questions",
+        "--json"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.7561,
+      "stdout": "{\n  \"questions\": [\n    {\n      \"index\": 1,\n      \"question\": \"What is the declared ours-percent result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"stale\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 0.841,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 2,\n      \"question\": \"What is the declared ours-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"stale\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours_percent\",\n          \"name\": \"ours_percent\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 84.1,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 3,\n      \"question\": \"What is the declared baseline-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"stale\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline_percent\",\n          \"name\": \"baseline_percent\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 81.0,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 4,\n      \"question\": \"What is the declared gain result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"stale\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"gain\",\n          \"name\": \"gain\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 3.1,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 5,\n      \"question\": \"What is the declared comparison result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"stale\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 0.841,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        },\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline\",\n          \"name\": \"baseline\",\n          \"status\": \"stale\",\n          \"message\": \"stage 'export' is out of date; run the pipeline\",\n          \"current\": 0.81,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "changed-run",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "run"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.8629,
+      "stdout": "\ud83d\udcbb Getting system information\n\ud83d\udd17 Checking system-level requirements\n\ud83d\udce6 Checking environments\n\ud83d\udcd3 Cleaning notebooks\n\ud83d\udd00 Compiling DVC pipeline\nRunning stage 'export':\n> python export_values.py --format calkit\nUpdating lock file 'dvc.lock'\nRunning stage 'qa':\n> calkit latex from-questions --output generated/values.tex --command qa\nUpdating lock file 'dvc.lock'\nPipeline completed successfully \u2705\n",
+      "stderr": ""
+    },
+    {
+      "tool": "calkit",
+      "label": "after-evidence",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\calkit.exe",
+        "check",
+        "questions",
+        "--json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7661,
+      "stdout": "{\n  \"questions\": [\n    {\n      \"index\": 1,\n      \"question\": \"What is the declared ours-percent result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.809,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 2,\n      \"question\": \"What is the declared ours-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours_percent\",\n          \"name\": \"ours_percent\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 80.9,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 3,\n      \"question\": \"What is the declared baseline-bare result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline_percent\",\n          \"name\": \"baseline_percent\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 81.0,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 4,\n      \"question\": \"What is the declared gain result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"gain\",\n          \"name\": \"gain\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": -0.1,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    },\n    {\n      \"index\": 5,\n      \"question\": \"What is the declared comparison result on Data-A test seeds 1/2/3?\",\n      \"answered\": true,\n      \"status\": \"ok\",\n      \"commit\": null,\n      \"message\": \"not yet committed, so history cannot be checked\",\n      \"evidence\": [\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"ours\",\n          \"name\": \"ours\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.809,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        },\n        {\n          \"kind\": \"value\",\n          \"path\": \"generated/results.json\",\n          \"key\": \"baseline\",\n          \"name\": \"baseline\",\n          \"status\": \"ok\",\n          \"message\": null,\n          \"current\": 0.81,\n          \"values\": null,\n          \"stage\": \"export\",\n          \"git_ref\": null\n        }\n      ]\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "scitexlintr",
+      "label": "before-export",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\python.exe",
+        "export_values.py",
+        "--format",
+        "scitexlintr"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0542,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "scitexlintr",
+      "label": "before-lint",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\scitexlintr.exe",
+        "--manifest",
+        "generated/manifest.json",
+        "--rules",
+        "snapshot-mismatch,unknown-value-id",
+        "paper/abstract.tex",
+        "paper/appendix.tex",
+        "paper/main.tex",
+        "paper/results.tex"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0933,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "scitexlintr",
+      "label": "changed-export",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\python.exe",
+        "export_values.py",
+        "--format",
+        "scitexlintr"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0524,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "scitexlintr",
+      "label": "changed-lint",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\scitexlintr.exe",
+        "--manifest",
+        "generated/manifest.json",
+        "--rules",
+        "snapshot-mismatch,unknown-value-id",
+        "paper/abstract.tex",
+        "paper/appendix.tex",
+        "paper/main.tex",
+        "paper/results.tex"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.0919,
+      "stdout": "paper\\abstract.tex:2:42: [snapshot-mismatch] snapshot 84.1\\% for \\OursPercent disagrees with manifest value 0.809, which renders as 80.9\\% (id=ours_percent)\npaper\\appendix.tex:4:45: [snapshot-mismatch] snapshot 84.1 for \\OursBare disagrees with manifest value 80.9 (id=ours_bare)\npaper\\results.tex:8:26: [snapshot-mismatch] snapshot 84.1 for \\OursBare disagrees with manifest value 80.9 (id=ours_bare)\npaper\\results.tex:16:24: [snapshot-mismatch] snapshot \"Our method improves by 3.1 percentage points over Baseline.\" for \\GainSentence disagrees with manifest value \"Our method changes by -0.1 percentage points relative to Baseline.\" (id=gain_sentence)\npaper\\results.tex:17:22: [snapshot-mismatch] snapshot \"Our method outperforms Baseline on Data-A.\" for \\Comparison disagrees with manifest value \"Our method does not outperform Baseline on Data-A.\" (id=comparison)\n",
+      "stderr": ""
+    },
+    {
+      "tool": "scitexlintr",
+      "label": "repair-and-relint",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\scitexlintr.exe",
+        "--manifest",
+        "generated/manifest.json",
+        "--rules",
+        "snapshot-mismatch,unknown-value-id",
+        "paper/abstract.tex",
+        "paper/appendix.tex",
+        "paper/main.tex",
+        "paper/results.tex",
+        "--write"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0947,
+      "stdout": "",
+      "stderr": "paper\\abstract.tex: rewrote 1 snapshot(s)\npaper\\appendix.tex: rewrote 1 snapshot(s)\npaper\\results.tex: rewrote 3 snapshot(s)\n"
+    },
+    {
+      "tool": "reference-workflows-v3",
+      "label": "reference-versions",
+      "command": [
+        "<checkout>\\.venv-references\\Scripts\\python.exe",
+        "-c",
+        "import json,importlib.metadata as m;print(json.dumps({n:m.version(n) for n in ['calkit-python','scitexlintr','dvc']}))"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0741,
+      "stdout": "{\"calkit-python\": \"0.47.12\", \"scitexlintr\": \"0.2.1\", \"dvc\": \"3.67.1\"}\n",
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "One developer-authored synthetic paper; not independent adoption evidence.",
+    "CLI times exclude installation, configuration authoring, reading and confirmation.",
+    "Reference tools use their own declared generated-value/template conventions.",
+    "Calkit runs the exporter through DVC; scitexlintr uses an explicit exporter command.",
+    "scitexlintr's text condition is authored in the exporter, not inferred by the linter.",
+    "PaperDelta flags the invalid assertion and withholds related numeric writes.",
+    "No model, participant, TeX compilation or figure behavior was measured in this run.",
+    "No remote repositories or packages were published."
+  ]
+}

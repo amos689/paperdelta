@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-02T18:45:37.321982+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-mapping/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55480,
+      "sha256": "fead994c4e4ea5f583dd45bb01d7864b9b163ba99a52bfccfe0362cffb6236a5"
+    },
+    {
+      "path": "build/release-candidate-mapping/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 2980873,
+      "sha256": "ed36a55c998bfadc16c2d1fceb2507a035f70336fc1fced022c56e6d74af9a8c"
+    },
+    {
+      "path": "build/release-candidate-mapping/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 341137,
+      "sha256": "054f2bcb861c49003f4636f7cea2dc006bf1530f1d44891b7a6584150859100e"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0a2",
+    "requires_python": ">=3.11",
+    "license_expression": "MIT",
+    "extras": [
+      "dev",
+      "spike",
+      "mcp",
+      "demo"
+    ],
+    "requirements": [
+      "pydantic<3,>=2.10",
+      "PyYAML<7,>=6.0.2",
+      "pylatexenc<3,>=2.11",
+      "pytest<10,>=8; extra == \"dev\"",
+      "ruff>=0.12; extra == \"dev\"",
+      "build>=1.2; extra == \"dev\"",
+      "TexSoup==0.3.3; extra == \"spike\"",
+      "mcp<3,>=2.2; extra == \"mcp\"",
+      "matplotlib<4,>=3.9; extra == \"demo\""
+    ]
+  },
+  "wheel_files": 26,
+  "sdist_files": 295,
+  "evaluation_bundle_files": 90,
+  "evaluation_license_expression": "MIT AND CC-BY-4.0 AND CC-BY-SA-4.0",
+  "core_source_files_match_checkout": 20,
+  "required_support_files_match_checkout": 64,
+  "owned_mapping_suite_files_match_checkout": 157,
+  "mapping_protocol_identity_count": 179,
+  "corpus": {
+    "papers": 10,
+    "files": 48,
+    "bytes": 650293,
+    "every_retained_file_digest_matches": true,
+    "license_notices_present": true
+  },
+  "frozen_protocol_identity_count": 25,
+  "study": {
+    "study_id": "interactive-confirmation-v2",
+    "kind": "regression",
+    "protocol_lock": "tests/corpus/protocol-interactive-v2.json",
+    "previous_protocol": "tests/corpus/protocol-lock.json",
+    "previous_implementation": "tests/corpus/history/original-v1",
+    "scope": "Previously seen corpus, reused after adding terminal confirmation. This is not a fresh held-out evaluation."
+  },
+  "retained_original_protocol_identity_count": 23,
+  "wheel_record_verified": true,
+  "excluded": [
+    "virtual environments",
+    "scratch trees",
+    "transactions",
+    "native executables"
+  ],
+  "scope": "Content and metadata inspection of these exact locally built artifacts."
+}

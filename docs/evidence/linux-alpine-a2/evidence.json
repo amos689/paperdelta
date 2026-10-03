@@ -1,0 +1,264 @@
+{
+  "checked_at": "2026-10-02T19:13:16.165286+00:00",
+  "platform": "Linux-6.18.52-0-virt-x86_64-with-musl1",
+  "python": "3.14.8",
+  "uname": [
+    "Linux",
+    "localhost",
+    "6.18.52-0-virt",
+    "#1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48",
+    "x86_64",
+    ""
+  ],
+  "os_release": "NAME=\"Alpine Linux\"\nID=alpine\nVERSION_ID=3.24.2\nPRETTY_NAME=\"Alpine Linux v3.24\"\nHOME_URL=\"https://alpinelinux.org/\"\nBUG_REPORT_URL=\"https://gitlab.alpinelinux.org/alpine/aports/-/issues\"\n",
+  "execution": "QEMU software TCG, disposable Alpine Linux guest on Windows",
+  "commands": [
+    {
+      "name": "create-venv",
+      "args": [
+        "/usr/bin/python3",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/venv"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 29.13
+    },
+    {
+      "name": "install-core-wheel",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 20.31
+    },
+    {
+      "name": "installed-identity",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-c",
+        "import hashlib, importlib.metadata as m, json, pathlib, paperdelta\np=pathlib.Path(paperdelta.__file__).parent\nprint(json.dumps({'package_path':str(p),'version':m.version('paperdelta'),'source_hashes':{\nf.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(p.glob('*.py'))}}))\n"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.58
+    },
+    {
+      "name": "core-check",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587",
+        "check",
+        "--format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.55
+    },
+    {
+      "name": "core-data-change",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587",
+        "check",
+        "--format",
+        "json",
+        "--report",
+        "build/review"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 1,
+      "seconds": 2.44
+    },
+    {
+      "name": "optional-mcp-absent",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587",
+        "mcp"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 2,
+      "seconds": 2.16
+    },
+    {
+      "name": "install-test-dependencies",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==9.1.1",
+        "mcp==2.2.0"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 48.37
+    },
+    {
+      "name": "pip-check",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.29
+    },
+    {
+      "name": "versions",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-c",
+        "import importlib.metadata as m,json,platform\nprint(json.dumps({'python':platform.python_version(),'packages':{\nname:m.version(name) for name in ('paperdelta','pydantic','PyYAML','pylatexenc','mcp','pytest')}}))\n"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.58
+    },
+    {
+      "name": "tests",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-X",
+        "utf8",
+        "tools/run_tests.py",
+        "-q",
+        "--junitxml=build/linux-tests.xml"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 95.29
+    },
+    {
+      "name": "examples",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-X",
+        "utf8",
+        "tools/validate_examples.py",
+        "--out",
+        "build/linux-examples"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 2.87
+    },
+    {
+      "name": "mapping-controls",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-X",
+        "utf8",
+        "tools/validate_mapping_controls.py",
+        "--out",
+        "build/linux-mapping-controls"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 4.27
+    },
+    {
+      "name": "mapping-export",
+      "args": [
+        "/root/paperdelta-validation/venv/bin/python",
+        "-X",
+        "utf8",
+        "tools/evaluate_mappings.py",
+        "export",
+        "--out",
+        "build/linux-mapping-inputs"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 0,
+      "seconds": 2.81
+    }
+  ],
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "Local Linux guest validation; no remote CI, macOS, or usability claims.",
+  "artifacts": [
+    {
+      "name": "paperdelta-0.1.0a2-py3-none-any.whl",
+      "sha256": "fead994c4e4ea5f583dd45bb01d7864b9b163ba99a52bfccfe0362cffb6236a5",
+      "bytes": 55480
+    },
+    {
+      "name": "paperdelta-0.1.0a2.tar.gz",
+      "sha256": "ed36a55c998bfadc16c2d1fceb2507a035f70336fc1fced022c56e6d74af9a8c",
+      "bytes": 2980873
+    }
+  ],
+  "installed_package": {
+    "package_path": "/root/paperdelta-validation/venv/lib/python3.14/site-packages/paperdelta",
+    "version": "0.1.0a2",
+    "source_hashes": {
+      "__init__.py": "3ad683e77cd398ab8604005171c3b9bde1a04298b02c2d90aed156c4e045fe81",
+      "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+      "agent.py": "a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+      "analysis.py": "68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+      "cli.py": "75e5729fbf3a62f46f4a8afd509aace0f72c311d2516e346f85b8c57a12d988c",
+      "config.py": "c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+      "errors.py": "908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+      "interactive.py": "ed5ab9447ac1102b3479de1be7fa7c4926cadf4d9b7d37d6a6f990eec3091654",
+      "latex.py": "14af7f15d68a69b20c025f7d732a10aefe0741a9b815d1865f7f006ffcd35446",
+      "mcp_server.py": "52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+      "metrics.py": "0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+      "models.py": "3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+      "onboarding.py": "2864201735ac2cb9d521d052f67846d270be294ab2f5e0257fd680b09b82aedd",
+      "patches.py": "c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+      "records.py": "7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+      "reports.py": "b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+      "reviews.py": "801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+      "snapshots.py": "314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+      "sources.py": "2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+      "storage.py": "6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d"
+    }
+  },
+  "core_only_smoke": {
+    "clean_exit_code": 0,
+    "changed_exit_code": 1,
+    "optional_mcp_missing_exit_code": 2,
+    "html_written": true
+  },
+  "versions": {
+    "python": "3.14.8",
+    "packages": {
+      "paperdelta": "0.1.0a2",
+      "pydantic": "2.13.5",
+      "PyYAML": "6.0.3",
+      "pylatexenc": "2.11",
+      "mcp": "2.2.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "tests": {
+    "tests": 151,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "mapping_controls_match_windows": true,
+  "mapping_suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd",
+  "exported_oracle_files": 0,
+  "status": "passed",
+  "finished_at": "2026-10-02T19:16:51.307344+00:00"
+}

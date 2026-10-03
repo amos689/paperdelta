@@ -1,0 +1,8 @@
+{
+  "study_id": "interactive-confirmation-v2",
+  "kind": "regression",
+  "protocol_lock": "tests/corpus/protocol-interactive-v2.json",
+  "previous_protocol": "tests/corpus/protocol-lock.json",
+  "previous_implementation": "tests/corpus/history/original-v1",
+  "scope": "Previously seen corpus, reused after adding terminal confirmation. This is not a fresh held-out evaluation."
+}

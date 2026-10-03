@@ -1,0 +1,10 @@
+
+--- STDERR ---
+Traceback (most recent call last):
+  File "/root/paperdelta-validation/论文 project/paperdelta-0.1.0a2/tools/validate_python_matrix.py", line 117, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/paperdelta-validation/论文 project/paperdelta-0.1.0a2/tools/validate_python_matrix.py", line 48, in main
+    assert executable.is_relative_to(ROOT), "Use a project-local environment"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Use a project-local environment

@@ -1,0 +1,190 @@
+{
+  "recorded_at": "2026-10-02T19:19:35.113295+00:00",
+  "qemu_version": "QEMU emulator version 11.1.0 (v11.1.0-12130-ge470268ff4)",
+  "virtual_cpus": 2,
+  "ram_mib": 3072,
+  "accelerator": "tcg,thread=multi",
+  "guest_disk": "Read-only Alpine ISO; guest changes existed only in RAM",
+  "host_changes": "Portable files in the project; no installer, WSL, driver or registry setup",
+  "download_provenance": {
+    "checked_at": "2026-10-02T18:56:15.922413+00:00",
+    "official_entry_points": [
+      "https://www.qemu.org/download/",
+      "https://qemu.weilnetz.de/w64/",
+      "https://www.7-zip.org/download.html",
+      "https://api.github.com/repos/ip7z/7zip/releases/tags/26.03",
+      "https://www.alpinelinux.org/downloads/"
+    ],
+    "downloads": [
+      {
+        "name": "7zr.exe",
+        "url": "https://github.com/ip7z/7zip/releases/download/26.03/7zr.exe",
+        "algorithm": "sha256",
+        "digest": "ad4c82fadcbdf93c03b4fc440f300509c7d60c5c2f4d183e35d9d70d6957037d",
+        "bytes": 602624,
+        "verified": true
+      },
+      {
+        "name": "7z2603-x64.exe",
+        "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-x64.exe",
+        "algorithm": "sha256",
+        "digest": "0859c524b8a63551848f0c246abddcb1d0b7b656b0fbfe879f8d85e61a9e6edd",
+        "bytes": 1661239,
+        "verified": true
+      },
+      {
+        "name": "qemu-w64-setup-20260811.exe",
+        "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20260811.exe",
+        "algorithm": "sha512",
+        "digest": "5bcf9eed634e8575a37b74f445af41a2fe4106da512d0c30c368301d4c105037fdfab40a5287367a28a957624cddebbc8c07e16c88ab6634f554cdf3d16bf543",
+        "bytes": 206615928,
+        "verified": true
+      },
+      {
+        "name": "alpine-virt-3.24.2-x86_64.iso",
+        "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-virt-3.24.2-x86_64.iso",
+        "algorithm": "sha256",
+        "digest": "3ab424762af704b2c2a9e57df1dc37f982af260071504d977f2fb96822e7130b",
+        "bytes": 69206016,
+        "verified": true
+      }
+    ]
+  },
+  "qemu_cwd": ".tools/linux-vm/qemu",
+  "qemu_args": [
+    ".tools/linux-vm/qemu/qemu-system-x86_64.exe",
+    "-L",
+    "share",
+    "-accel",
+    "tcg,thread=multi",
+    "-cpu",
+    "max",
+    "-m",
+    "3072",
+    "-smp",
+    "2",
+    "-display",
+    "none",
+    "-monitor",
+    "none",
+    "-no-reboot",
+    "-kernel",
+    "../alpine/boot/vmlinuz-virt",
+    "-initrd",
+    "../alpine/boot/initramfs-virt",
+    "-append",
+    "modules=loop,squashfs,sd-mod,usb-storage console=ttyS0,115200 quiet",
+    "-cdrom",
+    "../downloads/alpine-virt-3.24.2-x86_64.iso",
+    "-nic",
+    "user,model=virtio-net-pci",
+    "-chardev",
+    "socket,id=serial,host=127.0.0.1,port=57661,server=on,wait=off",
+    "-serial",
+    "chardev:serial"
+  ],
+  "host_result": {
+    "guest_exit_code": 0,
+    "guest_evidence_received": true,
+    "shutdown": "guest-poweroff",
+    "started_at": "2026-10-02T19:13:02.804489+00:00",
+    "finished_at": "2026-10-02T19:16:57.022897+00:00",
+    "qemu_exit_code": 0,
+    "services_closed": true
+  },
+  "loopback_ports_verified_closed": true,
+  "guest_evidence_bundle_sha256": "b2dc37cb3206023d58f1dc5a1142702d1d28d56f60e4cfa1373a3044aa71f2b5",
+  "validation_runner_sha256": "d57ef13d5dbdfdf943958f8282d1f9d8e601f11deb9e51fb5b16d3320361eb9c",
+  "junit_tests": 151,
+  "junit_seconds": 90.199,
+  "initial_harness_attempts": [
+    {
+      "stage": "QEMU process startup",
+      "outcome": "Failed to open ISO using a non-ASCII absolute Windows argument",
+      "adjustment": "Use relative ASCII QEMU arguments from its project-local working directory",
+      "product_tests_started": false
+    },
+    {
+      "stage": "Guest networking",
+      "outcome": "DHCP attempted before the guest virtual interface was up",
+      "adjustment": "Set the guest interface up, then request DHCP; normalize serial CRs",
+      "product_tests_started": false
+    }
+  ],
+  "evidence_files": {
+    "core-check.log": {
+      "bytes": 13868,
+      "sha256": "295e44830ed75e6f9a3caa7ba12f267f9260a8a53c8c247bedac0028da985f0a"
+    },
+    "core-data-change.log": {
+      "bytes": 16786,
+      "sha256": "d8a445967509d8f0b239b76bc835c85e52f9e6a8e4a8b6b83cf229440b8c2445"
+    },
+    "create-venv.log": {
+      "bytes": 16,
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb"
+    },
+    "evidence.json": {
+      "bytes": 8549,
+      "sha256": "443e893ae6d6413e48d9463e09c0d9f7a219bc62e924d83e2e55bf70de8f9491"
+    },
+    "examples.json": {
+      "bytes": 1819,
+      "sha256": "5da1f023cf3b14a46b249d9a93a7937414f6cbe6c025aad193668920d56eb346"
+    },
+    "examples.log": {
+      "bytes": 1835,
+      "sha256": "d36a8b71736f66f1a4db43580ce0b98cb928d5025d35eab8cb0cb6d5d9f2ce8f"
+    },
+    "install-core-wheel.log": {
+      "bytes": 2159,
+      "sha256": "4a945e70bf8b5237923cdde12a0262eb048645024c443b2092b7e2453ac44c43"
+    },
+    "install-test-dependencies.log": {
+      "bytes": 6934,
+      "sha256": "8888af54f74324ef4f87f9380e595c2da1d6eb1130ebea0331753c8595811580"
+    },
+    "installed-identity.log": {
+      "bytes": 1794,
+      "sha256": "f7a9cef40bd94e19edb4ff0c6d68cce95227a66ae555d6acbef95b1266dfa464"
+    },
+    "junit.xml": {
+      "bytes": 18957,
+      "sha256": "4403a269785ec4ca4f76da802880050b93fb812d1d28a3cb996bee5c589aac3f"
+    },
+    "mapping-controls.json": {
+      "bytes": 2477,
+      "sha256": "10ab9697d75dafbe3651568d51ba674f4d03787325a14a3bd60fa825045ec2b2"
+    },
+    "mapping-controls.log": {
+      "bytes": 2493,
+      "sha256": "899fc56713d14455f4946a6ee93b19d6e559d37007249c7d63788669f7594df6"
+    },
+    "mapping-export.log": {
+      "bytes": 61,
+      "sha256": "3ecc2aecc7fa0a328b1baf2bed5d5066a0baa4af6860c1dfc33c4212a34c77aa"
+    },
+    "optional-mcp-absent.log": {
+      "bytes": 101,
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f"
+    },
+    "pip-check.log": {
+      "bytes": 46,
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883"
+    },
+    "tests.log": {
+      "bytes": 287,
+      "sha256": "2a43865a609e3bb2cf153e651b8a8512acf4f5273a7669b1673745b444d93f05"
+    },
+    "versions.log": {
+      "bytes": 174,
+      "sha256": "99bb3c22e771cb09ed715c221a550118e9ac3380153144afc6e4285a6bc8407e"
+    }
+  },
+  "limitations": [
+    "One Alpine x86_64 Python 3.14.8 guest, not all Linux distributions or Python minors.",
+    "No macOS or remote CI run; no independent users or model-quality measurement.",
+    "TCG timings are validation diagnostics, not a performance benchmark.",
+    "Existing patch tests execute POSIX locks but do not establish multi-process contention behavior."
+  ]
+}

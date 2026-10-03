@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-02T18:13:56.653249+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-candidate-a2-final/paperdelta-0.1.0a2-py3-none-any.whl",
+      "bytes": 55374,
+      "sha256": "ec45ca39c7af6df42c18654c1cbeabac8c3eed5df0bbfbf023f8055083f04196"
+    },
+    {
+      "path": "build/release-candidate-a2-final/paperdelta-0.1.0a2.tar.gz",
+      "bytes": 2880119,
+      "sha256": "ceed56ca4b295a60ce8a765056091a72638aeaf73c33ff4dd520b7e6e650292a"
+    },
+    {
+      "path": "build/release-candidate-a2-final/paperdelta-evaluation-0.1.0a2.zip",
+      "bytes": 340630,
+      "sha256": "3755ac4e603eb41b2dd294ecbbcbd907be07acbdb0ba4988a945957c484cb1f7"
+    }
+  ],
+  "commands": [
+    {
+      "name": "source-archive-tests",
+      "exit_code": 0,
+      "log": "build/release-replay-a2/source-archive-tests.log"
+    },
+    {
+      "name": "corpus-regression",
+      "exit_code": 1,
+      "log": "build/release-replay-a2/corpus-regression.log"
+    }
+  ],
+  "import_path": "Extracted source archive's src directory via PYTHONPATH",
+  "source_archive_tests": {
+    "tests": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "corpus_cases": 150,
+  "matched_expectations": 126,
+  "every_outcome_and_protocol_match_a2_regression": true,
+  "wheel_member_bytes_identical_to_smoke_tested_a2_candidate": true,
+  "scope": "Local archive validation on seen inputs, not a new held-out or user trial."
+}

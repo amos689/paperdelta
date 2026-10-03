@@ -1,0 +1,17 @@
+{
+  "annotation_schema_version": 1,
+  "scope": "One manually selected literal per paper, with controlled synthetic evidence. This does not reproduce the authors' experiments or annotate every result in these papers.",
+  "selection_policy": "Choose an explicit author-reported result or parameter with a short, unique surrounding context. Development source scans preceded annotation; held-out annotations were made from raw source before evaluator execution. No automatic mapping is evaluated.",
+  "bindings": [
+    {"paper": "ml-finance", "file": "paper/main.tex", "value": "0.78", "prefix": "mean RDS is ", "suffix": ", and only", "meaning": "Author-reported mean Reproducibility Disclosure Score"},
+    {"paper": "rf-curriculum", "file": "ResearchPaper/FinalReport/Eschete_RF_AI_FPGA_Curriculum.tex", "value": "0.985", "prefix": "1-D CNN over 8-frame sequences reached ", "suffix": ", a $", "meaning": "Author-reported headline SF classification accuracy"},
+    {"paper": "hwo-bows", "file": "src/tex/tables/table-1-iwa-owa.tex", "value": "20.6", "prefix": "IWA &               1 &                              ", "suffix": " &                             34.4", "meaning": "First angular IWA conversion in an author-generated table; benchmark edits are disposable, not changes to its generation pipeline"},
+    {"paper": "legwork", "file": "src/tex/ms.tex", "value": "4.49", "prefix": "quickly computes that the SNR of this binary is $", "suffix": "$. In the background", "meaning": "Author-reported example binary signal-to-noise ratio"},
+    {"paper": "reflectometry", "file": "src/tex/ms.tex", "value": "10.0", "prefix": "$d_h$/\\si{\\angstrom} & $", "suffix": "$ & $[8.0, 16.0)", "meaning": "Reported starting head-layer thickness parameter"},
+    {"paper": "coronal-abundances", "file": "src/tex/ms.tex", "value": "0.1", "prefix": "heating rates in quiescent AR loops no larger than $\\approx ", "suffix": "$ erg", "meaning": "Author-reported heating-rate bound in the abstract"},
+    {"paper": "ce-accretors", "file": "src/tex/CE_accretors.tex", "value": "0.56", "prefix": "the minima range between ", "suffix": "-0.07", "meaning": "First reported envelope-energy ratio range endpoint"},
+    {"paper": "pzflow", "file": "src/tex/ms.tex", "value": "0.5", "prefix": "redshift (i.e. the mode of the redshift posterior) varies by as much as ", "suffix": " for each set of posteriors.", "meaning": "Author-reported variation in modal redshift estimates"},
+    {"paper": "rossby-ridge", "file": "src/tex/ms.tex", "value": "0.18", "prefix": "with a mean and standard deviation of +0.03~dex and ", "suffix": "~dex, respectively.", "meaning": "Author-reported metallicity standard deviation of the CKS sample"},
+    {"paper": "centre-of-mass", "file": "src/tex/ms.tex", "value": "0.26", "prefix": "coordinates of ", "suffix": " and 0.74.", "meaning": "Fixed left-edge particle coordinate in the numerical example"}
+  ]
+}

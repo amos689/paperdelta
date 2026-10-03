@@ -1,0 +1,60 @@
+\section{Derivatives Pricing and Hedging}\label{sec:derivatives}
+
+Derivatives pricing presents a unique setting for ML: unlike return prediction, where the signal-to-noise ratio is extremely low, options pricing involves learning a structured function (the pricing map from inputs to fair value) that is theoretically well-understood but difficult to compute for complex products. This makes it a natural domain for function approximation via neural networks.
+
+\subsection{Option Pricing}
+
+\subsubsection{Neural Network Pricing Models}
+
+The idea of using neural networks as function approximators for option pricing dates to \citet{Hutchinson1994}, but modern deep learning has substantially expanded the scope:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Bayer2019} train deep neural networks to approximate the pricing function for rough volatility models, achieving computation times orders of magnitude faster than Monte Carlo while maintaining accuracy.
+
+    \item \citet{Horvath2021} extend this to general stochastic volatility models, showing that neural network approximation of the pricing map is a viable alternative to finite-difference PDE solvers for complex payoffs.
+
+    \item \citet{Ruf2020} run a broad comparison of neural-network approaches to option pricing, covering data-driven models (trained on market data), model-driven approaches (trained on model outputs), and hybrid methods. They find that data-driven approaches outperform parametric models for plain vanilla options but struggle with illiquid exotics.
+\end{itemize}
+
+\subsubsection{Implied Volatility Surface Modeling}
+
+The implied volatility surface, the function mapping strike and maturity to Black-Scholes implied volatility, is a central object in options markets:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Ackerer2020} propose a neural network parameterization of the implied volatility surface that guarantees absence of calendar and butterfly arbitrage by construction.
+
+    \item \citet{Cohen2023} use variational autoencoders to learn a low-dimensional representation of the vol surface, enabling surface interpolation, extrapolation, and scenario generation.
+
+    \item \textbf{SVI and beyond:} the Stochastic Volatility Inspired
+    parameterization \citep{Gatheral2014} remains the industry benchmark.
+    ML approaches must be compared against this calibrated parametric
+    model; gains typically show up in the tails and at short maturities.
+\end{itemize}
+
+\subsection{Dynamic Hedging}
+
+ML-based hedging strategies learn to minimize hedging error directly, without assuming a specific pricing model:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Buehler2019} introduce the ``deep hedging'' framework: a neural network learns the optimal hedging strategy by minimizing a convex risk measure of the hedging error. This approach naturally incorporates transaction costs, market frictions, and model uncertainty.
+
+    \item \citet{Cao2021} apply reinforcement learning to delta hedging, with the agent learning to adjust hedge ratios in response to market conditions. The RL approach outperforms delta-gamma hedging in the presence of jumps and stochastic volatility.
+
+    \item \citet{Murray2022} extend deep hedging to incorporate multiple hedging instruments (options at various strikes) and show that the learned strategy effectively rediscovers vega and gamma hedging without being told about the Greeks.
+\end{itemize}
+
+\subsection{Exotic Derivatives and Structured Products}
+
+For complex derivatives where analytical pricing is unavailable:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{American options:} \citet{Becker2019} propose a deep learning approach to American option pricing that scales to high dimensions (baskets of 100+ underlyings), overcoming the curse of dimensionality that limits traditional Longstaff-Schwartz regression.
+
+    \item \textbf{Callable structures:} Neural networks approximate the continuation value function in backward induction, enabling real-time pricing of callable bonds and structured notes.
+
+    \item \textbf{XVA computation:} \citet{Gnoatto2023} apply neural network regression to credit valuation adjustments (CVA, DVA, FVA), achieving massive speedups over nested Monte Carlo.
+\end{itemize}
+
+\subsection{Summary}
+
+In our view, derivatives pricing is the most genuinely successful application domain for deep learning in finance, and it is telling that it gets less attention than return prediction. The reasons for its success are structural: (i) the target function is smooth and structured, (ii) training data can be generated synthetically from pricing models, (iii) the accuracy requirements are well-defined, and (iv) the computational savings are economically significant. Deep hedging represents a paradigm shift from model-based to data-driven hedging that is increasingly adopted in practice.

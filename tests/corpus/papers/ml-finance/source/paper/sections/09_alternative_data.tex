@@ -1,0 +1,64 @@
+\section{Alternative Data and Natural Language Processing}\label{sec:alternative_data}
+
+Alternative data, in the sense of non-traditional sources such as news, social media, satellite imagery, web traffic, and corporate filings, is the fastest-growing application area for ML in finance. NLP methods are the primary tool for extracting signals from textual alternative data.
+
+\subsection{Financial Sentiment Analysis}
+
+\subsubsection{Dictionary-Based Methods}
+
+The foundation of financial text analysis is the \citet{Loughran2011} dictionary, which demonstrated that general-purpose sentiment dictionaries (e.g., Harvard General Inquirer) perform poorly on financial text because words like ``liability,'' ``tax,'' and ``cost'' have neutral meanings in financial context. The Loughran-McDonald dictionary remains a benchmark against which ML approaches are evaluated.
+
+\subsubsection{Pre-trained Language Models}
+
+The transformer revolution has reached financial NLP:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{FinBERT} \citep{Araci2019}: BERT fine-tuned on financial news. Achieves substantially higher accuracy than dictionary methods and general-purpose BERT on financial sentiment classification.
+
+    \item \textbf{BloombergGPT} \citep{Wu2023}: a 50B-parameter LLM trained on Bloomberg's proprietary corpus of financial documents. Beats general-purpose LLMs on financial NLP benchmarks while staying competitive on general-domain tasks.
+
+    \item \textbf{General-purpose LLMs} (GPT-4, Claude): \citet{LopezLira2023} show that GPT-3.5/4 can predict stock returns from news headlines, with performance comparable to purpose-trained models. The zero-shot capability eliminates the need for labeled training data.
+
+    \item \textbf{Open-source finance LLMs:} FinGPT \citep{Yang2023} and InvestLM provide open-source alternatives for financial NLP, enabling reproducible research.
+\end{itemize}
+
+\subsection{News and Event Analysis}
+
+Beyond sentiment, ML methods extract structured information from news:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Event detection:} Identifying market-moving events (M\&A announcements, earnings surprises, regulatory changes) from news feeds in real-time \citep{EinDor2020}.
+
+    \item \textbf{Causal extraction:} Extracting causal relationships (``tariffs caused a decline in imports'') from financial news using transformer-based information extraction \citep{Mariko2022}.
+
+    \item \textbf{Earnings call analysis:} ML models analyze the text and audio of earnings calls, extracting CEO tone, uncertainty language, and deceptive patterns that predict post-call stock movements \citep{Li2021, Qin2019}.
+\end{itemize}
+
+\subsection{Social Media and Crowd Signals}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Twitter/X:} \citet{Bollen2011} pioneered Twitter mood prediction of DJIA movements. More recent work uses transformer models on high-frequency tweet streams, with mixed evidence of genuine predictive content versus noise \citep{Renault2020}.
+
+    \item \textbf{Reddit (WallStreetBets):} The GameStop episode (January 2021) catalyzed academic interest in retail investor coordination on social media. \citet{Bradley2021} analyze the information content of Reddit posts for stock prediction.
+
+    \item \textbf{StockTwits:} a dedicated financial social platform whose posts ship with bullish or bearish labels, which makes it a convenient training set for sentiment models \citep{Oliveira2017}.
+\end{itemize}
+
+\subsection{Non-Textual Alternative Data}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Satellite imagery:} CNNs applied to satellite images of parking lots (retail foot traffic), oil storage tanks (inventory levels), and agricultural fields (crop yields). \citet{Katona2021} demonstrate that satellite-derived parking lot occupancy predicts retailer revenue ahead of official reports.
+
+    \item \textbf{Web data:} Job postings, product reviews, app download statistics, and web traffic as leading indicators of corporate performance \citep{Green2019}.
+
+    \item \textbf{ESG and climate:} NLP extraction of ESG metrics from corporate reports, news, and regulatory filings. This subfield is growing rapidly due to regulatory pressure for ESG disclosure \citep{Kalesnik2022}.
+\end{itemize}
+
+\subsection{Challenges and Limitations}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Signal decay:} Alternative data signals are rapidly incorporated into prices once widely adopted, creating an arms race for novel data sources.
+    \item \textbf{Backtest inflation:} Alternative data is often available only for recent periods, limiting out-of-sample evaluation.
+    \item \textbf{Labeling ambiguity:} Financial sentiment is context-dependent (``interest rates rose'' is positive for banks, negative for borrowers), making supervised training challenging.
+    \item \textbf{Cost:} Commercial alternative data is expensive, creating barriers to academic research and replication.
+\end{enumerate}

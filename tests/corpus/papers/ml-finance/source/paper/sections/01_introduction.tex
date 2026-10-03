@@ -1,0 +1,54 @@
+\section{Introduction}\label{sec:introduction}
+
+Ten years ago, applying machine learning to financial markets was a niche
+pursuit. A handful of papers tested random forests or SVMs on stock
+returns, usually on one market and one horizon, and the results were mixed
+enough that most finance departments shrugged them off. That is no longer
+the case. By 2025, ML has reached every corner of quantitative finance.
+Cross-sectional asset pricing. Options hedging. Earnings-call sentiment.
+The volume of published work has grown to the point where keeping track of
+it is itself a research problem.
+
+The trouble is that the work is scattered. An ML researcher looking for
+the best model to predict equity returns will find relevant papers at
+NeurIPS, in the \textit{Review of Financial Studies}, on arXiv's q-fin
+section, and buried in SSRN working-paper series. The conventions of each
+venue are different. ML papers report out-of-sample $R^2$ and treat a
+0.5\% improvement as a win. Finance papers want Sharpe ratios net of
+transaction costs and a comparison against Fama-French factor models. A
+result that looks impressive by one community's standards may look
+unremarkable, or even suspicious, by the other's. The fragmentation wastes
+effort: researchers in one camp routinely rediscover what the other camp
+settled years ago.
+
+\subsection{What This Survey Does}
+
+This paper tries to impose some order on the chaos. The survey covers ML
+applications in quantitative finance from 2015 through 2025: 227 studies
+across six application domains (return prediction, risk management,
+portfolio optimisation, derivatives pricing, market microstructure, and
+alternative data/NLP). Each study is classified along two axes,
+methodology and application, which produces a taxonomy matrix that shows
+at a glance where the literature is dense and where it has holes.
+
+Three things distinguish this survey from its predecessors.
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Standardised comparison tables.} For each domain we report the dataset, sample period, ML method, benchmark, performance metric, and, critically, whether code and data are public. Most prior surveys describe methods in prose. We tabulate them so a reader can compare directly.
+
+    \item \textbf{Full coverage of the LLM era.} Existing surveys largely predate the 2022--2025 explosion of large language models in finance. We cover BloombergGPT, FinBERT, GPT-based return prediction, and the broader question of whether foundation models will reshape the field.
+
+    \item \textbf{A reproducibility audit.} For each study we track whether code and data are available. The numbers are not encouraging. Of the 227 studies in our sample, roughly 47 (21\%) share replication code; on the 119-study subset released as a structured CSV alongside this paper the count is 33 of 119 (28\%). The gap is a sample selection effect: the released CSV is enriched for studies whose code-availability flag we have personally verified through GitHub or repository inspection. We flag this not as an aside but as a first-order problem for the field.
+\end{enumerate}
+
+\subsection{Prior Surveys and Where They Fall Short}
+
+The literature already has several surveys, each useful but each with blind spots. \citet{Henrique2019} cover ML for stock prediction through 2018, but that cutoff misses transformers, LLMs, and the post-pandemic data regime entirely. \citet{Ozbayoglu2020} survey deep learning architectures for finance, though their emphasis is on describing network structures rather than comparing empirical results head-to-head. \citet{DePrado2018} and \citet{Dixon2020} wrote valuable textbooks, but textbooks age, and neither could anticipate the pace of change after 2020.
+
+Among more recent work, \citet{KellyXiu2023} provide the most authoritative treatment; their \textit{Foundations and Trends in Finance} monograph is close to definitive on return prediction and factor models. But their scope is deliberately narrow: they do not cover NLP, derivatives pricing, or microstructure. \citet{NazarethReddy2023} cast a wider net (126 articles, 44 journals) but focus on categorization rather than critical evaluation, telling you what methods have been applied where rather than which ones actually work. \citet{Goodell2022} take a bibliometric approach (348 papers, co-citation analysis) that maps the intellectual landscape but provides no guidance to a practitioner wondering which model to deploy.
+
+Our survey fills the gap between these approaches: broad enough to cover all six domains, deep enough to include comparison tables and reproducibility tracking, and current enough to address the LLM wave.
+
+\subsection{Roadmap}
+
+\Cref{sec:methodology} describes our search strategy and inclusion criteria. \Cref{sec:taxonomy} lays out the two-dimensional taxonomy. \Cref{sec:return_prediction} through \Cref{sec:alternative_data} work through each application domain in turn. \Cref{sec:cross_cutting} tackles four themes that cut across domains: interpretability, non-stationarity, compute, and the reproducibility crisis. \Cref{sec:open_problems} identifies ten open problems. \Cref{sec:conclusion} steps back and offers an overall assessment.

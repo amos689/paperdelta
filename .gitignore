@@ -1,0 +1,17 @@
+.venv/
+.venv-*/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.paperdelta/transactions/
+.paperdelta/transactions.lock
+.paperdelta/proposals/
+.paperdelta/patches/
+

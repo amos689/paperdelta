@@ -1,0 +1,137 @@
+{
+  "checked_at": "2026-10-03T02:59:03.646857+00:00",
+  "native_macos_execution": "pending",
+  "actual_host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "windows_regression": {
+    "passed": 164,
+    "skipped": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  "versions": {
+    "paperdelta": "0.1.0a2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "pylatexenc": "2.11",
+    "mcp": "2.3.0",
+    "pytest": "9.1.1"
+  },
+  "core_only_installation": "passed",
+  "separate_full_environment": true,
+  "examples_and_ci_demos": "passed",
+  "macos_host_guard": {
+    "windows_exit_code": 2,
+    "created_output": false
+  },
+  "workflow_actionlint": {
+    "version": "1.7.12",
+    "exit_code": 0
+  },
+  "configured_macos_cells": 8,
+  "native_architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "not_executed_here": [
+    "macOS",
+    "POSIX pseudo-terminal cases",
+    "POSIX symlink/mode case"
+  ],
+  "prior_attempts": "Two bootstrap attempts stopped at lint; formatting and the pre-installation Python-version guard were corrected. Logs retained.",
+  "runtime_core_changed": false,
+  "installed_core_sha256": {
+    "__init__.py": "3ad683e77cd398ab8604005171c3b9bde1a04298b02c2d90aed156c4e045fe81",
+    "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "agent.py": "a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+    "analysis.py": "68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+    "cli.py": "75e5729fbf3a62f46f4a8afd509aace0f72c311d2516e346f85b8c57a12d988c",
+    "config.py": "c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+    "errors.py": "908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+    "interactive.py": "ed5ab9447ac1102b3479de1be7fa7c4926cadf4d9b7d37d6a6f990eec3091654",
+    "latex.py": "14af7f15d68a69b20c025f7d732a10aefe0741a9b815d1865f7f006ffcd35446",
+    "mcp_server.py": "52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+    "metrics.py": "0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+    "models.py": "3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+    "onboarding.py": "2864201735ac2cb9d521d052f67846d270be294ab2f5e0257fd680b09b82aedd",
+    "patches.py": "c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+    "records.py": "7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+    "reports.py": "b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+    "reviews.py": "801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+    "snapshots.py": "314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+    "sources.py": "2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+    "storage.py": "6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d"
+  },
+  "support_source_sha256": {
+    "tools/validate_platform.py": "0f4afc1a6e91b1418f41e7005d540212d17a26a29f618d3d31960cbf250629f4",
+    "tools/build_transfer.py": "925de945acf659679cf21de52e75522fe8b99e451329fc175727b44e72c97314",
+    "tests/test_platform_io.py": "969b1b39219d797a1711bc326f2aace7499a320631e7bda73c372abfb38803da",
+    ".github/workflows/ci.yml": "e061275229f3e4a1a827bd02b0a9a4c9e14c66fc47acb76a2a2f95e9704add07"
+  },
+  "unsanitized_original_hashes": {
+    "windows-execution.json": "33714b8c3d6b8e79f70aa44d455597c3df0732553229a8f1f5e088207a34b1f6",
+    "core-smoke.json": "ac896123df83cb05149e998bb633736b53a102c8735e255492fb4bf872d5a1d0",
+    "matrix.json": "e3cf0ba465a8daa90119117a3fb4102294964f87cefef104992a9452f1a1bc2e",
+    "junit.xml": "c9e107259c044d375913efd8f817ee07ca2656f73f03f0263018517a74559547",
+    "stdout.log": "a4e5ea9b0bc132f0d3d8063ccd2c0f07a163c65fe3b965094a1e175a683242fc",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples.json": "bfdf4924f8d910f9037d44bbc4254e1b04c032acbd89bb7174804abb051f0753",
+    "ci-demo.json": "4e80a8ff2dd5799d478bfe7e43a76897491a85e47b0a56c4c0528d885d7d4da8",
+    "ci-demo.log": "4e80a8ff2dd5799d478bfe7e43a76897491a85e47b0a56c4c0528d885d7d4da8",
+    "core-smoke.log": "56372b9e9a4ce91a2a76d70674f3478ba4509f131769c38b18dbac9517cce0be",
+    "examples.log": "bfdf4924f8d910f9037d44bbc4254e1b04c032acbd89bb7174804abb051f0753",
+    "format.log": "ea2969fd741733e33c490fb6696583f5d6e29e16cae5e536952236a31cf615b1",
+    "install-core.log": "e23a11a5be8780c5be0325989e2c18c19b5a7b3a3c380d77c7a7b26d4b6afd74",
+    "install-full.log": "39c34f873cf339d29210d69adba117fc63beb919c9cfe2cd569293dbfec06a5d",
+    "lint.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "tests.log": "260be36037bac837c7ffb2e93133ae18459745bc79f554a5e3e2a02e5fc0fab7"
+  },
+  "original_log_encodings": {
+    "windows-execution.json": "utf-8",
+    "core-smoke.json": "utf-8",
+    "matrix.json": "utf-8",
+    "junit.xml": "utf-8",
+    "stdout.log": "utf-8",
+    "stderr.log": "utf-8",
+    "examples.json": "utf-8",
+    "ci-demo.json": "utf-8",
+    "ci-demo.log": "utf-8",
+    "core-smoke.log": "utf-8",
+    "examples.log": "utf-8",
+    "format.log": "utf-8",
+    "install-core.log": "gb18030; normalized to UTF-8 for publication",
+    "install-full.log": "gb18030; normalized to UTF-8 for publication",
+    "lint.log": "utf-8",
+    "tests.log": "utf-8"
+  },
+  "evidence_files": {
+    "ci-demo.json": "987e7d69c7c0a179d6a832e493c66ec725ae7284af987fe06d342ab28c165dea",
+    "ci-demo.log": "987e7d69c7c0a179d6a832e493c66ec725ae7284af987fe06d342ab28c165dea",
+    "core-smoke.json": "eeb1812cccfecca7420499685770a8e3f5a912a9cf601040f7b81a521114dacf",
+    "core-smoke.log": "48b817a5d724868a9ca18d19c27528946f07fac9671b0b3a7926cab736ef42c2",
+    "examples.json": "4609f243184cc0f767c0844ef10d51e1c3210dd786041d6ebbb2d34e90d4d18d",
+    "examples.log": "4609f243184cc0f767c0844ef10d51e1c3210dd786041d6ebbb2d34e90d4d18d",
+    "format.log": "fc6292027083484e2bada04d700f3ded2f39bde6ddcb4b7055a2e172339938fa",
+    "host-guard.log": "10d0b650b4c3467ccd61a4a1997341fb0bf1c1dc13a4eafb39bc99ba1534cbf4",
+    "install-core.log": "84217dadf6f914b2c9e70ffe303a1003782dbfda9503f19d174ec0b71e92b6aa",
+    "install-full.log": "1c26f60dfb074451037e528669dd91c35a8be20afeeb5b1e1693d1daee6794db",
+    "junit.xml": "ddb058376a37c7b53d630c5464d1e7f01fd82fb6c2bba27facf5a305632d6dae",
+    "lint.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "matrix.json": "906c7c8b0910e7045f2d11e3df4c09ffbbf2540d372338ad2f6396751daa1703",
+    "platform-harness-windows-evidence.json": "17818948a45d17c4074b9070c9b25c106e049b5448ca8e1164af0977b4075d3d",
+    "platform-harness-windows-lint.log": "e176622c59e694254fa49eb01c5db2095791e9ae5ad06d8ff7d4d11370e77816",
+    "platform-harness-windows-v2-evidence.json": "afcae5a8f4d97c9df9cf345be9e540c3d826c14a89fb44ca017d9c62dc6d4f82",
+    "platform-harness-windows-v2-lint.log": "78ea411856a264cc2d4b97534b50e3bda4c5d78999251100d3a46b5f3eb77df9",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "dff224e5d1033fd14869378e7ea27e75322de86781ccf2905cb485b9ba3c44c0",
+    "tests.log": "806f69184de438fc72d1f05bc30355f70dd80444bf4a8bfd1667df224c17b89f",
+    "windows-execution.json": "5878b6ba46c28557436489aa00462e039f4e7efc737de52711789b9ca8c4680b"
+  },
+  "scope": "Windows bootstrap regression and static preparation only; not a native Mac claim."
+}

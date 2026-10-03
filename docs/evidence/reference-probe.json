@@ -1,0 +1,38 @@
+{
+  "python": "3.12.14",
+  "platform": "win32",
+  "versions": {
+    "calkit-python": "0.47.12",
+    "scitexlintr": "0.2.1"
+  },
+  "results": [
+    {
+      "phase": "before",
+      "calkit_conditional_answer": "Ours achieves 84.1% and beats Baseline.",
+      "scitexlintr_findings": [],
+      "scitexlintr_fix_count": 0,
+      "scitexlintr_fixed_source": "\\newcommand{\\SciVal}[2]{#1}\nAccuracy: \\SciVal{\\Ours}{84.1\\%}."
+    },
+    {
+      "phase": "after",
+      "calkit_conditional_answer": "Ours achieves 80.9% and does not beat Baseline.",
+      "scitexlintr_findings": [
+        {
+          "rule": "snapshot-mismatch",
+          "message": "snapshot 84.1\\% for \\Ours disagrees with manifest value 0.809, which renders as 80.9\\% (id=ours)",
+          "line": 2
+        }
+      ],
+      "scitexlintr_fix_count": 1,
+      "scitexlintr_fixed_source": "\\newcommand{\\SciVal}[2]{#1}\nAccuracy: \\SciVal{\\Ours}{80.9\\%}."
+    }
+  ],
+  "scope": "Public library APIs on an authored numeric-change scenario; no pipeline or TeX execution.",
+  "limits": [
+    "No installation or onboarding time comparison was measured.",
+    "scitexlintr was configured for its snapshot-mismatch rule and wrapper convention.",
+    "Calkit was configured for conditional answers and evidence-driven LaTeX values.",
+    "Both mechanisms work; this is not evidence that PaperDelta is more accurate.",
+    "Independent product value still needs existing-paper onboarding trials."
+  ]
+}

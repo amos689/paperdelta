@@ -1,0 +1,48 @@
+{
+  "base_commit": "3a8782db1e7dfe07e93508a000d16f2bc59bb29e",
+  "baseline_status": "read_from_target_commit",
+  "ci_context_schema_version": 1,
+  "configuration": {
+    "sections": [
+      {
+        "added": [],
+        "changed": [],
+        "removed": [
+          "abstract_accuracy",
+          "appendix_accuracy",
+          "gain_text",
+          "table_accuracy"
+        ],
+        "section": "occurrences"
+      },
+      {
+        "added": [],
+        "changed": [],
+        "removed": [
+          "main_comparison"
+        ],
+        "section": "claims"
+      }
+    ],
+    "settings": [],
+    "status": "changed"
+  },
+  "policy_changes": [
+    {
+      "change": "modified",
+      "current_hash": "sha256:d64b4619574897e77b6f50d4bc2001e89a7e6723225eba90b88c5aa264d6a08d",
+      "kind": "baseline",
+      "path": ".paperdelta/baselines/submitted-v1.json",
+      "target_hash": "sha256:266c3dc849e2f934343e3f21d87c5211183f8d5b161843441c1c29016774179e"
+    },
+    {
+      "change": "modified",
+      "current_hash": "sha256:ab1928eccf89ca11a01b6cb23c623d32fb528321ad3e109900f9c5286d9016d3",
+      "kind": "configuration",
+      "path": "paperdelta.yaml",
+      "target_hash": "sha256:ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769"
+    }
+  ],
+  "snapshot_hash": "sha256:266c3dc849e2f934343e3f21d87c5211183f8d5b161843441c1c29016774179e",
+  "snapshot_path": ".paperdelta/baselines/submitted-v1.json"
+}

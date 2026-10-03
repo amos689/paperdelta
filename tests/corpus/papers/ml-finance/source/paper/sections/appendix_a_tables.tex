@@ -1,0 +1,229 @@
+\section{Selected Representative Studies, by Domain}\label{sec:appendix_tables}
+
+These tables present a curated sample of representative studies in each of
+the six application domains, chosen to span the methodological families
+discussed in \Cref{sec:taxonomy}. They are not the full 227-study sample.
+The complete annotated database, with every included study's venue, asset
+class, sample period, ML method, benchmark, primary metric, key finding,
+and code/data availability, is released as a CSV in the supplementary
+repository (\url{https://github.com/ayk5511/ml-finance-survey}).
+
+For each tabulated study we report: authors and year, asset class, sample period, primary ML method, primary benchmark, headline performance metric, code availability (Y/N), and data source. The Code column reflects whether replication code is publicly available at the time of writing; ``--'' indicates the field is not applicable (e.g., theoretical or simulation-only studies). Asset and period entries shown as ``--'' indicate either non-empirical studies or study designs where the field does not apply.
+
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{3pt}
+\scriptsize
+\sloppy
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Return Prediction.}\label{tab:master_returns} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_returns} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Welch2008}      & 2008 & US Eq.  & 1927--2005 & Linear baseline   & Hist.\ mean      & $R^2_{OOS}$  & Y & Public \\
+\citet{Bao2017}        & 2017 & US Eq.  & 2007--2016 & SAE+LSTM          & ARIMA            & MAPE         & N & Yahoo \\
+\citet{Fischer2018}    & 2018 & US Eq.  & 1992--2015 & LSTM              & RF, Logit        & Accuracy     & Y & Public \\
+\citet{Kelly2019}      & 2019 & US Eq.  & 1962--2014 & IPCA              & PCA, FF5         & $R^2_{OOS}$  & N & CRSP \\
+\citet{Gu2020}         & 2020 & US Eq.  & 1957--2016 & NN, RF, GBDT      & OLS, LASSO       & $R^2_{OOS}$  & Y & CRSP \\
+\citet{DeMiguel2020}   & 2020 & US Eq.  & 1980--2014 & LASSO+GBDT        & FF5, EW          & Sharpe       & N & CRSP \\
+\citet{Feng2020}       & 2020 & US Eq.  & 1980--2016 & LASSO ($t$-test)  & 150 factors      & SDF $R^2$    & N & CRSP \\
+\citet{Freyberger2020} & 2020 & US Eq.  & 1965--2014 & Adaptive LASSO    & Linear           & $R^2_{OOS}$  & Y & CRSP \\
+\citet{Kozak2020}      & 2020 & US Eq.  & 1973--2017 & Elastic Net       & FF, PCA          & SDF $R^2$    & N & CRSP \\
+\citet{Cong2021}       & 2021 & US Eq.  & 1963--2019 & Panel Tree        & FF5              & $R^2_{OOS}$  & N & CRSP \\
+\citet{Gu2021}         & 2021 & US Eq.  & 1967--2016 & Cond.\ Autoenc.   & PCA              & $R^2_{OOS}$  & Y & CRSP \\
+\citet{Kim2021}        & 2021 & US Eq.  & 1965--2017 & VAE factors       & PCA, IPCA        & $R^2_{OOS}$  & N & CRSP \\
+\citet{Tobek2021}      & 2021 & US Eq.  & 1963--2019 & GBDT (cost-aware) & Fama-French      & Sharpe (net) & Y & CRSP \\
+\citet{Chen2022}       & 2022 & US Eq.  & --         & Graph NN          & Linear, NN       & IC, accuracy & N & Public \\
+\citet{Duan2022}       & 2022 & US Eq.  & 1963--2021 & Transformer       & LSTM, GBDT       & $R^2_{OOS}$  & N & CRSP \\
+\citet{Leippold2022}   & 2022 & China Eq.\ & 2000--2020 & LightGBM       & Linear           & $R^2_{OOS}$  & N & DataStream \\
+\citet{Avramov2023}    & 2023 & US Eq.  & 1965--2020 & Constrained NN    & Linear           & $R^2_{OOS}$  & N & CRSP \\
+\citet{LopezLira2023}  & 2023 & US Eq.  & 2021--2023 & GPT-3.5/4 0-shot  & FinBERT          & Sharpe       & Y & News \\
+\citet{Chen2024}       & 2024 & US Eq.  & 1957--2016 & Deep ML factor    & PCA, FF          & Sharpe       & N & CRSP \\
+
+\end{longtable}
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Risk Management.}\label{tab:master_risk} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_risk} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Bollerslev1986} & 1986 & --     & --         & GARCH(1,1) (bench.) & --              & MSE          & -- & --     \\
+\citet{Engle2002}      & 2002 & Multi  & --         & DCC-GARCH (bench.)  & --              & MSE          & -- & --     \\
+\citet{Meinshausen2006}& 2006 & --     & --         & Quantile RF       & Quant.\ regr.    & QC           & Y & --     \\
+\citet{Holopainen2017} & 2017 & Banks  & 1970--2014 & RF                & Logit            & AUC          & N & BIS    \\
+\citet{Barboza2017}    & 2017 & US Corp.\ & 1985--2013 & RF, GBDT       & Logit            & AUC          & Y & Compustat \\
+\citet{Taylor2019}     & 2019 & Multi  & 1990--2017 & NN-CAViaR         & CAViaR           & VaR cov.\    & N & Public \\
+\citet{Zhang2019}      & 2019 & SPX    & 1990--2018 & GARCH-LSTM        & GARCH            & MAE          & N & Public \\
+\citet{Bucci2020}      & 2020 & SPX    & 2000--2019 & LSTM              & GARCH, HAR       & RMSE         & N & Oxford-Man \\
+\citet{Luong2021}      & 2021 & SPX    & 2000--2019 & RF                & HAR-RV           & MSE          & N & Oxford-Man \\
+\citet{Bussmann2021}   & 2021 & Credit & 2005--2019 & GBDT + SHAP       & Logit            & AUC          & Y & Private \\
+\citet{Cont2022}       & 2022 & Multi  & 2005--2020 & Tail-GAN          & Hist.\ sim.\     & VaR cov.\    & N & Various \\
+\citet{Mittnik2022}    & 2022 & Indices& 2000--2021 & LightGBM          & HAR-RV           & QLIKE        & N & Public \\
+\citet{Giudici2022}    & 2022 & Banks  & 2008--2020 & GNN               & CoVaR            & MES          & N & Private \\
+\citet{Suss2022}       & 2022 & Credit & --         & Alt.\ data + ML   & Trad.\ PD        & AUC, KS      & N & Private \\
+\citet{Delli2022}      & 2022 & Macro  & --         & RL + ABM          & ABM only         & Crisis det.  & N & Sim.   \\
+\citet{Christensen2023}& 2023 & Multi  & 2005--2022 & TFT               & HAR              & QLIKE        & N & Public \\
+
+\end{longtable}
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Portfolio Optimization.}\label{tab:master_portfolio} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_portfolio} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Markowitz1952}  & 1952 & --     & --         & MV optimization (bench.) & --        & Sharpe       & -- & --     \\
+\citet{Almgren2001}    & 2001 & --     & --         & Analytical TC     & --               & Imp.\ short. & -- & --     \\
+\citet{Jiang2017}      & 2017 & Crypto & 2015--2017 & CNN-RL            & UBAH             & Cum.\ return & Y & Poloniex \\
+\citet{Ban2018}        & 2018 & US Eq.\ & 1980--2014 & ML + reg.\        & MV             & Sharpe       & N & CRSP   \\
+\citet{Kelly2019}      & 2019 & US Eq.\ & 1962--2014 & IPCA              & FF5            & Sharpe       & N & CRSP   \\
+\citet{DeMiguel2020}   & 2020 & US Eq.\ & 1980--2014 & LASSO + TC       & EW             & Sharpe (net) & N & CRSP   \\
+\citet{Zhang2020}      & 2020 & US Eq.\ & 1990--2018 & End-to-end NN     & MV, EW         & Sharpe       & N & CRSP   \\
+\citet{Ye2020}         & 2020 & US Eq.\ & 2000--2019 & PPO RL            & EW, MV         & Sharpe       & N & CRSP   \\
+\citet{Nystrup2020}    & 2020 & Multi  & 1990--2018 & Regime-switch ML  & MV             & Sharpe       & N & Public \\
+\citet{Cong2021}       & 2021 & US Eq.\ & 1963--2019 & Panel Tree        & FF5            & Sharpe       & N & CRSP   \\
+\citet{Wang2021}       & 2021 & US Eq.\ & 2009--2021 & FinRL framework   & EW, Min-Var    & Sharpe       & Y & Yahoo  \\
+\citet{Ledoit2022}     & 2022 & US Eq.\ & 1972--2021 & NN shrinkage     & Lin.\ shrink.\ & Sharpe   & N & CRSP   \\
+\citet{Zhao2022}       & 2022 & US Eq.\ & --         & Graph cov.        & Sample cov.\   & Sharpe       & N & CRSP   \\
+\citet{Butler2023}     & 2023 & US Eq.\ & --         & Diff.\ CVX layer  & MV             & Sharpe       & N & CRSP   \\
+\citet{Moallemi2023}   & 2023 & US Eq.\ & --         & DP + TC           & Naive rebal.\  & TC-adj.\ Sharpe & N & --  \\
+
+\end{longtable}
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Derivatives Pricing and Hedging.}\label{tab:master_derivatives} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_derivatives} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Hutchinson1994} & 1994 & SPX opt.\ & 1987--1991 & Shallow NN       & Black-Scholes & Pricing err.\ & N & --   \\
+\citet{Gatheral2014}   & 2014 & SPX opt.\ & --         & SVI param.\      & --            & Arb-free fit  & N & --   \\
+\citet{Bayer2019}      & 2019 & Synth.\    & --         & Deep NN          & Monte Carlo   & Calib.\ err.\ & N & N/A \\
+\citet{Buehler2019}    & 2019 & Synth.\    & --         & Deep hedging NN  & Delta-gamma   & CVaR P\&L     & Y & N/A  \\
+\citet{Becker2019}     & 2019 & Synth.\    & --         & Deep opt.\ stop  & Longstaff-Schwartz & Stop val.\ err.\ & Y & N/A \\
+\citet{Ackerer2020}    & 2020 & SPX, SX5E & --         & Smoothing NN     & SVI           & Arb-free MSE  & N & --   \\
+\citet{Ruf2020}        & 2020 & SPX opt.\ & --         & Various NN       & BS, Heston    & Hedging err.\ & Y & --   \\
+\citet{Cao2021}        & 2021 & Synth.\    & --         & DRL hedging      & Delta-gamma   & CVaR P\&L     & N & N/A  \\
+\citet{Horvath2021}    & 2021 & Synth.\    & --         & Deep NN          & PDE solver    & Calib.\ err.\ & N & N/A \\
+\citet{Murray2022}     & 2022 & Synth.\    & --         & Deep NN, multi   & Delta-gamma   & CVaR P\&L     & N & N/A  \\
+\citet{Cohen2023}      & 2023 & SPX opt.\ & --         & VAE              & Heston, SVI   & Surface RMSE  & N & --   \\
+\citet{Gnoatto2023}    & 2023 & XVA portf.\ & --       & NN regression    & Nested MC     & XVA err.\     & N & --   \\
+
+\end{longtable}
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Market Microstructure.}\label{tab:master_microstructure} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_microstructure} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Almgren2001}    & 2001 & --       & --         & Analytical exec.\  & --             & Imp.\ short.\ & -- & --     \\
+\citet{Gueant2017}     & 2017 & --       & --         & Avellaneda-Stoikov &--              & PnL/inv.\     & -- & --     \\
+\citet{Ntakaris2018}   & 2018 & FI-2010  & 2010       & SVM, ML baselines  & --             & Bench.\ ds.\  & Y & FI-2010 \\
+\citet{Spooner2018}    & 2018 & LOB sim. & --         & DRL (DQN+)         & A-Stoikov      & PnL/inv.\     & N & Sim.   \\
+\citet{Sirignano2019}  & 2019 & US LOB   & 2014--2018 & DL universal       & Per-stock DL   & Pred.\ acc.\  & N & Private \\
+\citet{Zhang2019LOB}   & 2020 & LSE LOB  & 2007--2008 & DeepLOB CNN/LSTM   & Lin., SVM      & Pred.\ acc.\  & Y & FI-2010 \\
+\citet{Cont2021}       & 2021 & US LOB   & --         & Hawkes/NPP         & Stat.\ point proc.\ & LL       & N & Private \\
+\citet{Ning2021}       & 2021 & US LOB   & --         & DDQN exec.\        & Almgren-Chriss & Imp.\ short.\ & N & Private \\
+\citet{Fang2021}       & 2021 & LOB sim. & --         & Multi-agent RL     & Single-agent   & Imp.\ short.\ & N & Sim.   \\
+\citet{Gasperov2021}   & 2021 & LOB sim. & --         & Multi-agent RL MM  & Single-agent   & PnL/inv.\     & N & Sim.   \\
+\citet{Schnaubelt2022} & 2022 & US LOB   & --         & Meta-learning exec.\ & Static RL    & Imp.\ short.\ & N & Private \\
+\citet{Shi2022}        & 2022 & LOB sim. & --         & Normalizing flows  & Hist.\ sim.\   & KL div.\      & N & --     \\
+\citet{Kolm2023}       & 2023 & FI-2010  & 2010       & Transformer        & LSTM, CNN      & Pred.\ acc.\  & Y & FI-2010 \\
+
+\end{longtable}
+
+\begin{longtable}{@{}p{2.4cm} c p{1.0cm} p{1.0cm} p{2.0cm} p{1.9cm} p{1.4cm} c p{1.4cm}@{}}
+\caption{Representative studies: Alternative Data and NLP.}\label{tab:master_altdata} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endfirsthead
+\multicolumn{9}{c}{\textit{Table \ref{tab:master_altdata} continued}} \\
+\toprule
+\textbf{Study} & \textbf{Year} & \textbf{Asset} & \textbf{Period} & \textbf{ML Method} & \textbf{Benchmark} & \textbf{Metric} & \textbf{Code} & \textbf{Data} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\citet{Bollen2011}     & 2011 & DJIA      & 2008       & Mood class.\        & Random         & DA accuracy   & N & Twitter \\
+\citet{Loughran2011}   & 2011 & US 10-Ks  & 1994--2008 & LM dictionary       & Harvard dict.\ & Class.\ acc.\ & -- & 10-Ks  \\
+\citet{Oliveira2017}   & 2017 & US Eq.\   & 2013--2016 & SVM, RF             & Naive          & Class.\ acc.\ & N & StockTwits \\
+\citet{Araci2019}      & 2019 & US news   & --         & FinBERT             & BERT, dict.\   & F1            & Y & Reuters \\
+\citet{Qin2019}        & 2019 & Earn.\ calls & --      & Multi-modal NN      & Text only      & Vol.\ pred.\  & N & Conf.\ calls \\
+\citet{EinDor2020}     & 2020 & Fin.\ news & --        & Wiki weak supv.\    & Supervised     & F1            & N & News    \\
+\citet{Renault2020}    & 2020 & Tweets    & 2009--2019 & Transformer + dict.\ & BoW           & ROC-AUC       & N & StockTwits \\
+\citet{Bradley2021}    & 2021 & US Eq.\   & 2018--2021 & Sentiment cls.\     & --             & Pred.\ ret.\  & N & Reddit  \\
+\citet{Katona2021}     & 2021 & US retail & 2011--2018 & CNN sat.\ imagery   & Analyst exp.\  & Sales pred.\  & N & Sat.\ data \\
+\citet{Li2021}         & 2021 & US Eq.\   & 2001--2018 & ML (Word2Vec+)      & Dict.\         & Cult.\ score  & N & SEC, calls \\
+\citet{Mariko2022}     & 2022 & Fin.\ news & --        & Causal IE NN        & Pattern match. & F1            & N & FinCausal \\
+\citet{Kalesnik2022}   & 2022 & ESG factors & --       & ESG NLP scores      & --             & Sharpe        & N & Mixed   \\
+\citet{Wu2023}         & 2023 & Bberg.\   & --         & BloombergGPT     & GPT, BLOOM     & FinNLP        & N & Private \\
+\citet{Yang2023}       & 2023 & SEC, news & --         & FinGPT (open)       & FinBERT        & F1            & Y & Public  \\
+\citet{LopezLira2023}  & 2023 & News      & 2021--2023 & GPT-3.5/4 0-shot    & FinBERT        & Sharpe        & Y & Headlines \\
+\citet{Green2019}      & 2019 & US Eq.\   & 2008--2017 & Glassdoor txt.\     & --             & Ret.\ pred.\  & N & Glassdoor \\
+
+\end{longtable}
+
+\noindent\textit{Note on selection.} The tables above include between 12 and 19 studies per domain, prioritized for: (i) methodological coverage (each row reflects a distinct method-benchmark pair), (ii) influence (citation-weighted), and (iii) availability in the public-data subset of the survey to facilitate replication. The choice of representative studies necessarily omits high-quality work; the full 227-row database in the GitHub repository is the authoritative version, and we welcome corrections via pull request.

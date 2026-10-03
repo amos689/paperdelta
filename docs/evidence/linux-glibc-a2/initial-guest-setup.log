@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+printf '%s\n' https://dl-cdn.alpinelinux.org/alpine/v3.24/main https://dl-cdn.alpinelinux.org/alpine/v3.24/community > /etc/apk/repositories
+apk add --no-cache e2fsprogs
+modprobe virtio_blk
+modprobe ext4
+test -b /dev/vda
+mkfs.ext4 -q /dev/vda
+mkdir -p /mnt/glibc
+mount -t ext4 /dev/vda /mnt/glibc || { dmesg | tail -40; exit 1; }
+wget -q http://10.0.2.2:62647/ubuntu-base-24.04.5-base-amd64.tar.gz -O /root/ubuntu.tar.gz
+printf '%s\n' 'e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86  /root/ubuntu.tar.gz' | sha256sum -c -
+tar -xzf /root/ubuntu.tar.gz -C /mnt/glibc
+mount --bind /dev /mnt/glibc/dev
+mount -t proc proc /mnt/glibc/proc
+mount -t sysfs sys /mnt/glibc/sys
+cp /etc/resolv.conf /mnt/glibc/etc/resolv.conf
+mkdir -p /mnt/glibc/root/uv
+wget -q http://10.0.2.2:62647/uv-x86_64-unknown-linux-gnu.tar.gz -O /root/uv.tar.gz
+printf '%s\n' 'b9980552309f09c15172b8be828555e375097f16deb459795ce7bfd200380f0b  /root/uv.tar.gz' | sha256sum -c -
+tar -xzf /root/uv.tar.gz -C /mnt/glibc/root/uv --strip-components=1
+wget -q http://10.0.2.2:62647/validate.py -O /mnt/glibc/root/validate.py
+printf '#!/bin/sh\nexit 101\n' > /mnt/glibc/usr/sbin/policy-rc.d
+chmod +x /mnt/glibc/usr/sbin/policy-rc.d
+chroot /mnt/glibc /usr/bin/env DEBIAN_FRONTEND=noninteractive /bin/sh -c 'apt-get update && apt-get install -y --no-install-recommends python3 python3-venv git ca-certificates'
+chroot /mnt/glibc /usr/bin/env PYTHONUTF8=1 /usr/bin/python3 -u /root/validate.py http://10.0.2.2:62647

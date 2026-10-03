@@ -1,0 +1,69 @@
+{
+  "all_suite_input_bytes_unchanged": true,
+  "checked_at": "2026-10-02T18:40:42.012335+00:00",
+  "controls": {
+    "adversarial": {
+      "candidate_results": {
+        "invalid_proposal": 1,
+        "proposal_despite_insufficient_evidence": 3,
+        "reference_contract_match": 1,
+        "reference_contract_mismatch": 7
+      },
+      "case_states": {
+        "invalid_proposal": 1,
+        "proposed": 11
+      },
+      "human_measurements": {
+        "ambiguity_rate": null,
+        "ambiguous": 0,
+        "basis": "Declared review observations, not independently authenticated",
+        "candidate_precision": null,
+        "confirmation_seconds": {},
+        "correct": 0,
+        "incorrect": 0,
+        "reviewed": 0,
+        "reviewer_kind": null,
+        "unreviewed": 12
+      },
+      "reference_targets_matched": 1
+    },
+    "reference": {
+      "candidate_results": {
+        "reference_contract_match": 9
+      },
+      "case_states": {
+        "expected_abstention": 3,
+        "proposed": 9
+      },
+      "human_measurements": {
+        "ambiguity_rate": null,
+        "ambiguous": 0,
+        "basis": "Declared review observations, not independently authenticated",
+        "candidate_precision": null,
+        "confirmation_seconds": {},
+        "correct": 0,
+        "incorrect": 0,
+        "reviewed": 0,
+        "reviewer_kind": null,
+        "unreviewed": 9
+      },
+      "reference_targets_matched": 9
+    }
+  },
+  "files": {
+    "adversarial.report.json": "sha256:b3692c63f2853ec37f7a066400baa449d0ee2370e8c0ffdce91739e2c0228b38",
+    "adversarial.review.template.json": "sha256:6f37ebba691d88592e87e86b14321923934df9c96f7786e6d9e7ea92db8d24e1",
+    "adversarial.submission.json": "sha256:86bf2552e64c66261afa1a23a1b70715ab0c7da706c9ce6d7afb1e3ee4a57c1d",
+    "reference.report.json": "sha256:f3ed941dd113dc5663e57bef48809fd4f7468b175f1764ec54ac3e8fbfe28fd1",
+    "reference.review.template.json": "sha256:8e222b2ef5ae4c9fc97829fc42427a6c575001a25230a55129cfc031bb24e065",
+    "reference.submission.json": "sha256:7b894c24d151d333b5b6cfeefc038f2b70e62c188d18e9060480938b16193891"
+  },
+  "independent_participants": 0,
+  "kind": "scorer_controls",
+  "model_runs": 0,
+  "reference_abstention_cases": 3,
+  "reference_mappable_cases": 9,
+  "scope": "Checks the measurement tool, not the performance of an AI model or a user.",
+  "suite_cases": 12,
+  "suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd"
+}

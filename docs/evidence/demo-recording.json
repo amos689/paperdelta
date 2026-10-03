@@ -1,0 +1,46 @@
+{
+  "recorded_at": "2026-10-02T16:40:41.051Z",
+  "browser": "154.0.8037.93",
+  "source": "build/demo-release-review",
+  "captions": [
+    {
+      "title": "1. A paper before the experiment update",
+      "explanation": "Seven declared checks agree with the supplied evidence. Ours: 84.1%; baseline: 81.0%.",
+      "seconds": 6
+    },
+    {
+      "title": "2. Change the CSV; leave every LaTeX file untouched",
+      "explanation": "Ours falls to 80.9%. Four numeric references, one comparison and a recorded figure need attention.",
+      "seconds": 7
+    },
+    {
+      "title": "3. Inspect the original source rows",
+      "explanation": "The abstract still says 84.1%. The report shows the selected test records and their mean.",
+      "seconds": 8
+    },
+    {
+      "title": "4. The comparison also changed",
+      "explanation": "80.9% no longer beats 81.0%. Related numeric patches wait for the author to review the claim.",
+      "seconds": 8
+    },
+    {
+      "title": "5. The figure has changed inputs",
+      "explanation": "Its recorded CSV identity differs. Re-run the plot explicitly; hashes do not prove visual correctness.",
+      "seconds": 8
+    },
+    {
+      "title": "6. A separate numeric-only update: 84.1% to 84.5%",
+      "explanation": "Four guarded replacements across three files recheck successfully. The demo then restores the original bytes.",
+      "seconds": 7
+    }
+  ],
+  "planned_caption_seconds": 44,
+  "scope": "Actual local HTML reports; captions are presentation annotations. Synthetic demonstration, not a user trial.",
+  "duration_seconds": 51.68,
+  "bytes": 3800756,
+  "video_sha256": "70fe346740589acc55844c5ad676e7c0343dfb074d6930ebc19294679367356e",
+  "visual_review_frames_seconds": [
+    17,
+    38
+  ]
+}

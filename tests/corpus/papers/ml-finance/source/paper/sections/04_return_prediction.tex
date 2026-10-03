@@ -1,0 +1,87 @@
+\section{Return Prediction}\label{sec:return_prediction}
+
+Return prediction is the oldest and most heavily studied application of ML in finance. We organize this section into cross-sectional prediction (which assets will outperform), time-series prediction (will the market go up), and the critical methodological considerations that determine whether reported results are reliable.
+
+\subsection{Cross-Sectional Return Prediction}
+
+The foundational work in ML-based cross-sectional prediction is \citet{Gu2020}, who systematically compare linear models, tree-based methods, and neural networks for predicting the cross-section of monthly US stock returns. Their two key findings have shaped the subsequent literature: neural networks and gradient-boosted trees significantly outperform linear models, and interaction effects between firm characteristics and macroeconomic variables are crucial to that outperformance.
+
+\subsubsection{The Tree-Based Dominance}
+
+Following \citet{Gu2020}, numerous studies have confirmed that GBDT methods (XGBoost, LightGBM) deliver strong cross-sectional predictive performance:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Leippold2022} extend the analysis to international markets (30+ countries) and find that gradient-boosted trees generalize better across markets than deep learning methods, particularly in smaller markets with fewer training observations.
+
+    \item \citet{Tobek2021} demonstrate that a substantial portion of the apparent predictability in the cross-section is absorbed by transaction costs, and that simpler models (including linear) close much of the gap with complex models after cost adjustment.
+
+    \item \citet{Chen2024} introduce an attention-augmented GBDT that learns feature importance dynamically, improving on static tree-based models for return prediction across market regimes.
+\end{itemize}
+
+\subsubsection{Deep Learning Approaches}
+
+Neural network approaches to cross-sectional prediction include:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Feed-forward networks:} \citet{Gu2020} establish baseline neural network performance. Subsequent work explores depth, regularization, and feature engineering choices.
+
+    \item \textbf{Autoencoders for factor extraction:} \citet{Gu2021} propose conditional autoencoders that extract latent factors from firm characteristics, providing an ML-native alternative to Fama-French-style factor models. \citet{Kim2021} extend this to variational autoencoders.
+
+    \item \textbf{Graph neural networks:} \citet{Chen2022} model the cross-section as a graph where stocks are nodes connected by industry, supply chain, or correlation edges, and use graph attention networks for prediction.
+
+    \item \textbf{Transformers:} \citet{Duan2022} apply transformer architectures to the cross-section, treating each stock's characteristics as a token sequence. Cross-stock attention captures peer effects.
+\end{itemize}
+
+\subsubsection{Comparison Table: Cross-Sectional Return Prediction}
+
+\begin{table}[H]
+\centering
+\caption{Selected studies in cross-sectional return prediction}
+\label{tab:cross_section}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}p{3.4cm} l l l X c@{}}
+\toprule
+\textbf{Study} & \textbf{Market} & \textbf{Period} & \textbf{Best Method} & \textbf{Metric} & \textbf{Code} \\
+\midrule
+Gu et al.\ (2020)        & US     & 1957--2016 & NN3         & $R^2_{\text{OOS}}=0.40\%$ & Yes \\
+Leippold \& Wang (2022)  & Global & 1990--2020 & LightGBM    & $R^2_{\text{OOS}}$ varies & No  \\
+Tobek \& Hronec (2021)   & US     & 1963--2019 & GBDT        & Sharpe net of costs       & Yes \\
+Chen et al.\ (2024)      & US     & 1970--2022 & Attn-GBDT   & $R^2_{\text{OOS}}=0.52\%$ & No  \\
+Gu et al.\ (2021)        & US     & 1967--2016 & CA-AE       & $R^2_{\text{OOS}}$        & Yes \\
+Duan et al.\ (2022)      & US     & 1963--2021 & Transformer & $R^2_{\text{OOS}}$        & No  \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Time-Series Return Prediction}
+
+Time-series prediction (forecasting aggregate market or individual asset returns over time) faces the fundamental challenge that financial returns are close to unpredictable at short horizons \citep{Welch2008}. ML methods have been applied to this problem with mixed results:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{LSTM/GRU models:} Early deep learning studies \citep{Fischer2018, Bao2017} reported strong performance for individual stock prediction using LSTMs, but subsequent work has raised concerns about look-ahead bias and overfitting in these results.
+
+    \item \textbf{Temporal Fusion Transformers:} \citet{Lim2021} propose the TFT architecture with variable selection, temporal attention, and quantile outputs, demonstrating state-of-the-art performance on financial forecasting benchmarks.
+
+    \item \textbf{The efficient market baseline:} \citet{Avramov2023} argue that after proper regularization and economic constraints, the gains from ML over simple linear models for time-series prediction are modest, particularly at monthly and longer horizons. This finding is consistent with the adaptive markets hypothesis: predictability is time-varying and competed away.
+\end{itemize}
+
+\subsection{Methodological Pitfalls in Return Prediction}
+
+A critical contribution of the recent literature is the identification of methodological pitfalls that inflate reported performance:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Look-ahead bias:} Using future information in feature construction or normalization. Even subtle forms, such as using the full-sample mean for standardization, can materially affect results \citep{DePrado2018}.
+
+    \item \textbf{Survivorship bias:} Training only on stocks that survived to the end of the sample overstates predictability.
+
+    \item \textbf{Cross-validation in time series:} Standard $k$-fold cross-validation violates temporal ordering and leaks future information into training. Proper alternatives include expanding-window and rolling-window validation \citep{Gu2020}.
+
+    \item \textbf{Data snooping:} Testing many models and reporting only the best one inflates the probability of finding spurious predictability. Multiple testing corrections (e.g., \citealt{Harvey2016}) are essential but rarely applied.
+
+    \item \textbf{Ignoring transaction costs:} Strategies that appear profitable before costs may be worthless after realistic cost assumptions \citep{NovyMarx2015alt, Tobek2021}.
+
+    \item \textbf{Short evaluation periods:} Strong performance during 2009--2020 (a prolonged bull market) does not generalize to different market regimes.
+\end{enumerate}
+
+We recommend that future studies adopt the evaluation protocol of \citet{Gu2020} as a minimum standard: temporal splitting, economic metrics alongside statistical metrics, and comparison to appropriate benchmarks. Frankly, the fact that papers are still published in 2025 using $k$-fold cross-validation on time series data suggests that referee standards in some venues are too low.

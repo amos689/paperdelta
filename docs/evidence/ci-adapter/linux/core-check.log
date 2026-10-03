@@ -1,0 +1,543 @@
+{
+  "baseline": null,
+  "changes": [],
+  "claims": {
+    "main_comparison": {
+      "location": {
+        "byte_end": 340,
+        "byte_start": 298,
+        "column": 1,
+        "end": 340,
+        "file": "paper/results.tex",
+        "line": 17,
+        "start": 298,
+        "text": "Our method outperforms Baseline on Data-A."
+      },
+      "matching_reviews": [],
+      "metrics": [
+        "ours",
+        "baseline"
+      ],
+      "review": "unreviewed",
+      "review_records": [],
+      "state_fingerprint": "sha256:ee2c66e42881d14eac4af62b24bc8d27644a93773c14e0ba6704433badf48ba5",
+      "status": "pass"
+    }
+  },
+  "config_fingerprint": "sha256:1ea1216cbff9b516d12a73e5aefa729d184f129cc54ad15cf7c8d7a754e3161d",
+  "config_path": "paperdelta.yaml",
+  "coverage": {
+    "candidate_numbers": 5,
+    "confirmed": 6,
+    "mismatch": 0,
+    "pass": 6,
+    "unbound_numbers": [],
+    "unknown": 0,
+    "unregistered_figures": [],
+    "unsupported": []
+  },
+  "created_at": "2026-10-02T20:00:19.861954+00:00",
+  "diagnostics": [],
+  "exit_code": 0,
+  "figures": {},
+  "impact_groups": [
+    {
+      "change": "unavailable",
+      "claims": [
+        "main_comparison"
+      ],
+      "figures": [],
+      "metric": "ours",
+      "metrics": [
+        "ours",
+        "gain"
+      ],
+      "occurrences": [
+        "abstract_accuracy",
+        "table_accuracy",
+        "gain_text",
+        "appendix_accuracy"
+      ],
+      "sources": [
+        "results/metrics.csv"
+      ]
+    },
+    {
+      "change": "unavailable",
+      "claims": [
+        "main_comparison"
+      ],
+      "figures": [],
+      "metric": "baseline",
+      "metrics": [
+        "baseline",
+        "gain"
+      ],
+      "occurrences": [
+        "table_baseline",
+        "gain_text"
+      ],
+      "sources": [
+        "results/metrics.csv"
+      ]
+    }
+  ],
+  "input_hashes": {
+    "paper/abstract.tex": "sha256:b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "paper/appendix.tex": "sha256:292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "paper/main.tex": "sha256:a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899",
+    "paper/results.tex": "sha256:0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "paperdelta.yaml": "sha256:ffee690f79d0050ac98b544592350891bc5d7951ffae784d8be83df511127769",
+    "results/metrics.csv": "sha256:ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46"
+  },
+  "metrics": {
+    "baseline": {
+      "definition": {
+        "expected_count": null,
+        "expected_seeds": [
+          1,
+          2,
+          3
+        ],
+        "field": "accuracy",
+        "reduce": "mean",
+        "seed_column": "seed",
+        "source": "benchmark",
+        "unit": "fraction",
+        "where": {
+          "dataset": "Data-A",
+          "model": "Baseline",
+          "split": "test"
+        }
+      },
+      "definition_fingerprint": "sha256:f3a6bfd4450a07c8acc0cf440c5326be609429f301cb653d7567c641b80b2631",
+      "dependencies": [],
+      "evidence": [
+        {
+          "count": 3,
+          "field": "accuracy",
+          "locations": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 1,
+                "split": "test"
+              },
+              "line": 5
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 2,
+                "split": "test"
+              },
+              "line": 6
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 3,
+                "split": "test"
+              },
+              "line": 7
+            }
+          ],
+          "path": "results/metrics.csv",
+          "records": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 1,
+                "split": "test"
+              },
+              "value": 0.809
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 2,
+                "split": "test"
+              },
+              "value": 0.810
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 3,
+                "split": "test"
+              },
+              "value": 0.811
+            }
+          ],
+          "reduce": "mean",
+          "source": "benchmark",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Baseline",
+            "split": "test"
+          }
+        }
+      ],
+      "fingerprint": "sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1",
+      "status": "ok",
+      "unit": "fraction",
+      "value": "0.810"
+    },
+    "gain": {
+      "definition": {
+        "args": [
+          "ours",
+          "baseline"
+        ],
+        "op": "percentage_point_difference"
+      },
+      "definition_fingerprint": "sha256:6521ddafb2384027eccaa8402a0d0425e2d70aa1cf54099fdcab73d709668e7e",
+      "dependencies": [
+        "ours",
+        "baseline"
+      ],
+      "evidence": [
+        {
+          "count": 3,
+          "field": "accuracy",
+          "locations": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 1,
+                "split": "test"
+              },
+              "line": 2
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 2,
+                "split": "test"
+              },
+              "line": 3
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 3,
+                "split": "test"
+              },
+              "line": 4
+            }
+          ],
+          "path": "results/metrics.csv",
+          "records": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 1,
+                "split": "test"
+              },
+              "value": 0.839
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 2,
+                "split": "test"
+              },
+              "value": 0.841
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 3,
+                "split": "test"
+              },
+              "value": 0.843
+            }
+          ],
+          "reduce": "mean",
+          "source": "benchmark",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        },
+        {
+          "count": 3,
+          "field": "accuracy",
+          "locations": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 1,
+                "split": "test"
+              },
+              "line": 5
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 2,
+                "split": "test"
+              },
+              "line": 6
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 3,
+                "split": "test"
+              },
+              "line": 7
+            }
+          ],
+          "path": "results/metrics.csv",
+          "records": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 1,
+                "split": "test"
+              },
+              "value": 0.809
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 2,
+                "split": "test"
+              },
+              "value": 0.810
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "seed": 3,
+                "split": "test"
+              },
+              "value": 0.811
+            }
+          ],
+          "reduce": "mean",
+          "source": "benchmark",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Baseline",
+            "split": "test"
+          }
+        }
+      ],
+      "fingerprint": "sha256:469724c1e9eb40cfe7c24920ed37dbcb5cb7ddaaf2cc470b2b7237d5e396ad29",
+      "status": "ok",
+      "unit": "percentage_point",
+      "value": "3.100"
+    },
+    "ours": {
+      "definition": {
+        "expected_count": null,
+        "expected_seeds": [
+          1,
+          2,
+          3
+        ],
+        "field": "accuracy",
+        "reduce": "mean",
+        "seed_column": "seed",
+        "source": "benchmark",
+        "unit": "fraction",
+        "where": {
+          "dataset": "Data-A",
+          "model": "Ours",
+          "split": "test"
+        }
+      },
+      "definition_fingerprint": "sha256:a52d093ef5e16a13f31345d12d407a0d0a33e98a2cb0aaf921f5c4e4ac797ce0",
+      "dependencies": [],
+      "evidence": [
+        {
+          "count": 3,
+          "field": "accuracy",
+          "locations": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 1,
+                "split": "test"
+              },
+              "line": 2
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 2,
+                "split": "test"
+              },
+              "line": 3
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 3,
+                "split": "test"
+              },
+              "line": 4
+            }
+          ],
+          "path": "results/metrics.csv",
+          "records": [
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 1,
+                "split": "test"
+              },
+              "value": 0.839
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 2,
+                "split": "test"
+              },
+              "value": 0.841
+            },
+            {
+              "key": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": 3,
+                "split": "test"
+              },
+              "value": 0.843
+            }
+          ],
+          "reduce": "mean",
+          "source": "benchmark",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      ],
+      "fingerprint": "sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248",
+      "status": "ok",
+      "unit": "fraction",
+      "value": "0.841"
+    }
+  },
+  "occurrences": {
+    "abstract_accuracy": {
+      "actual": "84.1\\%",
+      "evidence_fingerprint": "sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248",
+      "expected": "84.1\\%",
+      "location": {
+        "byte_end": 43,
+        "byte_start": 37,
+        "column": 21,
+        "end": 43,
+        "file": "paper/abstract.tex",
+        "line": 2,
+        "start": 37,
+        "text": "84.1\\%"
+      },
+      "metric": "ours",
+      "status": "pass"
+    },
+    "appendix_accuracy": {
+      "actual": "84.1",
+      "evidence_fingerprint": "sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248",
+      "expected": "84.1",
+      "location": {
+        "byte_end": 133,
+        "byte_start": 129,
+        "column": 27,
+        "end": 133,
+        "file": "paper/appendix.tex",
+        "line": 4,
+        "start": 129,
+        "text": "84.1"
+      },
+      "metric": "ours",
+      "status": "pass"
+    },
+    "gain_text": {
+      "actual": "3.1",
+      "evidence_fingerprint": "sha256:469724c1e9eb40cfe7c24920ed37dbcb5cb7ddaaf2cc470b2b7237d5e396ad29",
+      "expected": "3.1",
+      "location": {
+        "byte_end": 264,
+        "byte_start": 261,
+        "column": 24,
+        "end": 264,
+        "file": "paper/results.tex",
+        "line": 16,
+        "start": 261,
+        "text": "3.1"
+      },
+      "metric": "gain",
+      "status": "pass"
+    },
+    "table_accuracy": {
+      "actual": "84.1",
+      "evidence_fingerprint": "sha256:7d621960c19cc52399d8a73ecb908acc1b65cc5ffba7e26cd7c9136557737248",
+      "expected": "84.1",
+      "location": {
+        "byte_end": 117,
+        "byte_start": 113,
+        "column": 8,
+        "end": 117,
+        "file": "paper/results.tex",
+        "line": 8,
+        "start": 113,
+        "text": "84.1"
+      },
+      "metric": "ours",
+      "status": "pass"
+    },
+    "table_baseline": {
+      "actual": "81.0",
+      "evidence_fingerprint": "sha256:3196b11eaadbb4b151adc22656de54922681226c60a18c76c78f774f882d64c1",
+      "expected": "81.0",
+      "location": {
+        "byte_end": 136,
+        "byte_start": 132,
+        "column": 12,
+        "end": 136,
+        "file": "paper/results.tex",
+        "line": 9,
+        "start": 132,
+        "text": "81.0"
+      },
+      "metric": "baseline",
+      "status": "pass"
+    }
+  },
+  "report_schema_version": 1,
+  "ruleset_version": "1",
+  "tool_version": "0.1.0a2"
+}
+
+--- STDERR ---

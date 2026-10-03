@@ -1,0 +1,85 @@
+name: PaperDelta checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.11', '3.12', '3.13', '3.14']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[dev,mcp]'
+      - run: python -m ruff check src tests tools
+      - run: python -m ruff format --check src tests tools
+      - run: python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml
+      - run: python -X utf8 tools/validate_examples.py --out build/examples-validation
+      - run: python -X utf8 tools/build_release.py --out build/release-candidate
+      - run: python -X utf8 tools/audit_release.py --directory build/release-candidate
+      - name: Keep test evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: tests-${{ matrix.os }}-${{ matrix.python }}
+          path: build/test-results.xml
+          if-no-files-found: warn
+
+  macos:
+    name: macOS ${{ matrix.host.arch }} / Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        host:
+          - {os: macos-15, arch: arm64}
+          - {os: macos-15-intel, arch: x86_64}
+        python: ['3.11', '3.12', '3.13', '3.14']
+    runs-on: ${{ matrix.host.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install build
+      - run: python -X utf8 tools/build_release.py --out build/release-candidate
+      - run: python -X utf8 tools/audit_release.py --directory build/release-candidate
+      - name: Validate native installed wheel, filesystem and terminal
+        run: >-
+          python -X utf8 tools/validate_platform.py
+          --wheel build/release-candidate/paperdelta-0.1.0a2-py3-none-any.whl
+          --out build/macos-validation
+          --require-system Darwin
+          --expected-arch ${{ matrix.host.arch }}
+      - name: Keep macOS evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: macos-${{ matrix.host.arch }}-python-${{ matrix.python }}
+          path: |
+            build/macos-validation/evidence.json
+            build/macos-validation/core-smoke.json
+            build/macos-validation/*.log
+            build/macos-validation/suite/**/*.json
+            build/macos-validation/suite/**/*.log
+            build/macos-validation/suite/**/*.xml
+            build/macos-validation/examples/evidence.json
+            build/macos-validation/ci-demo/evidence.json
+            build/release-candidate/package-audit.json
+          if-no-files-found: warn

@@ -1,0 +1,4 @@
+usage: validate_platform.py [-h] [--wheel WHEEL] --out OUT
+                            [--require-system {Darwin,Linux,Windows}]
+                            [--expected-arch {arm64,x86_64,AMD64}]
+validate_platform.py: error: Requires Darwin; actual host is Windows

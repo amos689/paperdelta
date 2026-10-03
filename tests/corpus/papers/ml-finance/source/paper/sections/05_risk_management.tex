@@ -1,0 +1,63 @@
+\section{Risk Management}\label{sec:risk_management}
+
+ML applications in risk management span volatility forecasting, tail risk estimation, credit risk modeling, and systemic risk measurement. Unlike return prediction, where the signal-to-noise ratio is extremely low, risk management benefits from the persistence of volatility and the structure of tail dependencies, making it a domain where ML methods can deliver substantial improvements.
+
+\subsection{Volatility Forecasting}
+
+Volatility forecasting is the most mature ML application in risk management. The benchmark is the GARCH family \citep{Bollerslev1986, Engle2002}, and ML methods must demonstrate improvement over these well-established models.
+
+\subsubsection{Neural Network Approaches}
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Bucci2020} compare LSTM networks to GARCH, HAR-RV, and ARFIMA models for realized volatility forecasting on S\&P 500 data. The LSTM improves upon GARCH models particularly during high-volatility regimes but shows marginal gains in calm markets.
+
+    \item \citet{Zhang2019} propose a hybrid GARCH-LSTM model that uses GARCH residuals as LSTM inputs, combining the theoretical structure of GARCH with the flexibility of deep learning. This hybrid approach outperforms both standalone models.
+
+    \item \citet{Christensen2023} apply temporal fusion transformers to multi-asset volatility forecasting and find that cross-asset attention (learning volatility spillovers) significantly improves forecasts for less liquid assets.
+\end{itemize}
+
+\subsubsection{Tree-Based Approaches}
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Luong2021} show that random forests using a large set of lagged realized measures, option-implied features, and macroeconomic variables outperform HAR-RV models, particularly at weekly and monthly horizons.
+
+    \item \citet{Mittnik2022} demonstrate that LightGBM achieves the best overall performance in a horse race of 15 volatility forecasting methods across 20 equity indices, with the advantage concentrated in forecasting regime transitions.
+\end{itemize}
+
+\subsection{Value-at-Risk and Expected Shortfall}
+
+Traditional VaR models (historical simulation, parametric, Monte Carlo) often underestimate tail risk. ML approaches address this through:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Quantile regression forests} \citep{Meinshausen2006}: Non-parametric quantile estimation that naturally captures asymmetric tail behavior.
+
+    \item \textbf{CAViaR extensions:} \citet{Taylor2019} combine the Conditional Autoregressive VaR (CAViaR) framework with neural networks to model time-varying quantile dynamics.
+
+    \item \textbf{GAN-based scenario generation:} \citet{Cont2022} use conditional GANs to generate realistic tail scenarios for stress testing, outperforming historical simulation in terms of VaR backtest coverage.
+\end{itemize}
+
+\subsection{Credit Risk}
+
+ML applications in credit risk include probability of default (PD) modeling, loss given default (LGD) estimation, and credit scoring. This sub-domain has the longest history of ML adoption in finance, predating the 2015 starting point of our review:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Barboza2017} compare random forests, GBDT, and neural networks against logistic regression for bankruptcy prediction and find consistent improvement across all ML methods, with GBDT achieving the highest AUC.
+
+    \item \citet{Bussmann2021} address the interpretability challenge by applying SHAP values to credit scoring models, enabling regulatory compliance while maintaining predictive power.
+
+    \item \textbf{Alternative data:} Recent work incorporates satellite imagery, web traffic, and supply chain data into corporate credit models, bridging the credit risk and alternative data literatures \citep{Suss2022}.
+\end{itemize}
+
+\subsection{Systemic Risk}
+
+ML approaches to systemic risk measurement include:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Network models:} Graph neural networks applied to interbank networks and correlation structures to identify systemically important institutions \citep{Giudici2022}.
+    \item \textbf{Early warning systems:} \citet{Holopainen2017} use random forests to predict banking crises, outperforming logistic regression early warning models used by central banks.
+    \item \textbf{Contagion modeling:} Agent-based models enhanced with reinforcement learning to simulate crisis propagation \citep{Delli2022}.
+\end{itemize}
+
+\subsection{Summary}
+
+Risk management is a domain where ML methods provide clear, economically significant improvements over traditional approaches. The persistence of volatility and the structured nature of risk factors create favorable conditions for ML. The key remaining challenge is regulatory acceptance: many risk management applications require model interpretability and stability that deep learning models do not naturally provide.

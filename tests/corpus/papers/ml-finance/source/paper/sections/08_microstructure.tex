@@ -1,0 +1,63 @@
+\section{Market Microstructure}\label{sec:microstructure}
+
+Market microstructure, the study of trading mechanisms, price formation, and liquidity, generates some of the most data-rich problems in finance. Limit order books (LOBs) produce millions of events per day per instrument, creating both opportunities and challenges for ML methods.
+
+\subsection{Limit Order Book Modeling}
+
+\subsubsection{Mid-Price Prediction}
+
+Short-horizon mid-price prediction from LOB data is a canonical microstructure ML task:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Sirignano2019} train deep learning models on LOB data from hundreds of stocks simultaneously, finding that a universal model (trained across stocks) outperforms stock-specific models, suggesting common microstructure patterns across assets.
+
+    \item \citet{Zhang2019LOB} apply LSTMs to LOB snapshots and demonstrate that temporal patterns in the order flow carry predictive information beyond the current book state.
+
+    \item \citet{Kolm2023} benchmark CNNs, LSTMs, transformers, and tree-based methods on a standardized LOB dataset (FI-2010, \citealt{Ntakaris2018}), finding that transformers with positional encoding achieve the best classification accuracy for directional prediction at horizons of 10--100 events.
+\end{itemize}
+
+\subsubsection{Full Distribution Modeling}
+
+Beyond point prediction, some studies model the full distribution of LOB evolution:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Cont2021} use neural point processes to model the arrival of limit orders, market orders, and cancellations as a marked point process, capturing the clustering and self-exciting nature of order flow.
+
+    \item \citet{Shi2022} apply normalizing flows to model the joint distribution of multi-level LOB states, enabling realistic scenario generation for execution simulation.
+\end{itemize}
+
+\subsection{Optimal Execution}
+
+Optimal execution, the problem of minimizing the market impact of large orders, is a natural RL application:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Ning2021} compare RL-based execution strategies (DQN, PPO) against the Almgren-Chriss analytical benchmark \citep{Almgren2001} and find that RL agents learn to exploit intraday liquidity patterns, achieving lower implementation shortfall.
+
+    \item \citet{Fang2021} use multi-agent RL to model the interaction between a large executor and adaptive market makers, capturing the game-theoretic aspects of execution that single-agent models miss.
+
+    \item \citet{Schnaubelt2022} train a meta-learner that adapts execution strategies to changing market conditions (volatility regimes, liquidity shocks) without retraining.
+\end{itemize}
+
+\subsection{Market Making}
+
+Automated market making, the practice of providing liquidity by continuously quoting bid and ask prices, has been extensively studied with RL:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Gueant2017} provide the theoretical foundation: Avellaneda-Stoikov style models with analytical solutions that serve as benchmarks for ML approaches.
+
+    \item \citet{Spooner2018} apply DRL (DQN and variants) to market making in a realistic LOB simulator, showing that the learned policy adapts spread and inventory management to market conditions.
+
+    \item \citet{Gasperov2021} propose a multi-agent market making framework where multiple RL agents interact in a simulated market, producing emergent dynamics (bid-ask bounce, adverse selection) consistent with empirical microstructure.
+\end{itemize}
+
+\subsection{Data and Access Challenges}
+
+A distinctive feature of the microstructure literature is the data access barrier. Tick-level LOB data is expensive and often proprietary:
+
+\begin{itemize}[leftmargin=*]
+    \item The FI-2010 dataset \citep{Ntakaris2018} (Helsinki Stock Exchange, 10 stocks, 10 business days) has become a de facto standard, but its small size and non-US market limit generalizability.
+    \item LOBSTER (NASDAQ data) is widely used in academic studies but requires institutional subscription.
+    \item Crypto exchanges (Binance, Coinbase) provide free LOB data, making cryptocurrency microstructure an increasingly popular testbed.
+\end{itemize}
+
+This data bottleneck explains the odd situation that microstructure, a domain that generates more data per day than any other in finance, is under-represented in the ML literature. Researchers who want to work on LOB modeling face a choice between the small, dated FI-2010 dataset and expensive commercial data. The growing availability of free crypto exchange data may eventually break this logjam, though cryptocurrency market microstructure has its own peculiarities.

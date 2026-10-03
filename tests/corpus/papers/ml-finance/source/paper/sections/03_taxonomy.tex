@@ -1,0 +1,120 @@
+\section{A Taxonomy of Machine Learning in Finance}\label{sec:taxonomy}
+
+We organize the literature along two dimensions: \textit{methodology} (the ML technique) and \textit{application domain} (the financial problem). This section describes each dimension and presents the resulting taxonomy matrix.
+
+\subsection{Methodological Classification}
+
+We classify ML methods into five families, reflecting the major paradigms that have been applied in quantitative finance.
+
+\subsubsection{Tree-Based Ensemble Methods}
+
+Tree-based ensembles dominate structured (tabular) financial data. The
+family includes random forests \citep{Breiman2001} and gradient-boosted
+decision trees \citep{Friedman2001}, with modern implementations such as
+XGBoost \citep{Chen2016}, LightGBM \citep{Ke2017}, and CatBoost
+\citep{Prokhorenkova2018}. Their advantages in financial applications
+include:
+
+\begin{itemize}[leftmargin=*]
+    \item Natural handling of heterogeneous features (continuous, categorical, ordinal)
+    \item Built-in feature importance measures that support interpretability
+    \item Robustness to outliers and non-linear relationships
+    \item Competitive performance without extensive hyperparameter tuning
+    \item Ability to capture interaction effects without explicit feature engineering
+\end{itemize}
+
+The empirical dominance of GBDT in tabular data settings has been confirmed in large-scale benchmarks \citep{Grinsztajn2022, ShwartzZiv2022alt}, and financial applications consistently reflect this finding. In cross-sectional return prediction, GBDT methods match or exceed deep learning alternatives in the majority of studies reviewed (\Cref{sec:return_prediction}).
+
+\subsubsection{Deep Learning Architectures}
+
+Deep learning in finance has progressed through three distinct generations:
+
+\textbf{First generation (2015--2018): Recurrent networks.} Long Short-Term Memory (LSTM) networks \citep{Hochreiter1997} and Gated Recurrent Units (GRU) \citep{Cho2014} were the first deep learning architectures widely applied to financial time series. Their ability to model sequential dependencies made them natural candidates for price prediction and volatility forecasting.
+
+\textbf{Second generation (2018--2022): Attention and transformers.} The transformer architecture \citep{Vaswani2017} and its variants have progressively displaced recurrent models. Financial applications include temporal fusion transformers \citep{Lim2021}, informer architectures for long-horizon forecasting \citep{Zhou2021}, and custom attention mechanisms for cross-sectional asset pricing \citep{Chen2024}.
+
+\textbf{Third generation (2022--2025): Foundation models.} Pre-trained large language models (GPT, LLaMA, and domain-specific models such as FinBERT \citep{Araci2019}, BloombergGPT \citep{Wu2023}) have opened new approaches to financial text analysis, event extraction, and even direct numerical forecasting through in-context learning.
+
+Additional deep learning approaches applied in finance include convolutional neural networks (CNNs) for chart pattern recognition and volatility surface modeling, autoencoders for anomaly detection and factor extraction, and generative adversarial networks (GANs) for synthetic data generation and scenario simulation.
+
+\subsubsection{Reinforcement Learning}
+
+Reinforcement learning (RL) frames financial decision-making as a Markov Decision Process where an agent learns to take actions (trades) to maximize cumulative reward (risk-adjusted returns). Applications include:
+
+\begin{itemize}[leftmargin=*]
+    \item Portfolio allocation and rebalancing \citep{Jiang2017, Ye2020}
+    \item Optimal execution and market making \citep{Ning2021}
+    \item Options hedging \citep{Buehler2019, Cao2021}
+\end{itemize}
+
+Key RL frameworks applied in finance include Deep Q-Networks (DQN), Proximal Policy Optimization (PPO), Soft Actor-Critic (SAC), and model-based approaches. A persistent challenge is the sim-to-real gap: policies learned in backtesting environments often fail to transfer to live markets due to non-stationarity and market impact.
+
+\subsubsection{Natural Language Processing and LLMs}
+
+NLP methods extract information from unstructured financial text: earnings calls, SEC filings, news articles, social media, and analyst reports. The field has evolved from bag-of-words and sentiment dictionaries \citep{Loughran2011} through word embeddings (Word2Vec, GloVe) to transformer-based models:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{FinBERT} \citep{Araci2019}: BERT fine-tuned on financial text for sentiment classification
+    \item \textbf{BloombergGPT} \citep{Wu2023}: 50B-parameter model trained on Bloomberg's financial data corpus
+    \item \textbf{General-purpose LLMs}: GPT-4, Claude, and LLaMA applied zero-shot or few-shot to financial tasks
+\end{itemize}
+
+\subsubsection{Hybrid and Ensemble Approaches}
+
+Many recent studies combine multiple methodologies:
+\begin{itemize}[leftmargin=*]
+    \item LSTM + attention mechanisms for enhanced sequence modeling
+    \item NLP sentiment features fed into GBDT return prediction models
+    \item RL agents using deep learning for state representation
+    \item Stacking ensembles combining tree-based and neural network predictions
+\end{itemize}
+
+\subsection{Application Domain Classification}
+
+We identify six application domains that collectively span the quantitative finance literature:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Return prediction} (\Cref{sec:return_prediction}): Forecasting asset returns at various horizons (intraday to monthly), both cross-sectional (which stocks will outperform?) and time-series (will the market go up?).
+
+    \item \textbf{Risk management} (\Cref{sec:risk_management}): Volatility forecasting, Value-at-Risk estimation, Expected Shortfall, credit risk modeling, and systemic risk measurement.
+
+    \item \textbf{Portfolio optimization} (\Cref{sec:portfolio_optimization}): ML-enhanced portfolio construction, including direct weight learning, covariance estimation, and transaction cost optimization.
+
+    \item \textbf{Derivatives pricing and hedging} (\Cref{sec:derivatives}): Option pricing beyond Black-Scholes, implied volatility surface modeling, and dynamic hedging strategies.
+
+    \item \textbf{Market microstructure} (\Cref{sec:microstructure}): Order flow prediction, optimal execution, market making, and limit order book modeling.
+
+    \item \textbf{Alternative data and NLP} (\Cref{sec:alternative_data}): Extraction of tradeable signals from news, social media, satellite imagery, and other non-traditional data sources.
+\end{enumerate}
+
+\subsection{The Taxonomy Matrix}
+
+\Cref{tab:taxonomy_matrix} presents the two-dimensional taxonomy, indicating the approximate number of studies in our sample at each intersection and our qualitative assessment of research maturity.
+
+\begin{table}[H]
+\centering
+\caption{Taxonomy matrix: Methods $\times$ Applications. Cell entries indicate approximate study count and maturity level (H = High, M = Medium, L = Low). Studies that apply more than one methodology (e.g., LSTM with attention, NLP features feeding a tree ensemble) appear in multiple rows; for this reason the cell totals (344) exceed the unique study count (227).}
+\label{tab:taxonomy_matrix}
+\small
+\begin{tabular}{l c c c c c c}
+\toprule
+& \textbf{Returns} & \textbf{Risk} & \textbf{Portfolio} & \textbf{Derivatives} & \textbf{Microstr.} & \textbf{Alt.\ Data} \\
+\midrule
+\textbf{Tree-based}  & 40+ (H) & 15 (M) & 10 (M) & 5 (L)  & 5 (L)  & 10 (M) \\
+\textbf{Deep learning} & 35+ (H) & 20 (M) & 15 (M) & 15 (M) & 10 (M) & 20 (M) \\
+\textbf{RL}           & 5 (L)   & 3 (L)  & 20 (M) & 10 (M) & 8 (M)  & 2 (L) \\
+\textbf{NLP / LLM}   & 15 (M)  & 5 (L)  & 3 (L)  & 2 (L)  & 2 (L)  & 30+ (H) \\
+\textbf{Hybrid}       & 10 (M)  & 5 (L)  & 8 (M)  & 5 (L)  & 3 (L)  & 8 (M) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Several patterns emerge from this matrix:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Return prediction} is the most studied intersection, dominated by tree-based and deep learning methods.
+    \item \textbf{RL for portfolio optimization} has attracted disproportionate attention relative to its empirical success, suggesting a gap between theoretical appeal and practical viability.
+    \item \textbf{NLP/LLM methods beyond sentiment} (e.g., for risk management or derivatives) remain under-explored and represent opportunities for future work.
+    \item \textbf{Market microstructure} is under-represented in the ML literature relative to its importance in practice, likely due to data access barriers.
+    \item \textbf{Tree-based methods for derivatives} are surprisingly sparse, despite the tabular nature of options data.
+\end{itemize}

@@ -1,0 +1,13 @@
+{
+  "category": "incomplete_seed_set",
+  "expected_decision": "abstain",
+  "expected_reference_status": null,
+  "reason": "Required seed 3 is absent; do not average the remaining runs as a substitute.",
+  "reference_inputs": [],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "84.1\\%",
+    "prefix": "The test accuracy is ",
+    "suffix": " on Data-A."
+  }
+}

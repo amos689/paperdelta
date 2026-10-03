@@ -1,0 +1,109 @@
+{
+  "comparison-reversed": {
+    "before": {
+      "confirmed": 7,
+      "pass": 7,
+      "mismatch": 0,
+      "unknown": 0,
+      "candidate_numbers": 5,
+      "unbound_numbers": [],
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "changed": {
+      "confirmed": 7,
+      "pass": 1,
+      "mismatch": 6,
+      "unknown": 0,
+      "candidate_numbers": 5,
+      "unbound_numbers": [],
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "changes": [
+      {
+        "metric": "ours",
+        "kind": "changed",
+        "before": "0.841",
+        "after": "0.809",
+        "unit": "fraction",
+        "occurrences": [
+          "abstract_accuracy",
+          "table_accuracy",
+          "appendix_accuracy"
+        ],
+        "claims": [
+          "main_comparison"
+        ]
+      },
+      {
+        "metric": "gain",
+        "kind": "changed",
+        "before": "3.100",
+        "after": "-0.100",
+        "unit": "percentage_point",
+        "occurrences": [
+          "gain_text"
+        ],
+        "claims": []
+      }
+    ],
+    "report": "build/demo-release-review/comparison-reversed/review/report.html"
+  },
+  "numeric-update": {
+    "before": {
+      "confirmed": 6,
+      "pass": 6,
+      "mismatch": 0,
+      "unknown": 0,
+      "candidate_numbers": 5,
+      "unbound_numbers": [],
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "changed": {
+      "confirmed": 6,
+      "pass": 2,
+      "mismatch": 4,
+      "unknown": 0,
+      "candidate_numbers": 5,
+      "unbound_numbers": [],
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "changes": [
+      {
+        "metric": "ours",
+        "kind": "changed",
+        "before": "0.841",
+        "after": "0.845",
+        "unit": "fraction",
+        "occurrences": [
+          "abstract_accuracy",
+          "table_accuracy",
+          "appendix_accuracy"
+        ],
+        "claims": [
+          "main_comparison"
+        ]
+      },
+      {
+        "metric": "gain",
+        "kind": "changed",
+        "before": "3.100",
+        "after": "3.500",
+        "unit": "percentage_point",
+        "occurrences": [
+          "gain_text"
+        ],
+        "claims": []
+      }
+    ],
+    "report": "build/demo-release-review/numeric-update/review/report.html",
+    "patch_changes": 4,
+    "applied_exit_code": 0,
+    "restored_byte_exactly": true
+  },
+  "elapsed_seconds": 0.84,
+  "scope": "Original synthetic fixtures; not real-paper accuracy or user onboarding evaluation."
+}

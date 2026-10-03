@@ -1,0 +1,65 @@
+\section{Conclusion}\label{sec:conclusion}
+
+Having worked through 227 studies across six domains, we step back and
+offer the assessment we wish someone had given us before we started this
+review.
+
+\textbf{Trees still win on tabular data.} This is the most stable finding
+in the literature, and it surprises people who equate ``machine learning''
+with deep learning. For cross-sectional return prediction, the most
+studied problem in financial ML, gradient-boosted trees (XGBoost,
+LightGBM) match or beat neural networks in the clear majority of papers.
+The pattern is consistent with evidence outside finance
+\citep{Grinsztajn2022}. The practical implication is that tree models
+train faster, interpret more cleanly, and tolerate hyperparameter sloppiness
+better than deep networks. If you are a practitioner deploying your first
+ML model for stock selection, start with LightGBM, not a transformer.
+
+\textbf{Transformers have displaced LSTMs.} On the subset of problems
+where deep learning does pay (long-horizon time series, order flow
+modelling, NLP) attention has won. We found no study published after 2022
+in which an LSTM beat a transformer variant in a head-to-head comparison.
+The transition happened faster in finance than in most other applied
+domains, probably because the finance community was already primed by
+NLP results.
+
+\textbf{The best results sit in risk and derivatives, not return
+prediction.} This may be the most underappreciated finding in the survey.
+Return prediction attracts the most papers, but the largest gains over
+traditional methods land in volatility forecasting (ML vs.\ GARCH),
+derivatives pricing (NNs vs.\ Monte Carlo), and hedging (deep hedging
+vs.\ delta-gamma). The reason is structural. Returns have a terrible
+signal-to-noise ratio. Volatility is persistent. Pricing maps are smooth
+functions. If the goal is to find problems where ML delivers clear and
+economically meaningful improvements, risk management and derivatives are
+where to look.
+
+\textbf{LLMs are moving fast, but the evidence is thin.} The progression
+from sentiment dictionaries to FinBERT to GPT-4 is real, and
+\citet{LopezLira2023} show that zero-shot GPT predictions have genuine
+information content for stock returns. But most LLM-in-finance papers are
+preprints, use short sample periods (often starting in 2022), and have not
+been independently replicated. We are cautiously optimistic and wary of
+the hype cycle in equal measure. The claim that a general-purpose LLM can
+replace domain-specific models is, at best, premature.
+
+\textbf{Reproducibility is the field's biggest problem.} We keep coming
+back to this. Only 21\% of the 227 studies share code (28\% on the
+119-study released subset). Proprietary data in the majority. Selective
+reporting of positive results. These are not minor methodological
+quibbles. They mean we cannot be confident in the literature's overall
+conclusions. A field that cannot reproduce its own results cannot
+credibly claim to have established much. Until that changes, every claim
+about ML ``beating'' traditional methods in finance should be read with a
+healthy dose of skepticism.
+
+Looking ahead, three opportunities stand out. First, foundation models
+specifically designed for financial data, combining numerical and textual
+inputs in ways the current architectures do not. Second, causal ML
+methods that go beyond prediction to answer counterfactual questions about
+markets and policy. Third, the unglamorous infrastructure work of building
+standardised benchmarks and reproducibility standards that the field
+badly needs. The first two are intellectually exciting. The third is, in
+our view, the more important of the three.
+
+\paragraph{Replication materials.} The released structured database covers 119 of the 227 surveyed studies (the remaining 108 are tracked in the screening logs in the same repository and will be merged into the released CSV in version-tagged updates; see \Cref{sec:methodology} for the full PRISMA flow). The LaTeX source for this paper and supplementary scripts are available at \url{https://github.com/ayk5511/ml-finance-survey} under permissive licenses (CC-BY 4.0 for text, MIT for code). Readers are encouraged to use the database as a starting point for their own systematic reviews, to file corrections via GitHub Issues, and to fork the repository to extend coverage into new subfields.

@@ -1,0 +1,678 @@
+{
+  "answers": {
+    "C01": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "claims": {
+            "main_comparison": {
+              "anchor": {
+                "exact": "The test accuracy is 84.1\\% on Data-A."
+              },
+              "file": "paper/main.tex",
+              "predicate": {
+                "left": "test_accuracy_ours_data_a",
+                "op": "equal",
+                "right": {
+                  "unit": "scalar",
+                  "value": "0.841"
+                }
+              }
+            }
+          },
+          "metrics": {
+            "mean_test_accuracy_ours_data_a": {
+              "args": [
+                "test_accuracy_ours_data_a_seed_1",
+                "test_accuracy_ours_data_a_seed_2",
+                "test_accuracy_ours_data_a_seed_3"
+              ],
+              "op": "difference"
+            }
+          },
+          "occurrences": {
+            "test_accuracy_ours_data_a": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "file": "paper/main.tex",
+              "metric": "test_accuracy_ours_data_a"
+            }
+          },
+          "sources": {
+            "metrics_csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "main_comparison": "The claim that the test accuracy of Ours on Data-A is 84.1\\% is supported by the data in the CSV file.",
+          "mean_test_accuracy_ours_data_a": "The mean test accuracy of Ours on Data-A with seeds 1, 2, and 3 is calculated by taking the average of the accuracies from the CSV file.",
+          "metrics_csv": "The CSV file contains the metrics for the experiment, including dataset, model, split, seed, and accuracy. The accuracy values for seeds 1, 2, and 3 on Data-A with model Ours in the test split are used to calculate the mean test accuracy.",
+          "test_accuracy_ours_data_a": "The text in paper/main.tex states 'The test accuracy is 84.1\\% on Data-A.' This corresponds to the metric in results/metrics.csv where dataset is 'Data-A', model is 'Ours', split is 'test', and seeds are 1, 2, and 3."
+        }
+      },
+      "reason": "The requested mean test accuracy of Ours on Data-A with seeds 1, 2, and 3 can be mapped using the provided data. The text in paper/main.tex states 'The test accuracy is 84.1\\% on Data-A.' This corresponds to the metric in results/metrics.csv where dataset is 'Data-A', model is 'Ours', split is 'test', and seeds are 1, 2, and 3. The mean of the accuracies for these seeds is 0.841."
+    },
+    "C02": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "claims": {
+            "main_comparison": {
+              "anchor": {
+                "exact": "84.1\\%"
+              },
+              "file": "paper/main.tex",
+              "predicate": {
+                "left": "test_accuracy_data_a_ours",
+                "op": "equal",
+                "right": {
+                  "unit": "percent",
+                  "value": "84.1"
+                }
+              },
+              "scope": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": [
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "split": "test"
+              }
+            }
+          },
+          "metrics": {
+            "mean_test_accuracy_data_a_ours": {
+              "args": [
+                "accuracy_data_a_ours_test_seed_1",
+                "accuracy_data_a_ours_test_seed_2",
+                "accuracy_data_a_ours_test_seed_3"
+              ],
+              "op": "mean"
+            }
+          },
+          "occurrences": {
+            "test_accuracy_data_a_ours": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "mean_test_accuracy_data_a_ours"
+            }
+          },
+          "sources": {
+            "metrics_csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "main_comparison": "The claim that the test accuracy is 84.1\\% on Data-A with seeds 1, 2, and 3 is supported by the data in results/metrics.csv.",
+          "mean_test_accuracy_data_a_ours": "The mean test accuracy for Data-A with seeds 1, 2, and 3 is calculated from the values in results/metrics.csv.",
+          "test_accuracy_data_a_ours": "The occurrence of '84.1\\%' in paper/main.tex corresponds to the mean test accuracy of Ours on Data-A."
+        }
+      },
+      "reason": "The requested mean test accuracy of Ours on Data-A with seeds 1, 2, and 3 can be mapped using the provided evidence. The text in paper/main.tex states 'The test accuracy is 84.1\\% on Data-A.' This corresponds to the metric in results/metrics.csv for dataset 'Data-A', model 'Ours', split 'test', and seeds 1, 2, and 3. The mean of these values (0.839, 0.841, 0.843) is 0.841, which matches the reported value in the text."
+    },
+    "C03": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "mean_test_accuracy_full_variant": {
+              "args": [
+                "Data-A",
+                "Ours",
+                "test",
+                "full"
+              ],
+              "field": "accuracy",
+              "op": "mean",
+              "reduce": "mean",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test",
+                "variant": "full"
+              }
+            }
+          },
+          "occurrences": {
+            "test_accuracy_on_data_a": {
+              "anchor": {
+                "exact": "84.1\\%"
+              },
+              "file": "paper/main.tex",
+              "metric": "mean_test_accuracy_full_variant"
+            }
+          }
+        },
+        "rationale": {
+          "mean_test_accuracy_full_variant": "The mean test accuracy for the full variant of Ours on Data-A is calculated by taking the average of the accuracy values from the metrics.csv file for seeds 1, 2, and 3.",
+          "test_accuracy_on_data_a": "The occurrence of '84.1\\%' in the paper's text corresponds to the mean test accuracy for the full variant of Ours on Data-A."
+        }
+      },
+      "reason": "The requested mapping for the mean test accuracy of the full variant of Ours on Data-A with seeds 1, 2, and 3 can be proposed based on the provided evidence. The paper's text states 'The test accuracy is 84.1\\% on Data-A.' and the metrics.csv file contains the values for the three seeds."
+    },
+    "C04": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "mean_test_accuracy": {
+              "args": [
+                "accuracy",
+                "accuracy_pct"
+              ],
+              "op": "difference"
+            }
+          },
+          "occurrences": {
+            "test_accuracy_claim": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "file": "paper/main.tex",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "metrics_data": {
+              "columns": {
+                "accuracy": "decimal",
+                "accuracy_pct": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "mean_test_accuracy": "The mean test accuracy is calculated as the difference between the accuracy and accuracy_pct fields in the metrics.csv file for seeds 1, 2, and 3.",
+          "metrics_data": "The metrics data is sourced from the results/metrics.csv file, which contains the required fields for calculating the mean test accuracy.",
+          "test_accuracy_claim": "The test accuracy claim is based on the exact text '84.1\\% on Data-A.' in the paper's main.tex file."
+        }
+      },
+      "reason": "The requested mapping is to bind the mean test accuracy on Data-A over seeds 1, 2, and 3. The paper's main.tex file states 'The test accuracy is 84.1\\% on Data-A.' This corresponds to the 'accuracy_pct' field in the metrics.csv file for seed 2, which has a value of 84.100. The mean of the three accuracy values (0.839, 0.841, and 0.843) is 0.841, which matches the 84.1% value in the text. Therefore, the correct mapping is to the 'accuracy_pct' field in the metrics.csv file for seed 2."
+    },
+    "C05": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "claims": {
+            "percentage_point_difference_between_Ours_and_Baseline_on_Data-A_test": {
+              "anchor": {
+                "exact": "3.1"
+              },
+              "file": "paper/main.tex",
+              "predicate": {
+                "left": "percentage_point_difference_between_Ours_and_Baseline_on_Data-A_test",
+                "op": "equal"
+              }
+            }
+          },
+          "metrics": {
+            "percentage_point_difference_between_Ours_and_Baseline_on_Data-A_test": {
+              "args": [
+                "accuracy_of_Ours_on_Data-A_test",
+                "accuracy_of_Baseline_on_Data-A_test"
+              ],
+              "op": "percentage_point_difference"
+            }
+          },
+          "occurrences": {
+            "accuracy_of_Ours_on_Data-A_test": {
+              "anchor": {
+                "exact": "3.1"
+              },
+              "display": {
+                "kind": "decimal",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "accuracy"
+            }
+          },
+          "sources": {
+            "results/metrics.csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "percentage_point_difference_between_Ours_and_Baseline_on_Data-A_test": "The percentage point improvement of Ours over Baseline on Data-A test is calculated by taking the difference between the mean accuracy of Ours and the mean accuracy of Baseline across seeds 1, 2, and 3."
+        }
+      },
+      "reason": "The requested numeric occurrence is present in the paper and can be mapped to the corresponding metric in the CSV file. The percentage point improvement of Ours over Baseline on Data-A test can be calculated using the provided data."
+    },
+    "C06": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "data-a-test-accuracy-001": {
+              "args": [
+                "data-a-test-accuracy-001-seed-1",
+                "data-a-test-accuracy-001-seed-2",
+                "data-a-test-accuracy-001-seed-3"
+              ],
+              "op": "mean"
+            },
+            "data-a-test-accuracy-001-seed-1": {
+              "field": "accuracy",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "001",
+                "seed": "1",
+                "split": "test"
+              }
+            },
+            "data-a-test-accuracy-001-seed-2": {
+              "field": "accuracy",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "001",
+                "seed": "2",
+                "split": "test"
+              }
+            },
+            "data-a-test-accuracy-001-seed-3": {
+              "field": "accuracy",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "001",
+                "seed": "3",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "data-a-test-accuracy-001": {
+              "anchor": {
+                "exact": "84.1\\%"
+              },
+              "file": "paper/main.tex",
+              "metric": "data-a-test-accuracy-001"
+            }
+          }
+        },
+        "rationale": {
+          "data-a-test-accuracy-001": "The mean accuracy for model 001 on Data-A with seeds 1, 2, and 3 is calculated from the values in the CSV file. The text in the LaTeX document states the accuracy as 84.1\\%, which matches the calculated mean.",
+          "data-a-test-accuracy-001-seed-1": "The accuracy value for seed 1 is found in the CSV file and corresponds to the text in the LaTeX document.",
+          "data-a-test-accuracy-001-seed-2": "The accuracy value for seed 2 is found in the CSV file and corresponds to the text in the LaTeX document.",
+          "data-a-test-accuracy-001-seed-3": "The accuracy value for seed 3 is found in the CSV file and corresponds to the text in the LaTeX document."
+        }
+      },
+      "reason": "The requested numeric occurrence for Data-A test accuracy for model identifier 001 with seeds 1, 2, and 3 is available in the provided files. The mean of the accuracy values from the CSV file can be calculated and mapped to the text in the LaTeX document."
+    },
+    "C07": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "accuracy.mean": {
+              "field": "accuracy.mean",
+              "reduce": "mean",
+              "source": "results/summary.json",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "test_accuracy": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "file": "paper/main.tex",
+              "metric": "accuracy.mean"
+            }
+          }
+        },
+        "rationale": {
+          "accuracy.mean": "The mean accuracy value of 0.841 is derived from the three test runs in metrics.csv, which are all on Data-A. The value matches the mean computed from these runs and is stored as a fraction in summary.json.",
+          "test_accuracy": "The occurrence 'The test accuracy is 84.1\\% on Data-A.' directly provides the value for the requested metric. The exact text anchors the occurrence to the specific value."
+        }
+      },
+      "reason": "The requested numeric occurrence is the test accuracy in summary.json at runs → evaluation/test → accuracy.mean. The value is already a mean over the declared test runs and is stored as a fraction. The exact value is 0.841, which matches the mean of the three runs in metrics.csv. The source material from paper/main.tex states 'The test accuracy is 84.1\\% on Data-A.' This confirms the identity, units, and derivation of the requested occurrence."
+    },
+    "C08": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "test_accuracy": {
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "test_accuracy": {
+              "anchor": {
+                "exact": "86.0\\%"
+              },
+              "file": "paper/main.tex",
+              "metric": "test_accuracy"
+            }
+          }
+        },
+        "rationale": {
+          "test_accuracy": "The test accuracy is explicitly stated as 86.0% on Data-A in the manuscript, and the results/metrics.csv file contains three entries for the same dataset, model, and split with seeds 1, 2, and 3, which correspond to the requested run set. The metric 'accuracy' in the CSV file is consistent with the value reported in the manuscript, and the units are specified as a percentage."
+        }
+      },
+      "reason": "The paper's test accuracy is explicitly stated as 86.0% on Data-A in the manuscript. The results/metrics.csv file contains three entries for the same dataset, model, and split with seeds 1, 2, and 3, which correspond to the requested run set. The metric 'accuracy' in the CSV file is consistent with the value reported in the manuscript, and the units are specified as a percentage. Therefore, the mapping can be proposed."
+    },
+    "C09": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "claims": {
+            "main_comparison_ours_vs_baseline": {
+              "anchor": {
+                "exact": "Ours"
+              },
+              "file": "paper/main.tex",
+              "predicate": {
+                "left": "Ours",
+                "op": "equal",
+                "right": {
+                  "unit": "percent",
+                  "value": "84.1"
+                }
+              },
+              "scope": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "seed": "1, 2, 3",
+                "split": "test"
+              }
+            }
+          },
+          "metrics": {
+            "mean_accuracy_ours_data-a_test_seeds_1_2_3": {
+              "args": [
+                "accuracy_ours_data-a_test_seed_1",
+                "accuracy_ours_data-a_test_seed_2",
+                "accuracy_ours_data-a_test_seed_3"
+              ],
+              "op": "mean"
+            }
+          },
+          "occurrences": {
+            "abstract_accuracy_ours_data-a_test_seeds_1_2_3": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "mean_accuracy_ours_data-a_test_seeds_1_2_3"
+            }
+          },
+          "sources": {
+            "metrics_csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv"
+            }
+          }
+        },
+        "rationale": {
+          "abstract_accuracy_ours_data-a_test_seeds_1_2_3": "The value 84.1 in the LaTeX document corresponds to the mean accuracy of the 'Ours' model on Data-A test split with seeds 1, 2, and 3 as calculated from the CSV file.",
+          "main_comparison_ours_vs_baseline": "The 'Ours' model's accuracy is compared to the 'Baseline' model's accuracy in the LaTeX document, which is also 84.1, indicating a tie.",
+          "mean_accuracy_ours_data-a_test_seeds_1_2_3": "The mean accuracy of the 'Ours' model on Data-A test split with seeds 1, 2, and 3 is calculated from the CSV file values 0.839, 0.841, and 0.843, resulting in 0.841, which matches the value in the LaTeX document."
+        }
+      },
+      "reason": "The requested numeric occurrence is the mean accuracy of the 'Ours' model on Data-A test split with seeds 1, 2, and 3. The values from the CSV file are 0.839, 0.841, and 0.843. The mean of these values is 0.841, which matches the value in the LaTeX document. Therefore, the mapping is correct."
+    },
+    "C10": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "reported_accuracy": {
+              "field": "accuracy",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": "results/metrics.csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "reported_accuracy": {
+              "anchor": {
+                "exact": "84.1"
+              },
+              "file": "paper/main.tex",
+              "metric": "reported_accuracy"
+            }
+          },
+          "sources": {
+            "results/metrics.csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "reported_accuracy": "The accuracy value of 84.1\\% in the paper/main.tex file is mapped to the corresponding entry in results/metrics.csv for dataset 'Data-A', model 'Ours', split 'test', and seed 2."
+        }
+      },
+      "reason": "The requested accuracy can be mapped from the provided files. The paper/main.tex file contains the reported accuracy as 84.1\\%, and the results/metrics.csv file provides the corresponding numeric values for different datasets and seeds."
+    },
+    "C11": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "mean_test_accuracy_data_a_ours_seeds_1_2_3": {
+              "args": [
+                "accuracy_data_a_ours_test_seed_1",
+                "accuracy_data_a_ours_test_seed_2"
+              ],
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "op": "mean",
+              "unit": "percent"
+            }
+          },
+          "occurrences": {
+            "test_accuracy_data_a": {
+              "anchor": {
+                "exact": "84.1\\%"
+              },
+              "file": "paper/main.tex",
+              "metric": "mean_test_accuracy_data_a_ours_seeds_1_2_3"
+            }
+          },
+          "sources": {
+            "metrics_csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "mean_test_accuracy_data_a_ours_seeds_1_2_3": "The mean test accuracy is calculated from the accuracy values in the CSV file for seeds 1, 2, and 3. The exact value is derived from the text in the LaTeX file, which states 'The test accuracy is 84.1\\% on Data-A.'",
+          "test_accuracy_data_a": "The occurrence is based on the exact text '84.1\\%' found in the LaTeX file."
+        }
+      },
+      "reason": "The requested binding is for the mean test accuracy of 'Ours' on 'Data-A' using seeds 1, 2, and 3. The text in 'paper/main.tex' states 'The test accuracy is 84.1\\% on Data-A.' and the CSV file 'results/metrics.csv' contains the accuracy values for each seed. The mean of these values is 0.840333..., which rounds to 84.0% when displayed with one decimal place."
+    },
+    "C12": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "p-value": {
+              "args": [
+                "accuracy:Ours",
+                "accuracy:Baseline"
+              ],
+              "op": "difference"
+            }
+          },
+          "occurrences": {
+            "p-value": {
+              "anchor": {
+                "exact": "0.01"
+              },
+              "file": "paper/main.tex",
+              "metric": "p-value"
+            }
+          },
+          "sources": {
+            "metrics.csv": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "p-value": "The p-value of 0.01 is reported in the main.tex file and corresponds to the comparison between the model 'Ours' and 'Baseline' on the dataset 'Data-A' in the test split. The metric is derived from the difference in accuracy values across the three seeds."
+        }
+      },
+      "reason": "The paper's p-value is reported as 0.01 in the main.tex file. The requested numeric occurrence is the p-value, and the metric/source dependencies are available in the metrics.csv file. The mapping can be proposed based on the provided evidence."
+    }
+  },
+  "run": {
+    "context_protocol": "One independent request per case: full exported project/request, read-only scan, proposal schema and generic rules/agent guide. No quick-start example, oracle, control, other-case context or scorer feedback. Plain JSON syntax constraint; no answer schema constraint, retries, repairs or acceptance. Non-thinking mode. The designer owns and can inspect this authored synthetic suite; this is not a blind independent study. The model has no tools or filesystem access.",
+    "kind": "model",
+    "label": "local-model-v1",
+    "model": "Qwen3-8B-Q4_K_M"
+  },
+  "schema_version": 1,
+  "suite_id": "mapping-contracts-v1",
+  "suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd"
+}

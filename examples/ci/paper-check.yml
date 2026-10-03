@@ -1,0 +1,80 @@
+# Copy into a paper repository's .github/workflows directory after configuring
+# PAPERDELTA_REPOSITORY and PAPERDELTA_REVISION repository variables.
+# The checker repository must be accessible to this read-only workflow.
+name: Review experiment changes
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  paperdelta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CHECKER_REPOSITORY: ${{ vars.PAPERDELTA_REPOSITORY }}
+      CHECKER_REVISION: ${{ vars.PAPERDELTA_REVISION }}
+      BASE_COMMIT: ${{ github.event.pull_request.base.sha || github.sha }}
+    steps:
+      - name: Require an explicit trusted checker revision
+        shell: bash
+        run: |
+          python3 -I - <<'PY'
+          import os, re
+          repository = os.environ["CHECKER_REPOSITORY"]
+          revision = os.environ["CHECKER_REVISION"]
+          if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
+              raise SystemExit("Set PAPERDELTA_REPOSITORY to the trusted owner/repository.")
+          if not re.fullmatch(r"[a-fA-F0-9]{40}", revision):
+              raise SystemExit("Set PAPERDELTA_REVISION to a reviewed full commit SHA.")
+          PY
+      - name: Check out paper inputs and target history
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          path: paper
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check out the separately pinned checker
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          repository: ${{ env.CHECKER_REPOSITORY }}
+          ref: ${{ env.CHECKER_REVISION }}
+          path: trusted-paperdelta
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+      - name: Install the trusted checker
+        run: python -I -m pip install ./trusted-paperdelta
+      - name: Check results and write the job summary
+        id: review
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python -I "$PWD/trusted-paperdelta/tools/ci_check.py" \
+            --project "$PWD/paper" --base-commit "$BASE_COMMIT" \
+            --snapshot submitted-v1 --report build/paperdelta
+          status=$?
+          echo "checker_exit=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+      - name: Keep the review even when checks fail
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: paperdelta-review
+          path: paper/build/paperdelta/
+          if-no-files-found: warn
+      - name: Preserve the checker verdict
+        if: always() && steps.review.outcome != 'skipped'
+        shell: bash
+        env:
+          CHECKER_EXIT: ${{ steps.review.outputs.checker_exit }}
+        run: |
+          case "$CHECKER_EXIT" in
+            0|1|2) exit "$CHECKER_EXIT" ;;
+            *) exit 2 ;;
+          esac

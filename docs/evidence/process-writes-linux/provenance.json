@@ -1,0 +1,81 @@
+{
+  "recorded_at": "2026-10-02T19:34:13.936722+00:00",
+  "base_provenance": "docs/evidence/linux-alpine-a2/provenance.json",
+  "host_result": {
+    "guest_exit_code": 0,
+    "guest_evidence_received": true,
+    "shutdown": "guest-poweroff",
+    "started_at": "2026-10-02T19:29:52.965263+00:00",
+    "finished_at": "2026-10-02T19:32:27.944747+00:00",
+    "qemu_exit_code": 0,
+    "services_closed": true
+  },
+  "loopback_ports_verified_closed": true,
+  "accelerator": "tcg,thread=multi",
+  "virtual_cpus": 2,
+  "ram_mib": 3072,
+  "additional_test": {
+    "path": "tests/test_process_writes.py",
+    "sha256": "58b9d60da430ffd310cda552e601834d06bfc814383c18e9b1b19494ef1a4805",
+    "method": "Added to the extracted source archive as a separately verified new file",
+    "replaced_existing_files": false
+  },
+  "guest_evidence_bundle_sha256": "9c62619029c2a96c1f2851974abdbc57ad8939c3f7d59669a371b2b2d5cf9097",
+  "validation_runner_sha256": "96b01374102842cbe0b1500bcecbf2e703753e8c5b4ae4187cc5aea22658d729",
+  "junit_seconds": 27.789,
+  "evidence_files": {
+    "core-check.log": {
+      "sha256": "ef7ff91ea9e15aa0171bdc22e5e7dcaa08c3e6c4f8e5961dbe3a3fbef201f568",
+      "bytes": 13868
+    },
+    "core-data-change.log": {
+      "sha256": "0cc7a163ff721cdb7a75d023c8f866ccc71e148c6dc450759f739f5993137b18",
+      "bytes": 16786
+    },
+    "create-venv.log": {
+      "sha256": "169f24774e13a79b6341d6c41c58f159e180701e87e9028aa70afdf8712b6fbb",
+      "bytes": 16
+    },
+    "evidence.json": {
+      "sha256": "86255669e9813d80c082bd908ee261021e58cc664f895ca05f745aba0a89f6d5",
+      "bytes": 7562
+    },
+    "install-core-wheel.log": {
+      "sha256": "f9d2b2a4b5c82935dbfbd24edb15d6161a94435f9b97fc719e9c4075f8c0b836",
+      "bytes": 2159
+    },
+    "install-test-dependencies.log": {
+      "sha256": "5d76d464f1458af43fce96fd3da77bc9bc2008c2a2ea2423d524a51cc063d60d",
+      "bytes": 6934
+    },
+    "installed-identity.log": {
+      "sha256": "f7a9cef40bd94e19edb4ff0c6d68cce95227a66ae555d6acbef95b1266dfa464",
+      "bytes": 1794
+    },
+    "junit.xml": {
+      "sha256": "20d3663c01c23bb7af52d87664ae2b716f29497a3a1a3371131c93be47fa5f1d",
+      "bytes": 482
+    },
+    "optional-mcp-absent.log": {
+      "sha256": "c692ef679552c25b7be9843cdc8799c784cf13e0d1255bbe5cbcf7482c067f9f",
+      "bytes": 101
+    },
+    "pip-check.log": {
+      "sha256": "e32443a10e5c15a657d9924735c284318f2a6aa64c5809c81b4a790454747883",
+      "bytes": 46
+    },
+    "tests.log": {
+      "sha256": "ae6c45a988279f7c4bd4de588758c4327a657e7f9a5acd468eac6153a774ad25",
+      "bytes": 115
+    },
+    "versions.log": {
+      "sha256": "99bb3c22e771cb09ed715c221a550118e9ac3380153144afc6e4285a6bc8407e",
+      "bytes": 174
+    }
+  },
+  "scope": "Two added Linux process tests, separate from the earlier 151-test full run.",
+  "limitations": [
+    "Controlled first-file pause and process kill, not machine power loss.",
+    "Local guest filesystem only; no network filesystem or hostile external editor testing."
+  ]
+}

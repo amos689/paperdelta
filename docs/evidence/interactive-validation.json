@@ -1,0 +1,49 @@
+{
+  "verified_at": "2026-10-02T18:07:15.226004+00:00",
+  "tool_version": "0.1.0a2",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "full_suite": {
+    "tests": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit": "build/a2-tests.xml",
+  "full_suite_seconds": 16.155,
+  "interactive_tests": 12,
+  "actual_terminal": {
+    "driver": "Automated ConPTY interaction by the development agent",
+    "independent_participants": 0,
+    "command": "python -X utf8 -m paperdelta -C build/interactive-terminal bind --proposal proposal.json --interactive",
+    "observed_exit_code": 0,
+    "selected": [
+      "occurrences:abstract_accuracy"
+    ],
+    "verified_configuration_bindings": [
+      "occurrences:abstract_accuracy"
+    ],
+    "verified_config_backup_was_empty": true,
+    "paper_bytes_match_original_fixture": {
+      "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+      "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+      "paper/main.tex": "a4ec7b761ea971814eb1d632dd0d31aa93a5c4d09217715dc17fa7215565a899",
+      "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac"
+    },
+    "interactive_source_sha256": "ed5ab9447ac1102b3479de1be7fa7c4926cadf4d9b7d37d6a6f990eec3091654"
+  },
+  "automated_ten_binding_case": {
+    "accepted": 10,
+    "remaining_mismatches": 10,
+    "paper_unchanged": true,
+    "scope": "Automated regression; not a first-use trial or timing measurement."
+  },
+  "corpus_regression": {
+    "cases": 150,
+    "matched": 126,
+    "every_outcome_matches_original_records": true,
+    "historical_implementation_replay_matches_every_outcome": true,
+    "unseen_papers_added": 0
+  },
+  "scope": "Local implementation validation, not independent-user evidence."
+}

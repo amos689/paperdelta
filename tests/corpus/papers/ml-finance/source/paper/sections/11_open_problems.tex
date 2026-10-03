@@ -1,0 +1,55 @@
+\section{Open Problems and Research Agenda}\label{sec:open_problems}
+
+Every survey ends with a section on ``future directions,'' and most such sections are forgettable wishlists. We will try to be more specific. What follows are ten problems that we believe are both tractable and important, ranked roughly by how much impact a solution would have on the field.
+
+\subsection{Problem 1: Build the Financial ImageNet}
+
+Computer vision took off when ImageNet gave everyone a common benchmark to compete on. Financial ML has no equivalent. Each paper defines its own universe, its own features, its own evaluation window. The result is that we cannot meaningfully compare across studies. Did paper A beat paper B's method, or did it just test on an easier dataset?
+
+What the field needs is one or more open benchmark datasets with standardized features, train/test splits, and evaluation metrics. The FinRL library \citep{Wang2021} and Tidy Finance replication project are early attempts, but they are grassroots efforts, not community standards. This is the single highest-leverage intervention anyone could make for the field. It is also not glamorous, which is why nobody has done it yet.
+
+\subsection{Problem 2: The Backtest-to-Live Gap}
+
+Every practitioner knows that backtests lie. Models that earn beautiful Sharpe ratios on historical data reliably disappoint when deployed. The causes are well-known: market impact, latency, slippage, data snooping, non-stationarity. What we lack is a good framework for \textit{quantifying} the expected degradation before going live.
+
+\citet{Bailey2014} propose minimum backtest length criteria and \citet{DePrado2018} develop combinatorial purged cross-validation, but these are patches, not solutions. A serious research program here would study the gap empirically, using live trading records from firms willing to share them (admittedly a hard ask), and develop prediction intervals around backtest performance that account for the known sources of inflation.
+
+\subsection{Problem 3: Models That Know When the World Changed}
+
+Non-stationarity is the fundamental difficulty of financial ML (see \Cref{sec:cross_cutting}), and the field's response so far has been ad hoc. Rolling windows, regime-switching models, and transfer learning each address one facet of the problem. What is missing is a principled framework that treats non-stationarity not as a nuisance parameter but as the core modeling challenge.
+
+Meta-learning, in the sense of learning to learn from few samples in new environments, is a promising direction that has barely been explored in finance. So is the idea that model \textit{simplicity} might be a feature rather than a bug in non-stationary environments: a linear model with five features may degrade more gracefully than a deep network with five hundred.
+
+\subsection{Problem 4: What Exactly Should a Financial Foundation Model Look Like?}
+
+BloombergGPT \citep{Wu2023} showed that a large language model trained on financial text can outperform general-purpose LLMs on financial NLP tasks. But the deeper question is whether this approach makes sense at all. Financial data is fundamentally multimodal: time series, cross-sectional features, tabular data, text, and (increasingly) images and audio. An LLM trained only on text is leaving most of the information on the table.
+
+The interesting research question is whether someone can build a foundation model that ingests all these modalities jointly. The closest analogy outside finance might be the time-series foundation models (TimesFM, Chronos) emerging from Google and Amazon, but those handle only univariate series. A genuinely useful financial foundation model would need to handle panel data, text, and time series simultaneously, and nobody has demonstrated that this is feasible.
+
+\subsection{Problem 5: Causation, Not Just Correlation}
+
+Almost every paper in our survey trains a model to predict $Y$ from $X$. Almost none ask whether $X$ \textit{causes} $Y$. This matters for two reasons. First, causal features should be more stable across regimes than merely correlated features. Second, policy questions (what happens if the Fed raises rates? what if a new regulation is imposed?) are inherently causal and cannot be answered by predictive models.
+
+The econometrics community has developed powerful causal inference tools (double ML \citep{Chernozhukov2018}, causal forests, synthetic controls), but these have barely penetrated the financial ML literature. Bridging these communities is an obvious opportunity.
+
+\subsection{Problem 6: Markets Are Games, Not Datasets}
+
+Standard ML treats financial data as fixed: here is a dataset, learn a function, evaluate on a test set. But financial markets are multi-agent games where your model's predictions, once acted upon, change the very data your model was trained on. This is not an abstract concern; it is the mechanism by which alpha decays.
+
+Multi-agent reinforcement learning offers a framework for thinking about this, and a few papers have explored it for market making and execution. The harder problem, modeling how the aggregate behavior of many ML-equipped agents reshapes return distributions, remains wide open. The flash crash literature suggests this is practically important, not just theoretically interesting.
+
+\subsection{Problem 7: Algorithmic Fairness in Lending and Insurance}
+
+Credit scoring and insurance pricing are the two financial applications where ML bias has regulatory teeth. The EU's AI Act and the US CFPB's enforcement actions have made this an urgent practical problem, not just an academic one. The core difficulty is proxy discrimination: ML models learn to use zip codes or shopping patterns as proxies for race, and the result is hard to detect and harder to prevent without sacrificing predictive accuracy.
+
+\subsection{Problem 8: Learning Without Sharing Data}
+
+Banks have data that, pooled together, would dramatically improve credit risk models, fraud detection, and systemic risk monitoring. They will never pool it directly. Federated learning, in which each institution trains locally and shares only model updates, is the obvious technical solution. Financial applications add complications: heterogeneous data distributions across banks, regulatory constraints on even model parameters, and the incentive problem that the best-data bank gains the least from federation.
+
+\subsection{Problem 9: Climate Risk Quantification}
+
+Climate risk is the newest frontier for financial ML, driven by regulatory mandates (TCFD, EU taxonomy) rather than alpha-seeking. The key ML applications are NLP extraction of climate risk disclosures from corporate filings, integration of physical risk models with asset valuations, and carbon-intensity factor construction. The data infrastructure is immature, which means there is a first-mover advantage for researchers who build good datasets now.
+
+\subsection{Problem 10: Quantum Computing (Eventually)}
+
+We include this for completeness, not because it is actionable today. Current quantum hardware is far too noisy for any practical financial computation. The most plausible near-term application, quadratic unconstrained binary optimization for portfolio selection, has been demonstrated on toy problems ($<$50 assets) but not at anything resembling production scale. We suggest monitoring this space but not allocating research effort to it unless you have access to a quantum device.

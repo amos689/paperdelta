@@ -1,0 +1,12 @@
+{
+  "answers": {},
+  "run": {
+    "context_protocol": "One independent request per case: full exported project/request, read-only scan, proposal schema and generic rules/agent guide. No quick-start example, oracle, control, other-case context or scorer feedback. Plain JSON syntax constraint; no answer schema constraint, retries, repairs or acceptance. Non-thinking mode. The designer owns and can inspect this authored synthetic suite; this is not a blind independent study. The model has no tools or filesystem access.",
+    "kind": "model",
+    "label": "local-model-v1",
+    "model": "Qwen3-8B-Q4_K_M"
+  },
+  "schema_version": 1,
+  "suite_id": "mapping-contracts-v1",
+  "suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd"
+}

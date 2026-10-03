@@ -1,0 +1,229 @@
+{
+  "candidates": [
+    {
+      "byte_end": 50,
+      "byte_start": 46,
+      "candidate_id": "sha256:5e6cf880ee232883f0aedf1bf648f45a49a6ff93d62f047ebf011af0876785f9",
+      "column": 30,
+      "context_after": "\\% test accuracy.\nThe improvement is 3.1 percentage points.\n\\end{abstract}\n",
+      "context_before": "\\begin{abstract}\nOn Local-Data, Ours achieves ",
+      "end": 50,
+      "file": "paper/abstract.tex",
+      "line": 2,
+      "priority_hint": "abstract",
+      "same_text_count": 5,
+      "start": 46,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 90,
+      "byte_start": 87,
+      "candidate_id": "sha256:de1289575a2cb006d264cff48ec797fe0619bc8edef664ce30ec940923482d9d",
+      "column": 20,
+      "context_after": " percentage points.\n\\end{abstract}\n",
+      "context_before": "\\begin{abstract}\nOn Local-Data, Ours achieves 84.1\\% test accuracy.\nThe improvement is ",
+      "end": 90,
+      "file": "paper/abstract.tex",
+      "line": 3,
+      "priority_hint": "abstract",
+      "same_text_count": 3,
+      "start": 87,
+      "text": "3.1"
+    },
+    {
+      "byte_end": 56,
+      "byte_start": 52,
+      "candidate_id": "sha256:5e523bd54b57c1d9e87590e36e823402833931fccb1cdecb39519b3a8418e61e",
+      "column": 8,
+      "context_after": " \\\\\nBaseline & 81.0 \\\\\n\\end{tabular}\nHeld-out test accuracy for Ours: 84.1\\%.\nOurs' gain i",
+      "context_before": "\\begin{tabular}{lr}\nModel & Accuracy (\\%) \\\\\nOurs & ",
+      "end": 56,
+      "file": "paper/results.tex",
+      "line": 3,
+      "priority_hint": "table",
+      "same_text_count": 5,
+      "start": 52,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 75,
+      "byte_start": 71,
+      "candidate_id": "sha256:dbf235364524e3eab57025a86d5a8d79817e7631f33c2cb36f4905421b8175e9",
+      "column": 12,
+      "context_after": " \\\\\n\\end{tabular}\nHeld-out test accuracy for Ours: 84.1\\%.\nOurs' gain is 3.1 percentage po",
+      "context_before": "\\begin{tabular}{lr}\nModel & Accuracy (\\%) \\\\\nOurs & 84.1 \\\\\nBaseline & ",
+      "end": 75,
+      "file": "paper/results.tex",
+      "line": 4,
+      "priority_hint": "table",
+      "same_text_count": 2,
+      "start": 71,
+      "text": "81.0"
+    },
+    {
+      "byte_end": 54,
+      "byte_start": 50,
+      "candidate_id": "sha256:d44aa44cc724c7d2750f40c9133ade335e65abc0c43755006ee0dd1e997e295a",
+      "column": 32,
+      "context_after": "\\%.\nBaseline mean test accuracy: 81.0\\%.\nThe aggregate gain is 3.1 percentage points.\nOurs",
+      "context_before": "\\section{Appendix}\nRecomputed mean test accuracy: ",
+      "end": 54,
+      "file": "paper/appendix.tex",
+      "line": 2,
+      "priority_hint": "repeated",
+      "same_text_count": 5,
+      "start": 50,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 91,
+      "byte_start": 87,
+      "candidate_id": "sha256:0d9a2bd470ebc09921d4d135d50b69edb6291167811ac1577a9af15e333334cc",
+      "column": 30,
+      "context_after": "\\%.\nThe aggregate gain is 3.1 percentage points.\nOurs repeated summary: 84.1\\%.\n",
+      "context_before": "\\section{Appendix}\nRecomputed mean test accuracy: 84.1\\%.\nBaseline mean test accuracy: ",
+      "end": 91,
+      "file": "paper/appendix.tex",
+      "line": 3,
+      "priority_hint": "repeated",
+      "same_text_count": 2,
+      "start": 87,
+      "text": "81.0"
+    },
+    {
+      "byte_end": 120,
+      "byte_start": 117,
+      "candidate_id": "sha256:0b087a21c38db35072cae78c4eb68be6f751939b8645eff0802a81fe832727e9",
+      "column": 23,
+      "context_after": " percentage points.\nOurs repeated summary: 84.1\\%.\n",
+      "context_before": "ed mean test accuracy: 84.1\\%.\nBaseline mean test accuracy: 81.0\\%.\nThe aggregate gain is ",
+      "end": 120,
+      "file": "paper/appendix.tex",
+      "line": 4,
+      "priority_hint": "repeated",
+      "same_text_count": 3,
+      "start": 117,
+      "text": "3.1"
+    },
+    {
+      "byte_end": 167,
+      "byte_start": 163,
+      "candidate_id": "sha256:4e714c2695ce85a72af16942c6da57d5f8e9450753aef58b89d0e0ab79d5d5e0",
+      "column": 24,
+      "context_after": "\\%.\n",
+      "context_before": "est accuracy: 81.0\\%.\nThe aggregate gain is 3.1 percentage points.\nOurs repeated summary: ",
+      "end": 167,
+      "file": "paper/appendix.tex",
+      "line": 5,
+      "priority_hint": "repeated",
+      "same_text_count": 5,
+      "start": 163,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 130,
+      "byte_start": 126,
+      "candidate_id": "sha256:39a5925814064ae58b1e01b2f371609b8cd234908af84b761210eb97a7887533",
+      "column": 34,
+      "context_after": "\\%.\nOurs' gain is 3.1 percentage points.\n",
+      "context_before": " (\\%) \\\\\nOurs & 84.1 \\\\\nBaseline & 81.0 \\\\\n\\end{tabular}\nHeld-out test accuracy for Ours: ",
+      "end": 130,
+      "file": "paper/results.tex",
+      "line": 6,
+      "priority_hint": "repeated",
+      "same_text_count": 5,
+      "start": 126,
+      "text": "84.1"
+    },
+    {
+      "byte_end": 151,
+      "byte_start": 148,
+      "candidate_id": "sha256:3c6cf23ccc3a9a5b698ebadc70bb4256187b1f42154c70a026227933153713eb",
+      "column": 15,
+      "context_after": " percentage points.\n",
+      "context_before": "\\\nBaseline & 81.0 \\\\\n\\end{tabular}\nHeld-out test accuracy for Ours: 84.1\\%.\nOurs' gain is ",
+      "end": 151,
+      "file": "paper/results.tex",
+      "line": 7,
+      "priority_hint": "repeated",
+      "same_text_count": 3,
+      "start": 148,
+      "text": "3.1"
+    }
+  ],
+  "config_path": "paperdelta.yaml",
+  "confirmed": {
+    "claims": [],
+    "figures": [],
+    "occurrences": []
+  },
+  "input_hashes": {
+    ".paperdelta/onboarding.json": "sha256:9bd9d7bdeb5c853d6e9e9ce0fad989934d770e45e1ed5379b2e8022144729321",
+    "paper/abstract.tex": "sha256:6e91f6859d0dc8a0426e77a12f1474e95a56ffc88fdac2ff9f9d361a2cb09017",
+    "paper/appendix.tex": "sha256:3bfbd01914820823becb7cca2fa69e0924c0a25ac839f1f90f1bc905895daa74",
+    "paper/main.tex": "sha256:da7988c87b221f325847f20cf32153a3441bda9634ad1adade5d3860246b5af0",
+    "paper/results.tex": "sha256:2080da04da6334b35f378d53fa8948e51956b9ed87a4df50fc61ebd74a088c6e",
+    "paperdelta.yaml": "sha256:033ad60cab79726bae7a8e90731bfde2dfe8246c06e432593f2dd2e470f94854",
+    "results/metrics.csv": "sha256:3f8ee38fc817fd203d77a0a87e4ef12eb9a6f1358d47faa8f63646bc0a16d723"
+  },
+  "notice": "Candidates and equal numbers do not establish a scientific mapping.",
+  "scan_schema_version": 1,
+  "sources": [
+    {
+      "columns": [
+        "dataset",
+        "model",
+        "split",
+        "seed",
+        "accuracy"
+      ],
+      "format": "csv",
+      "needs_confirmation": [
+        "column types",
+        "primary key",
+        "units",
+        "scope"
+      ],
+      "path": "results/metrics.csv",
+      "record_count": 7,
+      "sample": [
+        {
+          "accuracy": "0.839",
+          "dataset": "Local-Data",
+          "model": "Ours",
+          "seed": "1",
+          "split": "test"
+        },
+        {
+          "accuracy": "0.841",
+          "dataset": "Local-Data",
+          "model": "Ours",
+          "seed": "2",
+          "split": "test"
+        },
+        {
+          "accuracy": "0.843",
+          "dataset": "Local-Data",
+          "model": "Ours",
+          "seed": "3",
+          "split": "test"
+        },
+        {
+          "accuracy": "0.808",
+          "dataset": "Local-Data",
+          "model": "Baseline",
+          "seed": "1",
+          "split": "test"
+        },
+        {
+          "accuracy": "0.810",
+          "dataset": "Local-Data",
+          "model": "Baseline",
+          "seed": "2",
+          "split": "test"
+        }
+      ]
+    }
+  ],
+  "unsupported": []
+}

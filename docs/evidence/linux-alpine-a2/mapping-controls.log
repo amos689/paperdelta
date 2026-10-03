@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-02T19:16:48.323352+00:00",
+  "suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd",
+  "kind": "scorer_controls",
+  "model_runs": 0,
+  "independent_participants": 0,
+  "suite_cases": 12,
+  "reference_mappable_cases": 9,
+  "reference_abstention_cases": 3,
+  "all_suite_input_bytes_unchanged": true,
+  "controls": {
+    "reference": {
+      "case_states": {
+        "proposed": 9,
+        "expected_abstention": 3
+      },
+      "candidate_results": {
+        "reference_contract_match": 9
+      },
+      "reference_targets_matched": 9,
+      "human_measurements": {
+        "basis": "Declared review observations, not independently authenticated",
+        "reviewer_kind": null,
+        "reviewed": 0,
+        "unreviewed": 9,
+        "correct": 0,
+        "incorrect": 0,
+        "ambiguous": 0,
+        "candidate_precision": null,
+        "ambiguity_rate": null,
+        "confirmation_seconds": {}
+      }
+    },
+    "adversarial": {
+      "case_states": {
+        "proposed": 11,
+        "invalid_proposal": 1
+      },
+      "candidate_results": {
+        "reference_contract_mismatch": 7,
+        "reference_contract_match": 1,
+        "invalid_proposal": 1,
+        "proposal_despite_insufficient_evidence": 3
+      },
+      "reference_targets_matched": 1,
+      "human_measurements": {
+        "basis": "Declared review observations, not independently authenticated",
+        "reviewer_kind": null,
+        "reviewed": 0,
+        "unreviewed": 12,
+        "correct": 0,
+        "incorrect": 0,
+        "ambiguous": 0,
+        "candidate_precision": null,
+        "ambiguity_rate": null,
+        "confirmation_seconds": {}
+      }
+    }
+  },
+  "files": {
+    "adversarial.review.template.json": "sha256:6f37ebba691d88592e87e86b14321923934df9c96f7786e6d9e7ea92db8d24e1",
+    "adversarial.report.json": "sha256:5770e90ae6ee7a4579131746e88df40705ff98f5dd5e2c9af66bcf1b6d0cde96",
+    "adversarial.submission.json": "sha256:86bf2552e64c66261afa1a23a1b70715ab0c7da706c9ce6d7afb1e3ee4a57c1d",
+    "reference.review.template.json": "sha256:8e222b2ef5ae4c9fc97829fc42427a6c575001a25230a55129cfc031bb24e065",
+    "reference.report.json": "sha256:e4c7401f548f9b4bf4ed77f98f31d0f0d2cb3aef7d6d6878afebc80b8b8387d7",
+    "reference.submission.json": "sha256:7b894c24d151d333b5b6cfeefc038f2b70e62c188d18e9060480938b16193891"
+  },
+  "scope": "Checks the measurement tool, not the performance of an AI model or a user."
+}
+
+--- STDERR ---

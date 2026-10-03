@@ -1,0 +1,63 @@
+\section{Portfolio Optimization}\label{sec:portfolio_optimization}
+
+Traditional portfolio optimization, rooted in Markowitz mean-variance theory \citep{Markowitz1952}, suffers from well-documented estimation error problems: expected returns are notoriously difficult to estimate, and sample covariance matrices are unstable in high dimensions. ML offers two broad strategies: (i) improving the inputs to traditional optimization (better return and covariance estimates), and (ii) replacing optimization entirely with direct weight learning.
+
+\subsection{ML-Enhanced Inputs}
+
+\subsubsection{Return Estimation}
+
+The return prediction methods reviewed in \Cref{sec:return_prediction} directly improve portfolio inputs. Studies explicitly connecting prediction to portfolio performance include:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Gu2020} show that portfolios sorted on neural network predicted returns earn significantly higher Sharpe ratios than traditional factor portfolios.
+    \item \citet{DeMiguel2020} demonstrate that ML-predicted returns, combined with mean-variance optimization with short-sale constraints, outperform the equal-weight benchmark that has been notoriously difficult to beat.
+    \item \citet{Cong2021} propose an asset pricing model where neural networks extract latent factors and estimate time-varying loadings simultaneously, yielding a factor model that is both economically interpretable and statistically superior.
+\end{itemize}
+
+\subsubsection{Covariance Estimation}
+
+ML methods for covariance estimation address the curse of dimensionality:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Shrinkage via neural networks:} \citet{Ledoit2022} extend their influential shrinkage estimators with nonlinear shrinkage learned by neural networks, adapting to the eigenvalue distribution of the true covariance.
+    \item \textbf{Factor models with ML:} \citet{Kelly2019} use instrumental PCA with neural network instruments to extract factors with time-varying loadings.
+    \item \textbf{Graph-based structure:} \citet{Zhao2022} impose graph structure on the covariance matrix using sector and supply chain relationships, reducing estimation error in the off-diagonal elements.
+\end{itemize}
+
+\subsection{Direct Weight Learning}
+
+An alternative paradigm bypasses explicit return and risk estimation, instead learning portfolio weights directly:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Zhang2020} train neural networks to output portfolio weights that maximize the Sharpe ratio end-to-end, avoiding the instabilities of two-step (predict-then-optimize) approaches.
+    \item \citet{Butler2023} use differentiable convex optimization layers within neural networks, ensuring that output weights satisfy constraints (no short selling, maximum position sizes) by construction.
+    \item \citet{Ban2018} propose a machine learning framework that simultaneously selects features and determines portfolio weights, demonstrating improved out-of-sample performance on US equity data.
+\end{itemize}
+
+\subsection{Reinforcement Learning for Portfolio Management}
+
+RL is conceptually well-suited to portfolio management, as the sequential decision-making framework naturally captures multi-period rebalancing with transaction costs:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{Jiang2017} propose a CNN-based portfolio agent that learns from price images. While influential, the approach uses unrealistic assumptions (no transaction costs, unlimited liquidity).
+    \item \citet{Ye2020} address this limitation with a cost-aware DRL agent that learns to trade-off rebalancing frequency against transaction costs.
+    \item \citet{Wang2021} compare multiple RL algorithms (A2C, PPO, DDPG, TD3, SAC) in the FinRL framework, providing standardized baselines for RL portfolio management.
+\end{itemize}
+
+\textbf{Our assessment is blunt:} Despite the theoretical appeal, RL approaches to portfolio management have not convincingly demonstrated out-of-sample superiority over simpler alternatives. The number of papers proposing RL portfolio agents far exceeds the evidence that any of them work in practice. Key challenges include:
+\begin{enumerate}[leftmargin=*]
+    \item Non-stationarity of financial environments violates the stationary MDP assumption
+    \item Reward shaping (what risk-adjusted metric to maximize) significantly affects learned policies
+    \item Sample inefficiency: RL requires many episodes, but financial history provides limited independent samples
+    \item The sim-to-real gap: policies learned in backtests often degrade in live trading
+\end{enumerate}
+
+\subsection{Transaction Cost Integration}
+
+A distinguishing feature of modern ML portfolio methods is explicit transaction cost integration:
+
+\begin{itemize}[leftmargin=*]
+    \item \citet{DeMiguel2020} impose $\ell_1$ turnover constraints that simultaneously regularize the portfolio and control costs.
+    \item \citet{Moallemi2023} learn a turnover-optimal trading policy that balances the tracking error of a target portfolio against trading costs.
+    \item Multi-period approaches using dynamic programming or RL naturally incorporate path-dependent costs, including market impact models \citep{Almgren2001}.
+\end{itemize}

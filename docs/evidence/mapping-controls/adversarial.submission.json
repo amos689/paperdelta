@@ -1,0 +1,754 @@
+{
+  "answers": {
+    "C01": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "train"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C02": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-B",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C03": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test",
+                "variant": "ablated"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string",
+                "variant": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed",
+                "variant"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C04": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "accuracy_pct": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C05": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "baseline": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Baseline",
+                "split": "test"
+              }
+            },
+            "gain": {
+              "args": [
+                "target",
+                "baseline"
+              ],
+              "op": "relative_change_percent"
+            },
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The accuracy gain is ",
+                "suffix": " percentage points on Data-A."
+              },
+              "display": {
+                "kind": "decimal",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "gain"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C06": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "1",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C07": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "field": "/runs/evaluation~1train/accuracy.mean",
+              "source": "results",
+              "unit": "fraction"
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "format": "json",
+              "path": "results/summary.json"
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C08": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C09": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": " & ",
+                "suffix": " \\\\"
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": false,
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C10": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "exact": "84.1\\%"
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C11": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The test accuracy is ",
+                "suffix": " on Data-A."
+              },
+              "display": {
+                "kind": "percent",
+                "places": 1
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    },
+    "C12": {
+      "decision": "propose",
+      "proposal_input": {
+        "additions": {
+          "metrics": {
+            "target": {
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "result": {
+              "anchor": {
+                "prefix": "The reported p-value is ",
+                "suffix": " for this comparison."
+              },
+              "display": {
+                "kind": "decimal",
+                "places": 2
+              },
+              "file": "paper/main.tex",
+              "metric": "target"
+            }
+          },
+          "sources": {
+            "results": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "rationale": {
+          "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+        }
+      },
+      "reason": "Known reference control"
+    }
+  },
+  "run": {
+    "context_protocol": "Constructed directly from known answers. No model or user trial.",
+    "kind": "control",
+    "label": "Deliberately wrong control"
+  },
+  "schema_version": 1,
+  "suite_id": "mapping-contracts-v1",
+  "suite_lock_sha256": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd"
+}

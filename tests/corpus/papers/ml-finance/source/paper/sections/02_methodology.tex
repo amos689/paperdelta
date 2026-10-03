@@ -1,0 +1,108 @@
+\section{Systematic Review Methodology}\label{sec:methodology}
+
+We follow the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) guidelines adapted for computational research \citep{Page2021}. This section details our search strategy, selection criteria, and data extraction protocol.
+
+\subsection{Search Strategy}
+
+We conducted systematic searches across five databases:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Scopus}: broad coverage of finance and CS journals.
+    \item \textbf{Web of Science}: primary citation database for impact tracking.
+    \item \textbf{SSRN}: working papers and preprints in finance.
+    \item \textbf{arXiv (q-fin, cs.LG, stat.ML)}: preprints in quantitative finance and ML.
+    \item \textbf{Google Scholar}: supplementary search for grey literature and conference proceedings.
+\end{itemize}
+
+Search queries combined financial terms with ML terms via boolean conjunction:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Financial terms:} ``stock prediction'', ``portfolio optimization'', ``risk management'', ``options pricing'', ``market microstructure'', ``quantitative finance''.
+    \item \textbf{ML terms:} ``machine learning'', ``deep learning'', ``neural network'', ``random forest'', ``gradient boosting'', ``reinforcement learning'', ``natural language processing'', ``transformer'', ``LSTM''.
+\end{itemize}
+
+The query was constructed as \texttt{(financial term) AND (ML term)} for every pair, with results aggregated and deduplicated across the five databases.
+
+Initial searches were conducted in March 2026, with supplementary forward-citation searches completed in April 2026.
+
+\subsection{Inclusion and Exclusion Criteria}
+
+\begin{table}[H]
+\centering
+\caption{Inclusion and exclusion criteria}
+\label{tab:criteria}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Include} & \textbf{Exclude} \\
+\midrule
+Published 2015--2025 & Published before 2015 \\
+Applies ML to a quantitative finance problem & Pure ML methodology with no financial application \\
+Presents empirical results on financial data & Theoretical/conceptual only \\
+Journal article, conference paper, or working paper & Theses, textbooks, blog posts \\
+English language & Non-English \\
+Uses real or realistic simulated financial data & Uses only toy/synthetic examples \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Selection Process}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Identification:} Database searches returned 4,783 unique records after deduplication. The arXiv q-fin section alone contributed over 12,600 submissions during our review period (2015--2025), growing from 852 total submissions in 2015 to 2,435 in 2024, a nearly threefold increase reflecting the rapid growth of quantitative finance research \citep{arXivStats2025}. Scopus, Web of Science, and SSRN contributed the remainder.
+    \item \textbf{Screening:} Title and abstract screening against inclusion criteria reduced the set to 847 papers.
+    \item \textbf{Eligibility:} Full-text review of screened papers identified 196 eligible studies.
+    \item \textbf{Inclusion:} Forward and backward citation searches added 31 additional papers, yielding a final sample of 227 studies.
+\end{enumerate}
+
+\paragraph{Released subset of the 227-study sample.} The supplementary CSV
+(\Cref{sec:cross_cutting}) carries structured records for 119 of the 227
+included studies. That subset breaks down as 99 RDS-scored entries and 20
+unscored seminal or baseline references retained for the comparison tables
+in \Cref{sec:appendix_tables}. The remaining 108 studies are cited in-line
+in \Cref{sec:return_prediction} through \Cref{sec:alternative_data}; their
+extraction-field rows live in the screening logs in the GitHub repository
+and will be merged into the released CSV in version-tagged updates. All
+quantitative claims in the paper are computed against the full 227-study
+sample unless we say otherwise, and where the released 119-row subset
+differs materially we report both.
+
+\subsection{Data Extraction Protocol}
+
+For each included study, we extracted the following fields into a structured database:
+
+\begin{table}[H]
+\centering
+\caption{Data extraction fields}
+\label{tab:extraction}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Field} & \textbf{Description} \\
+\midrule
+Authors \& Year & Standard citation information \\
+Venue & Journal, conference, or preprint server \\
+Application Domain & Return prediction, risk management, portfolio optimization, derivatives, microstructure, or alternative data \\
+ML Method(s) & Primary and benchmark methods used \\
+Asset Class & Equities, fixed income, FX, commodities, crypto, multi-asset \\
+Data Source & Specific database or data provider \\
+Sample Period & Start and end dates of empirical analysis \\
+Geography & US, Europe, Asia, emerging markets, global \\
+Primary Metric & Main performance measure reported \\
+Key Finding & One-sentence summary of the main result \\
+Code Available & Yes/No with URL if available \\
+Data Available & Public / Proprietary / Mixed \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Quality Assessment}
+
+We do not exclude studies based on quality scores, as methodological standards differ substantially between the ML and finance communities. Instead, we flag quality dimensions that readers should consider when interpreting results:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Out-of-sample testing:} Does the study use a proper temporal train/validation/test split, or does it employ cross-validation (which can introduce look-ahead bias in time series)?
+    \item \textbf{Transaction costs:} Are trading strategies evaluated net of realistic transaction costs?
+    \item \textbf{Benchmark comparison:} Is the ML model compared against appropriate traditional benchmarks (e.g., GARCH for volatility, Fama-French for returns)?
+    \item \textbf{Statistical significance:} Are results tested for statistical significance, or are only point estimates reported?
+    \item \textbf{Reproducibility:} Is code and/or data publicly available?
+\end{itemize}
+
+These dimensions are reported in our comparison tables (\Cref{sec:appendix_tables}) to help readers assess the strength of evidence for each finding.

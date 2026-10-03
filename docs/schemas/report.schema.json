@@ -1,0 +1,1407 @@
+{
+  "$defs": {
+    "BaselineReference": {
+      "additionalProperties": false,
+      "properties": {
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "created_at"
+      ],
+      "title": "BaselineReference",
+      "type": "object"
+    },
+    "Change": {
+      "additionalProperties": false,
+      "properties": {
+        "after": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "After"
+        },
+        "before": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Before"
+        },
+        "claims": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Claims",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "added",
+            "changed",
+            "unchanged",
+            "unavailable",
+            "definition_changed"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "metric": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Metric",
+          "type": "string"
+        },
+        "occurrences": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Occurrences",
+          "type": "array"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "scalar",
+                "fraction",
+                "percent",
+                "percentage_point",
+                "count",
+                "ratio"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Unit"
+        }
+      },
+      "required": [
+        "metric",
+        "kind",
+        "before",
+        "after",
+        "unit",
+        "occurrences",
+        "claims"
+      ],
+      "title": "Change",
+      "type": "object"
+    },
+    "ClaimState": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "matching_reviews": {
+          "items": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "title": "Matching Reviews",
+          "type": "array"
+        },
+        "metrics": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "review": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "superseded"
+          ],
+          "title": "Review",
+          "type": "string"
+        },
+        "review_records": {
+          "items": {
+            "$ref": "#/$defs/ReviewRecord"
+          },
+          "title": "Review Records",
+          "type": "array"
+        },
+        "state_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^sha256:[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State Fingerprint"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "mismatch",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "metrics"
+      ],
+      "title": "ClaimState",
+      "type": "object"
+    },
+    "Coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_numbers": {
+          "minimum": 0,
+          "title": "Candidate Numbers",
+          "type": "integer"
+        },
+        "confirmed": {
+          "minimum": 0,
+          "title": "Confirmed",
+          "type": "integer"
+        },
+        "mismatch": {
+          "minimum": 0,
+          "title": "Mismatch",
+          "type": "integer"
+        },
+        "pass": {
+          "minimum": 0,
+          "title": "Pass",
+          "type": "integer"
+        },
+        "unbound_numbers": {
+          "items": {
+            "$ref": "#/$defs/SourceLocation"
+          },
+          "title": "Unbound Numbers",
+          "type": "array"
+        },
+        "unknown": {
+          "minimum": 0,
+          "title": "Unknown",
+          "type": "integer"
+        },
+        "unregistered_figures": {
+          "items": {
+            "$ref": "#/$defs/UnregisteredFigure"
+          },
+          "title": "Unregistered Figures",
+          "type": "array"
+        },
+        "unsupported": {
+          "items": {
+            "$ref": "#/$defs/UnsupportedRegion"
+          },
+          "title": "Unsupported",
+          "type": "array"
+        }
+      },
+      "required": [
+        "confirmed",
+        "pass",
+        "mismatch",
+        "unknown",
+        "candidate_numbers",
+        "unbound_numbers",
+        "unregistered_figures",
+        "unsupported"
+      ],
+      "title": "Coverage",
+      "type": "object"
+    },
+    "CsvLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Key",
+          "type": "object"
+        },
+        "line": {
+          "minimum": 1,
+          "title": "Line",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "line"
+      ],
+      "title": "CsvLocation",
+      "type": "object"
+    },
+    "CsvRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Key",
+          "type": "object"
+        },
+        "value": {
+          "title": "Value"
+        }
+      },
+      "required": [
+        "value",
+        "key"
+      ],
+      "title": "CsvRecord",
+      "type": "object"
+    },
+    "DerivedMetric": {
+      "additionalProperties": false,
+      "properties": {
+        "args": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Args",
+          "type": "array"
+        },
+        "op": {
+          "enum": [
+            "difference",
+            "ratio",
+            "percentage_point_difference",
+            "relative_change_percent"
+          ],
+          "title": "Op",
+          "type": "string"
+        }
+      },
+      "required": [
+        "op",
+        "args"
+      ],
+      "title": "DerivedMetric",
+      "type": "object"
+    },
+    "Diagnostic": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "error",
+            "unknown",
+            "warning"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "subject": {
+          "title": "Subject",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "rule",
+        "subject",
+        "severity",
+        "message"
+      ],
+      "title": "Diagnostic",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "minimum": 1,
+          "title": "Count",
+          "type": "integer"
+        },
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "locations": {
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/CsvLocation"
+              },
+              {
+                "$ref": "#/$defs/JsonLocation"
+              }
+            ]
+          },
+          "title": "Locations",
+          "type": "array"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "records": {
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/CsvRecord"
+              },
+              {
+                "$ref": "#/$defs/JsonRecord"
+              }
+            ]
+          },
+          "title": "Records",
+          "type": "array"
+        },
+        "reduce": {
+          "enum": [
+            "unique",
+            "mean",
+            "sum",
+            "count"
+          ],
+          "title": "Reduce",
+          "type": "string"
+        },
+        "source": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Source",
+          "type": "string"
+        },
+        "where": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Where",
+          "type": "object"
+        }
+      },
+      "required": [
+        "source",
+        "path",
+        "field",
+        "where",
+        "reduce",
+        "count",
+        "records",
+        "locations"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FigureState": {
+      "additionalProperties": false,
+      "properties": {
+        "changed_paths": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Changed Paths",
+          "type": "array"
+        },
+        "dependencies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "provenance": {
+          "enum": [
+            "unknown",
+            "dependency_changed",
+            "unchanged_since_record"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        },
+        "record_method": {
+          "anyOf": [
+            {
+              "enum": [
+                "manual",
+                "imported"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Record Method"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "mismatch",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "status",
+        "provenance"
+      ],
+      "title": "FigureState",
+      "type": "object"
+    },
+    "ImpactGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "change": {
+          "enum": [
+            "added",
+            "changed",
+            "unchanged",
+            "unavailable",
+            "definition_changed"
+          ],
+          "title": "Change",
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Claims",
+          "type": "array"
+        },
+        "figures": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Figures",
+          "type": "array"
+        },
+        "metric": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Metric",
+          "type": "string"
+        },
+        "metrics": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "occurrences": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Occurrences",
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sources",
+          "type": "array"
+        }
+      },
+      "required": [
+        "metric",
+        "sources",
+        "metrics",
+        "occurrences",
+        "claims",
+        "figures",
+        "change"
+      ],
+      "title": "ImpactGroup",
+      "type": "object"
+    },
+    "JsonLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "pointer": {
+          "title": "Pointer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pointer"
+      ],
+      "title": "JsonLocation",
+      "type": "object"
+    },
+    "JsonRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "index": {
+          "minimum": 0,
+          "title": "Index",
+          "type": "integer"
+        },
+        "value": {
+          "title": "Value"
+        }
+      },
+      "required": [
+        "value",
+        "index"
+      ],
+      "title": "JsonRecord",
+      "type": "object"
+    },
+    "MetricState": {
+      "additionalProperties": false,
+      "properties": {
+        "change": {
+          "anyOf": [
+            {
+              "enum": [
+                "added",
+                "changed",
+                "unchanged",
+                "unavailable",
+                "definition_changed"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change"
+        },
+        "definition": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceMetric"
+            },
+            {
+              "$ref": "#/$defs/DerivedMetric"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Definition"
+        },
+        "definition_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^sha256:[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Definition Fingerprint"
+        },
+        "dependencies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^sha256:[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fingerprint"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "scalar",
+                "fraction",
+                "percent",
+                "percentage_point",
+                "count",
+                "ratio"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "MetricState",
+      "type": "object"
+    },
+    "OccurrenceState": {
+      "additionalProperties": false,
+      "properties": {
+        "actual": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actual"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "evidence_fingerprint": {
+          "anyOf": [
+            {
+              "pattern": "^sha256:[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Fingerprint"
+        },
+        "expected": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "metric": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Metric",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "mismatch",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "suggestion": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Suggestion"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "metric",
+        "status"
+      ],
+      "title": "OccurrenceState",
+      "type": "object"
+    },
+    "ReviewRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "assertion": {
+          "const": "I reviewed this claim and its selected evidence",
+          "title": "Assertion",
+          "type": "string"
+        },
+        "claim": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Claim",
+          "type": "string"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 4000,
+          "title": "Note",
+          "type": "string"
+        },
+        "record_id": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Record Id",
+          "type": "string"
+        },
+        "review_schema_version": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Review Schema Version",
+          "type": "integer"
+        },
+        "reviewer": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "state_fingerprint": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "State Fingerprint",
+          "type": "string"
+        }
+      },
+      "required": [
+        "created_at",
+        "review_schema_version",
+        "record_id",
+        "claim",
+        "state_fingerprint",
+        "reviewer",
+        "note",
+        "assertion"
+      ],
+      "title": "ReviewRecord",
+      "type": "object"
+    },
+    "SourceLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "byte_end": {
+          "minimum": 0,
+          "title": "Byte End",
+          "type": "integer"
+        },
+        "byte_start": {
+          "minimum": 0,
+          "title": "Byte Start",
+          "type": "integer"
+        },
+        "column": {
+          "minimum": 1,
+          "title": "Column",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "line": {
+          "minimum": 1,
+          "title": "Line",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file",
+        "start",
+        "end",
+        "byte_start",
+        "byte_end",
+        "line",
+        "column",
+        "text"
+      ],
+      "title": "SourceLocation",
+      "type": "object"
+    },
+    "SourceMetric": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_count": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Count"
+        },
+        "expected_seeds": {
+          "anyOf": [
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Seeds"
+        },
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "reduce": {
+          "default": "unique",
+          "enum": [
+            "unique",
+            "mean",
+            "sum",
+            "count"
+          ],
+          "title": "Reduce",
+          "type": "string"
+        },
+        "seed_column": {
+          "default": "seed",
+          "title": "Seed Column",
+          "type": "string"
+        },
+        "source": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Source",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "scalar",
+            "fraction",
+            "percent",
+            "percentage_point",
+            "count",
+            "ratio"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "where": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Where",
+          "type": "object"
+        }
+      },
+      "required": [
+        "source",
+        "field",
+        "unit"
+      ],
+      "title": "SourceMetric",
+      "type": "object"
+    },
+    "Suggestion": {
+      "additionalProperties": false,
+      "properties": {
+        "blocked_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Blocked By",
+          "type": "array"
+        },
+        "replacement": {
+          "title": "Replacement",
+          "type": "string"
+        }
+      },
+      "required": [
+        "replacement",
+        "blocked_by"
+      ],
+      "title": "Suggestion",
+      "type": "object"
+    },
+    "UnregisteredFigure": {
+      "additionalProperties": false,
+      "properties": {
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "not registered",
+            "missing or ambiguous"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "reference": {
+          "title": "Reference",
+          "type": "string"
+        },
+        "resolved": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Resolved",
+          "type": "array"
+        }
+      },
+      "required": [
+        "file",
+        "reference",
+        "resolved",
+        "reason"
+      ],
+      "title": "UnregisteredFigure",
+      "type": "object"
+    },
+    "UnsupportedRegion": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "file",
+        "message"
+      ],
+      "title": "UnsupportedRegion",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "baseline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BaselineReference"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "changes": {
+      "items": {
+        "$ref": "#/$defs/Change"
+      },
+      "title": "Changes",
+      "type": "array"
+    },
+    "claims": {
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_.-]{0,99}$": {
+          "$ref": "#/$defs/ClaimState"
+        }
+      },
+      "title": "Claims",
+      "type": "object"
+    },
+    "config_fingerprint": {
+      "anyOf": [
+        {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Config Fingerprint"
+    },
+    "config_path": {
+      "title": "Config Path",
+      "type": "string"
+    },
+    "configuration_changed": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Configuration Changed"
+    },
+    "coverage": {
+      "$ref": "#/$defs/Coverage"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "diagnostics": {
+      "items": {
+        "$ref": "#/$defs/Diagnostic"
+      },
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "exit_code": {
+      "enum": [
+        0,
+        1,
+        2
+      ],
+      "title": "Exit Code",
+      "type": "integer"
+    },
+    "figures": {
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_.-]{0,99}$": {
+          "$ref": "#/$defs/FigureState"
+        }
+      },
+      "title": "Figures",
+      "type": "object"
+    },
+    "impact_groups": {
+      "items": {
+        "$ref": "#/$defs/ImpactGroup"
+      },
+      "title": "Impact Groups",
+      "type": "array"
+    },
+    "input_hashes": {
+      "additionalProperties": {
+        "pattern": "^sha256:[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "title": "Input Hashes",
+      "type": "object"
+    },
+    "metrics": {
+      "additionalProperties": {
+        "$ref": "#/$defs/MetricState"
+      },
+      "title": "Metrics",
+      "type": "object"
+    },
+    "occurrences": {
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_.-]{0,99}$": {
+          "$ref": "#/$defs/OccurrenceState"
+        }
+      },
+      "title": "Occurrences",
+      "type": "object"
+    },
+    "removed_bindings": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Removed Bindings"
+    },
+    "report_schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Report Schema Version",
+      "type": "integer"
+    },
+    "ruleset_version": {
+      "title": "Ruleset Version",
+      "type": "string"
+    },
+    "tool_version": {
+      "title": "Tool Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "created_at",
+    "report_schema_version",
+    "tool_version",
+    "ruleset_version",
+    "config_path",
+    "input_hashes",
+    "metrics",
+    "occurrences",
+    "claims",
+    "figures",
+    "diagnostics",
+    "changes",
+    "baseline",
+    "coverage",
+    "exit_code"
+  ],
+  "title": "StoredReport",
+  "type": "object"
+}

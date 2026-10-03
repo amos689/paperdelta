@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-02T16:47:07.365194+00:00",
+  "compiler": {
+    "url": "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-pc-windows-msvc.zip",
+    "download_sha256": "sha256:f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f",
+    "release_digest": "sha256:f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f",
+    "tag": "tectonic@0.17.0",
+    "release_url": "https://github.com/tectonic-typesetting/tectonic/releases/tag/tectonic%400.17.0"
+  },
+  "command_options": [
+    "-X",
+    "compile",
+    "--untrusted",
+    "--keep-logs"
+  ],
+  "compile_exit_codes": {
+    "before": 0,
+    "after": 0
+  },
+  "pdf_numeric_text_checked": true,
+  "scope": "Original self-owned multi-file example flattened only through literal includes; four actual PaperDelta numeric patches across three files. No third-party-paper compilation claim.",
+  "fallback_reason": "Built-in compiler returned Unable to find standard directories for platform.",
+  "nonfatal_stderr": [
+    "Fontconfig error: Cannot load default config file: No such file: (null)"
+  ],
+  "files": {
+    "after.log": {
+      "bytes": 2789,
+      "sha256": "77a701356803679e6e5a337d4e65a00092b315146bb434c1a5e4ab7259d203cb"
+    },
+    "after.pdf": {
+      "bytes": 18015,
+      "sha256": "6397cf55b66191d555118dfb12330072dc103518f1c91972d75c1d3969b6fb38"
+    },
+    "after.tex": {
+      "bytes": 736,
+      "sha256": "c32156f8cdbacb3f8879d90dbacdf3ad2be1d0ad9ba65b83d53512e5f96389ea"
+    },
+    "before.log": {
+      "bytes": 2794,
+      "sha256": "c58b18ec2a9788c0cbc68b717f3092d8f381807694a91ab115e9cc31f3e3554f"
+    },
+    "before.pdf": {
+      "bytes": 17721,
+      "sha256": "27a23159920a3061aad3908b390e006a35393e157ad6d0039bb2e80dc16577cd"
+    },
+    "before.tex": {
+      "bytes": 736,
+      "sha256": "71811d8220a6840b0a917cc1e9847561c1d07b59f73882bd586d55c1f7a7d75f"
+    }
+  }
+}

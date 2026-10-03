@@ -1,0 +1,13 @@
+UP036 Version block is outdated for minimum Python version
+  --> tools\validate_platform.py:47:8
+   |
+46 | def main():
+47 |     if sys.version_info < (3, 11):
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+48 |         print("Python 3.11 or newer is required. Install a current Python from python.org.")
+49 |         return 2
+   |
+help: Remove outdated version block
+
+Found 1 error.
+No fixes available (1 hidden fix can be enabled with the `--unsafe-fixes` option).

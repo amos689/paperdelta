@@ -1,0 +1,55 @@
+\documentclass[10pt, crop, margin=0.5mm, dvipsnames]{standalone}
+
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+\usepackage{tikz}
+\usetikzlibrary{
+    positioning,
+    shapes,
+}
+
+\usepackage{xcolor}
+
+
+\begin{document}
+\begin{tikzpicture}
+
+    % Define command for the "eye" symbol
+    \newcommand*\lateraleye{%
+       \scalebox{0.15}{
+    \tikzset{every picture/.style={line width=0.75pt}} 
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+    \draw  [line width=1.5]  (300,100.33) .. controls (326,122) and (352,135) .. (378,139.33) .. controls (352,143.67) and (326,156.67) .. (300,178.33) ;
+    \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (308.94,116.33) .. controls (313.87,116.33) and (317.86,125.51) .. (317.85,136.83) .. controls (317.84,148.15) and (313.84,157.33) .. (308.91,157.33) .. controls (303.99,157.32) and (300,148.14) .. (300.01,136.82) .. controls (300.02,125.5) and (304.02,116.32) .. (308.94,116.33) -- cycle ;
+    \draw  [draw opacity=0][line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) -- (331.14,139.55) -- cycle ; \draw  [line width=1.5]  (314.84,166.6) .. controls (311.87,164.64) and (309.14,162.18) .. (306.76,159.24) .. controls (295.12,144.82) and (296.6,124.33) .. (310.07,113.45) .. controls (311.48,112.32) and (312.96,111.33) .. (314.5,110.49) ;
+    \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (304.43,124.2) .. controls (306.09,124.25) and (307.32,128.01) .. (307.18,132.6) .. controls (307.05,137.19) and (305.59,140.88) .. (303.93,140.83) .. controls (302.27,140.78) and (301.03,137.02) .. (301.17,132.43) .. controls (301.31,127.83) and (302.76,124.15) .. (304.43,124.2) -- cycle ;
+    \end{tikzpicture}
+    }\,}
+
+
+    % Star
+    \node [star, fill=Dandelion, star points=5, inner sep=1mm] (star) at (0, 0) {};
+    \node [below=0mm of star, font=\scriptsize] {Star};
+
+    % Planet
+    \node [circle, fill=ForestGreen, inner sep=0.5mm] (planet) at (-1.5, -1.5) {};
+    \node [below=0mm of planet, font=\scriptsize] {Planet};
+
+    % Observer
+    \node [inner sep=0mm] (observer) at (-7, 0) {\reflectbox{\lateraleye}};
+    \node [below=0mm of observer, font=\scriptsize] {Observer};
+
+    \draw [shorten >= 1mm, shorten <= 1mm, <->] (planet) -- node [pos=0.5, left=0mm, font=\scriptsize] {$r_\mathrm{proj}$} ++(0, 1.5);
+
+    % phi
+    \draw[draw=red, <->, shorten >= 0.5mm, shorten <= 0.5mm] (-0.75, 0) arc[start angle=180, end angle=225, radius=0.75cm] node [pos=0.5, red, font=\scriptsize, xshift=-2mm, yshift=-1mm] {$\varphi$};
+
+    \draw[draw=Cerulean, <->, shorten >= 0.5mm, shorten <= 0.5mm] (-5.5, 0) arc[start angle=0, end angle=-23, radius=1cm] node [pos=0.5, Cerulean, font=\scriptsize, xshift=3mm, yshift=-0.25mm] {$\delta$};
+
+    \draw [shorten >= 1mm, shorten <= 1mm, densely dotted] (star) --node [pos=0.6, right=0.1, font=\scriptsize] {$a$} (planet);
+    \draw [shorten >= 1mm, shorten <= 1mm, densely dotted] (star) -- node [pos=0.5, above=0, font=\scriptsize] {$d_*$} (observer);
+    \draw [shorten >= 1mm, shorten <= 1mm, densely dotted] (planet) -- (observer);
+
+\end{tikzpicture}
+\end{document}

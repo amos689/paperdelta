@@ -1,0 +1,14 @@
+schema_version: 1
+paper:
+  entry: 论文/主文件.tex
+  macros: {score: 1}
+sources:
+  experiment: {path: 实验结果/metrics.json, format: json}
+metrics:
+  test_accuracy: {source: experiment, field: /test/accuracy, unit: fraction}
+occurrences:
+  chinese_result:
+    file: 论文/主文件.tex
+    anchor: {prefix: '测试集准确率为 \score{', suffix: '}\%。'}
+    metric: test_accuracy
+    display: {kind: percent, places: 1, percent_symbol: false}

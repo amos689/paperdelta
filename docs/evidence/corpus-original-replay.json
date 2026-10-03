@@ -1,0 +1,3707 @@
+{
+  "actual_states": {
+    "mismatch": 24,
+    "pass": 32,
+    "unknown": 94
+  },
+  "annotated_literals": 10,
+  "cases": 150,
+  "checked_at": "2026-10-02T18:04:14.770548+00:00",
+  "matched": 126,
+  "outcomes": [
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 402,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 402,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 401,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 47
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "ml-finance",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "ml-finance",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 555,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 555,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 554,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 104
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "rf-curriculum",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 141,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 141,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 140,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 404
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "hwo-bows",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 541,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 541,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 540,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 885
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "legwork",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "legwork",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 37,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 37,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 36,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 138
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "reflectometry",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "reflectometry",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 92,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 92,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 91,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 28
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "coronal-abundances",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 92,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 91,
+        "unknown": 0,
+        "unregistered_figures": 28,
+        "unsupported": 27
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "coronal-abundances",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 193,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 193,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 192,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 226
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "ce-accretors",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 193,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 192,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 225
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "ce-accretors",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 274,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 274,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 273,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 1,
+        "unregistered_figures": 11,
+        "unsupported": 223
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "pzflow",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "pzflow",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "held-out"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 274,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 273,
+        "unknown": 0,
+        "unregistered_figures": 11,
+        "unsupported": 222
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "pzflow",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "SEED_SET",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "SEED_SET",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 702
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "patch_error": "NOT_FIXABLE",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 28,
+        "unsupported": 701
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "rossby-ridge",
+      "patch_error": "NOT_FIXABLE",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "SEED_SET",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "SEED_SET",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 143
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "pass",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "patch_error": "NOT_FIXABLE",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    },
+    {
+      "actual": "unknown",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 0,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 0,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 142
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "mismatch",
+      "matched": false,
+      "paper": "centre-of-mass",
+      "patch_error": "NOT_FIXABLE",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DYNAMIC_TEX",
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "held-out"
+    }
+  ],
+  "papers": 10,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protocol": {
+    "src/paperdelta/__init__.py": "sha256:e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+    "src/paperdelta/__main__.py": "sha256:47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/agent.py": "sha256:a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+    "src/paperdelta/analysis.py": "sha256:68568c4a2c57236a9d95008d3d704bd028d14ca9ce3df705e3de493b590b0ef4",
+    "src/paperdelta/cli.py": "sha256:5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+    "src/paperdelta/config.py": "sha256:c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+    "src/paperdelta/errors.py": "sha256:908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+    "src/paperdelta/latex.py": "sha256:e35c7f082e9dee32677c2a965857326d4c5f776a73e7276d323467c64da356df",
+    "src/paperdelta/mcp_server.py": "sha256:52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+    "src/paperdelta/metrics.py": "sha256:0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+    "src/paperdelta/models.py": "sha256:3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+    "src/paperdelta/onboarding.py": "sha256:f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+    "src/paperdelta/patches.py": "sha256:c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+    "src/paperdelta/records.py": "sha256:7bd91ef5290fd0407375f19100de2082349bfe294a4f2e7ec55854bfac4afde4",
+    "src/paperdelta/reports.py": "sha256:b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+    "src/paperdelta/reviews.py": "sha256:801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+    "src/paperdelta/snapshots.py": "sha256:314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+    "src/paperdelta/sources.py": "sha256:2137f58373bdc717663aeedf4d9fe27c71896c0766539ae3d6e4301f6c1125d8",
+    "src/paperdelta/storage.py": "sha256:6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d",
+    "tests/corpus/annotations.json": "sha256:705f7bb906756d44d62e13f6960df5eb8fb71a7bf498bdc5d167d093a02915d5",
+    "tests/corpus/manifest.json": "sha256:4ac44f0bab71cbcb3c1473a339902d0a3414fd25b2398431203ef90c3fe7b72b",
+    "tests/corpus/scenarios.json": "sha256:0de52467d40e4de4e3ab0fdaafe72d5e9ecb1e7d3e43686de7232c16c16edf8f",
+    "tools/evaluate_corpus.py": "sha256:218fd0692c733e0f596854312e2904ce726e6f611aa78911701dfbc9a62c4702"
+  },
+  "python": "3.12.14",
+  "scope": "Controlled synthetic fault injection in real licensed source text; correlated cases around one literal per paper. No whole-paper accuracy, AI mapping accuracy, user study, or experiment reproduction claim.",
+  "seconds": 41.984,
+  "split": "all",
+  "tool_version": "0.1.0a1"
+}

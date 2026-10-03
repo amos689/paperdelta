@@ -1,0 +1,455 @@
+{
+  "corpus_schema_version": 1,
+  "frozen_at": "2026-10-02T15:59:18.103397+00:00",
+  "split_policy": "Five development and five held-out papers assigned before running the parser/evaluator. Author text is not evidence that original experiment results were independently reproduced.",
+  "papers": [
+    {
+      "id": "ml-finance",
+      "repository": "https://github.com/ayk5511/ml-finance-survey",
+      "revision": "373a49e75f8bba63a4fd6d85aeaaade42b445efc",
+      "entry": "paper/main.tex",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Explicit paper-specific grant",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "224d686220a0ffcb73169b8da311ec0945bd6c0eae6dd84a03dcd812e3cb65fc",
+          "bytes": 3437,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "f7ab5fe280b64ce42e596458479ade7d96adf8811224156d65bb780ea6131b65",
+          "bytes": 6284,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/README.md"
+        },
+        {
+          "path": "paper/main.tex",
+          "sha256": "014378b5240c237d9c43393d8b4cfa8070afc79347ae0d33b8024ff1d2be7330",
+          "bytes": 4394,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/main.tex"
+        },
+        {
+          "path": "paper/sections/01_introduction.tex",
+          "sha256": "06570c41476affc36a43d7dc4ee6210ac4d6545788ce985e7ef068c0e577cbab",
+          "bytes": 5203,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/01_introduction.tex"
+        },
+        {
+          "path": "paper/sections/02_methodology.tex",
+          "sha256": "875b4e1c1b2a8f3dd115b084e34aeb61062bf18a51b684b5f7a387f17dcec318",
+          "bytes": 6233,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/02_methodology.tex"
+        },
+        {
+          "path": "paper/sections/03_taxonomy.tex",
+          "sha256": "32e9881e889e74694aed0a0f790ed120b9465b99aceefd6ebecf964c41d7e070",
+          "bytes": 8727,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/03_taxonomy.tex"
+        },
+        {
+          "path": "paper/sections/04_return_prediction.tex",
+          "sha256": "af45823223cdee120d219f00ee75a85478b36bb0846e9c561abace41b471ba18",
+          "bytes": 7032,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/04_return_prediction.tex"
+        },
+        {
+          "path": "paper/sections/05_risk_management.tex",
+          "sha256": "05f696c5080107f4d13d6e0cec6eb51d00f2510f418b68143ee5bbf1ea597df1",
+          "bytes": 4923,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/05_risk_management.tex"
+        },
+        {
+          "path": "paper/sections/06_portfolio_optimization.tex",
+          "sha256": "84e3d0980eec9efa1ce4772a18f796a414a43011575ea2361e6136244d91dc18",
+          "bytes": 5242,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/06_portfolio_optimization.tex"
+        },
+        {
+          "path": "paper/sections/07_derivatives.tex",
+          "sha256": "0a69c9ccc36b6a0cf47a360055c2c5da6a3b26077622a6c214c8c4d38950abd2",
+          "bytes": 4863,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/07_derivatives.tex"
+        },
+        {
+          "path": "paper/sections/08_microstructure.tex",
+          "sha256": "a7f62580d0152aa14a76be3aed6f54d8b2d2a73a814479c2092de2cb4da8601b",
+          "bytes": 4653,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/08_microstructure.tex"
+        },
+        {
+          "path": "paper/sections/09_alternative_data.tex",
+          "sha256": "f6831db7895b12c52ffd47269e0d77213a81aa3895998bf7263aea77e7c62caf",
+          "bytes": 4965,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/09_alternative_data.tex"
+        },
+        {
+          "path": "paper/sections/10_cross_cutting.tex",
+          "sha256": "56647e7c6fd6dec71a63b2f9e62237676bf4e8c11fc354218e42dd596c5742c8",
+          "bytes": 9769,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/10_cross_cutting.tex"
+        },
+        {
+          "path": "paper/sections/11_open_problems.tex",
+          "sha256": "bba3a991d41ea5735907534c1c726ffa1ef4076169ad0d194b85c7d57d764d3e",
+          "bytes": 7451,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/11_open_problems.tex"
+        },
+        {
+          "path": "paper/sections/12_conclusion.tex",
+          "sha256": "60d2c7419b05bd469619c8f0fa1f2ad4bd1b131284467fd248f77673463cf685",
+          "bytes": 4379,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/12_conclusion.tex"
+        },
+        {
+          "path": "paper/sections/appendix_a_tables.tex",
+          "sha256": "282c4d495adb827d7a80eb4bb9a259b429fb07db40f4d462c36448a0440d2c27",
+          "bytes": 17442,
+          "url": "https://raw.githubusercontent.com/ayk5511/ml-finance-survey/373a49e75f8bba63a4fd6d85aeaaade42b445efc/paper/sections/appendix_a_tables.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "rf-curriculum",
+      "repository": "https://github.com/JEschete/cross-domain-rf-ml",
+      "revision": "a8809693d9535ce9d2d44da3d4f47434e2e5d5cf",
+      "entry": "ResearchPaper/FinalReport/Eschete_RF_AI_FPGA_Curriculum.tex",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_files": [
+        "ResearchPaper/LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Explicit paper-specific grant",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "7948ddd616ced5ea5a8f80131c93102587d176ba974e12c3f0e95d268c205a1b",
+          "bytes": 10442,
+          "url": "https://raw.githubusercontent.com/JEschete/cross-domain-rf-ml/a8809693d9535ce9d2d44da3d4f47434e2e5d5cf/README.md"
+        },
+        {
+          "path": "ResearchPaper/FinalReport/Eschete_RF_AI_FPGA_Curriculum.tex",
+          "sha256": "f751d4850fdc7187138cf9faef78441876fd4cd5c448d9330a5e0bf6a176ccca",
+          "bytes": 75167,
+          "url": "https://raw.githubusercontent.com/JEschete/cross-domain-rf-ml/a8809693d9535ce9d2d44da3d4f47434e2e5d5cf/ResearchPaper/FinalReport/Eschete_RF_AI_FPGA_Curriculum.tex"
+        },
+        {
+          "path": "ResearchPaper/LICENSE",
+          "sha256": "c52c55db854dc6b09b674016a8649edf863677db211e009f757116f7c3e0d911",
+          "bytes": 1504,
+          "url": "https://raw.githubusercontent.com/JEschete/cross-domain-rf-ml/a8809693d9535ce9d2d44da3d4f47434e2e5d5cf/ResearchPaper/LICENSE"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "hwo-bows",
+      "repository": "https://github.com/mkenworthy/HWObows",
+      "revision": "76875f032f506ea0e327b36a28473ebb719a14f7",
+      "entry": "src/tex/ms.tex",
+      "split": "development",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d42ada06cf60394d264697e7379e208d7b9567ff34e2a24ebb1e7cdeffe478d9",
+          "bytes": 1068,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "213dbe81ca59a8c988c0cb99e2084524e6c24ed7472d362939c47f5cabd4511b",
+          "bytes": 1492,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/README.md"
+        },
+        {
+          "path": "src/tex/affiliations.tex",
+          "sha256": "070f0acd70327353800b1d8b80516336c19703c5019781d03629802b7f30de89",
+          "bytes": 3858,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/affiliations.tex"
+        },
+        {
+          "path": "src/tex/authors.tex",
+          "sha256": "9e42c6d57da8609475253a00c209adae236b7845d7608c9ae9cdb849d04718c0",
+          "bytes": 2372,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/authors.tex"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "a3beef82f40beb10683e0e5ec2b8d83bd986b2a5410495a764dc6869a5cb0a2e",
+          "bytes": 47453,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/ms.tex"
+        },
+        {
+          "path": "src/tex/tables/table-1-iwa-owa.tex",
+          "sha256": "970ed6e9ad495867ebd33098ef62c044c2aa77cfd82299a4422282c130dc1879",
+          "bytes": 944,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/tables/table-1-iwa-owa.tex"
+        },
+        {
+          "path": "src/tex/tables/table-3-expected-number.tex",
+          "sha256": "a87ea460709d9d686c51eef86ec61f532006581a60dbc6d7b390f5dbd3ec8cf6",
+          "bytes": 643,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/tables/table-3-expected-number.tex"
+        },
+        {
+          "path": "src/tex/tikz/annotated-orbit.tex",
+          "sha256": "aeba6d17b7cc45d43d9995682ebf4404143e9e4b6133ed4cef1046e82c7d1256",
+          "bytes": 6314,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/tikz/annotated-orbit.tex"
+        },
+        {
+          "path": "src/tex/tikz/scattering-angle.tex",
+          "sha256": "57e3b8482b52846dce8e6a2523f282d5e1ca74de1a930273cb7b33ee64bf2fae",
+          "bytes": 3313,
+          "url": "https://raw.githubusercontent.com/mkenworthy/HWObows/76875f032f506ea0e327b36a28473ebb719a14f7/src/tex/tikz/scattering-angle.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "legwork",
+      "repository": "https://github.com/TeamLEGWORK/LEGWORK-paper",
+      "revision": "9f906db9358cd46b42cc14f5e73ae63d9d5497a6",
+      "entry": "src/tex/ms.tex",
+      "split": "development",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e2ecb74a17b587e4fd1a53569a4db70b2b563101b4be610c26a8ea62321371dd",
+          "bytes": 1069,
+          "url": "https://raw.githubusercontent.com/TeamLEGWORK/LEGWORK-paper/9f906db9358cd46b42cc14f5e73ae63d9d5497a6/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "686cd4e505a33953f9967f09b5cf59e73596a3e01b1db1ffdc7228b6d48a167d",
+          "bytes": 3071,
+          "url": "https://raw.githubusercontent.com/TeamLEGWORK/LEGWORK-paper/9f906db9358cd46b42cc14f5e73ae63d9d5497a6/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "174a3b3bbe7a10eda4920faeafd46333787b45c5e888e501e692828d426be64d",
+          "bytes": 74596,
+          "url": "https://raw.githubusercontent.com/TeamLEGWORK/LEGWORK-paper/9f906db9358cd46b42cc14f5e73ae63d9d5497a6/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "reflectometry",
+      "repository": "https://github.com/arm61/reporting_sampling",
+      "revision": "c80c21e4658aa0b20016a6511bed4960b0b4cc30",
+      "entry": "src/tex/ms.tex",
+      "split": "development",
+      "license": "CC-BY-SA-4.0",
+      "license_files": [
+        "LICENSE",
+        "src/tex/ms.tex"
+      ],
+      "license_basis": "Manuscript src/tex/ms.tex line 257 explicitly separates MIT code from CC BY-SA 4.0 paper text; this overrides the repository-level code license for the paper.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "784d1f7688cec0ccecc55e62a2fa5ed1de0e95bae5ca00656a28b3007abe22ae",
+          "bytes": 1063,
+          "url": "https://raw.githubusercontent.com/arm61/reporting_sampling/c80c21e4658aa0b20016a6511bed4960b0b4cc30/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "d77b33c59ddf7004ced3e5460eb5273a79159b456c076570f4af7a88a8f24401",
+          "bytes": 2429,
+          "url": "https://raw.githubusercontent.com/arm61/reporting_sampling/c80c21e4658aa0b20016a6511bed4960b0b4cc30/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "8b0e3b7ebb88e09d77632f27e7e0f69e9e6e443c97bc00eea0ca3b988782ebad",
+          "bytes": 26581,
+          "url": "https://raw.githubusercontent.com/arm61/reporting_sampling/c80c21e4658aa0b20016a6511bed4960b0b4cc30/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported.",
+      "license_metadata_correction": "Corrected after development evaluation and before held-out protocol lock; original paper bytes and split unchanged."
+    },
+    {
+      "id": "coronal-abundances",
+      "repository": "https://github.com/jwreep/ebtel_abundances",
+      "revision": "6c9764ed3637c81da6f9fa79f1293c0d39e19ee0",
+      "entry": "src/tex/ms.tex",
+      "split": "held-out",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "2928d3a1cf025a41e0966d406a2995e2d3945cf6467f2d45d4e7a7272e66058a",
+          "bytes": 1064,
+          "url": "https://raw.githubusercontent.com/jwreep/ebtel_abundances/6c9764ed3637c81da6f9fa79f1293c0d39e19ee0/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "1dc9c0621ac9b6ed5fff2817e19f501ee4610521496d9b8ab5e25dfd21196bd2",
+          "bytes": 1892,
+          "url": "https://raw.githubusercontent.com/jwreep/ebtel_abundances/6c9764ed3637c81da6f9fa79f1293c0d39e19ee0/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "aaf8f38aed574a0246f199bce93b50e0467dbbeb19ef16154e7c3a1bb87a0998",
+          "bytes": 23508,
+          "url": "https://raw.githubusercontent.com/jwreep/ebtel_abundances/6c9764ed3637c81da6f9fa79f1293c0d39e19ee0/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "ce-accretors",
+      "repository": "https://github.com/mathren/CE_accretors",
+      "revision": "34059fa5277a2de59664ccf2f52452fb6ecff731",
+      "entry": "src/tex/CE_accretors.tex",
+      "split": "held-out",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "79e75da8c46f16b44d79c7e6f0d6a1abb78cca82ccba358c902c386d95c97011",
+          "bytes": 1065,
+          "url": "https://raw.githubusercontent.com/mathren/CE_accretors/34059fa5277a2de59664ccf2f52452fb6ecff731/LICENSE"
+        },
+        {
+          "path": "src/tex/CE_accretors.tex",
+          "sha256": "d9ded9ade624e79832a10f8f33787ccd3290edf02bde61c2aec1da2f3e0ad06c",
+          "bytes": 50346,
+          "url": "https://raw.githubusercontent.com/mathren/CE_accretors/34059fa5277a2de59664ccf2f52452fb6ecff731/src/tex/CE_accretors.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "pzflow",
+      "repository": "https://github.com/jfcrenshaw/pzflow-paper",
+      "revision": "adc23b7034053b3d3bce769ca8d6a3efa02496d1",
+      "entry": "src/tex/ms.tex",
+      "split": "held-out",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e42173933896edb05fab6f7322ab80cc2e23a07890c410c84e6124955ee30ebf",
+          "bytes": 1068,
+          "url": "https://raw.githubusercontent.com/jfcrenshaw/pzflow-paper/adc23b7034053b3d3bce769ca8d6a3efa02496d1/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "3a9571faa03935935201f2cb04622cf267515d38c2b24a74c14239337ab0c287",
+          "bytes": 1062,
+          "url": "https://raw.githubusercontent.com/jfcrenshaw/pzflow-paper/adc23b7034053b3d3bce769ca8d6a3efa02496d1/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "84e9972856616203ef36bb8d3ba9ccfa978efbce59bd207859bafdc834602ff0",
+          "bytes": 72974,
+          "url": "https://raw.githubusercontent.com/jfcrenshaw/pzflow-paper/adc23b7034053b3d3bce769ca8d6a3efa02496d1/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "rossby-ridge",
+      "repository": "https://github.com/trevordavid/rossby-ridge",
+      "revision": "fb25a8ccf49bec42c440c17d82e56c3ee999f9de",
+      "entry": "src/tex/ms.tex",
+      "split": "held-out",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "023fb1d3586ddeab6ea69ebcb5fc948d1580320597c00d1b2d8d6a91fe7426ff",
+          "bytes": 1069,
+          "url": "https://raw.githubusercontent.com/trevordavid/rossby-ridge/fb25a8ccf49bec42c440c17d82e56c3ee999f9de/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "6bfb6c187def055fe9d9be99b275c15994b65c3a8269cf7ea2223ee9595b48ab",
+          "bytes": 1319,
+          "url": "https://raw.githubusercontent.com/trevordavid/rossby-ridge/fb25a8ccf49bec42c440c17d82e56c3ee999f9de/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "a672780c00a844a1a433713218ad805fb09f07d6e0c401ae8136dbf000478568",
+          "bytes": 96031,
+          "url": "https://raw.githubusercontent.com/trevordavid/rossby-ridge/fb25a8ccf49bec42c440c17d82e56c3ee999f9de/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    },
+    {
+      "id": "centre-of-mass",
+      "repository": "https://github.com/scams-research/centre-of-mass",
+      "revision": "9f3b1fc3b55e75c72fc3147a1515d4c8297a56f1",
+      "entry": "src/tex/ms.tex",
+      "split": "held-out",
+      "license": "MIT",
+      "license_files": [
+        "LICENSE",
+        "README.md"
+      ],
+      "license_basis": "Repository MIT grant includes associated documentation; original notice retained",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "0f1b09badfe36730b243078fcaa9786d741815ed1ea424a76baaf6c59c9906c1",
+          "bytes": 1072,
+          "url": "https://raw.githubusercontent.com/scams-research/centre-of-mass/9f3b1fc3b55e75c72fc3147a1515d4c8297a56f1/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "e083e4f7279f7980b395950d014b2db5ec5f8f9bd9459f64968fe24f4ceeba3a",
+          "bytes": 2831,
+          "url": "https://raw.githubusercontent.com/scams-research/centre-of-mass/9f3b1fc3b55e75c72fc3147a1515d4c8297a56f1/README.md"
+        },
+        {
+          "path": "src/tex/ms.tex",
+          "sha256": "a16ed7f2def64af2b4b175174f4815c0d80975c7ed4d7727f30602f20c692e86",
+          "bytes": 26616,
+          "url": "https://raw.githubusercontent.com/scams-research/centre-of-mass/9f3b1fc3b55e75c72fc3147a1515d4c8297a56f1/src/tex/ms.tex"
+        }
+      ],
+      "transformation": "Original source bytes retained; no external datasets or figures imported."
+    }
+  ]
+}

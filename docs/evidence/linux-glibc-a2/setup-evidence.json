@@ -1,0 +1,691 @@
+{
+  "checked_at": "2026-10-03T01:40:25.790102+00:00",
+  "platform": "Linux-6.18.52-0-virt-x86_64-with-glibc2.39",
+  "uname": [
+    "Linux",
+    "localhost",
+    "6.18.52-0-virt",
+    "#1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48",
+    "x86_64",
+    "x86_64"
+  ],
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "execution": "Ubuntu Base chroot on ext4 in disposable Alpine-kernel QEMU TCG guest",
+  "commands": [
+    {
+      "name": "uv-version",
+      "args": [
+        "/root/uv/uv",
+        "--version"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.34
+    },
+    {
+      "name": "install-pythons",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "install",
+        "--no-bin",
+        "--no-registry",
+        "--install-dir",
+        "/root/paperdelta-validation/pythons",
+        "3.11.17",
+        "3.12.15",
+        "3.13.16",
+        "3.14.8"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 17.77
+    },
+    {
+      "name": "python-downloads",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "list",
+        "--only-installed",
+        "--show-urls",
+        "--output-format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 3.79
+    },
+    {
+      "name": "find-3.11",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "find",
+        "--managed-python",
+        "3.11"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.11
+    },
+    {
+      "name": "venv-3.11",
+      "args": [
+        "/root/paperdelta-validation/pythons/cpython-3.11-linux-x86_64-gnu/bin/python3.11",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 31.16
+    },
+    {
+      "name": "install-core-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 23.18
+    },
+    {
+      "name": "core-check-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.11",
+        "check",
+        "--format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.08
+    },
+    {
+      "name": "core-data-change-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.11",
+        "check",
+        "--format",
+        "json",
+        "--report",
+        "build/review"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 1,
+      "seconds": 1.83
+    },
+    {
+      "name": "optional-mcp-absent-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.11",
+        "mcp"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 2,
+      "seconds": 1.59
+    },
+    {
+      "name": "install-extras-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==9.1.1",
+        "mcp==2.2.0"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 41.07
+    },
+    {
+      "name": "pip-check-3.11",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 3.26
+    },
+    {
+      "name": "find-3.12",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "find",
+        "--managed-python",
+        "3.12"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.09
+    },
+    {
+      "name": "venv-3.12",
+      "args": [
+        "/root/paperdelta-validation/pythons/cpython-3.12-linux-x86_64-gnu/bin/python3.12",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 21.88
+    },
+    {
+      "name": "install-core-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 14.14
+    },
+    {
+      "name": "core-check-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.12",
+        "check",
+        "--format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.06
+    },
+    {
+      "name": "core-data-change-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.12",
+        "check",
+        "--format",
+        "json",
+        "--report",
+        "build/review"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 1,
+      "seconds": 1.98
+    },
+    {
+      "name": "optional-mcp-absent-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.12",
+        "mcp"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 2,
+      "seconds": 1.84
+    },
+    {
+      "name": "install-extras-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==9.1.1",
+        "mcp==2.2.0"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 36.28
+    },
+    {
+      "name": "pip-check-3.12",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.03
+    },
+    {
+      "name": "find-3.13",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "find",
+        "--managed-python",
+        "3.13"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "name": "venv-3.13",
+      "args": [
+        "/root/paperdelta-validation/pythons/cpython-3.13-linux-x86_64-gnu/bin/python3.13",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 22.92
+    },
+    {
+      "name": "install-core-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 14.04
+    },
+    {
+      "name": "core-check-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.13",
+        "check",
+        "--format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 1.84
+    },
+    {
+      "name": "core-data-change-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.13",
+        "check",
+        "--format",
+        "json",
+        "--report",
+        "build/review"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 1,
+      "seconds": 1.61
+    },
+    {
+      "name": "optional-mcp-absent-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.13",
+        "mcp"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 2,
+      "seconds": 1.39
+    },
+    {
+      "name": "install-extras-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==9.1.1",
+        "mcp==2.2.0"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 30.07
+    },
+    {
+      "name": "pip-check-3.13",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 1.77
+    },
+    {
+      "name": "find-3.14",
+      "args": [
+        "/root/uv/uv",
+        "python",
+        "find",
+        "--managed-python",
+        "3.14"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "name": "venv-3.14",
+      "args": [
+        "/root/paperdelta-validation/pythons/cpython-3.14-linux-x86_64-gnu/bin/python3.14",
+        "-m",
+        "venv",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 31.16
+    },
+    {
+      "name": "install-core-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/root/paperdelta-validation/paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 16.54
+    },
+    {
+      "name": "core-check-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.14",
+        "check",
+        "--format",
+        "json"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 2.3
+    },
+    {
+      "name": "core-data-change-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.14",
+        "check",
+        "--format",
+        "json",
+        "--report",
+        "build/review"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 1,
+      "seconds": 1.92
+    },
+    {
+      "name": "optional-mcp-absent-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "paperdelta",
+        "-C",
+        "/root/paperdelta-validation/core-only \u8bba\u6587 3.14",
+        "mcp"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 2,
+      "seconds": 1.74
+    },
+    {
+      "name": "install-extras-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==9.1.1",
+        "mcp==2.2.0"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 36.91
+    },
+    {
+      "name": "pip-check-3.14",
+      "args": [
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/root/paperdelta-validation",
+      "exit_code": 0,
+      "seconds": 1.7
+    },
+    {
+      "name": "matrix",
+      "args": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.11/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.12/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.13/bin/python",
+        "--python",
+        "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2/.venv-3.14/bin/python",
+        "--out",
+        "build/glibc-matrix"
+      ],
+      "cwd": "/root/paperdelta-validation/\u8bba\u6587 project/paperdelta-0.1.0a2",
+      "exit_code": 1,
+      "seconds": 0.34
+    }
+  ],
+  "remote_github_jobs": 0,
+  "independent_participants": 0,
+  "model_runs": 0,
+  "scope": "glibc Linux installed-wheel evidence; not a booted Ubuntu kernel or remote CI",
+  "artifacts": [
+    {
+      "name": "paperdelta-0.1.0a2-py3-none-any.whl",
+      "sha256": "7cbaf7726f11418aa339e4a0684eae1d68731799b03271cedbac6e4162710b2d",
+      "bytes": 55617
+    },
+    {
+      "name": "paperdelta-0.1.0a2.tar.gz",
+      "sha256": "7755491b1574f778c5ff2dde3a8870251ba79f752086bbd96cec6dda2d7ad69a",
+      "bytes": 3046475
+    }
+  ],
+  "supplemental_files": [
+    {
+      "name": "validate_python_matrix.py",
+      "path": "tools/validate_python_matrix.py",
+      "sha256": "0a18e0dc5e71111e559b0f70f267011feecface5056a9a94e142aa43f4402f9b",
+      "target_sha256_before": "f35e03cb5aed512d5e6454b294896dd49aa5456a4c90f74df1751e866de7839d"
+    }
+  ],
+  "python_downloads": [
+    {
+      "key": "cpython-3.14.8-linux-x86_64-gnu",
+      "version": "3.14.8",
+      "version_parts": {
+        "major": 3,
+        "minor": 14,
+        "patch": 8
+      },
+      "path": "pythons/cpython-3.14-linux-x86_64-gnu/bin/python3.14",
+      "symlink": null,
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    },
+    {
+      "key": "cpython-3.13.16-linux-x86_64-gnu",
+      "version": "3.13.16",
+      "version_parts": {
+        "major": 3,
+        "minor": 13,
+        "patch": 16
+      },
+      "path": "pythons/cpython-3.13-linux-x86_64-gnu/bin/python3.13",
+      "symlink": null,
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    },
+    {
+      "key": "cpython-3.12.15-linux-x86_64-gnu",
+      "version": "3.12.15",
+      "version_parts": {
+        "major": 3,
+        "minor": 12,
+        "patch": 15
+      },
+      "path": "pythons/cpython-3.12-linux-x86_64-gnu/bin/python3.12",
+      "symlink": null,
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    },
+    {
+      "key": "cpython-3.12.3-linux-x86_64-gnu",
+      "version": "3.12.3",
+      "version_parts": {
+        "major": 3,
+        "minor": 12,
+        "patch": 3
+      },
+      "path": "/usr/bin/python3.12",
+      "symlink": null,
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    },
+    {
+      "key": "cpython-3.12.3-linux-x86_64-gnu",
+      "version": "3.12.3",
+      "version_parts": {
+        "major": 3,
+        "minor": 12,
+        "patch": 3
+      },
+      "path": "/usr/bin/python3",
+      "symlink": "python3.12",
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    },
+    {
+      "key": "cpython-3.11.17-linux-x86_64-gnu",
+      "version": "3.11.17",
+      "version_parts": {
+        "major": 3,
+        "minor": 11,
+        "patch": 17
+      },
+      "path": "pythons/cpython-3.11-linux-x86_64-gnu/bin/python3.11",
+      "symlink": null,
+      "url": null,
+      "os": "linux",
+      "variant": "default",
+      "implementation": "cpython",
+      "arch": "x86_64",
+      "libc": "gnu"
+    }
+  ],
+  "core_only_smoke": [
+    {
+      "python_minor": "3.11",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.12",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.13",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    },
+    {
+      "python_minor": "3.14",
+      "core_check_exit": 0,
+      "data_change_exit": 1,
+      "missing_mcp_exit": 2,
+      "html_report_written": true,
+      "console_entrypoint_used": true
+    }
+  ],
+  "status": "failed",
+  "error": "Traceback (most recent call last):\n  File \"/root/validate.py\", line 131, in <module>\n    run(\"matrix\", args, cwd=project, timeout=1500)\n  File \"/root/validate.py\", line 51, in run\n    assert result.returncode == expected, f\"{name}: exit {result.returncode}, expected {expected}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: matrix: exit 1, expected 0\n",
+  "finished_at": "2026-10-03T01:46:40.792665+00:00"
+}

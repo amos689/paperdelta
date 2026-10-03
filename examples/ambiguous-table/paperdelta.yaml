@@ -1,0 +1,12 @@
+schema_version: 1
+paper: {entry: paper.tex}
+sources:
+  results: {path: results.json, format: json}
+metrics:
+  ours: {source: results, field: /test/ours, unit: fraction}
+occurrences:
+  table_accuracy:
+    file: paper.tex
+    anchor: {prefix: ' & ', suffix: ' \\'}
+    metric: ours
+    display: {kind: percent, places: 1, percent_symbol: false}

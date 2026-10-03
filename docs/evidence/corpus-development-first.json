@@ -1,0 +1,1796 @@
+{
+  "actual_states": {
+    "crash": 4,
+    "mismatch": 15,
+    "pass": 20,
+    "unknown": 36
+  },
+  "annotated_literals": 5,
+  "cases": 75,
+  "checked_at": "2026-10-02T16:15:46.536522+00:00",
+  "matched": 71,
+  "outcomes": [
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 402,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 403,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 403,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 401,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 1,
+        "unregistered_figures": 0,
+        "unsupported": 47
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "ml-finance",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "ml-finance",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 402,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 401,
+        "unknown": 0,
+        "unregistered_figures": 0,
+        "unsupported": 46
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "ml-finance",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 553,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 553,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "crash",
+      "case": "ambiguous_anchor",
+      "exception": "LatexWalkerParseError: Unexpected closing environment: 'document' @(436,0)\nOpen LaTeX blocks:\n           @(14,0)  begin environment \"document\"\n        @(361,1324)  math mode \"$\"\n",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "rf-curriculum",
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 554,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 1,
+        "unregistered_figures": 1,
+        "unsupported": 104
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "rf-curriculum",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 555,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 554,
+        "unknown": 0,
+        "unregistered_figures": 1,
+        "unsupported": 103
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "rf-curriculum",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "anchor_missing",
+      "coverage": {
+        "candidate_numbers": 140,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "ANCHOR_MISSING",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_MISSING",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 144,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 144,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 140,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 1,
+        "unregistered_figures": 6,
+        "unsupported": 404
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "hwo-bows",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 141,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 140,
+        "unknown": 0,
+        "unregistered_figures": 6,
+        "unsupported": 403
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "hwo-bows",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "crash",
+      "case": "anchor_missing",
+      "exception": "LatexWalkerParseError: Unexpected closing environment: 'document' @(760,0)\nOpen LaTeX blocks:\n           @(67,0)  begin environment \"document\"\n        @(733,431)  math mode \"$\"\n",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "legwork",
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "ambiguous_anchor",
+      "coverage": {
+        "candidate_numbers": 542,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 542,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": "ANCHOR_AMBIGUOUS",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "ANCHOR_AMBIGUOUS",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 540,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 1,
+        "unregistered_figures": 8,
+        "unsupported": 885
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "legwork",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "legwork",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 541,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 540,
+        "unknown": 0,
+        "unregistered_figures": 8,
+        "unsupported": 884
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "legwork",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unchanged",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "changed_test",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "unrelated_model",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "changed_train",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_seed",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "duplicate_key",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "DUPLICATE_RECORD",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "DUPLICATE_RECORD",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "missing_column",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "MISSING_COLUMN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "MISSING_COLUMN",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "nonfinite",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "NONFINITE_NUMBER",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "NONFINITE_NUMBER",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "empty_selection",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": "SEED_SET",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "SEED_SET",
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "crash",
+      "case": "anchor_missing",
+      "exception": "LatexWalkerParseError: Unexpected closing environment: 'tabular' @(144,4)\nOpen LaTeX blocks:\n           @(18,0)  begin environment \"document\"\n          @(133,0)  begin environment \"table\"\n          @(135,4)  begin environment \"tabular\"\n         @(143,56)  math mode \"$\"\n",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "reflectometry",
+      "split": "development"
+    },
+    {
+      "actual": "crash",
+      "case": "ambiguous_anchor",
+      "exception": "LatexWalkerParseError: Unexpected closing environment: 'tabular' @(145,4)\nOpen LaTeX blocks:\n           @(18,0)  begin environment \"document\"\n          @(133,0)  begin environment \"table\"\n          @(135,4)  begin environment \"tabular\"\n         @(144,56)  math mode \"$\"\n",
+      "expected": "unknown",
+      "matched": false,
+      "paper": "reflectometry",
+      "split": "development"
+    },
+    {
+      "actual": "unknown",
+      "case": "unsupported_macro",
+      "coverage": {
+        "candidate_numbers": 36,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 1,
+        "unregistered_figures": 3,
+        "unsupported": 138
+      },
+      "error": "UNSUPPORTED_SPAN",
+      "expected": "unknown",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 2,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "UNSUPPORTED_SPAN"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "pass",
+      "case": "low_bit_change",
+      "changed_evidence": true,
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 0,
+        "pass": 1,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "pass",
+      "matched": true,
+      "paper": "reflectometry",
+      "project_exit_code": 0,
+      "project_rules": [
+        "UNSUPPORTED_MACRO"
+      ],
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "patch_roundtrip",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "outside_bytes_preserved": true,
+      "paper": "reflectometry",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "rechecked": true,
+      "split": "development"
+    },
+    {
+      "actual": "mismatch",
+      "case": "stale_patch",
+      "coverage": {
+        "candidate_numbers": 37,
+        "confirmed": 1,
+        "mismatch": 1,
+        "pass": 0,
+        "unbound_numbers": 36,
+        "unknown": 0,
+        "unregistered_figures": 3,
+        "unsupported": 137
+      },
+      "error": null,
+      "expected": "mismatch",
+      "matched": true,
+      "original_tex_restored": true,
+      "paper": "reflectometry",
+      "patch_rejected": "STALE_PATCH",
+      "project_exit_code": 1,
+      "project_rules": [
+        "UNSUPPORTED_MACRO",
+        "VALUE_MISMATCH"
+      ],
+      "split": "development"
+    }
+  ],
+  "papers": 5,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protocol": {
+    "src/paperdelta/__init__.py": "sha256:e2ef2a9206ea4eac6dcc071fbd94f81146d6a8a950bce5ddc0b9e94d66d0fd64",
+    "src/paperdelta/__main__.py": "sha256:47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/agent.py": "sha256:a38847856362fd590b3fe7b895efb63648b0ef9d49fccc8eb12a7a27cadc503f",
+    "src/paperdelta/analysis.py": "sha256:9704311d0cd6240c16857b5dcf4b554fe33e0b87bd1d4a595edffaac2c730c15",
+    "src/paperdelta/cli.py": "sha256:5f3e75d24e896951b33c924cfb6491765749f1208389dddec7a27aa0705b9afa",
+    "src/paperdelta/config.py": "sha256:c69b1006716dd0a2b397e8698d9035e4a71b42dfb5bd07c900a8e34c1525eff3",
+    "src/paperdelta/errors.py": "sha256:908a1b85760af20498a8635ffd1bc6a08a54ee88a0ec90a1572b1b8531fd012e",
+    "src/paperdelta/latex.py": "sha256:ff5836f6335e738e45a8d2b0513c5cdb14ff81a5b8956fcf7fb3a6b00bd33350",
+    "src/paperdelta/mcp_server.py": "sha256:52532670a8f86ba896d63779233f62a64b7899a87081d9db4bd59bc1becf4342",
+    "src/paperdelta/metrics.py": "sha256:0e8dfeef965a1786d51fc208dc423c995ba963bd4497a5e3da87c7a513e33126",
+    "src/paperdelta/models.py": "sha256:3d4071bf75f6a587dee92e25b9ed79a11a0306b33143f0c6d6e719d5ac3d1e34",
+    "src/paperdelta/onboarding.py": "sha256:f3fcf411e1d2567084c5f0439e0f9816df881fdee5f5e8da164c3a597211c650",
+    "src/paperdelta/patches.py": "sha256:c7571e6a62f141a30b9f8d3f1f66ab63c0cfc19b943f4872749618466867a2ec",
+    "src/paperdelta/records.py": "sha256:7e539f1d2707f4cd443b55964a186d6881ded676bb2b65fa10b549b95ab2e866",
+    "src/paperdelta/reports.py": "sha256:b39e36619ba516b87d626c9a1df8ba94431511448ec0132273fb3f9e78833f94",
+    "src/paperdelta/reviews.py": "sha256:801ae14fecb5a7af2f4ece664a407a16ee9d7315a9e8aee7fca9416595f66a18",
+    "src/paperdelta/snapshots.py": "sha256:314cb7f55243c257d9450b4b0bb31959af2b5067fd385c1b73dc84d5ac35323b",
+    "src/paperdelta/sources.py": "sha256:791540086a52e033e416b60120d638de15cd7a8fcbe4fbc03706c0c56b880df4",
+    "src/paperdelta/storage.py": "sha256:6b054870de67e7921f9ffa781543edca28c1bcf236ebb4d19dd4a91cf5164b0d",
+    "tests/corpus/annotations.json": "sha256:705f7bb906756d44d62e13f6960df5eb8fb71a7bf498bdc5d167d093a02915d5",
+    "tests/corpus/manifest.json": "sha256:03c325e65d3e41cf2937e51edee047219d022a078c532afcd876671a03f36c77",
+    "tests/corpus/scenarios.json": "sha256:0de52467d40e4de4e3ab0fdaafe72d5e9ecb1e7d3e43686de7232c16c16edf8f",
+    "tools/evaluate_corpus.py": "sha256:dc8d4ef48393c545d916fea8b4101fda91beabe800dd5aa5119fcc7e4da25945"
+  },
+  "python": "3.12.14",
+  "scope": "Controlled synthetic fault injection in real licensed source text; correlated cases around one literal per paper. No whole-paper accuracy, AI mapping accuracy, user study, or experiment reproduction claim.",
+  "seconds": 26.523,
+  "split": "development",
+  "tool_version": "0.1.0a1"
+}

@@ -1,0 +1,74 @@
+{
+  "started_at": "2026-10-03T02:54:53.441785+00:00",
+  "host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "wheel": {
+    "name": "paperdelta-0.1.0a2-py3-none-any.whl",
+    "sha256": "171610e2fa23b5f16f84960a4655c4dba41f3b91171385eddc2cac91036d4134"
+  },
+  "commands": [
+    {
+      "step": "install-core",
+      "args": [
+        "<checkout>\\build\\platform-harness-windows-v2\\venv-core\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-candidate-final\\paperdelta-0.1.0a2-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 1.625
+    },
+    {
+      "step": "core-smoke",
+      "args": [
+        "<checkout>\\build\\platform-harness-windows-v2\\venv-core\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build\\platform-harness-windows-v2\\core-smoke.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0
+    },
+    {
+      "step": "install-full",
+      "args": [
+        "<checkout>\\build\\platform-harness-windows-v2\\venv-full\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-candidate-final\\paperdelta-0.1.0a2-py3-none-any.whl[dev,mcp]"
+      ],
+      "exit_code": 0,
+      "seconds": 6.64
+    },
+    {
+      "step": "lint",
+      "args": [
+        "<checkout>\\build\\platform-harness-windows-v2\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 1,
+      "seconds": 0.672
+    }
+  ],
+  "status": "failed",
+  "scope": "Actual installed-wheel execution on the recorded host, not independent users.",
+  "error": "RuntimeError: lint failed with exit 1; see lint.log",
+  "finished_at": "2026-10-03T02:55:07.826005+00:00"
+}

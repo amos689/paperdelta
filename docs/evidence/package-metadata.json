@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-02T15:33:53.877223+00:00",
+  "pypi": {
+    "status": 404,
+    "meaning": "No project returned at check time; not a reservation."
+  },
+  "dependencies": [
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "license": "MIT",
+      "license_classifiers": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ]
+    },
+    {
+      "name": "pylatexenc",
+      "version": "2.11",
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ]
+    },
+    {
+      "name": "mcp",
+      "version": "2.2.0",
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ]
+    }
+  ],
+  "optional_demo_dependency": {
+    "name": "matplotlib",
+    "version": "3.11.2",
+    "license_classifiers": [
+      "License :: OSI Approved :: Python Software Foundation License"
+    ],
+    "license_expression": null,
+    "role": "Optional figure regeneration only; dependencies are not vendored in PaperDelta",
+    "checked_at": "2026-10-02T17:39:38.629205+00:00"
+  }
+}

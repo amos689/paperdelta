@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-02T19:58:30.994346+00:00",
+  "url": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_windows_amd64.zip",
+  "sha256": "6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9",
+  "version": "1.7.12\ninstalled by downloading from release page\nbuilt with go1.26.1 compiler for windows/amd64\n",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "checked_workflows": [
+    ".github/workflows/ci.yml",
+    "examples/ci/paper-check.yml"
+  ],
+  "shellcheck_available": false,
+  "pyflakes_available": true,
+  "scope": "Static workflow validation, not remote job execution"
+}
