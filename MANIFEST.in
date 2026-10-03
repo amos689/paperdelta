@@ -1,6 +1,6 @@
 include LICENSE *.md
 include .gitattributes .gitignore
-recursive-include .github *.yml
+recursive-include .github *.yml *.md
 recursive-include docs *.md *.json *.png *.webm *.log *.xml
 include docs/evidence/macos-native-20261003/return.zip
 recursive-include examples *.yaml *.yml *.tex *.csv *.json *.py *.pdf *.png *.md

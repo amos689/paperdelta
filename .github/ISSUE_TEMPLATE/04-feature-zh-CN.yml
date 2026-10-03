@@ -1,0 +1,29 @@
+name: 功能建议（简体中文）
+description: 描述希望 PaperDelta 更好支持的研究工作流。
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [Switch to English](https://github.com/amos689/paperdelta/issues/new?template=03-feature-en.yml)。
+        请使用原创或合成样例描述工作流，不要提交私人研究材料。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 工作流与问题
+      description: 你想完成什么？现有流程的哪一步不够好用？
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 希望实现的行为
+      description: 给出具体输入/输出例子，说明哪些决定应由论文作者保留。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案或相关工具
+      description: 有帮助时附上现有解决方法、示例或参考资料。

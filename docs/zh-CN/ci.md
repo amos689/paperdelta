@@ -6,11 +6,14 @@
 
 仓库 `.github/workflows/ci.yml` 是**工具开发**矩阵：Windows、Linux、macOS，Python
 3.11–3.14，只读权限、测试、静态检查、原创样例验证、代码/评测分包、内容审计和
-JUnit 留存。它尚未在远程 CI 运行，工作流文件本身不构成跨平台证据。
+JUnit 留存。每个提交的真实结果和可下载证据见
+[Actions 运行记录](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)，
+工作流文件本身不构成跨平台证据。
 
 macOS 分为 `macos-15` Apple Silicon 和 `macos-15-intel`，各四个 Python 版本。
 [原生验证器](macos.md)将 wheel 安装到纯核心和完整测试环境，核对系统/CPU，执行
-真实 POSIX 终端及文件系统测试并保存日志。这八项已配置，仍待 Mac 实际执行。
+真实 POSIX 终端及文件系统测试并保存日志。评估支持范围时，以每项作业记录的
+系统、架构及测试数量为准。
 
 开发时从官方仓库解析 checkout v6.1.0、setup-python v6.3.0、upload-artifact v4.6.2，
 并在工作流固定提交 ID。更新应明确进行并重验相关检查。
@@ -20,10 +23,11 @@ macOS 分为 `macos-15` Apple Silicon 和 `macos-15-intel`，各四个 Python �
 [可复制模板](../../examples/ci/paper-check.yml)检查每个 PR，失败时仍保留产物，最终
 保留检查器退出码。论文输入与检查器分别检出；启用前配置仓库变量：
 
-- `PAPERDELTA_REPOSITORY`：可信且可访问的检查器仓库，格式 `owner/repository`。
+- `PAPERDELTA_REPOSITORY`：`amos689/paperdelta`，或经审查的可信 fork。
 - `PAPERDELTA_REVISION`：经审查的完整 40 字符提交 SHA。
 
-本项目尚未发布仓库，因此没有伪造的仓库或提交；缺设置时模板会拒绝。需要时更换
+从[发行版](https://github.com/amos689/paperdelta/releases)选择经审查的提交，复制完整
+SHA，不要换成可变的分支名称；缺设置时模板会拒绝。需要时更换
 基线名 `submitted-v1`。历史检出使 PR 目标提交可访问；手动运行采用选定提交。
 检查器从固定来源安装；`python -I` 排除论文目录和 `PYTHONPATH` 对导入路径的影响，
 只执行可信检查器副本。模板采用只读权限和普通 `pull_request` 事件。
@@ -38,7 +42,7 @@ paperdelta --lang zh-CN -C paper-project check --report build/paperdelta
 放入摘要。必要检查不完整是退出 2，不能当作成功。适配器生成含声明变化及当前发现
 的 `ci-summary.md`；存在 `GITHUB_STEP_SUMMARY` 时自动追加，遵循 GitHub 的
 [作业摘要接口](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-job-summary)。
-包尚未上线，因此这里不提供假定已可用的包索引安装命令。
+GitHub 发行版提供安装产物，目前没有包索引发行版。
 
 CSV/JSON、图表、来源记录、配置和 LaTeX 的相关变化都应触发检查。不要只展示 Git
 diff 内的 LaTeX 行：`test_data_only_change_finds_every_affected_span_and_false_claim`
@@ -113,4 +117,4 @@ a2 的十项适配器测试在四个 Windows Python 版本和 Alpine Linux/Pytho
 通过，包括真实 Git 对象、退出码、摘要、隔离导入和输出保护。该时点 Windows 3.12
 完整套件通过 162 项。两个工作流通过 [actionlint](https://github.com/rhysd/actionlint)
 1.7.12 静态检查。[证据与文件哈希](../evidence/ci-adapter/evidence.json)只证明本地和
-静态检查，不代表远程 GitHub 已运行。
+静态检查。后续远程结果在 Actions 单独记录，不改变这些原始数量。

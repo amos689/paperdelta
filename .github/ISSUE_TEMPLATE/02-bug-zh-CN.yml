@@ -1,0 +1,38 @@
+name: 缺陷报告（简体中文）
+description: 报告错误行为或无法完成的工作流。
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [Switch to English](https://github.com/amos689/paperdelta/issues/new?template=01-bug-en.yml)。
+        安全漏洞请用[私密报告](https://github.com/amos689/paperdelta/security/advisories/new)。
+        请使用最小原创或合成样例，不要提交密钥或未公开研究内容。
+  - type: input
+    id: environment
+    attributes:
+      label: 版本与环境
+      description: PaperDelta 版本/提交、Python 版本、操作系统与 CPU；涉及报告时提供浏览器。
+      placeholder: 0.2.0a1，Python 3.12，Windows 11 x64
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现方式
+      description: 完整命令，以及能够复现问题的最小论文、数据和配置。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期与实际结果
+      description: 包含退出码及相关错误或报告片段，请移除私人路径。
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 有帮助时提供截图、精简日志或临时解决方法。

@@ -33,6 +33,7 @@ def check():
             counterpart = paths["zh-CN" if language == "en" else "en"]
             assert counterpart.resolve() in set(local_links(path)), f"Missing switch: {name}"
     actual = {p.relative_to(ROOT).as_posix() for p in ROOT.glob("*.md")}
+    actual.update(p.relative_to(ROOT).as_posix() for p in (ROOT / ".github").rglob("*.md"))
     actual.update(
         p.relative_to(ROOT).as_posix()
         for p in (ROOT / "docs").rglob("*.md")

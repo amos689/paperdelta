@@ -8,14 +8,16 @@ tracked separately in the [delivery ledger](v0.2-plan.md).
 The checked-in `.github/workflows/ci.yml` is the **tool development** matrix:
 Windows, Linux and macOS, Python 3.11–3.14, read-only repository permissions,
 tests, lint, owned-example validation, separate code/evaluation package builds,
-archive content audits and preserved JUnit results. It has not yet run on a
-remote CI service. A workflow file is not cross-platform compatibility evidence.
+archive content audits and preserved JUnit results. See the
+[actual Actions runs](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+for each commit's results and downloadable evidence. A workflow file alone is
+not cross-platform compatibility evidence.
 
 macOS now uses separate `macos-15` Apple Silicon and `macos-15-intel` jobs,
 each with Python 3.11–3.14. The [native platform validator](macos.md) installs the
 built wheel in core-only and full-test virtual environments, checks host/CPU
 identity, runs real POSIX terminal and filesystem tests, and preserves its logs.
-Those eight jobs are configured but await actual Mac execution.
+Use each job's recorded system/architecture and test counts when assessing support.
 
 Official Action revisions were resolved from their public repositories during
 development: checkout v6.1.0, setup-python v6.3.0 and upload-artifact v4.6.2.
@@ -29,11 +31,12 @@ keeps report artifacts even on failure and preserves the checker's exit code as
 the final job verdict. It checks out paper inputs and the checker into separate
 directories. Configure these repository variables before enabling it:
 
-- `PAPERDELTA_REPOSITORY`: an accessible trusted checker repository, as `owner/repository`.
+- `PAPERDELTA_REPOSITORY`: `amos689/paperdelta`, or your reviewed trusted fork.
 - `PAPERDELTA_REVISION`: its reviewed full 40-character commit SHA.
 
-The checker repository has not been published by this project yet; no placeholder
-repository or invented commit is supplied. The template rejects absent settings.
+Choose a reviewed commit from the [release](https://github.com/amos689/paperdelta/releases)
+and copy its full SHA; do not substitute a mutable branch name. The template rejects
+absent settings.
 Change `submitted-v1` if using another baseline name. Its history checkout makes
 the PR target commit available; a manually dispatched run uses its selected commit.
 The checker is installed from the pinned source, and `python -I` keeps the paper
@@ -56,8 +59,7 @@ The supplied adapter instead writes a combined `ci-summary.md` with declaration
 changes and current findings, and appends it automatically when
 `GITHUB_STEP_SUMMARY` is present. This follows GitHub's
 [job-summary file interface](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-job-summary).
-PaperDelta has not been published yet, so a production package-index installation
-line is deliberately not advertised as available.
+GitHub releases provide installation artifacts; no package-index release is available.
 
 Trigger checks for relevant CSV/JSON, figure, source-record, configuration and
 LaTeX changes. Do not filter reports to changed LaTeX lines: the regression
@@ -157,4 +159,5 @@ job-summary output, isolated imports and output protection. The full Windows
 Python 3.12 suite passed 162 tests. Both workflow files passed
 [actionlint](https://github.com/rhysd/actionlint) 1.7.12 static checks.
 [Evidence and exact file hashes](evidence/ci-adapter/evidence.json).
-These are local and static checks; no remote GitHub workflow has executed.
+These historical results are local and static checks. Later remote runs are
+recorded separately in Actions and do not change these original counts.

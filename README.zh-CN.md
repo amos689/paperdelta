@@ -2,6 +2,9 @@
 
 [English](README.md)
 
+[![检查状态](https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg)](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+[下载发行版](https://github.com/amos689/paperdelta/releases) · [反馈问题](https://github.com/amos689/paperdelta/issues/new/choose)
+
 **检查实验结果变化影响了现有论文的哪些位置。**
 
 准确率从 **84.1% 变成 80.9%**，论文的摘要、表格和附录却还保留旧值，正文仍报告
@@ -14,23 +17,34 @@
 
 ![中文报告展示数字、失效比较及图表依赖变化](docs/assets/v0.2/report.zh-CN.png)
 
-**v0.2 开发预览版（0.2.0a1），已通过本地验收**。新功能包括中英文界面、离线报告
+**v0.2 Alpha 预览版（0.2.0a1）**。新功能包括中英文界面、离线报告
 语言切换、环境诊断、接入向导、明确的位置
 修复和分步 Agent 工具，进度见 [v0.2 交付记录](docs/zh-CN/v0.2-plan.md)。
 [真实文本评测](docs/zh-CN/evaluation.md)同时保留支持和未知案例，
 [本地命令行对比](docs/zh-CN/comparison.md)也运行了 Calkit 和 scitexlintr。
 上线前采用机器测试及开发者判断，详见 [v0.2 验收决定](docs/zh-CN/v0.2-acceptance.md)。
 Windows 3.11–3.14、本地 Linux，以及 Apple Silicon macOS 27.0.1 的 Python
-3.12.14 / 3.14.6 均有安装包证据。Intel macOS 和远程 CI 尚未验证，
+3.12.14 / 3.14.6 均有安装包证据。[GitHub Actions 矩阵](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+覆盖 Windows、Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14，
+具体通过情况以每次运行结果及产物为准。
 独立真人反馈放到上线后，尚未发布到包索引。实测与后续工作见[证据记录](docs/zh-CN/progress.md)。
 
 **2026-10-03 已完成本机原生 Mac 验证**。两个 Python 版本最终各 241 项通过，
 零跳过；运行代码及已验收 wheel 未修改。详见[Mac 结果与范围](docs/zh-CN/macos-validation-2026-10-03.md)，
 复现与回传仍按 [Mac 快速开始](START_ON_MAC.md)执行。
 
-## 在当前仓库运行
+## 运行演示
 
-使用 Python 3.11 以上版本，创建虚拟环境后，在仓库根目录运行：
+克隆仓库，使用 Python 3.11 以上版本创建虚拟环境：
+
+```sh
+git clone https://github.com/amos689/paperdelta.git
+cd paperdelta
+python -m venv .venv
+```
+
+Windows PowerShell 执行 `.venv\Scripts\Activate.ps1` 激活；macOS/Linux 执行
+`source .venv/bin/activate`（创建环境时可能需要用 `python3`）。然后运行：
 
 ```sh
 python -m pip install -e .
@@ -56,6 +70,11 @@ python tools/demo.py --out build/demo
 另有两个边界样例：[歧义表格](examples/ambiguous-table/README.zh-CN.md)预期返回 2；
 [中文路径和字面宏](examples/unicode-macro/README.zh-CN.md)预期通过，并支持已验证的
 BOM/CRLF 补丁及恢复检查。
+
+如只想接入已有论文，可从 [v0.2.0a1](https://github.com/amos689/paperdelta/releases/tag/v0.2.0a1)
+下载 wheel，与发行页的 `SHA256SUMS` 核对后，在虚拟环境执行
+`python -m pip install ./paperdelta-0.2.0a1-py3-none-any.whl`。
+示例和验证工具需使用源码仓库。目前没有 PyPI 发行版。
 
 ## 接入已有论文
 
@@ -150,4 +169,5 @@ python -m build
 源码及评测产物的分包和内容核验见[本地验证及候选构建](docs/zh-CN/local-validation.md)。
 
 [开发计划](docs/zh-CN/v0.2-plan.md) · [贡献指南](CONTRIBUTING.zh-CN.md) ·
-[原创代码的 MIT 许可证](LICENSE) · [第三方样例许可](THIRD_PARTY_NOTICES.zh-CN.md)
+[原创代码的 MIT 许可证](LICENSE) · [第三方样例许可](THIRD_PARTY_NOTICES.zh-CN.md) ·
+[更新日志](CHANGELOG.zh-CN.md) · [安全政策](SECURITY.zh-CN.md)

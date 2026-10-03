@@ -2,6 +2,9 @@
 
 [简体中文](README.zh-CN.md)
 
+[![Checks](https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg)](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+[Releases](https://github.com/amos689/paperdelta/releases) · [Report a problem](https://github.com/amos689/paperdelta/issues/new/choose)
+
 **Review how experiment changes affect an existing research paper.**
 
 An accuracy value changes from **84.1% to 80.9%**. The paper still repeats the old
@@ -16,7 +19,7 @@ optional MCP · no model key, GPU or TeX installation required for checking.
 
 ![English review of numbers, a false comparison and changed figure inputs](docs/assets/v0.2/report.en.png)
 
-**v0.2 development alpha (0.2.0a1), locally accepted.** New features include
+**v0.2 alpha (0.2.0a1).** New features include
 English/Chinese interfaces, an offline report language switch, environment diagnosis,
 guided mapping, explicit location repair and staged agent tools. Follow the
 [v0.2 delivery ledger](docs/v0.2-plan.md). A small
@@ -26,7 +29,9 @@ scitexlintr as well. Pre-release acceptance uses local machine tests and develop
 review; see the [v0.2 acceptance decision](docs/v0.2-acceptance.md). Windows
 3.11–3.14 and local Linux have current installed-package evidence with exact run limits.
 Native Apple Silicon macOS 27.0.1 now has installed-wheel evidence on Python 3.12.14
-and 3.14.6. Intel macOS and remote CI remain unverified.
+and 3.14.6. The [GitHub Actions matrix](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
+adds Windows, Linux, Apple Silicon and Intel macOS on Python 3.11–3.14;
+individual run results and artifacts show what passed.
 Independent first-use feedback is planned after launch. No package-index publication yet.
 See the [evidence ledger](docs/progress.md) for measured results and follow-up work.
 
@@ -35,9 +40,19 @@ all 241 final tests without skips. Runtime code and the accepted wheel are uncha
 see the [Mac results and limits](docs/macos-validation-2026-10-03.md). The
 [Mac quick start](START_ON_MAC.en.md) remains the reproduction and return guide.
 
-## Try it from this checkout
+## Try the demo
 
-Use Python 3.11+ in a virtual environment, then run from the repository root:
+Clone the repository and use Python 3.11+ in a virtual environment:
+
+```sh
+git clone https://github.com/amos689/paperdelta.git
+cd paperdelta
+python -m venv .venv
+```
+
+Activate it with `.venv\Scripts\Activate.ps1` in Windows PowerShell, or
+`source .venv/bin/activate` on macOS/Linux (`python3` may be needed to create it).
+Then run:
 
 ```sh
 python -m pip install -e .
@@ -66,6 +81,12 @@ Two smaller examples expose important boundaries:
 [an ambiguous table](examples/ambiguous-table/README.md) intentionally exits 2;
 [Chinese paths and a literal macro](examples/unicode-macro/README.md) pass and
 support a verified BOM/CRLF patch-and-recovery check.
+
+For an existing paper without the demo, download the wheel from
+[v0.2.0a1](https://github.com/amos689/paperdelta/releases/tag/v0.2.0a1), verify it
+against the release's `SHA256SUMS`, and install it in a virtual environment with
+`python -m pip install ./paperdelta-0.2.0a1-py3-none-any.whl`.
+Use the source checkout for examples and validation tools. There is no PyPI release.
 
 ## Connect an existing paper
 
@@ -182,4 +203,5 @@ For separate code/evaluation artifacts and content verification, follow
 
 [中文指南](README.zh-CN.md) · [Development plan](docs/v0.2-plan.md) ·
 [Contributing](CONTRIBUTING.md) · [MIT license for original code](LICENSE) ·
-[Third-party fixture licenses](THIRD_PARTY_NOTICES.md)
+[Third-party fixture licenses](THIRD_PARTY_NOTICES.md) ·
+[Changelog](CHANGELOG.md) · [Security policy](SECURITY.md)

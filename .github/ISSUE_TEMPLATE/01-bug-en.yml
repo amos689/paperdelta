@@ -1,0 +1,38 @@
+name: Bug report (English)
+description: Report incorrect behavior or a failed workflow.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [切换到中文](https://github.com/amos689/paperdelta/issues/new?template=02-bug-zh-CN.yml).
+        For vulnerabilities, use [private reporting](https://github.com/amos689/paperdelta/security/advisories/new).
+        Use a small original or synthetic example; omit secrets and unpublished research.
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: PaperDelta version/commit, Python version, OS and CPU; browser if relevant.
+      placeholder: 0.2.0a1, Python 3.12, Windows 11 x64
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Exact commands and the smallest paper/data/configuration that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+      description: Include the exit code and relevant error or report excerpt. Remove personal paths.
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, reduced logs or a workaround, if useful.

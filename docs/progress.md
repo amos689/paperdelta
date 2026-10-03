@@ -7,8 +7,10 @@ Started 2026-10-02; updated 2026-10-03 Sydney time. The active scope is the
 [local acceptance decision](release-acceptance.md); new features require their own
 validation. The owner accepts local machine tests and Codex developer/first-user
 judgment before launch. Independent feedback follows launch. Native Apple Silicon Mac
-validation is now [recorded](macos-validation-2026-10-03.md); Intel, remote CI and
-external publication remain unperformed.
+validation is now [recorded](macos-validation-2026-10-03.md). Subsequent remote
+validation is tracked by [commit in Actions](https://github.com/amos689/paperdelta/actions/workflows/ci.yml);
+public artifacts and release-specific limits are listed in
+[GitHub Releases](https://github.com/amos689/paperdelta/releases).
 
 ## v0.2 implementation and recorded checkpoints
 

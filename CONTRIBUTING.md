@@ -2,6 +2,17 @@
 
 [简体中文](CONTRIBUTING.zh-CN.md)
 
+Use the [English or Chinese issue forms](https://github.com/amos689/paperdelta/issues/new/choose)
+for bugs and feature requests. Include the command, version and a minimal original
+paper/data example. Remove private paths, credentials and unpublished research from
+attachments. Report vulnerabilities through the [security policy](SECURITY.md).
+
+Pull requests use an English template by default. To use Chinese, append
+`?template=zh-CN.md` to the new pull request URL before writing (or
+`&template=zh-CN.md` if it already has a query). See the
+[Chinese template](.github/PULL_REQUEST_TEMPLATE/zh-CN.md). Write in either language;
+new user-facing messages and maintained documentation need both translations.
+
 Use Python 3.11+ and install `python -m pip install -e '.[dev,mcp]'`.
 Run `python tools/run_tests.py -q`, `python -m ruff check src tests tools` and
 `python -m ruff format --check src tests tools`. Tests use fresh project-local

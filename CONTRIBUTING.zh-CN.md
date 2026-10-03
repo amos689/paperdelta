@@ -2,6 +2,14 @@
 
 [English](CONTRIBUTING.md)
 
+通过[中英文问题表单](https://github.com/amos689/paperdelta/issues/new/choose)提交缺陷或
+功能建议，附上命令、版本及最小原创论文/数据样例。附件中移除私人路径、凭据及
+未公开研究内容。安全漏洞请按[安全政策](SECURITY.zh-CN.md)私下报告。
+
+PR 默认使用英文模板。创建 PR 时，在网址末尾添加 `?template=zh-CN.md` 后再填写；
+已有查询参数时添加 `&template=zh-CN.md`。也可参考[中文模板](.github/PULL_REQUEST_TEMPLATE/zh-CN.md)。
+讨论可以使用任一语言；新增用户界面消息和维护文档需配齐两种语言。
+
 使用 Python 3.11 以上版本，安装 `python -m pip install -e '.[dev,mcp]'`。
 运行 `python tools/run_tests.py -q`、`python -m ruff check src tests tools` 和
 `python -m ruff format --check src tests tools`。测试在 `.tools/test-runs` 下创建

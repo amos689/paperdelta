@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{name = "PaperDelta contributors"}]
+authors = [{name = "amos689"}]
 maintainers = [{name = "amos689", email = "101008326+amos689@users.noreply.github.com"}]
 keywords = ["latex", "research", "reproducibility", "agents", "scientific-writing"]
 dependencies = [
@@ -27,6 +27,12 @@ demo = ["matplotlib>=3.9,<4"]
 
 [project.scripts]
 paperdelta = "paperdelta.cli:main"
+
+[project.urls]
+Source = "https://github.com/amos689/paperdelta"
+Documentation = "https://github.com/amos689/paperdelta/blob/main/README.md"
+Issues = "https://github.com/amos689/paperdelta/issues"
+Releases = "https://github.com/amos689/paperdelta/releases"
 
 [tool.setuptools.packages.find]
 where = ["src"]

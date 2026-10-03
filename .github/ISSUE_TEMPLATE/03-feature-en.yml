@@ -1,0 +1,29 @@
+name: Feature request (English)
+description: Describe a research workflow PaperDelta could support better.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [切换到中文](https://github.com/amos689/paperdelta/issues/new?template=04-feature-zh-CN.yml).
+        Describe your workflow using original or synthetic examples, without private research material.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Workflow and problem
+      description: What are you trying to do, and where does the current workflow fall short?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired behavior
+      description: Give a concrete input/output example and say which decisions should remain with the author.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or related tools
+      description: Include existing workarounds, examples or references if useful.
