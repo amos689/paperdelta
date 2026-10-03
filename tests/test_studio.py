@@ -4,6 +4,7 @@ import http.client
 import io
 import json
 import threading
+import time
 from decimal import Decimal
 
 import pytest
@@ -364,7 +365,15 @@ def test_http_rejects_cross_origin_rebinding_and_wrong_session(http_studio, head
     ],
 )
 def test_http_bad_bodies_are_bounded_diagnostics(http_studio, body, headers):
-    status, _, raw = request(http_studio, body=body, headers=headers)
+    try:
+        status, _, raw = request(http_studio, body=body, headers=headers)
+    except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
+        # Invalid/oversized framing is rejected without consuming an unbounded
+        # body; the OS may reset that connection. Well-framed rejected requests
+        # must still deliver a diagnostic (including fragmented POST tests).
+        assert headers.get("Content-Length") in {str(MAX_BODY + 1), "-1"}
+        assert request(http_studio)[0] == 200
+        return
     assert status == 400 and "error" in json.loads(raw)
 
 
@@ -443,4 +452,30 @@ def test_http_requires_origin_even_with_valid_bearer(http_studio):
     response = connection.getresponse()
     assert response.status == 403
     response.read()
+    connection.close()
+
+
+@pytest.mark.parametrize(
+    "header,value,status",
+    [("Content-Type", "text/plain", 400), ("Authorization", "Bearer invalid", 403)],
+)
+def test_fragmented_rejected_post_still_receives_diagnostic(http_studio, header, value, status):
+    connection = http.client.HTTPConnection("127.0.0.1", http_studio.server_port, timeout=3)
+    headers = {
+        "Origin": http_studio.origin,
+        "Authorization": "Bearer " + http_studio.token,
+        "Content-Type": "application/json",
+        "Content-Length": "2",
+        header: value,
+    }
+    connection.putrequest("POST", "/api")
+    for name, content in headers.items():
+        connection.putheader(name, content)
+    connection.endheaders()
+    # HTTP permits headers and body to arrive in separate packets. An early
+    # close with unread body bytes can reset the socket before the error arrives.
+    time.sleep(0.03)
+    connection.send(b"{}")
+    response = connection.getresponse()
+    assert response.status == status and "error" in json.loads(response.read())
     connection.close()

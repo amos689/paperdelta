@@ -152,36 +152,43 @@ class StudioHandler(BaseHTTPRequestHandler):
             self._send(200, asset[1], asset[0])
 
     def do_POST(self):
-        if not self._boundary():
-            return
-        if self.path != "/api":
-            self._error(404, "STUDIO_NOT_FOUND", "not_found")
-            return
-        auth = self.headers.get_all("Authorization", [])
-        if (
-            len(auth) != 1
-            or not auth[0].isascii()
-            or not secrets.compare_digest(auth[0], "Bearer " + self.server.token)
-            or self.headers.get_all("Origin", []) != [self.server.origin]
-        ):
-            self._error(403, "STUDIO_SESSION", "session_expired")
-            return
         lengths = self.headers.get_all("Content-Length", [])
         if (
-            self.headers.get("Transfer-Encoding") is not None
-            or len(lengths) != 1
+            len(lengths) != 1
             or not lengths[0].isascii()
             or not lengths[0].isdigit()
             or len(lengths[0]) > 9
             or not 0 < int(lengths[0]) <= MAX_BODY
-            or self.headers.get_all("Content-Type", []) != ["application/json"]
         ):
             self._error(400, "STUDIO_BODY", "invalid_request")
             return
         language = self.server.language
         try:
+            # Consume a bounded, length-framed body before closing a rejected
+            # request. Otherwise a later body packet can reset the socket on
+            # Windows before the client receives our diagnostic. Parsing and
+            # all project access still require the origin and bearer checks.
             raw = self.rfile.read(int(lengths[0]))
             if len(raw) != int(lengths[0]):
+                self._error(400, "STUDIO_BODY", "invalid_request")
+                return
+            if not self._boundary():
+                return
+            if self.path != "/api":
+                self._error(404, "STUDIO_NOT_FOUND", "not_found")
+                return
+            auth = self.headers.get_all("Authorization", [])
+            if (
+                len(auth) != 1
+                or not auth[0].isascii()
+                or not secrets.compare_digest(auth[0], "Bearer " + self.server.token)
+                or self.headers.get_all("Origin", []) != [self.server.origin]
+            ):
+                self._error(403, "STUDIO_SESSION", "session_expired")
+                return
+            if self.headers.get("Transfer-Encoding") is not None or self.headers.get_all(
+                "Content-Type", []
+            ) != ["application/json"]:
                 self._error(400, "STUDIO_BODY", "invalid_request")
                 return
             value = parse_json(raw.decode("utf-8"))
