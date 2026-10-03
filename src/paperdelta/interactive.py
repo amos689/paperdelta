@@ -6,6 +6,7 @@ import unicodedata
 from typing import TextIO
 
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg, tr
 from paperdelta.onboarding import accept_bindings, inspect_proposal
 from paperdelta.storage import Project, json_text
 
@@ -51,8 +52,12 @@ def _metric_names(group, definition):
 
 def _show_metric(output, name, config, report, full=False):
     state = report["metrics"][name]
-    _show(output, f"metric {name}", {"value": state["value"], "unit": state["unit"]})
-    _show(output, "calculation", state["definition"])
+    _show(
+        output,
+        tr("interactive.label.1", name=name),
+        {"value": state["value"], "unit": state["unit"]},
+    )
+    _show(output, tr("interactive.label.2"), state["definition"])
     dependencies = set(state.get("dependencies", []))
     definitions = {}
     while dependencies:
@@ -61,48 +66,49 @@ def _show_metric(output, name, config, report, full=False):
             definitions[child] = report["metrics"][child]["definition"]
             dependencies.update(report["metrics"][child].get("dependencies", []))
     if definitions:
-        _show(output, "input calculations", definitions)
+        _show(output, tr("interactive.label.7"), definitions)
     for evidence in state["evidence"]:
         source = evidence["source"]
-        _show(output, "source", config.sources[source].model_dump())
+        _show(output, tr("interactive.label.8"), config.sources[source].model_dump())
         _show(
             output,
-            "selection",
+            tr("interactive.label.9"),
             {key: evidence[key] for key in ("source", "path", "field", "where", "reduce", "count")},
         )
         records = evidence["records"] if full else evidence["records"][:5]
-        output.write("  selected records:\n")
+        output.write(tr("interactive.text.3"))
         for record in records:
-            _show(output, "record", record)
-        _show(output, "locations", evidence["locations"] if full else evidence["locations"][:5])
+            _show(output, tr("interactive.label.15"), record)
+        _show(
+            output,
+            tr("interactive.label.10"),
+            evidence["locations"] if full else evidence["locations"][:5],
+        )
         if len(records) < evidence["count"]:
-            output.write(
-                f"  Showing {len(records)} of {evidence['count']} selected records. "
-                "Enter e to view all records.\n"
-            )
+            output.write(tr("interactive.text.6", value1=len(records), value2=evidence["count"]))
 
 
 def _card(output, binding, proposal, config, report, project, full=False):
     group, name = binding.split(":", 1)
     definition = getattr(proposal.additions, group)[name]
     state = report[group][name]
-    _show(output, "binding", binding)
-    _show(output, "reason", proposal.rationale[binding])
-    _show(output, "mapping", definition.model_dump())
-    _show(output, "current consistency", state["status"])
+    _show(output, tr("interactive.label.3"), binding)
+    _show(output, tr("interactive.label.4"), proposal.rationale[binding])
+    _show(output, tr("interactive.label.5"), definition.model_dump())
+    _show(output, tr("interactive.label.6"), tr("status." + state["status"]))
     location = state.get("location")
     if location:
         text, _ = project.text(location["file"])
         _show(
             output,
-            "paper context",
+            tr("interactive.label.11"),
             text[max(0, location["start"] - 90) : location["end"] + 90],
         )
     if group == "occurrences":
-        _show(output, "paper value", state["actual"])
-        _show(output, "expected display", state["expected"])
+        _show(output, tr("interactive.label.12"), state["actual"])
+        _show(output, tr("interactive.label.13"), state["expected"])
     if group == "figures":
-        _show(output, "figure source record", state)
+        _show(output, tr("interactive.label.14"), state)
     for metric in _metric_names(group, definition):
         _show_metric(output, metric, config, report, full)
 
@@ -113,7 +119,7 @@ def confirm_bindings(
     if not input_stream.isatty() or not output.isatty():
         raise PaperDeltaError(
             "INTERACTIVE_TERMINAL",
-            "Interactive binding requires a terminal; use --accept ID for scripted selection",
+            msg("error.INTERACTIVE_TERMINAL"),
         )
     proposal, config, report = inspect_proposal(project, value)
     bindings = [
@@ -122,47 +128,36 @@ def confirm_bindings(
         for name in getattr(proposal.additions, group)
     ]
     selected = []
-    output.write(
-        "Review proposed mappings. Matching values alone do not establish experiment identity.\n"
-        "Choose mappings, then commit the selection at the end. "
-        "Acceptance does not change paper text or attest review.\n"
-    )
+    output.write(tr("interactive.text.1"))
     try:
         for index, binding in enumerate(bindings, 1):
             output.write(f"\n[{index}/{len(bindings)}]\n")
             _card(output, binding, proposal, config, report, project)
             while True:
-                choice = _answer(
-                    input_stream, output, "Select this mapping? [y/N/e=all evidence/q] "
-                )
-                if choice in {"y", "yes"}:
+                choice = _answer(input_stream, output, tr("interactive.prompt.2"))
+                if choice in {"y", "yes", "是"}:
                     selected.append(binding)
                     break
-                if choice in {"", "n", "no"}:
+                if choice in {"", "n", "no", "否"}:
                     break
-                if choice == "q":
+                if choice in {"q", "取消"}:
                     return {"status": "cancelled", "bindings": [], "reason": "quit"}
-                if choice == "e":
+                if choice in {"e", "证据"}:
                     _card(output, binding, proposal, config, report, project, full=True)
                 else:
-                    output.write("Enter y, n, e or q. Blank skips this mapping.\n")
+                    output.write(tr("interactive.text.8"))
         if not selected:
             return {"status": "cancelled", "bindings": [], "reason": "none selected"}
-        output.write("\nSelected mappings:\n")
+        output.write(tr("interactive.text.4"))
         for binding in selected:
             output.write("  " + _safe(binding) + "\n")
-        output.write(f"Configuration: {_safe(proposal.config_path)}\n")
-        if (
-            _answer(
-                input_stream, output, "Type accept to save exactly these mappings; blank cancels: "
-            )
-            != "accept"
-        ):
+        output.write(tr("interactive.text.5", value1=_safe(proposal.config_path)))
+        if _answer(input_stream, output, tr("interactive.prompt.1")) not in {"accept", "确认"}:
             return {"status": "cancelled", "bindings": [], "reason": "not committed"}
     except (EOFError, KeyboardInterrupt):
-        output.write("\nCancelled before acceptance.\n")
+        output.write(tr("interactive.text.7"))
         return {"status": "cancelled", "bindings": [], "reason": "input interrupted"}
-    output.write("Rechecking inputs and saving the selected mappings.\n")
+    output.write(tr("interactive.text.2"))
     output.flush()
     # Outside the input-interruption handler: never report a write as cancelled.
     # Re-inspects data/config/source hashes under the existing write lock.

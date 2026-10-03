@@ -63,7 +63,7 @@ jobs:
       - name: Validate native installed wheel, filesystem and terminal
         run: >-
           python -X utf8 tools/validate_platform.py
-          --wheel build/release-candidate/paperdelta-0.1.0a2-py3-none-any.whl
+          --wheel build/release-candidate/*.whl
           --out build/macos-validation
           --require-system Darwin
           --expected-arch ${{ matrix.host.arch }}

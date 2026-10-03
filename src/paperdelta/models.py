@@ -8,6 +8,9 @@ from typing import Annotated, Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, model_validator
 
+from paperdelta.errors import validation_error
+from paperdelta.i18n import msg
+
 Scalar = StrictStr | StrictInt | Decimal
 Unit = Literal["scalar", "fraction", "percent", "percentage_point", "count", "ratio"]
 Identifier = Annotated[str, Field(pattern=r"^[A-Za-z][A-Za-z0-9_.-]{0,99}$")]
@@ -26,7 +29,7 @@ class Paper(StrictModel):
     @model_validator(mode="after")
     def macro_names(self) -> Self:
         if any(not re.fullmatch(r"[A-Za-z]+", key) for key in self.macros):
-            raise ValueError("Macro names must contain letters only, without a backslash")
+            raise validation_error(msg("validation.models"))
         return self
 
 
@@ -40,13 +43,13 @@ class Source(StrictModel):
     def validate_format(self) -> Self:
         if self.format == "csv":
             if not self.primary_key or not self.columns:
-                raise ValueError("CSV sources require primary_key and explicit columns")
+                raise validation_error(msg("validation.models.3"))
             if len(set(self.primary_key)) != len(self.primary_key):
-                raise ValueError("primary_key must not repeat columns")
+                raise validation_error(msg("validation.models.4"))
             if not set(self.primary_key).issubset(self.columns):
-                raise ValueError("Every primary key column must have a declared type")
+                raise validation_error(msg("validation.models.5"))
         elif self.primary_key or self.columns:
-            raise ValueError("JSON sources use JSON Pointer, not CSV column declarations")
+            raise validation_error(msg("validation.models.6"))
         return self
 
 
@@ -64,9 +67,9 @@ class SourceMetric(StrictModel):
     def validate_seeds(self) -> Self:
         if self.expected_seeds is not None:
             if not self.expected_seeds or len(set(self.expected_seeds)) != len(self.expected_seeds):
-                raise ValueError("expected_seeds must be a nonempty, unique list")
+                raise validation_error(msg("validation.models.7"))
         if self.reduce == "count" and self.unit != "count":
-            raise ValueError("A count metric must use unit: count")
+            raise validation_error(msg("validation.models.2"))
         return self
 
 
@@ -84,9 +87,9 @@ class Anchor(StrictModel):
     def exactly_one_mode(self) -> Self:
         if self.exact is not None:
             if not self.exact or self.prefix is not None or self.suffix is not None:
-                raise ValueError("Use a nonempty exact anchor OR a prefix and suffix")
+                raise validation_error(msg("validation.models.8"))
         elif not self.prefix or not self.suffix:
-            raise ValueError("Both prefix and suffix must be nonempty")
+            raise validation_error(msg("validation.models.9"))
         return self
 
 
@@ -120,11 +123,11 @@ class Predicate(StrictModel):
     def validate_operands(self) -> Self:
         if self.op == "best_in_set":
             if self.right is not None or not self.candidates or self.direction is None:
-                raise ValueError("best_in_set requires candidates and direction, without right")
+                raise validation_error(msg("validation.models.10"))
             if len(set(self.candidates)) != len(self.candidates) or self.left in self.candidates:
-                raise ValueError("Candidates must be unique and exclude the left metric")
+                raise validation_error(msg("validation.models.11"))
         elif self.right is None or self.candidates or self.direction is not None or self.allow_ties:
-            raise ValueError("Binary comparisons require right, without ranking options")
+            raise validation_error(msg("validation.models.12"))
         return self
 
 
@@ -157,19 +160,21 @@ class Config(StrictModel):
         for name, metric in self.metrics.items():
             if isinstance(metric, SourceMetric):
                 if metric.source not in self.sources:
-                    raise ValueError(f"Metric {name}: source {metric.source!r} does not exist")
+                    raise validation_error(
+                        msg("validation.models.17", name=name, value2=metric.source)
+                    )
                 dependencies[name] = []
             else:
                 dependencies[name] = metric.args
         for name, edges in dependencies.items():
             if any(edge not in self.metrics for edge in edges):
-                raise ValueError(f"Metric {name}: unknown input metric")
+                raise validation_error(msg("validation.models.13", name=name))
         visiting: set[str] = set()
         visited: set[str] = set()
 
         def visit(name: str) -> None:
             if name in visiting:
-                raise ValueError(f"Cyclic metric dependency at {name}")
+                raise validation_error(msg("validation.models.14", name=name))
             if name in visited:
                 return
             visiting.add(name)
@@ -182,11 +187,13 @@ class Config(StrictModel):
             visit(name)
         for name, occurrence in self.occurrences.items():
             if occurrence.metric not in self.metrics:
-                raise ValueError(f"Occurrence {name}: unknown metric {occurrence.metric}")
+                raise validation_error(
+                    msg("validation.models.15", name=name, value2=occurrence.metric)
+                )
         for name, claim in self.claims.items():
             refs = [claim.predicate.left, *claim.predicate.candidates]
             if isinstance(claim.predicate.right, str):
                 refs.append(claim.predicate.right)
             if any(ref not in self.metrics for ref in refs):
-                raise ValueError(f"Claim {name}: unknown metric")
+                raise validation_error(msg("validation.models.16", name=name))
         return self

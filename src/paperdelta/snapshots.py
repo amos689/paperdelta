@@ -4,15 +4,14 @@ import re
 from datetime import UTC, datetime
 
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg
 from paperdelta.records import Snapshot, validate_record
 from paperdelta.storage import Project, json_text, parse_json
 
 
 def snapshot_path(name: str) -> str:
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,79}", name):
-        raise PaperDeltaError(
-            "SNAPSHOT_NAME", "Use a short snapshot name containing letters, digits, _.-"
-        )
+        raise PaperDeltaError("SNAPSHOT_NAME", msg("error.SNAPSHOT_NAME"))
     return f".paperdelta/baselines/{name}.json"
 
 

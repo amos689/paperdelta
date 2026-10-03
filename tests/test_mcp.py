@@ -3,6 +3,7 @@ import sys
 
 import pytest
 
+from paperdelta.i18n import language_context
 from paperdelta.mcp_server import create_server
 from paperdelta.storage import Project
 
@@ -28,6 +29,30 @@ def test_mcp_exposes_only_five_read_only_tools(project):
             assert result.structured_content["exit_code"] == 0
             bad = await client.call_tool("explain_finding", {"finding_id": "does-not-exist"})
             assert bad.is_error
+
+    asyncio.run(run())
+
+
+def test_mcp_keeps_server_language_for_tools_called_outside_creation_context(
+    project, change_results
+):
+    change_results(project)
+    with language_context("zh-CN"):
+        server = create_server(Project(project))
+
+    async def run():
+        async with mcp.Client(server) as client:
+            listing = await client.list_tools()
+            assert all(
+                any("\u4e00" <= char <= "\u9fff" for char in tool.description)
+                for tool in listing.tools
+            )
+            result = await client.call_tool("check_project")
+            assert result.structured_content["agent_view"]["language"] == "zh-CN"
+            assert result.structured_content["exit_code"] == 1
+            assert any(
+                "应根据指标" in item["message"] for item in result.structured_content["diagnostics"]
+            )
 
     asyncio.run(run())
 

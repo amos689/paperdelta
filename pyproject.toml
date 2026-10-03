@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "0.1.0a2"
+version = "0.2.0a1"
 description = "Review how experiment changes affect an existing research paper."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{name = "PaperDelta contributors"}]
+maintainers = [{name = "amos689", email = "101008326+amos689@users.noreply.github.com"}]
 keywords = ["latex", "research", "reproducibility", "agents", "scientific-writing"]
 dependencies = [
   "pydantic>=2.10,<3",
@@ -29,6 +30,9 @@ paperdelta = "paperdelta.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+paperdelta = ["locales/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

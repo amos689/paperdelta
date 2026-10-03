@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from decimal import ROUND_HALF_EVEN, ROUND_HALF_UP, Decimal, localcontext
 
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg
 from paperdelta.models import Display, Unit
 from paperdelta.storage import decimal_value
 
@@ -30,7 +31,9 @@ def comparable(left: Quantity, right: Quantity) -> tuple[Decimal, Decimal]:
                 left.value / 100 if left.unit == "percent" else left.value,
                 right.value / 100 if right.unit == "percent" else right.value,
             )
-    raise PaperDeltaError("UNIT_MISMATCH", f"Cannot compare {left.unit} with {right.unit}")
+    raise PaperDeltaError(
+        "UNIT_MISMATCH", msg("error.UNIT_MISMATCH", value1=left.unit, value2=right.unit)
+    )
 
 
 def derive(op: str, left: Quantity, right: Quantity) -> Quantity:
@@ -45,7 +48,7 @@ def derive(op: str, left: Quantity, right: Quantity) -> Quantity:
         )
         if op == "percentage_point_difference":
             if left.unit not in ("fraction", "percent"):
-                raise PaperDeltaError("UNIT_MISMATCH", "Percentage points require proportions")
+                raise PaperDeltaError("UNIT_MISMATCH", msg("error.UNIT_MISMATCH.2"))
             # comparable keeps identical percent units in their original scale.
             scale = 1 if left.unit == right.unit == "percent" else 100
             return Quantity((a - b) * scale, "percentage_point")
@@ -53,12 +56,12 @@ def derive(op: str, left: Quantity, right: Quantity) -> Quantity:
             unit = "fraction" if left.unit != right.unit else left.unit
             return Quantity(a - b, unit)
         if b == 0:
-            raise PaperDeltaError("ZERO_DENOMINATOR", f"Cannot calculate {op} with zero baseline")
+            raise PaperDeltaError("ZERO_DENOMINATOR", msg("error.ZERO_DENOMINATOR", op=op))
         if op == "ratio":
             return Quantity(a / b, "ratio")
         if op == "relative_change_percent":
             return Quantity((a - b) / b * 100, "percent")
-    raise PaperDeltaError("UNKNOWN_OPERATION", f"Unsupported operation: {op}")
+    raise PaperDeltaError("UNKNOWN_OPERATION", msg("error.UNKNOWN_OPERATION", op=op))
 
 
 def render(quantity: Quantity, display: Display, rounding: str) -> str:
@@ -69,9 +72,7 @@ def render(quantity: Quantity, display: Display, rounding: str) -> str:
         suffix = ""
         if display.kind == "percent":
             if quantity.unit not in ("fraction", "percent"):
-                raise PaperDeltaError(
-                    "UNIT_MISMATCH", "Percent display requires fraction or percent"
-                )
+                raise PaperDeltaError("UNIT_MISMATCH", msg("error.UNIT_MISMATCH.3"))
             if quantity.unit == "fraction":
                 value *= 100
             suffix = r"\%" if display.percent_symbol else ""
@@ -90,7 +91,7 @@ def parse_display(text: str) -> tuple[Decimal, bool]:
     if percent:
         compact = compact[:-2]
     if re.fullmatch(NUMBER, compact) is None:
-        raise PaperDeltaError("UNSUPPORTED_DISPLAY", f"Cannot interpret numeric span {text!r}")
+        raise PaperDeltaError("UNSUPPORTED_DISPLAY", msg("error.UNSUPPORTED_DISPLAY", text=text))
     return decimal_value(compact.replace(",", "").replace("−", "-")), percent
 
 

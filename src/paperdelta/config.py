@@ -8,7 +8,8 @@ from decimal import Decimal
 
 import yaml
 
-from paperdelta.errors import PaperDeltaError
+from paperdelta.errors import PaperDeltaError, error_message
+from paperdelta.i18n import msg
 from paperdelta.models import Config
 from paperdelta.storage import Project, decimal_value, sha256
 
@@ -33,9 +34,9 @@ def _mapping(loader: ConfigLoader, node: yaml.MappingNode) -> dict:
     for key_node, value_node in node.value:
         key = loader.construct_object(key_node, deep=True)
         if not isinstance(key, (str, int)) or isinstance(key, bool):
-            raise PaperDeltaError("CONFIG_KEY", "Configuration keys must be strings or integers")
+            raise PaperDeltaError("CONFIG_KEY", msg("error.CONFIG_KEY"))
         if key in result:
-            raise PaperDeltaError("DUPLICATE_KEY", f"Duplicate YAML key: {key}")
+            raise PaperDeltaError("DUPLICATE_KEY", msg("error.DUPLICATE_KEY", key=key))
         result[key] = loader.construct_object(value_node, deep=True)
     return result
 
@@ -70,4 +71,4 @@ def load_config(project: Project, path: str = "paperdelta.yaml") -> tuple[Config
         data = yaml.load(text, Loader=ConfigLoader)
         return Config.model_validate(data), sha256(raw)
     except (yaml.YAMLError, ValueError, RecursionError) as exc:
-        raise PaperDeltaError("INVALID_CONFIG", str(exc)) from exc
+        raise PaperDeltaError("INVALID_CONFIG", error_message(exc)) from exc

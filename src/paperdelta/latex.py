@@ -18,7 +18,8 @@ from pylatexenc.latexwalker import (
 )
 from pylatexenc.macrospec import MacroSpec
 
-from paperdelta.errors import PaperDeltaError
+from paperdelta.errors import PaperDeltaError, error_message
+from paperdelta.i18n import msg
 from paperdelta.metrics import NUMBER_PATTERN
 from paperdelta.models import Anchor, Paper
 from paperdelta.storage import Project, sha256
@@ -135,7 +136,7 @@ class TexDocument:
             # Keep the BOM in the position map; never normalize line endings.
             self.text = raw.decode("utf-8")
         except UnicodeDecodeError as exc:
-            raise PaperDeltaError("ENCODING", f"{file} must be UTF-8") from exc
+            raise PaperDeltaError("ENCODING", msg("error.ENCODING", file=file)) from exc
         self.byte_offsets = [0]
         for char in self.text:
             self.byte_offsets.append(self.byte_offsets[-1] + len(char.encode("utf-8")))
@@ -182,7 +183,7 @@ class TexDocument:
                 self._walk(nodes)
         except (LatexWalkerParseError, ValueError, RecursionError) as exc:
             self.blocked.append((0, len(self.text), "parse-error"))
-            self.issues.append({"code": "LATEX_PARSE", "file": file, "message": str(exc)})
+            self.issues.append({"code": "LATEX_PARSE", "file": file, "message": error_message(exc)})
 
     def _walk(self, nodes: list) -> None:
         for index, node in enumerate(nodes):
@@ -221,7 +222,7 @@ class TexDocument:
                         {
                             "code": "DYNAMIC_TEX",
                             "file": self.file,
-                            "message": f"Dynamic TeX \\{name} requires a dedicated adapter",
+                            "message": msg("notice.latex", name=name),
                         }
                     )
                     continue
@@ -236,7 +237,7 @@ class TexDocument:
                                 {
                                     "code": "DYNAMIC_PATH",
                                     "file": self.file,
-                                    "message": f"Cannot resolve \\{name} path {target!r}",
+                                    "message": msg("notice.latex.4", name=name, target=target),
                                 }
                             )
                         elif name == "includegraphics":
@@ -248,7 +249,7 @@ class TexDocument:
                             {
                                 "code": "DYNAMIC_PATH",
                                 "file": self.file,
-                                "message": f"Missing literal argument for \\{name}",
+                                "message": msg("notice.latex.3", name=name),
                             }
                         )
                 if name in IGNORED_MACROS:
@@ -270,10 +271,7 @@ class TexDocument:
                         {
                             "code": "UNSUPPORTED_MACRO",
                             "file": self.file,
-                            "message": (
-                                f"Unknown macro \\{name}; "
-                                "declare its literal arguments if appropriate"
-                            ),
+                            "message": (msg("notice.latex.2", name=name)),
                         }
                     )
                     continue
@@ -318,16 +316,17 @@ class TexDocument:
                 if 0 <= end - start <= 1000:
                     candidates.append((start, end))
         if not candidates:
-            raise PaperDeltaError("ANCHOR_MISSING", f"Anchor no longer exists in {self.file}")
+            raise PaperDeltaError("ANCHOR_MISSING", msg("error.ANCHOR_MISSING", value1=self.file))
         # Ambiguity is not resolved by silently discarding a matching commented-out copy.
         if len(candidates) != 1:
             raise PaperDeltaError(
-                "ANCHOR_AMBIGUOUS", f"Anchor has {len(candidates)} matches in {self.file}"
+                "ANCHOR_AMBIGUOUS",
+                msg("error.ANCHOR_AMBIGUOUS", value1=len(candidates), value2=self.file),
             )
         start, end = candidates[0]
         if start == end or not self.checkable(start, end):
             raise PaperDeltaError(
-                "UNSUPPORTED_SPAN", f"Anchor in {self.file} is not in supported content"
+                "UNSUPPORTED_SPAN", msg("error.UNSUPPORTED_SPAN", value1=self.file)
             )
         return self.span(start, end)
 
@@ -343,14 +342,10 @@ class TexDocument:
             token for token in self.numbers() if token.start < span.end and token.end > span.start
         ]
         if len(overlapping) != 1:
-            raise PaperDeltaError(
-                "NUMERIC_ANCHOR", "A numeric binding must contain exactly one numeric token"
-            )
+            raise PaperDeltaError("NUMERIC_ANCHOR", msg("error.NUMERIC_ANCHOR"))
         token = overlapping[0]
         if token.start < span.start or token.end > span.end:
-            raise PaperDeltaError(
-                "PARTIAL_NUMBER", "Anchor selects only part of a numeric token; expand its context"
-            )
+            raise PaperDeltaError("PARTIAL_NUMBER", msg("error.PARTIAL_NUMBER"))
 
 
 class PaperIndex:
@@ -366,11 +361,11 @@ class PaperIndex:
         path = self.project.path(file)
         file = self.project.relative(path)
         if file in self._active:
-            raise PaperDeltaError("INCLUDE_CYCLE", f"LaTeX include cycle at {file}")
+            raise PaperDeltaError("INCLUDE_CYCLE", msg("error.INCLUDE_CYCLE", file=file))
         if file in self.documents:
             return
         if len(self.documents) >= 200 or len(self._active) >= 40:
-            raise PaperDeltaError("INCLUDE_LIMIT", "LaTeX file or nesting limit exceeded")
+            raise PaperDeltaError("INCLUDE_LIMIT", msg("error.INCLUDE_LIMIT"))
         doc = TexDocument(file, self.project.read(file, 4 * 1024 * 1024), self.paper.macros)
         self.documents[file] = doc
         self.issues.extend(doc.issues)
@@ -384,7 +379,7 @@ class PaperIndex:
             existing = [item for item in possible if item.is_file()]
             if len(existing) != 1:
                 raise PaperDeltaError(
-                    "INCLUDE_PATH", f"Missing or ambiguous include {target} from {file}"
+                    "INCLUDE_PATH", msg("error.INCLUDE_PATH", target=target, file=file)
                 )
             self._visit(self.project.relative(existing[0]))
         self._active.remove(file)
@@ -392,7 +387,5 @@ class PaperIndex:
     def document(self, file: str) -> TexDocument:
         relative = self.project.relative(self.project.path(file))
         if relative not in self.documents:
-            raise PaperDeltaError(
-                "UNREACHABLE_TEX", f"{file} is not reachable from the paper entry"
-            )
+            raise PaperDeltaError("UNREACHABLE_TEX", msg("error.UNREACHABLE_TEX", file=file))
         return self.documents[relative]

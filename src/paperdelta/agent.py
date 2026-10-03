@@ -7,6 +7,7 @@ from decimal import Decimal
 
 from paperdelta.analysis import check_project
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import current_language, msg, tr, translated
 from paperdelta.onboarding import propose_bindings, scan_project
 from paperdelta.patches import create_patch
 from paperdelta.snapshots import read_snapshot
@@ -32,9 +33,10 @@ def compact_report(report: dict) -> dict:
                 evidence[key] = evidence[key][:10]
     value["agent_view"] = {
         "evidence_row_limit": 10,
-        "decimal_encoding": "strings preserve exact decimal representation",
+        "decimal_encoding": msg("agent.decimal_encoding"),
+        "language": current_language(),
     }
-    return _wire(value)
+    return _wire(translated(value))
 
 
 class AgentSession:
@@ -43,7 +45,7 @@ class AgentSession:
         self.config_path = config_path
 
     def scan_project(self) -> dict:
-        return _wire(scan_project(self.project, self.config_path))
+        return _wire(translated(scan_project(self.project, self.config_path)))
 
     def check_project(self, baseline: str | None = None) -> dict:
         previous = read_snapshot(self.project, baseline) if baseline else None
@@ -57,14 +59,14 @@ class AgentSession:
             "status": "proposed",
             "proposal_id": value["proposal_id"],
             "proposal_json": json_text(value),
-            "next": "Ask the author to inspect and explicitly accept selected binding IDs.",
+            "next": tr("agent.next_binding"),
         }
 
     def explain_finding(self, finding_id: str) -> dict:
         report = self.check_project()
         finding = next((item for item in report["diagnostics"] if item["id"] == finding_id), None)
         if finding is None:
-            raise PaperDeltaError("FINDING_MISSING", "Finding is absent from the current check")
+            raise PaperDeltaError("FINDING_MISSING", msg("error.FINDING_MISSING"))
         group, _, name = finding["subject"].partition(":")
         states = {"occurrence": "occurrences", "claim": "claims", "figure": "figures"}
         state = report[states[group]].get(name, {}) if group in states else {}
@@ -84,5 +86,5 @@ class AgentSession:
             "status": "proposed",
             "patch_json": json_text(patch),
             "patch_id": patch["patch_id"],
-            "next": "Preview the patch, then obtain explicit authorization before applying it.",
+            "next": tr("agent.next_patch"),
         }

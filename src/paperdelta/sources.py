@@ -11,6 +11,7 @@ from decimal import Decimal, localcontext
 from typing import Any
 
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg
 from paperdelta.metrics import Quantity, derive
 from paperdelta.models import Config, DerivedMetric, Source, SourceMetric
 from paperdelta.storage import Project, canonical, decimal_value, fingerprint, parse_json, sha256
@@ -37,7 +38,7 @@ def json_pointer(data: Any, pointer: str) -> Any:
     if pointer == "":
         return data
     if not pointer.startswith("/") or re.search(r"~(?![01])", pointer):
-        raise PaperDeltaError("INVALID_POINTER", f"Invalid JSON Pointer: {pointer!r}")
+        raise PaperDeltaError("INVALID_POINTER", msg("error.INVALID_POINTER", pointer=pointer))
     current = data
     for raw in pointer[1:].split("/"):
         part = raw.replace("~1", "/").replace("~0", "~")
@@ -46,10 +47,12 @@ def json_pointer(data: Any, pointer: str) -> Any:
         elif isinstance(current, list) and re.fullmatch(r"0|[1-9][0-9]*", part):
             index = int(part)
             if index >= len(current):
-                raise PaperDeltaError("MISSING_VALUE", f"No result at {pointer}")
+                raise PaperDeltaError(
+                    "MISSING_VALUE", msg("error.MISSING_VALUE.2", pointer=pointer)
+                )
             current = current[index]
         else:
-            raise PaperDeltaError("MISSING_VALUE", f"No result at {pointer}")
+            raise PaperDeltaError("MISSING_VALUE", msg("error.MISSING_VALUE", pointer=pointer))
     return current
 
 
@@ -58,9 +61,9 @@ def typed_cell(value: str, kind: str, label: str) -> str | int | Decimal:
         return value
     if kind == "integer":
         if len(value) > 2048:
-            raise PaperDeltaError("NUMBER_LIMIT", f"{label}: integer exceeds 2048 characters")
+            raise PaperDeltaError("NUMBER_LIMIT", msg("error.NUMBER_LIMIT", label=label))
         if not re.fullmatch(r"[+\-]?(0|[1-9][0-9]*)", value):
-            raise PaperDeltaError("COLUMN_TYPE", f"{label}: expected an unambiguous integer")
+            raise PaperDeltaError("COLUMN_TYPE", msg("error.COLUMN_TYPE", label=label))
         return int(value)
     return decimal_value(value)
 
@@ -87,7 +90,9 @@ class EvidenceStore:
             try:
                 data = self._csv(source, text)
             except csv.Error as exc:
-                raise PaperDeltaError("INVALID_CSV", f"{source.path}: {exc}") from exc
+                raise PaperDeltaError(
+                    "INVALID_CSV", msg("error.INVALID_CSV.2", value1=source.path, exc=exc)
+                ) from exc
         self.sources[name] = data
         return data
 
@@ -95,9 +100,9 @@ class EvidenceStore:
         reader = csv.DictReader(io.StringIO(text, newline=""), strict=True)
         names = reader.fieldnames
         if not names or len(set(names)) != len(names):
-            raise PaperDeltaError("CSV_HEADER", f"{source.path}: missing or duplicate headers")
+            raise PaperDeltaError("CSV_HEADER", msg("error.CSV_HEADER.2", value1=source.path))
         if not set(source.columns).issubset(names):
-            raise PaperDeltaError("MISSING_COLUMN", f"{source.path}: a declared column is absent")
+            raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN", value1=source.path))
         keys: set[tuple] = set()
         rows: list[dict] = []
         previous_line = reader.line_num
@@ -107,7 +112,7 @@ class EvidenceStore:
                 previous_line = reader.line_num
                 if None in raw or any(value is None for value in raw.values()):
                     raise PaperDeltaError(
-                        "CSV_ROW", f"{source.path}:{first_line}: wrong column count"
+                        "CSV_ROW", msg("error.CSV_ROW.2", value1=source.path, first_line=first_line)
                     )
                 values = {
                     key: typed_cell(raw[key], kind, f"{source.path}:{first_line}:{key}")
@@ -118,11 +123,15 @@ class EvidenceStore:
                 # same exact Decimal identity without serializing every CSV row.
                 key = tuple(identity.values())
                 if key in keys:
-                    raise PaperDeltaError("DUPLICATE_RECORD", f"Duplicate primary key: {identity}")
+                    raise PaperDeltaError(
+                        "DUPLICATE_RECORD", msg("error.DUPLICATE_RECORD", identity=identity)
+                    )
                 keys.add(key)
                 rows.append({"values": values, "key": identity, "line": first_line})
         except csv.Error as exc:
-            raise PaperDeltaError("INVALID_CSV", f"{source.path}: {exc}") from exc
+            raise PaperDeltaError(
+                "INVALID_CSV", msg("error.INVALID_CSV", value1=source.path, exc=exc)
+            ) from exc
         return rows
 
     def _select_csv(self, name: str, data: list[dict], where: dict) -> list[dict]:
@@ -176,23 +185,23 @@ class EvidenceStore:
         selected: list[dict]
         if source.format == "csv":
             if metric.field not in source.columns or not set(metric.where).issubset(source.columns):
-                raise PaperDeltaError("MISSING_COLUMN", "Metric selects an undeclared column")
+                raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN.2"))
             if metric.reduce != "count" and source.columns[metric.field] == "string":
-                raise PaperDeltaError(
-                    "COLUMN_TYPE", "Numeric metrics require a declared numeric column"
-                )
+                raise PaperDeltaError("COLUMN_TYPE", msg("error.COLUMN_TYPE.2"))
             for column, value in metric.where.items():
                 expected = typed_cell(str(value), source.columns[column], column)
                 if type(value) is not type(expected):
-                    raise PaperDeltaError("SELECTOR_TYPE", f"Wrong selector type for {column}")
+                    raise PaperDeltaError(
+                        "SELECTOR_TYPE", msg("error.SELECTOR_TYPE", column=column)
+                    )
             selected = self._select_csv(metric.source, data, metric.where)
             if metric.expected_seeds is not None:
                 if metric.seed_column not in source.columns:
-                    raise PaperDeltaError("MISSING_COLUMN", "Seed column is not declared")
+                    raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN.3"))
                 seeds = [row["values"][metric.seed_column] for row in selected]
                 if len(seeds) != len(set(seeds)) or set(seeds) != set(metric.expected_seeds):
                     raise PaperDeltaError(
-                        "SEED_SET", f"Expected seeds {metric.expected_seeds}, got {seeds}"
+                        "SEED_SET", msg("error.SEED_SET", value1=metric.expected_seeds, seeds=seeds)
                     )
             values = [row["values"][metric.field] for row in selected]
             records = [
@@ -202,23 +211,24 @@ class EvidenceStore:
             locations = [{"key": row["key"], "line": row["line"]} for row in selected]
         else:
             if metric.where or metric.expected_seeds is not None:
-                raise PaperDeltaError(
-                    "JSON_SELECTOR", "JSON metrics use field pointers, without CSV filters"
-                )
+                raise PaperDeltaError("JSON_SELECTOR", msg("error.JSON_SELECTOR"))
             value = json_pointer(data, metric.field)
             values = value if isinstance(value, list) else [value]
             records = [{"index": i, "value": item} for i, item in enumerate(values)]
             locations = [{"pointer": metric.field}]
         if not values:
-            raise PaperDeltaError("EMPTY_SELECTION", "Metric selection returned no records")
+            raise PaperDeltaError("EMPTY_SELECTION", msg("error.EMPTY_SELECTION"))
         if len(values) > 10000:
-            raise PaperDeltaError("SELECTION_LIMIT", "A metric may select at most 10,000 records")
+            raise PaperDeltaError("SELECTION_LIMIT", msg("error.SELECTION_LIMIT"))
         if metric.expected_count is not None and len(values) != metric.expected_count:
             raise PaperDeltaError(
-                "RECORD_COUNT", f"Expected {metric.expected_count} records, got {len(values)}"
+                "RECORD_COUNT",
+                msg("error.RECORD_COUNT", value1=metric.expected_count, value2=len(values)),
             )
         if metric.reduce == "unique" and len(values) != 1:
-            raise PaperDeltaError("AMBIGUOUS_SELECTION", f"Expected one record, got {len(values)}")
+            raise PaperDeltaError(
+                "AMBIGUOUS_SELECTION", msg("error.AMBIGUOUS_SELECTION", value1=len(values))
+            )
         numbers = [decimal_value(value) for value in values] if metric.reduce != "count" else []
         with localcontext() as context:
             context.prec = 4096
@@ -255,5 +265,5 @@ class EvidenceStore:
                 self.check_scope(ref, scope)
         elif any(metric.where.get(key) != value for key, value in scope.items()):
             raise PaperDeltaError(
-                "SCOPE_MISMATCH", f"Metric {name} does not establish claim scope {scope}"
+                "SCOPE_MISMATCH", msg("error.SCOPE_MISMATCH", name=name, scope=scope)
             )

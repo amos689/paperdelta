@@ -5,51 +5,66 @@ from __future__ import annotations
 from html import escape
 
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg, tr, translated
 from paperdelta.storage import Project, json_text
 
 
 def text_report(report: dict) -> str:
     counts = report["coverage"]
     lines = [
-        "PaperDelta — consistency with supplied experiment results",
-        f"{counts['confirmed']} confirmed bindings: {counts['pass']} pass, "
-        f"{counts['mismatch']} mismatch, {counts['unknown']} unknown",
-        f"{len(counts['unbound_numbers'])} unbound numeric candidates; "
-        f"{len(counts['unsupported'])} unsupported regions",
-        f"{len(counts['unregistered_figures'])} unregistered or unresolved figure references",
+        tr("report.title"),
+        tr(
+            "report.counts",
+            confirmed=counts["confirmed"],
+            passed=counts["pass"],
+            mismatch=counts["mismatch"],
+            unknown=counts["unknown"],
+        ),
+        tr(
+            "report.coverage",
+            unbound=len(counts["unbound_numbers"]),
+            unsupported=len(counts["unsupported"]),
+        ),
+        tr("report.figures", count=len(counts["unregistered_figures"])),
     ]
     for item in report["diagnostics"]:
         location = item.get("location", {})
         where = f"{location['file']}:{location['line']}" if location else item["subject"]
-        lines.append(f"{item['severity'].upper()} {where} [{item['rule']}] {item['message']}")
+        severity = tr("status." + item["severity"]).upper()
+        lines.append(f"{severity} {where} [{item['rule']}] {translated(item['message'])}")
     if report["baseline"]:
-        lines.append(f"{len(report['changes'])} metric changes since {report['baseline']['name']}")
-    else:
         lines.append(
-            "No baseline selected: current consistency only; historical changes unavailable."
+            tr("report.baseline", count=len(report["changes"]), name=report["baseline"]["name"])
         )
+    else:
+        lines.append(tr("report.no_baseline"))
     for name, state in report["claims"].items():
         lines.append(
-            f"Review {name}: {state.get('review', 'unreviewed')} "
-            f"(current comparison: {state['status']})"
+            tr(
+                "report.review",
+                name=name,
+                review=tr("status." + state.get("review", "unreviewed")),
+                status=tr("status." + state["status"]),
+            )
         )
     return "\n".join(lines) + "\n"
 
 
 def markdown_report(report: dict) -> str:
     # Indented output avoids letting source text close a Markdown fence.
-    output = "# PaperDelta review\n\n" + "\n".join(
-        "    " + line for line in text_report(report).splitlines()
+    output = (
+        "# "
+        + tr("report.markdown_title")
+        + "\n\n"
+        + "\n".join("    " + line for line in text_report(report).splitlines())
     )
-    output += "\n\n## Metric changes\n\n"
+    output += "\n\n## " + tr("report.changes") + "\n\n"
     for change in report["changes"]:
         output += "    " + json_text(change).replace("\n", "\n    ").rstrip() + "\n\n"
-    output += "\n## Impact groups\n\n"
+    output += "\n## " + tr("report.impacts") + "\n\n"
     for group in report["impact_groups"]:
         output += "    " + json_text(group).replace("\n", "\n    ").rstrip() + "\n\n"
-    return (
-        output + "\nThis report checks declared bindings, not the scientific truth of the paper.\n"
-    )
+    return output + "\n" + tr("report.scope") + "\n"
 
 
 def html_report(report: dict) -> str:
@@ -287,6 +302,6 @@ def write_reports(project: Project, directory: str, report: dict) -> None:
     protected = {project.path(name) for name in report["input_hashes"]}
     for name in outputs:
         if project.path(f"{directory}/{name}") in protected:
-            raise PaperDeltaError("REPORT_OVERWRITE", "Report output would overwrite an input file")
+            raise PaperDeltaError("REPORT_OVERWRITE", msg("error.REPORT_OVERWRITE"))
     for name, content in outputs.items():
         project.write(f"{directory}/{name}", content.encode("utf-8"))

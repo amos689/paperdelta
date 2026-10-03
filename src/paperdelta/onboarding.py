@@ -14,7 +14,8 @@ from pydantic import Field
 from paperdelta import __version__
 from paperdelta.analysis import check_configuration
 from paperdelta.config import config_text, load_config
-from paperdelta.errors import PaperDeltaError
+from paperdelta.errors import PaperDeltaError, error_message
+from paperdelta.i18n import msg
 from paperdelta.latex import PaperIndex
 from paperdelta.models import (
     Claim,
@@ -71,12 +72,14 @@ def _source_summary(project: Project, path: str) -> tuple[dict, str]:
             reader = csv.DictReader(io.StringIO(text, newline=""), strict=True)
             headers = reader.fieldnames
             if not headers or len(set(headers)) != len(headers):
-                raise PaperDeltaError("CSV_HEADER", f"{path}: missing or duplicate columns")
+                raise PaperDeltaError("CSV_HEADER", msg("error.CSV_HEADER", path=path))
             sample = []
             count = 0
             for row in reader:
                 if None in row or any(value is None for value in row.values()):
-                    raise PaperDeltaError("CSV_ROW", f"{path}:{reader.line_num}: invalid row")
+                    raise PaperDeltaError(
+                        "CSV_ROW", msg("error.CSV_ROW", path=path, value2=reader.line_num)
+                    )
                 count += 1
                 if len(sample) < 5:
                     sample.append(row)
@@ -90,7 +93,7 @@ def _source_summary(project: Project, path: str) -> tuple[dict, str]:
                 "needs_confirmation": ["column types", "primary key", "units", "scope"],
             }
         except csv.Error as exc:
-            raise PaperDeltaError("INVALID_CSV", str(exc)) from exc
+            raise PaperDeltaError("INVALID_CSV", error_message(exc)) from exc
     elif suffix == ".json":
         value = parse_json(text)
         leaves = []
@@ -122,7 +125,7 @@ def _source_summary(project: Project, path: str) -> tuple[dict, str]:
             "needs_confirmation": ["units", "experiment identity"],
         }
     else:
-        raise PaperDeltaError("SOURCE_FORMAT", "Discovery supports .csv and .json files")
+        raise PaperDeltaError("SOURCE_FORMAT", msg("error.SOURCE_FORMAT"))
     return result, sha256(raw)
 
 
@@ -140,7 +143,7 @@ def init_project(
         _source_summary(project, path)
     hints = ".paperdelta/onboarding.json"
     if project.path(config_path).exists() or project.path(hints).exists():
-        raise PaperDeltaError("ALREADY_EXISTS", "Configuration or onboarding hints already exist")
+        raise PaperDeltaError("ALREADY_EXISTS", msg("error.ALREADY_EXISTS"))
     # These paths are discovery hints, not accepted evidence declarations.
     project.write(
         hints, json_text({"schema_version": 1, "data": data}).encode("utf-8"), exclusive=True
@@ -217,7 +220,7 @@ def scan_project(
         "confirmed": {
             group: list(getattr(config, group)) for group in ("occurrences", "claims", "figures")
         },
-        "notice": "Candidates and equal numbers do not establish a scientific mapping.",
+        "notice": msg("notice.onboarding"),
     }
 
 
@@ -227,7 +230,8 @@ def _merge(config: Config, additions: Additions) -> Config:
         duplicates = set(value[group]) & set(entries)
         if duplicates:
             raise PaperDeltaError(
-                "BINDING_CONFLICT", f"Existing {group} cannot be overwritten: {sorted(duplicates)}"
+                "BINDING_CONFLICT",
+                msg("error.BINDING_CONFLICT", group=group, value2=sorted(duplicates)),
             )
         value[group].update(entries)
     return validate_record(Config, value, "PROPOSAL_CONFIG")
@@ -249,7 +253,7 @@ def _check_additions(project, config, config_path, config_hash, additions):
         if report[group].get(name, {}).get("status") not in {"pass", "mismatch"}:
             raise PaperDeltaError(
                 "PROPOSAL_UNRESOLVED",
-                f"{binding} could not be verified; inspect scan/check diagnostics",
+                msg("error.PROPOSAL_UNRESOLVED", binding=binding),
             )
     return merged, report
 
@@ -271,9 +275,7 @@ def propose_bindings(
         or set(rationale) != set(bindings)
         or any(not text.strip() for text in rationale.values())
     ):
-        raise PaperDeltaError(
-            "PROPOSAL_RATIONALE", "Provide a reason for every proposed binding ID"
-        )
+        raise PaperDeltaError("PROPOSAL_RATIONALE", msg("error.PROPOSAL_RATIONALE"))
     config, config_hash = load_config(project, config_path)
     _, report = _check_additions(project, config, config_path, config_hash, changes)
     body = {
@@ -296,31 +298,25 @@ def inspect_proposal(project: Project, value: dict) -> tuple[Proposal, Config, d
         proposal.proposal_id != fingerprint(proposal.model_dump(exclude={"proposal_id"}))
         or proposal.tool_version != __version__
     ):
-        raise PaperDeltaError(
-            "PROPOSAL_IDENTITY", "Proposal is damaged or from another tool version"
-        )
+        raise PaperDeltaError("PROPOSAL_IDENTITY", msg("error.PROPOSAL_IDENTITY"))
     config, config_hash = load_config(project, proposal.config_path)
     if config_hash != proposal.input_hashes.get(proposal.config_path):
-        raise PaperDeltaError("STALE_PROPOSAL", "Configuration changed; propose again")
+        raise PaperDeltaError("STALE_PROPOSAL", msg("error.STALE_PROPOSAL"))
     merged, report = _check_additions(
         project, config, proposal.config_path, config_hash, proposal.additions
     )
     if report["input_hashes"] != proposal.input_hashes:
-        raise PaperDeltaError(
-            "STALE_PROPOSAL", "Configuration, paper or evidence changed; propose again"
-        )
+        raise PaperDeltaError("STALE_PROPOSAL", msg("error.STALE_PROPOSAL.2"))
     return proposal, merged, report
 
 
 def accept_bindings(project: Project, value: dict, selected: list[str]) -> dict:
     if not selected or len(set(selected)) != len(selected):
-        raise PaperDeltaError(
-            "BINDING_SELECTION", "Explicitly select one or more unique binding IDs"
-        )
+        raise PaperDeltaError("BINDING_SELECTION", msg("error.BINDING_SELECTION"))
     with _write_lock(project):
         proposal, _, _ = inspect_proposal(project, value)
         if not set(selected).issubset(_binding_ids(proposal.additions)):
-            raise PaperDeltaError("BINDING_SELECTION", "Unknown selected binding ID")
+            raise PaperDeltaError("BINDING_SELECTION", msg("error.BINDING_SELECTION.2"))
         additions = proposal.additions.model_dump()
         chosen = {group: {} for group in additions}
         required = set()
@@ -351,7 +347,7 @@ def accept_bindings(project: Project, value: dict, selected: list[str]) -> dict:
         )
         for path, identity in proposal.input_hashes.items():
             if sha256(project.read(path)) != identity:
-                raise PaperDeltaError("STALE_PROPOSAL", f"{path} changed before accepting bindings")
+                raise PaperDeltaError("STALE_PROPOSAL", msg("error.STALE_PROPOSAL.3", path=path))
         backup = f".paperdelta/config-backups/{uuid.uuid4().hex}.yaml"
         project.write(backup, project.read(proposal.config_path), exclusive=True)
         project.write(proposal.config_path, config_text(merged).encode("utf-8"))
@@ -367,9 +363,9 @@ def parse_macros(values: list[str]) -> dict[str, int]:
     macros = {}
     for value in values:
         if not re.fullmatch(r"[A-Za-z]+=[0-9]", value):
-            raise PaperDeltaError("MACRO_DECLARATION", "Use --macro name=arity with arity 0–9")
+            raise PaperDeltaError("MACRO_DECLARATION", msg("error.MACRO_DECLARATION"))
         name, arity = value.split("=")
         if name in macros:
-            raise PaperDeltaError("MACRO_DECLARATION", f"Duplicate macro: {name}")
+            raise PaperDeltaError("MACRO_DECLARATION", msg("error.MACRO_DECLARATION.2", name=name))
         macros[name] = int(arity)
     return macros

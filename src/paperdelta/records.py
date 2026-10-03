@@ -8,7 +8,8 @@ from typing import Annotated, Any, Literal
 
 from pydantic import Field, ValidationError, field_validator, model_validator
 
-from paperdelta.errors import PaperDeltaError
+from paperdelta.errors import PaperDeltaError, error_message, validation_error
+from paperdelta.i18n import msg
 from paperdelta.models import (
     DerivedMetric,
     Hash,
@@ -39,11 +40,11 @@ class SourceLocation(StrictModel):
     @model_validator(mode="after")
     def ordered_span(self):
         if self.end <= self.start or self.byte_end <= self.byte_start:
-            raise ValueError("Source locations require a nonempty ordered span")
+            raise validation_error(msg("validation.records"))
         if self.end - self.start != len(self.text):
-            raise ValueError("Character span does not match its original text")
+            raise validation_error(msg("validation.records.2"))
         if self.byte_end - self.byte_start != len(self.text.encode("utf-8")):
-            raise ValueError("UTF-8 byte span does not match its original text")
+            raise validation_error(msg("validation.records.3"))
         return self
 
 
@@ -68,7 +69,7 @@ class EvidenceDatum(StrictModel):
                 for child in item.values():
                     check(child)
                 return
-            raise ValueError("Evidence payloads must be JSON with exact finite numeric values")
+            raise validation_error(msg("validation.records.4"))
 
         check(value)
         return value
@@ -104,16 +105,16 @@ class Evidence(StrictModel):
     @model_validator(mode="after")
     def complete_rows(self):
         if len(self.records) != self.count:
-            raise ValueError("Stored evidence must contain all selected records")
+            raise validation_error(msg("validation.records.5"))
         if all(isinstance(record, CsvRecord) for record in self.records):
             if len(self.locations) != self.count or any(
                 not isinstance(location, CsvLocation) for location in self.locations
             ):
-                raise ValueError("CSV evidence requires one location for each record")
+                raise validation_error(msg("validation.records.17"))
         elif any(isinstance(record, CsvRecord) for record in self.records) or (
             len(self.locations) != 1 or not isinstance(self.locations[0], JsonLocation)
         ):
-            raise ValueError("JSON evidence requires one pointer and indexed records")
+            raise validation_error(msg("validation.records.18"))
         return self
 
 
@@ -125,7 +126,7 @@ class TimestampedRecord(StrictModel):
     def timestamp(cls, value):
         parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
         if parsed.tzinfo is None:
-            raise ValueError("A record timestamp requires a timezone")
+            raise validation_error(msg("validation.records.6"))
         return value
 
 
@@ -152,9 +153,9 @@ class FigureRecord(StrictModel):
     def consistent_identities(self):
         identities = {**self.inputs, self.path: self.output_hash}
         if self.script.path in identities and identities[self.script.path] != self.script.hash:
-            raise ValueError("One path cannot have conflicting recorded identities")
+            raise validation_error(msg("validation.records.7"))
         if self.path in self.inputs and self.inputs[self.path] != self.output_hash:
-            raise ValueError("Output and input identities conflict")
+            raise validation_error(msg("validation.records.8"))
         return self
 
 
@@ -180,7 +181,7 @@ class MetricState(StrictModel):
             except InvalidOperation:
                 finite = False
             if not finite:
-                raise ValueError("Metric values must be finite decimal text")
+                raise validation_error(msg("validation.records.19"))
         return value
 
     @model_validator(mode="after")
@@ -189,7 +190,7 @@ class MetricState(StrictModel):
             value is None
             for value in (self.value, self.unit, self.fingerprint, self.definition_fingerprint)
         ):
-            raise ValueError("Successful metrics require value, unit and identities")
+            raise validation_error(msg("validation.records.9"))
         return self
 
 
@@ -214,9 +215,9 @@ class OccurrenceState(StrictModel):
             value is None
             for value in (self.location, self.expected, self.actual, self.evidence_fingerprint)
         ):
-            raise ValueError("A numeric verdict requires location, displays and evidence identity")
+            raise validation_error(msg("validation.records.10"))
         if self.suggestion is not None and self.status != "mismatch":
-            raise ValueError("Only mismatches can have numeric suggestions")
+            raise validation_error(msg("validation.records.11"))
         return self
 
 
@@ -233,7 +234,7 @@ class ClaimState(StrictModel):
     @model_validator(mode="after")
     def completed_check(self):
         if self.status != "unknown" and (self.location is None or self.state_fingerprint is None):
-            raise ValueError("A claim verdict requires original text and evidence state")
+            raise validation_error(msg("validation.records.12"))
         return self
 
 
@@ -249,7 +250,7 @@ class FigureState(StrictModel):
     @model_validator(mode="after")
     def completed_check(self):
         if self.status != "unknown" and (self.record_method is None or not self.dependencies):
-            raise ValueError("Figure verdict requires a source record and dependencies")
+            raise validation_error(msg("validation.records.13"))
         return self
 
 
@@ -313,9 +314,9 @@ class Coverage(StrictModel):
     @model_validator(mode="after")
     def counted_checks(self):
         if self.confirmed != self.pass_ + self.mismatch + self.unknown:
-            raise ValueError("Confirmed coverage must equal pass + mismatch + unknown")
+            raise validation_error(msg("validation.records.14"))
         if len(self.unbound_numbers) > self.candidate_numbers:
-            raise ValueError("Unbound candidates cannot exceed all numeric candidates")
+            raise validation_error(msg("validation.records.15"))
         return self
 
 
@@ -350,7 +351,7 @@ class StoredReport(TimestampedRecord):
                 ("unknown", self.coverage.unknown),
             ]
         ):
-            raise ValueError("Coverage counts must describe the stored verdicts")
+            raise validation_error(msg("validation.records.16"))
         return self
 
 
@@ -380,4 +381,4 @@ def validate_record(model, value, code: str):
     try:
         return model.model_validate(value)
     except (ValidationError, RecursionError) as exc:
-        raise PaperDeltaError(code, str(exc)) from exc
+        raise PaperDeltaError(code, error_message(exc)) from exc

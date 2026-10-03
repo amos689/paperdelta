@@ -8,6 +8,7 @@ from pathlib import Path
 from paperdelta import __version__
 from paperdelta.config import load_config
 from paperdelta.errors import PaperDeltaError
+from paperdelta.i18n import msg
 from paperdelta.latex import PaperIndex, Span
 from paperdelta.metrics import Quantity, comparable, display_matches, render
 from paperdelta.models import Config, Predicate, Threshold
@@ -134,7 +135,7 @@ def check_configuration(
         # Re-read identities once to detect files changing during the check itself.
         for path, expected in report["input_hashes"].items():
             if sha256(project.read(path)) != expected:
-                raise PaperDeltaError("INPUT_CHANGED", f"{path} changed while checking; run again")
+                raise PaperDeltaError("INPUT_CHANGED", msg("error.INPUT_CHANGED", path=path))
     except PaperDeltaError as exc:
         report["diagnostics"].append(_diagnostic(exc.code, "project", "unknown", str(exc)))
     _finish(report)
@@ -191,8 +192,12 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                         "VALUE_MISMATCH",
                         subject,
                         "error",
-                        f"{span.text!r} should display {expected!r} "
-                        f"from metric {occurrence.metric}",
+                        msg(
+                            "diagnostic.VALUE_MISMATCH",
+                            value1=span.text,
+                            expected=expected,
+                            value3=occurrence.metric,
+                        ),
                         span,
                     )
                 )
@@ -230,7 +235,7 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                         "CLAIM_FALSE",
                         subject,
                         "error",
-                        "The confirmed comparison no longer holds for the selected evidence",
+                        msg("diagnostic.CLAIM_FALSE"),
                         span,
                     )
                 )
@@ -282,7 +287,7 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                 "INCOMPLETE_COVERAGE",
                 "project",
                 "unknown",
-                "Unbound numbers, unregistered figures or unsupported regions remain",
+                msg("diagnostic.INCOMPLETE_COVERAGE"),
             )
         )
 
@@ -312,14 +317,12 @@ def _check_figures(config: Config, project: Project, report: dict) -> None:
             actual = sha256(project.read(figure.path))
             report["input_hashes"][figure.path] = actual
             if figure.record is None:
-                raise PaperDeltaError("PROVENANCE_UNKNOWN", "No figure generation record supplied")
+                raise PaperDeltaError("PROVENANCE_UNKNOWN", msg("error.PROVENANCE_UNKNOWN"))
             text, raw = project.text(figure.record, 1024 * 1024)
             report["input_hashes"][figure.record] = sha256(raw)
             record = validate_record(FigureRecord, parse_json(text), "FIGURE_RECORD").model_dump()
             if record["path"] != figure.path:
-                raise PaperDeltaError(
-                    "FIGURE_RECORD", "Figure record fields or output path are invalid"
-                )
+                raise PaperDeltaError("FIGURE_RECORD", msg("error.FIGURE_RECORD"))
             inputs, script = record["inputs"], record["script"]
             changed = []
             for path, expected in {**inputs, script["path"]: script["hash"]}.items():
@@ -344,7 +347,7 @@ def _check_figures(config: Config, project: Project, report: dict) -> None:
                         "FIGURE_CHANGED",
                         f"figure:{name}",
                         "error",
-                        f"Recorded identities changed: {changed}",
+                        msg("diagnostic.FIGURE_CHANGED", changed=changed),
                     )
                 )
         except PaperDeltaError as exc:
@@ -408,7 +411,7 @@ def _finish(report: dict) -> None:
                 "NO_BINDINGS",
                 "project",
                 "unknown",
-                "No confirmed bindings; initialize and accept mappings first",
+                msg("diagnostic.NO_BINDINGS"),
             )
         )
     severities = {finding["severity"] for finding in report["diagnostics"]}
