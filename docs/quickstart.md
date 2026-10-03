@@ -165,3 +165,7 @@ a decimal and is refused when it cuts a token.
 
 The original multi-file fixture in `examples/research-paper` includes three seeds,
 a baseline, a percentage point difference, repeated occurrences and a comparison.
+
+For text PDFs and shared LaTeX/Word/PDF metrics, see the [PDF guide](pdf.md).
+Install `paperdelta[pdf]` or `paperdelta[docx,pdf,mcp]` as needed. PDF positions
+use original page boxes; source/export relationships require explicit declarations.

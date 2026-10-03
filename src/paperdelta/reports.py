@@ -64,6 +64,16 @@ def text_report(report: dict) -> str:
                 count=len(action["subjects"]),
             )
         )
+    for export in report.get("exports", []):
+        lines.append(
+            tr(
+                "pdf.export_line",
+                file=export["file"],
+                source=export["source"],
+                metric=export["metric"] or "—",
+                status=tr("pdf.export_" + export["status"]),
+            )
+        )
     for item in report["diagnostics"]:
         location = item.get("location", {})
         where = translate_location(location_label(location)) if location else item["subject"]
@@ -105,10 +115,12 @@ def markdown_report(report: dict) -> str:
 
 
 def write_reports(project: Project, directory: str, report: dict) -> None:
+    from paperdelta.pdf_previews import pdf_previews
+
     outputs = {
         "report.json": json_text(report),
         "report.md": markdown_report(report),
-        "report.html": html_report(report),
+        "report.html": html_report(report, previews=pdf_previews(project, report)),
     }
     protected = {project.path(name) for name in report["input_hashes"]}
     protected.add(project.path(report["config_path"]))

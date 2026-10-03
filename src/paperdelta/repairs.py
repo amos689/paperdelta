@@ -203,6 +203,20 @@ def propose_repairs(
     project: Project, selections: list[dict], *, config_path="paperdelta.yaml", baseline=None
 ):
     choices = [validate_record(RepairSelection, item, "REPAIR_SCHEMA") for item in selections]
+    # A newly requested exact-text repair records the current PDF extractor.
+    # Saved proposals keep that identity and cannot silently adopt a new parser.
+    if any(item.binding.startswith("claims:") and item.anchor for item in choices):
+        config, _ = load_config(project, config_path)
+        paper = PaperIndex(project, config.paper)
+        for item in choices:
+            if item.binding.startswith("claims:") and item.anchor and item.file:
+                document = paper.document(item.file)
+                if (
+                    getattr(document, "format", None) == "pdf"
+                    and item.anchor.table is None
+                    and item.anchor.parser is None
+                ):
+                    item.anchor = item.anchor.model_copy(update={"parser": document.parser})
     _, _, _, hashes = _derive(project, choices, config_path, baseline)
     body = {
         "repair_schema_version": 1,

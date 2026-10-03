@@ -50,6 +50,7 @@ class Watcher:
         try:
             config, _ = load_config(self.project, self.config_path)
             paths.add(config.paper.entry)
+            paths.update(item.entry for item in config.paper.companions)
             paths.update(source.path for source in config.sources.values())
             for figure in config.figures.values():
                 paths.add(figure.path)

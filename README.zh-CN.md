@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.4.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.4.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.5.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.5.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -19,6 +19,7 @@
   <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="需要 Python 3.11 以上版本"></a>
   <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x 数据校验"></a>
   <a href="docs/zh-CN/rules.md"><img src="docs/assets/badges/latex.zh-CN.svg" alt="受支持的静态 LaTeX 输入"></a>
+  <a href="docs/zh-CN/pdf.md"><img src="docs/assets/badges/native.zh-CN.svg" alt="可选 Word 与 PDF 读取"></a>
   <a href="docs/zh-CN/agent-guide.md"><img src="docs/assets/badges/mcp.zh-CN.svg" alt="可选的只读 MCP 工具"></a>
 </p>
 
@@ -38,7 +39,7 @@
 **提高 3.1 个百分点**及**优于基线**的结论也不再成立。PaperDelta 将这些表述关联到
 明确声明的 CSV/JSON 证据，集中展示需要复核的位置，即使 LaTeX 文件本身没有变化。
 
-本地 Python 命令行 · LaTeX + 可选 Word · 精确十进制计算 · 离线 HTML · 可选 MCP。
+本地 Python 命令行 · LaTeX + 可选 Word/PDF · 精确十进制计算 · 离线 HTML · 可选 MCP。
 检查不需要模型密钥、GPU 或 TeX 安装。
 
 <p>
@@ -52,13 +53,18 @@
 [打开原尺寸动图](docs/assets/v0.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.3/report.zh-CN.png)。
 
-**0.4.0** 增加只读 Word 稿件检查：段落、拆分格式片段、普通表格和原生位置，
-沿用相同的绑定、修复和监听流程。详见 [Word 指南](docs/zh-CN/word.md)与
-[发行及升级说明](docs/zh-CN/v0.4.md)。
+**0.5.0** 增加文字型 PDF 检查、原页高亮，以及 LaTeX、Word、PDF 共享指标的多稿件
+审查，能够指出源稿已更新、导出 PDF 仍过期的情况。详见
+[PDF 与多稿件指南](docs/zh-CN/pdf.md)、[Word 指南](docs/zh-CN/word.md)和
+[发行及升级说明](docs/zh-CN/v0.5.md)。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 从本版开始采用正式版本号。
 
 ## 安装并查看第一份报告
+
+试用源稿/PDF 示例：安装 `paperdelta[pdf]`，然后运行
+`paperdelta --lang zh-CN demo --document pdf --out pdf-demo --open`。
+报告提供原页高亮；PDF 检查为只读，不进行 OCR。
 
 试用 Word 示例：安装 `paperdelta[docx]`，然后运行
 `paperdelta --lang zh-CN demo --document docx --out word-demo --open`。
@@ -85,7 +91,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-0.4.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-0.5.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -163,10 +169,14 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 表格；修订、域和复杂排版仍标为未验证。详见[规则与限制](docs/zh-CN/rules.md)及
 [Word 支持边界](docs/zh-CN/word.md)。
 
+安装可选 `paperdelta[pdf]` 可核对文字型 PDF，保留原页坐标与解析身份；扫描页和
+不可靠版式保持未验证。多稿件共享明确声明的指标，可以额外声明源稿与导出稿关系。
+参见 [PDF 边界与工作流](docs/zh-CN/pdf.md)。
+
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.4.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v0.5.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

@@ -109,3 +109,7 @@ python tools/evaluate_mappings.py score --submission saved-submission.json --out
 
 v0.2 使用独立版本的[分步评测](staged-model-evaluation.md)。Qwen3-8B 跟进试验没有
 产生有效完整映射。确定性构造控制通过，但这个模型配置未通过自动映射质量验收。
+
+文字型 PDF 与 LaTeX/Word/PDF 共享指标流程见 [PDF 指南](pdf.md)。按需安装
+`paperdelta[pdf]` 或 `paperdelta[docx,pdf,mcp]`。PDF 保留原页坐标，源稿与导出稿
+关系需要明确声明。

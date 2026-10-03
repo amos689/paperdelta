@@ -312,7 +312,7 @@ class TexDocument:
         )
 
     def locate(self, anchor: Anchor) -> Span:
-        if anchor.block is not None:
+        if anchor.block is not None or anchor.parser is not None:
             raise PaperDeltaError("DOCUMENT_ANCHOR_FORMAT", msg("document.anchor_format"))
         if anchor.table is not None:
             from paperdelta.tables import locate_cell

@@ -8,7 +8,7 @@
 `paperdelta schema KIND` 提供 configuration、proposal-input、proposal、patch、
 binding-draft、repair-proposal、figure-record、review-record、snapshot 和 report
 的 JSON schema。未知字段、未支持版本、JSON/YAML 重复键和可执行 YAML 标签均被
-拒绝。嵌套证据、诊断、位置和覆盖采用严格的[版本 1 报告约定](report-format.md)。
+拒绝。嵌套证据、诊断、位置和覆盖采用严格的[版本化报告约定](report-format.md)。
 接口存在本身不等于发行验收通过。
 
 ## 证据
@@ -77,3 +77,7 @@ CSV 声明主键列及 string/integer/decimal 类型。重复主键、缺列和�
 退出 0 表示必需的已确认检查与给定证据一致。除非启用 `require_complete_coverage`，
 它不涵盖未绑定候选或未支持内容。退出 1 表示不一致；退出 2 表示必要检查不完整
 或没有绑定。报告始终包含覆盖范围。任何工作流都不认证证据或科学真理。
+
+文字型 PDF 与 LaTeX/Word/PDF 共享指标流程见 [PDF 指南](pdf.md)。按需安装
+`paperdelta[pdf]` 或 `paperdelta[docx,pdf,mcp]`。PDF 保留原页坐标，源稿与导出稿
+关系需要明确声明。

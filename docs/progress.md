@@ -2,7 +2,10 @@
 
 [简体中文](zh-CN/progress.md)
 
-Current release: [0.3.0](v0.3.md), including the [installed demo and new workflows](workflows.md). Earlier version-specific records below remain historical.
+Current release: [0.5.0](v0.5.md), adding [PDF and multiple manuscripts](pdf.md)
+to [Word review](word.md) and the existing LaTeX workflows. Earlier version-specific
+records below remain historical. Current test totals and artifact identities are
+recorded in each release's attached validation bundle.
 
 Started 2026-10-02; updated 2026-10-03 Sydney time. The v0.2 history is recorded in the
 [v0.2 ledger](v0.2-plan.md). The earlier a2 alpha has a

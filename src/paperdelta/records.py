@@ -11,6 +11,7 @@ from pydantic import Field, ValidationError, field_validator, model_validator
 from paperdelta.errors import PaperDeltaError, error_message, validation_error
 from paperdelta.i18n import msg
 from paperdelta.models import (
+    Coordinate,
     DerivedMetric,
     Hash,
     Identifier,
@@ -86,7 +87,49 @@ class DocxLocation(StrictModel):
         return self
 
 
-SourceLocation = LatexLocation | DocxLocation
+class PdfLocator(StrictModel):
+    page: Annotated[int, Field(ge=1, le=200)]
+    bbox: Annotated[list[Coordinate], Field(min_length=4, max_length=4)]
+    page_box: Annotated[list[Coordinate], Field(min_length=4, max_length=4)]
+    block: Hash
+    offset: Nonnegative
+    region: Identifier | None = None
+    table: Positive | None = None
+    row: Positive | None = None
+    cell: Positive | None = None
+
+    @model_validator(mode="after")
+    def ordered_box(self):
+        outer, box = self.page_box, self.bbox
+        if not (
+            outer[0] <= box[0] < box[2] <= outer[2] and outer[1] <= box[1] < box[3] <= outer[3]
+        ):
+            raise validation_error(msg("pdf.region_box"))
+        if any(v is not None for v in (self.table, self.row, self.cell)) and any(
+            v is None for v in (self.table, self.row, self.cell)
+        ):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+class PdfLocation(StrictModel):
+    file: str
+    start: Nonnegative
+    end: Nonnegative
+    text: str
+    format: Literal["pdf"]
+    parser: str = Field(min_length=1)
+    locator: PdfLocator
+    context: str
+
+    @model_validator(mode="after")
+    def ordered_span(self):
+        if self.end <= self.start or self.end - self.start != len(self.text):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+SourceLocation = LatexLocation | DocxLocation | PdfLocation
 
 
 class EvidenceDatum(StrictModel):
@@ -381,6 +424,7 @@ class ReviewAction(StrictModel):
         "review_claims",
         "update_numbers",
         "update_document",
+        "reexport_pdf",
         "update_figures",
         "complete_coverage",
     ]
@@ -394,8 +438,17 @@ class WatchState(StrictModel):
     changed_paths: list[str]
 
 
+class ExportState(StrictModel):
+    file: str
+    source: str
+    metric: Identifier | None
+    status: Literal["aligned", "stale", "unknown", "source_outdated"]
+    source_bindings: list[Identifier]
+    export_bindings: list[Identifier]
+
+
 class StoredReport(TimestampedRecord):
-    report_schema_version: Annotated[int, Field(ge=1, le=3)]
+    report_schema_version: Annotated[int, Field(ge=1, le=4)]
     tool_version: str
     ruleset_version: str
     config_path: str
@@ -415,6 +468,7 @@ class StoredReport(TimestampedRecord):
     removed_bindings: dict[str, list[str]] | None = None
     watch: WatchState | None = None
     actions: list[ReviewAction] = Field(default_factory=list)
+    exports: list[ExportState] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def counted_verdicts(self):
@@ -431,6 +485,10 @@ class StoredReport(TimestampedRecord):
             isinstance(item, DocxLocation) for item in locations
         ):
             raise validation_error(msg("document.report_schema"))
+        if self.report_schema_version < 4 and (
+            self.exports or any(isinstance(item, PdfLocation) for item in locations)
+        ):
+            raise validation_error(msg("pdf.report_schema"))
         states = [*self.occurrences.values(), *self.claims.values(), *self.figures.values()]
         if len(states) != self.coverage.confirmed or any(
             sum(item.status == status for item in states) != count

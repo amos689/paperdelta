@@ -134,7 +134,9 @@ def check_configuration(
             else config
         )
         paper = PaperIndex(project, config.paper)
-        if paper.format != "latex":
+        if any(getattr(doc, "format", "latex") == "pdf" for doc in paper.documents.values()):
+            report["report_schema_version"] = 4
+        elif any(getattr(doc, "format", "latex") == "docx" for doc in paper.documents.values()):
             report["report_schema_version"] = 3
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
@@ -261,11 +263,12 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
             state["error"] = exc.code
             diagnostics.append(_diagnostic(exc.code, subject, "unknown", str(exc), span))
     _block_related_fixes(report)
+    _check_exports(config, paper, report)
     _check_figures(config, evidence.project, report)
     registered = {paper.project.path(figure.path) for figure in config.figures.values()}
     for file, doc in paper.documents.items():
         for target in doc.graphics:
-            bases = {Path(config.paper.entry).parent / target, Path(file).parent / target}
+            bases = {Path(paper.origins[file]).parent / target, Path(file).parent / target}
             candidates = set()
             for base in bases:
                 suffixes = (
@@ -302,6 +305,72 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                 msg("diagnostic.INCOMPLETE_COVERAGE"),
             )
         )
+
+
+def _check_exports(config, paper, report):
+    """Compare only explicitly bound metrics across an explicitly declared export."""
+    if not paper.exports:
+        return
+    states = report["occurrences"]
+    report["exports"] = []
+    for file, source in paper.exports.items():
+        source_files = paper.members[source]
+        source_items = {
+            name: item
+            for name, item in config.occurrences.items()
+            if paper.project.relative(paper.project.path(item.file)) in source_files
+        }
+        export_items = {
+            name: item
+            for name, item in config.occurrences.items()
+            if paper.project.relative(paper.project.path(item.file)) == file
+        }
+        metrics = sorted({item.metric for item in [*source_items.values(), *export_items.values()]})
+        for metric in metrics or [None]:
+            left = [name for name, item in source_items.items() if item.metric == metric]
+            right = [name for name, item in export_items.items() if item.metric == metric]
+            status = "unknown"
+            if left and right and all(states[name]["status"] != "unknown" for name in left + right):
+                source_current = all(states[name]["status"] == "pass" for name in left)
+                export_current = all(states[name]["status"] == "pass" for name in right)
+                status = (
+                    "aligned"
+                    if source_current and export_current
+                    else "stale"
+                    if source_current
+                    else "source_outdated"
+                )
+            report["exports"].append(
+                {
+                    "file": file,
+                    "source": source,
+                    "metric": metric,
+                    "status": status,
+                    "source_bindings": left,
+                    "export_bindings": right,
+                }
+            )
+            if status == "stale":
+                for name in right:
+                    if states[name]["status"] != "mismatch":
+                        continue
+                    finding = _diagnostic(
+                        "EXPORT_STALE",
+                        f"occurrence:{name}",
+                        "error",
+                        msg("pdf.export_stale_finding", file=file, source=source, metric=metric),
+                    )
+                    finding["location"] = states[name]["location"]
+                    report["diagnostics"].append(finding)
+            elif status == "unknown":
+                report["diagnostics"].append(
+                    _diagnostic(
+                        "EXPORT_UNCHECKED",
+                        f"export:{file}:{metric or '-'}",
+                        "unknown",
+                        msg("pdf.export_unchecked", file=file, source=source, metric=metric or "—"),
+                    )
+                )
 
 
 def _block_related_fixes(report: dict) -> None:

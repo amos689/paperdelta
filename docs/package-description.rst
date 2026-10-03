@@ -8,7 +8,7 @@ English
 
 Review how experiment changes affect an existing research paper. PaperDelta
 connects declared CSV/JSON evidence to numbers, comparisons and figure provenance
-in LaTeX, then shows affected locations in an offline report.
+in LaTeX and optional Word/PDF manuscripts, then shows affected locations in an offline report.
 
 Install with Python 3.11 or newer in a virtual environment:
 
@@ -37,7 +37,7 @@ Optional Word review: install ``paperdelta[docx]`` and run
 tables use native positions; Word files are read-only and unsupported structures
 remain explicit.
 
-Checks cover declared evidence and supported LaTeX/Word structures. They do not certify
+Checks cover declared evidence and supported LaTeX/Word/PDF structures. They do not certify
 scientific truth or infer a correct mapping from matching numbers alone. The
 original implementation is MIT licensed; separately licensed paper evaluation
 sources are excluded from the Python distributions.
@@ -48,7 +48,7 @@ sources are excluded from the Python distributions.
 --------
 
 检查实验结果变化影响了现有论文的哪些位置。PaperDelta 将明确声明的 CSV/JSON
-证据关联到 LaTeX 中的数字、比较和图表来源，在离线报告中集中展示待复核内容。
+证据关联到 LaTeX 及可选 Word/PDF 稿件中的数字、比较和图表来源，在离线报告中集中展示待复核内容。
 
 使用 Python 3.11 以上版本，在虚拟环境安装：
 
@@ -73,5 +73,21 @@ sources are excluded from the Python distributions.
 ``paperdelta --lang zh-CN demo --document docx --out word-demo --open``。
 段落和普通表格使用原生位置；Word 文件保持只读，不支持的结构会明确报告。
 
-检查限于已声明证据和受支持的 LaTeX/Word 结构，不认证科学正确性，也不以数字相同证明
+检查限于已声明证据和受支持的 LaTeX/Word/PDF 结构，不认证科学正确性，也不以数字相同证明
 映射正确。原创实现采用 MIT 许可；单独许可的论文评测源码不包含在 Python 发行包中。
+
+PDF and shared manuscripts / PDF 与多稿件
+-----------------------------------------
+
+Install ``paperdelta[pdf]`` and run ``paperdelta demo --document pdf --out pdf-demo --open``.
+Original-page highlights, explicit source/export comparisons and shared metrics
+help find a corrected source whose exported PDF is stale. PDF is read-only;
+scans and unreliable content remain unverified. No OCR is performed.
+
+安装 ``paperdelta[pdf]`` 后运行
+``paperdelta --lang zh-CN demo --document pdf --out pdf-demo --open``。
+原页高亮、明确的源稿/导出稿比较和共享指标，可以帮助发现源稿已更新但 PDF 仍过期的
+问题。PDF 保持只读；扫描件及不可靠内容不参与验证，不进行 OCR。
+
+`PDF guide <https://github.com/amos689/paperdelta/blob/main/docs/pdf.md>`_ ·
+`PDF 中文指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/pdf.md>`_

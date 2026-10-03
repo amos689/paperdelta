@@ -71,6 +71,10 @@ def _priority(item):
 
 def _action(item):
     rule = item["rule"]
+    if rule == "EXPORT_STALE":
+        return "actions.detail_reexport_pdf"
+    if rule == "PDF_EXTRACTION_CHANGED":
+        return "html.action_anchor"
     if "ANCHOR" in rule or rule in {"OUTSIDE_PAPER", "MISSING_PAPER"}:
         return "html.action_anchor"
     if rule == "CLAIM_FALSE":
@@ -235,10 +239,71 @@ def _coverage(counts, labels):
     return "".join(blocks)
 
 
-def html_report(report: dict) -> str:
+def _pdf_pages(previews, labels):
+    if not previews or not previews["pages"]:
+        return ""
+    t = labels.label
+    parts = [
+        f'<section id="pdf-pages"><h2>{t("pdf.preview_title")}</h2><p>{t("pdf.preview_note")}</p>'
+    ]
+    for page in previews["pages"]:
+        title = t("pdf.page_label", file=page["file"], page=page["page"])
+        if "image" not in page:
+            parts.append(f"<p><b>{title}</b> · {labels.text(page['message'])}</p>")
+            continue
+        x0, y0, x1, y1 = page["page_box"]
+        boxes = []
+        for box in page["boxes"]:
+            left, top, right, bottom = box["bbox"]
+            boxes.append(
+                f'<rect id="{esc(box["id"])}" class="pdf-box {esc(box["status"])}" x="{left}" y="{top}" width="{right - left}" height="{bottom - top}"><title>{esc(box["text"])}</title></rect>'
+            )
+        parts.append(
+            f'<details class="pdf-page" open><summary>{title}</summary>'
+            f'<div class="pdf-controls"><button type="button" data-pdf-zoom="2" disabled>{t("pdf.zoom_in")}</button><button type="button" data-pdf-zoom="1" disabled>{t("pdf.zoom_fit")}</button></div>'
+            f'<div class="pdf-viewport"><div class="pdf-canvas"><img src="{esc(page["image"])}" {labels.attr("alt", "pdf.preview_alt", file=page["file"], page=page["page"])} loading="lazy">'
+            f'<svg viewBox="{x0} {y0} {x1 - x0} {y1 - y0}" aria-hidden="true">{"".join(boxes)}</svg></div></div>'
+            f'<p class="scope">{t("pdf.preview_hash")} <code>{esc(page["hash"])}</code></p></details>'
+        )
+    if previews["omitted"]:
+        parts.append(f"<p>{t('pdf.preview_omitted', count=previews['omitted'])}</p>")
+    return "".join(parts) + "</section>"
+
+
+def _exports(report, labels):
+    if not report.get("exports"):
+        return ""
+    t = labels.label
+    rows = "".join(
+        f"<li>{t('pdf.export_line', file=item['file'], source=item['source'], metric=item['metric'] or '—', status=msg('pdf.export_' + item['status']))}</li>"
+        for item in report["exports"]
+    )
+    return f'<section id="exports"><h2>{t("pdf.exports_title")}</h2><p>{t("pdf.exports_note")}</p><ul>{rows}</ul></section>'
+
+
+def html_report(report: dict, *, previews=None) -> str:
     labels = Labels()
     t = labels.label
     counts = report["coverage"]
+    preview_ids = {
+        box["id"]
+        for page in (previews or {}).get("pages", [])
+        if "image" in page
+        for box in page["boxes"]
+    }
+
+    def pdf_link(location):
+        if location.get("format") != "pdf":
+            return ""
+        from paperdelta.pdf_previews import position_id
+
+        identity = position_id(location)
+        return (
+            f'<a class="pdf-jump" href="#{identity}">{t("pdf.open_page")}</a>'
+            if identity in preview_ids
+            else ""
+        )
+
     watch = report.get("watch")
     live = bool(watch and watch["state"] != "stopped")
     subject_groups = defaultdict(list)
@@ -307,6 +372,7 @@ def html_report(report: dict) -> str:
                 else ""
             )
             + patch
+            + pdf_link(location)
             + f'<p class="action">{t(action)}</p>'
             + (
                 f"<details><summary>{t('html.evidence')}</summary>{evidence}</details>"
@@ -333,7 +399,7 @@ def html_report(report: dict) -> str:
             text = (
                 f"<code>{labels.text(location_label(location)) if location else esc(name)}</code> · "
                 f"{labels.value(item.get('actual'))} → {labels.value(item.get('expected'))} "
-                f"<b>{labels.enum('status', item['status'])}</b>"
+                f"<b>{labels.enum('status', item['status'])}</b>" + pdf_link(location)
             )
             locations.append(f"<li>{location_link('occurrence:' + name, text)}</li>")
         for name in group["claims"]:
@@ -439,6 +505,7 @@ def html_report(report: dict) -> str:
 {t("html.coverage_counts", unbound=len(counts["unbound_numbers"]), unsupported=len(counts["unsupported"]), figures=len(counts["unregistered_figures"]))}</p>
 <aside class="next-action"><b>{t("html.next")}</b><p>{t(next_action)}</p></aside>
 {queue}
+{_exports(report, labels)}
 <section><h2>{t("report.changes")}</h2><table><thead><tr>
 {"".join(f"<th>{t('html.' + key)}</th>" for key in ("metric", "change", "before", "after", "unit"))}
 </tr></thead><tbody>{changes or f'<tr><td colspan="5">{t("html.no_changes")}</td></tr>'}</tbody></table></section>
@@ -454,6 +521,7 @@ def html_report(report: dict) -> str:
 <div id="findings">{"".join(cards) or f'<p class="empty">{t("html.next_pass")}</p>'}</div>
 <p id="no-matches" hidden>{t("html.no_matches")}</p></section>
 <section><h2>{t("html.coverage")}</h2><p class="scope">{t("html.coverage_note")}</p>{_coverage(counts, labels)}</section>
+{_pdf_pages(previews, labels)}
 <footer>{t("html.footer", version=report["tool_version"])}<br>{t("html.limitations")}</footer>"""
     title = labels.text(msg("html.title"), tag="title")
     # Raw text elements must never see an injected closing script tag. The client
@@ -477,7 +545,7 @@ def html_report(report: dict) -> str:
         )
         + title
         + '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; '
-        "style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'\">"
+        "img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'\">"
         + f"<style>{css}</style></head><body>{body}"
         + f'<script type="application/json" id="report-locales">{locale_data}</script>'
         + f"<script>{script}</script></body></html>"

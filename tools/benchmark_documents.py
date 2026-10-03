@@ -11,7 +11,9 @@ from pathlib import Path
 
 from paperdelta import __version__
 from paperdelta.analysis import check_project
+from paperdelta.pdf_previews import pdf_previews
 from paperdelta.reports import html_report
+from paperdelta.storage import Project
 
 
 def main():
@@ -27,7 +29,12 @@ def main():
     target = args.out.resolve()
     if not target.is_relative_to(root / "build") or target.exists():
         parser.error("--out must be a new file under build/")
-    timings = {"cold_process_check_ms": [], "warm_process_check_ms": [], "html_only_ms": []}
+    timings = {
+        "cold_process_check_ms": [],
+        "warm_process_check_ms": [],
+        "html_only_ms": [],
+        "original_page_preview_ms": [],
+    }
     code = "from paperdelta.analysis import check_project; import sys; check_project(sys.argv[1])"
     for _ in range(args.runs):
         started = time.perf_counter()
@@ -44,6 +51,11 @@ def main():
         started = time.perf_counter()
         html = html_report(report)
         timings["html_only_ms"].append(1000 * (time.perf_counter() - started))
+    for _ in range(args.runs):
+        started = time.perf_counter()
+        previews = pdf_previews(Project(project), report)
+        timings["original_page_preview_ms"].append(1000 * (time.perf_counter() - started))
+    html = html_report(report, previews=previews)
     evidence = {
         "tool_version": __version__,
         "python": platform.python_version(),

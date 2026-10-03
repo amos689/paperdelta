@@ -4,6 +4,10 @@ from paperdelta.i18n import msg
 
 
 def location_label(location):
+    if location.get("format") == "pdf":
+        value = location["locator"]
+        key = "pdf.cell_label" if value.get("table") is not None else "pdf.page_label"
+        return msg(key, file=location["file"], **value)
     if location.get("format") == "docx":
         value = location["locator"]
         key = (

@@ -2,15 +2,15 @@
 
 [简体中文](zh-CN/local-validation.md)
 
-Pre-launch acceptance uses local machine tests and Codex developer review, as the
-owner instructed on 2026-10-03. Independent users are post-launch work. Historical
-[a2 acceptance](release-acceptance.md) does not automatically accept later changes;
-the [v0.2 ledger](v0.2-plan.md) tracks current delivery. Native Mac execution and
-remote CI remain unverified.
+Release acceptance uses machine tests and developer review. Informal user feedback
+is separate from these measurements and is not a release gate. Current scope is
+documented in [0.5 release checks](v0.5.md); exact platform runs and artifact hashes
+are attached to each release. Historical [a2 acceptance](release-acceptance.md)
+does not automatically accept later changes.
 
 ## Current checks
 
-The [v0.2 acceptance record](v0.2-acceptance.md) links current runtime evidence:
+The [v0.2 acceptance record](v0.2-acceptance.md) links historical runtime evidence:
 four installed Windows Python versions, the bilingual core-only wheel, corpus
 regression, performance, browser and actual developer walkthrough. The historical
 platform table below remains a2 evidence.

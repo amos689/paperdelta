@@ -37,15 +37,50 @@ class StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
 
 
-class Paper(StrictModel):
+Coordinate = Annotated[StrictInt | Decimal, Field(ge=0, le=20000)]
+
+
+class PdfRegion(StrictModel):
+    name: Identifier
+    page: Annotated[int, Field(ge=1, le=200)]
+    bbox: Annotated[list[Coordinate], Field(min_length=4, max_length=4)]
+    kind: Literal["text", "table", "abstract"] = "text"
+
+    @model_validator(mode="after")
+    def ordered_box(self) -> Self:
+        if self.bbox[0] >= self.bbox[2] or self.bbox[1] >= self.bbox[3]:
+            raise validation_error(msg("pdf.region_box"))
+        return self
+
+
+class Manuscript(StrictModel):
     entry: str
     macros: dict[str, Annotated[int, Field(ge=0, le=9)]] = Field(default_factory=dict)
+    pdf_regions: Annotated[list[PdfRegion], Field(max_length=200)] = Field(default_factory=list)
+    export_of: str | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        for key in ("pdf_regions", "export_of", "companions"):
+            if not value.get(key):
+                value.pop(key, None)
+        return value
 
     @model_validator(mode="after")
     def macro_names(self) -> Self:
         if any(not re.fullmatch(r"[A-Za-z]+", key) for key in self.macros):
             raise validation_error(msg("validation.models"))
+        if self.pdf_regions or self.export_of is not None:
+            if not self.entry.lower().endswith(".pdf"):
+                raise validation_error(msg("pdf.options_format"))
+        if len({region.name for region in self.pdf_regions}) != len(self.pdf_regions):
+            raise validation_error(msg("pdf.region_duplicate"))
         return self
+
+
+class Paper(Manuscript):
+    companions: Annotated[list[Manuscript], Field(max_length=20)] = Field(default_factory=list)
 
 
 class Source(StrictModel):
@@ -98,6 +133,17 @@ class TableCellAnchor(StrictModel):
     row_prefix: Annotated[list[str], Field(min_length=1, max_length=20)]
     column: Annotated[int, Field(ge=1, le=100)]
     percent_symbol: bool = False
+    page: Annotated[int, Field(ge=1, le=200)] | None = None
+    region: Identifier | None = None
+    parser: str | None = Field(default=None, min_length=1, max_length=256)
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        for key in ("page", "region", "parser"):
+            if value.get(key) is None:
+                value.pop(key, None)
+        return value
 
 
 class Anchor(StrictModel):
@@ -106,6 +152,7 @@ class Anchor(StrictModel):
     suffix: str | None = None
     table: TableCellAnchor | None = None
     block: Hash | None = None
+    parser: str | None = Field(default=None, min_length=1, max_length=256)
 
     @model_serializer(mode="wrap")
     def preserve_legacy_identity(self, handler):
@@ -114,12 +161,17 @@ class Anchor(StrictModel):
             value.pop("table", None)
         if self.block is None:
             value.pop("block", None)
+        if self.parser is None:
+            value.pop("parser", None)
         return value
 
     @model_validator(mode="after")
     def exactly_one_mode(self) -> Self:
         if self.table is not None:
-            if any(item is not None for item in (self.exact, self.prefix, self.suffix, self.block)):
+            if any(
+                item is not None
+                for item in (self.exact, self.prefix, self.suffix, self.block, self.parser)
+            ):
                 raise validation_error(msg("validation.models.8"))
         elif self.exact is not None:
             if not self.exact or self.prefix is not None or self.suffix is not None:
@@ -208,7 +260,7 @@ class CoverageExclusion(StrictModel):
 
 
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=3)]
+    schema_version: Annotated[int, Field(ge=1, le=4)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -222,6 +274,43 @@ class Config(StrictModel):
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        manuscripts = [self.paper, *self.paper.companions]
+        if self.schema_version < 4 and (
+            self.paper.companions
+            or self.paper.pdf_regions
+            or self.paper.export_of is not None
+            or self.paper.entry.lower().endswith(".pdf")
+            or any(
+                item.anchor.parser is not None
+                for item in [
+                    *self.occurrences.values(),
+                    *self.claims.values(),
+                    *self.coverage_exclusions.values(),
+                ]
+            )
+            or any(
+                item.anchor.table is not None
+                and (
+                    item.anchor.table.page is not None
+                    or item.anchor.table.region is not None
+                    or item.anchor.table.parser is not None
+                )
+                for item in [
+                    *self.occurrences.values(),
+                    *self.claims.values(),
+                    *self.coverage_exclusions.values(),
+                ]
+            )
+        ):
+            raise validation_error(msg("pdf.schema"))
+        if len({item.entry for item in manuscripts}) != len(manuscripts):
+            raise validation_error(msg("document.duplicate"))
+        for item in manuscripts:
+            if item.export_of is not None and not any(
+                other.entry == item.export_of and other.entry.lower().endswith((".tex", ".docx"))
+                for other in manuscripts
+            ):
+                raise validation_error(msg("pdf.export_source"))
         if self.schema_version < 3 and (
             not self.paper.entry.lower().endswith(".tex")
             or any(

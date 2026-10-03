@@ -136,3 +136,7 @@ only for observations that actually occurred; leave unmeasured values null.
 For v0.2, use the separately versioned [staged evaluation](staged-model-evaluation.md).
 Its Qwen3-8B follow-ups produced no valid complete mappings. Deterministic builder
 controls pass, but this model configuration is not an accepted automatic mapper.
+
+For text PDFs and shared LaTeX/Word/PDF metrics, see the [PDF guide](pdf.md).
+Install `paperdelta[pdf]` or `paperdelta[docx,pdf,mcp]` as needed. PDF positions
+use original page boxes; source/export relationships require explicit declarations.

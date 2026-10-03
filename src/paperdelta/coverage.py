@@ -155,7 +155,10 @@ def change_scope(
         except PaperDeltaError:
             # An exclusion must expire when its number changes; an exact, unique
             # token is appropriate here, unlike an editable numeric binding.
-            anchor = Anchor(exact=span.text)
+            anchor = Anchor(
+                exact=span.text,
+                parser=document.parser if getattr(document, "format", "latex") == "pdf" else None,
+            )
             located = document.locate(anchor)
             if (located.start, located.end) != (span.start, span.end):
                 raise PaperDeltaError("EXCLUSION_INVALID", msg("scope.invalid")) from None

@@ -47,6 +47,8 @@ def document_format(entry: str) -> str:
         return "latex"
     if suffix == ".docx":
         return "docx"
+    if suffix == ".pdf":
+        return "pdf"
     raise PaperDeltaError("DOCUMENT_FORMAT", msg("document.format", file=entry))
 
 
@@ -54,18 +56,37 @@ class PaperIndex:
     def __init__(self, project: Project, paper: Paper):
         self.project, self.paper = project, paper
         self.format = document_format(paper.entry)
-        if self.format == "latex":
-            index = LatexIndex(project, paper)
-            self.documents, self.issues = index.documents, index.issues
-        else:
-            if paper.macros:
-                raise PaperDeltaError("DOCUMENT_MACROS", msg("document.macros"))
-            from paperdelta.docx_document import DocxDocument
+        self.documents, self.issues, self.exports = {}, [], {}
+        self.members, self.origins = {}, {}
+        for manuscript in [paper, *paper.companions]:
+            format = document_format(manuscript.entry)
+            file = project.relative(project.path(manuscript.entry))
+            if format == "latex":
+                index = LatexIndex(project, manuscript)
+                documents, issues = index.documents, index.issues
+            else:
+                if manuscript.macros:
+                    raise PaperDeltaError("DOCUMENT_MACROS", msg("document.macros"))
+                if format == "docx":
+                    from paperdelta.docx_document import DocxDocument
 
-            file = project.relative(project.path(paper.entry))
-            document = DocxDocument(file, project.read(file))
-            self.documents = {file: document}
-            self.issues = document.issues
+                    document = DocxDocument(file, project.read(file))
+                else:
+                    from paperdelta.pdf_document import PdfDocument
+
+                    document = PdfDocument(file, project.read(file), manuscript.pdf_regions)
+                documents, issues = {file: document}, document.issues
+            for name, document in documents.items():
+                if name in self.documents:
+                    raise PaperDeltaError("DOCUMENT_DUPLICATE", msg("document.duplicate"))
+                self.documents[name] = document
+                self.origins[name] = file
+            self.members[file] = set(documents)
+            self.issues.extend(issues)
+            if manuscript.export_of is not None:
+                self.exports[file] = project.relative(project.path(manuscript.export_of))
+        if paper.companions:
+            self.format = "multiple"
 
     def document(self, file: str) -> Document:
         relative = self.project.relative(self.project.path(file))

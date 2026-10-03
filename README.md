@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.4.0"><img src="docs/assets/badges/release.svg" alt="Release 0.4.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.5.0"><img src="docs/assets/badges/release.svg" alt="Release 0.5.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -19,6 +19,7 @@
   <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="Python 3.11 or newer"></a>
   <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x data validation"></a>
   <a href="docs/rules.md"><img src="docs/assets/badges/latex.en.svg" alt="Supported static LaTeX inputs"></a>
+  <a href="docs/pdf.md"><img src="docs/assets/badges/native.en.svg" alt="Optional Word and PDF readers"></a>
   <a href="docs/agent-guide.md"><img src="docs/assets/badges/mcp.en.svg" alt="Optional read-only MCP tools"></a>
 </p>
 
@@ -40,7 +41,7 @@ an **outperforms baseline** claim no longer hold. PaperDelta traces those statem
 to declared CSV/JSON evidence and brings the affected locations together for review,
 even when no LaTeX file changed.
 
-Local Python CLI · LaTeX + optional Word · exact decimal arithmetic · offline HTML · optional MCP.
+Local Python CLI · LaTeX + optional Word/PDF · exact decimal arithmetic · offline HTML · optional MCP.
 Checking needs no model key, GPU or TeX installation.
 
 <p>
@@ -54,13 +55,18 @@ A 20-second walkthrough of real demo reports, paced for readability.
 [Open the full-size animation](docs/assets/v0.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.3/report.png).
 
-**0.4.0** adds read-only Word manuscript review: paragraphs, split formatting runs,
-ordinary tables and native positions, with the same binding, repair and watch workflow.
-See the [Word guide](docs/word.md) and [release and upgrade notes](docs/v0.4.md).
+**0.5.0** adds text-PDF review with original-page highlights and shared metrics across
+LaTeX, Word and PDF. It can flag a corrected source whose exported PDF is still stale.
+See the [PDF and multiple-manuscript guide](docs/pdf.md), [Word guide](docs/word.md)
+and [release and upgrade notes](docs/v0.5.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
 ## Install and see the first report
+
+For the source/PDF example, install `paperdelta[pdf]` and run
+`paperdelta demo --document pdf --out pdf-demo --open`.
+The report highlights original pages; PDF review is read-only and does not perform OCR.
 
 For a Word example, install `paperdelta[docx]` and run
 `paperdelta demo --document docx --out word-demo --open`.
@@ -91,7 +97,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.4.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-0.5.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -183,10 +189,15 @@ remain outside the supported contract. Word paragraphs and ordinary tables are s
 with `paperdelta[docx]`; revisions, fields and complex layouts remain unverified.
 See [rules and limits](docs/rules.md) and the [Word boundary](docs/word.md).
 
+Text PDFs use optional `paperdelta[pdf]`, native page/box coordinates and explicit
+extraction identities. Scanned pages and unreliable layouts remain unverified.
+Multiple manuscripts share explicitly declared metrics, with optional source/export
+relations. See the [PDF boundary and workflow](docs/pdf.md).
+
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.4.md) distinguish what each run established.
+and [current release checks](docs/v0.5.md) distinguish what each run established.
 
 ## Development
 

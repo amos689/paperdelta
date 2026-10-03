@@ -17,7 +17,7 @@ def register_commands(commands):
     demo = commands.add_parser("demo", help=tr("demo.help"))
     demo.add_argument("--out", default="paperdelta-demo", help=tr("demo.out"))
     demo.add_argument(
-        "--document", choices=["latex", "docx"], default="latex", help=tr("demo.document")
+        "--document", choices=["latex", "docx", "pdf"], default="latex", help=tr("demo.document")
     )
     demo.add_argument(
         "--scenario",
@@ -34,7 +34,7 @@ def create_demo(
 ) -> dict:
     if scenario not in {"changed", "baseline", "safe-update"}:
         raise PaperDeltaError("DEMO_SCENARIO", msg("demo.invalid_scenario"))
-    if document not in {"latex", "docx"}:
+    if document not in {"latex", "docx", "pdf"}:
         raise PaperDeltaError("DOCUMENT_FORMAT", msg("document.format", file=document))
     if document == "docx":
         from paperdelta.docx_document import DocxDocument
@@ -42,6 +42,12 @@ def create_demo(
         # Diagnose absent optional dependencies before creating the output directory.
         DocxDocument(
             "paper.docx", files("paperdelta").joinpath("demo_word/paper.docx").read_bytes()
+        )
+    if document == "pdf":
+        from paperdelta.pdf_document import PdfDocument
+
+        pdf = PdfDocument(
+            "paper.pdf", files("paperdelta").joinpath("demo_pdf/paper.pdf").read_bytes()
         )
     target = parent.path(output)
     try:
@@ -60,8 +66,20 @@ def create_demo(
                 project.write(name, child.read_bytes(), exclusive=True)
 
     copy_resources(
-        files("paperdelta").joinpath("demo_word" if document == "docx" else "demo_project")
+        files("paperdelta").joinpath(
+            {"latex": "demo_project", "docx": "demo_word", "pdf": "demo_pdf"}[document]
+        )
     )
+    if document == "pdf":
+        from paperdelta.config import config_text, load_config
+
+        config, _ = load_config(project)
+        # This is a new, authored demo with known mappings, not a repair of user bindings.
+        for binding in [*config.occurrences.values(), *config.claims.values()]:
+            if binding.file == "paper.pdf":
+                anchor = binding.anchor.table if binding.anchor.table else binding.anchor
+                anchor.parser = pdf.parser
+        project.write("paperdelta.yaml", config_text(config).encode("utf-8"))
     before = check_project(target)
     if before["exit_code"] != 0:
         raise PaperDeltaError("DEMO_INVALID", msg("demo.invalid"))
@@ -79,6 +97,13 @@ def create_demo(
         ):
             rows[index] = rows[index].replace(old, new)
         project.write("results/metrics.csv", b"".join(rows))
+        if document == "pdf":
+            project.write(
+                "source.tex",
+                project.read("source.tex").replace(
+                    b"84.1", b"80.9" if scenario == "changed" else b"84.5"
+                ),
+            )
     report = check_project(target, baseline=read_snapshot(project, "before"))
     expected_exit = 0 if scenario == "baseline" else 1
     if report["exit_code"] != expected_exit:
@@ -111,7 +136,7 @@ def run_command(project, arguments):
         print(
             tr(
                 "document.manual_update"
-                if arguments.document == "docx"
+                if arguments.document in {"docx", "pdf"}
                 else "demo." + arguments.scenario
             )
         )

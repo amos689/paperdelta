@@ -60,6 +60,8 @@ def badge_files():
         "license.zh-CN.svg": ("许可", "MIT", "#526b73"),
         "latex.en.svg": ("LaTeX", "static input", "#287e79"),
         "latex.zh-CN.svg": ("LaTeX", "静态输入", "#287e79"),
+        "native.en.svg": ("Word / PDF", "optional readers", "#287e79"),
+        "native.zh-CN.svg": ("Word / PDF", "可选读取", "#287e79"),
         "mcp.en.svg": ("MCP", "read-only", "#625778"),
         "mcp.zh-CN.svg": ("MCP", "只读", "#625778"),
         "platforms.en.svg": ("platforms", "Windows / Linux / macOS", "#526b73"),

@@ -147,3 +147,7 @@ paperdelta review record --claim main_comparison --state sha256:ACTUAL_HASH --re
 
 原创多文件样例 `examples/research-paper` 包含三个种子、基线、百分点差、重复位置
 及比较结论。
+
+文字型 PDF 与 LaTeX/Word/PDF 共享指标流程见 [PDF 指南](pdf.md)。按需安装
+`paperdelta[pdf]` 或 `paperdelta[docx,pdf,mcp]`。PDF 保留原页坐标，源稿与导出稿
+关系需要明确声明。

@@ -82,8 +82,21 @@ def _headers(document, rows):
 
 
 def locate_cell(document, anchor):
+    if getattr(document, "format", "latex") == "pdf" and anchor.parser != document.parser:
+        raise PaperDeltaError(
+            "PDF_EXTRACTION_CHANGED", msg("pdf.extraction_changed", file=document.file)
+        )
+    if (
+        anchor.page is not None or anchor.region is not None or anchor.parser is not None
+    ) and getattr(document, "format", "latex") != "pdf":
+        raise PaperDeltaError("DOCUMENT_ANCHOR_FORMAT", msg("pdf.anchor_format"))
     found = []
     for rows in literal_tables(document):
+        scope = getattr(document, "table_scopes", {}).get(id(rows), {})
+        if (anchor.page is not None and scope.get("page") != anchor.page) or (
+            anchor.region is not None and scope.get("region") != anchor.region
+        ):
+            continue
         if _headers(document, rows) != anchor.headers:
             continue
         for row in rows:
@@ -134,6 +147,7 @@ def anchor_for_cell(document, span, identity_values=()):
                     row_prefix=list(prefix),
                     column=column,
                     percent_symbol=span.text.endswith(document.percent_token),
+                    **getattr(document, "table_scopes", {}).get(id(rows), {}),
                 )
                 try:
                     located = locate_cell(document, anchor)

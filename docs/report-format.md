@@ -1,9 +1,9 @@
-# Report interchange contract, version 3
+# Report interchange contract, version 4
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1, 2 and 3).
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–4).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
 
@@ -70,7 +70,7 @@ original manuscript/data text is never translated. The same offline HTML switche
 languages while retaining its filter and disclosure state. See [language compatibility](languages.md).
 
 Breaking changes require a new schema version and migration documentation.
-New reports from 0.3.0 use version 3, adding `actions`, optional `watch` state, and
+New reports from 0.3.0 use version 2, adding `actions`, optional `watch` state, and
 `coverage.review_scope`, `outside_scope_numbers` and `exclusions`. Version 1 remains
 readable with those fields defaulted. Pending watch results have exit code 2 even
 when their retained earlier findings passed. Consumers must check the top-level
@@ -80,3 +80,20 @@ Configuration schema 2 adds scope/exclusions and table-cell anchors. Existing
 version-1 configurations keep their semantics and baseline identity; explicit
 acceptance of a new feature upgrades the configuration with a backup. See
 [workflow migration](workflows.md).
+
+## PDF and exports in schema 4
+
+PDF locations have `format: pdf`, `parser`, literal `context`, and a `locator`
+with one-based `page`, decimal `bbox`/`page_box`, block identity and text offset,
+plus optional region/table/row/cell. Boxes use PDF points from the top-left:
+`[x0, top, x1, bottom]`. Start/end refer to the extracted model, never PDF bytes.
+
+Optional `exports` entries carry source/PDF paths, a metric, both binding lists
+and `aligned`, `stale`, `source_outdated` or `unknown` status. These compare
+explicitly bound metrics, not whole-document equivalence. Review actions add
+`reexport_pdf`. Original-page PNGs are bounded presentation assets in HTML only;
+they are not embedded into stored reports or snapshots. See [PDF semantics](pdf.md).
+
+Configuration schema 3 introduced native Word positions. Schema 4 adds PDF
+regions, extraction identities and `paper.companions` with optional `export_of`.
+Core LaTeX reports still use schema 2, Word reports use 3, and PDF reports use 4.

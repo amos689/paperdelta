@@ -39,3 +39,10 @@ Python wheel 和源码发行包包含原创代码，不包含第三方论文语�
 `docx` 扩展使用 python-docx（MIT）及其 lxml 依赖（BSD）。它们作为独立包安装，
 保留各自附带的许可说明；PaperDelta 不内嵌这些依赖的源码。生成的 Word 演示与
 原生测试样例属于本项目原创材料，与第三方论文语料分开。
+
+## 可选 PDF 依赖
+
+`pdf` 扩展安装 pdfplumber 及其依赖，包括 pdfminer.six、Pillow 和 pypdfium2。
+这些包及 PDFium 发行物保留各自声明；PaperDelta 不内置其库源码或原生二进制。
+ReportLab 仅作为开发依赖生成原创 PDF 测试样例和演示，安装后的 PDF 工作流
+无需 ReportLab，也无需安装 TeX。

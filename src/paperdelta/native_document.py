@@ -160,11 +160,14 @@ class NativeDocument:
             not self.checkable(span.start, span.end)
             or len(found) != 1
             or found[0].start() != span.start
+            or found[0].end() > span.end
             or self.text[found[0].end() : span.end] not in ("", self.percent_token)
         ):
             raise PaperDeltaError("NUMERIC_SPAN", msg("document.number", file=self.file))
 
     def locate(self, anchor: Anchor):
+        if self.format != "pdf" and anchor.parser is not None:
+            raise PaperDeltaError("DOCUMENT_ANCHOR_FORMAT", msg("pdf.anchor_format"))
         if anchor.table is not None:
             from paperdelta.tables import locate_cell
 
@@ -234,6 +237,7 @@ class NativeDocument:
             block=block.identity,
             prefix=self.text[low : span.start],
             suffix=self.text[span.end : high],
+            parser=self.parser if self.format == "pdf" else None,
         )
         found = self.locate(anchor)
         if (found.start, found.end) != (span.start, span.end):

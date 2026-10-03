@@ -47,3 +47,11 @@ The `docx` extra uses python-docx (MIT) and its lxml dependency (BSD). They are
 installed as separate packages and retain their own bundled notices. PaperDelta
 does not vendor their source. The generated Word demonstration and native test
 fixtures are original project material, separate from the third-party paper corpus.
+
+## Optional PDF dependencies
+
+The `pdf` extra installs pdfplumber and its dependencies, including pdfminer.six,
+Pillow and pypdfium2. Their own package and PDFium distribution notices apply;
+PaperDelta does not vendor those libraries or their native binaries. ReportLab
+is a development-only generator for original PDF fixtures and the bundled demo.
+The installed PDF workflow does not require ReportLab or a TeX installation.

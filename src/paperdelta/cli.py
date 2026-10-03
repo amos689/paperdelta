@@ -52,12 +52,14 @@ def parser() -> argparse.ArgumentParser:
     from paperdelta.batch_cli import register_commands as register_batch
     from paperdelta.coverage import register_commands as register_scope
     from paperdelta.demo import register_commands as register_demo
+    from paperdelta.manuscripts import register_commands as register_manuscripts
     from paperdelta.watch import register_commands as register_watch
 
     register_scope(commands)
     register_batch(commands)
     register_watch(commands)
     register_demo(commands)
+    register_manuscripts(commands)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
     guide = commands.add_parser("guide", help=tr("cli.guide"))
@@ -228,6 +230,10 @@ def _main(argv: list[str]) -> int:
     arguments = parser().parse_args(argv)
     project = Project(Path(arguments.project))
     try:
+        if arguments.command in {"manuscript", "pdf"}:
+            from paperdelta.manuscripts import run_command
+
+            return run_command(project, arguments)
         if arguments.command == "demo":
             from paperdelta.demo import run_command
 

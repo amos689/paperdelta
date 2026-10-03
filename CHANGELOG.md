@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.5.0 — PDF and multiple-manuscript review
+
+- Add optional text-PDF parsing with original page/box positions and extraction identity.
+- Embed bounded original-page previews with highlights, navigation and enlargement in offline HTML.
+- Share explicit metrics across LaTeX, Word and PDF; diagnose stale exports only for declared relationships.
+- Add previewed manuscript/region commands, backup/hash guards, and schema 4 with legacy readers.
+- Keep unsupported/scanned content explicit and native documents read-only; reject partial numeric tokens.
+- Add an installed PDF/source demo, bilingual guides and 25 PDF layouts with 125 labelled positions.
+
+See the [PDF guide](docs/pdf.md) and [release notes](docs/v0.5.md).
+
 ## 0.4.0 — read-only Word manuscript review
 
 - Add the optional `docx` parser and an installed `demo --document docx`.

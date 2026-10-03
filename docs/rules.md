@@ -9,8 +9,7 @@ Use `paperdelta schema KIND` for configuration, proposal-input, proposal, patch,
 binding-draft, repair-proposal, figure-record, review-record, snapshot and stored-report JSON schemas. Unknown
 fields and unsupported versions are rejected. JSON/YAML duplicate keys and
 executable YAML tags are rejected. Nested evidence, diagnostics, positions and
-coverage now use the strict [version-1 report contract](report-format.md).
-This alpha interface does not imply release acceptance.
+coverage now use the strict [versioned report contract](report-format.md).
 
 ## Evidence
 
@@ -100,3 +99,7 @@ cover unbound candidates or unsupported content unless `require_complete_coverag
 is enabled. Exit 1 denotes mismatch; exit 2 denotes incomplete required checks or
 no bindings. Coverage is always included. No workflow authenticates evidence or
 certifies scientific truth.
+
+For text PDFs and shared LaTeX/Word/PDF metrics, see the [PDF guide](pdf.md).
+Install `paperdelta[pdf]` or `paperdelta[docx,pdf,mcp]` as needed. PDF positions
+use original page boxes; source/export relationships require explicit declarations.

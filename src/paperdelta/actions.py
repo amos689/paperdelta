@@ -11,11 +11,16 @@ def review_actions(report):
         if finding and finding not in item["findings"]:
             item["findings"].append(finding)
 
+    stale_exports = {
+        item["subject"] for item in report["diagnostics"] if item["rule"] == "EXPORT_STALE"
+    }
     for finding in report["diagnostics"]:
         rule, subject = finding["rule"], finding["subject"]
         group, _, name = subject.partition(":")
         if rule == "WATCH_PENDING":
             kind = "wait_for_check"
+        elif rule == "EXPORT_STALE" or (rule == "VALUE_MISMATCH" and subject in stale_exports):
+            kind = "reexport_pdf"
         elif rule == "VALUE_MISMATCH":
             state = report["occurrences"][name]
             kind = (
@@ -35,6 +40,7 @@ def review_actions(report):
             "NUMERIC_SPAN",
             "NUMERIC_ANCHOR",
             "UNSUPPORTED_SPAN",
+            "PDF_EXTRACTION_CHANGED",
         }:
             kind = "repair_bindings"
         elif rule.startswith("EXCLUSION_"):
@@ -55,6 +61,7 @@ def review_actions(report):
         "review_claims",
         "update_numbers",
         "update_document",
+        "reexport_pdf",
         "update_figures",
         "complete_coverage",
     )

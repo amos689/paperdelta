@@ -35,7 +35,7 @@
     for (const node of document.querySelectorAll('[data-i18n]')) {
       node.textContent = strings[node.dataset.i18n][selected];
     }
-    for (const attribute of ['aria-label', 'placeholder', 'label']) {
+    for (const attribute of ['aria-label', 'placeholder', 'label', 'alt']) {
       for (const node of document.querySelectorAll(`[data-i18n-${attribute}]`)) {
         node.setAttribute(attribute, strings[node.getAttribute(`data-i18n-${attribute}`)][selected]);
       }
@@ -48,6 +48,21 @@
     filter();
   }
   language.disabled = false;
+  for (const button of document.querySelectorAll('[data-pdf-zoom]')) {
+    button.disabled = false;
+    button.addEventListener('click', () => {
+      const canvas = button.closest('.pdf-page').querySelector('.pdf-canvas');
+      const zoom = button.dataset.pdfZoom === '2' ? 2 : 1;
+      canvas.style.width = `${zoom * 100}%`;
+      canvas.style.maxWidth = zoom === 1 ? '900px' : 'none';
+    });
+  }
+  for (const link of document.querySelectorAll('.pdf-jump')) {
+    link.addEventListener('click', () => {
+      const target = document.getElementById(link.hash.slice(1));
+      if (target) target.closest('details').open = true;
+    });
+  }
   language.addEventListener('change', switchLanguage);
   search.addEventListener('input', filter);
   for (const select of [level, ...selectors]) select.addEventListener('change', filter);

@@ -68,7 +68,7 @@ MCP 工具名称、参数、ID 和属性保持统一；说明、解释及下一�
 所有操作命令均可使用 `--format json`，包括 `propose`、`fix`、`apply`、`recover`、
 `snapshot create`、`review record`、`init`、`bind`、`settings` 和 `doctor`。
 结果保留原有字段，并增加 `command_result_version: 1` 和 `command`。成功应用补丁
-会直接返回 `transaction_id`。新 `check` 报告采用 schema 版本 2，读取器兼容版本 1；批量和范围命令支持 JSON，
+会直接返回 `transaction_id`。LaTeX、Word、PDF 的 `check` 报告分别采用 schema 2、3、4，读取器兼容版本 1–4；批量和范围命令支持 JSON，
 监听逐行输出 JSON 事件；`schema`
 始终输出 JSON；`mcp` 的标准输出仅用于协议。
 

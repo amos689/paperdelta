@@ -1,9 +1,9 @@
-# 报告交换约定，版本 3
+# 报告交换约定，版本 4
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1、2 和 3。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–4。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
 
 报告包含 `report_schema_version`、`tool_version` 和 `ruleset_version`。未知字段和
@@ -51,10 +51,26 @@ Python 使用 `StoredReport` 验证后，应调用 `model_dump(by_alias=True)` �
 解释属于本地化展示层，论文与数据原文不翻译。离线 HTML 在同一文件内切换语言，
 保留筛选和展开状态，详见[语言兼容说明](languages.md)。
 
-破坏性修改需要新 schema 版本及迁移文档。0.3.0 的新报告使用版本 3，新增 `actions`、可选 `watch`，以及
+破坏性修改需要新 schema 版本及迁移文档。0.3.0 的新报告使用版本 2，新增 `actions`、可选 `watch`，以及
 `coverage.review_scope`、`outside_scope_numbers` 和 `exclusions`。版本 1 仍可读取，
 新字段使用默认值。等待重查时退出码为 2，即使保留的旧发现全部通过。消费者应
 检查顶层退出码及监听状态，不能从通过计数推断结果是否新鲜。
 
-配置版本 3 增加范围、排除及表格单元格锚点。旧配置保留语义和基线身份；明确接受
+配置版本 2 增加范围、排除及表格单元格锚点。旧配置保留语义和基线身份；明确接受
 新特性后才升级并备份。详见[工作流迁移](workflows.md)。
+
+## Schema 4 的 PDF 与导出比较
+
+PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定位包含
+从 1 开始的 `page`、十进制 `bbox`/`page_box`、块身份与文本偏移，以及可选
+区域/表格/行/列。边界框以页面左上角为原点，单位为 PDF 点，形式为
+`[x0, top, x1, bottom]`。start/end 指向抽取模型，不是 PDF 字节。
+
+可选 `exports` 条目记录源稿/PDF 路径、指标、两侧绑定列表，以及 `aligned`、
+`stale`、`source_outdated` 或 `unknown` 状态，只比较明确绑定的指标，不保证
+全文相同。操作建议增加 `reexport_pdf`。有资源限制的原页 PNG 仅嵌入 HTML
+展示，不写入存储报告或快照。详见 [PDF 语义](pdf.md)。
+
+配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
+`paper.companions` 和可选 `export_of`。核心 LaTeX 报告仍使用 schema 2，Word
+报告使用 3，含 PDF 的报告使用 4。读取器兼容版本 1–4。
