@@ -12,6 +12,30 @@ ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "amos689/paperdelta"
 
 
+def validate_ci_jobs(jobs):
+    versions = ("3.11", "3.12", "3.13", "3.14")
+    expected = (
+        {
+            f"test ({system}, {version})"
+            for system in ("ubuntu-latest", "windows-latest")
+            for version in versions
+        }
+        | {
+            f"macOS {arch} / Python {version}"
+            for arch in ("arm64", "x86_64")
+            for version in versions
+        }
+        | {"Local studio / browser"}
+    )
+    if (
+        len(jobs) != len(expected)
+        or {job.get("name") for job in jobs} != expected
+        or any(job.get("conclusion") != "success" for job in jobs)
+    ):
+        raise ValueError("All 16 named platform jobs and the studio browser job must pass")
+    return sorted(expected)
+
+
 def run(*arguments):
     return subprocess.check_output(arguments, cwd=ROOT, text=True, encoding="utf-8").strip()
 
@@ -85,8 +109,7 @@ def main():
     details = json.loads(
         run("gh", "run", "view", str(ci["databaseId"]), "--repo", REPOSITORY, "--json", "jobs")
     )
-    if len(details["jobs"]) != 16 or any(j["conclusion"] != "success" for j in details["jobs"]):
-        raise ValueError("All 16 supported-platform CI jobs must pass")
+    verified_jobs = validate_ci_jobs(details["jobs"])
     output = (ROOT / args.out).resolve()
     if not output.is_relative_to(ROOT) or output == ROOT:
         raise ValueError("Use a fresh project-local output directory")
@@ -107,6 +130,8 @@ def main():
         "release": release["url"],
         "ci": ci["url"],
         "passed_platform_jobs": 16,
+        "passed_browser_jobs": 1,
+        "verified_job_names": verified_jobs,
         "artifacts_sha256": identities,
     }
     (output / "publication-verification.json").write_text(
