@@ -2,6 +2,17 @@
 
 [English](CHANGELOG.md)
 
+## 0.9.0 — 表格与可移植实验证据
+
+- 读取 TSV、静态 XLSX 结果表，明确类型、行身份、工作表和区域，保留存储精度、缺失值与原始单元格位置。
+- 新增 `.pdevidence.json` 可移植导出，内嵌来源快照、身份映射、精度声明，并离线重新推导与验证记录。
+- 完整分页导入 MLflow 历史，使用 W&B SDK 的非抽样历史，保留 run/step/checkpoint/seed/split，不自动选择最后或最好的结果。
+- Studio、终端/MCP 草稿、批量绑定和模板支持新表格来源，双语 Studio 与 HTML 展示来源信息。
+- 新增配置/报告 schema 5，保持旧 CSV/JSON 身份兼容，拒绝覆盖已导入证据。
+- 增加六条双语浏览器流程、真实本地 HTTP 与真实 SDK 分页测试、篡改/缺失值案例，以及自有 TSV/XLSX 示例。
+
+详见 [0.9 升级指南](docs/zh-CN/v0.9.md)和[实验证据流程](docs/zh-CN/experiment-evidence.md)。
+
 ## 0.8.0 — 批量绑定与可迁移实验模板
 
 - 在 Studio 批量选择中复用明确的 CSV 身份、单位、聚合和种子契约。

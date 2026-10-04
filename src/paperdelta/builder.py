@@ -105,6 +105,8 @@ def add_source(
     format: SourceFormat,
     columns: dict[str, ColumnType] | None = None,
     primary_key: list[str] | None = None,
+    sheet: str | None = None,
+    cell_range: str | None = None,
 ) -> dict:
     draft, config = resume_draft(project, value)
     _new_name(config, "sources", name)
@@ -115,6 +117,8 @@ def add_source(
             "format": format,
             "columns": columns or {},
             "primary_key": primary_key or [],
+            "sheet": sheet,
+            "cell_range": cell_range,
         },
         "DRAFT_SOURCE",
     )

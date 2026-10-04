@@ -52,6 +52,7 @@ def parser() -> argparse.ArgumentParser:
     from paperdelta.batch_cli import register_commands as register_batch
     from paperdelta.coverage import register_commands as register_scope
     from paperdelta.demo import register_commands as register_demo
+    from paperdelta.evidence_cli import register_commands as register_evidence
     from paperdelta.manuscripts import register_commands as register_manuscripts
     from paperdelta.studio_server import register_commands as register_studio
     from paperdelta.watch import register_commands as register_watch
@@ -62,6 +63,7 @@ def parser() -> argparse.ArgumentParser:
     register_demo(commands)
     register_manuscripts(commands)
     register_studio(commands)
+    register_evidence(commands)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
     guide = commands.add_parser("guide", help=tr("cli.guide"))
@@ -107,6 +109,8 @@ def parser() -> argparse.ArgumentParser:
             "batch-request",
             "batch-catalog",
             "batch-selection",
+            "evidence-import",
+            "evidence-export",
         ],
     )
     check = commands.add_parser("check", help=tr("cli.help.6"))
@@ -252,6 +256,10 @@ def _main(argv: list[str]) -> int:
             from paperdelta.batch_cli import run_command
 
             return run_command(project, arguments)
+        if arguments.command == "evidence":
+            from paperdelta.evidence_cli import run_command
+
+            return run_command(project, arguments)
         if arguments.command == "scope":
             from paperdelta.coverage import run_command
 
@@ -295,6 +303,7 @@ def _main(argv: list[str]) -> int:
         if arguments.command == "schema":
             from paperdelta.batch import BatchCatalog, BatchRequest, BatchSelection
             from paperdelta.builder import BindingDraft
+            from paperdelta.experiment_exports import ExperimentExport, ImportRequest
             from paperdelta.models import Config
             from paperdelta.onboarding import Proposal, ProposalInput
             from paperdelta.patches import Patch
@@ -315,6 +324,8 @@ def _main(argv: list[str]) -> int:
                 "batch-request": BatchRequest,
                 "batch-catalog": BatchCatalog,
                 "batch-selection": BatchSelection,
+                "evidence-import": ImportRequest,
+                "evidence-export": ExperimentExport,
             }
             print(json_text(schemas[arguments.kind].model_json_schema()), end="")
             return 0

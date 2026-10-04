@@ -164,7 +164,7 @@ def inspect_catalog(project, value):
     if request.source not in config.sources:
         raise PaperDeltaError("BATCH_SOURCE", msg("batch.source", source=request.source))
     source = config.sources[request.source]
-    if source.format != "csv":
+    if source.format == "json":
         raise PaperDeltaError("BATCH_FORMAT", msg("batch.csv"))
     if not set([*request.fields, *request.group_by, *request.where]).issubset(source.columns):
         raise PaperDeltaError(
@@ -210,6 +210,27 @@ def inspect_catalog(project, value):
     for identity in groups.values():
         selection = {**where, **identity}
         for field in request.fields:
+            if any(value is None for value in selection.values()):
+                definition = {
+                    "source": request.source,
+                    "field": field,
+                    "where": selection,
+                    "unit": request.unit,
+                    "reduce": request.reduce,
+                }
+                choice_id = fingerprint(definition)
+                choices.append(
+                    {
+                        "choice_id": choice_id,
+                        "metric_name": "batch_" + choice_id[7:23],
+                        "definition": definition,
+                        "status": "unknown",
+                        "error": "MISSING_IDENTITY",
+                        "message": str(msg("evidence.group_missing")),
+                        "suggested_locations": [],
+                    }
+                )
+                continue
             metric = validate_record(
                 SourceMetric,
                 {
@@ -249,6 +270,7 @@ def inspect_catalog(project, value):
             # The source and immutable indexes are shared during this inspection only.
             candidate_store.sources = store.sources
             candidate_store.csv_indexes = store.csv_indexes
+            candidate_store.export_info = store.export_info
             try:
                 result = candidate_store.resolve(metric_name).to_dict()
                 for evidence in result["evidence"]:

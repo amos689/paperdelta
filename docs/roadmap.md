@@ -8,8 +8,8 @@ capabilities have shipped. The starting release is 0.6.0 at `c133956`.
 | Release | Required scope | Status |
 | --- | --- | --- |
 | 0.7 | Ongoing Studio review: impact dashboard, snapshot creation/comparison, accepted declaration editing/deletion with dependency previews and backups, visual anchor repair, claim review, continuous checking with pending states, durable recoverable drafts, readable selectors, paginated search over all candidates, measured interaction performance, maintained bilingual instructions and demo | Released 0.7.0; see delivery record below |
-| 0.8 | Batch binding in Studio, reusable experiment identity/unit templates, import existing CLI/MCP proposals into an explicit graphical subset review, preserve typed evidence and independent location identities, compare setup effort against 0.6 | In development |
-| 0.9 | TSV and Excel static result tables, normalized experiment exports, MLflow and W&B adapters; preserve source snapshots, run/step/checkpoint/seed/split identities, upstream precision and missingness; offline checking after explicit import | Pending |
+| 0.8 | Batch binding in Studio, reusable experiment identity/unit templates, import existing CLI/MCP proposals into an explicit graphical subset review, preserve typed evidence and independent location identities, compare setup effort against 0.6 | Released 0.8.0; see delivery record below |
+| 0.9 | TSV and Excel static result tables, normalized experiment exports, MLflow and W&B adapters; preserve source snapshots, run/step/checkpoint/seed/split identities, upstream precision and missingness; offline checking after explicit import | In development |
 | 1.0 | Explicit mean/standard-deviation/sample-count contracts, missing-seed checks, compound uncertainty displays, declared confidence interval methods/levels; verify statistical conventions and do not infer significance from larger means | Pending |
 | 1.1 | Licensed real Word/PDF sample suite with development and held-out cases; common merged table headers, footnotes, rotated/cropped PDF pages and reliable layout handling; publish supported, missed, mislocated and unknown results | Pending |
 | 1.2 | Static Markdown and Quarto prose/tables with original locations, shared evidence model, explicit source/export checks, clear treatment of dynamic execution and unsupported constructs | Pending |
@@ -37,6 +37,19 @@ snapshot, declaration maintenance, document edits and repairs, restart/recovery,
 concurrent tabs, partial saves, stale preview rejection and dependency-aware deletion.
 Record a 0.6 performance baseline before evaluating the new implementation. Preserve
 all existing command workflows and machine-report/accepted-configuration compatibility.
+
+## 0.8 delivery record
+
+Released on 2026-10-04 at `d73aaeebe457f6331694b1ae77973278c74049f8`:
+[17 named CI checks](https://github.com/amos689/paperdelta/actions/runs/37187210089),
+[GitHub release](https://github.com/amos689/paperdelta/releases/tag/v0.8.0),
+[PyPI](https://pypi.org/project/paperdelta/0.8.0/), and the
+[publication receipt](assets/v0.8/publication.json). Public artifact hashes match,
+and a fresh installation ran both language demos. The local installed suite passed
+506 tests with three POSIX-only skips. Six native-format/language browser flows
+verified 24 metrics, templates, subset acceptance and real CLI/MCP proposal imports.
+The identical-input comparison recorded 270 interactions in 0.6.0 and 103 in 0.8.0;
+[scope and complete traces](v0.8.md) distinguish machine actions from human usability.
 
 ## Requirements applying to every release
 

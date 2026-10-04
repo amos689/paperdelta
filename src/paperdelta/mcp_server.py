@@ -62,6 +62,9 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         source_path: str | None = None,
         columns: dict[str, ColumnType] | None = None,
         primary_key: list[str] | None = None,
+        source_format: SourceFormat = "csv",
+        sheet: str | None = None,
+        cell_range: str | None = None,
     ) -> dict[str, Any]:
         request = {
             "source": source,
@@ -75,7 +78,17 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
             "seed_column": seed_column,
             "display": {"kind": display_kind, "places": places, "percent_symbol": percent_symbol},
         }
-        return call(session.batch_call, "start", request, source_path, columns, primary_key)
+        return call(
+            session.batch_call,
+            "start",
+            request,
+            source_path,
+            columns,
+            primary_key,
+            source_format,
+            sheet,
+            cell_range,
+        )
 
     @server.tool(annotations=annotations, description=tr("batch.mcp_list"))
     def list_batch_candidates(
@@ -136,8 +149,20 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         format: SourceFormat,
         columns: dict[str, ColumnType] | None = None,
         primary_key: list[str] | None = None,
+        sheet: str | None = None,
+        cell_range: str | None = None,
     ) -> dict[str, Any]:
-        return call(session.add_draft_source, draft_json, name, path, format, columns, primary_key)
+        return call(
+            session.add_draft_source,
+            draft_json,
+            name,
+            path,
+            format,
+            columns,
+            primary_key,
+            sheet,
+            cell_range,
+        )
 
     @server.tool(annotations=annotations, description=tr("agent.draft_metric"))
     def add_draft_metric(

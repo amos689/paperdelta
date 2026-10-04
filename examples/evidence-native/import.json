@@ -1,0 +1,12 @@
+{
+  "provider": "file",
+  "origin": "results.xlsx",
+  "source": {
+    "path": "results.xlsx",
+    "format": "xlsx",
+    "sheet": "结果 Results",
+    "cell_range": "A1:C3",
+    "columns": {"model": "string", "seed": "integer", "accuracy": "decimal"},
+    "primary_key": ["model"]
+  }
+}

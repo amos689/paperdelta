@@ -162,6 +162,7 @@ def main():
         "examples/ci/paper-check.yml",
     ]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.py")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/schemas").glob("*.json")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.cjs")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tests").glob("*.py")]
     translations = json.loads((ROOT / "docs/translations.json").read_text("utf-8"))
@@ -174,13 +175,14 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.6").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.7").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.8").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.9").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")
     ]
     required += [
         p.relative_to(ROOT).as_posix()
-        for case in ("ambiguous-table", "unicode-macro")
+        for case in ("ambiguous-table", "unicode-macro", "evidence-native")
         for p in (ROOT / "examples" / case).rglob("*")
         if p.is_file() and not {"build", ".paperdelta"}.intersection(p.relative_to(ROOT).parts)
     ]

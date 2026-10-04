@@ -129,7 +129,8 @@ async function runCase(browser, kind, language, performanceOnly = false, baselin
   try {
     await page.goto(url); await page.locator('#workspace').waitFor({ state: 'visible' }); await ready(page);
     const version = await page.locator('#version').textContent();
-    if (baselineRuntime) assert.equal(version, '0.6.0'); else assert.equal(version, '0.8.0');
+    const currentVersion = fs.readFileSync(path.join(root, 'pyproject.toml'), 'utf8').match(/^version = "([^"]+)"/m)[1];
+    assert.equal(version, baselineRuntime ? '0.6.0' : currentVersion);
     countActions = performanceOnly; actions.length = 0;
     await source(page, annotation);
     if (baselineRuntime) {

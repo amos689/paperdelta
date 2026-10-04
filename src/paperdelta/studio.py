@@ -7,8 +7,6 @@ be accepted. Nothing writes manuscript or evidence files.
 
 from __future__ import annotations
 
-import csv
-import io
 import os
 import secrets
 from copy import deepcopy
@@ -96,6 +94,8 @@ class SourceInput(StrictModel):
     columns: dict[str, ColumnType] = Field(default_factory=dict, max_length=100)
     primary_key: list[str] = Field(default_factory=list, max_length=100)
     source_hash: str
+    sheet: str | None = None
+    cell_range: str | None = None
 
 
 class MetricInput(StrictModel):
@@ -130,6 +130,8 @@ class LocationsInput(StrictModel):
 class SourcePreview(StrictModel):
     path: str = Field(min_length=1, max_length=1000)
     offset: int = Field(default=0, ge=0, le=1000000)
+    sheet: str | None = None
+    cell_range: str | None = None
 
 
 class PagePreview(StrictModel):
@@ -331,7 +333,8 @@ def project_files(project):
             path = Path(root) / name
             if (
                 not name.startswith(".")
-                and path.suffix.lower() in {".tex", ".docx", ".pdf", ".csv", ".json"}
+                and path.suffix.lower()
+                in {".tex", ".docx", ".pdf", ".csv", ".json", ".tsv", ".xlsx"}
                 and not path.is_symlink()
             ):
                 output.append(project.relative(path))
@@ -632,21 +635,8 @@ class StudioSession:
                 init_project(self.project, config_path=self.config_path, **parameters)
             self.refresh()
         elif action == "source-preview":
-            summary, identity = _source_summary(self.project, parameters["path"])
-            if summary["format"] == "csv":
-                text, raw = self.project.text(parameters["path"])
-                if sha256(raw) != identity:
-                    raise PaperDeltaError("STALE_DRAFT", msg("studio.changed"))
-                reader = csv.DictReader(io.StringIO(text, newline=""), strict=True)
-                start = parameters["offset"]
-                rows = []
-                for index, row in enumerate(reader):
-                    if start <= index < start + 100:
-                        rows.append(row)
-                    if index >= start + 100:
-                        break
-                summary["sample"] = rows
-                summary["offset"] = start
+            summary, identity = _source_summary(self.project, **parameters, limit=100)
+            summary["offset"] = parameters["offset"]
             return {"source": {**summary, "hash": identity}}
         else:
             self._require_draft()

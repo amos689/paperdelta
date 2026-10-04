@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.9.0 — tables and portable experiment evidence
+
+- Read TSV and static XLSX result tables with explicit types, row identity and worksheet/range selection; retain stored decimals, missingness and original cell locations.
+- Add portable `.pdevidence.json` exports with embedded source snapshots, explicit identity mappings, precision declarations and offline projection verification.
+- Import complete paginated MLflow histories and unsampled W&B SDK histories, preserving run/step/checkpoint/seed/split context without automatic latest/best selection.
+- Extend Studio, terminal/MCP drafts, batches and templates to new table sources; show source provenance in bilingual Studio and HTML.
+- Add configuration/report schema 5 while preserving legacy CSV/JSON identities, and refuse overwriting previously imported evidence.
+- Verify six new bilingual browser flows, actual local HTTP and real SDK pagination, corruption/missing-value cases, and an owned TSV/XLSX example.
+
+See the [0.9 upgrade guide](docs/v0.9.md) and [experiment-evidence workflow](docs/experiment-evidence.md).
+
 ## 0.8.0 — batch binding and portable experiment templates
 
 - Reuse explicit CSV identities, units, aggregations and seed contracts across Studio batch choices.

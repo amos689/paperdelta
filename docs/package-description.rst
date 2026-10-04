@@ -7,7 +7,7 @@ English
 -------
 
 Review how experiment changes affect an existing research paper. PaperDelta
-connects declared CSV/JSON evidence to numbers, comparisons and figure provenance
+connects declared CSV/TSV/JSON, static Excel and imported experiment evidence to numbers, comparisons and figure provenance
 in LaTeX and optional Word/PDF manuscripts, then shows affected locations in an offline report.
 
 Install with Python 3.11 or newer in a virtual environment:
@@ -47,7 +47,7 @@ sources are excluded from the Python distributions.
 简体中文
 --------
 
-检查实验结果变化影响了现有论文的哪些位置。PaperDelta 将明确声明的 CSV/JSON
+检查实验结果变化影响了现有论文的哪些位置。PaperDelta 将明确声明的 CSV/TSV/JSON、静态 Excel 和实验导出
 证据关联到 LaTeX 及可选 Word/PDF 稿件中的数字、比较和图表来源，在离线报告中集中展示待复核内容。
 
 使用 Python 3.11 以上版本，在虚拟环境安装：

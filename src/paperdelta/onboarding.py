@@ -64,12 +64,66 @@ class OnboardingInputs(StrictModel):
     data: list[str]
 
 
-def _source_summary(project: Project, path: str) -> tuple[dict, str]:
-    text, raw = project.text(path)
+def _source_summary(
+    project: Project, path: str, *, sheet=None, cell_range=None, offset=0, limit=5
+) -> tuple[dict, str]:
     suffix = Path(path).suffix.lower()
-    if suffix == ".csv":
+    if suffix == ".xlsx":
+        from paperdelta.xlsx_evidence import Workbook
+
+        raw = project.read(path)
+        workbook = Workbook(raw)
+        result = {
+            "path": path,
+            "format": "xlsx",
+            "sheets": list(workbook.sheets),
+            "needs_selection": not (sheet and cell_range),
+        }
+        if not sheet or not cell_range:
+            return {**result, "columns": [], "sample": [], "record_count": 0}, sha256(raw)
+        table = workbook.table(sheet, cell_range)
+        return {
+            **result,
+            "sheet": sheet,
+            "cell_range": cell_range,
+            "columns": table.columns,
+            "sample": [
+                {key: cell.value for key, cell in row.items()}
+                for row in table.rows[offset : offset + limit]
+            ],
+            "record_count": len(table.rows),
+            "needs_confirmation": [
+                "worksheet",
+                "range",
+                "column types",
+                "primary key",
+                "units",
+                "scope",
+            ],
+        }, sha256(raw)
+    text, raw = project.text(path)
+    if path.lower().endswith(".pdevidence.json"):
+        from paperdelta.experiment_exports import provenance, validate_export
+
+        document = validate_export(parse_json(text))
+        return {
+            "path": path,
+            "format": "records",
+            "columns": list(document.columns),
+            "column_types": document.columns,
+            "primary_key": document.primary_key,
+            "record_count": len(document.records),
+            "sample": [item.values for item in document.records[offset : offset + limit]],
+            "provenance": provenance(document),
+            "needs_confirmation": ["experiment identity", "units", "scope"],
+        }, sha256(raw)
+    if suffix in {".csv", ".tsv"}:
         try:
-            reader = csv.DictReader(io.StringIO(text, newline=""), strict=True)
+            reader = csv.DictReader(
+                io.StringIO(text, newline=""),
+                delimiter="\t" if suffix == ".tsv" else ",",
+                strict=True,
+            )
             headers = reader.fieldnames
             if not headers or len(set(headers)) != len(headers):
                 raise PaperDeltaError("CSV_HEADER", msg("error.CSV_HEADER", path=path))
@@ -81,12 +135,12 @@ def _source_summary(project: Project, path: str) -> tuple[dict, str]:
                         "CSV_ROW", msg("error.CSV_ROW", path=path, value2=reader.line_num)
                     )
                 count += 1
-                if len(sample) < 5:
+                if offset < count <= offset + limit:
                     sample.append(row)
             # Raw text deliberately preserves identities such as model '001'.
             result = {
                 "path": path,
-                "format": "csv",
+                "format": suffix[1:],
                 "columns": headers,
                 "record_count": count,
                 "sample": sample,
@@ -241,6 +295,8 @@ def _merge(config: Config, additions: Additions) -> Config:
                 msg("error.BINDING_CONFLICT", group=group, value2=sorted(duplicates)),
             )
         value[group].update(entries)
+    if any(source["format"] not in {"csv", "json"} for source in value["sources"].values()):
+        value["schema_version"] = max(5, value["schema_version"])
     if any(
         item["anchor"].get("table")
         for group in ("occurrences", "claims")

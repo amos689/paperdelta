@@ -1,0 +1,55 @@
+{
+  "version": "0.8.0",
+  "commit": "d73aaeebe457f6331694b1ae77973278c74049f8",
+  "checked_at": "2026-10-04T08:10:52.327197+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37187210089",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-0.8.0-py3-none-any.whl": "f202be589f522d7baf336acf52fd92163ed8f6147f41bdd9b22dd8d083a09c4f",
+    "paperdelta-0.8.0.tar.gz": "e6fda2ea95c25c215d0ed62750e767b2193b97f7e34d85ede1c42f47bac1fc1d",
+    "paperdelta-evaluation-0.8.0.zip": "867844fed6d5648c9f433d1d0164ad7b18a88c350e2551429ff65add28e1e467"
+  },
+  "status": "passed",
+  "candidate_wheel_entries_identical": 81,
+  "local_installed_suite": {
+    "tests": 509,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 506,
+    "evidence": "build/v08-installed-windows/evidence.json"
+  },
+  "batch_browser_flows": 6,
+  "setup_interactions": {
+    "0.6.0": 270,
+    "0.8.0": 103
+  },
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v0.8.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37187984783",
+  "pypi": "https://pypi.org/project/paperdelta/0.8.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-0.8.0-py3-none-any.whl": "f202be589f522d7baf336acf52fd92163ed8f6147f41bdd9b22dd8d083a09c4f",
+    "paperdelta-0.8.0.tar.gz": "e6fda2ea95c25c215d0ed62750e767b2193b97f7e34d85ede1c42f47bac1fc1d"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true
+}

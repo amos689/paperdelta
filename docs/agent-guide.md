@@ -57,14 +57,14 @@ for the session; tool arguments cannot select a different root.
 | `propose_bindings` | Unaccepted proposal as exact JSON text |
 | `propose_patch` | Recomputed numeric patch as JSON text |
 | `start_binding_draft` | Empty typed draft, candidates and currently available stages |
-| `add_draft_source` | Explicit CSV types/key or JSON source |
+| `add_draft_source` | Explicit table types/key; XLSX sheet/range; export contract or JSON pointer |
 | `add_draft_metric` | Typed selectors, unit, aggregation and expected count/seeds |
 | `add_draft_derived` | Restricted operation over existing metrics |
 | `add_draft_locations` | One or more explicitly selected candidate IDs and display rules |
 | `finish_binding_draft` | Revalidated unaccepted proposal |
 | `scan_binding_repairs` | Broken locations, previous context and current candidates |
 | `propose_binding_repair` | Explicit old/new location proposal with input hashes |
-| `start_batch_binding` | Shared CSV choices and an in-memory session ID |
+| `start_batch_binding` | Shared table choices and an in-memory session ID |
 | `list_batch_candidates` | Paginated metric/location candidates |
 | `select_batch_bindings` | Explicit selection or correction inside the session |
 | `finish_batch_binding` | Revalidated unaccepted batch proposal |

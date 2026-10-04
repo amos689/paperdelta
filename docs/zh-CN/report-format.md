@@ -1,10 +1,23 @@
-# 报告交换约定，版本 4
+# 报告交换约定，版本 5
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–4。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–5。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
+
+## Schema 5 的实验证据
+
+TSV、XLSX 证据增加明确的 `format`。TSV 保留行号；XLSX 使用 `key`、`sheet`、
+从 1 开始的 `row` 及 `cell`。标准化导出使用 `format: records`、严格的导入选择，
+以及包含导出/工具身份、平台、来源、创建时间、精度、快照哈希的 `provenance`。
+每条选中记录都能定位其原快照与原生指针，平台、选择、精度和定位哈希必须一致。
+这与 schema 4 比较论文源稿/PDF 的 `exports` 是不同概念。
+
+旧 CSV/JSON 证据省略这些新字段，保持序列化身份。schema 1–4 报告不能含新格式
+证据。[导入](../schemas/evidence-import.schema.json)和
+[可移植导出](../schemas/evidence-export.schema.json) schema 描述明确的输入约定，
+[实验证据指南](experiment-evidence.md)说明精度、快照与缺失值。
 
 报告包含 `report_schema_version`、`tool_version` 和 `ruleset_version`。未知字段和
 未支持的主版本会被拒绝。每次核心检查都用报告模型校验输出，包括错误报告。
@@ -72,5 +85,5 @@ PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定
 展示，不写入存储报告或快照。详见 [PDF 语义](pdf.md)。
 
 配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
-`paper.companions` 和可选 `export_of`。核心 LaTeX 报告仍使用 schema 2，Word
-报告使用 3，含 PDF 的报告使用 4。读取器兼容版本 1–4。
+`paper.companions` 和可选 `export_of`。使用旧 CSV/JSON 证据时，LaTeX 报告使用
+schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–5。

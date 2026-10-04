@@ -21,7 +21,7 @@ from paperdelta.i18n import msg
 
 Scalar = StrictStr | StrictInt | Decimal
 Unit = Literal["scalar", "fraction", "percent", "percentage_point", "count", "ratio"]
-SourceFormat = Literal["csv", "json"]
+SourceFormat = Literal["csv", "json", "tsv", "xlsx", "records"]
 ColumnType = Literal["string", "integer", "decimal"]
 Aggregation = Literal["unique", "mean", "sum", "count"]
 DisplayKind = Literal["decimal", "percent", "integer", "scientific"]
@@ -88,10 +88,20 @@ class Source(StrictModel):
     format: SourceFormat
     primary_key: list[str] = Field(default_factory=list)
     columns: dict[str, ColumnType] = Field(default_factory=dict)
+    sheet: str | None = None
+    cell_range: str | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        for key in ("sheet", "cell_range"):
+            if value.get(key) is None:
+                value.pop(key, None)
+        return value
 
     @model_validator(mode="after")
     def validate_format(self) -> Self:
-        if self.format == "csv":
+        if self.format != "json":
             if not self.primary_key or not self.columns:
                 raise validation_error(msg("validation.models.3"))
             if len(set(self.primary_key)) != len(self.primary_key):
@@ -100,6 +110,11 @@ class Source(StrictModel):
                 raise validation_error(msg("validation.models.5"))
         elif self.primary_key or self.columns:
             raise validation_error(msg("validation.models.6"))
+        if self.format == "xlsx":
+            if not self.sheet or not self.cell_range:
+                raise validation_error(msg("xlsx.selection"))
+        elif self.sheet is not None or self.cell_range is not None:
+            raise validation_error(msg("xlsx.only"))
         return self
 
 
@@ -260,7 +275,7 @@ class CoverageExclusion(StrictModel):
 
 
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=4)]
+    schema_version: Annotated[int, Field(ge=1, le=5)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -274,6 +289,10 @@ class Config(StrictModel):
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if self.schema_version < 5 and any(
+            source.format not in {"csv", "json"} for source in self.sources.values()
+        ):
+            raise validation_error(msg("evidence.schema"))
         manuscripts = [self.paper, *self.paper.companions]
         if self.schema_version < 4 and (
             self.paper.companions

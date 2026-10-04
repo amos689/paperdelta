@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.8.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.8.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.9.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.9.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -37,7 +37,7 @@
 
 准确率从 **84.1% 变为 80.9%**，摘要、表格和附录仍保留旧数字，正文中
 **提高 3.1 个百分点**及**优于基线**的结论也不再成立。PaperDelta 将这些表述关联到
-明确声明的 CSV/JSON 证据，集中展示需要复核的位置，即使 LaTeX 文件本身没有变化。
+明确声明的实验证据，集中展示需要复核的位置，即使 LaTeX 文件本身没有变化。
 
 本地 Python 命令行 · LaTeX + 可选 Word/PDF · 精确十进制计算 · 离线 HTML · 可选 MCP。
 检查不需要模型密钥、GPU 或 TeX 安装。
@@ -54,11 +54,14 @@
 [打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
 
-**0.8.0** 新增批量绑定、可迁移实验模板和 CLI/MCP 提案的图形复核。
+**0.9.0** 新增 TSV、静态 Excel、可移植实验导出，以及明确执行的 MLflow/W&B
+导入和离线来源核验，详见[实验证据指南](docs/zh-CN/experiment-evidence.md)。
+
+上方动图展示 **0.8.0** 引入的批量绑定、可迁移实验模板和 CLI/MCP 提案图形复核。
 可复现的 24 指标流程，记录的浏览器操作量从 0.6.0 的 270 次降为 103 次；
 [测量范围与原始轨迹](docs/zh-CN/v0.8.md)已公开。快照比较、持续检查和本地草稿恢复继续可用。
 运行 `paperdelta --lang zh-CN studio` 即可开始。详见
-[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v0.8.md)。界面全程支持中英文切换。
+[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v0.9.md)。界面全程支持中英文切换。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 后续发行继续采用正式版本号。
 
@@ -93,7 +96,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-0.8.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-0.9.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -107,7 +110,7 @@ paperdelta --lang zh-CN batch guide
 paperdelta --lang zh-CN check --report build/paperdelta
 ```
 
-`init` 只发现输入，不接受绑定。批量向导在 CSV 结果表中复用明确的来源、记录身份、
+`init` 只发现输入，不接受绑定。批量向导在已声明的结果表中复用明确的来源、记录身份、
 单位、聚合及种子选择，依据上下文建议位置，可选择重复引用，并在最终“确认”前
 展示全部选择。数字相同不能证明身份一致。JSON 来源及单项、派生指标继续使用
 `paperdelta guide`。
@@ -169,7 +172,7 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 报告保留未绑定、排除、范围外和不支持内容。`require_complete_coverage` 可要求
 声明范围内的数字覆盖完整；已有绑定始终运行。一致性不等于科学正确性认证。
 
-支持字面 LaTeX `input/include`、已声明字面宏参数、限定的字面表格单元格、CSV/JSON、
+支持字面 LaTeX `input/include`、已声明字面宏参数、限定的字面表格单元格、CSV/TSV/JSON、静态 Excel 与实验导出、
 明确聚合、带单位派生值、有限比较和图表来源。动态 TeX、任意宏展开、统计推断及
 全局 SOTA 验证仍不在支持范围内。安装 `paperdelta[docx]` 可检查 Word 段落和普通
 表格；修订、域和复杂排版仍标为未验证。详见[规则与限制](docs/zh-CN/rules.md)及
@@ -182,7 +185,7 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.8.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v0.9.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

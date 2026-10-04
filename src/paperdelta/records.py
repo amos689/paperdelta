@@ -6,9 +6,10 @@ from datetime import datetime
 from decimal import Decimal, InvalidOperation
 from typing import Annotated, Any, Literal
 
-from pydantic import Field, ValidationError, field_validator, model_validator
+from pydantic import Field, ValidationError, field_validator, model_serializer, model_validator
 
 from paperdelta.errors import PaperDeltaError, error_message, validation_error
+from paperdelta.evidence_models import ImportRequest
 from paperdelta.i18n import msg
 from paperdelta.models import (
     Coordinate,
@@ -176,6 +177,42 @@ class JsonLocation(StrictModel):
     pointer: str
 
 
+class XlsxLocation(StrictModel):
+    key: dict[str, Scalar]
+    sheet: str
+    row: Positive
+    cell: Annotated[str, Field(pattern=r"^[A-Z]{1,3}[1-9][0-9]{0,6}$")]
+
+
+class ExportLocation(StrictModel):
+    key: dict[str, Scalar]
+    snapshot: Hash
+    pointer: str
+
+
+class ExportProvenance(StrictModel):
+    export_id: Hash
+    tool_version: str
+    provider: Literal["file", "mlflow", "wandb"]
+    origin: str
+    created_at: str
+    precision: Literal["stored-lexemes", "api-double", "sdk-binary64"]
+    selection: ImportRequest
+    snapshot_hashes: list[Hash] = Field(min_length=1, max_length=10000)
+
+    @model_validator(mode="after")
+    def consistent_provenance(self):
+        expected = {"file": "stored-lexemes", "mlflow": "api-double", "wandb": "sdk-binary64"}
+        if (
+            self.provider != self.selection.provider
+            or self.origin != self.selection.origin
+            or self.precision != expected[self.provider]
+            or datetime.fromisoformat(self.created_at).tzinfo is None
+        ):
+            raise validation_error(msg("export.provenance"))
+        return self
+
+
 class Evidence(StrictModel):
     source: Identifier
     path: str
@@ -184,17 +221,38 @@ class Evidence(StrictModel):
     reduce: Literal["unique", "mean", "sum", "count"]
     count: Positive
     records: list[CsvRecord | JsonRecord]
-    locations: list[CsvLocation | JsonLocation]
+    locations: list[CsvLocation | JsonLocation | XlsxLocation | ExportLocation]
+    format: Literal["tsv", "xlsx", "records"] | None = None
+    provenance: ExportProvenance | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if value.get("format") is None:
+            value.pop("format", None)
+        if value.get("provenance") is None:
+            value.pop("provenance", None)
+        return value
 
     @model_validator(mode="after")
     def complete_rows(self):
         if len(self.records) != self.count:
             raise validation_error(msg("validation.records.5"))
+        if (self.format == "records") != (self.provenance is not None):
+            raise validation_error(msg("export.provenance"))
         if all(isinstance(record, CsvRecord) for record in self.records):
+            location_type = {"xlsx": XlsxLocation, "records": ExportLocation}.get(
+                self.format, CsvLocation
+            )
             if len(self.locations) != self.count or any(
-                not isinstance(location, CsvLocation) for location in self.locations
+                not isinstance(location, location_type) for location in self.locations
             ):
                 raise validation_error(msg("validation.records.17"))
+            if self.provenance and any(
+                location.snapshot not in self.provenance.snapshot_hashes
+                for location in self.locations
+            ):
+                raise validation_error(msg("export.provenance"))
         elif any(isinstance(record, CsvRecord) for record in self.records) or (
             len(self.locations) != 1 or not isinstance(self.locations[0], JsonLocation)
         ):
@@ -448,7 +506,7 @@ class ExportState(StrictModel):
 
 
 class StoredReport(TimestampedRecord):
-    report_schema_version: Annotated[int, Field(ge=1, le=4)]
+    report_schema_version: Annotated[int, Field(ge=1, le=5)]
     tool_version: str
     ruleset_version: str
     config_path: str
@@ -472,6 +530,12 @@ class StoredReport(TimestampedRecord):
 
     @model_validator(mode="after")
     def counted_verdicts(self):
+        if self.report_schema_version < 5 and any(
+            evidence.format is not None
+            for metric in self.metrics.values()
+            for evidence in metric.evidence
+        ):
+            raise validation_error(msg("evidence.report_schema"))
         locations = [
             *(
                 item.location

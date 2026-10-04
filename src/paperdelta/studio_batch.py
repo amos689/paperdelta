@@ -23,7 +23,7 @@ MAX_TEMPLATE_BYTES = 64 * 1024
 
 
 class TemplateSource(StrictModel):
-    format: Literal["csv"]
+    format: Literal["csv", "tsv", "xlsx", "records"]
     columns: dict[str, ColumnType] = Field(min_length=1, max_length=100)
     primary_key: list[str] = Field(min_length=1, max_length=100)
 

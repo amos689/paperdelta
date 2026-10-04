@@ -1,11 +1,28 @@
-# Report interchange contract, version 4
+# Report interchange contract, version 5
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–4).
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–5).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
+
+## Experiment evidence in schema 5
+
+TSV and XLSX evidence add an explicit `format`. TSV retains line locations; XLSX
+uses `key`, `sheet`, one-based `row` and `cell`. Normalized exports use
+`format: records`, a strict import selection and `provenance` with export/tool
+identity, provider, origin, creation time, precision and snapshot hashes. Each
+selected row locates its original snapshot and native pointer. Provider, selection,
+precision and location hashes must agree. This is separate from schema-4 manuscript
+`exports`, which compare paper source/PDF output.
+
+New fields are omitted for legacy CSV/JSON evidence, preserving existing serialized
+identities. Schema 1–4 reports cannot contain new-format evidence. The
+[import](schemas/evidence-import.schema.json) and
+[portable export](schemas/evidence-export.schema.json) schemas describe the
+explicit import contract; [experiment evidence](experiment-evidence.md) explains
+precision, snapshots and missing values.
 
 Reports include `report_schema_version`, `tool_version` and `ruleset_version`.
 Unknown fields and unsupported major schema versions are rejected. Every core
@@ -96,4 +113,5 @@ they are not embedded into stored reports or snapshots. See [PDF semantics](pdf.
 
 Configuration schema 3 introduced native Word positions. Schema 4 adds PDF
 regions, extraction identities and `paper.companions` with optional `export_of`.
-Core LaTeX reports still use schema 2, Word reports use 3, and PDF reports use 4.
+With legacy CSV/JSON evidence, LaTeX reports use schema 2, Word reports use 3, and
+PDF reports use 4. Any new evidence format requires schema 5.

@@ -41,7 +41,7 @@ def _compatible_draft(value):
     current = tuple(map(int, __version__.split(".")))
     # These versions share schema 1 and exactly the same binding contracts.
     # Unknown future schemas/versions must be deliberately added after evaluation.
-    if len(before) != 3 or before > current or before[:2] not in {(0, 6), (0, 7), (0, 8)}:
+    if len(before) != 3 or before > current or before[:2] not in {(0, 6), (0, 7), (0, 8), (0, 9)}:
         raise PaperDeltaError("DRAFT_IDENTITY", msg("builder.identity"))
     return draft
 

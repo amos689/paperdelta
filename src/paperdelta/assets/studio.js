@@ -46,6 +46,8 @@
     options(field("derived-form", "operation"), ["difference", "ratio", "percentage_point_difference", "relative_change_percent"], true);
     options(field("locations-form", "display_kind"), ["percent", "decimal", "integer", "scientific"], true);
     $("pdf-zoom").textContent = t($("pdf-view").classList.contains("zoomed") ? "fit" : "zoom");
+    const sheetChoice = field("sheet-form", "sheet").querySelector('option[value=""]');
+    if (sheetChoice) sheetChoice.textContent = t("choose");
   }
   function notice(message) { $("message").textContent = message; $("message").hidden = !message; }
   function error(err) { $("error").textContent = err.message || String(err); $("error").hidden = false; }
@@ -129,6 +131,8 @@
     const details = node("details"); details.append(node("summary", t("evidence_rows")));
     for (const evidence of item.result.evidence || []) {
       details.append(node("p", evidence.path || evidence.source || ""));
+      if (evidence.provenance) details.append(provenanceView(evidence.provenance));
+      if (evidence.format && evidence.locations?.length) details.append(node("pre", text(evidence.locations)));
       const records = evidence.records || evidence.rows || [];
       if (records.length) {
         const view = node("div"), pages = node("div", undefined, "pagination");
@@ -182,7 +186,7 @@
     for (const [name, source] of Object.entries(state.sources)) {
       const card = node("div", undefined, "source-card"); card.append(node("strong", name), node("p", source.path));
       if (source.primary_key.length) card.append(node("p", t("primary_key") + ": " + source.primary_key.join(" + ")));
-      const view = node("button", t("inspect_source"), "link-button"); view.onclick = () => task(() => inspectSource(source.path)); card.append(view); $("source-list").append(card);
+      const view = node("button", t("inspect_source"), "link-button"); view.onclick = () => task(() => inspectSource(source.path, 0, { sheet: source.sheet, cell_range: source.cell_range })); card.append(view); $("source-list").append(card);
     }
     if (!Object.keys(state.sources).length) $("source-list").append(node("p", t("no_sources"), "empty"));
     renderMetrics();
@@ -240,22 +244,34 @@
     }
     if (source.format === "json") $("selectors").append(node("p", t("json_pointer_hint"), "muted"));
   }
-  async function inspectSource(path, offset = 0) {
-    const next = (await api("source-preview", { path, offset })).source;
-    const newPath = sourcePath !== path;
+  async function inspectSource(path, offset = 0, selection = null) {
+    selection ||= sourcePath === path ? { sheet: sourcePreview?.sheet, cell_range: sourcePreview?.cell_range } : {};
+    const next = (await api("source-preview", { path, offset, ...selection })).source;
+    const newPath = sourcePath !== path || sourcePreview?.sheet !== next.sheet || sourcePreview?.cell_range !== next.cell_range;
     sourcePreview = next; sourcePath = path;
-    $("add-source").open = true; $("source-form").hidden = false; $("source-title").textContent = path;
+    $("add-source").open = true; $("source-form").hidden = !!next.needs_selection; $("source-title").textContent = path;
     field("source-path-form", "path").value = path;
+    $("sheet-form").hidden = next.format !== "xlsx";
+    if (next.format === "xlsx") {
+      options(field("sheet-form", "sheet"), next.sheets, false, t("choose"));
+      if (next.sheet) field("sheet-form", "sheet").value = next.sheet;
+      if (next.cell_range) field("sheet-form", "cell_range").value = next.cell_range;
+      else if (newPath) field("sheet-form", "cell_range").value = "";
+    }
     renderSourceSample();
     if (newPath) {
       $("column-types").replaceChildren();
-      if (next.format === "csv") {
-        $("column-types").append(node("p", t("primary_key_hint"), "muted"));
+      if (next.format !== "json") {
+        $("column-types").append(node("p", t(next.format === "records" ? "export_contract" : "primary_key_hint"), "muted"));
         for (const column of next.columns) {
           const row = node("div", undefined, "check-row"), key = node("input"), label = node("label", column), select = node("select");
           key.type = "checkbox"; key.dataset.column = column; key.setAttribute("aria-label", t("key_column", { column }));
           select.dataset.column = column; select.setAttribute("aria-label", t("type_column", { column }));
           options(select, ["string", "integer", "decimal"], true); row.append(key, label, select); $("column-types").append(row);
+          if (next.format === "records") {
+            key.checked = next.primary_key.includes(column); key.disabled = true;
+            select.value = next.column_types[column]; select.disabled = true;
+          }
         }
       }
     }
@@ -263,7 +279,14 @@
   function renderSourceSample() {
     if (!sourcePreview) return;
     $("source-sample").replaceChildren(table(sourcePreview.sample, sourcePreview.columns || ["pointer", "value"]));
+    $("source-provenance").replaceChildren();
+    if (sourcePreview.provenance) $("source-provenance").append(provenanceView(sourcePreview.provenance));
     pageButtons($("source-pages"), sourcePreview.offset || 0, sourcePreview.record_count || 0, 100, (offset) => task(() => inspectSource(sourcePath, offset)));
+  }
+  function provenanceView(origin) {
+    const box = node("details"); box.append(node("summary", t("provenance")));
+    box.append(node("p", `${origin.provider} · ${origin.origin}`), node("p", origin.created_at), node("p", t("precision_" + origin.precision)), node("pre", text(origin.selection)), node("code", origin.export_id));
+    return box;
   }
   function toggleCandidate(item, checked) {
     if (state.stale || item.bound.length) return;
@@ -381,11 +404,12 @@
   document.querySelectorAll("[data-step]").forEach((button) => { button.onclick = () => setStep(button.dataset.step); });
   $("setup-form").onsubmit = (event) => { event.preventDefault(); task(async () => { await change("initialize", { paper: field("setup-form", "paper").value.trim(), data: field("setup-form", "data").value.split("\n").map((v) => v.trim()).filter(Boolean) }); notice(t("initialized")); }); };
   $("source-path-form").onsubmit = (event) => { event.preventDefault(); task(() => inspectSource(field("source-path-form", "path").value.trim())); };
+  $("sheet-form").onsubmit = (event) => { event.preventDefault(); task(() => inspectSource(sourcePath, 0, { sheet: field("sheet-form", "sheet").value, cell_range: field("sheet-form", "cell_range").value.trim() })); };
   $("source-form").onsubmit = (event) => {
     event.preventDefault(); task(async () => {
       const columns = Object.fromEntries([...$("column-types").querySelectorAll("select")].map((s) => [s.dataset.column, s.value]));
       const primary_key = [...$("column-types").querySelectorAll("input:checked")].map((i) => i.dataset.column);
-      await change("source", { name: field("source-form", "name").value, path: sourcePath, format: sourcePreview.format, columns, primary_key, source_hash: sourcePreview.hash });
+      await change("source", { name: field("source-form", "name").value, path: sourcePath, format: sourcePreview.format, columns, primary_key, source_hash: sourcePreview.hash, sheet: sourcePreview.sheet, cell_range: sourcePreview.cell_range });
       $("add-source").open = false; $("add-metric").open = true; notice(t("source_staged"));
     });
   };
@@ -441,7 +465,7 @@
     $("column-types").querySelectorAll("select").forEach((s) => options(s, ["string", "integer", "decimal"], true));
     $("column-types").querySelectorAll("input").forEach((el) => el.setAttribute("aria-label", t("key_column", { column: el.dataset.column })));
     $("column-types").querySelectorAll("select").forEach((el) => el.setAttribute("aria-label", t("type_column", { column: el.dataset.column })));
-    const keyHint = $("column-types").querySelector("p"); if (keyHint) keyHint.textContent = t("primary_key_hint");
+    const keyHint = $("column-types").querySelector("p"); if (keyHint) keyHint.textContent = t(sourcePreview?.format === "records" ? "export_contract" : "primary_key_hint");
     await reviewWorkbench.localize();
     await batchWorkbench.localize();
   });

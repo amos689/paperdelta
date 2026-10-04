@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 from paperdelta import builder
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr
@@ -87,10 +85,17 @@ def _source(project, draft, questions):
         else questions.read("guide.path", required=True)
     )
     summary, _ = _source_summary(project, path)
+    sheet, cell_range = None, None
+    if summary.get("needs_selection"):
+        sheet = questions.choose("guide.sheet", [(name, name) for name in summary["sheets"]])
+        cell_range = questions.read("guide.cell_range", required=True)
+        summary, _ = _source_summary(project, path, sheet=sheet, cell_range=cell_range)
     _show(questions.output, tr("guide.sample"), summary["sample"])
     name = questions.read("guide.source_name", required=True)
     columns, keys = {}, []
-    if Path(path).suffix.lower() == ".csv":
+    if summary["format"] == "records":
+        columns, keys = summary["column_types"], summary["primary_key"]
+    elif summary["format"] != "json":
         keys = questions.many("guide.primary_key", [(name, name) for name in summary["columns"]])
         for column in summary["columns"]:
             questions.output.write(tr("guide.column", name=_safe(column)) + "\n")
@@ -106,6 +111,8 @@ def _source(project, draft, questions):
         format=summary["format"],
         columns=columns,
         primary_key=keys,
+        sheet=sheet,
+        cell_range=cell_range,
     ), name
 
 
@@ -116,7 +123,7 @@ def _new_metric(project, draft, questions):
     name = questions.read("guide.metric_name", required=True)
     where, seeds = {}, None
     seed_column = "seed"
-    if declaration.format == "csv":
+    if declaration.format != "json":
         field = questions.choose("guide.field", [(key, key) for key in declaration.columns])
         for column in declaration.columns:
             if column == field:
@@ -144,7 +151,7 @@ def _new_metric(project, draft, questions):
     seed_options = [
         (key, key) for key, kind in declaration.columns.items() if kind in {"string", "integer"}
     ]
-    if declaration.format == "csv":
+    if declaration.format != "json":
         seed_column = questions.choose(
             "guide.seed_column", [(None, tr("guide.no_seeds")), *seed_options]
         )

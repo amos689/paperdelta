@@ -133,7 +133,7 @@ def main():
             venv.EnvBuilder(with_pip=True).create(directory)
             python = directory / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
             interpreters[name] = python
-            target = str(wheel) + ("[dev,mcp]" if name == "full" else "")
+            target = str(wheel) + ("[dev,mcp,wandb]" if name == "full" else "")
             command(f"install-{name}", [python, "-I", "-m", "pip", "install", target])
             if name == "core":
                 command(

@@ -138,6 +138,8 @@ def check_configuration(
             report["report_schema_version"] = 4
         elif any(getattr(doc, "format", "latex") == "docx" for doc in paper.documents.values()):
             report["report_schema_version"] = 3
+        if any(source.format not in {"csv", "json"} for source in config.sources.values()):
+            report["report_schema_version"] = 5
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
         attach_reviews(project, report)

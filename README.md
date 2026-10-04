@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.8.0"><img src="docs/assets/badges/release.svg" alt="Release 0.8.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.9.0"><img src="docs/assets/badges/release.svg" alt="Release 0.9.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -38,7 +38,7 @@
 An accuracy result changes from **84.1% to 80.9%**. The abstract, table and
 appendix still repeat the old number; a **3.1 percentage point** improvement and
 an **outperforms baseline** claim no longer hold. PaperDelta traces those statements
-to declared CSV/JSON evidence and brings the affected locations together for review,
+to declared experiment evidence and brings the affected locations together for review,
 even when no LaTeX file changed.
 
 Local Python CLI · LaTeX + optional Word/PDF · exact decimal arithmetic · offline HTML · optional MCP.
@@ -57,12 +57,15 @@ Playback is paced for reading.
 [Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.8/report.png).
 
-**0.8.0** adds batch binding, portable experiment templates and graphical review
+**0.9.0** adds TSV, static Excel and portable experiment exports, with explicit
+MLflow/W&B imports and offline provenance checks. See the [experiment guide](docs/experiment-evidence.md).
+
+The animation shows the batch workflow introduced in **0.8.0**: portable experiment templates and graphical review
 of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded browser
 interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
 Snapshot comparison, ongoing checks and local draft recovery remain available.
 Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v0.8.md).
+See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v0.9.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -101,7 +104,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.8.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-0.9.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -117,7 +120,7 @@ paperdelta check --report build/paperdelta
 ```
 
 `init` discovers inputs without accepting bindings. The batch guide reuses explicit
-source, record identity, units, aggregation and seed choices across a CSV results
+source, record identity, units, aggregation and seed choices across a declared results
 table. It suggests locations from context, lets you choose repeated occurrences,
 and shows the final selection before `accept`. Equal numbers alone are not evidence
 of identity. JSON sources and individual/derived metrics use `paperdelta guide`.
@@ -191,7 +194,7 @@ Reports keep unbound, excluded, outside-scope and unsupported content visible.
 existing bindings always run. Agreement is not certification of scientific truth.
 
 Supported inputs include literal LaTeX `input/include`, declared literal macro
-arguments, bounded literal table cells, CSV/JSON, explicit aggregation, derived
+arguments, bounded literal table cells, CSV/TSV/JSON, static Excel and experiment exports, explicit aggregation, derived
 values with units, limited comparisons and figure provenance. Dynamic TeX,
 arbitrary macro expansion, statistical inference and global SOTA verification
 remain outside the supported contract. Word paragraphs and ordinary tables are supported
@@ -206,7 +209,7 @@ relations. See the [PDF boundary and workflow](docs/pdf.md).
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.8.md) distinguish what each run established.
+and [current release checks](docs/v0.9.md) distinguish what each run established.
 
 ## Development
 

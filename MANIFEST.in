@@ -4,7 +4,7 @@ include .gitattributes .gitignore
 recursive-include .github *.yml *.md
 recursive-include docs *.md *.json *.svg *.png *.gif *.webm *.log *.xml
 include docs/evidence/macos-native-20261003/return.zip
-recursive-include examples *.yaml *.yml *.tex *.csv *.json *.py *.pdf *.png *.md
+recursive-include examples *.yaml *.yml *.tex *.csv *.tsv *.xlsx *.json *.py *.pdf *.png *.md
 recursive-include tools *.py *.cjs
 recursive-include tests *.py
 recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
@@ -19,3 +19,5 @@ prune examples/ambiguous-table/build
 prune examples/ambiguous-table/.paperdelta
 prune examples/unicode-macro/build
 prune examples/unicode-macro/.paperdelta
+prune examples/evidence-native/build
+prune examples/evidence-native/.paperdelta

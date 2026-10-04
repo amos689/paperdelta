@@ -47,14 +47,14 @@ Windows 使用虚拟环境的 `Scripts/python.exe`。`-C` 固定会话项目根�
 | `propose_bindings` | 精确 JSON 文本形式的未确认提案 |
 | `propose_patch` | 重新计算的数值补丁 JSON 文本 |
 | `start_binding_draft` | 空的类型化草稿、候选与当前可执行步骤 |
-| `add_draft_source` | 明确 CSV 类型和主键，或 JSON 来源 |
+| `add_draft_source` | 明确表格类型/主键、XLSX 工作表/范围、导出声明或 JSON 指针 |
 | `add_draft_metric` | 类型化筛选、单位、聚合、预期数量和种子 |
 | `add_draft_derived` | 在已有指标上执行受限运算 |
 | `add_draft_locations` | 一个或多个明确选择的候选 ID 与显示规则 |
 | `finish_binding_draft` | 重新验证后的未确认提案 |
 | `scan_binding_repairs` | 失效位置、之前的上下文与当前候选 |
 | `propose_binding_repair` | 带输入哈希的明确新旧位置提案 |
-| `start_batch_binding` | 共享 CSV 选择及内存会话 ID |
+| `start_batch_binding` | 共享表格选择及内存会话 ID |
 | `list_batch_candidates` | 分页指标和位置候选 |
 | `select_batch_bindings` | 会话内明确选择或纠正 |
 | `finish_batch_binding` | 重新校验的未接受批量提案 |

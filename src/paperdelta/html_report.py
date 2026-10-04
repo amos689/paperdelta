@@ -9,7 +9,7 @@ from importlib.resources import files
 
 from paperdelta.i18n import LANGUAGES, Message, catalog, current_language, msg
 from paperdelta.locations import location_label
-from paperdelta.storage import sha256
+from paperdelta.storage import json_text, sha256
 
 
 def esc(value) -> str:
@@ -130,6 +130,15 @@ def _evidence(report, group, state, refs, labels):
                 + "</p>"
             )
             rows = []
+            if source.get("provenance"):
+                origin = source["provenance"]
+                parts.append(
+                    f"<details><summary>{t('html.provenance')}</summary>"
+                    f"<p>{esc(origin['provider'])} · {esc(origin['origin'])}</p>"
+                    f"<p>{esc(origin['created_at'])}</p><p><code>{esc(origin['export_id'])}</code></p>"
+                    f"<p>{t('html.precision_' + origin['precision'])}</p>"
+                    f"<pre>{esc(json_text(origin['selection']))}</pre></details>"
+                )
             for index, record in enumerate(source["records"][:10]):
                 identity = "; ".join(
                     f"{key}={value}" for key, value in record.get("key", {}).items()
@@ -138,11 +147,12 @@ def _evidence(report, group, state, refs, labels):
                     esc(identity) if identity else t("html.item", index=record.get("index", index))
                 )
                 location = source["locations"][index] if index < len(source["locations"]) else {}
-                location = (
-                    t("html.line", line=location["line"])
-                    if "line" in location
-                    else esc(source["field"])
-                )
+                if "cell" in location:
+                    location = esc(f"{location['sheet']}!{location['cell']}")
+                elif "line" in location:
+                    location = t("html.line", line=location["line"])
+                else:
+                    location = esc(location.get("pointer", source["field"]))
                 rows.append(
                     f"<tr><td>{identity}</td><td>{esc(record['value'])}</td><td>{location}</td></tr>"
                 )

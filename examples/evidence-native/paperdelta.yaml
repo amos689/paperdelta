@@ -1,0 +1,42 @@
+schema_version: 5
+paper:
+  entry: paper.tex
+sources:
+  tab_separated:
+    path: results.tsv
+    format: tsv
+    primary_key: [model]
+    columns: {model: string, seed: integer, accuracy: decimal}
+  spreadsheet:
+    path: results.xlsx
+    format: xlsx
+    sheet: 结果 Results
+    cell_range: A1:C3
+    primary_key: [model]
+    columns: {model: string, seed: integer, accuracy: decimal}
+metrics:
+  primary:
+    source: tab_separated
+    field: accuracy
+    where: {model: '001', seed: 1}
+    reduce: unique
+    expected_count: 1
+    unit: fraction
+  control:
+    source: spreadsheet
+    field: accuracy
+    where: {model: '1', seed: 2}
+    reduce: unique
+    expected_count: 1
+    unit: fraction
+occurrences:
+  primary_accuracy:
+    file: paper.tex
+    anchor: {prefix: ' primary accuracy: ', suffix: ".\n"}
+    metric: primary
+    display: {kind: percent, places: 1, percent_symbol: true}
+  control_accuracy:
+    file: paper.tex
+    anchor: {prefix: ' control accuracy: ', suffix: ".\n"}
+    metric: control
+    display: {kind: percent, places: 1, percent_symbol: true}

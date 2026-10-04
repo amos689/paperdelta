@@ -163,7 +163,7 @@ window.createPaperDeltaBatch = function (ctx) {
     }
     if (next.stale) { paintCounts(); return; }
     sourceDefinitions = next.sources || {};
-    const sources = Object.entries(next.sources || {}).filter(([, source]) => source.format === 'csv');
+    const sources = Object.entries(next.sources || {}).filter(([, source]) => source.format !== 'json');
     const signature = JSON.stringify(sources);
     if (signature !== sourceSignature) {
       const before = val('source'); options(field('source'), sources.map(([name]) => name));

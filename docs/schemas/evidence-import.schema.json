@@ -1,0 +1,174 @@
+{
+  "$defs": {
+    "IdentityField": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Field",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "param",
+            "tag",
+            "config",
+            "history"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "type": {
+          "default": "string",
+          "enum": [
+            "string",
+            "integer"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "field"
+      ],
+      "title": "IdentityField",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "cell_range": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cell Range"
+        },
+        "columns": {
+          "additionalProperties": {
+            "enum": [
+              "string",
+              "integer",
+              "decimal"
+            ],
+            "type": "string"
+          },
+          "title": "Columns",
+          "type": "object"
+        },
+        "format": {
+          "enum": [
+            "csv",
+            "json",
+            "tsv",
+            "xlsx",
+            "records"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "primary_key": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Primary Key",
+          "type": "array"
+        },
+        "sheet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sheet"
+        }
+      },
+      "required": [
+        "path",
+        "format"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "identity": {
+      "additionalProperties": {
+        "$ref": "#/$defs/IdentityField"
+      },
+      "propertyNames": {
+        "enum": [
+          "seed",
+          "split",
+          "checkpoint"
+        ]
+      },
+      "title": "Identity",
+      "type": "object"
+    },
+    "metrics": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Metrics",
+      "type": "array"
+    },
+    "origin": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Origin",
+      "type": "string"
+    },
+    "provider": {
+      "enum": [
+        "file",
+        "mlflow",
+        "wandb"
+      ],
+      "title": "Provider",
+      "type": "string"
+    },
+    "runs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Runs",
+      "type": "array"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Source"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "provider",
+    "origin"
+  ],
+  "title": "ImportRequest",
+  "type": "object"
+}

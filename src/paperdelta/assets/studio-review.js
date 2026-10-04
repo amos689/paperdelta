@@ -136,7 +136,7 @@ window.createPaperDeltaReview = function (ctx) {
       const choices = field.kind === 'string' ? ({
         unit: ['scalar', 'fraction', 'percent', 'percentage_point', 'count', 'ratio'],
         reduce: ['unique', 'mean', 'sum', 'count'],
-        format: ['csv', 'json'],
+        format: ['csv', 'json', 'tsv', 'xlsx', 'records'],
         op: ['difference', 'ratio', 'percentage_point_difference', 'relative_change_percent'],
         'display.kind': ['decimal', 'percent', 'integer', 'scientific'],
         'predicate.op': ['greater_than', 'greater_equal', 'less_than', 'less_equal', 'equal', 'best_in_set'],

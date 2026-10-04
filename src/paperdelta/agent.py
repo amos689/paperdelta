@@ -86,7 +86,9 @@ class AgentSession:
         value = builder.start_draft(self.project, self.config_path)
         return {**self._draft_view(value), "discovery": self.scan_project()}
 
-    def add_draft_source(self, draft_json, name, path, format, columns, primary_key):
+    def add_draft_source(
+        self, draft_json, name, path, format, columns, primary_key, sheet=None, cell_range=None
+    ):
         return self._draft_view(
             builder.add_source(
                 self.project,
@@ -96,6 +98,8 @@ class AgentSession:
                 format=format,
                 columns=columns,
                 primary_key=primary_key,
+                sheet=sheet,
+                cell_range=cell_range,
             )
         )
 

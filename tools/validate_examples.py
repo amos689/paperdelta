@@ -1,4 +1,4 @@
-"""Check the three public owned fixtures and Unicode/BOM/CRLF patch recovery."""
+"""Check public owned fixtures, portable evidence and Unicode/BOM/CRLF recovery."""
 
 import argparse
 import json
@@ -8,9 +8,10 @@ from hashlib import sha256
 from pathlib import Path
 
 from paperdelta.analysis import check_project
+from paperdelta.experiment_imports import import_evidence
 from paperdelta.patches import apply_patch, create_patch, recover_transaction
 from paperdelta.reports import write_reports
-from paperdelta.storage import Project
+from paperdelta.storage import Project, parse_json
 
 
 def main():
@@ -25,6 +26,7 @@ def main():
         ("research-paper", 0),
         ("ambiguous-table", 2),
         ("unicode-macro", 0),
+        ("evidence-native", 0),
     ):
         source = repository / "examples" / name
         root = output / name
@@ -42,6 +44,14 @@ def main():
             "coverage": report["coverage"],
             "rules": sorted({d["rule"] for d in report["diagnostics"]}),
         }
+        if name == "evidence-native":
+            imported = import_evidence(
+                project, parse_json(project.text("import.json")[0]), "build/static.pdevidence.json"
+            )
+            assert imported["records"] == 2
+            assert report["coverage"]["pass"] == 2
+            assert report["metrics"]["primary"]["value"] == "0.80000000000000000000000000001"
+            results[name]["offline_export"] = imported["provenance"]["export_id"]
         if name == "ambiguous-table":
             assert report["occurrences"]["table_accuracy"]["status"] == "unknown"
             assert "ANCHOR_AMBIGUOUS" in results[name]["rules"]

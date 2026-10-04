@@ -25,7 +25,16 @@ class BatchSessions:
             raise PaperDeltaError("BATCH_SESSION", msg("batch.session"))
         return state
 
-    def start(self, request, source_path=None, columns=None, primary_key=None):
+    def start(
+        self,
+        request,
+        source_path=None,
+        columns=None,
+        primary_key=None,
+        source_format="csv",
+        sheet=None,
+        cell_range=None,
+    ):
         draft = builder.start_draft(self.project, self.config_path)
         _, config = builder.resume_draft(self.project, draft)
         source = request["source"]
@@ -39,9 +48,11 @@ class BatchSessions:
                 draft,
                 name=source,
                 path=source_path,
-                format="csv",
+                format=source_format,
                 columns=columns,
                 primary_key=primary_key,
+                sheet=sheet,
+                cell_range=cell_range,
             )
         catalog = create_catalog(self.project, draft, request)
         session_id = uuid.uuid4().hex

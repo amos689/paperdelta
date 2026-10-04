@@ -3,7 +3,7 @@
 [简体中文](zh-CN/studio.md)
 
 PaperDelta 0.8 combines first-time and batch binding with ongoing review of
-LaTeX, Word and text-PDF manuscripts against CSV/JSON evidence in `paperdelta studio`.
+LaTeX, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
 It uses the same typed drafts, exact calculations, anchors and explicit acceptance
 as the CLI. The interface can switch between English and Simplified Chinese.
 
@@ -34,17 +34,20 @@ computer. macOS/Linux users may use `python3` to create their virtual environmen
 ## Connect a paper
 
 1. **Create the configuration.** In a folder without `paperdelta.yaml`, enter the
-   main manuscript and CSV/JSON paths relative to the project folder. File discovery
+   main manuscript and evidence paths relative to the project folder. File discovery
    suggests common inputs. It skips hidden/generated directories; an explicit
    project-relative path can still be entered. Creation confirms no mappings.
    An existing configuration opens directly. Use global `--config` for a different
    configuration path.
 
 2. **Inspect and declare a source.** Open *Add a data source*, enter its path and
-   inspect the sample rows. Give it a name such as `experiment`. Choose each CSV
+   inspect the sample rows. Give it a name such as `experiment`. Choose each table
    column type and the columns that jointly identify every row. Keep model IDs
    such as `001` as text. A typical key is `dataset + model + split + seed`.
-   Duplicate keys and invalid types are rejected.
+   Duplicate keys and invalid types are rejected. For XLSX, explicitly select
+   the worksheet and rectangular range including its header. Portable exports
+   preserve their column/key contract and expose snapshot provenance. See the
+   [experiment-evidence guide](experiment-evidence.md).
 
 3. **Calculate a metric.** Choose the source and numeric column (or exact JSON
    Pointer), enable every experiment identity filter, declare the unit, calculation
@@ -82,7 +85,7 @@ The workbench never writes manuscript or evidence files.
 
 ## Batch binding and experiment templates
 
-After declaring a CSV source, open **Batch binding**. Select its result columns,
+After declaring a table source, open **Batch binding**. Select its result columns,
 the columns that identify each experiment group, and fixed filters such as the
 test split. Declare the shared evidence unit, calculation, expected record count,
 seed set and paper display. Use separate batches for different units or reductions.
@@ -200,7 +203,7 @@ Candidate search reaches all scanned positions, including those beyond the forme
 5,000-item view limit. Candidate pages contain 30 items; metric and impact pages
 contain 20, with search. Selections persist across pages and language changes;
 changed input identity invalidates position selections. There are still limits of
-500 staged definitions, 200 selected bindings per stage, 100 CSV sample rows per
+500 staged definitions, 200 selected bindings per stage, 100 table sample rows per
 page and 50 JSON leaf samples.
 Source inspection is a preview, not a full JSON browser. Draft import is bounded
 below 1 MiB; the local recovery record is bounded at 4 MiB. A malformed/oversized

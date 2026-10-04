@@ -1,0 +1,363 @@
+{
+  "$defs": {
+    "ExportRow": {
+      "additionalProperties": false,
+      "properties": {
+        "pointers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Pointers",
+          "type": "object"
+        },
+        "snapshot": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Snapshot",
+          "type": "string"
+        },
+        "values": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Values",
+          "type": "object"
+        }
+      },
+      "required": [
+        "values",
+        "snapshot",
+        "pointers"
+      ],
+      "title": "ExportRow",
+      "type": "object"
+    },
+    "IdentityField": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Field",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "param",
+            "tag",
+            "config",
+            "history"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "type": {
+          "default": "string",
+          "enum": [
+            "string",
+            "integer"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope",
+        "field"
+      ],
+      "title": "IdentityField",
+      "type": "object"
+    },
+    "ImportRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "additionalProperties": {
+            "$ref": "#/$defs/IdentityField"
+          },
+          "propertyNames": {
+            "enum": [
+              "seed",
+              "split",
+              "checkpoint"
+            ]
+          },
+          "title": "Identity",
+          "type": "object"
+        },
+        "metrics": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Metrics",
+          "type": "array"
+        },
+        "origin": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Origin",
+          "type": "string"
+        },
+        "provider": {
+          "enum": [
+            "file",
+            "mlflow",
+            "wandb"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "runs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Runs",
+          "type": "array"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "provider",
+        "origin"
+      ],
+      "title": "ImportRequest",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "cell_range": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cell Range"
+        },
+        "columns": {
+          "additionalProperties": {
+            "enum": [
+              "string",
+              "integer",
+              "decimal"
+            ],
+            "type": "string"
+          },
+          "title": "Columns",
+          "type": "object"
+        },
+        "format": {
+          "enum": [
+            "csv",
+            "json",
+            "tsv",
+            "xlsx",
+            "records"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "primary_key": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Primary Key",
+          "type": "array"
+        },
+        "sheet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sheet"
+        }
+      },
+      "required": [
+        "path",
+        "format"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "SourceSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "content_base64": {
+          "title": "Content Base64",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "file",
+            "run",
+            "history"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Metric"
+        },
+        "page": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Page",
+          "type": "integer"
+        },
+        "run": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Run"
+        },
+        "sha256": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "sha256",
+        "content_base64"
+      ],
+      "title": "SourceSnapshot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "columns": {
+      "additionalProperties": {
+        "enum": [
+          "string",
+          "integer",
+          "decimal"
+        ],
+        "type": "string"
+      },
+      "maxProperties": 1000,
+      "minProperties": 1,
+      "title": "Columns",
+      "type": "object"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "export_id": {
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "title": "Export Id",
+      "type": "string"
+    },
+    "export_schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Export Schema Version",
+      "type": "integer"
+    },
+    "precision": {
+      "enum": [
+        "stored-lexemes",
+        "api-double",
+        "sdk-binary64"
+      ],
+      "title": "Precision",
+      "type": "string"
+    },
+    "primary_key": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Primary Key",
+      "type": "array"
+    },
+    "records": {
+      "items": {
+        "$ref": "#/$defs/ExportRow"
+      },
+      "maxItems": 100000,
+      "minItems": 1,
+      "title": "Records",
+      "type": "array"
+    },
+    "request": {
+      "$ref": "#/$defs/ImportRequest"
+    },
+    "snapshots": {
+      "items": {
+        "$ref": "#/$defs/SourceSnapshot"
+      },
+      "maxItems": 10000,
+      "minItems": 1,
+      "title": "Snapshots",
+      "type": "array"
+    },
+    "tool_version": {
+      "title": "Tool Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "export_schema_version",
+    "tool_version",
+    "created_at",
+    "request",
+    "precision",
+    "snapshots",
+    "columns",
+    "primary_key",
+    "records",
+    "export_id"
+  ],
+  "title": "ExperimentExport",
+  "type": "object"
+}

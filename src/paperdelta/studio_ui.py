@@ -74,8 +74,10 @@ PAGE = """<!doctype html>
 <div id="source-list"></div><details id="add-source"><summary data-i18n="add_source"></summary>
 <form id="source-path-form"><label><span data-i18n="source_path"></span><input name="path" list="data-files" required placeholder="results/metrics.csv"></label>
 <datalist id="data-files"></datalist><button type="submit" class="secondary" data-i18n="inspect_source"></button></form>
+<form id="sheet-form" hidden><p data-i18n="xlsx_hint"></p><div class="form-row"><label><span data-i18n="worksheet"></span><select name="sheet" required></select></label><label><span data-i18n="cell_range"></span><input name="cell_range" required placeholder="A1:F20" pattern="[A-Z]{1,3}[1-9][0-9]*:[A-Z]{1,3}[1-9][0-9]*"></label></div><button type="submit" class="secondary" data-i18n="inspect_source"></button></form>
 <form id="source-form" hidden><h3 id="source-title"></h3><p data-i18n="source_types_hint"></p>
 <div id="source-sample"></div><div id="source-pages" class="pagination"></div>
+<div id="source-provenance"></div>
 <label><span data-i18n="source_name"></span><input name="name" required pattern="[A-Za-z](?:[A-Za-z0-9_.]|-){0,99}" placeholder="experiment"></label>
 <div id="column-types"></div><button type="submit" data-i18n="stage_source"></button></form></details>
 </section><section class="panel"><h2 data-i18n="metrics"></h2><label><span data-i18n="search"></span><input id="metric-search" type="search"></label><div id="metric-list"></div><div id="metric-pages" class="pagination"></div>

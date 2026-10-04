@@ -91,7 +91,7 @@ def test_validation_errors_have_localized_field_paths_and_nested_model_explanati
         load_config(Project(project))
     rendered = caught.value.render("zh-CN")
     assert "sources.data" in rendered and "类型声明" in rendered
-    assert "CSV sources require" in str(caught.value)
+    assert "Table sources require" in str(caught.value)
     with pytest.raises(ValueError) as raw:
         Config.model_validate({"schema_version": 1, "paper": {"entry": 3}})
     assert "需要字符串" in error_message(raw.value).render("zh-CN")

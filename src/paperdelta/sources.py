@@ -77,15 +77,24 @@ class EvidenceStore:
         self.results: dict[str, Result] = {}
         self.errors: dict[str, PaperDeltaError] = {}
         self.csv_indexes: dict[str, dict[str, dict[Any, list[dict]]]] = {}
+        self.export_info: dict[str, dict] = {}
 
     def load_source(self, name: str) -> Any:
         if name in self.sources:
             return self.sources[name]
         source = self.config.sources[name]
-        text, raw = self.project.text(source.path)
+        if source.format == "xlsx":
+            raw = self.project.read(source.path)
+            text = None
+        else:
+            text, raw = self.project.text(source.path)
         self.hashes[source.path] = sha256(raw)
         if source.format == "json":
             data = parse_json(text)
+        elif source.format == "records":
+            data = self._records(name, source, parse_json(text))
+        elif source.format == "xlsx":
+            data = self._xlsx(source, raw)
         else:
             try:
                 data = self._csv(source, text)
@@ -97,7 +106,11 @@ class EvidenceStore:
         return data
 
     def _csv(self, source: Source, text: str) -> list[dict]:
-        reader = csv.DictReader(io.StringIO(text, newline=""), strict=True)
+        reader = csv.DictReader(
+            io.StringIO(text, newline=""),
+            delimiter="\t" if source.format == "tsv" else ",",
+            strict=True,
+        )
         names = reader.fieldnames
         if not names or len(set(names)) != len(names):
             raise PaperDeltaError("CSV_HEADER", msg("error.CSV_HEADER.2", value1=source.path))
@@ -115,10 +128,16 @@ class EvidenceStore:
                         "CSV_ROW", msg("error.CSV_ROW.2", value1=source.path, first_line=first_line)
                     )
                 values = {
-                    key: typed_cell(raw[key], kind, f"{source.path}:{first_line}:{key}")
+                    key: None
+                    if source.format == "tsv" and raw[key] == "" and kind != "string"
+                    else typed_cell(raw[key], kind, f"{source.path}:{first_line}:{key}")
                     for key, kind in source.columns.items()
                 }
                 identity = {key: values[key] for key in source.primary_key}
+                if any(value is None for value in identity.values()):
+                    raise PaperDeltaError(
+                        "MISSING_VALUE", msg("evidence.key_missing", path=source.path)
+                    )
                 # Each column has one declared type; tuple equality preserves the
                 # same exact Decimal identity without serializing every CSV row.
                 key = tuple(identity.values())
@@ -132,6 +151,79 @@ class EvidenceStore:
             raise PaperDeltaError(
                 "INVALID_CSV", msg("error.INVALID_CSV", value1=source.path, exc=exc)
             ) from exc
+        return rows
+
+    def _xlsx(self, source, raw):
+        from paperdelta.xlsx_evidence import coordinate, read_xlsx
+
+        table = read_xlsx(raw, source.sheet, source.cell_range)
+        if not set(source.columns) <= set(table.columns):
+            raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN", value1=source.path))
+        rows, identities = [], set()
+        for row in table.rows:
+            values = {}
+            for column, kind in source.columns.items():
+                cell = row[column]
+                if cell.value is None:
+                    values[column] = None
+                else:
+                    if kind == "string" and cell.kind != "string":
+                        raise PaperDeltaError(
+                            "XLSX_IDENTITY",
+                            msg("xlsx.text_identity", sheet=source.sheet, cell=cell.address),
+                        )
+                    values[column] = typed_cell(
+                        cell.value, kind, f"{source.path}:{source.sheet}!{cell.address}"
+                    )
+            identity = {column: values[column] for column in source.primary_key}
+            if any(value is None for value in identity.values()):
+                raise PaperDeltaError(
+                    "MISSING_VALUE", msg("evidence.key_missing", path=source.path)
+                )
+            key = tuple(identity.values())
+            if key in identities:
+                raise PaperDeltaError(
+                    "DUPLICATE_RECORD", msg("error.DUPLICATE_RECORD", identity=identity)
+                )
+            identities.add(key)
+            rows.append(
+                {
+                    "values": values,
+                    "key": identity,
+                    "line": coordinate(next(iter(row.values())).address)[1],
+                    "cells": {column: cell.address for column, cell in row.items()},
+                }
+            )
+        return rows
+
+    def _records(self, name, source, value):
+        from paperdelta.experiment_exports import export_error, provenance, validate_export
+
+        document = validate_export(value)
+        if source.columns != document.columns or source.primary_key != document.primary_key:
+            raise export_error("contract")
+        self.export_info[name] = provenance(document)
+        rows, seen = [], set()
+        for row in document.records:
+            values = {
+                key: typed_cell(row.values[key], kind, key) if row.values[key] is not None else None
+                for key, kind in source.columns.items()
+            }
+            identity = {key: values[key] for key in source.primary_key}
+            if any(value is None for value in identity.values()):
+                raise export_error("key_missing")
+            key = tuple(identity.values())
+            if key in seen:
+                raise export_error("duplicate")
+            seen.add(key)
+            rows.append(
+                {
+                    "values": values,
+                    "key": identity,
+                    "snapshot": row.snapshot,
+                    "pointers": row.pointers,
+                }
+            )
         return rows
 
     def _select_csv(self, name: str, data: list[dict], where: dict) -> list[dict]:
@@ -183,7 +275,7 @@ class EvidenceStore:
         source = self.config.sources[metric.source]
         data = self.load_source(metric.source)
         selected: list[dict]
-        if source.format == "csv":
+        if source.format != "json":
             if metric.field not in source.columns or not set(metric.where).issubset(source.columns):
                 raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN.2"))
             if metric.reduce != "count" and source.columns[metric.field] == "string":
@@ -208,7 +300,27 @@ class EvidenceStore:
                 {"key": row["key"], "value": value}
                 for row, value in zip(selected, values, strict=True)
             ]
-            locations = [{"key": row["key"], "line": row["line"]} for row in selected]
+            if source.format == "records":
+                locations = [
+                    {
+                        "key": row["key"],
+                        "snapshot": row["snapshot"],
+                        "pointer": row["pointers"][metric.field],
+                    }
+                    for row in selected
+                ]
+            elif source.format == "xlsx":
+                locations = [
+                    {
+                        "key": row["key"],
+                        "sheet": source.sheet,
+                        "row": row["line"],
+                        "cell": row["cells"][metric.field],
+                    }
+                    for row in selected
+                ]
+            else:
+                locations = [{"key": row["key"], "line": row["line"]} for row in selected]
         else:
             if metric.where or metric.expected_seeds is not None:
                 raise PaperDeltaError("JSON_SELECTOR", msg("error.JSON_SELECTOR"))
@@ -243,7 +355,12 @@ class EvidenceStore:
                     context.prec = max(50, len(number.as_tuple().digits) + 10)
                     number /= len(numbers)
         semantic = sorted(records, key=lambda record: json.dumps(canonical(record), sort_keys=True))
-        digest = fingerprint({"source": source.path, "selector": metric, "records": semantic})
+        identity = {"source": source.path, "selector": metric, "records": semantic}
+        if source.format not in {"csv", "json"}:
+            identity["source_definition"] = source
+        if source.format == "records":
+            identity["provenance"] = self.export_info[metric.source]
+        digest = fingerprint(identity)
         evidence = [
             {
                 "source": metric.source,
@@ -256,6 +373,10 @@ class EvidenceStore:
                 "locations": locations,
             }
         ]
+        if source.format not in {"csv", "json"}:
+            evidence[0]["format"] = source.format
+        if source.format == "records":
+            evidence[0]["provenance"] = self.export_info[metric.source]
         return Result(Quantity(number, metric.unit), digest, evidence, [])
 
     def check_scope(self, name: str, scope: dict) -> None:

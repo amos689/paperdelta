@@ -37,7 +37,14 @@ def test_mcp_exposes_only_read_only_tools(project):
             assert all(tool.annotations.read_only_hint for tool in listing.tools)
             schemas = {tool.name: tool.input_schema for tool in listing.tools}
             assert "fraction" in schemas["add_draft_metric"]["properties"]["unit"]["enum"]
-            assert schemas["add_draft_source"]["properties"]["format"]["enum"] == ["csv", "json"]
+            assert schemas["add_draft_source"]["properties"]["format"]["enum"] == [
+                "csv",
+                "json",
+                "tsv",
+                "xlsx",
+                "records",
+            ]
+            assert {"sheet", "cell_range"} <= set(schemas["add_draft_source"]["properties"])
             result = await client.call_tool("check_project")
             assert not result.is_error
             assert result.structured_content["coverage"]["confirmed"] == 6

@@ -20,7 +20,9 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: '3.12'
-      - run: python -m pip install '.[dev,mcp]'
+      - run: python -m pip install '.[dev,mcp,wandb]'
+      - name: Test real experiment adapter protocols
+        run: python -X utf8 tools/run_tests.py -q tests/test_experiment_exports.py
       - run: npm install --prefix build/browser-tools --no-audit --no-fund playwright@1.62.1
       - run: node build/browser-tools/node_modules/playwright/cli.js install --with-deps chromium
       - name: Test bilingual native binding workflows
@@ -39,6 +41,10 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_batch_browser.cjs build/studio-batch-browser
+      - name: Test bilingual TSV, Excel and offline experiment evidence
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_evidence_browser.cjs build/studio-evidence-browser
       - name: Keep browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -55,6 +61,9 @@ jobs:
             build/studio-scale/*-errors.json
             build/studio-batch-browser/evidence.json
             build/studio-batch-browser/*.png
+            build/studio-evidence-browser/evidence.json
+            build/studio-evidence-browser/*.png
+            build/studio-evidence-browser/failure.json
           if-no-files-found: warn
 
   test:
@@ -72,7 +81,7 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install '.[dev,mcp]'
+      - run: python -m pip install '.[dev,mcp,wandb]'
       - run: python -m ruff check src tests tools
       - run: python -m ruff format --check src tests tools
       - run: python -X utf8 tools/check_docs.py

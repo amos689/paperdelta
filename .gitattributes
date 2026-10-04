@@ -1,6 +1,7 @@
 *.py text eol=lf
 *.tex text eol=lf
 *.csv text eol=lf
+*.tsv text eol=lf
 *.json text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
@@ -17,6 +18,7 @@ MANIFEST.in text eol=lf
 LICENSE -text
 *.pdf binary
 *.docx binary
+*.xlsx binary
 *.png binary
 *.gif binary
 *.webm binary

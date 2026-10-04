@@ -94,7 +94,7 @@ def guide_batch(project, config_path, *, input_stream, output):
         draft, source = _source(project, builder.start_draft(project, config_path), questions)
         _, config = builder.resume_draft(project, draft)
         declaration = config.sources[source]
-        if declaration.format != "csv":
+        if declaration.format == "json":
             raise PaperDeltaError("BATCH_FORMAT", msg("batch.csv"))
         fields = questions.many(
             "batch.fields",
