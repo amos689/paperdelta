@@ -110,6 +110,11 @@ jobs:
       - run: python -X utf8 tools/validate_examples.py --out build/examples-validation
       - run: python -X utf8 tools/build_release.py --out build/release-candidate
       - run: python -X utf8 tools/audit_release.py --directory build/release-candidate
+      - name: Check PyPI description before tagging a release
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: |
+          python -m pip install twine
+          python -m twine check --strict build/release-candidate/*.whl build/release-candidate/*.tar.gz
       - name: Keep test evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

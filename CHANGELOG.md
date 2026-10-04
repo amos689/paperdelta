@@ -2,6 +2,12 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.2.1 — 2026-10-05
+
+- Fix the bilingual PyPI description heading underline so strict rendering checks pass.
+- Run strict distribution description checks in CI before release tagging. The 1.2.0
+  GitHub tag is retained; its failed metadata check prevented any PyPI upload.
+
 ## 1.2.0 — 2026-10-05
 
 - Static Markdown/Quarto prose, headings, lists, links and regular pipe tables with original UTF-8 bytes, line/column, section and explicit row/column identities.

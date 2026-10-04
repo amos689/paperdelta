@@ -142,7 +142,7 @@ Word 脚注/尾注、常见合并表头与旋转裁切 PDF 保留原位置，原
 `原生支持与结果 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.1.md>`_
 
 Static sources in 1.2 / 1.2 静态源码
----------------------------------
+----------------------------------------
 
 Core-only Markdown and Quarto readers preserve original source positions for
 literal prose and pipe tables. Run ``paperdelta demo --document markdown --out md-demo``

@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.0"><img src="docs/assets/badges/release.svg" alt="Release 1.2.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.1"><img src="docs/assets/badges/release.svg" alt="Release 1.2.1"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -58,7 +58,7 @@ Playback is paced for reading.
 [Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.8/report.png).
 
-**1.2.0** adds static Markdown/Quarto prose and pipe tables, original source positions,
+**1.2.1** adds static Markdown/Quarto prose and pipe tables, original source positions,
 shared evidence and explicit source/PDF comparisons. Core installation is enough;
 [syntax and read-only limits](docs/markdown-quarto.md) are explicit.
 
@@ -118,7 +118,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.2.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.2.1-py3-none-any.whl`.
 
 ## Connect an existing paper
 

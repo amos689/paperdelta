@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.2.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.1"><img src="docs/assets/badges/release.svg" alt="正式版 1.2.1"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,7 +55,7 @@
 [打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
 
-**1.2.0** 新增 Markdown/Quarto 静态正文与竖线表格、原始源码位置、共享证据及
+**1.2.1** 新增 Markdown/Quarto 静态正文与竖线表格、原始源码位置、共享证据及
 明确的源稿/PDF 比较。核心安装即可使用，[语法与只读边界](docs/zh-CN/markdown-quarto.md)有明确说明。
 
 **1.1.0** 新增 Word 脚注/尾注、常见合并表头和旋转裁切 PDF 页面支持。
@@ -109,7 +109,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.2.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.2.1-py3-none-any.whl`。
 
 ## 接入已有论文
 
