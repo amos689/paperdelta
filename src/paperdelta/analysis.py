@@ -10,11 +10,12 @@ from paperdelta.config import load_config
 from paperdelta.documents import LocatedText, PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
-from paperdelta.metrics import Quantity, comparable, display_matches, render
+from paperdelta.metrics import Quantity, comparable
 from paperdelta.models import Config, Predicate, Threshold
 from paperdelta.records import FigureRecord, Snapshot, StoredReport, validate_record
 from paperdelta.reviews import attach_reviews
 from paperdelta.sources import EvidenceStore
+from paperdelta.statistical_display import matches, render_result, validate_span
 from paperdelta.storage import Project, decimal_value, fingerprint, parse_json, sha256
 
 
@@ -140,6 +141,8 @@ def check_configuration(
             report["report_schema_version"] = 3
         if any(source.format not in {"csv", "json"} for source in config.sources.values()):
             report["report_schema_version"] = 5
+        if any(getattr(metric, "statistics", None) for metric in config.metrics.values()):
+            report["report_schema_version"] = 6
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
         attach_reviews(project, report)
@@ -187,14 +190,14 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
         try:
             doc = paper.document(occurrence.file)
             span = doc.locate(occurrence.anchor)
-            doc.validate_numeric_span(span)
+            validate_span(doc, span, occurrence.display)
             state["location"] = span.to_dict()
             covered.setdefault(span.file, []).append((span.start, span.end))
             result = evidence.resolve(occurrence.metric)
-            expected = render(result.quantity, occurrence.display, config.rounding)
+            expected = render_result(result, occurrence.display, config.rounding)
             actual = span.text
             if getattr(doc, "format", "latex") != "latex":
-                expected = expected.replace(r"\%", "%")
+                expected = expected.replace(r"\%", "%").replace(r"\pm", "±")
                 # Keep LaTeX display parsing unchanged; normalize native percentages only here.
                 actual = actual.replace("%", r"\%")
                 comparable_expected = expected.replace("%", r"\%")
@@ -207,7 +210,9 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
                     "evidence_fingerprint": result.fingerprint,
                 }
             )
-            state["status"] = "pass" if display_matches(actual, comparable_expected) else "mismatch"
+            state["status"] = (
+                "pass" if matches(actual, comparable_expected, occurrence.display) else "mismatch"
+            )
             if state["status"] == "mismatch":
                 diagnostics.append(
                     _diagnostic(

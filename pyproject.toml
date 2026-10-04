@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "0.9.0"
+version = "1.0.0"
 description = "Review how experiment changes affect an existing research paper."
 readme = "docs/package-description.rst"
 requires-python = ">=3.11"
@@ -17,6 +17,7 @@ dependencies = [
   "pydantic>=2.10,<3",
   "PyYAML>=6.0.2,<7",
   "pylatexenc>=2.11,<3",
+  "mpmath>=1.4.1,<1.5",
 ]
 
 [project.optional-dependencies]

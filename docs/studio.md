@@ -2,6 +2,10 @@
 
 [简体中文](zh-CN/studio.md)
 
+Version 1.0 statistical bindings declare seeds, n, SD convention and interval
+method explicitly. Compound displays, batch templates and read-only agents share
+the [statistical contract](statistics.md).
+
 PaperDelta 0.8 combines first-time and batch binding with ongoing review of
 LaTeX, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
 It uses the same typed drafts, exact calculations, anchors and explicit acceptance

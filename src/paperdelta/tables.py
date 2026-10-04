@@ -105,11 +105,24 @@ def locate_cell(document, anchor):
                 or _row_values(document, row)[: len(anchor.row_prefix)] != anchor.row_prefix
             ):
                 continue
-            spans = _numbers(document, row[anchor.column])
-            if len(spans) != 1:
-                continue
-            span = spans[0]
-            if anchor.percent_symbol:
+            if anchor.statistical_display is not None:
+                from paperdelta.statistical_display import cell_span
+
+                try:
+                    span = cell_span(
+                        document,
+                        row[anchor.column],
+                        anchor.statistical_display,
+                        anchor.percent_symbol,
+                    )
+                except PaperDeltaError:
+                    continue
+            else:
+                spans = _numbers(document, row[anchor.column])
+                if len(spans) != 1:
+                    continue
+                span = spans[0]
+            if anchor.percent_symbol and anchor.statistical_display is None:
                 if not document.text[span.end :].startswith(document.percent_token):
                     continue
                 span = document.span(span.start, span.end + len(document.percent_token))
@@ -121,7 +134,7 @@ def locate_cell(document, anchor):
     return found[0]
 
 
-def anchor_for_cell(document, span, identity_values=()):
+def anchor_for_cell(document, span, identity_values=(), statistical_display=None):
     for rows in literal_tables(document):
         headers = _headers(document, rows)
         if not headers:
@@ -146,7 +159,10 @@ def anchor_for_cell(document, span, identity_values=()):
                     headers=headers,
                     row_prefix=list(prefix),
                     column=column,
-                    percent_symbol=span.text.endswith(document.percent_token),
+                    percent_symbol=document.percent_token in span.text
+                    if statistical_display
+                    else span.text.endswith(document.percent_token),
+                    statistical_display=statistical_display,
                     **getattr(document, "table_scopes", {}).get(id(rows), {}),
                 )
                 try:

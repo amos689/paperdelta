@@ -2,6 +2,10 @@
 
 [简体中文](zh-CN/agent-guide.md)
 
+Version 1.0 statistical bindings declare seeds, n, SD convention and interval
+method explicitly. Compound displays, batch templates and read-only agents share
+the [statistical contract](statistics.md).
+
 Word manuscripts use the same review workflow with the optional `docx` extra.
 See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.
 

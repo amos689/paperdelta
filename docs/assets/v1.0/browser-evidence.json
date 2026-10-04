@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "kind": "tex",
+      "language": "en",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "tex",
+      "language": "zh-CN",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx",
+      "language": "en",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.docx": "28f4ce730fe8be01899918431488a25382174393d6afee2570fb7a6907588f98",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx",
+      "language": "zh-CN",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.docx": "35691e02a60128236db15e1b0cd520fc9f3ec859fedcd41abf21b7570e63343a",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf",
+      "language": "en",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.pdf": "c376b8776dd494b8a5be490fc1c994733574e7aa52d78d81aed6efae6c251b1b",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf",
+      "language": "zh-CN",
+      "batch": false,
+      "status": "passed",
+      "bindings": 3,
+      "inputs": {
+        "paper.pdf": "829fdb98d08ceb6a36cd46af335864d7b1a6af0bf1a81e17d9f02ae7c58d9fe0",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "tex",
+      "language": "en",
+      "batch": true,
+      "status": "passed",
+      "bindings": 1,
+      "inputs": {
+        "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "tex",
+      "language": "zh-CN",
+      "batch": true,
+      "status": "passed",
+      "bindings": 1,
+      "inputs": {
+        "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+        "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+      },
+      "errors": [],
+      "remote_requests": []
+    }
+  ]
+}

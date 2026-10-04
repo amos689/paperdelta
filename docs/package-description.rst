@@ -111,3 +111,13 @@ No Node.js, cloud account or model key is needed.
 
 `Workbench guide <https://github.com/amos689/paperdelta/blob/main/docs/studio.md>`_ ·
 `工作台指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/studio.md>`_
+
+Declared statistics
+-------------------
+
+PaperDelta 1.0 checks complete seed sets, mean/SD/SE/n and explicitly declared
+Student-t intervals. Compound displays and the written confidence level can be
+bound in LaTeX, Word and PDF. Missing observations remain unknown. Bilingual Studio,
+templates, terminal guides and read-only MCP share the same contracts.
+Statistical intervals are numerical approximations under author-declared assumptions;
+the tool does not infer significance or establish independence.

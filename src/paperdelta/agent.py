@@ -115,6 +115,7 @@ class AgentSession:
         expected_count,
         seed_column,
         expected_seeds,
+        statistics=None,
     ):
         return self._draft_view(
             builder.add_metric(
@@ -129,6 +130,7 @@ class AgentSession:
                 expected_count=expected_count,
                 seed_column=seed_column,
                 expected_seeds=expected_seeds,
+                statistics=statistics,
             )
         )
 
@@ -154,6 +156,7 @@ class AgentSession:
         places,
         percent_symbol,
         rationale,
+        statistics=None,
     ):
         return self._draft_view(
             builder.add_occurrences(
@@ -166,6 +169,7 @@ class AgentSession:
                 places=places,
                 percent_symbol=percent_symbol,
                 rationale=rationale,
+                statistics=statistics,
             )
         )
 

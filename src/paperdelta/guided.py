@@ -144,7 +144,7 @@ def _new_metric(project, draft, questions):
         "guide.reduce",
         [
             (reduce, f"{reduce} · {tr('reduce.' + reduce)}")
-            for reduce in ("unique", "mean", "sum", "count")
+            for reduce in ("unique", "mean", "sum", "count", "statistics")
         ],
     )
     count = 1 if reduce == "unique" else questions.integer("guide.expected_count", 1, 10000)
@@ -159,6 +159,9 @@ def _new_metric(project, draft, questions):
             seeds = questions.read("guide.seeds", required=True, exact=True).split(",")
         else:
             seed_column = "seed"
+    from paperdelta.statistical_guide import contract_questions
+
+    statistics = contract_questions(questions) if reduce == "statistics" else None
     draft = builder.add_metric(
         project,
         draft,
@@ -171,6 +174,7 @@ def _new_metric(project, draft, questions):
         expected_count=count,
         seed_column=seed_column,
         expected_seeds=seeds,
+        statistics=statistics,
     )
     return draft, name
 
@@ -251,6 +255,11 @@ def _stage(project, draft, questions):
         if kind == "percent"
         else True
     )
+    from paperdelta.statistical_guide import display_questions
+
+    statistics = display_questions(questions) if result.get("statistics") else None
+    if statistics and statistics["component"] in {"mean_sd", "mean_se", "ci", "mean_ci"}:
+        names = [base_name]
     rationale = questions.read("guide.rationale", required=True)
     return builder.add_occurrences(
         project,
@@ -262,6 +271,7 @@ def _stage(project, draft, questions):
         places=places,
         percent_symbol=symbol,
         rationale=rationale,
+        statistics=statistics,
     )
 
 

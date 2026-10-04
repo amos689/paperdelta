@@ -12,6 +12,8 @@ from paperdelta.errors import PaperDeltaError, error_message, validation_error
 from paperdelta.evidence_models import ImportRequest
 from paperdelta.i18n import msg
 from paperdelta.models import (
+    Aggregation,
+    ConfidenceInterval,
     Coordinate,
     DerivedMetric,
     Hash,
@@ -218,7 +220,7 @@ class Evidence(StrictModel):
     path: str
     field: str
     where: dict[str, Scalar]
-    reduce: Literal["unique", "mean", "sum", "count"]
+    reduce: Aggregation
     count: Positive
     records: list[CsvRecord | JsonRecord]
     locations: list[CsvLocation | JsonLocation | XlsxLocation | ExportLocation]
@@ -301,6 +303,48 @@ class FigureRecord(StrictModel):
         return self
 
 
+class ConfidenceIntervalResult(ConfidenceInterval):
+    df: Annotated[int, Field(ge=1, le=9999)]
+    critical_value: str
+    lower: str
+    upper: str
+    quantile_engine: str = Field(pattern=r"^mpmath-[0-9]+\.[0-9]+\.[0-9]+$")
+
+
+class StatisticalSummary(StrictModel):
+    mean: str
+    sd: str
+    se: str
+    n: Annotated[int, Field(ge=1, le=10000)]
+    ddof: Annotated[int, Field(ge=0, le=1)]
+    unit_of_analysis: str
+    arithmetic: Literal["rational-moments-decimal-sqrt-v1"]
+    precision_digits: Annotated[int, Field(ge=80, le=260)]
+    confidence_interval: ConfidenceIntervalResult | None = None
+
+    @model_validator(mode="after")
+    def finite_consistent(self):
+        values = [self.mean, self.sd, self.se]
+        interval = self.confidence_interval
+        if interval:
+            values.extend([interval.critical_value, interval.lower, interval.upper])
+        try:
+            if any(len(value) > 2000 or not Decimal(value).is_finite() for value in values):
+                raise ValueError
+            if Decimal(self.sd) < 0 or Decimal(self.se) < 0 or self.n <= self.ddof:
+                raise ValueError
+            if interval and (
+                self.ddof != 1
+                or interval.df != self.n - 1
+                or not Decimal(interval.lower) <= Decimal(self.mean) <= Decimal(interval.upper)
+                or Decimal(interval.critical_value) <= 0
+            ):
+                raise ValueError
+        except (InvalidOperation, ValueError) as exc:
+            raise validation_error(msg("statistics.result")) from exc
+        return self
+
+
 class MetricState(StrictModel):
     status: Literal["ok", "unknown"]
     value: str | None = None
@@ -313,6 +357,14 @@ class MetricState(StrictModel):
     error: str | None = None
     message: str | None = None
     change: ChangeKind | None = None
+    statistics: StatisticalSummary | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if value.get("statistics") is None:
+            value.pop("statistics", None)
+        return value
 
     @field_validator("value")
     @classmethod
@@ -328,6 +380,37 @@ class MetricState(StrictModel):
 
     @model_validator(mode="after")
     def complete_success(self):
+        if self.status == "ok" and (
+            (getattr(self.definition, "statistics", None) is not None)
+            != (self.statistics is not None)
+            or (self.statistics is not None and self.value != self.statistics.mean)
+        ):
+            raise validation_error(msg("statistics.result"))
+        if self.statistics is not None:
+            if (
+                self.status != "ok"
+                or not isinstance(self.definition, SourceMetric)
+                or self.definition.statistics is None
+            ):
+                raise validation_error(msg("statistics.result"))
+            summary, contract = self.statistics, self.definition.statistics
+            if (
+                self.status != "ok"
+                or summary.n != self.definition.expected_count
+                or summary.ddof != contract.ddof
+                or summary.unit_of_analysis != contract.unit_of_analysis
+                or len(self.evidence) != 1
+                or self.evidence[0].reduce != "statistics"
+                or self.evidence[0].count != summary.n
+                or (summary.confidence_interval is None) != (contract.confidence_interval is None)
+            ):
+                raise validation_error(msg("statistics.result"))
+            if summary.confidence_interval and any(
+                getattr(summary.confidence_interval, key)
+                != getattr(contract.confidence_interval, key)
+                for key in ("method", "level", "assumption")
+            ):
+                raise validation_error(msg("statistics.result"))
         if self.status == "ok" and any(
             value is None
             for value in (self.value, self.unit, self.fingerprint, self.definition_fingerprint)
@@ -506,7 +589,7 @@ class ExportState(StrictModel):
 
 
 class StoredReport(TimestampedRecord):
-    report_schema_version: Annotated[int, Field(ge=1, le=5)]
+    report_schema_version: Annotated[int, Field(ge=1, le=6)]
     tool_version: str
     ruleset_version: str
     config_path: str
@@ -530,6 +613,13 @@ class StoredReport(TimestampedRecord):
 
     @model_validator(mode="after")
     def counted_verdicts(self):
+        if self.report_schema_version < 6 and any(
+            metric.statistics is not None
+            or getattr(metric.definition, "statistics", None)
+            or any(evidence.reduce == "statistics" for evidence in metric.evidence)
+            for metric in self.metrics.values()
+        ):
+            raise validation_error(msg("statistics.report_schema"))
         if self.report_schema_version < 5 and any(
             evidence.format is not None
             for metric in self.metrics.values()

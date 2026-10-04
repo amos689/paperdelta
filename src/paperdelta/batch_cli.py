@@ -13,7 +13,7 @@ from paperdelta.locations import location_label
 from paperdelta.storage import json_text, parse_json
 
 
-def _display(questions):
+def _display(questions, statistical=False):
     kind = questions.choose(
         "guide.display",
         [(kind, tr("display." + kind)) for kind in ("decimal", "percent", "integer", "scientific")],
@@ -24,7 +24,12 @@ def _display(questions):
         if kind == "percent"
         else True
     )
-    return {"kind": kind, "places": places, "percent_symbol": symbol}
+    result = {"kind": kind, "places": places, "percent_symbol": symbol}
+    if statistical:
+        from paperdelta.statistical_guide import display_questions
+
+        result["statistics"] = display_questions(questions)
+    return result
 
 
 def _selection(preview, choice, questions, default_display):
@@ -75,7 +80,7 @@ def _selection(preview, choice, questions, default_display):
         "batch.display_override",
         [(False, tr("batch.keep_display")), (True, tr("batch.change_display"))],
     ):
-        display = _display(questions)
+        display = _display(questions, bool(default_display.get("statistics")))
     rationale = questions.read("guide.rationale", required=True)
     return {
         "choice_id": choice["choice_id"],
@@ -123,7 +128,10 @@ def guide_batch(project, config_path, *, input_stream, output):
         )
         reduce = questions.choose(
             "guide.reduce",
-            [(kind, tr("reduce." + kind)) for kind in ("unique", "mean", "sum", "count")],
+            [
+                (kind, tr("reduce." + kind))
+                for kind in ("unique", "mean", "sum", "count", "statistics")
+            ],
         )
         count = 1 if reduce == "unique" else questions.integer("guide.expected_count", 1, 10000)
         seed_column = questions.choose(
@@ -142,7 +150,10 @@ def guide_batch(project, config_path, *, input_stream, output):
             if seed_column
             else None
         )
-        display = _display(questions)
+        from paperdelta.statistical_guide import contract_questions
+
+        statistics = contract_questions(questions) if reduce == "statistics" else None
+        display = _display(questions, statistics is not None)
         catalog = create_catalog(
             project,
             draft,
@@ -157,6 +168,7 @@ def guide_batch(project, config_path, *, input_stream, output):
                 "seed_column": seed_column or "seed",
                 "expected_seeds": seeds,
                 "display": display,
+                "statistics": statistics,
             },
         )
         preview = inspect_catalog(project, catalog)

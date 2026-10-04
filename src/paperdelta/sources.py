@@ -23,15 +23,19 @@ class Result:
     fingerprint: str
     evidence: list[dict]
     dependencies: list[str]
+    statistics: dict | None = None
 
     def to_dict(self) -> dict:
-        return {
+        result = {
             "value": str(self.quantity.value),
             "unit": self.quantity.unit,
             "fingerprint": self.fingerprint,
             "evidence": self.evidence,
             "dependencies": self.dependencies,
         }
+        if self.statistics is not None:
+            result["statistics"] = self.statistics
+        return result
 
 
 def json_pointer(data: Any, pointer: str) -> Any:
@@ -291,6 +295,15 @@ class EvidenceStore:
                 if metric.seed_column not in source.columns:
                     raise PaperDeltaError("MISSING_COLUMN", msg("error.MISSING_COLUMN.3"))
                 seeds = [row["values"][metric.seed_column] for row in selected]
+                if metric.statistics is not None and (
+                    source.columns[metric.seed_column] not in {"string", "integer"}
+                    or any(type(seed) is not type(metric.expected_seeds[0]) for seed in seeds)
+                    or any(
+                        type(seed) is not type(metric.expected_seeds[0])
+                        for seed in metric.expected_seeds
+                    )
+                ):
+                    raise PaperDeltaError("SELECTOR_TYPE", msg("statistics.seed_type"))
                 if len(seeds) != len(set(seeds)) or set(seeds) != set(metric.expected_seeds):
                     raise PaperDeltaError(
                         "SEED_SET", msg("error.SEED_SET", value1=metric.expected_seeds, seeds=seeds)
@@ -341,10 +354,18 @@ class EvidenceStore:
             raise PaperDeltaError(
                 "AMBIGUOUS_SELECTION", msg("error.AMBIGUOUS_SELECTION", value1=len(values))
             )
+        if metric.statistics is not None and any(value is None for value in values):
+            raise PaperDeltaError("STATISTICS_MISSING", msg("statistics.missing"))
         numbers = [decimal_value(value) for value in values] if metric.reduce != "count" else []
+        statistics = None
         with localcontext() as context:
             context.prec = 4096
-            if metric.reduce == "count":
+            if metric.statistics is not None:
+                from paperdelta.statistics import summarize
+
+                statistics = summarize(numbers, metric.statistics)
+                number = Decimal(statistics["mean"])
+            elif metric.reduce == "count":
                 number = Decimal(len(values))
             elif metric.reduce == "unique":
                 number = numbers[0]
@@ -360,6 +381,8 @@ class EvidenceStore:
             identity["source_definition"] = source
         if source.format == "records":
             identity["provenance"] = self.export_info[metric.source]
+        if statistics is not None:
+            identity["statistics"] = statistics
         digest = fingerprint(identity)
         evidence = [
             {
@@ -377,7 +400,7 @@ class EvidenceStore:
             evidence[0]["format"] = source.format
         if source.format == "records":
             evidence[0]["provenance"] = self.export_info[metric.source]
-        return Result(Quantity(number, metric.unit), digest, evidence, [])
+        return Result(Quantity(number, metric.unit), digest, evidence, [], statistics)
 
     def check_scope(self, name: str, scope: dict) -> None:
         metric = self.config.metrics[name]

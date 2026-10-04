@@ -1,11 +1,22 @@
-# Report interchange contract, version 5
+# Report interchange contract, version 6
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–5).
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–6).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
+
+## Statistics in schema 6
+
+Explicit statistical metrics add `statistics`: mean, SD, SE, n, ddof, analysis unit,
+arithmetic algorithm and precision, plus an optional interval method, level,
+assumption, df, endpoints and quantile-engine version. Numbers remain decimal text;
+irrational and interval results are explicitly numerical approximations. Declarations,
+counts and evidence records must agree. Schemas 1–5 cannot contain these results.
+Legacy definitions omit the new optional fields to preserve identity. A compound
+location may contain multiple numbers, but the whole declared expression must be
+uniquely located, fully matched and independently accepted. See [statistics](statistics.md).
 
 ## Experiment evidence in schema 5
 

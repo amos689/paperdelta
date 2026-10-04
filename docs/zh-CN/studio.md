@@ -2,6 +2,9 @@
 
 [English](../studio.md)
 
+1.0 的统计绑定要求明确声明种子、n、SD 约定和区间方法；复合显示、批量模板与
+只读智能体共用契约，详见[统计指南](statistics.md)。
+
 PaperDelta 0.8 在 `paperdelta studio` 中整合首次接入、批量绑定和日常审查：在本地浏览器中，
 根据 CSV/TSV/JSON、静态 Excel 与实验导出持续核对 LaTeX、Word、文字型 PDF 论文。它复用 CLI 的类型化草稿、精确计算、
 定位锚点和明确确认流程，界面可随时切换中英文。

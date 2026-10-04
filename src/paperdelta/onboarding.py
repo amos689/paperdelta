@@ -297,6 +297,8 @@ def _merge(config: Config, additions: Additions) -> Config:
         value[group].update(entries)
     if any(source["format"] not in {"csv", "json"} for source in value["sources"].values()):
         value["schema_version"] = max(5, value["schema_version"])
+    if any(metric.get("statistics") for metric in value["metrics"].values()):
+        value["schema_version"] = max(6, value["schema_version"])
     if any(
         item["anchor"].get("table")
         for group in ("occurrences", "claims")

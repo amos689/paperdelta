@@ -28,7 +28,7 @@ def change_manuscripts(
 ):
     config, identity = load_config(project, config_path)
     value = config.model_dump()
-    value["schema_version"] = 4
+    value["schema_version"] = max(4, value["schema_version"])
     paper = value["paper"]
     companions = paper.setdefault("companions", [])
     file = project.relative(project.path(file))

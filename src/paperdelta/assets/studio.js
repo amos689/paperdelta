@@ -25,6 +25,8 @@
   let pdfCandidates = [];
   let metricOffset = 0;
   const selected = new Set(), accepted = new Set();
+  const stats = window.PaperDeltaStatistics;
+  stats.mountContract($("metric-form")); stats.mountDisplay($("locations-form"));
   const t = (key, params = {}) => (strings[language][key] || key).replace(/\{(\w+)\}/g, (_, k) => params[k] ?? "");
   const text = (value) => typeof value === "string" ? value : JSON.stringify(value, null, 2);
   function options(select, values, translate = false, blank) {
@@ -41,7 +43,7 @@
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll("[data-placeholder]").forEach((el) => { el.placeholder = t(el.dataset.placeholder); });
     document.querySelector("nav.steps").setAttribute("aria-label", t("workflow"));
-    options(field("metric-form", "reduce"), ["unique", "mean", "sum", "count"], true);
+    options(field("metric-form", "reduce"), ["unique", "mean", "sum", "count", "statistics"], true);
     options(field("metric-form", "unit"), ["fraction", "percent", "scalar", "percentage_point", "count", "ratio"], true);
     options(field("derived-form", "operation"), ["difference", "ratio", "percentage_point_difference", "relative_change_percent"], true);
     options(field("locations-form", "display_kind"), ["percent", "decimal", "integer", "scientific"], true);
@@ -122,6 +124,7 @@
     if (item.error) { box.append(node("p", item.message, "issue")); return box; }
     box.append(node("p", item.result.value + " · " + t(item.result.unit), "metric-value"));
     const def = item.definition;
+    if (item.result.statistics) box.append(stats.summary(item.result.statistics, t, node));
     box.append(node("p", def.op ? `${t(def.op)}: ${def.args.join(" → ")}` : `${def.source} · ${def.field} · ${t(def.reduce)}`));
     if (def.where && Object.keys(def.where).length) {
       const selectors = node("dl", undefined, "selector-summary");
@@ -338,6 +341,7 @@
   function renderSelectedMetric() {
     $("selected-metric").replaceChildren();
     const metric = state?.metrics?.[field("locations-form", "metric").value];
+    stats.setDisplayActive($("locations-form"), !!metric?.definition?.statistics);
     if (metric) $("selected-metric").append(metricDetails(metric));
   }
   async function showPdf(item, reveal = false) {
@@ -419,7 +423,7 @@
       const val = (name) => field("metric-form", name).value;
       const where = Object.fromEntries([...$("selectors").querySelectorAll(".selector-row")].filter((row) => row.querySelector("input[type=checkbox]").checked).map((row) => [row.querySelector("input[type=checkbox]").dataset.column, row.querySelector("input[type=text]").value]));
       const seeds = val("expected_seeds").split("\n").filter((v) => v !== "");
-      await change("metric", { name: val("name"), source: val("source"), field: val("field"), unit: val("unit"), reduce: val("reduce"), where, expected_count: Number(val("expected_count")), seed_column: val("seed_column"), expected_seeds: seeds.length ? seeds : null });
+      await change("metric", { name: val("name"), source: val("source"), field: val("field"), unit: val("unit"), reduce: val("reduce"), where, expected_count: Number(val("expected_count")), seed_column: val("seed_column"), expected_seeds: seeds.length ? seeds : null, statistics: stats.contract($("metric-form")) });
       field("locations-form", "metric").value = val("name"); renderSelectedMetric(); $("add-metric").open = false; notice(t("metric_staged"));
     });
   };
@@ -429,9 +433,10 @@
     event.preventDefault(); task(async () => {
       if (!selected.size) throw new Error(t("choose_locations"));
       const val = (name) => field("locations-form", name).value, ids = [...selected];
-      const names = ids.map((_, i) => val("prefix") + (ids.length > 1 ? "_" + (i + 1) : ""));
-      await change("locations", { metric: val("metric"), candidate_ids: ids, names, display_kind: val("display_kind"), places: Number(val("places")), percent_symbol: field("locations-form", "percent_symbol").checked, rationale: val("rationale") });
-      selected.clear(); renderCandidates(); notice(t("locations_staged", { count: ids.length })); setStep("review");
+      const statistics = stats.display($("locations-form"));
+      const names = stats.compounds.has(statistics?.component) ? [val("prefix")] : ids.map((_, i) => val("prefix") + (ids.length > 1 ? "_" + (i + 1) : ""));
+      await change("locations", { metric: val("metric"), candidate_ids: ids, names, display_kind: val("display_kind"), places: Number(val("places")), percent_symbol: field("locations-form", "percent_symbol").checked, rationale: val("rationale"), statistics });
+      selected.clear(); renderCandidates(); notice(t("locations_staged", { count: names.length })); setStep("review");
     });
   };
   for (const id of ["file-filter", "show-bound"]) $(id).onchange = () => { pageIndex = 0; renderCandidates(); };

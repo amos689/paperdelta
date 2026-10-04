@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.9.0"><img src="docs/assets/badges/release.svg" alt="Release 0.9.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.0.0"><img src="docs/assets/badges/release.svg" alt="Release 1.0.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -57,7 +57,10 @@ Playback is paced for reading.
 [Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.8/report.png).
 
-**0.9.0** adds TSV, static Excel and portable experiment exports, with explicit
+**1.0.0** checks declared mean/SD/SE/n and Student-t intervals, including whole
+compound displays and missing seeds. See the [statistical guide](docs/statistics.md).
+
+Version 0.9 added TSV, static Excel and portable experiment exports, with explicit
 MLflow/W&B imports and offline provenance checks. See the [experiment guide](docs/experiment-evidence.md).
 
 The animation shows the batch workflow introduced in **0.8.0**: portable experiment templates and graphical review
@@ -65,7 +68,7 @@ of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded brows
 interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
 Snapshot comparison, ongoing checks and local draft recovery remain available.
 Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v0.9.md).
+See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.0.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -104,7 +107,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.9.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.0.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -196,7 +199,7 @@ existing bindings always run. Agreement is not certification of scientific truth
 Supported inputs include literal LaTeX `input/include`, declared literal macro
 arguments, bounded literal table cells, CSV/TSV/JSON, static Excel and experiment exports, explicit aggregation, derived
 values with units, limited comparisons and figure provenance. Dynamic TeX,
-arbitrary macro expansion, statistical inference and global SOTA verification
+arbitrary macro expansion, automatic significance claims and global SOTA verification
 remain outside the supported contract. Word paragraphs and ordinary tables are supported
 with `paperdelta[docx]`; revisions, fields and complex layouts remain unverified.
 See [rules and limits](docs/rules.md) and the [Word boundary](docs/word.md).

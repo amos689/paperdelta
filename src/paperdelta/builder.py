@@ -23,6 +23,8 @@ from paperdelta.models import (
     Source,
     SourceFormat,
     SourceMetric,
+    StatisticalContract,
+    StatisticalDisplay,
     StrictModel,
     Unit,
     VersionOne,
@@ -144,6 +146,7 @@ def add_metric(
     expected_count: int | None = None,
     seed_column: str = "seed",
     expected_seeds: list[str] | None = None,
+    statistics: dict | None = None,
 ) -> dict:
     draft, config = resume_draft(project, value)
     _new_name(config, "metrics", name)
@@ -183,6 +186,9 @@ def add_metric(
             "expected_count": expected_count if expected_count is not None else 1,
             "seed_column": seed_column,
             "expected_seeds": seeds,
+            "statistics": validate_record(StatisticalContract, statistics, "DRAFT_STATISTICS")
+            if statistics is not None
+            else None,
         },
         "DRAFT_METRIC",
     )
@@ -215,18 +221,27 @@ def _add_metric(project, draft, config, name, metric):
     return _seal(project, body, store.hashes)
 
 
-def anchor_for_span(document: Document, span: LocatedText, identity_values=()) -> Anchor:
+def anchor_for_span(
+    document: Document, span: LocatedText, identity_values=(), display=None
+) -> Anchor:
     """Use only the explicitly selected span, never a same-number heuristic.
 
     Context anchors survive numeric corrections. A contextless boundary or truly
     indistinguishable repetition requires an author edit, not a positional guess.
     """
-    document.validate_numeric_span(span)
+    from paperdelta.statistical_display import validate_span
+
+    validate_span(document, span, display or Display())
     if hasattr(document, "anchor_for_span"):
-        return document.anchor_for_span(span, identity_values)
+        return document.anchor_for_span(span, identity_values, display)
     from paperdelta.tables import anchor_for_cell
 
-    table_anchor = anchor_for_cell(document, span, identity_values)
+    statistical = (
+        display.statistics
+        if display and display.statistics and display.statistics.compound
+        else None
+    )
+    table_anchor = anchor_for_cell(document, span, identity_values, statistical)
     if table_anchor is not None:
         return table_anchor
     numbers = document.numbers()
@@ -274,11 +289,18 @@ def add_occurrences(
     places: int,
     percent_symbol: bool,
     rationale: str,
+    statistics: dict | None = None,
 ) -> dict:
     draft, config = resume_draft(project, value)
+    statistical = (
+        validate_record(StatisticalDisplay, statistics, "DRAFT_STATISTICS")
+        if statistics is not None
+        else None
+    )
+    compound = statistical is not None and statistical.compound
     if (
         not candidate_ids
-        or len(candidate_ids) != len(names)
+        or (len(names) != 1 if compound else len(candidate_ids) != len(names))
         or len(set(candidate_ids)) != len(candidate_ids)
         or len(set(names)) != len(names)
         or metric not in config.metrics
@@ -292,6 +314,7 @@ def add_occurrences(
             "kind": display_kind,
             "places": places,
             "percent_symbol": percent_symbol,
+            "statistics": statistical,
         },
         "DRAFT_DISPLAY",
     )
@@ -305,13 +328,22 @@ def add_occurrences(
         except PaperDeltaError:
             continue
     body = draft.model_dump()
-    for name, candidate in zip(names, candidate_ids, strict=True):
+    if not set(candidate_ids).issubset(candidates):
+        raise PaperDeltaError("BUILDER_SELECTION", msg("builder.locations"))
+    for name, candidate in zip(
+        names, candidate_ids[:1] if compound else candidate_ids, strict=True
+    ):
         _new_name(config, "occurrences", name)
         if candidate not in candidates:
             raise PaperDeltaError("BUILDER_SELECTION", msg("builder.selection", value=candidate))
         choice = candidates[candidate]
         document = paper.document(choice["file"])
-        span = candidate_span(document, choice, display)
+        if compound:
+            from paperdelta.statistical_display import compound_span
+
+            span = compound_span(document, [candidates[item] for item in candidate_ids], display)
+        else:
+            span = candidate_span(document, choice, display)
         if any(
             other.file == span.file and other.start < span.end and span.start < other.end
             for other in occupied
@@ -326,7 +358,7 @@ def add_occurrences(
             if isinstance(definition, SourceMetric)
             else ()
         )
-        anchor = anchor_for_span(document, span, identity_values)
+        anchor = anchor_for_span(document, span, identity_values, display)
         body["additions"]["occurrences"][name] = {
             "file": span.file,
             "anchor": anchor.model_dump(),

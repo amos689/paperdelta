@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Annotated
 
-from pydantic import Field, model_validator
+from pydantic import Field, model_serializer, model_validator
 
 from paperdelta import builder
 from paperdelta.documents import PaperIndex
@@ -16,6 +16,7 @@ from paperdelta.models import (
     Display,
     Hash,
     SourceMetric,
+    StatisticalContract,
     StrictModel,
     Unit,
     VersionOne,
@@ -37,6 +38,14 @@ class BatchRequest(StrictModel):
     seed_column: str = "seed"
     expected_seeds: list[str] | None = None
     display: Display = Field(default_factory=Display)
+    statistics: StatisticalContract | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if value.get("statistics") is None:
+            value.pop("statistics", None)
+        return value
 
     @model_validator(mode="after")
     def explicit_selection(self):
@@ -48,6 +57,10 @@ class BatchRequest(StrictModel):
             raise validation_error(msg("batch.group_filter"))
         if self.reduce == "unique" and self.expected_count != 1:
             raise validation_error(msg("batch.unique"))
+        if (self.reduce == "statistics") != (self.statistics is not None) or (
+            (self.statistics is not None) != (self.display.statistics is not None)
+        ):
+            raise validation_error(msg("statistics.explicit_display"))
         return self
 
 
@@ -242,6 +255,7 @@ def inspect_catalog(project, value):
                     "expected_count": request.expected_count,
                     "seed_column": request.seed_column,
                     "expected_seeds": seeds,
+                    "statistics": request.statistics,
                 },
                 "BATCH_METRIC",
             )
@@ -349,6 +363,7 @@ def build_proposal(project, value, selections):
                 expected_seeds=[str(seed) for seed in metric["expected_seeds"]]
                 if metric["expected_seeds"] is not None
                 else None,
+                statistics=metric.get("statistics"),
             )
         display = selection.display or catalog.request.display
         draft = builder.add_occurrences(
@@ -358,11 +373,16 @@ def build_proposal(project, value, selections):
             candidate_ids=selection.candidate_ids,
             names=[
                 "batch_" + selection.choice_id[7:19] + "_" + candidate[7:19]
-                for candidate in selection.candidate_ids
+                for candidate in (
+                    selection.candidate_ids[:1]
+                    if display.statistics and display.statistics.compound
+                    else selection.candidate_ids
+                )
             ],
             display_kind=display.kind,
             places=display.places,
             percent_symbol=display.percent_symbol,
             rationale=selection.rationale,
+            statistics=display.statistics.model_dump() if display.statistics else None,
         )
     return builder.finalize_draft(project, draft)

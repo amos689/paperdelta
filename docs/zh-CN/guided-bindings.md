@@ -2,6 +2,9 @@
 
 [English](../guided-bindings.md)
 
+1.0 的统计绑定要求明确声明种子、n、SD 约定和区间方法；复合显示、批量模板与
+只读智能体共用契约，详见[统计指南](statistics.md)。
+
 安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。
 参见 [Word 支持与只读边界](word.md)；下方 LaTeX 示例仍然有效。
 

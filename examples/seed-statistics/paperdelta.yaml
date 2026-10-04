@@ -1,0 +1,58 @@
+schema_version: 6
+paper:
+  entry: paper.tex
+sources:
+  runs:
+    path: results.tsv
+    format: tsv
+    primary_key: [model, seed]
+    columns: {model: string, seed: integer, accuracy: decimal}
+metrics:
+  accuracy:
+    source: runs
+    field: accuracy
+    where: {model: method}
+    reduce: statistics
+    unit: percent
+    expected_count: 5
+    seed_column: seed
+    expected_seeds: [1, 2, 3, 4, 5]
+    statistics:
+      ddof: 1
+      unit_of_analysis: independent experimental seed
+      confidence_interval:
+        method: student_t
+        level: '0.95'
+        assumption: independent_normal_observations
+occurrences:
+  mean_sd:
+    file: paper.tex
+    anchor: {prefix: 'Method accuracy, in percent, is $', suffix: '$ (sample SD).'}
+    metric: accuracy
+    display:
+      kind: decimal
+      places: 2
+      statistics: {component: mean_sd}
+  sample_count:
+    file: paper.tex
+    anchor: {prefix: 'The experiment uses $', suffix: '$ independent seeds.'}
+    metric: accuracy
+    display:
+      kind: integer
+      statistics: {component: n}
+  confidence_level:
+    file: paper.tex
+    anchor: {prefix: 'The two-sided confidence level is $', suffix: '$.'}
+    metric: accuracy
+    display:
+      kind: percent
+      places: 0
+      statistics: {component: confidence_level}
+  interval:
+    file: paper.tex
+    anchor: {prefix: 'The Student-t interval is $', suffix: '$.'}
+    metric: accuracy
+    display:
+      kind: decimal
+      places: 2
+      statistics: {component: ci}

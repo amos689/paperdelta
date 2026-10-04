@@ -1,0 +1,61 @@
+{
+  "version": "0.9.0",
+  "commit": "b983cf442b5e1a3826055f32c0ef0122965fe682",
+  "checked_at": "2026-10-04T09:35:38.397128+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37191811164",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-0.9.0-py3-none-any.whl": "e6d2064c32d07721099493539d4984a6633c14045017dd9f17f916a13e1ea34a",
+    "paperdelta-0.9.0.tar.gz": "748c1f0a0aa900d96ab692102e256d0301bb4850530f0cbaafbc8d701fa5f4b9",
+    "paperdelta-evaluation-0.9.0.zip": "bba6ce2149888a5506157a35fcc43027aa5959995645cfcd2ea5e5212bf73442"
+  },
+  "status": "passed",
+  "candidate_wheel_entries_identical": 86,
+  "local_installed_suite": {
+    "tests": 553,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 550,
+    "evidence": "build/v09-installed-final/evidence.json"
+  },
+  "evidence_browser_flows": 6,
+  "formats": [
+    "tsv",
+    "xlsx",
+    "records"
+  ],
+  "import_providers": [
+    "file",
+    "mlflow",
+    "wandb"
+  ],
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v0.9.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37192514995",
+  "pypi": "https://pypi.org/project/paperdelta/0.9.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-0.9.0-py3-none-any.whl": "e6d2064c32d07721099493539d4984a6633c14045017dd9f17f916a13e1ea34a",
+    "paperdelta-0.9.0.tar.gz": "748c1f0a0aa900d96ab692102e256d0301bb4850530f0cbaafbc8d701fa5f4b9"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true
+}

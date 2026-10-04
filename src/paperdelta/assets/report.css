@@ -15,3 +15,6 @@ footer{font-size:12px;border-top:1px solid #d7e2e6;padding-top:20px}.empty{backg
 .pdf-page{padding:16px;background:#fff;border:1px solid #d9e4e7;border-radius:9px}.pdf-canvas{position:relative;margin:12px auto;max-width:900px;line-height:0}.pdf-canvas img{width:100%;height:auto;display:block}.pdf-canvas svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.pdf-box{fill:#219e8b22;stroke:#16745f;stroke-width:1;vector-effect:non-scaling-stroke}.pdf-box.error,.pdf-box.mismatch{fill:#ec776444;stroke:#aa352a}.pdf-box.unknown,.pdf-box.unbound{fill:#e8ad2833;stroke:#946a13}.pdf-box:target{stroke:#3e3ccc;stroke-width:3;fill:#716fff55}.pdf-jump{display:inline-block;margin:4px 8px;font-size:13px}.pdf-page summary{overflow-wrap:anywhere}.pdf-page .scope{font-size:11px}
 @media(max-width:650px){body{padding:24px 16px}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:40px}table{display:block;overflow-x:auto}.filters{flex-wrap:wrap}.filters input{flex-basis:100%}.language-control{margin-left:auto}}
 .pdf-viewport{overflow:auto}.pdf-controls{display:flex;gap:8px;margin-top:10px}.pdf-controls button{font-size:13px;padding:7px 10px}
+
+.statistics-summary dd { margin-inline-start: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.statistics-summary dt { margin-top: .6rem; font-weight: 600; }

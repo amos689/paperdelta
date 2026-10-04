@@ -5,7 +5,7 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light"><title>PaperDelta Studio</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="/studio.css">
-<script src="/studio-review.js" defer></script><script src="/studio-batch.js" defer></script><script src="/studio.js" defer></script></head><body>
+<script src="/studio-statistics.js" defer></script><script src="/studio-review.js" defer></script><script src="/studio-batch.js" defer></script><script src="/studio.js" defer></script></head><body>
 <header><div class="brand"><span class="brand-mark" aria-hidden="true">Δ</span>
 <div><strong>PaperDelta<span class="dot">.</span></strong><span data-i18n="workbench"></span></div></div>
 <div class="header-right"><span id="project" class="project"></span>

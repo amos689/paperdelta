@@ -23,7 +23,7 @@ Scalar = StrictStr | StrictInt | Decimal
 Unit = Literal["scalar", "fraction", "percent", "percentage_point", "count", "ratio"]
 SourceFormat = Literal["csv", "json", "tsv", "xlsx", "records"]
 ColumnType = Literal["string", "integer", "decimal"]
-Aggregation = Literal["unique", "mean", "sum", "count"]
+Aggregation = Literal["unique", "mean", "sum", "count", "statistics"]
 DisplayKind = Literal["decimal", "percent", "integer", "scientific"]
 DerivedOperation = Literal[
     "difference", "ratio", "percentage_point_difference", "relative_change_percent"
@@ -118,6 +118,63 @@ class Source(StrictModel):
         return self
 
 
+class ConfidenceInterval(StrictModel):
+    method: Literal["student_t"]
+    level: str = Field(pattern=r"^0\.\d{1,6}$")
+    assumption: Literal["independent_normal_observations"]
+
+    @model_validator(mode="after")
+    def supported_level(self) -> Self:
+        if not Decimal("0.5") <= Decimal(self.level) <= Decimal("0.999"):
+            raise validation_error(msg("statistics.level"))
+        return self
+
+
+class StatisticalContract(StrictModel):
+    ddof: Annotated[StrictInt, Field(ge=0, le=1)]
+    unit_of_analysis: str = Field(min_length=1, max_length=200)
+    confidence_interval: ConfidenceInterval | None = None
+
+    @model_validator(mode="after")
+    def explicit_conventions(self) -> Self:
+        if not self.unit_of_analysis.strip() or isinstance(self.ddof, bool):
+            raise validation_error(msg("statistics.contract"))
+        if self.confidence_interval is not None and self.ddof != 1:
+            raise validation_error(msg("statistics.ci_ddof"))
+        return self
+
+
+StatisticalComponent = Literal[
+    "mean",
+    "sd",
+    "se",
+    "n",
+    "ci_lower",
+    "ci_upper",
+    "confidence_level",
+    "mean_sd",
+    "mean_se",
+    "ci",
+    "mean_ci",
+]
+
+
+class StatisticalDisplay(StrictModel):
+    component: StatisticalComponent
+    show_n: bool = False
+    spread_places: Annotated[int, Field(ge=0, le=15)] | None = None
+
+    @property
+    def compound(self) -> bool:
+        return self.component in {"mean_sd", "mean_se", "ci", "mean_ci"}
+
+    @model_validator(mode="after")
+    def compound_options(self) -> Self:
+        if not self.compound and (self.show_n or self.spread_places is not None):
+            raise validation_error(msg("statistics.display"))
+        return self
+
+
 class SourceMetric(StrictModel):
     source: Identifier
     field: str
@@ -127,6 +184,14 @@ class SourceMetric(StrictModel):
     seed_column: str = "seed"
     expected_count: Annotated[int, Field(ge=1)] | None = None
     unit: Unit
+    statistics: StatisticalContract | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if value.get("statistics") is None:
+            value.pop("statistics", None)
+        return value
 
     @model_validator(mode="after")
     def validate_seeds(self) -> Self:
@@ -135,6 +200,15 @@ class SourceMetric(StrictModel):
                 raise validation_error(msg("validation.models.7"))
         if self.reduce == "count" and self.unit != "count":
             raise validation_error(msg("validation.models.2"))
+        if (self.reduce == "statistics") != (self.statistics is not None):
+            raise validation_error(msg("statistics.contract"))
+        if self.statistics is not None and (
+            self.expected_count is None
+            or self.expected_seeds is None
+            or len(self.expected_seeds) != self.expected_count
+            or self.expected_count <= self.statistics.ddof
+        ):
+            raise validation_error(msg("statistics.expected"))
         return self
 
 
@@ -151,11 +225,12 @@ class TableCellAnchor(StrictModel):
     page: Annotated[int, Field(ge=1, le=200)] | None = None
     region: Identifier | None = None
     parser: str | None = Field(default=None, min_length=1, max_length=256)
+    statistical_display: StatisticalDisplay | None = None
 
     @model_serializer(mode="wrap")
     def preserve_legacy_identity(self, handler):
         value = handler(self)
-        for key in ("page", "region", "parser"):
+        for key in ("page", "region", "parser", "statistical_display"):
             if value.get(key) is None:
                 value.pop(key, None)
         return value
@@ -202,6 +277,24 @@ class Display(StrictModel):
     kind: DisplayKind = "decimal"
     places: Annotated[int, Field(ge=0, le=15)] = 1
     percent_symbol: bool = True
+    statistics: StatisticalDisplay | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if value.get("statistics") is None:
+            value.pop("statistics", None)
+        return value
+
+    @model_validator(mode="after")
+    def count_format(self) -> Self:
+        if (
+            self.statistics is not None
+            and self.statistics.component == "n"
+            and self.kind != "integer"
+        ):
+            raise validation_error(msg("statistics.n_display"))
+        return self
 
 
 class Occurrence(StrictModel):
@@ -275,7 +368,7 @@ class CoverageExclusion(StrictModel):
 
 
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=5)]
+    schema_version: Annotated[int, Field(ge=1, le=6)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -289,6 +382,19 @@ class Config(StrictModel):
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if self.schema_version < 6 and (
+            any(getattr(metric, "statistics", None) for metric in self.metrics.values())
+            or any(item.display.statistics for item in self.occurrences.values())
+            or any(
+                item.anchor.table and item.anchor.table.statistical_display
+                for item in [
+                    *self.occurrences.values(),
+                    *self.claims.values(),
+                    *self.coverage_exclusions.values(),
+                ]
+            )
+        ):
+            raise validation_error(msg("statistics.schema"))
         if self.schema_version < 5 and any(
             source.format not in {"csv", "json"} for source in self.sources.values()
         ):
@@ -385,6 +491,22 @@ class Config(StrictModel):
                 raise validation_error(
                     msg("validation.models.15", name=name, value2=occurrence.metric)
                 )
+            metric = self.metrics[occurrence.metric]
+            contract = getattr(metric, "statistics", None)
+            display = occurrence.display.statistics
+            if (contract is not None) != (display is not None):
+                raise validation_error(msg("statistics.explicit_display"))
+            if (
+                display
+                and display.component
+                in {"ci", "mean_ci", "ci_lower", "ci_upper", "confidence_level"}
+                and contract.confidence_interval is None
+            ):
+                raise validation_error(msg("statistics.ci_required"))
+            if occurrence.anchor.table and occurrence.anchor.table.statistical_display != (
+                display if display and display.compound else None
+            ):
+                raise validation_error(msg("statistics.table_display"))
         for name, claim in self.claims.items():
             refs = [claim.predicate.left, *claim.predicate.candidates]
             if isinstance(claim.predicate.right, str):

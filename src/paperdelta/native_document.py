@@ -219,11 +219,21 @@ class NativeDocument:
         code = "ANCHOR_AMBIGUOUS" if count else "ANCHOR_MISSING"
         raise PaperDeltaError(code, msg("document.anchor_count", file=self.file, count=count))
 
-    def anchor_for_span(self, span, identity_values=()):
-        self.validate_numeric_span(span)
+    def anchor_for_span(self, span, identity_values=(), display=None):
+        if display is None:
+            self.validate_numeric_span(span)
+        else:
+            from paperdelta.statistical_display import validate_span
+
+            validate_span(self, span, display)
         from paperdelta.tables import anchor_for_cell
 
-        table_anchor = anchor_for_cell(self, span, identity_values)
+        statistical = (
+            display.statistics
+            if display and display.statistics and display.statistics.compound
+            else None
+        )
+        table_anchor = anchor_for_cell(self, span, identity_values, statistical)
         if table_anchor is not None:
             return table_anchor
         block = self.block_at(span.start, span.end)

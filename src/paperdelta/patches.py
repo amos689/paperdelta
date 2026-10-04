@@ -118,7 +118,7 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
     if (
         not isinstance(report, dict)
         or type(report.get("report_schema_version")) is not int
-        or report.get("report_schema_version") not in {1, 2, 3, 4}
+        or report.get("report_schema_version") not in {1, 2, 3, 4, 5, 6}
     ):
         raise PaperDeltaError("REPORT_SCHEMA", msg("error.REPORT_SCHEMA"))
     config_path = report.get("config_path")

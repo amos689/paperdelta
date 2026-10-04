@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.0.0 — 2026-10-04
+
+- Explicit statistical bundles: complete typed seeds/observation IDs, n, ddof, analysis unit, mean/SD/SE and declared Student-t intervals. Missing observations remain unknown.
+- Scalar and compound statistical displays in LaTeX/Word/PDF, including independently bound n and confidence level. Whole-expression repair preserves declarations.
+- Bilingual Studio, terminal/MCP, batch templates and offline report details share the same reviewed contracts.
+- Schema 6 preserves older accepted identities; exact rational moments and recorded high-precision approximations have independent numerical checks.
+- Restore numeric patch compatibility for schema-5 evidence reports and extend it to schema-6 compounds; companion-manuscript changes retain the current configuration schema.
+
 ## 0.9.0 — tables and portable experiment evidence
 
 - Read TSV and static XLSX result tables with explicit types, row identity and worksheet/range selection; retain stored decimals, missingness and original cell locations.

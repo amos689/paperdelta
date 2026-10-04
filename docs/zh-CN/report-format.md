@@ -1,10 +1,18 @@
-# 报告交换约定，版本 5
+# 报告交换约定，版本 6
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–5。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–6。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
+
+## Schema 6 的统计结果
+
+显式统计指标增加 `statistics`，包含均值、SD、SE、n、ddof、分析单位、算法与运算
+精度，以及可选的区间方法、水平、假设、自由度、端点和分位数引擎版本。数值保留为
+十进制文本；无理数和区间计算明确为数值近似。声明、样本数与证据记录必须一致，
+schema 1–5 不允许统计结果。旧定义省略新的可选字段以保留身份。复合原文位置可含
+多个数字，但整体仍须精确定位、完整匹配，并独立接受。详见[统计指南](statistics.md)。
 
 ## Schema 5 的实验证据
 
@@ -86,4 +94,4 @@ PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定
 
 配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
 `paper.companions` 和可选 `export_of`。使用旧 CSV/JSON 证据时，LaTeX 报告使用
-schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–5。
+schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–6。

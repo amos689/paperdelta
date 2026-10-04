@@ -204,6 +204,88 @@
       "title": "ClaimState",
       "type": "object"
     },
+    "ConfidenceInterval": {
+      "additionalProperties": false,
+      "properties": {
+        "assumption": {
+          "const": "independent_normal_observations",
+          "title": "Assumption",
+          "type": "string"
+        },
+        "level": {
+          "pattern": "^0\\.\\d{1,6}$",
+          "title": "Level",
+          "type": "string"
+        },
+        "method": {
+          "const": "student_t",
+          "title": "Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "level",
+        "assumption"
+      ],
+      "title": "ConfidenceInterval",
+      "type": "object"
+    },
+    "ConfidenceIntervalResult": {
+      "additionalProperties": false,
+      "properties": {
+        "assumption": {
+          "const": "independent_normal_observations",
+          "title": "Assumption",
+          "type": "string"
+        },
+        "critical_value": {
+          "title": "Critical Value",
+          "type": "string"
+        },
+        "df": {
+          "maximum": 9999,
+          "minimum": 1,
+          "title": "Df",
+          "type": "integer"
+        },
+        "level": {
+          "pattern": "^0\\.\\d{1,6}$",
+          "title": "Level",
+          "type": "string"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "string"
+        },
+        "method": {
+          "const": "student_t",
+          "title": "Method",
+          "type": "string"
+        },
+        "quantile_engine": {
+          "pattern": "^mpmath-[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "title": "Quantile Engine",
+          "type": "string"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "level",
+        "assumption",
+        "df",
+        "critical_value",
+        "lower",
+        "upper",
+        "quantile_engine"
+      ],
+      "title": "ConfidenceIntervalResult",
+      "type": "object"
+    },
     "Coverage": {
       "additionalProperties": false,
       "properties": {
@@ -692,7 +774,8 @@
             "unique",
             "mean",
             "sum",
-            "count"
+            "count",
+            "statistics"
           ],
           "title": "Reduce",
           "type": "string"
@@ -1403,6 +1486,17 @@
           "default": null,
           "title": "Message"
         },
+        "statistics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatisticalSummary"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "status": {
           "enum": [
             "ok",
@@ -1973,7 +2067,8 @@
             "unique",
             "mean",
             "sum",
-            "count"
+            "count",
+            "statistics"
           ],
           "title": "Reduce",
           "type": "string"
@@ -1987,6 +2082,17 @@
           "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
           "title": "Source",
           "type": "string"
+        },
+        "statistics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StatisticalContract"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "unit": {
           "enum": [
@@ -2028,6 +2134,107 @@
         "unit"
       ],
       "title": "SourceMetric",
+      "type": "object"
+    },
+    "StatisticalContract": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence_interval": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConfidenceInterval"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ddof": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Ddof",
+          "type": "integer"
+        },
+        "unit_of_analysis": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Unit Of Analysis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ddof",
+        "unit_of_analysis"
+      ],
+      "title": "StatisticalContract",
+      "type": "object"
+    },
+    "StatisticalSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "arithmetic": {
+          "const": "rational-moments-decimal-sqrt-v1",
+          "title": "Arithmetic",
+          "type": "string"
+        },
+        "confidence_interval": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConfidenceIntervalResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ddof": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Ddof",
+          "type": "integer"
+        },
+        "mean": {
+          "title": "Mean",
+          "type": "string"
+        },
+        "n": {
+          "maximum": 10000,
+          "minimum": 1,
+          "title": "N",
+          "type": "integer"
+        },
+        "precision_digits": {
+          "maximum": 260,
+          "minimum": 80,
+          "title": "Precision Digits",
+          "type": "integer"
+        },
+        "sd": {
+          "title": "Sd",
+          "type": "string"
+        },
+        "se": {
+          "title": "Se",
+          "type": "string"
+        },
+        "unit_of_analysis": {
+          "title": "Unit Of Analysis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mean",
+        "sd",
+        "se",
+        "n",
+        "ddof",
+        "unit_of_analysis",
+        "arithmetic",
+        "precision_digits"
+      ],
+      "title": "StatisticalSummary",
       "type": "object"
     },
     "Suggestion": {
@@ -2347,7 +2554,7 @@
       "title": "Removed Bindings"
     },
     "report_schema_version": {
-      "maximum": 5,
+      "maximum": 6,
       "minimum": 1,
       "title": "Report Schema Version",
       "type": "integer"

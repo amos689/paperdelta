@@ -84,6 +84,7 @@ LAYOUT_MACROS = {
     "vfill",
     "quad",
     "qquad",
+    "pm",
     "rowcolor",
     "cellcolor",
     "%",

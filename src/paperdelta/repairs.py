@@ -21,6 +21,7 @@ from paperdelta.onboarding import scan_project
 from paperdelta.patches import _write_lock
 from paperdelta.records import Snapshot, validate_record
 from paperdelta.snapshots import snapshot_path
+from paperdelta.statistical_display import compound_from_start, validate_span
 from paperdelta.storage import Project, fingerprint, parse_json, sha256
 
 
@@ -90,7 +91,7 @@ def scan_repairs(project: Project, config_path="paperdelta.yaml", baseline=None)
                 document = paper.document(binding.file)
                 span = document.locate(binding.anchor)
                 if group == "occurrences":
-                    document.validate_numeric_span(span)
+                    validate_span(document, span, binding.display)
             except PaperDeltaError as error:
                 broken.append(
                     {
@@ -146,7 +147,11 @@ def _derive(project, selections, config_path, baseline):
                 raise PaperDeltaError("REPAIR_SELECTION", msg("repair.numeric"))
             candidate = candidates[selection.candidate_id]
             document = paper.document(candidate["file"])
-            span = candidate_span(document, candidate, before.display)
+            span = (
+                compound_from_start(document, candidate, before.display)
+                if before.display.statistics and before.display.statistics.compound
+                else candidate_span(document, candidate, before.display)
+            )
             if any(
                 item.file == span.file and item.start < span.end and span.start < item.end
                 for item in occupied
@@ -156,7 +161,9 @@ def _derive(project, selections, config_path, baseline):
                     msg("document.overlap", location=location_label(span.to_dict())),
                 )
             occupied.append(span)
-            anchor = anchor_for_span(document, span)
+            definition = config.metrics[before.metric]
+            identity_values = {str(value) for value in getattr(definition, "where", {}).values()}
+            anchor = anchor_for_span(document, span, identity_values, before.display)
         else:
             if (
                 selection.candidate_id is not None

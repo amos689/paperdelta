@@ -112,6 +112,41 @@ def _evidence(report, group, state, refs, labels):
         if "message" in metric:
             parts.append(f"<p>{labels.text(metric['message'])}</p>")
         definition = metric.get("definition", {})
+        if metric.get("statistics"):
+            summary = metric["statistics"]
+            rows = [
+                "<dt>"
+                + t("statistics.component_" + key)
+                + "</dt><dd>"
+                + esc(summary[key])
+                + "</dd>"
+                for key in ("mean", "sd", "se", "n")
+            ]
+            for key, value in [
+                ("statistics.guide_ddof", summary["ddof"]),
+                ("statistics.guide_unit", summary["unit_of_analysis"]),
+                ("statistics.precision", summary["precision_digits"]),
+            ]:
+                rows.append("<dt>" + t(key) + "</dt><dd>" + esc(value) + "</dd>")
+            interval = summary.get("confidence_interval")
+            if interval:
+                rows.append(
+                    "<dt>"
+                    + t("statistics.student_t")
+                    + " · "
+                    + esc(interval["level"])
+                    + "</dt><dd>"
+                    + esc(f"[{interval['lower']}, {interval['upper']}]")
+                    + "</dd>"
+                )
+                rows.append("<dt>" + t("statistics.assumption") + "</dt>")
+            parts.append(
+                '<div class="statistics-summary"><dl>'
+                + "".join(rows)
+                + "</dl><p>"
+                + t("statistics.no_significance")
+                + "</p></div>"
+            )
         if "op" in definition:
             parts.append(
                 f"<p>{t('html.calculation')}: <code>{esc(definition['op'])}"
@@ -427,7 +462,17 @@ def html_report(report: dict, *, previews=None) -> str:
             f'<div class="impact"><h3>{esc(group["metric"])} '
             f"<small>{labels.value(state.get('value'))} {labels.enum('unit', state.get('unit', ''))}</small></h3>"
             f"<p>{esc(', '.join(group['sources']))} · {t('html.history', change=msg('status.' + group['change']))}</p>"
-            f"<ul>{''.join(locations)}</ul></div>"
+            f"<ul>{''.join(locations)}</ul>"
+            + (
+                "<details><summary>"
+                + t("studio.stats_summary")
+                + "</summary>"
+                + _evidence(report, "metric", state, [group["metric"]], labels)
+                + "</details>"
+                if state.get("statistics")
+                else ""
+            )
+            + "</div>"
         )
     changes = "".join(
         f"<tr><td>{esc(item['metric'])}</td><td>{labels.enum('status', item['kind'])}</td>"

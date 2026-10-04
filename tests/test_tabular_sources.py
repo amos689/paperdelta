@@ -89,6 +89,22 @@ def test_native_table_to_accepted_binding_and_exact_schema5_report(tmp_path, kin
     else:
         assert evidence["locations"][0]["line"] == 2
 
+    # A version-5 report must retain the existing preview/apply/recover workflow.
+    from paperdelta.manuscripts import change_manuscripts
+    from paperdelta.patches import apply_patch, create_patch, recover_transaction
+
+    project.write("supplement.tex", b"Additional explanation.\n")
+    added = change_manuscripts(project, action="add", file="supplement.tex", accept=True)
+    assert added["after"]["schema_version"] == 5
+    project.write("paper.tex", b"Accuracy: 79.0\\%.\n")
+    before = project.read("paper.tex")
+    patch = create_patch(project, check_project(project.root), ["abstract"])
+    applied = apply_patch(project, patch)
+    assert applied["report"]["occurrences"]["abstract"]["status"] == "pass"
+    assert project.read("paper.tex") == b"Accuracy: 80.0\\%.\n"
+    recover_transaction(project, applied["transaction_id"], write=True)
+    assert project.read("paper.tex") == before
+
 
 def test_missing_measurement_does_not_make_another_models_result_unknown(tmp_path):
     with zipfile.ZipFile(io.BytesIO(book())) as archive:

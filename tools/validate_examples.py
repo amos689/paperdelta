@@ -27,6 +27,7 @@ def main():
         ("ambiguous-table", 2),
         ("unicode-macro", 0),
         ("evidence-native", 0),
+        ("seed-statistics", 0),
     ):
         source = repository / "examples" / name
         root = output / name
@@ -55,6 +56,22 @@ def main():
         if name == "ambiguous-table":
             assert report["occurrences"]["table_accuracy"]["status"] == "unknown"
             assert "ANCHOR_AMBIGUOUS" in results[name]["rules"]
+        if name == "seed-statistics":
+            assert report["coverage"]["pass"] == 4
+            assert report["coverage"]["unbound_numbers"] == []
+            data = "results.tsv"
+            project.write(
+                data, project.read(data).replace(b"\t80\n", b"\t79\n").replace(b"\t84\n", b"\t85\n")
+            )
+            changed = check_project(root)
+            assert changed["metrics"]["accuracy"]["value"] == "82"
+            assert changed["occurrences"]["mean_sd"]["status"] == "mismatch"
+            assert changed["occurrences"]["interval"]["status"] == "mismatch"
+            assert changed["occurrences"]["sample_count"]["status"] == "pass"
+            project.write(data, project.read(data).replace(b"method\t3\t82\n", b""))
+            assert check_project(root)["metrics"]["accuracy"]["error"] == "SEED_SET"
+            results[name]["unchanged_mean_changed_uncertainty"] = True
+            results[name]["missing_seed_unknown"] = True
         if name == "unicode-macro":
             path = "论文/主文件.tex"
             original = project.read(path).decode("utf-8").replace("\r\n", "\n")

@@ -40,6 +40,8 @@ from paperdelta.models import (
     DisplayKind,
     Identifier,
     SourceFormat,
+    StatisticalContract,
+    StatisticalDisplay,
     StrictModel,
     Unit,
 )
@@ -108,6 +110,7 @@ class MetricInput(StrictModel):
     expected_count: int = Field(default=1, ge=1, le=10000)
     seed_column: str = Field(default="seed", max_length=1000)
     expected_seeds: list[str] | None = Field(default=None, max_length=10000)
+    statistics: StatisticalContract | None = None
 
 
 class DerivedInput(StrictModel):
@@ -125,6 +128,7 @@ class LocationsInput(StrictModel):
     places: int = Field(ge=0, le=15)
     percent_symbol: bool
     rationale: str = Field(min_length=1, max_length=4000)
+    statistics: StatisticalDisplay | None = None
 
 
 class SourcePreview(StrictModel):

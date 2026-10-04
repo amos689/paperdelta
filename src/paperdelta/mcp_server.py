@@ -14,6 +14,8 @@ from paperdelta.models import (
     DerivedOperation,
     DisplayKind,
     SourceFormat,
+    StatisticalContract,
+    StatisticalDisplay,
     Unit,
 )
 from paperdelta.storage import Project
@@ -65,6 +67,8 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         source_format: SourceFormat = "csv",
         sheet: str | None = None,
         cell_range: str | None = None,
+        statistics: StatisticalContract | None = None,
+        statistical_display: StatisticalDisplay | None = None,
     ) -> dict[str, Any]:
         request = {
             "source": source,
@@ -78,6 +82,10 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
             "seed_column": seed_column,
             "display": {"kind": display_kind, "places": places, "percent_symbol": percent_symbol},
         }
+        if statistics is not None:
+            request["statistics"] = statistics.model_dump()
+        if statistical_display is not None:
+            request["display"]["statistics"] = statistical_display.model_dump()
         return call(
             session.batch_call,
             "start",
@@ -176,6 +184,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         expected_count: int | None = None,
         seed_column: str = "seed",
         expected_seeds: list[str] | None = None,
+        statistics: StatisticalContract | None = None,
     ) -> dict[str, Any]:
         return call(
             session.add_draft_metric,
@@ -189,6 +198,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
             expected_count,
             seed_column,
             expected_seeds,
+            statistics.model_dump() if statistics else None,
         )
 
     @server.tool(annotations=annotations, description=tr("agent.draft_derived"))
@@ -207,6 +217,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         places: int,
         percent_symbol: bool,
         rationale: str,
+        statistics: StatisticalDisplay | None = None,
     ) -> dict[str, Any]:
         return call(
             session.add_draft_locations,
@@ -218,6 +229,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
             places,
             percent_symbol,
             rationale,
+            statistics.model_dump() if statistics else None,
         )
 
     @server.tool(annotations=annotations, description=tr("agent.draft_finish"))

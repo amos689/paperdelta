@@ -8,6 +8,8 @@ window.createPaperDeltaBatch = function (ctx) {
   let choiceOffset = 0, locationOffset = 0, searchTimer, locationTimer;
   const selections = new Map();
   const val = (name) => field(name).value;
+  const stats = window.PaperDeltaStatistics;
+  stats.mountContract($('batch-form')); stats.mountDisplay($('batch-form'));
   function options(select, values, translate = false) {
     const previous = select.value; select.replaceChildren();
     for (const value of values) select.add(new Option(translate ? t(value) : value, value));
@@ -49,7 +51,8 @@ window.createPaperDeltaBatch = function (ctx) {
       source: val('source'), fields: checked('batch-fields'), group_by: checked('batch-groups'), where: filters(),
       unit: val('unit'), reduce: val('reduce'), expected_count: Number(val('expected_count')),
       seed_column: val('seed_column'), expected_seeds: seeds.length ? seeds : null,
-      display: { kind: val('display_kind'), places: Number(val('places')), percent_symbol: field('percent_symbol').checked },
+      statistics: stats.contract($('batch-form')),
+      display: { kind: val('display_kind'), places: Number(val('places')), percent_symbol: field('percent_symbol').checked, statistics: stats.display($('batch-form')) },
     };
   }
   function applyRequest(value) {
@@ -65,6 +68,7 @@ window.createPaperDeltaBatch = function (ctx) {
     field('expected_seeds').value = (value.expected_seeds || []).join('\n');
     field('display_kind').value = value.display.kind; field('places').value = value.display.places;
     field('percent_symbol').checked = value.display.percent_symbol;
+    stats.apply($('batch-form'), value.statistics, value.display.statistics);
     formDirty = true; paintCounts(); notice(t('template_loaded'));
   }
   function paintCounts() {
@@ -172,7 +176,7 @@ window.createPaperDeltaBatch = function (ctx) {
     paintCounts();
   }
   async function localize() {
-    for (const [name, values] of [['unit', ['fraction', 'percent', 'scalar', 'percentage_point', 'count', 'ratio']], ['reduce', ['unique', 'mean', 'sum', 'count']], ['display_kind', ['percent', 'decimal', 'integer', 'scientific']]]) options(field(name), values, true);
+    for (const [name, values] of [['unit', ['fraction', 'percent', 'scalar', 'percentage_point', 'count', 'ratio']], ['reduce', ['unique', 'mean', 'sum', 'count', 'statistics']], ['display_kind', ['percent', 'decimal', 'integer', 'scientific']]]) options(field(name), values, true);
     sourceControls(true);
     if (catalog) {
       await loadChoices(choiceOffset);

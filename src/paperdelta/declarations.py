@@ -191,6 +191,8 @@ def _derive(project, edits, config_path):
             }
         )
     # This validates references and cycles, including references to removed definitions.
+    if any(metric.get("statistics") for metric in value["metrics"].values()):
+        value["schema_version"] = max(6, value["schema_version"])
     proposed = validate_record(Config, value, "MAINTENANCE_DEPENDENCY")
     config_target = project.path(config_path)
     if any(project.path(item.path) == config_target for item in proposed.sources.values()):
