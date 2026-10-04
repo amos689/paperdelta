@@ -1,0 +1,1254 @@
+{
+  "split": "held-out",
+  "annotation": "Developer annotations from independent OOXML/PDFium and Word/Poppler renders after implementation freeze, before PaperDelta scoring. No independent human annotator is claimed.",
+  "targets": [
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "42",
+      "value": "42",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 11,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-001",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "67.74",
+      "value": "67.74",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 11,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-002",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "42",
+      "value": "42",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-003",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "67.74",
+      "value": "67.74",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-004",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "37",
+      "value": "37",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-005",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "59.68",
+      "value": "59.68",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-006",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.000",
+      "value": "1.000",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 5
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-007",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.455",
+      "value": "0.455",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 15,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 6
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-008",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.455",
+      "value": "0.455",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 16,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 7
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-009",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "26",
+      "value": "26",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 26,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-010",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "41.94",
+      "value": "41.94",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 26,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-011",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "18",
+      "value": "18",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 27,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-012",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "29.03",
+      "value": "29.03",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 27,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-013",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "13",
+      "value": "13",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 28,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-014",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "20.97",
+      "value": "20.97",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 28,
+        "offset": 4
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-015",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.189",
+      "value": "0.189",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 29,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 5
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-016",
+      "source_sha256": "3726f8f80106c3effcc17f3e714d5a56be9d67d6d96907aae8ab13cb4483d371"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.09",
+      "value": "1.09",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-017",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.25",
+      "value": "0.25",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-018",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.13",
+      "value": "1.13",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 15,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-019",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.22",
+      "value": "0.22",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 15,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-020",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.11",
+      "value": "1.11",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 16,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-021",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.24",
+      "value": "0.24",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 16,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 4
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-022",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.13",
+      "value": "1.13",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 17,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 5
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-023",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.26",
+      "value": "0.26",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 17,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 5
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-024",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.17",
+      "value": "1.17",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 6
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-025",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.26",
+      "value": "0.26",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 6
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-026",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.17",
+      "value": "1.17",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 7
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-027",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.25",
+      "value": "0.25",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 6
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 7
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded.",
+      "id": "held-028",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.04",
+      "value": "1.04",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 21,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-029",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "0.77",
+      "value": "0.77",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 22,
+        "offset": 1
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-030",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.53",
+      "value": "1.53",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 22,
+        "offset": 7
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 2
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-031",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1.07",
+      "value": "1.07",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 23,
+        "offset": 0
+      },
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 3
+      },
+      "selection_reason": "First result table, row-major numeric results after headers; row identifiers are excluded. No measured numerical explanatory prose; continue with the following table results for four prose slots. Test names and significance cutoffs are not measurements.",
+      "id": "held-032",
+      "source_sha256": "8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "5",
+      "value": "5",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          512.8856811523438,
+          105.623291015625,
+          515.9496459960938,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-033",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "8.06",
+      "value": "8.06",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          521.2743530273438,
+          105.47930908203125,
+          533.9862060546875,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-034",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "4",
+      "value": "4",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          512.6616821289062,
+          118.08074951171875,
+          516.149658203125,
+          123.13665771484375
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-035",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "6.45",
+      "value": "6.45",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          521.2103881835938,
+          118.00872802734375,
+          533.8582153320312,
+          123.2166748046875
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-036",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "3",
+      "value": "3",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          512.8536987304688,
+          130.528564453125,
+          515.8936767578125,
+          135.68853759765625
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-037",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "4.84",
+      "value": "4.84",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          521.0744018554688,
+          130.528564453125,
+          534.0582275390625,
+          135.68853759765625
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-038",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1",
+      "value": "1",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          513.3737182617188,
+          143.05804443359375,
+          515.5736694335938,
+          148.13800048828125
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-039",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1.61",
+      "value": "1.61",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          521.786376953125,
+          143.01007080078125,
+          533.4822387695312,
+          148.218017578125
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-040",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1",
+      "value": "1",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          513.3737182617188,
+          155.5306396484375,
+          515.5736694335938,
+          160.610595703125
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-041",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1.61",
+      "value": "1.61",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          521.786376953125,
+          155.482666015625,
+          533.4822387695312,
+          160.69061279296875
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-042",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "11",
+      "value": "11",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          513.3737182617188,
+          168.00250244140625,
+          519.4056396484375,
+          173.08245849609375
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-043",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "17.74",
+      "value": "17.74",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          525.6414794921875,
+          168.00250244140625,
+          541.7452392578125,
+          173.1624755859375
+        ]
+      },
+      "selection_reason": "Table 1 reports characteristics of the selected article set in Results. First twelve count/percentage results after headers, excluding categories and table labels.",
+      "id": "held-044",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "11.89",
+      "value": "11.89",
+      "locator": {
+        "page": 1,
+        "bbox": [
+          381.3109436035156,
+          632.3074951171875,
+          403.4763488769531,
+          639.1474914550781
+        ]
+      },
+      "selection_reason": "First numerical result expression in abstract Results: mean, stated confidence level, lower and upper interval bounds; GPT version identifiers are excluded.",
+      "id": "held-045",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "95",
+      "value": "95",
+      "locator": {
+        "page": 1,
+        "bbox": [
+          409.4423522949219,
+          632.3074951171875,
+          419.13043212890625,
+          639.1474914550781
+        ]
+      },
+      "selection_reason": "First numerical result expression in abstract Results: mean, stated confidence level, lower and upper interval bounds; GPT version identifiers are excluded.",
+      "id": "held-046",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "11.23",
+      "value": "11.23",
+      "locator": {
+        "page": 1,
+        "bbox": [
+          445.0331726074219,
+          632.3074951171875,
+          467.2745666503906,
+          639.1474914550781
+        ]
+      },
+      "selection_reason": "First numerical result expression in abstract Results: mean, stated confidence level, lower and upper interval bounds; GPT version identifiers are excluded.",
+      "id": "held-047",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "abstract-quality",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "12.54",
+      "value": "12.54",
+      "locator": {
+        "page": 1,
+        "bbox": [
+          473.68328857421875,
+          632.3074951171875,
+          495.9341735839844,
+          639.1474914550781
+        ]
+      },
+      "selection_reason": "First numerical result expression in abstract Results: mean, stated confidence level, lower and upper interval bounds; GPT version identifiers are excluded.",
+      "id": "held-048",
+      "source_sha256": "40d6404fe7b6310c9eae1996f2d4b251cbe313593d49ec7d73f18777e3c7803c"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.03",
+      "value": "2.03",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          133.3131561279297,
+          654.6549530029297,
+          145.9449920654297,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-049",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.72",
+      "value": "0.72",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          151.16172790527344,
+          654.6549530029297,
+          163.89756774902344,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-050",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.03",
+      "value": "2.03",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          210.81219482421875,
+          654.6549530029297,
+          223.44403076171875,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-051",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.74",
+      "value": "0.74",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          228.7167510986328,
+          654.6549530029297,
+          241.58059692382812,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-052",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.09",
+      "value": "2.09",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          288.3112487792969,
+          654.6549530029297,
+          301.0710754394531,
+          659.8388977050781
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-053",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.78",
+      "value": "0.78",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          306.2157897949219,
+          654.6549530029297,
+          318.9116516113281,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-054",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.00",
+      "value": "2.00",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          365.8102722167969,
+          654.6549530029297,
+          378.5940856933594,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-055",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.82",
+      "value": "0.82",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          383.71484375,
+          654.6549530029297,
+          396.45068359375,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-056",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.07",
+      "value": "2.07",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          443.3085021972656,
+          654.6549530029297,
+          456.1883239746094,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-057",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.81",
+      "value": "0.81",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          461.2138671875,
+          654.6549530029297,
+          473.501708984375,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-058",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.19",
+      "value": "2.19",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          520.8074951171875,
+          654.6549530029297,
+          533.5673217773438,
+          659.8388977050781
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-059",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.75",
+      "value": "0.75",
+      "locator": {
+        "page": 5,
+        "bbox": [
+          538.7129516601562,
+          654.6549530029297,
+          551.3767700195312,
+          659.8148956298828
+        ]
+      },
+      "selection_reason": "Table 1: first twelve result tokens in the mean (SD) row; analyst and measurement numbers in headers are identities, not measurements.",
+      "id": "held-060",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.5717",
+      "value": "0.5717",
+      "locator": {
+        "page": 2,
+        "bbox": [
+          257.96295166015625,
+          109.9384765625,
+          285.0379638671875,
+          116.77850341796875
+        ]
+      },
+      "selection_reason": "First four numerical results in abstract Results: two variance estimates and two variance shares; references and analyst identifiers are excluded.",
+      "id": "held-061",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0.024",
+      "value": "0.024",
+      "locator": {
+        "page": 2,
+        "bbox": [
+          304.7342834472656,
+          109.9384765625,
+          326.80279541015625,
+          116.77850341796875
+        ]
+      },
+      "selection_reason": "First four numerical results in abstract Results: two variance estimates and two variance shares; references and analyst identifiers are excluded.",
+      "id": "held-062",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "31",
+      "value": "31",
+      "locator": {
+        "page": 2,
+        "bbox": [
+          515.6029052734375,
+          109.9384765625,
+          523.6968994140625,
+          116.77850341796875
+        ]
+      },
+      "selection_reason": "First four numerical results in abstract Results: two variance estimates and two variance shares; references and analyst identifiers are excluded.",
+      "id": "held-063",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    },
+    {
+      "case": "pet-repeatability",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "69",
+      "value": "69",
+      "locator": {
+        "page": 2,
+        "bbox": [
+          553.1146850585938,
+          109.9384765625,
+          562.6431884765625,
+          116.77850341796875
+        ]
+      },
+      "selection_reason": "First four numerical results in abstract Results: two variance estimates and two variance shares; references and analyst identifiers are excluded.",
+      "id": "held-064",
+      "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+    }
+  ]
+}

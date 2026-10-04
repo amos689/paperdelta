@@ -69,6 +69,9 @@ def check():
         for p in (ROOT / "examples").rglob("README*.md")
         if not {"build", ".paperdelta"}.intersection(p.relative_to(ROOT).parts)
     )
+    actual.update(
+        p.relative_to(ROOT).as_posix() for p in (ROOT / "validation/native-v1").glob("README*.md")
+    )
     assert actual == registered, {
         "unpaired": sorted(actual - registered),
         "missing": sorted(registered - actual),

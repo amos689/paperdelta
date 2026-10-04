@@ -121,3 +121,22 @@ bound in LaTeX, Word and PDF. Missing observations remain unknown. Bilingual Stu
 templates, terminal guides and read-only MCP share the same contracts.
 Statistical intervals are numerical approximations under author-declared assumptions;
 the tool does not infer significance or establish independence.
+
+
+统计结果需声明完整种子集合、均值/SD/SE/n 及 Student-t 区间方法；缺观测保持未知。
+复合显示与置信水平可在 LaTeX、Word、PDF 绑定，中英文 Studio、模板、终端和只读
+MCP 共用相同约定，不自动推断显著性或证明独立性。
+
+Native layout in 1.1 / 1.1 原生排版
+-----------------------------------
+
+Linked Word footnotes/endnotes, common merged headers and rotated/cropped PDF
+pages preserve original positions. Native review remains read-only. The small
+licensed native study publishes all outcomes, including 4 supported, 4 missed,
+0 mislocated and 56 unknown targets in its first 64-target held-out run.
+
+Word 脚注/尾注、常见合并表头与旋转裁切 PDF 保留原位置，原生审查继续只读。
+小规模许可原生试验公开全部结果：首次留出 64 项中支持 4、漏检 4、错位 0、未知 56。
+
+`Native scope and results <https://github.com/amos689/paperdelta/blob/main/docs/v1.1.md>`_ ·
+`原生支持与结果 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.1.md>`_

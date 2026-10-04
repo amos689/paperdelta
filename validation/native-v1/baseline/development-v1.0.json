@@ -1,0 +1,1283 @@
+{
+  "gold_sha256": "cbdb0e2ec59262466556b5e653fda5afea99455cc033a744ac46fd4dfd03056b",
+  "counts": {
+    "unknown": 63,
+    "supported": 1
+  },
+  "results": [
+    {
+      "id": "dev-001",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 10,
+        "offset": 0
+      },
+      "text": "3.54",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1175,
+        "end": 1179,
+        "text": "3.54",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 10,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 2,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-002",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 11,
+        "offset": 0
+      },
+      "text": ".11",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1180,
+        "end": 1183,
+        "text": ".11",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 11,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 3,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-003",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 0
+      },
+      "text": "32.64",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1184,
+        "end": 1189,
+        "text": "32.64",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 12,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 4,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-004",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 1
+      },
+      "text": ".001",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1191,
+        "end": 1195,
+        "text": ".001",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 13,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 5,
+          "block": "sha256:3fa091c2ac4693dc0d316659f79ae85d23d6c42bdc08f248efdb3dae2cf4682f",
+          "offset": 1
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-005",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 1
+      },
+      "text": "3.32",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1197,
+        "end": 1201,
+        "text": "3.32",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 14,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 6,
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "offset": 1
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-006",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 7
+      },
+      "text": "3.75",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1203,
+        "end": 1207,
+        "text": "3.75",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 14,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 2,
+          "cell": 6,
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "offset": 7
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-007",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 16,
+        "offset": 0
+      },
+      "text": ".33",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1231,
+        "end": 1234,
+        "text": ".33",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 16,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 2,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-008",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 17,
+        "offset": 0
+      },
+      "text": ".05",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1235,
+        "end": 1238,
+        "text": ".05",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 17,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 3,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-009",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 0
+      },
+      "text": "6.62",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1239,
+        "end": 1243,
+        "text": "6.62",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 18,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 4,
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "offset": 0
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-010",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 1
+      },
+      "text": ".001",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1245,
+        "end": 1249,
+        "text": ".001",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 19,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 5,
+          "block": "sha256:3fa091c2ac4693dc0d316659f79ae85d23d6c42bdc08f248efdb3dae2cf4682f",
+          "offset": 1
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-011",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 20,
+        "offset": 1
+      },
+      "text": ".24",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1251,
+        "end": 1254,
+        "text": ".24",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 20,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 6,
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "offset": 1
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-012",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 20,
+        "offset": 6
+      },
+      "text": ".44",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1256,
+        "end": 1259,
+        "text": ".44",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 20,
+          "style": "",
+          "section": [],
+          "table": 1,
+          "row": 3,
+          "cell": 6,
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "offset": 6
+        },
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]"
+      },
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR"
+    },
+    {
+      "id": "dev-013",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 51,
+        "offset": 34
+      },
+      "text": ".03",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 1603,
+        "end": 1606,
+        "text": ".03",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 51,
+          "style": "",
+          "section": [],
+          "block": "sha256:4235e9ec10f14e7aa511cf24a1d1d829e2b5a964a04c1da0a21d9f5ca817e760",
+          "offset": 34
+        },
+        "context": "Note: the p value of repetition = .03 in the main fixed effects model."
+      },
+      "outcome": "supported",
+      "anchor": {
+        "exact": null,
+        "prefix": "Note: the p value of repetition = ",
+        "suffix": " in the main fixed effects model.",
+        "block": "sha256:4235e9ec10f14e7aa511cf24a1d1d829e2b5a964a04c1da0a21d9f5ca817e760"
+      },
+      "check_status": "pass"
+    },
+    {
+      "id": "dev-014",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 325
+      },
+      "text": "1",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 3992,
+        "end": 3993,
+        "text": "1",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 224,
+          "style": "Normal (Web)",
+          "section": [],
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 325
+        },
+        "context": "ction did not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standa"
+      },
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS"
+    },
+    {
+      "id": "dev-015",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 328
+      },
+      "text": "774",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 3995,
+        "end": 3998,
+        "text": "774",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 224,
+          "style": "Normal (Web)",
+          "section": [],
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 328
+        },
+        "context": "on did not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standard re"
+      },
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS"
+    },
+    {
+      "id": "dev-016",
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 335
+      },
+      "text": "4.72",
+      "actual": {
+        "file": "supplement.docx",
+        "start": 4002,
+        "end": 4006,
+        "text": "4.72",
+        "format": "docx",
+        "parser": "paperdelta-docx/1;python-docx/1.2.0;lxml/6.1.3",
+        "locator": {
+          "part": "word/document.xml",
+          "paragraph": 224,
+          "style": "Normal (Web)",
+          "section": [],
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 335
+        },
+        "context": "not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standard repetition"
+      },
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS"
+    },
+    {
+      "id": "dev-033",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          262.0060119628906,
+          105.52728271484375,
+          274.725830078125,
+          110.687255859375
+        ]
+      },
+      "text": "2.88",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-034",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          311.3093566894531,
+          105.52728271484375,
+          319.9572448730469,
+          110.687255859375
+        ]
+      },
+      "text": ".15",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-035",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          356.901611328125,
+          105.47930908203125,
+          376.63739013671875,
+          110.687255859375
+        ]
+      },
+      "text": "125.65",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-036",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          413.594482421875,
+          105.52728271484375,
+          429.69830322265625,
+          110.71124267578125
+        ]
+      },
+      "text": "19.74",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-037",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          474.0745544433594,
+          105.52728271484375,
+          486.17840576171875,
+          110.687255859375
+        ]
+      },
+      "text": ".001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-038",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          525.6490478515625,
+          105.52728271484375,
+          538.408935546875,
+          110.71124267578125
+        ]
+      },
+      "text": "2.59",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-039",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          542.6736450195312,
+          105.52728271484375,
+          555.45751953125,
+          110.687255859375
+        ]
+      },
+      "text": "3.17",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-040",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          264.14111328125,
+          118.05670166015625,
+          272.8210144042969,
+          123.2166748046875
+        ]
+      },
+      "text": ".48",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-041",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          311.309326171875,
+          118.05670166015625,
+          319.95721435546875,
+          123.2166748046875
+        ]
+      },
+      "text": ".15",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-042",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          356.40557861328125,
+          118.05670166015625,
+          376.581298828125,
+          123.2166748046875
+        ]
+      },
+      "text": "701.03",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-043",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          415.0016174316406,
+          118.05670166015625,
+          427.66546630859375,
+          123.24066162109375
+        ]
+      },
+      "text": "3.19",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-044",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 7,
+        "bbox": [
+          470.0489196777344,
+          118.05670166015625,
+          482.15277099609375,
+          123.2166748046875
+        ]
+      },
+      "text": ".001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-045",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 6,
+        "bbox": [
+          384.16302490234375,
+          295.4259948730469,
+          394.42303466796875,
+          301.906005859375
+        ]
+      },
+      "text": ".91",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-046",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 6,
+        "bbox": [
+          445.22100830078125,
+          308.4649963378906,
+          455.8810119628906,
+          314.9150085449219
+        ]
+      },
+      "text": ".83",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-047",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 6,
+        "bbox": [
+          531.5070190429688,
+          308.4649963378906,
+          541.7670288085938,
+          314.9150085449219
+        ]
+      },
+      "text": ".81",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-048",
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "page": 6,
+        "bbox": [
+          359.81201171875,
+          334.42999267578125,
+          368.61199951171875,
+          340.9100036621094
+        ]
+      },
+      "text": "90",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-017",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 0
+      },
+      "text": "88",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-018",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 0
+      },
+      "text": "1610",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-019",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 0
+      },
+      "text": "98",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-020",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 0
+      },
+      "text": "884",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-021",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 24,
+        "offset": 0
+      },
+      "text": "22",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-022",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 25,
+        "offset": 0
+      },
+      "text": "1078",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-023",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 30,
+        "offset": 0
+      },
+      "text": "62",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-024",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 31,
+        "offset": 0
+      },
+      "text": "523",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-025",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 36,
+        "offset": 0
+      },
+      "text": "60",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-026",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 37,
+        "offset": 0
+      },
+      "text": "959",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-027",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 42,
+        "offset": 0
+      },
+      "text": "32",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-028",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 43,
+        "offset": 0
+      },
+      "text": "1127",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-029",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 48,
+        "offset": 0
+      },
+      "text": "3",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-030",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 49,
+        "offset": 0
+      },
+      "text": "698",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-031",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 54,
+        "offset": 0
+      },
+      "text": "40",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-032",
+      "case": "science-journalism",
+      "format": "docx",
+      "gold": {
+        "part": "word/document.xml",
+        "paragraph": 55,
+        "offset": 0
+      },
+      "text": "2560",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-049",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          71.02275848388672,
+          641.9952087402344,
+          77.91867065429688,
+          647.0591430664062
+        ]
+      },
+      "text": "55",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-050",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          230.87356567382812,
+          641.8992004394531,
+          237.35348510742188,
+          646.9791412353516
+        ]
+      },
+      "text": "12",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-051",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          276.841796875,
+          641.8992004394531,
+          279.88177490234375,
+          647.0591430664062
+        ]
+      },
+      "text": "3",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-052",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          363.1374816894531,
+          641.8992004394531,
+          379.11328125,
+          647.8991241455078
+        ]
+      },
+      "text": "1,142",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-053",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          384.1620178222656,
+          641.8992004394531,
+          395.3058776855469,
+          647.0591430664062
+        ]
+      },
+      "text": "427",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-054",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          399.913818359375,
+          641.8512115478516,
+          416.412841796875,
+          647.8991241455078
+        ]
+      },
+      "text": "2,560",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-055",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          462.12347412109375,
+          641.8992004394531,
+          468.6033935546875,
+          646.9791412353516
+        ]
+      },
+      "text": "12",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-056",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          472.45135498046875,
+          641.8992004394531,
+          478.9312744140625,
+          646.9791412353516
+        ]
+      },
+      "text": "12",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-057",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          482.1872253417969,
+          641.8992004394531,
+          485.4512023925781,
+          647.0591430664062
+        ]
+      },
+      "text": "0",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-058",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          70.93476104736328,
+          654.3806610107422,
+          81.78262329101562,
+          659.5885925292969
+        ]
+      },
+      "text": "628",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-059",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          230.87356567382812,
+          654.4286499023438,
+          241.1854248046875,
+          659.5885925292969
+        ]
+      },
+      "text": "182",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-060",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          276.8658142089844,
+          654.524658203125,
+          280.1297607421875,
+          659.5885925292969
+        ]
+      },
+      "text": "7",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-061",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          507.9919738769531,
+          528.6669921875,
+          516.5719604492188,
+          534.9970092773438
+        ]
+      },
+      "text": "55",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-062",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          529.97900390625,
+          528.5469970703125,
+          543.3590087890625,
+          534.9970092773438
+        ]
+      },
+      "text": "728",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-063",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          246.9660186767578,
+          541.5299987792969,
+          264.68603515625,
+          547.9800109863281
+        ]
+      },
+      "text": "1474",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    },
+    {
+      "id": "dev-064",
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "page": 11,
+        "bbox": [
+          474.75604248046875,
+          541.5299987792969,
+          482.8160400390625,
+          547.8800048828125
+        ]
+      },
+      "text": "12",
+      "outcome": "unknown",
+      "reason": "blocked_original_location"
+    }
+  ]
+}

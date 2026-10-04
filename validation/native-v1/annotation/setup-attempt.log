@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<checkout>\tools\evaluate_native.py", line 287, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "<checkout>\tools\evaluate_native.py", line 230, in main
+    gold = {s: json.loads((CORPUS / (s + "-gold.json")).read_text("utf-8")) for s in splits}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '<checkout>\\validation\\native-v1\\held-out-gold.json'

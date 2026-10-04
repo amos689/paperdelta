@@ -1,0 +1,370 @@
+schema_version: 7
+paper:
+  entry: article.pdf
+  macros: {}
+rounding: half_up
+sources:
+  synthetic:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  dev-033:
+    source: synthetic
+    field: value
+    where:
+      id: dev-033
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-034:
+    source: synthetic
+    field: value
+    where:
+      id: dev-034
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-035:
+    source: synthetic
+    field: value
+    where:
+      id: dev-035
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-036:
+    source: synthetic
+    field: value
+    where:
+      id: dev-036
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-037:
+    source: synthetic
+    field: value
+    where:
+      id: dev-037
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-040:
+    source: synthetic
+    field: value
+    where:
+      id: dev-040
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-041:
+    source: synthetic
+    field: value
+    where:
+      id: dev-041
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-042:
+    source: synthetic
+    field: value
+    where:
+      id: dev-042
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-043:
+    source: synthetic
+    field: value
+    where:
+      id: dev-043
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-044:
+    source: synthetic
+    field: value
+    where:
+      id: dev-044
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-045:
+    source: synthetic
+    field: value
+    where:
+      id: dev-045
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-046:
+    source: synthetic
+    field: value
+    where:
+      id: dev-046
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-047:
+    source: synthetic
+    field: value
+    where:
+      id: dev-047
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-048:
+    source: synthetic
+    field: value
+    where:
+      id: dev-048
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  dev-033:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Intercept
+        column: 1
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-033
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-034:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Intercept
+        column: 2
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-034
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-035:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Intercept
+        column: 3
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-035
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-036:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Intercept
+        column: 4
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-036
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-037:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Intercept
+        column: 5
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-037
+    display:
+      kind: decimal
+      places: 3
+      percent_symbol: false
+  dev-040:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Repetition[repeated]
+        column: 1
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-040
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-041:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Repetition[repeated]
+        column: 2
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-041
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-042:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Repetition[repeated]
+        column: 3
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-042
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-043:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Repetition[repeated]
+        column: 4
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-043
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-044:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Variable & B & SE & df & t & p & 95%CI
+        row_prefix:
+        - Repetition[repeated]
+        column: 5
+        percent_symbol: false
+        page: 7
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        header_rows: 1
+        caption: Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.
+    metric: dev-044
+    display:
+      kind: decimal
+      places: 3
+      percent_symbol: false
+  dev-045:
+    file: article.pdf
+    anchor:
+      prefix: '(climate change) Science (Cronbach’s alpha = '
+      suffix: ' for Experiments '
+      block: sha256:72f9d00bcc4c113e5861da62f4bf34e8e8a6afacbf9dcfda3b1bc38746c32f02
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-045
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-046:
+    file: article.pdf
+    anchor:
+      prefix: 'Towards (climate change) Science items (Cronbach’s alpha = '
+      suffix: ' for Experiment '
+      block: sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-046
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-047:
+    file: article.pdf
+    anchor:
+      prefix: ', '
+      suffix: ' for'
+      block: sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-047
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-048:
+    file: article.pdf
+    anchor:
+      prefix: 'climate-science variable. We found that '
+      suffix: '% of participants in Experiment '
+      block: sha256:fb60a6e939f5ad2faec405ad4b3135c2e41d717071116ce44eefbc1906549a56
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-048
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

@@ -1,0 +1,9 @@
+{
+  "scope": "Annotation setup before gold lock and before any held-out scoring",
+  "failure": "PDFium returned different full-text offsets and character indices on the PET table page. The independent selection assertion failed; no gold file was written.",
+  "correction": "Translate UTF-16 text offsets through FPDFText_GetCharIndexFromTextIndex before reading character boxes. Target selection was unchanged. Frozen PaperDelta code and scoring harness were unchanged.",
+  "premature_command": "A scoring command then failed on missing held-out-gold.json before any document parsing or first-run-start record. Its setup-attempt.log is retained.",
+  "actual_first_score": "results/held-out-first.json",
+  "missed_analysis": "All four misses are on pet-repeatability PDF page 2. Extracted prose joins words and numbers (variancewere0.5717and0.024 ... for31%and69%), so numeric boundaries produce no candidates. They remain missed, not supported or unknown.",
+  "published_setup_log": "Workspace/runtime absolute paths redacted; original local log retained under build/."
+}

@@ -1,0 +1,630 @@
+schema_version: 7
+paper:
+  entry: supplement.docx
+  macros: {}
+rounding: half_up
+sources:
+  synthetic:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  dev-017:
+    source: synthetic
+    field: value
+    where:
+      id: dev-017
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-018:
+    source: synthetic
+    field: value
+    where:
+      id: dev-018
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-019:
+    source: synthetic
+    field: value
+    where:
+      id: dev-019
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-020:
+    source: synthetic
+    field: value
+    where:
+      id: dev-020
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-021:
+    source: synthetic
+    field: value
+    where:
+      id: dev-021
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-022:
+    source: synthetic
+    field: value
+    where:
+      id: dev-022
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-023:
+    source: synthetic
+    field: value
+    where:
+      id: dev-023
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-024:
+    source: synthetic
+    field: value
+    where:
+      id: dev-024
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-025:
+    source: synthetic
+    field: value
+    where:
+      id: dev-025
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-026:
+    source: synthetic
+    field: value
+    where:
+      id: dev-026
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-027:
+    source: synthetic
+    field: value
+    where:
+      id: dev-027
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-028:
+    source: synthetic
+    field: value
+    where:
+      id: dev-028
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-029:
+    source: synthetic
+    field: value
+    where:
+      id: dev-029
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-030:
+    source: synthetic
+    field: value
+    where:
+      id: dev-030
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-031:
+    source: synthetic
+    field: value
+    where:
+      id: dev-031
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-032:
+    source: synthetic
+    field: value
+    where:
+      id: dev-032
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  dev-017:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf
+        column: 3
+        percent_symbol: false
+    metric: dev-017
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-018:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf
+        column: 4
+        percent_symbol: false
+    metric: dev-018
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-019:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Les mots pour le dire Communication
+        column: 3
+        percent_symbol: false
+    metric: dev-019
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-020:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Les mots pour le dire Communication
+        column: 4
+        percent_symbol: false
+    metric: dev-020
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-021:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE
+        column: 3
+        percent_symbol: false
+    metric: dev-021
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-022:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE
+        column: 4
+        percent_symbol: false
+    metric: dev-022
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-023:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Des "data centers" en route vers l'écologie NUMÉRIQUE
+        column: 3
+        percent_symbol: false
+    metric: dev-023
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-024:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Des "data centers" en route vers l'écologie NUMÉRIQUE
+        column: 4
+        percent_symbol: false
+    metric: dev-024
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-025:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau»
+        column: 3
+        percent_symbol: false
+    metric: dev-025
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-026:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau»
+        column: 4
+        percent_symbol: false
+    metric: dev-026
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-027:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «La photo est une illusion»
+        column: 3
+        percent_symbol: false
+    metric: dev-027
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-028:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «La photo est une illusion»
+        column: 4
+        percent_symbol: false
+    metric: dev-028
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-029:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Donner sa langue à ChatGPT
+        column: 3
+        percent_symbol: false
+    metric: dev-029
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-030:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - Donner sa langue à ChatGPT
+        column: 4
+        percent_symbol: false
+    metric: dev-030
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-031:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «On ne peut plus accepter que le numérique soit un no man's land» Antoinette
+          Rouvroy
+        column: 3
+        percent_symbol: false
+    metric: dev-031
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-032:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis. & Samples news articles. Overview of
+          basic characteristics of the selected articles per country. For each country
+          10 news articles were selected for a manual analysis. & Samples news articles.
+          Overview of basic characteristics of the selected articles per country.
+          For each country 10 news articles were selected for a manual analysis. &
+          Samples news articles. Overview of basic characteristics of the selected
+          articles per country. For each country 10 news articles were selected for
+          a manual analysis. & Samples news articles. Overview of basic characteristics
+          of the selected articles per country. For each country 10 news articles
+          were selected for a manual analysis.
+        - Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE
+        row_prefix:
+        - Belgium
+        - «On ne peut plus accepter que le numérique soit un no man's land» Antoinette
+          Rouvroy
+        column: 4
+        percent_symbol: false
+    metric: dev-032
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

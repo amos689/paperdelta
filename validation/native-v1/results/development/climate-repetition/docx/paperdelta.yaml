@@ -1,0 +1,247 @@
+schema_version: 7
+paper:
+  entry: supplement.docx
+  macros: {}
+rounding: half_up
+sources:
+  synthetic:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  dev-001:
+    source: synthetic
+    field: value
+    where:
+      id: dev-001
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-002:
+    source: synthetic
+    field: value
+    where:
+      id: dev-002
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-003:
+    source: synthetic
+    field: value
+    where:
+      id: dev-003
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-004:
+    source: synthetic
+    field: value
+    where:
+      id: dev-004
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-007:
+    source: synthetic
+    field: value
+    where:
+      id: dev-007
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-008:
+    source: synthetic
+    field: value
+    where:
+      id: dev-008
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-009:
+    source: synthetic
+    field: value
+    where:
+      id: dev-009
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-010:
+    source: synthetic
+    field: value
+    where:
+      id: dev-010
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-013:
+    source: synthetic
+    field: value
+    where:
+      id: dev-013
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  dev-001:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Intercept
+        column: 1
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-001
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-002:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Intercept
+        column: 2
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-002
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-003:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Intercept
+        column: 3
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-003
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-004:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Intercept
+        column: 4
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-004
+    display:
+      kind: decimal
+      places: 3
+      percent_symbol: false
+  dev-007:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Repetition [repeated]
+        column: 1
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-007
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-008:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Repetition [repeated]
+        column: 2
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-008
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-009:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Repetition [repeated]
+        column: 3
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-009
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  dev-010:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - Variable & b & SE & t & p & 95% CI
+        row_prefix:
+        - Repetition [repeated]
+        column: 4
+        percent_symbol: false
+        header_rows: 1
+        caption: S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief
+          Measured Through AllScience.
+    metric: dev-010
+    display:
+      kind: decimal
+      places: 3
+      percent_symbol: false
+  dev-013:
+    file: supplement.docx
+    anchor:
+      prefix: 'Note: the p value of repetition = '
+      suffix: ' in the main fixed effects model.'
+      block: sha256:4235e9ec10f14e7aa511cf24a1d1d829e2b5a964a04c1da0a21d9f5ca817e760
+    metric: dev-013
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

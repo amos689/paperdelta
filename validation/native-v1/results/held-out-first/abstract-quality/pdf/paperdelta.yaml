@@ -1,0 +1,100 @@
+schema_version: 7
+paper:
+  entry: article.pdf
+  macros: {}
+rounding: half_up
+sources:
+  synthetic:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  held-045:
+    source: synthetic
+    field: value
+    where:
+      id: held-045
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  held-046:
+    source: synthetic
+    field: value
+    where:
+      id: held-046
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  held-047:
+    source: synthetic
+    field: value
+    where:
+      id: held-047
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  held-048:
+    source: synthetic
+    field: value
+    where:
+      id: held-048
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  held-045:
+    file: article.pdf
+    anchor:
+      prefix: 'Originalabstracts achieveda meanOQS of '
+      suffix: (
+      block: sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: held-045
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  held-046:
+    file: article.pdf
+    anchor:
+      prefix: (
+      suffix: '%CI: '
+      block: sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: held-046
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  held-047:
+    file: article.pdf
+    anchor:
+      prefix: '%CI: '
+      suffix: –
+      block: sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: held-047
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+  held-048:
+    file: article.pdf
+    anchor:
+      prefix: –
+      suffix: ),outperforming
+      block: sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: held-048
+    display:
+      kind: decimal
+      places: 2
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

@@ -44,12 +44,19 @@ def main():
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/evidence").glob("corpus*.json")
     )
     files.update(
+        p.relative_to(ROOT).as_posix()
+        for p in (ROOT / "validation/native-v1").rglob("*")
+        if p.is_file() and "__pycache__" not in p.parts
+    )
+    files.update(
         {
             "LICENSE",
             "THIRD_PARTY_NOTICES.md",
             "THIRD_PARTY_NOTICES.zh-CN.md",
             "docs/evaluation.md",
             "docs/zh-CN/evaluation.md",
+            "docs/v1.1.md",
+            "docs/zh-CN/v1.1.md",
         }
     )
     manifest = {
@@ -86,7 +93,11 @@ def main():
             "original implementation; see tests/corpus/README.md for historical replay.\n\n"
             "The protocol lock checks the exact core, evaluator and input identities. "
             "The papers are paired with controlled synthetic evidence, not reproduced "
-            "original experiments. See docs/evaluation.md for failures and limits.\n",
+            "original experiments. See docs/evaluation.md for failures and limits.\n\n"
+            "Native Word/PDF study: read validation/native-v1/README.md and run "
+            "`python tools/replay_native.py --out build/native-replay` with the documented "
+            "dependencies. The frozen implementation and first held-out failures are retained; "
+            "replays are regressions on already seen inputs.\n",
         )
         bundle.writestr(
             "EVALUATION_README.zh-CN.md",
@@ -98,7 +109,11 @@ def main():
             "重放通过归档实现验证原协议，保留首次留出失败，不把已见论文称作新留出样本。\n\n"
             "tests/corpus/active-study.json 标识保存的 a2 协议及更早原实现。锁核验源码、"
             "评测器和输入身份。论文配的是合成证据，不是复现原实验。"
-            "失败及限制见 docs/zh-CN/evaluation.md；各发行版验收另行记录。\n",
+            "失败及限制见 docs/zh-CN/evaluation.md；各发行版验收另行记录。\n\n"
+            "原生 Word/PDF 试验见 validation/native-v1/README.zh-CN.md。按文档安装依赖后运行 "
+            "`python tools/replay_native.py --out build/native-replay`。"
+            "冻结实现和首次留出失败均保留，"
+            "重放属于已见输入的回归验证。\n",
         )
     print(
         json.dumps(

@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.1.0 — 2026-10-04
+
+- Original Word footnotes/endnotes, common horizontal table headers and regular vertical merges with explicit caption/header identities.
+- Rotated/cropped/nonzero-origin PDFs retain original page coordinates, region selections and aligned previews; scoped clipping/visibility guards refuse uncertain glyphs.
+- Schema 7 preserves older records; PDF extractor changes require explicit repair. Native files stay read-only.
+- A separately licensed, frozen native study publishes all outcomes: development 49/64 supported; first held-out 4 supported, 4 missed, 0 mislocated and 56 unknown out of 64.
+- Eight bilingual layout browser flows and owned geometry/unsafe-content regression cases. See [scope and limits](docs/v1.1.md).
+
 ## 1.0.0 — 2026-10-04
 
 - Explicit statistical bundles: complete typed seeds/observation IDs, n, ddof, analysis unit, mean/SD/SE and declared Student-t intervals. Missing observations remain unknown.

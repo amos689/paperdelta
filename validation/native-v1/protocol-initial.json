@@ -1,0 +1,50 @@
+{
+  "study": "native-layout-v1",
+  "locked_at": "2026-10-04T10:27:29.777999+00:00",
+  "baseline_commit": "169a3bee0c152ec6a2168426793489547b2bb5b8",
+  "papers": [
+    {
+      "id": "climate-repetition",
+      "doi": "10.1371/journal.pone.0307294",
+      "split": "development",
+      "attachment": ".s002"
+    },
+    {
+      "id": "science-journalism",
+      "doi": "10.1371/journal.pone.0303367",
+      "split": "development",
+      "attachment": ".s001"
+    },
+    {
+      "id": "abstract-quality",
+      "doi": "10.1371/journal.pone.0297701",
+      "split": "held-out",
+      "attachment": ".s003"
+    },
+    {
+      "id": "pet-repeatability",
+      "doi": "10.1371/journal.pone.0313123",
+      "split": "held-out",
+      "attachment": ".s006"
+    }
+  ],
+  "split_unit": "whole article family including PDF and original DOCX supplement",
+  "selection_basis": "Public CC-BY-4.0 articles with downloadable native DOCX result tables and publisher PDFs; metadata only before split. All are PLOS ONE, a limitation.",
+  "gold_protocol": {
+    "per_file_target": 16,
+    "table": "First twelve visible numeric result tokens in the first result table, row-major after headers. Continue next result table if necessary; retain merged cells and raised note markers. Record exact original location, text, numeric meaning and reason. Never select based on PaperDelta output.",
+    "prose": "First four visible numeric result tokens in abstract/results prose, or explanatory notes if the DOCX contains only tables. If absent, use subsequent result-table tokens and record fallback.",
+    "annotation": "Original OOXML plus native rendering for Word; independent Poppler text/bounding boxes plus original PDF rendering. The developer is also the annotator; no independent human validation is claimed.",
+    "shortfall": "Record missing target slots and reasons; do not replace an article after seeing parser results."
+  },
+  "held_out": "Keep native document layout/text uninspected until the implementation and scoring harness are frozen. Then annotate without running PaperDelta, lock gold identities, and preserve the first scored run. Subsequent fixes are regressions on seen inputs, not fresh held-out results.",
+  "outcomes": {
+    "supported": "An explicit binding resolves to the exact independent original token/location and checks against controlled evidence.",
+    "missed": "No candidate or explicit diagnostic covers the gold location.",
+    "mislocated": "A proposed/resolved token or locator differs from the independent gold, even if the number equals it.",
+    "unknown": "An explicit conservative diagnostic or blocked candidate accounts for the unsupported location; no success is asserted."
+  },
+  "evidence": "Controlled synthetic evidence matching/transparently changing annotated numbers, not reproduction of the original experiments or statistical methods.",
+  "stress_cases": "Separately labelled owned/derived cases for horizontal/vertical merged headers, Word notes and references, PDF 90/180/270 rotation, crop offsets and clipped glyphs. Transforms are not independent native articles and do not inflate held-out counts.",
+  "acceptance": "Preserve first-run failures. Require no silent mislocation in supported production paths; fix unsafe behavior and retain regression evidence. Publish denominators and all four outcomes without a blanket accuracy claim."
+}

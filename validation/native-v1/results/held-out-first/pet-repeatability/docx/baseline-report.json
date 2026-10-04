@@ -1,0 +1,760 @@
+{
+  "actions": [
+    {
+      "findings": [
+        "supplement.docx/DOCX_MERGED_VALUE"
+      ],
+      "kind": "resolve_evidence",
+      "subjects": [
+        "supplement.docx"
+      ]
+    },
+    {
+      "findings": [
+        "project/NO_BINDINGS"
+      ],
+      "kind": "complete_coverage",
+      "subjects": [
+        "project"
+      ]
+    }
+  ],
+  "baseline": null,
+  "changes": [],
+  "claims": {},
+  "config_fingerprint": "sha256:2085503c4cdfeef47981ed3f22755b5a99c74bec23b7b83da2d396b6083075f6",
+  "config_path": "paperdelta.yaml",
+  "coverage": {
+    "candidate_numbers": 33,
+    "confirmed": 0,
+    "exclusions": [],
+    "mismatch": 0,
+    "outside_scope_numbers": [],
+    "pass": 0,
+    "review_scope": null,
+    "unbound_numbers": [
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nStatistic | Msmt1 | Msmt 2 | Msmt1 | Msmt 2 | Msmt1 | Msmt 2",
+        "end": 132,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:ef23807614267a279269533130f2018fd81df418c4c7a17a61444a80adc5409b",
+          "cell": 3,
+          "offset": 5,
+          "paragraph": 8,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 131,
+        "text": "2"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nStatistic | Msmt1 | Msmt 2 | Msmt1 | Msmt 2 | Msmt1 | Msmt 2",
+        "end": 145,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:ef23807614267a279269533130f2018fd81df418c4c7a17a61444a80adc5409b",
+          "cell": 5,
+          "offset": 5,
+          "paragraph": 10,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 144,
+        "text": "2"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nStatistic | Msmt1 | Msmt 2 | Msmt1 | Msmt 2 | Msmt1 | Msmt 2",
+        "end": 158,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:ef23807614267a279269533130f2018fd81df418c4c7a17a61444a80adc5409b",
+          "cell": 7,
+          "offset": 5,
+          "paragraph": 12,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 157,
+        "text": "2"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 173,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 169,
+        "text": "1.09"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 179,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 2,
+          "offset": 6,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 175,
+        "text": "0.25"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 185,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 15,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 181,
+        "text": "1.13"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 191,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 3,
+          "offset": 6,
+          "paragraph": 15,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 187,
+        "text": "0.22"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 197,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 193,
+        "text": "1.11"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 203,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 4,
+          "offset": 6,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 199,
+        "text": "0.24"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 209,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 205,
+        "text": "1.13"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 215,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 5,
+          "offset": 6,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 211,
+        "text": "0.26"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 221,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 6,
+          "offset": 0,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 217,
+        "text": "1.17"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 227,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 6,
+          "offset": 6,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 223,
+        "text": "0.26"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 233,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 7,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 229,
+        "text": "1.17"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 239,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 7,
+          "offset": 6,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 235,
+        "text": "0.25"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 260,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 21,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 256,
+        "text": "1.04"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 267,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 2,
+          "offset": 1,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 263,
+        "text": "0.77"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 273,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 2,
+          "offset": 7,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 269,
+        "text": "1.53"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 279,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 23,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 275,
+        "text": "1.07"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 286,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 3,
+          "offset": 1,
+          "paragraph": 24,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 282,
+        "text": "0.76"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 292,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 3,
+          "offset": 7,
+          "paragraph": 24,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 288,
+        "text": "1.57"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 298,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 25,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 294,
+        "text": "1.15"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 305,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 4,
+          "offset": 1,
+          "paragraph": 26,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 301,
+        "text": "0.65"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 311,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 4,
+          "offset": 7,
+          "paragraph": 26,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 307,
+        "text": "1.47"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 317,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 27,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 313,
+        "text": "1.03"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 324,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 5,
+          "offset": 1,
+          "paragraph": 28,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 320,
+        "text": "0.73"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 330,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 5,
+          "offset": 7,
+          "paragraph": 28,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 326,
+        "text": "1.65"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 336,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 6,
+          "offset": 0,
+          "paragraph": 29,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 332,
+        "text": "1.14"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 343,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 6,
+          "offset": 1,
+          "paragraph": 30,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 339,
+        "text": "0.77"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 349,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 6,
+          "offset": 7,
+          "paragraph": 30,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 345,
+        "text": "1.64"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 355,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 7,
+          "offset": 0,
+          "paragraph": 31,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 351,
+        "text": "1.21"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 362,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 7,
+          "offset": 1,
+          "paragraph": 32,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 358,
+        "text": "0.67"
+      },
+      {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 368,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 7,
+          "offset": 7,
+          "paragraph": 32,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 364,
+        "text": "1.66"
+      }
+    ],
+    "unknown": 0,
+    "unregistered_figures": [],
+    "unsupported": [
+      {
+        "code": "DOCX_MERGED_VALUE",
+        "file": "supplement.docx",
+        "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value."
+      },
+      {
+        "code": "DOCX_MERGED_VALUE",
+        "file": "supplement.docx",
+        "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value."
+      },
+      {
+        "code": "DOCX_MERGED_VALUE",
+        "file": "supplement.docx",
+        "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value."
+      }
+    ]
+  },
+  "created_at": "2026-10-04T11:37:19.907642+00:00",
+  "diagnostics": [
+    {
+      "id": "supplement.docx/DOCX_MERGED_VALUE",
+      "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value.",
+      "rule": "DOCX_MERGED_VALUE",
+      "severity": "unknown",
+      "subject": "supplement.docx"
+    },
+    {
+      "id": "supplement.docx/DOCX_MERGED_VALUE",
+      "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value.",
+      "rule": "DOCX_MERGED_VALUE",
+      "severity": "unknown",
+      "subject": "supplement.docx"
+    },
+    {
+      "id": "supplement.docx/DOCX_MERGED_VALUE",
+      "message": "Word table 1, row 1 contains a number in a horizontally merged cell. Its text may identify a header, but the number is not verified as a measured value.",
+      "rule": "DOCX_MERGED_VALUE",
+      "severity": "unknown",
+      "subject": "supplement.docx"
+    },
+    {
+      "id": "project/NO_BINDINGS",
+      "message": "No confirmed bindings; initialize and accept mappings first",
+      "rule": "NO_BINDINGS",
+      "severity": "unknown",
+      "subject": "project"
+    }
+  ],
+  "exit_code": 2,
+  "figures": {},
+  "impact_groups": [],
+  "input_hashes": {
+    "paperdelta.yaml": "sha256:65aeb3c0a103f8f261b2af18d8dd43dcdaa63a4e0be73d6ea6fb9821bed179a4",
+    "supplement.docx": "sha256:8f33b59b0297f5744e2f5dc844e3eda3a4eaa71f7a78b99611f12b28d9fa8723"
+  },
+  "metrics": {},
+  "occurrences": {},
+  "report_schema_version": 7,
+  "ruleset_version": "1",
+  "tool_version": "1.1.0"
+}

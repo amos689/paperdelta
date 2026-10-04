@@ -1,10 +1,18 @@
-# 报告交换约定，版本 6
+# 报告交换约定，版本 7
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–6。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–7。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
+
+## Schema 7 原生排版
+
+Word 位置可指向 `word/footnotes.xml` 或 `word/endnotes.xml`，必须带 `note_id` 和
+注释内段落序号。可选 `column_span` 表示横向合并的所有者单元格。新表格锚点可含
+明确 `header_rows` 和原文 `caption`。旧报告版本拒绝新的 Word 位置字段，旧位置
+序列化省略这些字段。PDF 坐标对应旋转后实际可见裁切页，以 `[0, 0]` 为原点；
+`/2` 解析身份要求旧 PDF 锚点明确修复。详见[原生排版范围](v1.1.md)。
 
 ## Schema 6 的统计结果
 
@@ -94,4 +102,4 @@ PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定
 
 配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
 `paper.companions` 和可选 `export_of`。使用旧 CSV/JSON 证据时，LaTeX 报告使用
-schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–6。
+schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–7。

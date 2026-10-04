@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "commit": "169a3bee0c152ec6a2168426793489547b2bb5b8",
+  "checked_at": "2026-10-04T10:45:47.182306+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37195241435",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-1.0.0-py3-none-any.whl": "b8d9d15b3fbfb4a1a61b0aeee08fdb617c04d6961668f394fa830bdc00619e3c",
+    "paperdelta-1.0.0.tar.gz": "41aa0c8641671e2d9760cbd61068d26c6ac03c59305cc8e2d6a77ffeb91729a4",
+    "paperdelta-evaluation-1.0.0.zip": "9c570cfe66275d91a296d9bb415f9a0126e63659ebc2dd2d2ca073d56d514333"
+  },
+  "status": "passed",
+  "candidate_wheel_entries_identical": 90,
+  "local_installed_suite": {
+    "tests": 599,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 596,
+    "evidence": "build/v10-installed-final/evidence.json"
+  },
+  "statistical_browser_flows": 8,
+  "manuscript_formats": [
+    "latex",
+    "docx",
+    "pdf"
+  ],
+  "statistics": [
+    "mean",
+    "sd",
+    "se",
+    "n",
+    "confidence_level",
+    "student_t"
+  ],
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v1.0.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37196256222",
+  "pypi": "https://pypi.org/project/paperdelta/1.0.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-1.0.0-py3-none-any.whl": "b8d9d15b3fbfb4a1a61b0aeee08fdb617c04d6961668f394fa830bdc00619e3c",
+    "paperdelta-1.0.0.tar.gz": "41aa0c8641671e2d9760cbd61068d26c6ac03c59305cc8e2d6a77ffeb91729a4"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true
+}

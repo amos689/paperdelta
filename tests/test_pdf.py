@@ -224,7 +224,6 @@ def unusual_pdf(case):
         "blank",
         "ocr-layer",
         "rotated-page",
-        "crop",
         "invisible",
         "rotated-text",
         "transparent",
@@ -462,7 +461,7 @@ def test_table_region_cannot_cut_or_hide_grid_structure():
         assert error.value.code == "PDF_REGION"
 
 
-def test_merged_cells_are_not_silently_flattened_to_prose():
+def test_merged_header_preserves_drawn_grid_and_data_cell_identity():
     stream = io.BytesIO()
     canvas = Canvas(stream, pagesize=(600, 800), invariant=1)
     for y in (600, 650, 700):
@@ -475,8 +474,12 @@ def test_merged_cells_are_not_silently_flattened_to_prose():
     canvas.drawString(170, 625, "84.1")
     canvas.save()
     document = PdfDocument("paper.pdf", stream.getvalue())
-    assert any(issue["code"] == "PDF_COMPLEX_TABLE" for issue in document.issues)
-    assert not document.numbers()
+    assert [span.text for span in document.numbers()] == ["84.1"]
+    span = document.numbers()[0]
+    assert span.locator["row"] == 2 and span.locator["cell"] == 2
+    anchor = document.anchor_for_span(span)
+    assert anchor.table.headers == ["Merged header & Merged header"]
+    assert document.locate(anchor) == span
 
 
 def test_pdf_batch_keeps_header_and_row_identity(tmp_path):

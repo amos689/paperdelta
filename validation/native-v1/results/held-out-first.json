@@ -1,0 +1,2029 @@
+{
+  "by_file": [
+    {
+      "case": "abstract-quality",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "pet-repeatability",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "abstract-quality",
+      "counts": {
+        "supported": 4,
+        "unknown": 12
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "pet-repeatability",
+      "counts": {
+        "missed": 4,
+        "unknown": 12
+      },
+      "format": "pdf"
+    }
+  ],
+  "counts": {
+    "mislocated": 0,
+    "missed": 4,
+    "supported": 4,
+    "unknown": 56
+  },
+  "created_at": "2026-10-04T11:37:52.121184+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "held-out": "8efa84c2a6f1e7689aecb16b6d67efb217d3812b5131e18838bba0546231d6ba"
+  },
+  "implementation": {
+    "pyproject.toml": "1b0474c9e20e9bcb7c074355a67f9ee1c8375773f932194a4b969e078897f9ff",
+    "src/paperdelta/__init__.py": "a2325248854d34e92fcb0449244ae9f749d6f77d1b683f2eebdb8bc4d636ad5b",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "0af4e834c0c9ddac8d9ea8244e2a5536f4f74c223e1085b6780bba2328f4a328",
+    "src/paperdelta/agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+    "src/paperdelta/analysis.py": "6afc226d1806720728e5e4542254ca7404e9ca21448632365ecb26efa0ece1b7",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+    "src/paperdelta/assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio.css": "a930b61337abd345226f2f9e43c2118abe8b5db80967467c7cdafe9178c26ee9",
+    "src/paperdelta/assets/studio.js": "7717f51b4017d0d8c3456d100e3da7d7253749e5ad1c49a80876155cb31728e3",
+    "src/paperdelta/batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "0a43681504b35294fade7bb505e7948d8b6e7962cedc6ec9ff6f0369415c3667",
+    "src/paperdelta/cli.py": "89a8ad2c3d1fba3f1e68b8cb55510c7a1b39d710bee9c81dda2b260b11e8935b",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "38ef523523a7755e6495ea740c6eb8536a2e88430d05e975047258f6034babc3",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "c92aa96b1619b5183be13ce7242452b00498b0cd7bf1b22df52a3e7188f618e0",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "3e568ddcd55056ab60864d8db6d387387c0edbcce8bd8fffc656ea4a024f6697",
+    "src/paperdelta/docx_document.py": "5ad7d25f218a9083a5cfeb3c7e3d27cab7ad9d507f52d7bfb944481c6d38221e",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "80f57384fe029e8d6938b5428fcf892268640c0d9d57cedfae1d0779e1f0ef13",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "a53de68dc0987f13d50fa6ab3459a248c69d3f0dd29e899dcd0918aa58447a32",
+    "src/paperdelta/locales/zh-CN.json": "66ff73785cc4b6e0c8da0ff89b88464780400cb512a9bfbadf991fa666688981",
+    "src/paperdelta/locations.py": "b9730cad9e021791d258431d4deec03c03557f77b665433477d7301b5d5a1168",
+    "src/paperdelta/manuscripts.py": "c7e57da54c13d23c602cb5127ae7c5f334fd59a0c9a80edaf3f1c40b95c062b9",
+    "src/paperdelta/mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "7e17c2b489ff5ae10600a9ee14f5ffd1d10d456595067830dca65fc5a7380bd0",
+    "src/paperdelta/native_document.py": "657fca60429ba3f6d5cfee5f029789c18296db0c5f3f87b84cb08e2e59fc8372",
+    "src/paperdelta/onboarding.py": "b0a4133de806c5fb5009b7e031b595d09cdad57d5525d4651b8f71add68ee33a",
+    "src/paperdelta/patches.py": "eafc213c670b1f2f74a183e983e27cf0220bef3b197c650c27d41be25d5c44c0",
+    "src/paperdelta/pdf_document.py": "087d2c46bec4dec9a0d642b6259bdf95d5b395bb54dd8a8575ee71459b3ff96d",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/records.py": "21e9f4ac594bce64f4d845210602eb05a69fc8b2ae689174ec11d36f071907ac",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "87b1acdb4d3fba0bf68d630e380cead2c05a6fb34be213a225223f1956af1a3a",
+    "src/paperdelta/studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+    "src/paperdelta/studio_recovery.py": "21654ce9bcfd0e44cb2cbffca29964ccdd538469dd7836aa8e8e3700994eac5d",
+    "src/paperdelta/studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+    "src/paperdelta/studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+    "src/paperdelta/studio_ui.py": "27e5592576f8d817659da52b0ed646503ad5a451f8a4ddb4d7a8c85d80a74a2c",
+    "src/paperdelta/tables.py": "6d27b23250d8a314128b0c8b403be8397c583ebca38041602a3f2b944e365996",
+    "src/paperdelta/watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+    "src/paperdelta/word_tables.py": "88978d9e0afc9474940eaca2d8f0f37b6793e473c0ff8bb92f3aa563cf91cb45",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/evaluate_native.py": "429f1abd0c629e11be8d0d84e5d4aaf976177eec4d5e603cbcb47dcd47aafabd",
+    "tools/prepare_native_annotations.py": "0fd273e31fc0585bf5e29e75564e87bdd97e00b8eef94451ae9cb163ee80dab8"
+  },
+  "matches_implementation_lock": true,
+  "mode": "first-held-out",
+  "python": "3.12.14",
+  "results": [
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 11,
+        "part": "word/document.xml"
+      },
+      "id": "held-001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "42"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 11,
+        "part": "word/document.xml"
+      },
+      "id": "held-002",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "67.74"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 12,
+        "part": "word/document.xml"
+      },
+      "id": "held-003",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "42"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 12,
+        "part": "word/document.xml"
+      },
+      "id": "held-004",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "67.74"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "held-005",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "37"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "held-006",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "59.68"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "held-007",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "1.000"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 15,
+        "part": "word/document.xml"
+      },
+      "id": "held-008",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.455"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "held-009",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.455"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "held-010",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "26"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "held-011",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "41.94"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 27,
+        "part": "word/document.xml"
+      },
+      "id": "held-012",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "18"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 27,
+        "part": "word/document.xml"
+      },
+      "id": "held-013",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "29.03"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "held-014",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "13"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 4,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "held-015",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "20.97"
+    },
+    {
+      "case": "abstract-quality",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 29,
+        "part": "word/document.xml"
+      },
+      "id": "held-016",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.189"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 173,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 169,
+        "text": "1.09"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "held-017",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.09"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 179,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 2,
+          "offset": 6,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 175,
+        "text": "0.25"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "held-018",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.25"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 185,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 15,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 181,
+        "text": "1.13"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 15,
+        "part": "word/document.xml"
+      },
+      "id": "held-019",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.13"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 191,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 3,
+          "offset": 6,
+          "paragraph": 15,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 187,
+        "text": "0.22"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 15,
+        "part": "word/document.xml"
+      },
+      "id": "held-020",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.22"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 197,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 193,
+        "text": "1.11"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "held-021",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.11"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 203,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 4,
+          "offset": 6,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 199,
+        "text": "0.24"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "held-022",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.24"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 209,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 205,
+        "text": "1.13"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "held-023",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.13"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 215,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 5,
+          "offset": 6,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 211,
+        "text": "0.26"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "held-024",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.26"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 221,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 6,
+          "offset": 0,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 217,
+        "text": "1.17"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 18,
+        "part": "word/document.xml"
+      },
+      "id": "held-025",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.17"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 227,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 6,
+          "offset": 6,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 223,
+        "text": "0.26"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 18,
+        "part": "word/document.xml"
+      },
+      "id": "held-026",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.26"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 233,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 7,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 229,
+        "text": "1.17"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "held-027",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.17"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMean (SD) | 1.09 (0.25) | 1.13 (0.22) | 1.11 (0.24) | 1.13 (0.26) | 1.17 (0.26) | 1.17 (0.25)",
+        "end": 239,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:27ccd20b7f4d890bf0968f11bfb5dc0217906e98357d48d89ca00a12a1613d98",
+          "cell": 7,
+          "offset": 6,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 235,
+        "text": "0.25"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "held-028",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.25"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 260,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 21,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 256,
+        "text": "1.04"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 21,
+        "part": "word/document.xml"
+      },
+      "id": "held-029",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.04"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 267,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 2,
+          "offset": 1,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 263,
+        "text": "0.77"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 1,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "held-030",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.77"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 273,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:0c2fe506dae843afb13444dd8c9fc9f4d5ce2d0aabd916067bef013627ff46c1",
+          "cell": 2,
+          "offset": 7,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 269,
+        "text": "1.53"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 7,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "held-031",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.53"
+    },
+    {
+      "actual": {
+        "context": "Statistic | Analyst 1 | Analyst 1 | Analyst 2 | Analyst 2 | Analyst 3 | Analyst 3\nMedian (range) | 1.04 (0.77, 1.53) | 1.07 (0.76, 1.57) | 1.15 (0.65, 1.47) | 1.03 (0.73, 1.65) | 1.14 (0.77, 1.64) | 1.21 (0.67, 1.66)",
+        "end": 279,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f4a8b21fff260126d53f94805d1c6048e4dbd02b8d8e9ca26cb1d3e0816ee86",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 23,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 275,
+        "text": "1.07"
+      },
+      "case": "pet-repeatability",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 23,
+        "part": "word/document.xml"
+      },
+      "id": "held-032",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.07"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\nJournal | AmericanJournalofObstetricsandGynaecology | 5(8.06%)",
+        "end": 16605,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            104.0473,
+            516.3336,
+            112.0472
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16604,
+        "text": "5"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          512.8856811523438,
+          105.623291015625,
+          515.9496459960938,
+          110.687255859375
+        ],
+        "page": 6
+      },
+      "id": "held-033",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\nJournal | AmericanJournalofObstetricsandGynaecology | 5(8.06%)",
+        "end": 16610,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.9144,
+            104.0473,
+            534.2422,
+            112.0472
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16606,
+        "text": "8.06"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.2743530273438,
+          105.47930908203125,
+          533.9862060546875,
+          110.687255859375
+        ],
+        "page": 6
+      },
+      "id": "held-034",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "8.06"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | AnnalsofSurgery | 4(6.45%)",
+        "end": 16614,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            116.5768,
+            516.3336,
+            124.5767
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16613,
+        "text": "4"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          512.6616821289062,
+          118.08074951171875,
+          516.149658203125,
+          123.13665771484375
+        ],
+        "page": 6
+      },
+      "id": "held-035",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | AnnalsofSurgery | 4(6.45%)",
+        "end": 16619,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.9144,
+            116.5768,
+            534.2422,
+            124.5767
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16615,
+        "text": "6.45"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.2103881835938,
+          118.00872802734375,
+          533.8582153320312,
+          123.2166748046875
+        ],
+        "page": 6
+      },
+      "id": "held-036",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "6.45"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | BMJ | 3(4.84%)",
+        "end": 16623,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            129.0486,
+            516.3336,
+            137.0485
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 4,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16622,
+        "text": "3"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          512.8536987304688,
+          130.528564453125,
+          515.8936767578125,
+          135.68853759765625
+        ],
+        "page": 6
+      },
+      "id": "held-037",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | BMJ | 3(4.84%)",
+        "end": 16628,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.9144,
+            129.0486,
+            534.2422,
+            137.0485
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 4,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16624,
+        "text": "4.84"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.0744018554688,
+          130.528564453125,
+          534.0582275390625,
+          135.68853759765625
+        ],
+        "page": 6
+      },
+      "id": "held-038",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "4.84"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | BritishJournalofSurgery | 1(1.61%)",
+        "end": 16632,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            141.5781,
+            516.3336,
+            149.578
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 5,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16631,
+        "text": "1"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.3737182617188,
+          143.05804443359375,
+          515.5736694335938,
+          148.13800048828125
+        ],
+        "page": 6
+      },
+      "id": "held-039",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | BritishJournalofSurgery | 1(1.61%)",
+        "end": 16637,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.9144,
+            141.5781,
+            534.2422,
+            149.578
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 5,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16633,
+        "text": "1.61"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.786376953125,
+          143.01007080078125,
+          533.4822387695312,
+          148.218017578125
+        ],
+        "page": 6
+      },
+      "id": "held-040",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.61"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | InternationalJournalofSurgery | 1(1.61%)",
+        "end": 16641,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            154.0507,
+            516.3336,
+            162.0506
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 6,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16640,
+        "text": "1"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.3737182617188,
+          155.5306396484375,
+          515.5736694335938,
+          160.610595703125
+        ],
+        "page": 6
+      },
+      "id": "held-041",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | InternationalJournalofSurgery | 1(1.61%)",
+        "end": 16646,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.9144,
+            154.0507,
+            534.2422,
+            162.0506
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 6,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16642,
+        "text": "1.61"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.786376953125,
+          155.482666015625,
+          533.4822387695312,
+          160.69061279296875
+        ],
+        "page": 6
+      },
+      "id": "held-042",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "1.61"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | JAMA | 11(17.74%)",
+        "end": 16651,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            512.5017,
+            166.5226,
+            520.1656,
+            174.5225
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 7,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16649,
+        "text": "11"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.3737182617188,
+          168.00250244140625,
+          519.4056396484375,
+          173.08245849609375
+        ],
+        "page": 6
+      },
+      "id": "held-043",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "actual": {
+        "context": "Characteristics | Category | N(%)\n | JAMA | 11(17.74%)",
+        "end": 16657,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            524.7695,
+            166.5226,
+            541.9293,
+            174.5225
+          ],
+          "block": "sha256:1c5ed2bbf4417e8d9e15eaa9d1dc8276d1d94d8f3ebe2a35b815e67df1416936",
+          "cell": 3,
+          "offset": 3,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 7,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16652,
+        "text": "17.74"
+      },
+      "case": "abstract-quality",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          525.6414794921875,
+          168.00250244140625,
+          541.7452392578125,
+          173.1624755859375
+        ],
+        "page": 6
+      },
+      "id": "held-044",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "17.74"
+    },
+    {
+      "actual": {
+        "context": "Originalabstracts achieveda meanOQS of 11.89(95%CI: 11.23–12.54),outperforming",
+        "end": 2542,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            380.3514,
+            631.4525,
+            403.9608,
+            640.9525
+          ],
+          "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+          "offset": 39,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2537,
+        "text": "11.89"
+      },
+      "anchor": {
+        "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "Originalabstracts achieveda meanOQS of ",
+        "suffix": "("
+      },
+      "case": "abstract-quality",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          381.3109436035156,
+          632.3074951171875,
+          403.4763488769531,
+          639.1474914550781
+        ],
+        "page": 1
+      },
+      "id": "held-045",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11.89"
+    },
+    {
+      "actual": {
+        "context": "Originalabstracts achieveda meanOQS of 11.89(95%CI: 11.23–12.54),outperforming",
+        "end": 2545,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            409.0434,
+            631.4525,
+            419.5675,
+            640.9525
+          ],
+          "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+          "offset": 45,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2543,
+        "text": "95"
+      },
+      "anchor": {
+        "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(",
+        "suffix": "%CI: "
+      },
+      "case": "abstract-quality",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          409.4423522949219,
+          632.3074951171875,
+          419.13043212890625,
+          639.1474914550781
+        ],
+        "page": 1
+      },
+      "id": "held-046",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "95"
+    },
+    {
+      "actual": {
+        "context": "Originalabstracts achieveda meanOQS of 11.89(95%CI: 11.23–12.54),outperforming",
+        "end": 2555,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            444.0737,
+            631.4525,
+            467.6831,
+            640.9525
+          ],
+          "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+          "offset": 52,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2550,
+        "text": "11.23"
+      },
+      "anchor": {
+        "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "%CI: ",
+        "suffix": "–"
+      },
+      "case": "abstract-quality",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          445.0331726074219,
+          632.3074951171875,
+          467.2745666503906,
+          639.1474914550781
+        ],
+        "page": 1
+      },
+      "id": "held-047",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11.23"
+    },
+    {
+      "actual": {
+        "context": "Originalabstracts achieveda meanOQS of 11.89(95%CI: 11.23–12.54),outperforming",
+        "end": 2561,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            472.8853,
+            631.4525,
+            496.4947,
+            640.9525
+          ],
+          "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+          "offset": 58,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2556,
+        "text": "12.54"
+      },
+      "anchor": {
+        "block": "sha256:94c10537ce8bb8f8e786638cad5880ea2f0c6e6e0f4c065e8f6d39933dc8a3e5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": "),outperforming"
+      },
+      "case": "abstract-quality",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          473.68328857421875,
+          632.3074951171875,
+          495.9341735839844,
+          639.1474914550781
+        ],
+        "page": 1
+      },
+      "id": "held-048",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "12.54"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          133.3131561279297,
+          654.6549530029297,
+          145.9449920654297,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-049",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "2.03"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          151.16172790527344,
+          654.6549530029297,
+          163.89756774902344,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-050",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.72"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          210.81219482421875,
+          654.6549530029297,
+          223.44403076171875,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-051",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "2.03"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          228.7167510986328,
+          654.6549530029297,
+          241.58059692382812,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-052",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.74"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          288.3112487792969,
+          654.6549530029297,
+          301.0710754394531,
+          659.8388977050781
+        ],
+        "page": 5
+      },
+      "id": "held-053",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "2.09"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          306.2157897949219,
+          654.6549530029297,
+          318.9116516113281,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-054",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.78"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          365.8102722167969,
+          654.6549530029297,
+          378.5940856933594,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-055",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "2.00"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          383.71484375,
+          654.6549530029297,
+          396.45068359375,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-056",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.82"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          443.3085021972656,
+          654.6549530029297,
+          456.1883239746094,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-057",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "2.07"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          461.2138671875,
+          654.6549530029297,
+          473.501708984375,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-058",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.81"
+    },
+    {
+      "actual": {
+        "context": "2.19(0.75)",
+        "end": 16712,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            520.5515,
+            653.175,
+            533.8794,
+            661.1749
+          ],
+          "block": "sha256:514d61c0c066563c40797ad882fd4457603a2c8a74947c85c147fc6c5c8ed336",
+          "offset": 0,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16708,
+        "text": "2.19"
+      },
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          520.8074951171875,
+          654.6549530029297,
+          533.5673217773438,
+          659.8388977050781
+        ],
+        "page": 5
+      },
+      "id": "held-059",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "2.19"
+    },
+    {
+      "actual": {
+        "context": "2.19(0.75)",
+        "end": 16717,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            538.4329,
+            653.175,
+            551.7608,
+            661.1749
+          ],
+          "block": "sha256:514d61c0c066563c40797ad882fd4457603a2c8a74947c85c147fc6c5c8ed336",
+          "offset": 5,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16713,
+        "text": "0.75"
+      },
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          538.7129516601562,
+          654.6549530029297,
+          551.3767700195312,
+          659.8148956298828
+        ],
+        "page": 5
+      },
+      "id": "held-060",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "0.75"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          257.96295166015625,
+          109.9384765625,
+          285.0379638671875,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-061",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "0.5717"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          304.7342834472656,
+          109.9384765625,
+          326.80279541015625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-062",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "0.024"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          515.6029052734375,
+          109.9384765625,
+          523.6968994140625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-063",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "31"
+    },
+    {
+      "case": "pet-repeatability",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          553.1146850585938,
+          109.9384765625,
+          562.6431884765625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-064",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "69"
+    }
+  ],
+  "tool_version": "1.1.0"
+}

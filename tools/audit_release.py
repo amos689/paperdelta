@@ -116,7 +116,8 @@ def main():
         assert len(evaluation[name]) == identity["bytes"], name
         assert evaluation[name] == (ROOT / name).read_bytes(), name
     assert not any(
-        n.startswith("tests/corpus/") or n.startswith("docs/evidence/corpus") for n in sdist
+        n.startswith(("tests/corpus/", "docs/evidence/corpus", "validation/native-v1/"))
+        for n in sdist
     ), "Separately licensed paper sources/results must stay out of the MIT Python distribution"
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]
     metadata = check_metadata(
@@ -166,7 +167,12 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.cjs")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tests").glob("*.py")]
     translations = json.loads((ROOT / "docs/translations.json").read_text("utf-8"))
-    required += [name for pair in translations["pairs"] for name in pair.values()]
+    required += [
+        name
+        for pair in translations["pairs"]
+        for name in pair.values()
+        if not name.startswith("validation/")
+    ]
     required += translations["aliases"] + ["docs/translations.json"]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.2").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.3").glob("*")]
@@ -177,6 +183,7 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.8").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.9").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.0").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.1").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")
@@ -305,6 +312,33 @@ def main():
         "wheel_record_verified": True,
         "excluded": ["virtual environments", "scratch trees", "transactions", "native executables"],
         "scope": "Content and metadata inspection of these exact locally built artifacts.",
+    }
+    native_root = "validation/native-v1/"
+    native = json.loads(evaluation[native_root + "sources.json"])
+    for paper in native["papers"]:
+        assert paper["license"] == "CC-BY-4.0"
+        for filename, identity in paper["files"].items():
+            raw = evaluation[native_root + f"papers/{paper['id']}/{filename}"]
+            assert sha256(raw).hexdigest() == identity["sha256"]
+            assert len(raw) == identity["bytes"]
+    native_lock = json.loads(evaluation[native_root + "implementation-lock.json"])
+    for name, identity in native_lock["files"].items():
+        raw = evaluation[native_root + "implementation/" + name]
+        assert sha256(raw).hexdigest() == identity, name
+    gold_lock = json.loads(evaluation[native_root + "held-out-gold-lock.json"])
+    assert (
+        sha256(evaluation[native_root + "held-out-gold.json"]).hexdigest()
+        == gold_lock["gold_sha256"]
+    )
+    first = json.loads(evaluation[native_root + "results/held-out-first.json"])
+    assert first["matches_implementation_lock"] and first["mode"] == "first-held-out"
+    assert first["implementation"] == native_lock["files"]
+    record["native_study"] = {
+        "papers": len(native["papers"]),
+        "original_files": sum(len(p["files"]) for p in native["papers"]),
+        "originals_and_frozen_implementation_match": True,
+        "first_held_out_counts": first["counts"],
+        "python_distributions_exclude_native_corpus": True,
     }
     target = directory / "package-audit.json"
     target.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")

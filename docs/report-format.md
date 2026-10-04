@@ -1,11 +1,21 @@
-# Report interchange contract, version 6
+# Report interchange contract, version 7
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–6).
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–7).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
+
+## Native layout in schema 7
+
+Word locators may use `word/footnotes.xml` or `word/endnotes.xml` with a required
+`note_id` and per-note paragraph ordinal. Optional `column_span` describes a
+horizontal merged owner. New table anchors may carry explicit `header_rows` and
+literal `caption`. Older report schemas reject the new Word locator fields;
+legacy locators omit them. PDF boxes now describe the visible cropped page after
+page rotation, with origin `[0, 0]`. Extractor identity `/2` requires repair of
+older PDF anchors. See [native layout scope](v1.1.md).
 
 ## Statistics in schema 6
 

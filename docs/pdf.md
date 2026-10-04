@@ -2,8 +2,8 @@
 
 [简体中文](zh-CN/pdf.md)
 
-PaperDelta 0.5 reads supported text-based PDFs and checks their explicitly bound
-results against CSV/JSON evidence. The same configuration can contain LaTeX,
+PaperDelta 1.1 reads supported text-based PDFs and checks their explicitly bound
+results against declared experiment evidence. The same configuration can contain LaTeX,
 Word and PDF manuscripts. PDF and Word files remain read-only.
 
 ## Try an exported-paper example
@@ -40,7 +40,7 @@ prove that two results mean the same thing. Claims still need explicit predicate
 
 `pdf inspect --format json` lists page dimensions, supported numeric locations,
 declared regions and extraction limitations. Coordinates use PDF points (1/72
-inch), with the **top-left** of the page as origin: `[x0, top, x1, bottom]`. Pages
+inch), with the **top-left of the visible cropped page after page rotation** as origin: `[x0, top, x1, bottom]`. Pages
 start at 1. Coordinates are decimal values; extracted text offsets are not PDF
 byte offsets. There are no fabricated source lines or writable addresses.
 
@@ -55,8 +55,10 @@ paperdelta pdf region-remove --file paper.pdf --name abstract
 Use coordinates from **your** PDF, not the illustrative box above. Regions are
 named, non-overlapping page boxes. `text` groups prose; `abstract` also supports
 the existing abstract scope; `table` requires an entire regular ruled grid. A box
-cannot clip or hide a detected table. Unruled/merged tables are not inferred as
-reliable table cells. Ordinary ruled tables are also detected without a region.
+cannot clip or hide a detected table. Common merged headers and regular vertical
+merges are supported when drawn geometry yields unique cells. Consistent open
+outer borders may be completed from actual row-boundary endpoints; arbitrary
+unruled or irregular tables are not inferred. Tables can be detected without a region.
 
 Selecting a region does not exclude the rest of the document. Use `scope` for
 review scope or a justified exclusion; existing failing bindings remain visible.
@@ -120,16 +122,19 @@ repair and read-only MCP flows retain native PDF positions.
 
 Supported examples include ordinary horizontal English/Chinese text, separated
 columns, split drawing runs, decimal/scientific/signed numbers, multipage documents
-and rectangular ruled tables with explicit header/row identities. Extraction uses
+and supported ruled tables with explicit header/row identities. Page rotation by
+0/90/180/270 degrees, CropBox clipping and nonzero MediaBox origins share the same
+visible coordinates and original-page rendering. Extraction uses
 [pdfplumber](https://github.com/jsvine/pdfplumber) and pdfminer.six; original-page
 rendering uses the PDFium dependency distributed with pdfplumber.
 
 The adapter fails closed for recognized unsupported content: scanned/blank pages,
 OCR text over images, undecodable glyphs, superscripts/subscripts, overlapping or
-rotated text, hidden/translucent/clipped content, forms/layers and complex table
-cells. Image and Form XObject areas remain unverified; ordinary prose outside
-those areas may still be checked. Rotated/cropped/nonzero-origin pages are
-currently unsupported. Password-protected, malformed or oversized PDFs return
+arbitrarily rotated text, hidden/translucent/clipped content, forms/layers and complex table
+cells. Scoped rectangular clipping can retain fully visible glyphs; clipped or
+unknown paths, text clipping and uncertain graphics states are unverified. Image and Form XObject areas remain unverified; ordinary prose outside
+those areas may still be checked. Non-quarter-turn page rotation, invalid page
+boxes and non-default UserUnit are unsupported. Password-protected, malformed or oversized PDFs return
 explicit errors. There is **no OCR** and no guarantee that every visual or PDF
 encoding anomaly can be recognized. Always inspect the original-page preview.
 
@@ -149,6 +154,8 @@ data, with at most 500 highlights/page. Preview omissions are separate from
 checking coverage. Rendering failure does not change numerical verdicts. A PDF
 whose bytes changed after checking is not used for a mismatched preview.
 
-See [report schema 4](report-format.md), [release checks](v0.5.md) and
-[Word support](word.md). Scanned OCR, general table reconstruction, visual binding
-editing, native-document writeback and statistical inference remain outside 0.5.
+See the [report contract](report-format.md), [native study and release checks](v1.1.md)
+and [Word support](word.md). The native held-out PDF sample had 4 supported, 4 missed
+and 24 unknown targets out of 32; joined words/numbers caused the misses.
+This is not a general extraction-accuracy claim. Scanned OCR, general table
+reconstruction and native-document writeback remain outside the supported scope.

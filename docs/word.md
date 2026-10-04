@@ -2,8 +2,8 @@
 
 [简体中文](zh-CN/word.md)
 
-PaperDelta 0.4 reads `.docx` manuscripts and checks explicitly bound numbers and
-comparisons against CSV/JSON evidence. It does not require Microsoft Word, a TeX
+PaperDelta 1.1 reads `.docx` manuscripts and checks explicitly bound numbers and
+comparisons against declared experiment evidence. It does not require Microsoft Word, a TeX
 installation, a model key or network access during checking.
 
 ## Try an original example
@@ -46,9 +46,13 @@ paragraph or changing a table label. Repair proposals require explicit acceptanc
 - **Paragraph:** the one-based ordinal in the main document body traversal,
   including paragraphs inside tables. Split formatting runs, hyperlinks, tabs
   and line breaks retain their visible text.
-- **Table, row, cell:** one-based positions in a supported ordinary table. The
+- **Table, row, cell:** one-based logical grid positions in a supported table. Merged
+  continuations refer to their original owner, not duplicate result cells. The
   paragraph ordinal identifies the paragraph within the same traversal. These are
   navigation aids; bindings use unchanged headers and explicit row labels.
+- **Footnote/endnote:** the original OOXML part, `note_id` and paragraph ordinal
+  within that note. An ID is not the displayed Word footnote number. Only a visible
+  body reference through a valid internal relationship enables a note.
 - **Section and style:** source heading text and style metadata accompany native
   positions in JSON. Recognized abstract headings and styles support abstract scope.
 - **Parser and input hash:** JSON records the extraction implementation and parser
@@ -65,37 +69,43 @@ changed headers or row labels require repair. Do not use result values as row id
 
 ## Supported boundary
 
-Supported: main-body paragraphs, numeric values split across runs, decimal,
-scientific and percent displays, headings, plain captions, and ordinary tables
-with unique headers and row labels. Existing claims, snapshots, review scopes,
-exclusions, watch and the read-only MCP tools use the same evidence rules.
+Supported: body paragraphs, numeric values split across runs, decimal/scientific/
+percent displays, headings, ordinary captions and tables with unique literal
+headers and row labels. Common horizontal header merges and regular vertical
+merges retain logical cell owners. Explicit `header_rows` and optional literal
+`caption` disambiguate numeric headers and repeated tables. A horizontally merged
+numeric value is not treated as a uniquely identified ordinary cell.
 
-Tracked revisions, fields and generated field results, equations, drawings,
-text boxes, inherited hidden formatting, automatic list numbering, superscript/subscript
-numeric runs and other special content, nested/merged/irregular/revised tables,
-and footnote/endnote references are reported as unverified. Text in headers,
-footers, notes and comments is outside the main-body adapter and is reported.
-These issues prevent a complete verified verdict; content is never silently
-counted as supported. Legacy `.doc`, `.docm`, encrypted or damaged packages are
-not supported. Packages are bounded to 32 MiB compressed, 64 MiB expanded,
-2,000 members, 16 MiB per member, 10,000 text blocks and 4 MiB extracted text.
-No external relationships are fetched, and no archive files are extracted to disk.
+Footnotes and endnotes use linked original parts and visible body references.
+Unreferenced notes and invalid, duplicate or external relationships are not inferred
+from number matches. Note markers are shown as `[note]`; they cannot join adjacent
+digits into a new number. A note can be selected, bound, checked and repaired using
+the same explicit workflow as body prose.
 
-**Word review is read-only.** Correct numbers in Word or another DOCX editor,
-then recheck. `fix` does not generate Word patches; it returns an explicit
-read-only diagnostic. Editing the configuration to accept a mapping does not
-edit the manuscript. Guarded LaTeX patches continue to work as before.
+Tracked revisions, fields/generated results, equations, drawings, text boxes,
+hidden formatting, automatic list numbering, superscript/subscript numeric runs,
+nested/revised/irregular tables and unresolvable merges remain unverified. Headers,
+footers and comments are outside the supported read model. Unsupported structures
+stay visible in diagnostics and coverage. Legacy `.doc`, `.docm`, encrypted or
+damaged packages are unsupported. Resource guards: 32 MiB compressed, 64 MiB expanded,
+2,000 members, 16 MiB/member, 10,000 blocks and 4 MiB extracted text. No external
+relationships are fetched or archive members extracted to disk.
+
+**Word review is read-only.** Correct numbers in your document editor and recheck.
+`fix` returns an explicit read-only diagnostic for Word; accepting a mapping only
+changes the reviewed configuration. Guarded LaTeX patches remain available.
 
 ## Compatibility and verification
 
-Word projects use configuration schema 3 and native locations use report schema 3.
-Existing schema 1/2 LaTeX projects, reports and snapshots remain readable. The core
-install remains sufficient for LaTeX; use `paperdelta[docx,mcp]` for Word plus MCP.
+Ordinary Word projects retain configuration/report schema 3. New table-header or
+caption anchors and note/merged-cell positions require schema 7. Older accepted
+identities remain readable; new features upgrade only through preview, explicit
+acceptance and backup. The core remains sufficient for LaTeX. Install
+`paperdelta[docx,mcp]` for Word plus MCP.
 
-The native tests generate 22 supported structural fixtures with 110 labelled
-numeric positions, plus unsupported-content cases. They exercise binding,
-row reordering, stale evidence, repair, claims, scope, snapshots, partial saves,
-watch, bilingual reports and MCP read-only behavior. These are synthetic
-regression fixtures, not a claim that every Word layout is supported.
-
-See [0.4 release notes](v0.4.md) for the release checks and upgrade boundary.
+Owned tests cover structural positions, unchanged-byte checks, changed evidence,
+table reordering, notes, hidden references, malformed merges, repair, claims,
+scope, snapshots, watch, bilingual reports and read-only MCP behavior. They do not
+establish support for every Word layout. The separately licensed native study
+found **0/32 supported held-out Word scalar targets**, chiefly multi-number cells
+and uncertain table identities. See the [full four-outcome results](v1.1.md).

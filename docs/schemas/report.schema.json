@@ -627,6 +627,33 @@
           "default": null,
           "title": "Cell"
         },
+        "column_span": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 2,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Span"
+        },
+        "note_id": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note Id"
+        },
         "offset": {
           "minimum": 0,
           "title": "Offset",
@@ -638,7 +665,11 @@
           "type": "integer"
         },
         "part": {
-          "const": "word/document.xml",
+          "enum": [
+            "word/document.xml",
+            "word/footnotes.xml",
+            "word/endnotes.xml"
+          ],
           "title": "Part",
           "type": "string"
         },
@@ -2554,7 +2585,7 @@
       "title": "Removed Bindings"
     },
     "report_schema_version": {
-      "maximum": 6,
+      "maximum": 7,
       "minimum": 1,
       "title": "Report Schema Version",
       "type": "integer"

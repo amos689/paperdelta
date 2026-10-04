@@ -1,0 +1,3517 @@
+{
+  "by_file": [
+    {
+      "case": "climate-repetition",
+      "counts": {
+        "supported": 9,
+        "unknown": 7
+      },
+      "format": "docx"
+    },
+    {
+      "case": "science-journalism",
+      "counts": {
+        "supported": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "climate-repetition",
+      "counts": {
+        "supported": 14,
+        "unknown": 2
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "science-journalism",
+      "counts": {
+        "supported": 10,
+        "unknown": 6
+      },
+      "format": "pdf"
+    }
+  ],
+  "counts": {
+    "mislocated": 0,
+    "missed": 0,
+    "supported": 49,
+    "unknown": 15
+  },
+  "created_at": "2026-10-04T11:33:34.041832+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "development": "cbdb0e2ec59262466556b5e653fda5afea99455cc033a744ac46fd4dfd03056b"
+  },
+  "implementation": {
+    "pyproject.toml": "1b0474c9e20e9bcb7c074355a67f9ee1c8375773f932194a4b969e078897f9ff",
+    "src/paperdelta/__init__.py": "a2325248854d34e92fcb0449244ae9f749d6f77d1b683f2eebdb8bc4d636ad5b",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "0af4e834c0c9ddac8d9ea8244e2a5536f4f74c223e1085b6780bba2328f4a328",
+    "src/paperdelta/agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+    "src/paperdelta/analysis.py": "6afc226d1806720728e5e4542254ca7404e9ca21448632365ecb26efa0ece1b7",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+    "src/paperdelta/assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio.css": "a930b61337abd345226f2f9e43c2118abe8b5db80967467c7cdafe9178c26ee9",
+    "src/paperdelta/assets/studio.js": "7717f51b4017d0d8c3456d100e3da7d7253749e5ad1c49a80876155cb31728e3",
+    "src/paperdelta/batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "0a43681504b35294fade7bb505e7948d8b6e7962cedc6ec9ff6f0369415c3667",
+    "src/paperdelta/cli.py": "89a8ad2c3d1fba3f1e68b8cb55510c7a1b39d710bee9c81dda2b260b11e8935b",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "38ef523523a7755e6495ea740c6eb8536a2e88430d05e975047258f6034babc3",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "c92aa96b1619b5183be13ce7242452b00498b0cd7bf1b22df52a3e7188f618e0",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "3e568ddcd55056ab60864d8db6d387387c0edbcce8bd8fffc656ea4a024f6697",
+    "src/paperdelta/docx_document.py": "5ad7d25f218a9083a5cfeb3c7e3d27cab7ad9d507f52d7bfb944481c6d38221e",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "80f57384fe029e8d6938b5428fcf892268640c0d9d57cedfae1d0779e1f0ef13",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "a53de68dc0987f13d50fa6ab3459a248c69d3f0dd29e899dcd0918aa58447a32",
+    "src/paperdelta/locales/zh-CN.json": "66ff73785cc4b6e0c8da0ff89b88464780400cb512a9bfbadf991fa666688981",
+    "src/paperdelta/locations.py": "b9730cad9e021791d258431d4deec03c03557f77b665433477d7301b5d5a1168",
+    "src/paperdelta/manuscripts.py": "c7e57da54c13d23c602cb5127ae7c5f334fd59a0c9a80edaf3f1c40b95c062b9",
+    "src/paperdelta/mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "7e17c2b489ff5ae10600a9ee14f5ffd1d10d456595067830dca65fc5a7380bd0",
+    "src/paperdelta/native_document.py": "657fca60429ba3f6d5cfee5f029789c18296db0c5f3f87b84cb08e2e59fc8372",
+    "src/paperdelta/onboarding.py": "b0a4133de806c5fb5009b7e031b595d09cdad57d5525d4651b8f71add68ee33a",
+    "src/paperdelta/patches.py": "eafc213c670b1f2f74a183e983e27cf0220bef3b197c650c27d41be25d5c44c0",
+    "src/paperdelta/pdf_document.py": "087d2c46bec4dec9a0d642b6259bdf95d5b395bb54dd8a8575ee71459b3ff96d",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/records.py": "21e9f4ac594bce64f4d845210602eb05a69fc8b2ae689174ec11d36f071907ac",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "87b1acdb4d3fba0bf68d630e380cead2c05a6fb34be213a225223f1956af1a3a",
+    "src/paperdelta/studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+    "src/paperdelta/studio_recovery.py": "21654ce9bcfd0e44cb2cbffca29964ccdd538469dd7836aa8e8e3700994eac5d",
+    "src/paperdelta/studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+    "src/paperdelta/studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+    "src/paperdelta/studio_ui.py": "27e5592576f8d817659da52b0ed646503ad5a451f8a4ddb4d7a8c85d80a74a2c",
+    "src/paperdelta/tables.py": "6d27b23250d8a314128b0c8b403be8397c583ebca38041602a3f2b944e365996",
+    "src/paperdelta/watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+    "src/paperdelta/word_tables.py": "88978d9e0afc9474940eaca2d8f0f37b6793e473c0ff8bb92f3aa563cf91cb45",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/evaluate_native.py": "429f1abd0c629e11be8d0d84e5d4aaf976177eec4d5e603cbcb47dcd47aafabd",
+    "tools/prepare_native_annotations.py": "0fd273e31fc0585bf5e29e75564e87bdd97e00b8eef94451ae9cb163ee80dab8"
+  },
+  "matches_implementation_lock": true,
+  "mode": "regression",
+  "python": "3.12.14",
+  "results": [
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1179,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 10,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1175,
+        "text": "3.54"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 1,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 10,
+        "part": "word/document.xml"
+      },
+      "id": "dev-001",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3.54"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1183,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 11,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1180,
+        "text": ".11"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 2,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 11,
+        "part": "word/document.xml"
+      },
+      "id": "dev-002",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".11"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1189,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 12,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1184,
+        "text": "32.64"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 3,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 12,
+        "part": "word/document.xml"
+      },
+      "id": "dev-003",
+      "outcome": "supported",
+      "split": "development",
+      "text": "32.64"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1195,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:3fa091c2ac4693dc0d316659f79ae85d23d6c42bdc08f248efdb3dae2cf4682f",
+          "cell": 5,
+          "offset": 1,
+          "paragraph": 13,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1191,
+        "text": ".001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 4,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 1,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "dev-004",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".001"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1201,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "cell": 6,
+          "offset": 1,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1197,
+        "text": "3.32"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 1,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "dev-005",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "3.32"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nIntercept | 3.54 | .11 | 32.64 | <.001 | [3.32, 3.75]",
+        "end": 1207,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "cell": 6,
+          "offset": 7,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1203,
+        "text": "3.75"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 7,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "dev-006",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "3.75"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1234,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1231,
+        "text": ".33"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 1,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition [repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "dev-007",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".33"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1238,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1235,
+        "text": ".05"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 2,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition [repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "dev-008",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".05"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1243,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1239,
+        "text": "6.62"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 3,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition [repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 18,
+        "part": "word/document.xml"
+      },
+      "id": "dev-009",
+      "outcome": "supported",
+      "split": "development",
+      "text": "6.62"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1249,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:3fa091c2ac4693dc0d316659f79ae85d23d6c42bdc08f248efdb3dae2cf4682f",
+          "cell": 5,
+          "offset": 1,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1245,
+        "text": ".001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Fixed-Effects Table from LMEM in Experiment 1 with Belief Measured Through AllScience.",
+          "column": 4,
+          "header_rows": 1,
+          "headers": [
+            "Variable & b & SE & t & p & 95% CI"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition [repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 1,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "dev-010",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".001"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1254,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "cell": 6,
+          "offset": 1,
+          "paragraph": 20,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1251,
+        "text": ".24"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 1,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "dev-011",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": ".24"
+    },
+    {
+      "actual": {
+        "context": "Variable | b | SE | t | p | 95% CI\nRepetition [repeated] | .33 | .05 | 6.62 | <.001 | [.24, .44]",
+        "end": 1259,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:e30ed8246f8058a51382615c13692db3eb060e14bd23012bea59e4072d9921b7",
+          "cell": 6,
+          "offset": 6,
+          "paragraph": 20,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1256,
+        "text": ".44"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 6,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "dev-012",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": ".44"
+    },
+    {
+      "actual": {
+        "context": "Note: the p value of repetition = .03 in the main fixed effects model.",
+        "end": 1606,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4235e9ec10f14e7aa511cf24a1d1d829e2b5a964a04c1da0a21d9f5ca817e760",
+          "offset": 34,
+          "paragraph": 51,
+          "part": "word/document.xml",
+          "section": [],
+          "style": ""
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1603,
+        "text": ".03"
+      },
+      "anchor": {
+        "block": "sha256:4235e9ec10f14e7aa511cf24a1d1d829e2b5a964a04c1da0a21d9f5ca817e760",
+        "exact": null,
+        "prefix": "Note: the p value of repetition = ",
+        "suffix": " in the main fixed effects model."
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 34,
+        "paragraph": 51,
+        "part": "word/document.xml"
+      },
+      "id": "dev-013",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".03"
+    },
+    {
+      "actual": {
+        "context": "ction did not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standa",
+        "end": 3993,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 325,
+          "paragraph": 224,
+          "part": "word/document.xml",
+          "section": [],
+          "style": "Normal (Web)"
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 3992,
+        "text": "1"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 325,
+        "paragraph": 224,
+        "part": "word/document.xml"
+      },
+      "id": "dev-014",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "development",
+      "text": "1"
+    },
+    {
+      "actual": {
+        "context": "on did not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standard re",
+        "end": 3998,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 328,
+          "paragraph": 224,
+          "part": "word/document.xml",
+          "section": [],
+          "style": "Normal (Web)"
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 3995,
+        "text": "774"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 328,
+        "paragraph": 224,
+        "part": "word/document.xml"
+      },
+      "id": "dev-015",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "development",
+      "text": "774"
+    },
+    {
+      "actual": {
+        "context": "not reach significance, thus it was removed from the final model). Results showed a consistently significant main effect of repetition in Experiment 1 with AllScience, F(1, 774) = 4.72, p = .03, Experiment 2 with AllScience, F(1, 835) = 5.81, p = .016, and Experiment 2 with SASSY, F(1, 827) = 44.38, p < .001. Estimated means (S4 Table) show a standard repetition",
+        "end": 4006,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:25e14415b4af0832ad2f0f058dadacfbd48a60b880b69734261d1c439e38a889",
+          "offset": 335,
+          "paragraph": 224,
+          "part": "word/document.xml",
+          "section": [],
+          "style": "Normal (Web)"
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 4002,
+        "text": "4.72"
+      },
+      "case": "climate-repetition",
+      "format": "docx",
+      "gold": {
+        "offset": 335,
+        "paragraph": 224,
+        "part": "word/document.xml"
+      },
+      "id": "dev-016",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "development",
+      "text": "4.72"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf | Le Vif/L'Express | 88 | 1610 | 13-10-2022",
+        "end": 326,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 12,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 324,
+        "text": "88"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 12,
+        "part": "word/document.xml"
+      },
+      "id": "dev-017",
+      "outcome": "supported",
+      "split": "development",
+      "text": "88"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf | Le Vif/L'Express | 88 | 1610 | 13-10-2022",
+        "end": 331,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 13,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 327,
+        "text": "1610"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«J'ai envie d'avoir un gros impact dans l'univers des déchets» Victor Dewulf"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "dev-018",
+      "outcome": "supported",
+      "split": "development",
+      "text": "1610"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Les mots pour le dire Communication | Le Vif/L'Express | 98 | 884 | 17-11-2022",
+        "end": 406,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 18,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 404,
+        "text": "98"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Les mots pour le dire Communication"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 18,
+        "part": "word/document.xml"
+      },
+      "id": "dev-019",
+      "outcome": "supported",
+      "split": "development",
+      "text": "98"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Les mots pour le dire Communication | Le Vif/L'Express | 98 | 884 | 17-11-2022",
+        "end": 410,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 407,
+        "text": "884"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Les mots pour le dire Communication"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "dev-020",
+      "outcome": "supported",
+      "split": "development",
+      "text": "884"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE | Journal du Médecin (French) | 22 | 1078 | 1-12-2022",
+        "end": 527,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 24,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 525,
+        "text": "22"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 24,
+        "part": "word/document.xml"
+      },
+      "id": "dev-021",
+      "outcome": "supported",
+      "split": "development",
+      "text": "22"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE | Journal du Médecin (French) | 22 | 1078 | 1-12-2022",
+        "end": 532,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 25,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 528,
+        "text": "1078"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Dans les coulisses de l'hôpital du futur ARCHITECTURE HOSPITALIÈRE"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 25,
+        "part": "word/document.xml"
+      },
+      "id": "dev-022",
+      "outcome": "supported",
+      "split": "development",
+      "text": "1078"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Des \"data centers\" en route vers l'écologie NUMÉRIQUE | Trends/Tendances | 62 | 523 | 8-12-2022",
+        "end": 624,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 30,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 622,
+        "text": "62"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Des \"data centers\" en route vers l'écologie NUMÉRIQUE"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 30,
+        "part": "word/document.xml"
+      },
+      "id": "dev-023",
+      "outcome": "supported",
+      "split": "development",
+      "text": "62"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Des \"data centers\" en route vers l'écologie NUMÉRIQUE | Trends/Tendances | 62 | 523 | 8-12-2022",
+        "end": 628,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 31,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 625,
+        "text": "523"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Des \"data centers\" en route vers l'écologie NUMÉRIQUE"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 31,
+        "part": "word/document.xml"
+      },
+      "id": "dev-024",
+      "outcome": "supported",
+      "split": "development",
+      "text": "523"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau» | Le Vif/L'Express | 60 | 959 | 5-1-2023",
+        "end": 741,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 36,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 739,
+        "text": "60"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau»"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 36,
+        "part": "word/document.xml"
+      },
+      "id": "dev-025",
+      "outcome": "supported",
+      "split": "development",
+      "text": "60"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau» | Le Vif/L'Express | 60 | 959 | 5-1-2023",
+        "end": 745,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 37,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 742,
+        "text": "959"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«ChatGPT est un levier pour atteindre des résultats d'un plus haut niveau»"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 37,
+        "part": "word/document.xml"
+      },
+      "id": "dev-026",
+      "outcome": "supported",
+      "split": "development",
+      "text": "959"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «La photo est une illusion» | Le Vif/L'Express | 32 | 1127 | 5-1-2023",
+        "end": 810,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 42,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 808,
+        "text": "32"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«La photo est une illusion»"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 42,
+        "part": "word/document.xml"
+      },
+      "id": "dev-027",
+      "outcome": "supported",
+      "split": "development",
+      "text": "32"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «La photo est une illusion» | Le Vif/L'Express | 32 | 1127 | 5-1-2023",
+        "end": 815,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 43,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 811,
+        "text": "1127"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«La photo est une illusion»"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 43,
+        "part": "word/document.xml"
+      },
+      "id": "dev-028",
+      "outcome": "supported",
+      "split": "development",
+      "text": "1127"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Donner sa langue à ChatGPT | Le Vif/L'Express | 3 | 698 | 12-1-2023",
+        "end": 878,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 48,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 877,
+        "text": "3"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Donner sa langue à ChatGPT"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 48,
+        "part": "word/document.xml"
+      },
+      "id": "dev-029",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | Donner sa langue à ChatGPT | Le Vif/L'Express | 3 | 698 | 12-1-2023",
+        "end": 882,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 49,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 879,
+        "text": "698"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "Donner sa langue à ChatGPT"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 49,
+        "part": "word/document.xml"
+      },
+      "id": "dev-030",
+      "outcome": "supported",
+      "split": "development",
+      "text": "698"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «On ne peut plus accepter que le numérique soit un no man's land» Antoinette Rouvroy | Le Vif/L'Express | 40 | 2560 | 26-1-2023",
+        "end": 1005,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 4,
+          "offset": 0,
+          "paragraph": 54,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1003,
+        "text": "40"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«On ne peut plus accepter que le numérique soit un no man's land» Antoinette Rouvroy"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 54,
+        "part": "word/document.xml"
+      },
+      "id": "dev-031",
+      "outcome": "supported",
+      "split": "development",
+      "text": "40"
+    },
+    {
+      "actual": {
+        "context": "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. | Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.\nBelgium | «On ne peut plus accepter que le numérique soit un no man's land» Antoinette Rouvroy | Le Vif/L'Express | 40 | 2560 | 26-1-2023",
+        "end": 1010,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 55,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1006,
+        "text": "2560"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis. & Samples news articles. Overview of basic characteristics of the selected articles per country. For each country 10 news articles were selected for a manual analysis.",
+            "Country & HEADLINE & SOURCE & PAGE NUMBER & WORDS & DATE"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium",
+            "«On ne peut plus accepter que le numérique soit un no man's land» Antoinette Rouvroy"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 55,
+        "part": "word/document.xml"
+      },
+      "id": "dev-032",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2560"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 23990,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            261.75,
+            104.0473,
+            275.0778,
+            112.0472
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 2,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23986,
+        "text": "2.88"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 1,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          262.0060119628906,
+          105.52728271484375,
+          274.725830078125,
+          110.687255859375
+        ],
+        "page": 7
+      },
+      "id": "dev-033",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2.88"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24009,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            310.8454,
+            104.0473,
+            320.3412,
+            112.0472
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 3,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24006,
+        "text": ".15"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 2,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          311.3093566894531,
+          105.52728271484375,
+          319.9572448730469,
+          110.687255859375
+        ],
+        "page": 7
+      },
+      "id": "dev-034",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".15"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24031,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            356.0296,
+            104.0473,
+            377.0213,
+            112.0472
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 4,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24025,
+        "text": "125.65"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 3,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          356.901611328125,
+          105.47930908203125,
+          376.63739013671875,
+          110.687255859375
+        ],
+        "page": 7
+      },
+      "id": "dev-035",
+      "outcome": "supported",
+      "split": "development",
+      "text": "125.65"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24060,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.7225,
+            104.0473,
+            429.8823,
+            112.0472
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 5,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24055,
+        "text": "19.74"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 4,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          413.594482421875,
+          105.52728271484375,
+          429.69830322265625,
+          110.71124267578125
+        ],
+        "page": 7
+      },
+      "id": "dev-036",
+      "outcome": "supported",
+      "split": "development",
+      "text": "19.74"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24083,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            473.6105,
+            104.0473,
+            486.9384,
+            112.0472
+          ],
+          "block": "sha256:fb03c4b7641f1084e1fc6c169ee934dcaaaa979e98a1a1bb3e499c7449313f78",
+          "cell": 6,
+          "offset": 1,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24079,
+        "text": ".001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 5,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Intercept"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          474.0745544433594,
+          105.52728271484375,
+          486.17840576171875,
+          110.687255859375
+        ],
+        "page": 7
+      },
+      "id": "dev-037",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".001"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24231,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            525.3931,
+            104.0473,
+            538.7209,
+            112.0472
+          ],
+          "block": "sha256:13d685f4eb0434ee1bd67273cad9dc6b8afcbc7260e7cd358792e94cf600d5f6",
+          "cell": 7,
+          "offset": 1,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24227,
+        "text": "2.59"
+      },
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          525.6490478515625,
+          105.52728271484375,
+          538.408935546875,
+          110.71124267578125
+        ],
+        "page": 7
+      },
+      "id": "dev-038",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "2.59"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nIntercept | 2.88 | .15 | 125.65 | 19.74 | <.001 | [2.59,3.17]",
+        "end": 24236,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            542.3217,
+            104.0473,
+            555.6495,
+            112.0472
+          ],
+          "block": "sha256:13d685f4eb0434ee1bd67273cad9dc6b8afcbc7260e7cd358792e94cf600d5f6",
+          "cell": 7,
+          "offset": 6,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24232,
+        "text": "3.17"
+      },
+      "case": "climate-repetition",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          542.6736450195312,
+          105.52728271484375,
+          555.45751953125,
+          110.687255859375
+        ],
+        "page": 7
+      },
+      "id": "dev-039",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "3.17"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nRepetition[repeated] | .48 | .15 | 701.03 | 3.19 | .001 | [.19,.78]",
+        "end": 23994,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            263.6772,
+            116.5768,
+            273.173,
+            124.5767
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 2,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23991,
+        "text": ".48"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 1,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition[repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          264.14111328125,
+          118.05670166015625,
+          272.8210144042969,
+          123.2166748046875
+        ],
+        "page": 7
+      },
+      "id": "dev-040",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".48"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nRepetition[repeated] | .48 | .15 | 701.03 | 3.19 | .001 | [.19,.78]",
+        "end": 24013,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            310.8454,
+            116.5768,
+            320.3412,
+            124.5767
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 3,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24010,
+        "text": ".15"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 2,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition[repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          311.309326171875,
+          118.05670166015625,
+          319.95721435546875,
+          123.2166748046875
+        ],
+        "page": 7
+      },
+      "id": "dev-041",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".15"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nRepetition[repeated] | .48 | .15 | 701.03 | 3.19 | .001 | [.19,.78]",
+        "end": 24038,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            356.0296,
+            116.5768,
+            377.0213,
+            124.5767
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 4,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24032,
+        "text": "701.03"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 3,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition[repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          356.40557861328125,
+          118.05670166015625,
+          376.581298828125,
+          123.2166748046875
+        ],
+        "page": 7
+      },
+      "id": "dev-042",
+      "outcome": "supported",
+      "split": "development",
+      "text": "701.03"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nRepetition[repeated] | .48 | .15 | 701.03 | 3.19 | .001 | [.19,.78]",
+        "end": 24065,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            414.6497,
+            116.5768,
+            427.9775,
+            124.5767
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 5,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24061,
+        "text": "3.19"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 4,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition[repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          415.0016174316406,
+          118.05670166015625,
+          427.66546630859375,
+          123.24066162109375
+        ],
+        "page": 7
+      },
+      "id": "dev-043",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3.19"
+    },
+    {
+      "actual": {
+        "context": "Variable | B | SE | df | t | p | 95%CI\nRepetition[repeated] | .48 | .15 | 701.03 | 3.19 | .001 | [.19,.78]",
+        "end": 24088,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            469.585,
+            116.5768,
+            482.9128,
+            124.5767
+          ],
+          "block": "sha256:7bba1a22b0d782e06be489bf6faf606d6cbf0aa513c8f750f2f1a34d28c94d7e",
+          "cell": 6,
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24084,
+        "text": ".001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "Table1. EstimatesoffixedeffectsinExperiment1withendorsersonly.",
+          "column": 5,
+          "header_rows": 1,
+          "headers": [
+            "Variable & B & SE & df & t & p & 95%CI"
+          ],
+          "page": 7,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Repetition[repeated]"
+          ]
+        }
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          470.0489196777344,
+          118.05670166015625,
+          482.15277099609375,
+          123.2166748046875
+        ],
+        "page": 7
+      },
+      "id": "dev-044",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".001"
+    },
+    {
+      "actual": {
+        "context": "(climate change) Science (Cronbach’s alpha = .91 for Experiments 1 and 2) and Attitudes",
+        "end": 21229,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            383.583,
+            293.576,
+            395.373,
+            303.576
+          ],
+          "block": "sha256:72f9d00bcc4c113e5861da62f4bf34e8e8a6afacbf9dcfda3b1bc38746c32f02",
+          "offset": 45,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21226,
+        "text": ".91"
+      },
+      "anchor": {
+        "block": "sha256:72f9d00bcc4c113e5861da62f4bf34e8e8a6afacbf9dcfda3b1bc38746c32f02",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(climate change) Science (Cronbach’s alpha = ",
+        "suffix": " for Experiments "
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          384.16302490234375,
+          295.4259948730469,
+          394.42303466796875,
+          301.906005859375
+        ],
+        "page": 6
+      },
+      "id": "dev-045",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".91"
+    },
+    {
+      "actual": {
+        "context": "Towards (climate change) Science items (Cronbach’s alpha = .83 for Experiment 1, .81 for",
+        "end": 21331,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            444.641,
+            306.615,
+            456.431,
+            316.615
+          ],
+          "block": "sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350",
+          "offset": 59,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21328,
+        "text": ".83"
+      },
+      "anchor": {
+        "block": "sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "Towards (climate change) Science items (Cronbach’s alpha = ",
+        "suffix": " for Experiment "
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          445.22100830078125,
+          308.4649963378906,
+          455.8810119628906,
+          314.9150085449219
+        ],
+        "page": 6
+      },
+      "id": "dev-046",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".83"
+    },
+    {
+      "actual": {
+        "context": "Towards (climate change) Science items (Cronbach’s alpha = .83 for Experiment 1, .81 for",
+        "end": 21353,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            530.927,
+            306.615,
+            542.717,
+            316.615
+          ],
+          "block": "sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350",
+          "offset": 81,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21350,
+        "text": ".81"
+      },
+      "anchor": {
+        "block": "sha256:63d32295d899141e630444fcc1161b4e2ac68c29b8cbfd7d9f46fd160779d350",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ", ",
+        "suffix": " for"
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          531.5070190429688,
+          308.4649963378906,
+          541.7670288085938,
+          314.9150085449219
+        ],
+        "page": 6
+      },
+      "id": "dev-047",
+      "outcome": "supported",
+      "split": "development",
+      "text": ".81"
+    },
+    {
+      "actual": {
+        "context": "climate-science variable. We found that 90% of participants in Experiment 1 and 92% in",
+        "end": 21495,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            359.432,
+            332.58,
+            368.972,
+            342.58
+          ],
+          "block": "sha256:fb60a6e939f5ad2faec405ad4b3135c2e41d717071116ce44eefbc1906549a56",
+          "offset": 40,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21493,
+        "text": "90"
+      },
+      "anchor": {
+        "block": "sha256:fb60a6e939f5ad2faec405ad4b3135c2e41d717071116ce44eefbc1906549a56",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "climate-science variable. We found that ",
+        "suffix": "% of participants in Experiment "
+      },
+      "case": "climate-repetition",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          359.81201171875,
+          334.42999267578125,
+          368.61199951171875,
+          340.9100036621094
+        ],
+        "page": 6
+      },
+      "id": "dev-048",
+      "outcome": "supported",
+      "split": "development",
+      "text": "90"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 38976,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            70.6388,
+            640.4192,
+            78.3027,
+            648.4191
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 2,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 38974,
+        "text": "55"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          71.02275848388672,
+          641.9952087402344,
+          77.91867065429688,
+          647.0591430664062
+        ],
+        "page": 11
+      },
+      "id": "dev-049",
+      "outcome": "supported",
+      "split": "development",
+      "text": "55"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39119,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            230.0016,
+            640.4192,
+            237.6655,
+            648.4191
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 4,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39117,
+        "text": "12"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          230.87356567382812,
+          641.8992004394531,
+          237.35348510742188,
+          646.9791412353516
+        ],
+        "page": 11
+      },
+      "id": "dev-050",
+      "outcome": "supported",
+      "split": "development",
+      "text": "12"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39156,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            276.4898,
+            640.4192,
+            280.3217,
+            648.4191
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 5,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39155,
+        "text": "3"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Belgium"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          276.841796875,
+          641.8992004394531,
+          279.88177490234375,
+          647.0591430664062
+        ],
+        "page": 11
+      },
+      "id": "dev-051",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39198,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            362.2655,
+            640.4192,
+            379.4253,
+            648.4191
+          ],
+          "block": "sha256:4677e75183db2c8d123a1305a5f26fcdb31ff9def460fa863c0eedd140ef0adc",
+          "cell": 6,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39193,
+        "text": "1,142"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          363.1374816894531,
+          641.8992004394531,
+          379.11328125,
+          647.8991241455078
+        ],
+        "page": 11
+      },
+      "id": "dev-052",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "1,142"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39202,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            384.002,
+            640.4192,
+            395.4979,
+            648.4191
+          ],
+          "block": "sha256:4677e75183db2c8d123a1305a5f26fcdb31ff9def460fa863c0eedd140ef0adc",
+          "cell": 6,
+          "offset": 6,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39199,
+        "text": "427"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          384.1620178222656,
+          641.8992004394531,
+          395.3058776855469,
+          647.0591430664062
+        ],
+        "page": 11
+      },
+      "id": "dev-053",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "427"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39208,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            399.6579,
+            640.4192,
+            416.7008,
+            648.4191
+          ],
+          "block": "sha256:4677e75183db2c8d123a1305a5f26fcdb31ff9def460fa863c0eedd140ef0adc",
+          "cell": 6,
+          "offset": 10,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39203,
+        "text": "2,560"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          399.913818359375,
+          641.8512115478516,
+          416.412841796875,
+          647.8991241455078
+        ],
+        "page": 11
+      },
+      "id": "dev-054",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "2,560"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39328,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            461.2515,
+            640.4192,
+            468.9154,
+            648.4191
+          ],
+          "block": "sha256:46815bb6a07b42db18496e3741056d7113a1cde626198f8c3a515334796b1609",
+          "cell": 7,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39326,
+        "text": "12"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          462.12347412109375,
+          641.8992004394531,
+          468.6033935546875,
+          646.9791412353516
+        ],
+        "page": 11
+      },
+      "id": "dev-055",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "12"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39331,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            471.5794,
+            640.4192,
+            479.2433,
+            648.4191
+          ],
+          "block": "sha256:46815bb6a07b42db18496e3741056d7113a1cde626198f8c3a515334796b1609",
+          "cell": 7,
+          "offset": 3,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39329,
+        "text": "12"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          472.45135498046875,
+          641.8992004394531,
+          478.9312744140625,
+          646.9791412353516
+        ],
+        "page": 11
+      },
+      "id": "dev-056",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "12"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nBelgium | 55 | 11.22/12.22/02.23 | 12 | 3 | 1,142(427–2,560) | 12/12/0",
+        "end": 39333,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            481.9072,
+            640.4192,
+            485.7392,
+            648.4191
+          ],
+          "block": "sha256:46815bb6a07b42db18496e3741056d7113a1cde626198f8c3a515334796b1609",
+          "cell": 7,
+          "offset": 6,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39332,
+        "text": "0"
+      },
+      "case": "science-journalism",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          482.1872253417969,
+          641.8992004394531,
+          485.4512023925781,
+          647.0591430664062
+        ],
+        "page": 11
+      },
+      "id": "dev-057",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "0"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nItaly | 628 | 11.22/12.22/01.23/02.23 | 182 | 7 | 414(40–1,883) | 182/182/1",
+        "end": 38980,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            70.6388,
+            652.9487,
+            82.1346,
+            660.9486
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 2,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 38977,
+        "text": "628"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Italy"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          70.93476104736328,
+          654.3806610107422,
+          81.78262329101562,
+          659.5885925292969
+        ],
+        "page": 11
+      },
+      "id": "dev-058",
+      "outcome": "supported",
+      "split": "development",
+      "text": "628"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nItaly | 628 | 11.22/12.22/01.23/02.23 | 182 | 7 | 414(40–1,883) | 182/182/1",
+        "end": 39123,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            230.0016,
+            652.9487,
+            241.4974,
+            660.9486
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 4,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39120,
+        "text": "182"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Italy"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          230.87356567382812,
+          654.4286499023438,
+          241.1854248046875,
+          659.5885925292969
+        ],
+        "page": 11
+      },
+      "id": "dev-059",
+      "outcome": "supported",
+      "split": "development",
+      "text": "182"
+    },
+    {
+      "actual": {
+        "context": "Country | Sample1 (N) | Peakmomentssample1 (month.year) | Sample2 (N) | Appearancein#of sources | Averagewordlength(and range) | Page#available/notavailable/# page1\nItaly | 628 | 11.22/12.22/01.23/02.23 | 182 | 7 | 414(40–1,883) | 182/182/1",
+        "end": 39158,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            276.4898,
+            652.9487,
+            280.3217,
+            660.9486
+          ],
+          "block": "sha256:53250f54165ee2dda55119cdfeb616323de0c3afa9875ca5079b5ff8c695a29c",
+          "cell": 5,
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 2
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 39157,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) & Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/# page1"
+          ],
+          "page": 11,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Italy"
+          ]
+        }
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          276.8658142089844,
+          654.524658203125,
+          280.1297607421875,
+          659.5885925292969
+        ],
+        "page": 11
+      },
+      "id": "dev-060",
+      "outcome": "supported",
+      "split": "development",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "The total number of the articles vary per country in the first sample (between 55 to 728 with a",
+        "end": 42080,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            507.512,
+            526.697,
+            517.052,
+            536.697
+          ],
+          "block": "sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6",
+          "offset": 79,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 42078,
+        "text": "55"
+      },
+      "anchor": {
+        "block": "sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "The total number of the articles vary per country in the first sample (between ",
+        "suffix": " to "
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          507.9919738769531,
+          528.6669921875,
+          516.5719604492188,
+          534.9970092773438
+        ],
+        "page": 11
+      },
+      "id": "dev-061",
+      "outcome": "supported",
+      "split": "development",
+      "text": "55"
+    },
+    {
+      "actual": {
+        "context": "The total number of the articles vary per country in the first sample (between 55 to 728 with a",
+        "end": 42087,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            529.509,
+            526.697,
+            543.799,
+            536.697
+          ],
+          "block": "sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6",
+          "offset": 85,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 42084,
+        "text": "728"
+      },
+      "anchor": {
+        "block": "sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " to ",
+        "suffix": " with a"
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          529.97900390625,
+          528.5469970703125,
+          543.3590087890625,
+          534.9970092773438
+        ],
+        "page": 11
+      },
+      "id": "dev-062",
+      "outcome": "supported",
+      "split": "development",
+      "text": "728"
+    },
+    {
+      "actual": {
+        "context": "total of n = 1474) as well as in the second sample of articles (between 12 and 278 with a total of",
+        "end": 42112,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            245.876,
+            539.68,
+            264.916,
+            549.68
+          ],
+          "block": "sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d",
+          "offset": 13,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 42108,
+        "text": "1474"
+      },
+      "anchor": {
+        "block": "sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "total of n = ",
+        "suffix": ") as well as in the second sample of articles (between "
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          246.9660186767578,
+          541.5299987792969,
+          264.68603515625,
+          547.9800109863281
+        ],
+        "page": 11
+      },
+      "id": "dev-063",
+      "outcome": "supported",
+      "split": "development",
+      "text": "1474"
+    },
+    {
+      "actual": {
+        "context": "total of n = 1474) as well as in the second sample of articles (between 12 and 278 with a total of",
+        "end": 42169,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            473.666,
+            539.68,
+            483.206,
+            549.68
+          ],
+          "block": "sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d",
+          "offset": 72,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 42167,
+        "text": "12"
+      },
+      "anchor": {
+        "block": "sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ") as well as in the second sample of articles (between ",
+        "suffix": " and "
+      },
+      "case": "science-journalism",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          474.75604248046875,
+          541.5299987792969,
+          482.8160400390625,
+          547.8800048828125
+        ],
+        "page": 11
+      },
+      "id": "dev-064",
+      "outcome": "supported",
+      "split": "development",
+      "text": "12"
+    }
+  ],
+  "tool_version": "1.1.0"
+}

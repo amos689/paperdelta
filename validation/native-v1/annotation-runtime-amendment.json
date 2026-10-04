@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-04T10:33:59.664541+00:00",
+  "initial_protocol_sha256": "289098c682915eecc09d9feb49ebe8cf16b56bb21359f05c934be266f4906430",
+  "phase": "before held-out layout inspection and before any v1.1 implementation change",
+  "reason": "Bundled Windows runtime has Poppler pdfinfo/pdftoppm but no pdftotext or LibreOffice.",
+  "word_rendering": "Read-only Microsoft Word 16.0 PDF export, original SHA-256 unchanged, then Poppler PNG rendering.",
+  "pdf_gold_geometry": "Independent PDFium text and character bounds, visually checked against Poppler PNGs; no PaperDelta/pdfminer output used to select targets.",
+  "unchanged": "Article split, target selection/count, scoring categories, held-out freeze and first-run preservation remain unchanged."
+}

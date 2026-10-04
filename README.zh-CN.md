@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.0.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.0.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.1.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.1.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -54,6 +54,9 @@
 [打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
 
+**1.1.0** 新增 Word 脚注/尾注、常见合并表头和旋转裁切 PDF 页面支持。
+[原生试验与限制](docs/zh-CN/v1.1.md)公开首次留出的漏检与未知结果。
+
 **1.0.0** 新增明确声明的均值、SD、SE、n 与 Student-t 区间检查，支持完整复合显示
 和缺失种子检查，详见[统计指南](docs/zh-CN/statistics.md)。
 
@@ -64,7 +67,7 @@
 可复现的 24 指标流程，记录的浏览器操作量从 0.6.0 的 270 次降为 103 次；
 [测量范围与原始轨迹](docs/zh-CN/v0.8.md)已公开。快照比较、持续检查和本地草稿恢复继续可用。
 运行 `paperdelta --lang zh-CN studio` 即可开始。详见
-[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v1.0.md)。界面全程支持中英文切换。
+[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v1.1.md)。界面全程支持中英文切换。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 后续发行继续采用正式版本号。
 
@@ -99,7 +102,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.0.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.1.0-py3-none-any.whl`。
 
 ## 接入已有论文
 

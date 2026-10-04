@@ -49,6 +49,12 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_statistics_browser.cjs build/studio-statistics-browser
+      - name: Test bilingual notes, merged tables and original PDF coordinates
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_layout_browser.cjs build/studio-layout-browser
+      - name: Replay frozen licensed native documents
+        run: python -X utf8 tools/replay_native.py --out build/native-replay
       - name: Keep all browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -70,6 +76,9 @@ jobs:
             build/studio-evidence-browser/failure.json
             build/studio-statistics-browser/evidence.json
             build/studio-statistics-browser/*.png
+            build/studio-layout-browser/evidence.json
+            build/studio-layout-browser/*.png
+            build/native-replay/evidence.json
           if-no-files-found: warn
 
   test:

@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.0.0"><img src="docs/assets/badges/release.svg" alt="Release 1.0.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.1.0"><img src="docs/assets/badges/release.svg" alt="Release 1.1.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -57,6 +57,9 @@ Playback is paced for reading.
 [Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.8/report.png).
 
+**1.1.0** adds linked Word notes, common merged headers and rotated/cropped PDF pages.
+[Native study and limits](docs/v1.1.md) publish the first held-out misses and unknowns.
+
 **1.0.0** checks declared mean/SD/SE/n and Student-t intervals, including whole
 compound displays and missing seeds. See the [statistical guide](docs/statistics.md).
 
@@ -68,7 +71,7 @@ of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded brows
 interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
 Snapshot comparison, ongoing checks and local draft recovery remain available.
 Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.0.md).
+See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.1.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -107,7 +110,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.0.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.1.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -212,7 +215,7 @@ relations. See the [PDF boundary and workflow](docs/pdf.md).
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.9.md) distinguish what each run established.
+and [current release checks](docs/v1.1.md) distinguish what each run established.
 
 ## Development
 

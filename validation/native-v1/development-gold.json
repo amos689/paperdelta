@@ -1,0 +1,1234 @@
+{
+  "split": "development",
+  "annotation": "Developer annotations, selected without PaperDelta output and visually checked against native renders.",
+  "targets": [
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "3.54",
+      "value": "3.54",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 10,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 2, cell 2. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 2
+      },
+      "id": "dev-001",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".11",
+      "value": "0.11",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 11,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 2, cell 3. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 3
+      },
+      "id": "dev-002",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "32.64",
+      "value": "32.64",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 2, cell 4. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 4
+      },
+      "id": "dev-003",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".001",
+      "value": "0.001",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 1
+      },
+      "selection_reason": "First result table; physical row 2, cell 5. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 5
+      },
+      "id": "dev-004",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "3.32",
+      "value": "3.32",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 1
+      },
+      "selection_reason": "First result table; physical row 2, cell 6. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 6
+      },
+      "id": "dev-005",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "3.75",
+      "value": "3.75",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 14,
+        "offset": 7
+      },
+      "selection_reason": "First result table; physical row 2, cell 6. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 2,
+        "physical_cell": 6
+      },
+      "id": "dev-006",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".33",
+      "value": "0.33",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 16,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 3, cell 2. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 2
+      },
+      "id": "dev-007",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".05",
+      "value": "0.05",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 17,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 3, cell 3. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 3
+      },
+      "id": "dev-008",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "6.62",
+      "value": "6.62",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 3, cell 4. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 4
+      },
+      "id": "dev-009",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".001",
+      "value": "0.001",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 1
+      },
+      "selection_reason": "First result table; physical row 3, cell 5. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 5
+      },
+      "id": "dev-010",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".24",
+      "value": "0.24",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 20,
+        "offset": 1
+      },
+      "selection_reason": "First result table; physical row 3, cell 6. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 6
+      },
+      "id": "dev-011",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".44",
+      "value": "0.44",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 20,
+        "offset": 6
+      },
+      "selection_reason": "First result table; physical row 3, cell 6. Dates and row identifiers are not measurement values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 6
+      },
+      "id": "dev-012",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": ".03",
+      "value": "0.03",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 51,
+        "offset": 34
+      },
+      "selection_reason": "First numerical result in explanatory note.",
+      "id": "dev-013",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1",
+      "value": "1",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 325
+      },
+      "selection_reason": "Following result prose: F degrees of freedom and statistic; experiment/table labels excluded.",
+      "id": "dev-014",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "774",
+      "value": "774",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 328
+      },
+      "selection_reason": "Following result prose: F degrees of freedom and statistic; experiment/table labels excluded.",
+      "id": "dev-015",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "4.72",
+      "value": "4.72",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 224,
+        "offset": 335
+      },
+      "selection_reason": "Following result prose: F degrees of freedom and statistic; experiment/table labels excluded.",
+      "id": "dev-016",
+      "source_sha256": "71c63d04002e781ee71425f41f634b749f2dd618346e2d2739c8faf4384a39fc"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "88",
+      "value": "88",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 12,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 3, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 4
+      },
+      "id": "dev-017",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1610",
+      "value": "1610",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 13,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 3, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 3,
+        "physical_cell": 5
+      },
+      "id": "dev-018",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "98",
+      "value": "98",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 18,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 4, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 4
+      },
+      "id": "dev-019",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "884",
+      "value": "884",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 19,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 4, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 4,
+        "physical_cell": 5
+      },
+      "id": "dev-020",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "22",
+      "value": "22",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 24,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 5, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 5,
+        "physical_cell": 4
+      },
+      "id": "dev-021",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1078",
+      "value": "1078",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 25,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 5, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 5,
+        "physical_cell": 5
+      },
+      "id": "dev-022",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "62",
+      "value": "62",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 30,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 6, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 6,
+        "physical_cell": 4
+      },
+      "id": "dev-023",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "523",
+      "value": "523",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 31,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 6, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 6,
+        "physical_cell": 5
+      },
+      "id": "dev-024",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "60",
+      "value": "60",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 36,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 7, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 7,
+        "physical_cell": 4
+      },
+      "id": "dev-025",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "959",
+      "value": "959",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 37,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 7, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 7,
+        "physical_cell": 5
+      },
+      "id": "dev-026",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "32",
+      "value": "32",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 42,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 8, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 8,
+        "physical_cell": 4
+      },
+      "id": "dev-027",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "1127",
+      "value": "1127",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 43,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 8, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 8,
+        "physical_cell": 5
+      },
+      "id": "dev-028",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "3",
+      "value": "3",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 48,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 9, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 9,
+        "physical_cell": 4
+      },
+      "id": "dev-029",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "698",
+      "value": "698",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 49,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 9, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 9,
+        "physical_cell": 5
+      },
+      "id": "dev-030",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "40",
+      "value": "40",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 54,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 10, cell 4. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 10,
+        "physical_cell": 4
+      },
+      "id": "dev-031",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "science-journalism",
+      "file": "supplement.docx",
+      "format": "docx",
+      "text": "2560",
+      "value": "2560",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph": 55,
+        "offset": 0
+      },
+      "selection_reason": "First result table; physical row 10, cell 5. Dates and row identifiers are not measurement values. Prose has no measured results; four prose slots use the following table values.",
+      "source_cell": {
+        "table": 1,
+        "row": 10,
+        "physical_cell": 5
+      },
+      "id": "dev-032",
+      "source_sha256": "c0913f4bd284f859e1d0b890bddd68bd12e304d19a676f0de562d05cb6f6f732"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.88",
+      "value": "2.88",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          262.0060119628906,
+          105.52728271484375,
+          274.725830078125,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-033",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".15",
+      "value": "0.15",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          311.3093566894531,
+          105.52728271484375,
+          319.9572448730469,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-034",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "125.65",
+      "value": "125.65",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          356.901611328125,
+          105.47930908203125,
+          376.63739013671875,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-035",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "19.74",
+      "value": "19.74",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          413.594482421875,
+          105.52728271484375,
+          429.69830322265625,
+          110.71124267578125
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-036",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".001",
+      "value": "0.001",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          474.0745544433594,
+          105.52728271484375,
+          486.17840576171875,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-037",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2.59",
+      "value": "2.59",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          525.6490478515625,
+          105.52728271484375,
+          538.408935546875,
+          110.71124267578125
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-038",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "3.17",
+      "value": "3.17",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          542.6736450195312,
+          105.52728271484375,
+          555.45751953125,
+          110.687255859375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-039",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".48",
+      "value": "0.48",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          264.14111328125,
+          118.05670166015625,
+          272.8210144042969,
+          123.2166748046875
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-040",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".15",
+      "value": "0.15",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          311.309326171875,
+          118.05670166015625,
+          319.95721435546875,
+          123.2166748046875
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-041",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "701.03",
+      "value": "701.03",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          356.40557861328125,
+          118.05670166015625,
+          376.581298828125,
+          123.2166748046875
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-042",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "3.19",
+      "value": "3.19",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          415.0016174316406,
+          118.05670166015625,
+          427.66546630859375,
+          123.24066162109375
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-043",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".001",
+      "value": "0.001",
+      "locator": {
+        "page": 7,
+        "bbox": [
+          470.0489196777344,
+          118.05670166015625,
+          482.15277099609375,
+          123.2166748046875
+        ]
+      },
+      "selection_reason": "First twelve result tokens in Table 1 after the header, row-major; includes CI endpoints and the printed p threshold.",
+      "id": "dev-044",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".91",
+      "value": "0.91",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          384.16302490234375,
+          295.4259948730469,
+          394.42303466796875,
+          301.906005859375
+        ]
+      },
+      "selection_reason": "First numerical measured results in Results prose; experiment IDs excluded.",
+      "id": "dev-045",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".83",
+      "value": "0.83",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          445.22100830078125,
+          308.4649963378906,
+          455.8810119628906,
+          314.9150085449219
+        ]
+      },
+      "selection_reason": "First numerical measured results in Results prose; experiment IDs excluded.",
+      "id": "dev-046",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": ".81",
+      "value": "0.81",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          531.5070190429688,
+          308.4649963378906,
+          541.7670288085938,
+          314.9150085449219
+        ]
+      },
+      "selection_reason": "First numerical measured results in Results prose; experiment IDs excluded.",
+      "id": "dev-047",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "climate-repetition",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "90",
+      "value": "90",
+      "locator": {
+        "page": 6,
+        "bbox": [
+          359.81201171875,
+          334.42999267578125,
+          368.61199951171875,
+          340.9100036621094
+        ]
+      },
+      "selection_reason": "First numerical measured results in Results prose; experiment IDs excluded.",
+      "id": "dev-048",
+      "source_sha256": "edef52103edc89d151d7b818166babcae442efc71425d87c2547d0058a70455e"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "55",
+      "value": "55",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          71.02275848388672,
+          641.9952087402344,
+          77.91867065429688,
+          647.0591430664062
+        ]
+      },
+      "selection_reason": "Table 5 is the first results table; preceding tables describe methods. Date/month categories excluded.",
+      "id": "dev-049",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "12",
+      "value": "12",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          230.87356567382812,
+          641.8992004394531,
+          237.35348510742188,
+          646.9791412353516
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-050",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "3",
+      "value": "3",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          276.841796875,
+          641.8992004394531,
+          279.88177490234375,
+          647.0591430664062
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-051",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1,142",
+      "value": "1142",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          363.1374816894531,
+          641.8992004394531,
+          379.11328125,
+          647.8991241455078
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-052",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "427",
+      "value": "427",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          384.1620178222656,
+          641.8992004394531,
+          395.3058776855469,
+          647.0591430664062
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-053",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "2,560",
+      "value": "2560",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          399.913818359375,
+          641.8512115478516,
+          416.412841796875,
+          647.8991241455078
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-054",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "12",
+      "value": "12",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          462.12347412109375,
+          641.8992004394531,
+          468.6033935546875,
+          646.9791412353516
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-055",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "12",
+      "value": "12",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          472.45135498046875,
+          641.8992004394531,
+          478.9312744140625,
+          646.9791412353516
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-056",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "0",
+      "value": "0",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          482.1872253417969,
+          641.8992004394531,
+          485.4512023925781,
+          647.0591430664062
+        ]
+      },
+      "selection_reason": "Continue first result row after categorical month values; include range endpoints and page counts.",
+      "id": "dev-057",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "628",
+      "value": "628",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          70.93476104736328,
+          654.3806610107422,
+          81.78262329101562,
+          659.5885925292969
+        ]
+      },
+      "selection_reason": "Next result row in Table 5, before categorical month values.",
+      "id": "dev-058",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "182",
+      "value": "182",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          230.87356567382812,
+          654.4286499023438,
+          241.1854248046875,
+          659.5885925292969
+        ]
+      },
+      "selection_reason": "Next result row after categorical month values, completing twelve table targets.",
+      "id": "dev-059",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "7",
+      "value": "7",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          276.8658142089844,
+          654.524658203125,
+          280.1297607421875,
+          659.5885925292969
+        ]
+      },
+      "selection_reason": "Next result row after categorical month values, completing twelve table targets.",
+      "id": "dev-060",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "55",
+      "value": "55",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          507.9919738769531,
+          528.6669921875,
+          516.5719604492188,
+          534.9970092773438
+        ]
+      },
+      "selection_reason": "First four measured results in Results prose. Abstract contains dates but no numerical measurement; table labels and dates excluded.",
+      "id": "dev-061",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "728",
+      "value": "728",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          529.97900390625,
+          528.5469970703125,
+          543.3590087890625,
+          534.9970092773438
+        ]
+      },
+      "selection_reason": "First four measured results in Results prose. Abstract contains dates but no numerical measurement; table labels and dates excluded.",
+      "id": "dev-062",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "1474",
+      "value": "1474",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          246.9660186767578,
+          541.5299987792969,
+          264.68603515625,
+          547.9800109863281
+        ]
+      },
+      "selection_reason": "First four measured results in Results prose. Abstract contains dates but no numerical measurement; table labels and dates excluded.",
+      "id": "dev-063",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    },
+    {
+      "case": "science-journalism",
+      "file": "article.pdf",
+      "format": "pdf",
+      "text": "12",
+      "value": "12",
+      "locator": {
+        "page": 11,
+        "bbox": [
+          474.75604248046875,
+          541.5299987792969,
+          482.8160400390625,
+          547.8800048828125
+        ]
+      },
+      "selection_reason": "First four measured results in Results prose. Abstract contains dates but no numerical measurement; table labels and dates excluded.",
+      "id": "dev-064",
+      "source_sha256": "8775d06419c772f20dbe546c668ec4255f945f0bebe53ab0adb4c918d5631fbe"
+    }
+  ]
+}

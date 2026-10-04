@@ -1,0 +1,263 @@
+schema_version: 7
+paper:
+  entry: article.pdf
+  macros: {}
+rounding: half_up
+sources:
+  synthetic:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  dev-049:
+    source: synthetic
+    field: value
+    where:
+      id: dev-049
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-050:
+    source: synthetic
+    field: value
+    where:
+      id: dev-050
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-051:
+    source: synthetic
+    field: value
+    where:
+      id: dev-051
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-058:
+    source: synthetic
+    field: value
+    where:
+      id: dev-058
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-059:
+    source: synthetic
+    field: value
+    where:
+      id: dev-059
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-060:
+    source: synthetic
+    field: value
+    where:
+      id: dev-060
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-061:
+    source: synthetic
+    field: value
+    where:
+      id: dev-061
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-062:
+    source: synthetic
+    field: value
+    where:
+      id: dev-062
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-063:
+    source: synthetic
+    field: value
+    where:
+      id: dev-063
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+  dev-064:
+    source: synthetic
+    field: value
+    where:
+      id: dev-064
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  dev-049:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Belgium
+        column: 1
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-049
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-050:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Belgium
+        column: 3
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-050
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-051:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Belgium
+        column: 4
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-051
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-058:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Italy
+        column: 1
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-058
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-059:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Italy
+        column: 3
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-059
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-060:
+    file: article.pdf
+    anchor:
+      table:
+        headers:
+        - Country & Sample1 (N) & Peakmomentssample1 (month.year) & Sample2 (N) &
+          Appearancein#of sources & Averagewordlength(and range) & Page#available/notavailable/#
+          page1
+        row_prefix:
+        - Italy
+        column: 4
+        percent_symbol: false
+        page: 11
+        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-060
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-061:
+    file: article.pdf
+    anchor:
+      prefix: 'The total number of the articles vary per country in the first sample
+        (between '
+      suffix: ' to '
+      block: sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-061
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-062:
+    file: article.pdf
+    anchor:
+      prefix: ' to '
+      suffix: ' with a'
+      block: sha256:675c11861cb0107a9537994b829c9874c692531566bf5eb4f29765063907eee6
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-062
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-063:
+    file: article.pdf
+    anchor:
+      prefix: 'total of n = '
+      suffix: ') as well as in the second sample of articles (between '
+      block: sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-063
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+  dev-064:
+    file: article.pdf
+    anchor:
+      prefix: ') as well as in the second sample of articles (between '
+      suffix: ' and '
+      block: sha256:eeba28638a382d77dbcce8432180d7cbd5b4e9c06dbff9e6f603e0ed9b5c234d
+      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+    metric: dev-064
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

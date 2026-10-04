@@ -147,7 +147,7 @@ def test_labelled_positions_and_supported_structure(case):
         value = span.to_dict()
         assert not {"line", "page", "byte_start", "byte_end"} & value.keys()
         assert value["format"] == "docx"
-        assert value["parser"].startswith("paperdelta-docx/1;")
+        assert value["parser"].startswith("paperdelta-docx/2;")
         anchor = builder.anchor_for_span(document, span)
         assert document.locate(anchor).to_dict() == value
     if case == "abstract":
