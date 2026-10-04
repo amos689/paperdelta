@@ -27,6 +27,8 @@ def create(directory, kind):
             b"Model method interval: [80.04, 83.96].\n"
             b"Confidence level: 95\\%.\n"
         )
+    elif kind in {"md", "qmd"}:
+        raw = ("# Abstract\n\n" + "\n\n".join(lines) + "\n").encode()
     elif kind == "docx":
         from docx import Document
 
@@ -50,7 +52,7 @@ def create(directory, kind):
     project.write("results.tsv", TABLE.encode())
     config = Config.model_validate(
         {
-            "schema_version": 5,
+            "schema_version": 8 if kind in {"md", "qmd"} else 5,
             "paper": {"entry": entry},
             "sources": {
                 "runs": {
@@ -86,7 +88,7 @@ def create(directory, kind):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True)
-    parser.add_argument("--kind", choices=["tex", "docx", "pdf"], required=True)
+    parser.add_argument("--kind", choices=["tex", "docx", "pdf", "md", "qmd"], required=True)
     args = parser.parse_args()
     output = (ROOT / args.out).resolve()
     assert output.is_relative_to(ROOT / "build")

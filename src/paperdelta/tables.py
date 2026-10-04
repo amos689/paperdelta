@@ -87,6 +87,9 @@ def _native_header_count(document, rows):
     """Propose a literal header boundary, retained explicitly in the accepted anchor."""
     from paperdelta.metrics import NUMBER, NUMBER_PATTERN
 
+    explicit = getattr(document, "native_table_metadata", {}).get(id(rows), {}).get("header_rows")
+    if explicit is not None:
+        return explicit
     count = 1
     for row in rows[1:20]:
         values = _row_values(document, row)

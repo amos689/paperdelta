@@ -6,6 +6,7 @@ import uuid
 
 from paperdelta.analysis import check_configuration
 from paperdelta.config import config_text, load_config
+from paperdelta.config_versions import upgrade_layout_schema
 from paperdelta.documents import PaperIndex
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr, translated
@@ -72,6 +73,7 @@ def change_manuscripts(
             regions[:] = [item for item in regions if item["name"] != name]
     else:
         raise PaperDeltaError("MANUSCRIPT_SELECTION", msg("manuscript.action"))
+    upgrade_layout_schema(value)
     proposed = validate_record(Config, value, "MANUSCRIPT_SCHEMA")
     index = PaperIndex(project, proposed.paper)
     hashes = {config_path: identity, **{path: doc.hash for path, doc in index.documents.items()}}

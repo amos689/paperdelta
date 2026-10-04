@@ -2,6 +2,9 @@
 
 [English](../pdf.md)
 
+静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、只读边界和
+明确的源稿/PDF 比较见 [Markdown/Quarto 源码支持](markdown-quarto.md)。
+
 PaperDelta 1.1 可以读取受支持的文字型 PDF，并将明确绑定的结果与明确声明的
 实验证据核对。同一配置可以包含 LaTeX、Word 和 PDF 稿件。PDF 与 Word 文件始终只读。
 

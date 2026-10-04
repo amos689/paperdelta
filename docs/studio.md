@@ -2,12 +2,16 @@
 
 [简体中文](zh-CN/studio.md)
 
+Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
+See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
+positions, read-only limits and explicit source/PDF comparisons.
+
 Version 1.0 statistical bindings declare seeds, n, SD convention and interval
 method explicitly. Compound displays, batch templates and read-only agents share
 the [statistical contract](statistics.md).
 
-PaperDelta 0.8 combines first-time and batch binding with ongoing review of
-LaTeX, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
+PaperDelta 1.2 combines first-time and batch binding with ongoing review of
+LaTeX, Markdown, Quarto, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
 It uses the same typed drafts, exact calculations, anchors and explicit acceptance
 as the CLI. The interface can switch between English and Simplified Chinese.
 
@@ -178,7 +182,7 @@ state; a failed comparison still fails after review.
   `.paperdelta/studio/`. Restarting the server offers restore, download or explicit
   discard. This is still a draft: restoring never accepts bindings. Conflicting
   servers cannot silently overwrite one another's recovery copy.
-- Current and compatible earlier 0.6/0.7 drafts can be restored into 0.8 after their original
+- Current and compatible earlier 0.6–1.1 drafts can be restored into 1.2 after their original
   identity and input hashes are verified. Future/unknown versions are refused.
 - If inputs changed, **Rebuild selected draft declarations** shows the saved items.
   Select the work to retain, preview it against current inputs and confirm staging.

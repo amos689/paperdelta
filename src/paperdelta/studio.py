@@ -338,7 +338,7 @@ def project_files(project):
             if (
                 not name.startswith(".")
                 and path.suffix.lower()
-                in {".tex", ".docx", ".pdf", ".csv", ".json", ".tsv", ".xlsx"}
+                in {".tex", ".docx", ".pdf", ".md", ".qmd", ".csv", ".json", ".tsv", ".xlsx"}
                 and not path.is_symlink()
             ):
                 output.append(project.relative(path))

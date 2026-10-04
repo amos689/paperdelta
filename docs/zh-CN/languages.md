@@ -68,7 +68,7 @@ MCP 工具名称、参数、ID 和属性保持统一；说明、解释及下一�
 所有操作命令均可使用 `--format json`，包括 `propose`、`fix`、`apply`、`recover`、
 `snapshot create`、`review record`、`init`、`bind`、`settings` 和 `doctor`。
 结果保留原有字段，并增加 `command_result_version: 1` 和 `command`。成功应用补丁
-会直接返回 `transaction_id`。LaTeX、Word、PDF 的 `check` 报告分别采用 schema 2、3、4，读取器兼容版本 1–4；批量和范围命令支持 JSON，
+会直接返回 `transaction_id`。LaTeX、Word、PDF 的 `check` 报告分别采用 schema 2、3、4，读取器兼容版本 1–8；批量和范围命令支持 JSON，
 监听逐行输出 JSON 事件；`schema`
 始终输出 JSON；`mcp` 的标准输出仅用于协议。
 
@@ -104,3 +104,6 @@ MCP 工具名称、参数、ID 和属性保持统一；说明、解释及下一�
 
 `paperdelta --lang zh-CN studio` 的浏览器界面可即时切换中英文，保留明确的候选位置、
 筛选条件和待确认选择。数据、Decimal 值和实验编号不随语言变化。详见[工作台指南](studio.md)。
+
+Markdown/Quarto 源码位置需要 schema 8；统计和原生排版分别使用 schema 6、7。
+机器字段及原文保持语言无关，详见[完整位置约定](report-format.md)。

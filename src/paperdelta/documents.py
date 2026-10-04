@@ -49,6 +49,8 @@ def document_format(entry: str) -> str:
         return "docx"
     if suffix == ".pdf":
         return "pdf"
+    if suffix in {".md", ".qmd"}:
+        return "markdown" if suffix == ".md" else "quarto"
     raise PaperDeltaError("DOCUMENT_FORMAT", msg("document.format", file=entry))
 
 
@@ -71,10 +73,14 @@ class PaperIndex:
                     from paperdelta.docx_document import DocxDocument
 
                     document = DocxDocument(file, project.read(file))
-                else:
+                elif format == "pdf":
                     from paperdelta.pdf_document import PdfDocument
 
                     document = PdfDocument(file, project.read(file), manuscript.pdf_regions)
+                else:
+                    from paperdelta.markdown_document import MarkdownDocument
+
+                    document = MarkdownDocument(file, project.read(file), format)
                 documents, issues = {file: document}, document.issues
             for name, document in documents.items():
                 if name in self.documents:

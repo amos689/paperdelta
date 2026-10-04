@@ -120,7 +120,7 @@ async function runCase(browser, kind, language, batch=false) {
     for (const checkbox of await page.locator('#review-items input[type=checkbox]').all()) { await checkbox.check(); await ready(page); }
     await act(page,'#attest','check'); await act(page,'#accept');
     const report = JSON.parse(py(['-m','paperdelta','-C',directory,'check','--format','json']));
-    assert.equal(report.report_schema_version,6); assert.equal(report.coverage.pass,batch?1:3);
+    assert.equal(report.report_schema_version,['md','qmd'].includes(kind)?8:6); assert.equal(report.coverage.pass,batch?1:3);
     const result = Object.values(report.metrics)[0]; assert.equal(result.statistics.n,5); assert.equal(result.statistics.confidence_interval.level,'0.95');
     assert(Object.values(report.occurrences).some((item)=>item.actual.includes('1.58') && item.actual.includes('n = 5')));
     assert.deepEqual(Object.fromEntries(Object.keys(inputs).map((file)=>[file,hash(path.join(directory,file))])),inputs);
@@ -138,8 +138,8 @@ async function runCase(browser, kind, language, batch=false) {
 (async()=>{
   const browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
   try {
-    for(const kind of ['tex','docx','pdf']) for(const language of ['en','zh-CN']) await runCase(browser,kind,language);
-    for(const language of ['en','zh-CN']) await runCase(browser,'tex',language,true);
+    for(const kind of (process.env.PAPERDELTA_DOCUMENT_FORMATS || 'tex,docx,pdf,md,qmd').split(',')) for(const language of ['en','zh-CN']) await runCase(browser,kind,language);
+    for(const kind of (process.env.PAPERDELTA_BATCH_FORMATS || 'tex,md,qmd').split(',')) for(const language of ['en','zh-CN']) await runCase(browser,kind,language,true);
     fs.writeFileSync(path.join(out,'evidence.json'),JSON.stringify({status:'passed',cases:results},null,2)+'\n');
     console.log(JSON.stringify({status:'passed',cases:results.length}));
   } finally { await browser.close(); }

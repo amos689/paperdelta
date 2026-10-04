@@ -20,6 +20,8 @@ const fixtureScript = [
   'paper=root/("paper."+kind)',
   'if kind=="tex":',
   '    paper.write_bytes(b"Abstract score: 84.1\\\\%.\\nSecond result: 84.1\\\\%.\\nMarkup: <img src=x onerror=alert(1)>.\\n")',
+  'elif kind in {"md", "qmd"}:',
+  '    paper.write_bytes(b"# Abstract\\n\\nAbstract score: **84.1%**.\\n\\n| Model | Score |\\n| --- | --- |\\n| 001 | 84.1% |\\n")',
   'elif kind=="docx":',
   "    from docx import Document",
   "    doc=Document()",
@@ -55,7 +57,7 @@ async function click(page, selector) { await page.locator(selector).click(); awa
   const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) });
   const results = [];
   try {
-    for (const kind of ["tex", "docx", "pdf"]) for (const lang of ["en", "zh-CN"]) {
+    for (const kind of (process.env.PAPERDELTA_DOCUMENT_FORMATS || "tex,docx,pdf,md,qmd").split(',')) for (const lang of ["en", "zh-CN"]) {
       const name = kind + "-" + lang, directory = path.join(out, name);
       execFileSync(python, ["-X", "utf8", "-c", fixtureScript, directory, kind], { windowsHide: true });
       const { child, url } = await start(directory, lang);
@@ -139,6 +141,12 @@ async function click(page, selector) { await page.locator(selector).click(); awa
         assert(await page.locator("#receipt").isVisible());
         const report = JSON.parse(execFileSync(python, ["-X", "utf8", "-m", "paperdelta", "-C", directory, "check", "--format", "json"], { encoding: "utf8", windowsHide: true }));
         assert.equal(report.coverage.confirmed, 1); assert.equal(report.coverage.pass, 1);
+        if (['md','qmd'].includes(kind)) {
+          assert.equal(report.report_schema_version, 8);
+          const location = Object.values(report.occurrences)[0].location;
+          assert.equal(location.format, kind === 'md' ? 'markdown' : 'quarto');
+          assert.equal(originalPaper.subarray(location.byte_start, location.byte_end).toString('utf8'), location.text);
+        }
         assert.deepEqual(fs.readFileSync(path.join(directory, "paper." + kind)), originalPaper);
         assert.deepEqual(fs.readFileSync(path.join(directory, "results.csv")), originalData);
         const reportDownload = page.waitForEvent("download"); await click(page, "#download-report");

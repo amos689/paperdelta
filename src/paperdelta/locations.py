@@ -4,6 +4,9 @@ from paperdelta.i18n import msg
 
 
 def location_label(location):
+    if location.get("format") in {"markdown", "quarto"}:
+        key = "markdown.cell_label" if location["locator"].get("table") else "markdown.line_label"
+        return msg(key, **{**location, **location["locator"]})
     if location.get("format") == "pdf":
         value = location["locator"]
         key = "pdf.cell_label" if value.get("table") is not None else "pdf.page_label"

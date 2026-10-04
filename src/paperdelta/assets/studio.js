@@ -165,7 +165,7 @@
     if (!state.initialized) {
       $("paper-files").replaceChildren(); $("discovered-files").replaceChildren();
       for (const path of state.files.paths) {
-        if (/\.(tex|docx|pdf)$/i.test(path)) $("paper-files").append(new Option(path));
+        if (/\.(tex|docx|pdf|md|qmd)$/i.test(path)) $("paper-files").append(new Option(path));
         else {
           const button = node("button", path); button.type = "button";
           button.onclick = () => { const f = field("setup-form", "data"); const lines = f.value.split("\n").filter(Boolean); if (!lines.includes(path)) lines.push(path); f.value = lines.join("\n"); };

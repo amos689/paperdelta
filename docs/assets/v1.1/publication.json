@@ -1,0 +1,66 @@
+{
+  "version": "1.1.0",
+  "commit": "b82f63605f76679c2187d5c686fcbaaef391aba8",
+  "checked_at": "2026-10-04T12:12:17.601358+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37200433223",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-1.1.0-py3-none-any.whl": "a360164694d0511c961233fb96b9d100523a2ddf8aedefe52734a0ad554ed2c0",
+    "paperdelta-1.1.0.tar.gz": "f365f50c3fa91b85576f693a46367577cd7a5a5aa7390f3c5bf1212a557fc17e",
+    "paperdelta-evaluation-1.1.0.zip": "04a7674cc69449e435a75465087bbcaffbca3e8f4fb64604b01c68fcd9019af1"
+  },
+  "status": "passed",
+  "candidate_wheel_entries_identical": 94,
+  "local_installed_suite": {
+    "tests": 628,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 625,
+    "evidence": "build/v11-installed-final/evidence.json"
+  },
+  "layout_browser_flows": 8,
+  "native_development": {
+    "targets": 64,
+    "supported": 49,
+    "missed": 0,
+    "mislocated": 0,
+    "unknown": 15
+  },
+  "native_first_held_out": {
+    "targets": 64,
+    "supported": 4,
+    "missed": 4,
+    "mislocated": 0,
+    "unknown": 56
+  },
+  "frozen_native_replay_matches": true,
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v1.1.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37201171802",
+  "pypi": "https://pypi.org/project/paperdelta/1.1.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-1.1.0-py3-none-any.whl": "a360164694d0511c961233fb96b9d100523a2ddf8aedefe52734a0ad554ed2c0",
+    "paperdelta-1.1.0.tar.gz": "f365f50c3fa91b85576f693a46367577cd7a5a5aa7390f3c5bf1212a557fc17e"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true
+}

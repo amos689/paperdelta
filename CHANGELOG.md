@@ -2,6 +2,13 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.2.0 — 2026-10-05
+
+- Static Markdown/Quarto prose, headings, lists, links and regular pipe tables with original UTF-8 bytes, line/column, section and explicit row/column identities.
+- Reuse typed evidence, statistical compounds, batch templates, snapshots, watching, reviewed repair, bilingual Studio and read-only MCP. Explicit PDF exports can name either new source format.
+- Schema 8 preserves older contracts; compatible 0.6–1.1 drafts can be restored. Source edits remain manual, and dynamic/unsupported content stays unverified without code execution.
+- Core-only Markdown/Quarto demos, an authored source/supplement/PDF example, fourteen new browser flows and bounded positive/negative source regressions. See [scope and checks](docs/v1.2.md).
+
 ## 1.1.0 — 2026-10-04
 
 - Original Word footnotes/endnotes, common horizontal table headers and regular vertical merges with explicit caption/header identities.

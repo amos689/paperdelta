@@ -8,7 +8,7 @@ English
 
 Review how experiment changes affect an existing research paper. PaperDelta
 connects declared CSV/TSV/JSON, static Excel and imported experiment evidence to numbers, comparisons and figure provenance
-in LaTeX and optional Word/PDF manuscripts, then shows affected locations in an offline report.
+in LaTeX/Markdown/Quarto and optional Word/PDF manuscripts, then shows affected locations in an offline report.
 
 Install with Python 3.11 or newer in a virtual environment:
 
@@ -48,7 +48,7 @@ sources are excluded from the Python distributions.
 --------
 
 检查实验结果变化影响了现有论文的哪些位置。PaperDelta 将明确声明的 CSV/TSV/JSON、静态 Excel 和实验导出
-证据关联到 LaTeX 及可选 Word/PDF 稿件中的数字、比较和图表来源，在离线报告中集中展示待复核内容。
+证据关联到 LaTeX/Markdown/Quarto 及可选 Word/PDF 稿件中的数字、比较和图表来源，在离线报告中集中展示待复核内容。
 
 使用 Python 3.11 以上版本，在虚拟环境安装：
 
@@ -140,3 +140,20 @@ Word 脚注/尾注、常见合并表头与旋转裁切 PDF 保留原位置，原
 
 `Native scope and results <https://github.com/amos689/paperdelta/blob/main/docs/v1.1.md>`_ ·
 `原生支持与结果 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.1.md>`_
+
+Static sources in 1.2 / 1.2 静态源码
+---------------------------------
+
+Core-only Markdown and Quarto readers preserve original source positions for
+literal prose and pipe tables. Run ``paperdelta demo --document markdown --out md-demo``
+or ``paperdelta demo --document quarto --out qmd-demo``. Shared evidence,
+statistics, templates, snapshots, reviewed repair and explicit source/PDF exports
+use the same bilingual workflow. Both formats remain read-only; code, metadata,
+dynamic includes and unsupported syntax remain unverified. Nothing is executed.
+
+核心包支持 Markdown/Quarto 字面正文与竖线表格，保留原始源码位置。运行上述 demo
+即可体验，共用双语证据、统计、模板、快照、经复核修复及明确的源稿/PDF 导出流程。
+两种格式均只读；代码、元数据、动态包含及不支持语法保持未验证，不执行代码。
+
+`Static-source guide <https://github.com/amos689/paperdelta/blob/main/docs/markdown-quarto.md>`_ ·
+`静态源码指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/markdown-quarto.md>`_

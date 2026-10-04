@@ -1,10 +1,18 @@
-# 报告交换约定，版本 7
+# 报告交换约定，版本 8
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–7。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–8。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
+
+## Schema 8 的静态源码位置
+
+Markdown/Quarto 位置使用 `format: markdown` 或 `quarto`、`parser`、`context`、
+原始字符与 UTF-8 字节区间、从一开始的行列。locator 包含章节、区块身份、区块内
+偏移及可选的表/行/单元格。位置保留 BOM 和 CRLF，指向原始源码而非渲染文本。
+文件扩展名必须匹配声明格式，旧报告版本拒绝这些位置。PDF 的 `export_of` 可以
+指向明确声明的 `.md` 或 `.qmd` 源稿。两种新格式均只读，详见[语法与限制](markdown-quarto.md)。
 
 ## Schema 7 原生排版
 
@@ -54,7 +62,7 @@ TSV、XLSX 证据增加明确的 `format`。TSV 保留行号；XLSX 使用 `key`
 Word 位置使用 `format: docx`、`parser`、`context` 和 `locator`，记录 OOXML
 部件、段落序号、样式、章节及可选的表、行、列。它们的 `start/end` 指向提取文本，
 绝不是文件包字节。原生位置没有源码行号或字节地址，需要报告 schema 3。
-上述 UTF-8 字节与行列说明仅适用于 LaTeX，详见 [Word 位置约定](word.md)。
+上述 UTF-8 字节与行列说明适用于 LaTeX 和 schema 8 的 Markdown/Quarto 源码，详见 [Word 位置约定](word.md)。
 
 ## 分开的状态维度
 
@@ -102,4 +110,4 @@ PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定
 
 配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
 `paper.companions` 和可选 `export_of`。使用旧 CSV/JSON 证据时，LaTeX 报告使用
-schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–7。
+schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–8。

@@ -147,6 +147,8 @@ def check_configuration(
             getattr(doc, "uses_layout_v2", False) for doc in paper.documents.values()
         ):
             report["report_schema_version"] = 7
+        if config.schema_version >= 8:
+            report["report_schema_version"] = 8
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
         attach_reviews(project, report)

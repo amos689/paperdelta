@@ -300,6 +300,10 @@ def test_native_visual_repair_preserves_declared_metric(studio_project):
         raw = project.read(path).replace(
             b"Abstract score: 84.1\\%.", b"Revised measurement =84.1\\%; updated context."
         )
+    elif path.endswith((".md", ".qmd")):
+        raw = project.read(path).replace(
+            b"Abstract score: 84.1%.", b"Revised measurement =84.1%; updated context."
+        )
     elif path.endswith("docx"):
         from docx import Document
 

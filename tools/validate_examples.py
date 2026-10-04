@@ -28,6 +28,7 @@ def main():
         ("unicode-macro", 0),
         ("evidence-native", 0),
         ("seed-statistics", 0),
+        ("static-manuscript", 0),
     ):
         source = repository / "examples" / name
         root = output / name
@@ -56,6 +57,31 @@ def main():
         if name == "ambiguous-table":
             assert report["occurrences"]["table_accuracy"]["status"] == "unknown"
             assert "ANCHOR_AMBIGUOUS" in results[name]["rules"]
+        if name == "static-manuscript":
+            assert report["coverage"]["pass"] == 8
+            assert all(item["status"] == "aligned" for item in report["exports"])
+            original_pdf = project.read("export.pdf")
+            project.write(
+                "results/metrics.csv",
+                project.read("results/metrics.csv")
+                .replace(b"0.839", b"0.807")
+                .replace(b"0.841", b"0.809")
+                .replace(b"0.843", b"0.811"),
+            )
+            for file in ("paper.qmd", "appendix.md"):
+                project.write(file, project.read(file).replace(b"84.1", b"80.9"))
+            changed = check_project(root)
+            assert changed["occurrences"]["abstract_accuracy"]["status"] == "pass"
+            assert changed["occurrences"]["table_accuracy"]["status"] == "pass"
+            assert changed["occurrences"]["supplement_accuracy"]["status"] == "pass"
+            assert changed["claims"]["main_comparison"]["status"] == "mismatch"
+            assert (
+                next(e for e in changed["exports"] if e["metric"] == "accuracy")["status"]
+                == "stale"
+            )
+            assert project.read("export.pdf") == original_pdf
+            results[name]["shared_source_bindings"] = "pass"
+            results[name]["source_corrected_export_stale"] = True
         if name == "seed-statistics":
             assert report["coverage"]["pass"] == 4
             assert report["coverage"]["unbound_numbers"] == []

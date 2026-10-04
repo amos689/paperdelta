@@ -378,7 +378,7 @@ class CoverageExclusion(StrictModel):
 
 
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=7)]
+    schema_version: Annotated[int, Field(ge=1, le=8)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -392,6 +392,11 @@ class Config(StrictModel):
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if self.schema_version < 8 and any(
+            item.entry.lower().endswith((".md", ".qmd"))
+            for item in [self.paper, *self.paper.companions]
+        ):
+            raise validation_error(msg("markdown.schema"))
         if self.schema_version < 7 and any(
             item.anchor.table
             and (item.anchor.table.header_rows is not None or item.anchor.table.caption is not None)
@@ -452,7 +457,8 @@ class Config(StrictModel):
             raise validation_error(msg("document.duplicate"))
         for item in manuscripts:
             if item.export_of is not None and not any(
-                other.entry == item.export_of and other.entry.lower().endswith((".tex", ".docx"))
+                other.entry == item.export_of
+                and other.entry.lower().endswith((".tex", ".docx", ".md", ".qmd"))
                 for other in manuscripts
             ):
                 raise validation_error(msg("pdf.export_source"))

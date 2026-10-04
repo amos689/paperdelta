@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.1.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.1.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.2.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -19,6 +19,7 @@
   <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="需要 Python 3.11 以上版本"></a>
   <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x 数据校验"></a>
   <a href="docs/zh-CN/rules.md"><img src="docs/assets/badges/latex.zh-CN.svg" alt="受支持的静态 LaTeX 输入"></a>
+  <a href="docs/zh-CN/markdown-quarto.md"><img src="docs/assets/badges/markdown.zh-CN.svg" alt="静态 Markdown 与 Quarto 源码审查"></a>
   <a href="docs/zh-CN/pdf.md"><img src="docs/assets/badges/native.zh-CN.svg" alt="可选 Word 与 PDF 读取"></a>
   <a href="docs/zh-CN/agent-guide.md"><img src="docs/assets/badges/mcp.zh-CN.svg" alt="可选的只读 MCP 工具"></a>
 </p>
@@ -37,9 +38,9 @@
 
 准确率从 **84.1% 变为 80.9%**，摘要、表格和附录仍保留旧数字，正文中
 **提高 3.1 个百分点**及**优于基线**的结论也不再成立。PaperDelta 将这些表述关联到
-明确声明的实验证据，集中展示需要复核的位置，即使 LaTeX 文件本身没有变化。
+明确声明的实验证据，集中展示需要复核的位置，即使论文文件本身没有变化。
 
-本地 Python 命令行 · LaTeX + 可选 Word/PDF · 精确十进制计算 · 离线 HTML · 可选 MCP。
+本地 Python 命令行 · LaTeX / Markdown / Quarto + 可选 Word/PDF · 精确十进制计算 · 离线 HTML · 可选 MCP。
 检查不需要模型密钥、GPU 或 TeX 安装。
 
 <p>
@@ -54,6 +55,9 @@
 [打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
 
+**1.2.0** 新增 Markdown/Quarto 静态正文与竖线表格、原始源码位置、共享证据及
+明确的源稿/PDF 比较。核心安装即可使用，[语法与只读边界](docs/zh-CN/markdown-quarto.md)有明确说明。
+
 **1.1.0** 新增 Word 脚注/尾注、常见合并表头和旋转裁切 PDF 页面支持。
 [原生试验与限制](docs/zh-CN/v1.1.md)公开首次留出的漏检与未知结果。
 
@@ -67,7 +71,7 @@
 可复现的 24 指标流程，记录的浏览器操作量从 0.6.0 的 270 次降为 103 次；
 [测量范围与原始轨迹](docs/zh-CN/v0.8.md)已公开。快照比较、持续检查和本地草稿恢复继续可用。
 运行 `paperdelta --lang zh-CN studio` 即可开始。详见
-[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v1.1.md)。界面全程支持中英文切换。
+[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v1.2.md)。界面全程支持中英文切换。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 后续发行继续采用正式版本号。
 
@@ -80,6 +84,9 @@
 试用 Word 示例：安装 `paperdelta[docx]`，然后运行
 `paperdelta --lang zh-CN demo --document docx --out word-demo --open`。
 Word 检查为只读，[支持结构与原生位置](docs/zh-CN/word.md)均有明确说明。
+
+静态源码演示可运行 `paperdelta demo --document markdown --out md-demo --open` 或
+`paperdelta demo --document quarto --out qmd-demo --open`，无需扩展或渲染器。
 
 使用 Python 3.11 以上版本，在虚拟环境中运行：
 
@@ -102,7 +109,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.1.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.2.0-py3-none-any.whl`。
 
 ## 接入已有论文
 

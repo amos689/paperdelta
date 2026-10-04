@@ -2,6 +2,10 @@
 
 [简体中文](zh-CN/pdf.md)
 
+Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
+See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
+positions, read-only limits and explicit source/PDF comparisons.
+
 PaperDelta 1.1 reads supported text-based PDFs and checks their explicitly bound
 results against declared experiment evidence. The same configuration can contain LaTeX,
 Word and PDF manuscripts. PDF and Word files remain read-only.

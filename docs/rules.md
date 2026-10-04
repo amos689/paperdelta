@@ -2,6 +2,10 @@
 
 [简体中文](zh-CN/rules.md)
 
+Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
+See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
+positions, read-only limits and explicit source/PDF comparisons.
+
 Version 1.0 statistical bindings declare seeds, n, SD convention and interval
 method explicitly. Compound displays, batch templates and read-only agents share
 the [statistical contract](statistics.md).

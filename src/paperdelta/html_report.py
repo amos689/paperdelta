@@ -80,7 +80,7 @@ def _action(item):
     if rule == "CLAIM_FALSE":
         return "html.next_claim"
     if rule == "VALUE_MISMATCH":
-        if item.get("location", {}).get("format") in {"docx", "pdf"}:
+        if item.get("location", {}).get("format") in {"docx", "pdf", "markdown", "quarto"}:
             return "document.manual_update"
         return "html.action_numeric"
     if rule in {"FIGURE_CHANGED", "PROVENANCE_UNKNOWN", "FIGURE_RECORD"}:

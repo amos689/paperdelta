@@ -28,7 +28,7 @@ from paperdelta.models import (
 
 Nonnegative = Annotated[int, Field(ge=0)]
 Positive = Annotated[int, Field(ge=1)]
-REPORT_SCHEMA_MAX = 7
+REPORT_SCHEMA_MAX = 8
 CheckStatus = Literal["pass", "mismatch", "unknown"]
 ChangeKind = Literal["added", "changed", "unchanged", "unavailable", "definition_changed"]
 
@@ -147,7 +147,38 @@ class PdfLocation(StrictModel):
         return self
 
 
-SourceLocation = LatexLocation | DocxLocation | PdfLocation
+class MarkdownLocator(StrictModel):
+    block: Hash
+    offset: Nonnegative
+    section: list[str]
+    table: Positive | None = None
+    row: Positive | None = None
+    cell: Positive | None = None
+
+    @model_validator(mode="after")
+    def complete_cell(self):
+        if any(v is not None for v in (self.table, self.row, self.cell)) and any(
+            v is None for v in (self.table, self.row, self.cell)
+        ):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+class MarkdownLocation(LatexLocation):
+    format: Literal["markdown", "quarto"]
+    parser: str = Field(min_length=1)
+    locator: MarkdownLocator
+    context: str
+
+    @model_validator(mode="after")
+    def source_suffix(self):
+        expected = ".md" if self.format == "markdown" else ".qmd"
+        if not self.file.lower().endswith(expected):
+            raise validation_error(msg("document.location"))
+        return self
+
+
+SourceLocation = LatexLocation | DocxLocation | PdfLocation | MarkdownLocation
 
 
 class EvidenceDatum(StrictModel):
@@ -650,6 +681,10 @@ class StoredReport(TimestampedRecord):
             *self.coverage.outside_scope_numbers,
             *(item.location for item in self.coverage.exclusions),
         ]
+        if self.report_schema_version < 8 and any(
+            isinstance(item, MarkdownLocation) for item in locations
+        ):
+            raise validation_error(msg("markdown.report_schema"))
         if self.report_schema_version < 7 and any(
             isinstance(item, DocxLocation)
             and (item.locator.note_id is not None or item.locator.column_span is not None)

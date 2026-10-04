@@ -79,7 +79,7 @@ remain subject to their original byte-identity and recovery checks.
 All action commands accept `--format json`, including `propose`, `fix`, `apply`,
 `recover`, `snapshot create`, `review record`, `init`, `bind`, `settings` and `doctor`.
 Their result objects retain existing result fields and add `command_result_version: 1`
-and `command`. An applied patch reports `transaction_id` directly. LaTeX, Word and PDF `check` reports use schema 2, 3 and 4 respectively; the reader accepts 1–4. Batch and
+and `command`. An applied patch reports `transaction_id` directly. LaTeX, Word and PDF `check` reports use schema 2, 3 and 4 respectively; the reader accepts 1–8. Batch and
 scope commands also support JSON; watch emits one JSON event per line. `schema` always emits JSON and `mcp`
 reserves standard output for its protocol.
 
@@ -120,3 +120,7 @@ retain their original bytes; translate their explanatory documentation instead.
 The browser opened by `paperdelta studio` switches between English and Chinese while
 preserving explicit candidate, selector and review selections. Evidence, Decimal values
 and experiment IDs do not change with language. See the [workbench guide](studio.md).
+
+Markdown/Quarto source locations require schema 8. Statistical and native layout
+features use schemas 6 and 7 respectively. Machine fields and source text remain
+language independent; [all location semantics](report-format.md) are explicit.

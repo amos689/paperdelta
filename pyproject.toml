@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "1.1.0"
+version = "1.2.0"
 description = "Review how experiment changes affect an existing research paper."
 readme = "docs/package-description.rst"
 requires-python = ">=3.11"
@@ -12,12 +12,13 @@ license = "MIT"
 license-files = ["LICENSE"]
 authors = [{name = "amos689"}]
 maintainers = [{name = "amos689", email = "101008326+amos689@users.noreply.github.com"}]
-keywords = ["latex", "docx", "pdf", "research", "reproducibility", "agents", "scientific-writing"]
+keywords = ["latex", "docx", "pdf", "markdown", "quarto", "research", "reproducibility", "agents", "scientific-writing"]
 dependencies = [
   "pydantic>=2.10,<3",
   "PyYAML>=6.0.2,<7",
   "pylatexenc>=2.11,<3",
   "mpmath>=1.4.1,<1.5",
+  "markdown-it-py>=4.2,<4.3",
 ]
 
 [project.optional-dependencies]
@@ -46,6 +47,8 @@ paperdelta = [
   "locales/*.json", "assets/*.css", "assets/*.js",
   "demo_word/*.docx", "demo_word/*.yaml", "demo_word/results/*.csv",
   "demo_pdf/*.pdf", "demo_pdf/*.tex", "demo_pdf/*.yaml", "demo_pdf/results/*.csv",
+  "demo_markdown/*.md", "demo_markdown/*.yaml", "demo_markdown/results/*.csv",
+  "demo_quarto/*.qmd", "demo_quarto/*.yaml", "demo_quarto/results/*.csv",
   "demo_project/*.yaml", "demo_project/paper/*.tex", "demo_project/results/*.csv",
   "demo_project/paper/figures/*.pdf", "demo_project/paper/figures/*.json",
   "demo_project/scripts/*.py",

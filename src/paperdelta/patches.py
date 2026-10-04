@@ -95,7 +95,7 @@ def _safe_changes(report: dict, selected: list[str] | None = None) -> list[dict]
                 )
             continue
         span = state["location"]
-        if span.get("format") in {"docx", "pdf"}:
+        if span.get("format") in {"docx", "pdf", "markdown", "quarto"}:
             if selected is not None:
                 raise PaperDeltaError(
                     "DOCUMENT_READ_ONLY", msg("document.read_only", file=span["file"])
@@ -133,7 +133,8 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
         native = [
             s.get("location", {})
             for s in current["occurrences"].values()
-            if s.get("suggestion") and s.get("location", {}).get("format") in {"docx", "pdf"}
+            if s.get("suggestion")
+            and s.get("location", {}).get("format") in {"docx", "pdf", "markdown", "quarto"}
         ]
         if native:
             raise PaperDeltaError(

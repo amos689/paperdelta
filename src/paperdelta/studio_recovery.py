@@ -44,7 +44,7 @@ def _compatible_draft(value):
     if (
         len(before) != 3
         or before > current
-        or before[:2] not in {(0, 6), (0, 7), (0, 8), (0, 9), (1, 0)}
+        or before[:2] not in {(0, 6), (0, 7), (0, 8), (0, 9), (1, 0), (1, 1)}
     ):
         raise PaperDeltaError("DRAFT_IDENTITY", msg("builder.identity"))
     return draft

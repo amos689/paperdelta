@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.1.0"><img src="docs/assets/badges/release.svg" alt="Release 1.1.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.0"><img src="docs/assets/badges/release.svg" alt="Release 1.2.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -19,6 +19,7 @@
   <a href="pyproject.toml"><img src="docs/assets/badges/python.svg" alt="Python 3.11 or newer"></a>
   <a href="pyproject.toml"><img src="docs/assets/badges/pydantic.svg" alt="Pydantic 2.x data validation"></a>
   <a href="docs/rules.md"><img src="docs/assets/badges/latex.en.svg" alt="Supported static LaTeX inputs"></a>
+  <a href="docs/markdown-quarto.md"><img src="docs/assets/badges/markdown.en.svg" alt="Static Markdown and Quarto source review"></a>
   <a href="docs/pdf.md"><img src="docs/assets/badges/native.en.svg" alt="Optional Word and PDF readers"></a>
   <a href="docs/agent-guide.md"><img src="docs/assets/badges/mcp.en.svg" alt="Optional read-only MCP tools"></a>
 </p>
@@ -39,9 +40,9 @@ An accuracy result changes from **84.1% to 80.9%**. The abstract, table and
 appendix still repeat the old number; a **3.1 percentage point** improvement and
 an **outperforms baseline** claim no longer hold. PaperDelta traces those statements
 to declared experiment evidence and brings the affected locations together for review,
-even when no LaTeX file changed.
+even when no manuscript file changed.
 
-Local Python CLI · LaTeX + optional Word/PDF · exact decimal arithmetic · offline HTML · optional MCP.
+Local Python CLI · LaTeX / Markdown / Quarto + optional Word/PDF · exact decimal arithmetic · offline HTML · optional MCP.
 Checking needs no model key, GPU or TeX installation.
 
 <p>
@@ -57,6 +58,10 @@ Playback is paced for reading.
 [Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v0.8/report.png).
 
+**1.2.0** adds static Markdown/Quarto prose and pipe tables, original source positions,
+shared evidence and explicit source/PDF comparisons. Core installation is enough;
+[syntax and read-only limits](docs/markdown-quarto.md) are explicit.
+
 **1.1.0** adds linked Word notes, common merged headers and rotated/cropped PDF pages.
 [Native study and limits](docs/v1.1.md) publish the first held-out misses and unknowns.
 
@@ -71,11 +76,14 @@ of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded brows
 interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
 Snapshot comparison, ongoing checks and local draft recovery remain available.
 Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.1.md).
+See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.2.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
 ## Install and see the first report
+
+For static source examples, use `paperdelta demo --document markdown --out md-demo --open`
+or `paperdelta demo --document quarto --out qmd-demo --open`. No extra or renderer is needed.
 
 For the source/PDF example, install `paperdelta[pdf]` and run
 `paperdelta demo --document pdf --out pdf-demo --open`.
@@ -110,7 +118,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.1.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.2.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 

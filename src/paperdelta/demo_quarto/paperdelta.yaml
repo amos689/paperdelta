@@ -1,0 +1,96 @@
+schema_version: 8
+paper:
+  entry: paper.qmd
+  macros: {}
+rounding: half_up
+sources:
+  results:
+    path: results/metrics.csv
+    format: csv
+    primary_key:
+    - model
+    - seed
+    columns:
+      model: string
+      seed: integer
+      accuracy: decimal
+metrics:
+  accuracy:
+    source: results
+    field: accuracy
+    where:
+      model: Ours
+    reduce: mean
+    expected_seeds:
+    - 1
+    - 2
+    - 3
+    seed_column: seed
+    expected_count: 3
+    unit: fraction
+  baseline:
+    source: results
+    field: accuracy
+    where:
+      model: Baseline
+    reduce: unique
+    seed_column: seed
+    expected_count: 1
+    unit: fraction
+occurrences:
+  abstract_accuracy:
+    file: paper.qmd
+    anchor:
+      prefix: Our method achieves **
+      suffix: '** accuracy on Data-A.'
+      block: sha256:22656833f8818022896a19a0632f2214439ab7ea2fbcb83a39fd27f17acd87f0
+    metric: accuracy
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: true
+  table_accuracy:
+    file: paper.qmd
+    anchor:
+      table:
+        headers:
+        - Method & Accuracy (%)
+        row_prefix:
+        - Ours
+        column: 1
+        percent_symbol: false
+    metric: accuracy
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: false
+  table_baseline:
+    file: paper.qmd
+    anchor:
+      table:
+        headers:
+        - Method & Accuracy (%)
+        row_prefix:
+        - Baseline
+        column: 1
+        percent_symbol: false
+    metric: baseline
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: false
+claims:
+  main_comparison:
+    file: paper.qmd
+    anchor:
+      exact: Our method outperforms Baseline on Data-A.
+    predicate:
+      op: greater_than
+      left: accuracy
+      right: baseline
+      candidates: []
+      allow_ties: false
+    scope: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

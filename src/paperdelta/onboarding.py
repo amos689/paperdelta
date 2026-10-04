@@ -192,7 +192,9 @@ def init_project(
     macros: dict[str, int] | None = None,
 ) -> dict:
     config = Config(
-        schema_version=1
+        schema_version=8
+        if paper.lower().endswith((".md", ".qmd"))
+        else 1
         if paper.lower().endswith(".tex")
         else 4
         if paper.lower().endswith(".pdf")

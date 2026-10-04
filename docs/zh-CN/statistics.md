@@ -2,8 +2,11 @@
 
 [English](../statistics.md)
 
+静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、只读边界和
+明确的源稿/PDF 比较见 [Markdown/Quarto 源码支持](markdown-quarto.md)。
+
 PaperDelta 1.0 可以针对同一组明确标识的观测，检查均值、标准差 SD、标准误 SE、样本数、
-置信水平和区间，并在 LaTeX、Word、PDF 中绑定完整的“均值 ± 离散程度”或“[下端点, 上端点]”。
+置信水平和区间，并在 LaTeX、Word、PDF、Markdown、Quarto 中绑定完整的“均值 ± 离散程度”或“[下端点, 上端点]”。
 `±` 的含义由用户声明，程序不根据数值猜测。
 
 从[五种子示例](../../examples/seed-statistics/README.zh-CN.md)开始。CSV、TSV、静态 Excel
@@ -114,7 +117,7 @@ occurrences:
 
 `paperdelta guide`、`paperdelta batch guide`、JSON 绑定提案及可选 MCP 草稿/批量工具
 共用相同契约，MCP 保持只读。复合锚点失效时，在修复界面选择其**第一个数字**，再检查
-提案中的完整表达式后接受。LaTeX 修改沿用预览、备份和事务机制；Word/PDF 保持只读。
+提案中的完整表达式后接受。LaTeX 修改沿用预览、备份和事务机制；Word/PDF/Markdown/Quarto 保持只读。
 
 ## 数值与兼容性边界
 

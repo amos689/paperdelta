@@ -17,7 +17,10 @@ def register_commands(commands):
     demo = commands.add_parser("demo", help=tr("demo.help"))
     demo.add_argument("--out", default="paperdelta-demo", help=tr("demo.out"))
     demo.add_argument(
-        "--document", choices=["latex", "docx", "pdf"], default="latex", help=tr("demo.document")
+        "--document",
+        choices=["latex", "docx", "pdf", "markdown", "quarto"],
+        default="latex",
+        help=tr("demo.document"),
     )
     demo.add_argument(
         "--scenario",
@@ -34,7 +37,7 @@ def create_demo(
 ) -> dict:
     if scenario not in {"changed", "baseline", "safe-update"}:
         raise PaperDeltaError("DEMO_SCENARIO", msg("demo.invalid_scenario"))
-    if document not in {"latex", "docx", "pdf"}:
+    if document not in {"latex", "docx", "pdf", "markdown", "quarto"}:
         raise PaperDeltaError("DOCUMENT_FORMAT", msg("document.format", file=document))
     if document == "docx":
         from paperdelta.docx_document import DocxDocument
@@ -67,7 +70,13 @@ def create_demo(
 
     copy_resources(
         files("paperdelta").joinpath(
-            {"latex": "demo_project", "docx": "demo_word", "pdf": "demo_pdf"}[document]
+            {
+                "latex": "demo_project",
+                "docx": "demo_word",
+                "pdf": "demo_pdf",
+                "markdown": "demo_markdown",
+                "quarto": "demo_quarto",
+            }[document]
         )
     )
     if document == "pdf":
@@ -136,7 +145,7 @@ def run_command(project, arguments):
         print(
             tr(
                 "document.manual_update"
-                if arguments.document in {"docx", "pdf"}
+                if arguments.document in {"docx", "pdf", "markdown", "quarto"}
                 else "demo." + arguments.scenario
             )
         )

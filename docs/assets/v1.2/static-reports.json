@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "language": "en",
+      "status": "passed",
+      "source_bindings": 3,
+      "exports": [
+        {
+          "export_bindings": [
+            "export_table_accuracy",
+            "export_abstract_accuracy"
+          ],
+          "file": "export.pdf",
+          "metric": "accuracy",
+          "source": "paper.qmd",
+          "source_bindings": [
+            "abstract_accuracy",
+            "table_accuracy"
+          ],
+          "status": "stale"
+        },
+        {
+          "export_bindings": [
+            "export_table_baseline"
+          ],
+          "file": "export.pdf",
+          "metric": "baseline",
+          "source": "paper.qmd",
+          "source_bindings": [
+            "table_baseline"
+          ],
+          "status": "aligned"
+        }
+      ],
+      "language_preserves_filters": true,
+      "original_pdf_unchanged": true,
+      "offline": true,
+      "mobile_overflow": false,
+      "static_fallback": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "language": "zh-CN",
+      "status": "passed",
+      "source_bindings": 3,
+      "exports": [
+        {
+          "export_bindings": [
+            "export_table_accuracy",
+            "export_abstract_accuracy"
+          ],
+          "file": "export.pdf",
+          "metric": "accuracy",
+          "source": "paper.qmd",
+          "source_bindings": [
+            "abstract_accuracy",
+            "table_accuracy"
+          ],
+          "status": "stale"
+        },
+        {
+          "export_bindings": [
+            "export_table_baseline"
+          ],
+          "file": "export.pdf",
+          "metric": "baseline",
+          "source": "paper.qmd",
+          "source_bindings": [
+            "table_baseline"
+          ],
+          "status": "aligned"
+        }
+      ],
+      "language_preserves_filters": true,
+      "original_pdf_unchanged": true,
+      "offline": true,
+      "mobile_overflow": false,
+      "static_fallback": true,
+      "errors": [],
+      "remote_requests": []
+    }
+  ]
+}

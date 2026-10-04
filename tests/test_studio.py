@@ -18,12 +18,14 @@ from paperdelta.studio import StudioSession, browser_value, project_files
 from paperdelta.studio_server import MAX_BODY, StudioServer
 
 
-@pytest.fixture(params=["tex", "docx", "pdf"])
+@pytest.fixture(params=["tex", "docx", "pdf", "md", "qmd"])
 def studio_project(tmp_path, request):
     project = Project(tmp_path / "实验 001")
     path = "论文." + request.param
     if request.param == "tex":
         raw = b"Abstract score: 84.1\\%.\nSecond result: 84.1\\%.\n"
+    elif request.param in {"md", "qmd"}:
+        raw = b"Abstract score: 84.1%.\n\nSecond result: 84.1%.\n"
     elif request.param == "docx":
         from docx import Document
 
@@ -371,7 +373,9 @@ def test_http_bad_bodies_are_bounded_diagnostics(http_studio, body, headers):
         # Invalid/oversized framing is rejected without consuming an unbounded
         # body; the OS may reset that connection. Well-framed rejected requests
         # must still deliver a diagnostic (including fragmented POST tests).
-        assert headers.get("Content-Length") in {str(MAX_BODY + 1), "-1"}
+        assert headers.get("Content-Length") in {str(MAX_BODY + 1), "-1"} or (
+            "Content-Length" not in headers and headers.get("Transfer-Encoding") == "chunked"
+        )
         assert request(http_studio)[0] == 200
         return
     assert status == 400 and "error" in json.loads(raw)

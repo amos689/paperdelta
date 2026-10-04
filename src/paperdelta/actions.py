@@ -27,7 +27,7 @@ def review_actions(report):
                 "review_claims"
                 if state.get("suggestion", {}).get("blocked_by")
                 else "update_document"
-                if state.get("location", {}).get("format") in {"docx", "pdf"}
+                if state.get("location", {}).get("format") in {"docx", "pdf", "markdown", "quarto"}
                 else "update_numbers"
             )
         elif group == "claim" and rule == "CLAIM_FALSE":

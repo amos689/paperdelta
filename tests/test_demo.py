@@ -78,3 +78,28 @@ def test_demo_never_overwrites_an_existing_destination_or_escapes_project(tmp_pa
     assert not (tmp_path.parent / "escape").exists()
     create_demo(Project(tmp_path), "new", "baseline")
     assert check_project(tmp_path / "new")["exit_code"] == 0
+
+
+@pytest.mark.parametrize("kind", ["markdown", "quarto"])
+@pytest.mark.parametrize("language", ["en", "zh-CN"])
+@pytest.mark.parametrize("scenario", ["baseline", "changed", "safe-update"])
+def test_static_source_demos_run_in_both_languages_without_writing_source(
+    tmp_path, kind, language, scenario
+):
+    from importlib.resources import files
+
+    from paperdelta.i18n import language_context
+
+    with language_context(language):
+        result = create_demo(Project(tmp_path), "demo", scenario, kind)
+    project = Project(tmp_path / "demo")
+    source = "paper." + ("md" if kind == "markdown" else "qmd")
+    report = parse_json(project.text("review/report.json")[0])
+    assert report["report_schema_version"] == 8
+    assert result["patch"] is None
+    assert project.read(source) == files("paperdelta").joinpath("demo_" + kind, source).read_bytes()
+    assert f'<html lang="{language}"' in project.text("review/report.html")[0]
+    assert report["exit_code"] == (0 if scenario == "baseline" else 1)
+    if scenario == "changed":
+        assert report["coverage"]["mismatch"] == 3
+        assert report["claims"]["main_comparison"]["status"] == "mismatch"

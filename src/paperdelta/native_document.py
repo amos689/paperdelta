@@ -1,4 +1,4 @@
-"""Read-only text models with native positions, never writable byte offsets."""
+"""Read-only text models with format-specific positions and shared reviewed anchors."""
 
 from __future__ import annotations
 

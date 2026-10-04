@@ -2,6 +2,9 @@
 
 [English](../agent-guide.md)
 
+静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、只读边界和
+明确的源稿/PDF 比较见 [Markdown/Quarto 源码支持](markdown-quarto.md)。
+
 1.0 的统计绑定要求明确声明种子、n、SD 约定和区间方法；复合显示、批量模板与
 只读智能体共用契约，详见[统计指南](statistics.md)。
 
