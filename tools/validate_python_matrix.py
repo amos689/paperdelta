@@ -35,11 +35,41 @@ print(json.dumps({
 """
 
 
+def run_suite(command, timeout):
+    try:
+        return subprocess.run(
+            command,
+            cwd=ROOT,
+            capture_output=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=timeout,
+            check=False,
+        )
+    except subprocess.TimeoutExpired as exc:
+        # communicate() can return bytes on timeout even in text mode. Keep the
+        # partial diagnostics and a failing receipt instead of losing both.
+        def decoded(value):
+            if isinstance(value, bytes):
+                return value.decode("utf-8", errors="replace")
+            return value or ""
+
+        return subprocess.CompletedProcess(
+            command,
+            124,
+            decoded(exc.stdout),
+            decoded(exc.stderr) + f"\nFull test suite timed out after {timeout} seconds.\n",
+        )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--python", action="append", required=True)
     parser.add_argument("--out", required=True)
+    parser.add_argument("--timeout-seconds", type=int, default=480)
     args = parser.parse_args()
+    if not 1 <= args.timeout_seconds <= 1800:
+        parser.error("--timeout-seconds must be between 1 and 1800")
     out = (ROOT / args.out).resolve()
     assert out.is_relative_to(ROOT) and not out.exists(), "Choose a new local output directory"
     out.mkdir(parents=True)
@@ -82,21 +112,14 @@ def main():
             str(junit),
         ]
         print(f"Python {record['python']}: full installed-package suite", flush=True)
-        completed = subprocess.run(
-            command,
-            cwd=ROOT,
-            capture_output=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=240,
-            check=False,
-        )
+        completed = run_suite(command, args.timeout_seconds)
         stdout = completed.stdout.replace(str(ROOT), "<checkout>")
         stderr = completed.stderr.replace(str(ROOT), "<checkout>")
         (case / "stdout.log").write_text(stdout, encoding="utf-8")
         (case / "stderr.log").write_text(stderr, encoding="utf-8")
         print(stdout[-900:], flush=True)
         record["exit_code"] = completed.returncode
+        record["suite_timeout_seconds"] = args.timeout_seconds
         record["junit"] = junit.relative_to(ROOT).as_posix()
         if junit.exists():
             suites = ET.parse(junit).getroot().findall(".//testsuite")
