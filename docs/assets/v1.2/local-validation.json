@@ -1,0 +1,280 @@
+{
+  "version": "1.2.1",
+  "source_suite": {
+    "tests": 758,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 755,
+    "junit_sha256": "2e6ef4f290d9e6f8bb961dc400fa8f9cc9f663a2b9a65ea6162bb08f3905ef43",
+    "version": "1.2.0"
+  },
+  "new_browser_flows": 14,
+  "browser_records": [
+    "studio-browser.json",
+    "statistics-browser.json",
+    "static-reports.json"
+  ],
+  "frozen_native_replay": "native-replay.json",
+  "documentation": {
+    "pairs": 55,
+    "pages": 111,
+    "local_links": 1002
+  },
+  "scope": "Authored regressions and recorded Windows browser runs; not independent user or general parser accuracy measurements.",
+  "final_installed_validation": {
+    "started_at": "2026-10-04T13:29:06.290788+00:00",
+    "host": {
+      "system": "Windows",
+      "release": "11",
+      "machine": "AMD64",
+      "python": "3.12.14",
+      "macos_version": null,
+      "rosetta_translated": null
+    },
+    "wheel": {
+      "name": "paperdelta-1.2.1-py3-none-any.whl",
+      "sha256": "a3874494cbfaa92ee831a405bdcf9843b95969d27d3b05f2097413f56c505287"
+    },
+    "commands": [
+      {
+        "step": "install-core",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-core\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "<checkout>\\build\\release-v1.2.1-candidate\\paperdelta-1.2.1-py3-none-any.whl"
+        ],
+        "exit_code": 0,
+        "seconds": 1.75
+      },
+      {
+        "step": "core-smoke",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-core\\Scripts\\python.exe",
+          "-X",
+          "utf8",
+          "tools/package_smoke.py",
+          "--out",
+          "build\\v121-installed\\core-smoke.json"
+        ],
+        "exit_code": 0,
+        "seconds": 5.735
+      },
+      {
+        "step": "install-full",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "<checkout>\\build\\release-v1.2.1-candidate\\paperdelta-1.2.1-py3-none-any.whl[dev,mcp,wandb]"
+        ],
+        "exit_code": 0,
+        "seconds": 11.312
+      },
+      {
+        "step": "lint",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-m",
+          "ruff",
+          "check",
+          "src",
+          "tests",
+          "tools"
+        ],
+        "exit_code": 0,
+        "seconds": 0.641
+      },
+      {
+        "step": "format",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "src",
+          "tests",
+          "tools"
+        ],
+        "exit_code": 0,
+        "seconds": 0.047
+      },
+      {
+        "step": "tests",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-X",
+          "utf8",
+          "tools/validate_python_matrix.py",
+          "--python",
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "--out",
+          "build\\v121-installed\\suite"
+        ],
+        "exit_code": 0,
+        "seconds": 351.984
+      },
+      {
+        "step": "examples",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-X",
+          "utf8",
+          "tools/validate_examples.py",
+          "--out",
+          "build\\v121-installed\\examples"
+        ],
+        "exit_code": 0,
+        "seconds": 1.125
+      },
+      {
+        "step": "ci-demo",
+        "args": [
+          "<checkout>\\build\\v121-installed\\venv-full\\Scripts\\python.exe",
+          "-X",
+          "utf8",
+          "tools/demo_ci.py",
+          "--out",
+          "build\\v121-installed\\ci-demo"
+        ],
+        "exit_code": 0,
+        "seconds": 1.156
+      }
+    ],
+    "status": "passed",
+    "scope": "Actual installed-wheel execution on the recorded host, not independent users.",
+    "suite": {
+      "checked_at": "2026-10-04T13:35:20.986539+00:00",
+      "host": "Windows-11-10.0.26200-SP0",
+      "results": [
+        {
+          "python": "3.12.14",
+          "platform": "Windows-11-10.0.26200-SP0",
+          "implementation": "CPython",
+          "installed_package": true,
+          "versions": {
+            "paperdelta": "1.2.1",
+            "pydantic": "2.13.5",
+            "PyYAML": "6.0.3",
+            "pylatexenc": "2.11",
+            "mcp": "2.3.0",
+            "pytest": "9.1.1"
+          },
+          "installed_sources_sha256": {
+            "__init__.py": "3070923e937166a6dca4187b5fc868f83343ec32f41d5015fbd81397d054f9f2",
+            "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+            "actions.py": "836d836d596f010cee7216021c160190fd7d0e40cf59ff2a4662f8a58934ae53",
+            "agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+            "analysis.py": "9289cc3ccf27b3469163f7aa8a0d9a32c0f5a669db829f09882b9bdaa195317b",
+            "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+            "assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+            "assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+            "assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+            "assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+            "assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+            "assets/studio.css": "a930b61337abd345226f2f9e43c2118abe8b5db80967467c7cdafe9178c26ee9",
+            "assets/studio.js": "17f113d19539f16d139b24fe11d4c840411c345fe89349cdf0f0ecfc257c7013",
+            "batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+            "batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+            "batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+            "builder.py": "0a43681504b35294fade7bb505e7948d8b6e7962cedc6ec9ff6f0369415c3667",
+            "cli.py": "89a8ad2c3d1fba3f1e68b8cb55510c7a1b39d710bee9c81dda2b260b11e8935b",
+            "config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+            "config_versions.py": "8c1f3980eaab641afdb439862fadbe5412127b8aa32b89b44e42af54d1df9dde",
+            "coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+            "declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+            "demo.py": "c1bf45bd5f8b9bbeacc6175a08dfedd5b49095496230581af1d0071955bc7406",
+            "demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+            "demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+            "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+            "documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+            "docx_document.py": "5ad7d25f218a9083a5cfeb3c7e3d27cab7ad9d507f52d7bfb944481c6d38221e",
+            "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+            "evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+            "evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+            "experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+            "experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+            "guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+            "html_report.py": "e6acc88488197fbf65d65a96e6f90a3a4c4f7f9393485272feb0a4e73618386c",
+            "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+            "interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+            "latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+            "locales/en.json": "a91073b75e0099f44590861796b1f852cbcdcd2473c79415bca156f23668febd",
+            "locales/zh-CN.json": "c879f93d3a75bd2231f903f93f989d8cb7b8f687b35a951348755b596f890aad",
+            "locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+            "manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+            "markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+            "mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+            "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+            "models.py": "43d4f4588434ea9105eeb1bf1908d8373e6483e7900fd844f5c136c565cf17fd",
+            "native_document.py": "1eed25f53575717387f5ceccf8e7a17822b5bb81cdcae33d3dd1f061f46edac5",
+            "onboarding.py": "b238e799b2c19f6a0842ca378601482e5307e2f93d304aa732989abad4582f75",
+            "patches.py": "93eb89bba01d58d774f9f3417d95cfee15749814c51ae0bca4130a31e2176b37",
+            "pdf_document.py": "087d2c46bec4dec9a0d642b6259bdf95d5b395bb54dd8a8575ee71459b3ff96d",
+            "pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+            "pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+            "pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+            "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+            "records.py": "10bbc5dd3675a78fa342897020924e6203ff77364a0f502bc1b75227194bafa4",
+            "repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+            "reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+            "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+            "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+            "sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+            "statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+            "statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+            "statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+            "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+            "studio.py": "7512e8f5d5990111cc0d77f24307135e10608d452862d6c48595286eabfc4691",
+            "studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+            "studio_recovery.py": "11adecab72ab47986efa76478d8766ca2075c2dee6ca43774de0380476724e33",
+            "studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+            "studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+            "studio_ui.py": "27e5592576f8d817659da52b0ed646503ad5a451f8a4ddb4d7a8c85d80a74a2c",
+            "tables.py": "0a6477451ef1c0a294b418b7f4f3d0412c398dcb499834607f6668ec47c54b11",
+            "watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+            "word_tables.py": "88978d9e0afc9474940eaca2d8f0f37b6793e473c0ff8bb92f3aa563cf91cb45",
+            "xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7"
+          },
+          "exit_code": 0,
+          "suite_timeout_seconds": 480,
+          "junit": "build/v121-installed/suite/3.12.14/junit.xml",
+          "tests": {
+            "tests": 758,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 3
+          },
+          "seconds": 350.948
+        }
+      ],
+      "system": "Windows",
+      "libc": [
+        "",
+        ""
+      ],
+      "scope": "Local installed-package runs on the recorded host; not remote CI or usability evidence."
+    },
+    "finished_at": "2026-10-04T13:35:23.326412+00:00"
+  },
+  "browser_runtime_version": "1.2.0",
+  "patch_runtime_equivalence": {
+    "total_runtime_files": 95,
+    "unchanged_files": 94,
+    "only_changed_file": "paperdelta/__init__.py",
+    "change": "Version constant 1.2.0 to 1.2.1 only"
+  },
+  "strict_distribution_description_check": "passed",
+  "first_publication_attempt": {
+    "version": "1.2.0",
+    "workflow": "https://github.com/amos689/paperdelta/actions/runs/37205566107",
+    "outcome": "PyPI upload skipped after strict RST heading rendering check failed",
+    "correction": "1.2.1 widens the bilingual heading underline and adds the check to normal CI"
+  }
+}

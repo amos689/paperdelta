@@ -12,7 +12,7 @@ capabilities have shipped. The starting release is 0.6.0 at `c133956`.
 | 0.9 | TSV and Excel static result tables, normalized experiment exports, MLflow and W&B adapters; preserve source snapshots, run/step/checkpoint/seed/split identities, upstream precision and missingness; offline checking after explicit import | Released 0.9.0; see delivery record below |
 | 1.0 | Explicit mean/standard-deviation/sample-count contracts, missing-seed checks, compound uncertainty displays, declared confidence interval methods/levels; verify statistical conventions and do not infer significance from larger means | Released 1.0.0; see delivery record below |
 | 1.1 | Licensed real Word/PDF sample suite with development and held-out cases; common merged table headers, footnotes, rotated/cropped PDF pages and reliable layout handling; publish supported, missed, mislocated and unknown results | Released 1.1.0; see delivery record below |
-| 1.2 | Static Markdown and Quarto prose/tables with original locations, shared evidence model, explicit source/export checks, clear treatment of dynamic execution and unsupported constructs | In development |
+| 1.2 | Static Markdown and Quarto prose/tables with original locations, shared evidence model, explicit source/export checks, clear treatment of dynamic execution and unsupported constructs | Released 1.2.1; see delivery record below |
 
 ## 0.7 delivery sequence
 
@@ -91,7 +91,7 @@ Released at `169a3bee0c152ec6a2168426793489547b2bb5b8`:
 [publication receipt](assets/v1.0/publication.json). The installed Windows suite
 passed 596 tests with three POSIX-only skips; eight statistical browser flows
 passed. Public distributions matched release hashes and both language demos ran
-in a fresh installation. Version 1.1 and 1.2 remain separately required.
+in a fresh installation. Versions 1.1 and 1.2 have separate delivery records below.
 
 ## 1.1 delivery record
 
@@ -104,3 +104,21 @@ passed 625 tests with three POSIX-only skips. Eight new bilingual layout browser
 flows passed. The frozen native replay reproduced all 128 original outcomes;
 [development and first held-out failures](v1.1.md) remain public. Public hashes
 match, and both language demos ran in a fresh public-package installation.
+
+## 1.2 delivery record
+
+The 1.2.0 GitHub release failed the strict PyPI description rendering check before upload. Version 1.2.1 corrects that heading and checks description rendering in normal CI; the original tag and failed run are retained.
+
+Released at `eee7d663057cda78e1f461a0f95083204eb7cfaf`:
+[17 CI checks](https://github.com/amos689/paperdelta/actions/runs/37205758394),
+[GitHub release](https://github.com/amos689/paperdelta/releases/tag/v1.2.1),
+[PyPI](https://pypi.org/project/paperdelta/1.2.1/) and
+[publication receipt](assets/v1.2/publication.json). The final Windows installed
+suite passed 755 tests with three POSIX-only skips. Fourteen new bilingual browser
+flows passed; the frozen native replay retained every original outcome. The tested
+and published wheels have 101 identical internal files. Public distribution hashes
+match; a fresh core installation ran LaTeX, Markdown and Quarto demos in both
+languages. [Local evidence](assets/v1.2/local-validation.json) and
+[static-source limits](v1.2.md) distinguish authored regressions from general accuracy.
+
+All six approved releases, 0.7 through 1.2, have now been delivered.
