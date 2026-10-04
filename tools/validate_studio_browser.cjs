@@ -100,6 +100,7 @@ async function click(page, selector) { await page.locator(selector).click(); awa
         await page.screenshot({ path: path.join(out, name + "-evidence.png"), fullPage: true });
         await click(page, 'nav [data-step=locations]');
         const boxes = page.locator('.candidate:has(mark:text-is("84.1")) input[type=checkbox]');
+        await boxes.first().waitFor({ state: "visible" });
         assert.equal(await boxes.count(), 2);
         await boxes.nth(0).check(); await ready(page);
         await boxes.nth(1).check(); await ready(page);

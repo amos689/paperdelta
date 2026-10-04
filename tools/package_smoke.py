@@ -110,6 +110,11 @@ def main():
             assert response.status == 200 and b"draft-import" in response.read()
             connection.close()
             connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=10)
+            connection.request("GET", "/studio-review.js")
+            response = connection.getresponse()
+            assert response.status == 200 and b"recovery-rebuild" in response.read()
+            connection.close()
+            connection = http.client.HTTPConnection("127.0.0.1", server.server_port, timeout=10)
             connection.request(
                 "POST",
                 "/api",

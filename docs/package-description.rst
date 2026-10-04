@@ -92,16 +92,18 @@ scans and unreliable content remain unverified. No OCR is performed.
 `PDF guide <https://github.com/amos689/paperdelta/blob/main/docs/pdf.md>`_ ·
 `PDF 中文指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/pdf.md>`_
 
-Visual binding workbench / 可视化绑定工作台
+Research review Studio / 论文审查工作台
 --------------------------------------------------------------------
 
 Run ``paperdelta studio`` inside a project to inspect evidence, calculate metrics,
 select LaTeX/Word/PDF positions and explicitly save reviewed bindings. The local
-browser interface supports English/Chinese, draft download/restore and original-PDF
+browser interface supports English/Chinese, snapshot comparison, ongoing review,
+declaration maintenance, position repair, durable draft recovery and original-PDF
 point selection. No Node.js, cloud account or model key is needed.
 
 在项目中运行 ``paperdelta --lang zh-CN studio``，即可在本地浏览器查看证据、计算指标、
-选择 LaTeX/Word/PDF 位置并明确确认绑定。支持中英文、草稿下载/恢复和 PDF 原页点选，
+选择 LaTeX/Word/PDF 位置并明确确认绑定。支持中英文、快照比较、日常审查、声明维护、
+位置修复、持久草稿恢复和 PDF 原页点选，
 无需 Node.js、云账号或模型密钥。
 
 `Workbench guide <https://github.com/amos689/paperdelta/blob/main/docs/studio.md>`_ ·

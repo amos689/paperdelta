@@ -27,6 +27,14 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_studio_browser.cjs build/studio-browser
+      - name: Test bilingual ongoing review and restart recovery
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_review_browser.cjs build/studio-review-browser
+      - name: Measure complete candidate search and large-project interaction
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_studio_scale.cjs build/studio-scale
       - name: Keep browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -35,6 +43,12 @@ jobs:
           path: |
             build/studio-browser/evidence.json
             build/studio-browser/*.png
+            build/studio-review-browser/evidence.json
+            build/studio-review-browser/*.png
+            build/studio-review-browser/*-errors.json
+            build/studio-scale/evidence.json
+            build/studio-scale/*.png
+            build/studio-scale/*-errors.json
           if-no-files-found: warn
 
   test:

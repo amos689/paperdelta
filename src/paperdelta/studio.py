@@ -11,6 +11,7 @@ import csv
 import io
 import os
 import secrets
+from copy import deepcopy
 from decimal import Decimal
 from pathlib import Path
 from typing import Annotated, Literal
@@ -19,6 +20,16 @@ from pydantic import Field
 
 from paperdelta import __version__, builder
 from paperdelta.analysis import check_project
+from paperdelta.config import load_config
+from paperdelta.declarations import (
+    DeclarationEdit,
+    Group,
+    accept_maintenance,
+    declaration_fields,
+    dependents,
+    field_replacement,
+    propose_maintenance,
+)
 from paperdelta.errors import PaperDeltaError
 from paperdelta.html_report import html_report
 from paperdelta.i18n import language_context, msg, translated
@@ -43,10 +54,19 @@ from paperdelta.onboarding import (
 from paperdelta.patches import _write_lock
 from paperdelta.pdf_previews import pdf_previews
 from paperdelta.records import validate_record
+from paperdelta.repairs import (
+    RepairSelection,
+    accept_repairs,
+    inspect_repair,
+    propose_repairs,
+    scan_repairs,
+)
 from paperdelta.sources import EvidenceStore
-from paperdelta.storage import Project, json_text, sha256
+from paperdelta.storage import Project, fingerprint, json_text, sha256
+from paperdelta.studio_recovery import DraftRecovery, migrate_draft, rebuild_draft
+from paperdelta.studio_review import StudioReview
 
-MAX_CANDIDATES = 5000
+MAX_CANDIDATES = 30
 
 
 class Empty(StrictModel):
@@ -115,6 +135,68 @@ class ImportDraft(StrictModel):
     draft: dict
 
 
+class CandidateQuery(StrictModel):
+    query: str = Field(default="", max_length=1000)
+    file: str | None = Field(default=None, max_length=1000)
+    include_bound: bool = False
+    offset: int = Field(default=0, ge=0, le=10000000)
+    limit: int = Field(default=30, ge=1, le=100)
+    page: int | None = Field(default=None, ge=1, le=200)
+
+
+class MaintenanceInput(StrictModel):
+    edits: list[DeclarationEdit] = Field(min_length=1, max_length=200)
+
+
+class DefinitionField(StrictModel):
+    path: list[str] = Field(min_length=1, max_length=5)
+    value_json: str = Field(max_length=150000)
+
+
+class MaintenanceFields(StrictModel):
+    group: Group
+    name: Identifier
+    fields: list[DefinitionField] = Field(min_length=1, max_length=300)
+    rationale: str = Field(min_length=1, max_length=4000)
+
+
+class ProposalIdentity(StrictModel):
+    proposal_id: str
+
+
+class RepairInput(StrictModel):
+    selections: list[RepairSelection] = Field(min_length=1, max_length=200)
+
+
+class RepairAccept(StrictModel):
+    repair_id: str
+    selected: list[str] = Field(min_length=1, max_length=200)
+
+
+class SnapshotName(StrictModel):
+    name: str = Field(min_length=1, max_length=80)
+
+
+class BaselineName(StrictModel):
+    name: str | None = Field(default=None, max_length=80)
+
+
+class ClaimReview(StrictModel):
+    claim: Identifier
+    state: str
+    reviewer: str = Field(min_length=1, max_length=200)
+    note: str = Field(min_length=1, max_length=4000)
+    attest: Literal[True]
+
+
+class RecoveryIdentity(StrictModel):
+    record_id: str
+
+
+class RecoverySelection(RecoveryIdentity):
+    selected: list[str] = Field(min_length=1, max_length=500)
+
+
 PARAMETERS = {
     "state": Empty,
     "refresh": Empty,
@@ -131,6 +213,25 @@ PARAMETERS = {
     "report": Empty,
     "draft-export": Empty,
     "draft-import": ImportDraft,
+    "candidates": CandidateQuery,
+    "poll": Empty,
+    "review": Empty,
+    "snapshot-create": SnapshotName,
+    "baseline": BaselineName,
+    "claim-review": ClaimReview,
+    "declarations": Empty,
+    "maintenance-preview": MaintenanceInput,
+    "maintenance-fields": MaintenanceFields,
+    "maintenance-accept": ProposalIdentity,
+    "repair-scan": Empty,
+    "repair-preview": RepairInput,
+    "repair-accept": RepairAccept,
+    "recovery-restore": Empty,
+    "recovery-discard": RecoveryIdentity,
+    "recovery-export": Empty,
+    "recovery-items": Empty,
+    "recovery-preview": RecoverySelection,
+    "recovery-rebuild": ProposalIdentity,
 }
 
 
@@ -191,6 +292,14 @@ class StudioSession:
         self.preview = None
         self.history = []
         self.receipt = None
+        self._cached_state = None
+        self._all_candidates = None
+        self.maintenance = None
+        self.repair = None
+        self.rebuild = None
+        self.recovery_archive = None
+        self.recovery = DraftRecovery(project, self.config_path)
+        self.reviewer = StudioReview(project, self.config_path)
         self.refresh()
 
     def refresh(self):
@@ -205,10 +314,15 @@ class StudioSession:
         self.draft, self.scan, self.report = draft, scan, report
         self.history = []
         self._advance()
+        if report is not None:
+            self.reviewer.seed(report)
 
     def _advance(self):
         self.revision = secrets.token_hex(16)
         self.proposal = self.preview = None
+        self.maintenance = self.repair = None
+        self.rebuild = None
+        self._cached_state = self._all_candidates = None
 
     def _require_draft(self):
         if self.draft is None:
@@ -218,6 +332,7 @@ class StudioSession:
     def _stage(self, draft):
         if sum(len(items) for items in draft["additions"].values()) > 500:
             raise PaperDeltaError("STUDIO_LIMIT", msg("studio.stage_limit"))
+        self.recovery.save(draft)
         self.history = [*self.history[-19:], self.draft]
         self.draft = draft
         self._advance()
@@ -233,11 +348,21 @@ class StudioSession:
             "receipt": self.receipt,
             "preview": self.preview,
             "stale": False,
+            "input_identity": fingerprint(self.draft["input_hashes"]) if self.draft else None,
+            "review": self.reviewer.summary(),
+            "recovery": self.recovery.status(),
+            "maintenance": self.maintenance[1] if self.maintenance else None,
+            "repair": self.repair[1] if self.repair else None,
+            "rebuild": self.rebuild[2] if self.rebuild else None,
+            "recovery_archive": self.recovery_archive,
         }
         if self.draft is None:
             result["files"] = project_files(self.project)
             return result
         try:
+            if self._cached_state is not None:
+                builder._unchanged(self.project, self.draft["input_hashes"])
+                return {**deepcopy(self._cached_state), **result}
             draft, config = self._require_draft()
         except PaperDeltaError as exc:
             result.update(stale=True, error=exc.code, message=exc.message)
@@ -264,7 +389,7 @@ class StudioSession:
         for name, occurrence in draft.additions.occurrences.items():
             location = paper.document(occurrence.file).locate(occurrence.anchor).to_dict()
             occupied.append((name, location))
-        for candidate in self.scan["candidates"][:MAX_CANDIDATES]:
+        for candidate in self.scan["candidates"]:
             bound = [
                 name
                 for name, location in occupied
@@ -274,11 +399,13 @@ class StudioSession:
             ]
             candidates.append({**candidate, "label": location_label(candidate), "bound": bound})
         builder.resume_draft(self.project, self.draft)
+        self._all_candidates = candidates
         result.update(
             sources={name: source.model_dump() for name, source in config.sources.items()},
             discovered_sources=self.scan["sources"],
             metrics=metrics,
-            candidates=candidates,
+            candidates=candidates[:MAX_CANDIDATES],
+            candidate_files=sorted({item["file"] for item in candidates}),
             candidate_total=len(self.scan["candidates"]),
             candidate_limit=MAX_CANDIDATES,
             unsupported=self.scan["unsupported"],
@@ -286,7 +413,53 @@ class StudioSession:
             coverage=self.report["coverage"],
             check_exit_code=self.report["exit_code"],
         )
+        self._cached_state = deepcopy(result)
         return result
+
+    def candidates(self, query):
+        state = self.state()
+        if state["stale"]:
+            self._require_draft()
+        items = self._all_candidates or []
+        text = query["query"].casefold().strip()
+        chosen = [
+            item
+            for item in items
+            if (not query["file"] or item["file"] == query["file"])
+            and (query["include_bound"] or not item["bound"])
+            and (query["page"] is None or item.get("locator", {}).get("page") == query["page"])
+            and (
+                not text
+                or text
+                in " ".join(
+                    str(item.get(key, ""))
+                    for key in ("file", "text", "context_before", "context_after")
+                ).casefold()
+            )
+        ]
+        start = query["offset"]
+        return {
+            "items": chosen[start : start + query["limit"]],
+            "total": len(chosen),
+            "offset": start,
+            "limit": query["limit"],
+            "revision": self.revision,
+        }
+
+    def _require_clean(self):
+        self._require_draft()
+        if any(self.draft["additions"].values()):
+            raise PaperDeltaError("STUDIO_STAGED", msg("studio.finish_draft"))
+
+    def _after_accept(self):
+        try:
+            self.recovery.save(None)
+        except PaperDeltaError as exc:
+            self.receipt["recovery_error"] = exc.message
+        try:
+            self.refresh()
+        except PaperDeltaError:
+            self._advance()
 
     def execute(self, value):
         request = validate_record(Request, value, "STUDIO_REQUEST")
@@ -294,7 +467,7 @@ class StudioSession:
         if model is None:
             raise PaperDeltaError("STUDIO_REQUEST", msg("studio.unknown_action"))
         parameters = validate_record(model, request.payload, "STUDIO_REQUEST").model_dump()
-        if request.action != "state" and request.revision != self.revision:
+        if request.action not in {"state", "poll", "review"} and request.revision != self.revision:
             raise PaperDeltaError("STUDIO_REVISION", msg("studio.revision"))
         with language_context(request.language):
             result = self._execute(request.action, parameters)
@@ -303,7 +476,91 @@ class StudioSession:
     def _execute(self, action, parameters):
         if action == "state":
             return {"state": self.state()}
+        if action == "poll":
+            updated, summary = self.reviewer.poll()
+            if (
+                updated
+                and summary["state"] == "current"
+                and self.draft is not None
+                and not any(self.draft["additions"].values())
+            ):
+                try:
+                    builder._unchanged(self.project, self.draft["input_hashes"])
+                except PaperDeltaError:
+                    try:
+                        self.refresh()
+                    except PaperDeltaError:
+                        pass  # The independent review still exposes incomplete/partial saves.
+            stale = False
+            if self.draft is not None:
+                try:
+                    builder._unchanged(self.project, self.draft["input_hashes"])
+                except PaperDeltaError:
+                    stale = True
+            return {
+                "review": self.reviewer.summary(),
+                "revision": self.revision,
+                # A busy tab may miss the first event. Keep reporting the current
+                # draft status, including changed sources not yet accepted.
+                "stale": stale,
+            }
+        if action == "review":
+            return self.reviewer.detail()
+        if action == "draft-export":
+            if self.draft is None:
+                self._require_draft()
+            return {"json": json_text(self.draft)}
+        if action == "recovery-export":
+            return {"json": self.recovery.export()}
+        if action == "recovery-items":
+            record = self.recovery.read()
+            if record is None or record.draft is None:
+                raise PaperDeltaError("STUDIO_RECOVERY_EMPTY", msg("recovery.empty"))
+            return {
+                "record_id": record.record_id,
+                "status": self.recovery.status(),
+                "items": [
+                    {"id": f"{group}:{name}", "definition_json": json_text(definition)}
+                    for group, items in record.draft["additions"].items()
+                    for name, definition in items.items()
+                ],
+            }
+        if action == "recovery-preview":
+            record = self.recovery.select_record(parameters["record_id"])
+            rebuilt, preview = rebuild_draft(self.project, record.draft, parameters["selected"])
+            proposal_id = fingerprint({"record": record.record_id, "draft": rebuilt})
+            self._advance()
+            self.rebuild = (record.record_id, rebuilt, {**preview, "proposal_id": proposal_id})
+            return {"state": self.state()}
+        if action == "recovery-rebuild":
+            if self.rebuild is None or self.rebuild[2]["proposal_id"] != parameters["proposal_id"]:
+                raise PaperDeltaError("STUDIO_PREVIEW", msg("studio.preview_required"))
+            record_id, draft, _ = self.rebuild
+            builder.resume_draft(self.project, draft)
+            self.recovery.claim_record(record_id)
+            self.recovery_archive = self.recovery.archive()
+            self.refresh()
+            self._stage(draft)
+            return {"state": self.state()}
+        if action == "recovery-restore":
+            self._stage(self.recovery.restore())
+            return {"state": self.state()}
+        if action == "recovery-discard":
+            self.recovery.discard(parameters["record_id"])
+            return {"state": self.state()}
+        if action == "baseline":
+            self.reviewer.select_baseline(parameters["name"])
+            return self.reviewer.detail()
+        if action == "snapshot-create":
+            result = self.reviewer.create_snapshot(parameters["name"])
+            return {"snapshot": result, **self.reviewer.detail()}
+        if action == "claim-review":
+            parameters.pop("attest")
+            receipt = self.reviewer.attest(**parameters)
+            return {"receipt": receipt, **self.reviewer.detail()}
         if action == "refresh":
+            if self.draft and any(self.draft["additions"].values()):
+                self.recovery_archive = self.recovery.archive()
             self.refresh()
         elif action == "initialize":
             if self.draft is not None:
@@ -330,6 +587,105 @@ class StudioSession:
             return {"source": {**summary, "hash": identity}}
         else:
             self._require_draft()
+            if action == "candidates":
+                return self.candidates(parameters)
+            if action == "declarations":
+                config, _ = load_config(self.project, self.config_path)
+                return {
+                    "items": [
+                        {
+                            "id": f"{group}:{name}",
+                            "group": group,
+                            "name": name,
+                            "definition": definition.model_dump(),
+                            "definition_json": json_text(definition.model_dump()),
+                            "fields": declaration_fields(definition.model_dump()),
+                            "dependents": [
+                                identity
+                                for identity in dependents(config, [f"{group}:{name}"])
+                                if identity != f"{group}:{name}"
+                            ],
+                            "state": self.report.get(group, {}).get(name),
+                        }
+                        for group in ("sources", "metrics", "occurrences", "claims", "figures")
+                        for name, definition in getattr(config, group).items()
+                    ]
+                }
+            if action == "maintenance-fields":
+                self._require_clean()
+                replacement = field_replacement(
+                    self.project,
+                    parameters["group"],
+                    parameters["name"],
+                    parameters["fields"],
+                    config_path=self.config_path,
+                )
+                return self._execute(
+                    "maintenance-preview",
+                    {
+                        "edits": [
+                            {
+                                "group": parameters["group"],
+                                "name": parameters["name"],
+                                "operation": "replace",
+                                "definition_json": replacement,
+                                "rationale": parameters["rationale"],
+                            }
+                        ]
+                    },
+                )
+            if action in {
+                "maintenance-preview",
+                "maintenance-accept",
+                "repair-preview",
+                "repair-accept",
+            }:
+                self._require_clean()
+                if action == "maintenance-preview":
+                    proposal, preview = propose_maintenance(
+                        self.project, parameters["edits"], config_path=self.config_path
+                    )
+                    self._advance()
+                    self.maintenance = (
+                        proposal,
+                        {**preview, "proposal_id": proposal["proposal_id"]},
+                    )
+                elif action == "maintenance-accept":
+                    if (
+                        self.maintenance is None
+                        or self.maintenance[0]["proposal_id"] != parameters["proposal_id"]
+                    ):
+                        raise PaperDeltaError("STUDIO_PREVIEW", msg("studio.preview_required"))
+                    self.receipt = accept_maintenance(self.project, self.maintenance[0])
+                    self.receipt["bindings"] = [item["id"] for item in self.receipt["changes"]]
+                    self._after_accept()
+                elif action == "repair-preview":
+                    proposal = propose_repairs(
+                        self.project,
+                        parameters["selections"],
+                        config_path=self.config_path,
+                        baseline=self.reviewer.watcher.baseline,
+                    )
+                    _, _, preview = inspect_repair(self.project, proposal)
+                    self._advance()
+                    self.repair = (proposal, preview)
+                else:
+                    if (
+                        self.repair is None
+                        or self.repair[0]["repair_id"] != parameters["repair_id"]
+                    ):
+                        raise PaperDeltaError("STUDIO_PREVIEW", msg("studio.preview_required"))
+                    self.receipt = accept_repairs(
+                        self.project, self.repair[0], parameters["selected"]
+                    )
+                    self._after_accept()
+                return {"state": self.state()}
+            if action == "repair-scan":
+                result = scan_repairs(
+                    self.project, self.config_path, self.reviewer.watcher.baseline
+                )
+                # Positions are searched through the same paginated candidate endpoint.
+                return {key: value for key, value in result.items() if key != "candidates"}
             if action in {"source", "metric", "derived", "locations"}:
                 if action == "source":
                     if sha256(self.project.read(parameters["path"])) != parameters.pop(
@@ -346,6 +702,7 @@ class StudioSession:
             elif action == "undo":
                 if not self.history:
                     raise PaperDeltaError("STUDIO_UNDO", msg("studio.no_undo"))
+                self.recovery.save(self.history[-1])
                 self.draft = self.history.pop()
                 self._advance()
             elif action == "preview":
@@ -393,10 +750,7 @@ class StudioSession:
                 self.receipt = accept_bindings(self.project, self.proposal, parameters["selected"])
                 # The write succeeded even if the next scan encounters a concurrent
                 # edit. Return that receipt so clients never mistake it for failure.
-                try:
-                    self.refresh()
-                except PaperDeltaError:
-                    self._advance()
+                self._after_accept()
             elif action == "page":
                 locations = [
                     item
@@ -414,7 +768,17 @@ class StudioSession:
                     "coverage": {"unbound_numbers": locations},
                     "input_hashes": self.draft["input_hashes"],
                 }
-                return {"preview": pdf_previews(self.project, report, max_pages=1)}
+                self.state()
+                return {
+                    "preview": pdf_previews(self.project, report, max_pages=1),
+                    "candidates": [
+                        item
+                        for item in self._all_candidates or []
+                        if item.get("format") == "pdf"
+                        and item["file"] == parameters["file"]
+                        and item["locator"]["page"] == parameters["page"]
+                    ][:500],
+                }
             elif action == "report":
                 from paperdelta.i18n import current_language
 
@@ -423,10 +787,10 @@ class StudioSession:
                     "html": html_report(report, previews=pdf_previews(self.project, report)),
                     "language": current_language(),
                 }
-            elif action == "draft-export":
-                return {"json": json_text(self.draft)}
             elif action == "draft-import":
-                draft, _ = builder.resume_draft(self.project, parameters["draft"])
+                draft, _ = builder.resume_draft(
+                    self.project, migrate_draft(self.project, parameters["draft"])
+                )
                 if (
                     draft.config_path != self.config_path
                     or draft.additions.claims

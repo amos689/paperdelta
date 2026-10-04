@@ -44,7 +44,8 @@ paperdelta --lang zh-CN -C paper-project check --report build/paperdelta
 放入摘要。必要检查不完整是退出 2，不能当作成功。适配器生成含声明变化及当前发现
 的 `ci-summary.md`；存在 `GITHUB_STEP_SUMMARY` 时自动追加，遵循 GitHub 的
 [作业摘要接口](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-job-summary)。
-GitHub 发行版提供安装产物，目前没有包索引发行版。
+正式安装包同时发布到 PyPI 和 GitHub Releases。CI 中应固定 PaperDelta 版本，明确
+安排工具升级；从 GitHub 下载产物时可用 SHA256SUMS 核对。
 
 CSV/JSON、图表、来源记录、配置和 LaTeX 的相关变化都应触发检查。不要只展示 Git
 diff 内的 LaTeX 行：`test_data_only_change_finds_every_affected_span_and_false_claim`

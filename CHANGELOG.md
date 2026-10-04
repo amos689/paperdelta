@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.7.0 — ongoing review in Studio
+
+- Compare experiments with named snapshots and grouped evidence, numeric, claim and figure impacts.
+- Preview edits and dependent removals of accepted declarations, with exact fields and configuration backups.
+- Repair numeric and claim positions visually; record reviews without turning failed claims into passes.
+- Continuously recheck stable inputs, preserve staged drafts across restarts, and explicitly rebuild selected work after input changes.
+- Search every scanned candidate with pagination; keep cross-page selections and paginate large metric/impact lists.
+- Add bilingual second-experiment browser flows, recovery/partial-save regressions and reproducible scale measurements.
+
+See the [0.7 release and upgrade guide](docs/v0.7.md).
+
 ## 0.6.0 — local visual binding workbench
 
 - Add `studio`: initialize projects, inspect CSV/JSON, declare metrics and select paper positions in a local browser.

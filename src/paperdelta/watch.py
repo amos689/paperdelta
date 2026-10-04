@@ -30,11 +30,13 @@ class Watcher:
         baseline=None,
         debounce=0.5,
         publish=None,
+        write_output=True,
     ):
         self.project, self.config_path = project, config_path
         self.directory = project.relative(project.path(directory))
         self.baseline, self.debounce = baseline, debounce
         self.publish = publish or (lambda report: None)
+        self.write_output = write_output
         self.previous = None
         self.seen = None
         self.due = None
@@ -43,6 +45,8 @@ class Watcher:
 
     def inputs(self, extra=()):
         paths = {self.config_path, *extra}
+        if self.baseline is not None:
+            paths.add(snapshot_path(self.baseline))
         if self.previous:
             paths.update(self.previous["input_hashes"])
         if self.baseline:
@@ -153,7 +157,8 @@ class Watcher:
             for name in ("report.json", "report.html", "report.md")
         ):
             raise PaperDeltaError("REPORT_OVERWRITE", msg("error.REPORT_OVERWRITE"))
-        write_reports(self.project, self.directory, value)
+        if self.write_output:
+            write_reports(self.project, self.directory, value)
         self.publish(value)
         self.previous = value
         return value

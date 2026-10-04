@@ -61,7 +61,8 @@ The supplied adapter instead writes a combined `ci-summary.md` with declaration
 changes and current findings, and appends it automatically when
 `GITHUB_STEP_SUMMARY` is present. This follows GitHub's
 [job-summary file interface](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands#adding-a-job-summary).
-GitHub releases provide installation artifacts; no package-index release is available.
+Stable packages are available on PyPI and GitHub Releases. Pin the PaperDelta version
+in CI so tool upgrades are deliberate; use GitHub's SHA256SUMS to verify downloaded artifacts.
 
 Trigger checks for relevant CSV/JSON, figure, source-record, configuration and
 LaTeX changes. Do not filter reports to changed LaTeX lines: the regression

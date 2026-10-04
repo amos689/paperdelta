@@ -5,7 +5,7 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light"><title>PaperDelta Studio</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="/studio.css">
-<script src="/studio.js" defer></script></head><body>
+<script src="/studio-review.js" defer></script><script src="/studio.js" defer></script></head><body>
 <header><div class="brand"><span class="brand-mark" aria-hidden="true">Δ</span>
 <div><strong>PaperDelta<span class="dot">.</span></strong><span data-i18n="workbench"></span></div></div>
 <div class="header-right"><span id="project" class="project"></span>
@@ -26,6 +26,36 @@ PAGE = """<!doctype html>
 <div id="discovered-files" class="chips"></div><p id="file-limit" hidden data-i18n="file_limit"></p>
 <button type="submit" data-i18n="initialize"></button></form></section>
 <div id="workspace" hidden>
+<nav class="workspace-tabs" aria-label="Studio"><button id="open-review" data-mode="review" data-i18n="ongoing_review"></button><button id="open-binding" data-mode="binding" data-i18n="add_bindings"></button></nav>
+<section id="recovery-banner" class="notice warning" hidden><strong data-i18n="recovery_title"></strong><p id="recovery-description"></p>
+<div class="tools"><button id="restore-local" data-i18n="restore_local"></button><button id="open-rebuild" class="secondary" data-i18n="rebuild_draft"></button><button id="export-recovery" class="secondary" data-i18n="export_recovery"></button><button id="discard-recovery" class="secondary" data-i18n="discard_recovery"></button></div>
+<div id="rebuild-work" hidden><p data-i18n="rebuild_hint"></p><div id="rebuild-items"></div><button id="preview-rebuild" data-i18n="preview_rebuild"></button></div>
+<div id="rebuild-preview"></div><div id="rebuild-confirm" hidden><label class="check attest"><input id="rebuild-attest" type="checkbox"><span data-i18n="rebuild_attest"></span></label><button id="accept-rebuild" data-i18n="accept_rebuild" disabled></button></div></section>
+<div id="review-workspace" hidden>
+<section class="panel"><div class="section-heading"><div><p class="eyebrow" data-i18n="review_eyebrow"></p><h2 data-i18n="ongoing_title"></h2></div><span id="watch-state" role="status"></span></div>
+<details id="watch-details"><summary id="watch-changes"></summary><ul id="watch-paths" class="muted"></ul></details><div id="ongoing-counts" class="counts"></div>
+<div class="snapshot-controls"><label><span data-i18n="compare_snapshot"></span><select id="baseline-select"></select></label>
+<form id="snapshot-form"><label><span data-i18n="snapshot_name"></span><input name="name" required maxlength="80" pattern="[A-Za-z0-9](?:[A-Za-z0-9_.]|-){0,79}" placeholder="submitted-v1"></label><button type="submit" data-i18n="create_snapshot"></button></form></div>
+<p class="muted" data-i18n="snapshot_hint"></p><div id="review-actions" class="chips"></div></section>
+<section class="panel"><h2 data-i18n="impact_title"></h2><label><span data-i18n="search"></span><input id="impact-search" type="search"></label><div id="impact-groups"></div><div id="impact-pages" class="pagination"></div><div id="ongoing-diagnostics"></div><div id="removed-bindings"></div></section>
+<section class="panel"><div class="section-heading"><h2 data-i18n="manage_title"></h2><button id="load-declarations" class="secondary" data-i18n="load_declarations"></button></div>
+<p data-i18n="manage_hint"></p><label><span data-i18n="search"></span><input id="declaration-search" type="search"></label><div id="declaration-list"></div>
+<form id="declaration-form" hidden><h3 id="declaration-name"></h3><div id="declaration-fields" class="form-grid"></div>
+<label class="check"><input id="remove-declaration" type="checkbox"><span data-i18n="remove_declaration"></span></label>
+<fieldset id="remove-dependents" hidden><legend data-i18n="dependent_declarations"></legend><p data-i18n="dependent_removal_hint"></p><div id="dependent-choices"></div></fieldset>
+<label><span data-i18n="rationale"></span><textarea id="declaration-reason" required maxlength="4000"></textarea></label>
+<button type="submit" data-i18n="preview_maintenance"></button></form>
+<div id="maintenance-preview"></div><div id="maintenance-confirm" hidden><label class="check attest"><input id="maintenance-attest" type="checkbox"><span data-i18n="maintenance_attest"></span></label><button id="accept-maintenance" data-i18n="accept_maintenance" disabled></button></div></section>
+<section class="panel"><div class="section-heading"><h2 data-i18n="repair_title"></h2><button id="scan-repairs" class="secondary" data-i18n="scan_repairs"></button></div><p data-i18n="repair_hint"></p>
+<div id="repair-work" hidden><label><span data-i18n="broken_binding"></span><select id="repair-binding"></select></label><pre id="repair-old"></pre>
+<div id="repair-numeric"><form id="repair-search-form"><label><span data-i18n="search"></span><input id="repair-query" type="search"></label><button type="submit" class="secondary" data-i18n="search_locations"></button></form><div id="repair-candidates"></div><div id="repair-pages" class="pagination"></div><div id="repair-page" class="repair-page" hidden></div></div>
+<div id="repair-claim" hidden><label><span data-i18n="file"></span><input id="repair-file"></label><label><span data-i18n="claim_wording"></span><textarea id="repair-wording"></textarea></label></div>
+<form id="repair-form"><label><span data-i18n="rationale"></span><textarea id="repair-reason" required maxlength="4000"></textarea></label><button type="submit" data-i18n="preview_repair"></button></form></div>
+<div id="repair-preview"></div><div id="repair-confirm" hidden><label class="check attest"><input id="repair-attest" type="checkbox"><span data-i18n="repair_attest"></span></label><button id="accept-repair" data-i18n="accept_repair" disabled></button></div></section>
+<section class="panel"><h2 data-i18n="claim_review_title"></h2><p data-i18n="claim_review_hint"></p><div id="claim-list"></div>
+<form id="claim-review-form" hidden><h3 id="claim-review-name"></h3><label><span data-i18n="reviewer"></span><input id="claim-reviewer" required maxlength="200"></label><label><span data-i18n="review_note"></span><textarea id="claim-note" required maxlength="4000"></textarea></label>
+<label class="check attest"><input id="claim-attest" type="checkbox" required><span data-i18n="claim_attest"></span></label><button type="submit" data-i18n="record_claim_review"></button></form></section>
+</div><div id="binding-workspace">
 <div class="toolbar"><div id="counts" class="counts"></div><div class="tools">
 <button id="refresh" class="secondary" data-i18n="refresh"></button>
 <button id="undo" class="secondary" data-i18n="undo"></button>
@@ -47,7 +77,7 @@ PAGE = """<!doctype html>
 <div id="source-sample"></div><div id="source-pages" class="pagination"></div>
 <label><span data-i18n="source_name"></span><input name="name" required pattern="[A-Za-z](?:[A-Za-z0-9_.]|-){0,99}" placeholder="experiment"></label>
 <div id="column-types"></div><button type="submit" data-i18n="stage_source"></button></form></details>
-</section><section class="panel"><h2 data-i18n="metrics"></h2><div id="metric-list"></div>
+</section><section class="panel"><h2 data-i18n="metrics"></h2><label><span data-i18n="search"></span><input id="metric-search" type="search"></label><div id="metric-list"></div><div id="metric-pages" class="pagination"></div>
 <details id="add-metric"><summary data-i18n="add_metric"></summary><form id="metric-form">
 <label><span data-i18n="metric_name"></span><input name="name" required pattern="[A-Za-z](?:[A-Za-z0-9_.]|-){0,99}" placeholder="ours_accuracy"></label>
 <div class="form-row"><label><span data-i18n="source"></span><select name="source" required></select></label>
@@ -86,5 +116,5 @@ PAGE = """<!doctype html>
 <section id="step-review" class="step" hidden><section class="panel"><div class="section-heading"><div><h2 data-i18n="review_title"></h2><p data-i18n="review_hint"></p></div><button id="preview" data-i18n="preview"></button></div>
 <div id="draft-summary"></div><div id="review-items"></div><div id="review-diagnostics"></div>
 <div id="accept-controls" hidden><label class="check attest"><input id="attest" type="checkbox"><span data-i18n="attest"></span></label><button id="accept" data-i18n="accept" disabled></button><p class="muted" data-i18n="accept_hint"></p></div></section></section>
-</div></main><footer><span>PaperDelta <span id="version"></span></span><span data-i18n="footer"></span></footer>
+</div></div></main><footer><span>PaperDelta <span id="version"></span></span><span data-i18n="footer"></span></footer>
 </body></html>"""

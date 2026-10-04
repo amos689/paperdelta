@@ -21,6 +21,9 @@
   if (!Object.hasOwn(strings, language)) language = "en";
   let state, busy = false, sourcePreview, sourcePath, pageIndex = 0, pdfPage, pdfKey;
   let activeStep = "evidence", previewIdentity;
+  let reviewWorkbench, candidatePage, candidateKey, candidatePending, candidateRequest, candidateSequence = 0, searchTimer;
+  let pdfCandidates = [];
+  let metricOffset = 0;
   const selected = new Set(), accepted = new Set();
   const t = (key, params = {}) => (strings[language][key] || key).replace(/\{(\w+)\}/g, (_, k) => params[k] ?? "");
   const text = (value) => typeof value === "string" ? value : JSON.stringify(value, null, 2);
@@ -72,24 +75,33 @@
         try { update((await api("state")).state); } catch (_) { /* Keep the original diagnostic. */ }
       }
     } finally {
+      // State changes start a candidate read. Finish that view before exposing
+      // the next action; an obsolete response must never repopulate the list.
+      while (candidateRequest) {
+        const pending = candidateRequest; await pending;
+        if (pending === candidateRequest) break;
+      }
       busy = false; document.body.classList.remove("busy"); document.body.removeAttribute("aria-busy");
     }
   }
   function update(next) {
+    if (state && next.revision !== state.revision) {
+      if (next.input_identity !== state.input_identity) selected.clear();
+      for (const candidate of next.candidates || []) if (candidate.bound.length) selected.delete(candidate.candidate_id);
+      candidatePage = null; candidateKey = candidatePending = null; candidateSequence++;
+      pdfKey = pdfPage = null; pdfCandidates = []; $("pdf-panel").hidden = true;
+    }
     state = next;
     if (next.preview?.proposal_id !== previewIdentity) {
       previewIdentity = next.preview?.proposal_id; accepted.clear(); $("attest").checked = false;
     }
-    if (!next.stale && next.candidates) {
-      for (const id of selected) if (!next.candidates.some((item) => item.candidate_id === id && !item.bound.length)) selected.delete(id);
-    }
     render();
   }
   async function change(action, payload = {}) { update((await api(action, payload)).state); }
-  function table(rows, columns) {
+  function table(rows, columns, labels = {}) {
     const wrapper = node("div", undefined, "table-scroll"), tab = node("table");
     const head = node("tr");
-    for (const col of columns) head.append(node("th", col));
+    for (const col of columns) head.append(node("th", labels[col] || col));
     const thead = node("thead"); thead.append(head); tab.append(thead);
     const body = node("tbody");
     for (const row of rows) { const tr = node("tr"); for (const col of columns) tr.append(node("td", text(row[col] ?? ""))); body.append(tr); }
@@ -109,7 +121,11 @@
     box.append(node("p", item.result.value + " · " + t(item.result.unit), "metric-value"));
     const def = item.definition;
     box.append(node("p", def.op ? `${t(def.op)}: ${def.args.join(" → ")}` : `${def.source} · ${def.field} · ${t(def.reduce)}`));
-    if (def.where && Object.keys(def.where).length) box.append(node("pre", text(def.where)));
+    if (def.where && Object.keys(def.where).length) {
+      const selectors = node("dl", undefined, "selector-summary");
+      for (const [key, value] of Object.entries(def.where)) selectors.append(node("dt", key), node("dd", text(value)));
+      box.append(selectors);
+    }
     const details = node("details"); details.append(node("summary", t("evidence_rows")));
     for (const evidence of item.result.evidence || []) {
       details.append(node("p", evidence.path || evidence.source || ""));
@@ -118,7 +134,7 @@
         const view = node("div"), pages = node("div", undefined, "pagination");
         const show = (offset) => {
           const rows = records.slice(offset, offset + 50);
-          view.replaceChildren(table(rows, [...new Set(rows.flatMap((row) => Object.keys(row)))]));
+          view.replaceChildren(table(rows, [...new Set(rows.flatMap((row) => Object.keys(row)))], { key: t("record_key"), value: t("record_value"), line: t("record_line") }));
           pageButtons(pages, offset, records.length, 50, show);
         };
         show(0); details.append(view, pages);
@@ -131,9 +147,11 @@
     $("project").textContent = state.project;
     $("setup").hidden = state.initialized;
     $("workspace").hidden = !state.initialized;
+    reviewWorkbench?.render(state);
     $("stale").hidden = !state.stale;
     $("undo").disabled = !state.can_undo || state.stale;
-    for (const id of ["save-draft", "load-draft", "download-report", "preview"]) $(id).disabled = state.stale;
+    for (const id of ["load-draft", "download-report", "preview"]) $(id).disabled = state.stale;
+    $("save-draft").disabled = !state.initialized;
     for (const id of ["source-form", "metric-form", "derived-form", "locations-form"]) $(id).querySelector("button[type=submit]").disabled = state.stale;
     if (!state.initialized) {
       $("paper-files").replaceChildren(); $("discovered-files").replaceChildren();
@@ -166,24 +184,31 @@
       const view = node("button", t("inspect_source"), "link-button"); view.onclick = () => task(() => inspectSource(source.path)); card.append(view); $("source-list").append(card);
     }
     if (!Object.keys(state.sources).length) $("source-list").append(node("p", t("no_sources"), "empty"));
-    $("metric-list").replaceChildren();
-    for (const [name, metric] of Object.entries(state.metrics)) {
-      const card = node("div", undefined, "metric-card"); card.append(node("strong", name), metricDetails(metric)); $("metric-list").append(card);
-    }
-    if (!Object.keys(state.metrics).length) $("metric-list").append(node("p", t("no_metrics"), "empty"));
+    renderMetrics();
     const sourceSelect = field("metric-form", "source"), previousSource = sourceSelect.value;
     options(sourceSelect, Object.keys(state.sources), false, t("choose"));
     if (previousSource !== sourceSelect.value || !$("selectors").children.length) renderSelectors();
     for (const [form, name] of [["derived-form", "left"], ["derived-form", "right"], ["locations-form", "metric"]]) options(field(form, name), Object.keys(state.metrics), false, t("choose"));
-    options($("file-filter"), [...new Set(state.candidates.map((item) => item.file))], false, t("all_files"));
+    options($("file-filter"), state.candidate_files || [...new Set(state.candidates.map((item) => item.file))], false, t("all_files"));
     renderCandidates(); renderSelectedMetric(); renderReview();
     $("unsupported-list").replaceChildren();
     for (const issue of state.unsupported) $("unsupported-list").append(node("p", `${issue.file} · ${issue.code}\n${issue.message}`, "issue"));
     if (!state.unsupported.length) $("unsupported-list").append(node("p", t("no_unsupported"), "muted"));
-    $("candidate-limit").hidden = state.candidate_total <= state.candidate_limit;
-    $("candidate-limit").textContent = t("candidate_limit", { count: state.candidate_limit, total: state.candidate_total });
+    $("candidate-limit").hidden = true;
     paintPdf();
   }
+  function renderMetrics() {
+    const query = $("metric-search").value.toLowerCase();
+    const entries = Object.entries(state.metrics).filter(([name]) => name.toLowerCase().includes(query));
+    if (metricOffset >= entries.length) metricOffset = 0;
+    $("metric-list").replaceChildren();
+    for (const [name, metric] of entries.slice(metricOffset, metricOffset + 20)) {
+      const card = node("div", undefined, "metric-card"); card.append(node("strong", name), metricDetails(metric)); $("metric-list").append(card);
+    }
+    if (!entries.length) $("metric-list").append(node("p", t("no_metrics"), "empty"));
+    pageButtons($("metric-pages"), metricOffset, entries.length, 20, (offset) => { metricOffset = offset; renderMetrics(); });
+  }
+  $("metric-search").oninput = () => { metricOffset = 0; renderMetrics(); };
   function setStep(step) {
     activeStep = step;
     for (const name of ["evidence", "locations", "review"]) $("step-" + name).hidden = name !== step;
@@ -246,13 +271,31 @@
     renderCandidates(); paintPdf();
   }
   function renderCandidates() {
-    if (!state?.candidates) return;
+    if (!state?.candidates || state.stale) return;
+    const query = { query: $("search").value, file: $("file-filter").value || null, include_bound: $("show-bound").checked, offset: pageIndex * 30, limit: 30 };
+    const key = JSON.stringify([state.revision, language, query]);
+    if (candidateKey !== key) {
+      if (candidatePending !== key) {
+        candidatePending = key; const sequence = ++candidateSequence;
+        $("candidates").replaceChildren(node("p", t("loading_locations"), "muted"));
+        candidateRequest = api("candidates", query).then((result) => {
+          if (sequence !== candidateSequence || result.revision !== state.revision) return;
+          candidatePage = result; candidateKey = key; candidatePending = null; renderCandidates();
+        }).catch(async (err) => {
+          if (sequence !== candidateSequence) return;
+          candidatePending = null;
+          if (err.code?.startsWith("STALE_") || err.code === "STUDIO_REVISION") {
+            const latest = await api("state");
+            if (sequence === candidateSequence) update(latest.state);
+          } else error(err);
+        }).catch(error);
+      }
+      return;
+    }
     const focused = document.activeElement?.closest(".candidate")?.dataset.candidate;
-    const query = $("search").value.trim().toLowerCase(), file = $("file-filter").value;
-    const candidates = state.candidates.filter((item) => (!file || item.file === file) && ($("show-bound").checked || !item.bound.length) && (!query || [item.context_before, item.text, item.context_after, item.file].join(" ").toLowerCase().includes(query)));
-    pageIndex = Math.min(pageIndex, Math.max(0, Math.ceil(candidates.length / 30) - 1));
+    const candidates = candidatePage.items;
     $("candidates").replaceChildren(); $("selection-count").textContent = t("selected_count", { count: selected.size });
-    for (const item of candidates.slice(pageIndex * 30, pageIndex * 30 + 30)) {
+    for (const item of candidates) {
       const card = node("article", undefined, "candidate" + (selected.has(item.candidate_id) ? " selected" : "") + (item.bound.length ? " bound" : ""));
       card.dataset.candidate = item.candidate_id;
       const top = node("div", undefined, "candidate-top"), label = node("label", undefined, "check"), checkbox = node("input");
@@ -265,7 +308,7 @@
       card.append(top, context); $("candidates").append(card);
     }
     if (!candidates.length) $("candidates").append(node("p", t("no_locations"), "empty"));
-    pageButtons($("candidate-pages"), pageIndex * 30, candidates.length, 30, (offset) => { pageIndex = offset / 30; renderCandidates(); $("candidates").scrollIntoView({ block: "start" }); });
+    pageButtons($("candidate-pages"), candidatePage.offset, candidatePage.total, candidatePage.limit, (offset) => { pageIndex = offset / 30; renderCandidates(); $("candidates").scrollIntoView({ block: "start" }); });
     if (focused) for (const card of $("candidates").children) if (card.dataset.candidate === focused) card.querySelector("input")?.focus({ preventScroll: true });
   }
   function renderSelectedMetric() {
@@ -277,7 +320,7 @@
     const key = item.file + ":" + item.locator.page;
     if (pdfKey !== key) {
       const response = await api("page", { file: item.file, page: item.locator.page });
-      pdfPage = response.preview.pages[0]; pdfKey = key;
+      pdfPage = response.preview.pages[0]; pdfCandidates = response.candidates; pdfKey = key;
     }
     $("pdf-panel").hidden = false; paintPdf();
     if (reveal) $("pdf-panel").scrollIntoView({ block: "start" });
@@ -292,7 +335,7 @@
     box.append(image);
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const [x0, y0, x1, y1] = pdfPage.page_box.map(Number); svg.setAttribute("viewBox", `${x0} ${y0} ${x1 - x0} ${y1 - y0}`);
-    for (const item of state.candidates.filter((c) => c.format === "pdf" && c.file === pdfPage.file && c.locator.page === pdfPage.page).slice(0, 500)) {
+    for (const item of pdfCandidates) {
       const rect = document.createElementNS(svg.namespaceURI, "rect"), [x, y, right, bottom] = item.locator.bbox.map(Number);
       rect.dataset.pdfCandidate = item.candidate_id;
       for (const [key, val] of Object.entries({ x, y, width: right - x, height: bottom - y, rx: 1, tabindex: item.bound.length ? -1 : 0, role: "checkbox", "aria-checked": selected.has(item.candidate_id), "aria-disabled": !!item.bound.length, "aria-label": item.text + " · " + item.label })) rect.setAttribute(key, val);
@@ -365,7 +408,7 @@
     });
   };
   for (const id of ["file-filter", "show-bound"]) $(id).onchange = () => { pageIndex = 0; renderCandidates(); };
-  $("search").oninput = () => { pageIndex = 0; renderCandidates(); };
+  $("search").oninput = () => { clearTimeout(searchTimer); searchTimer = setTimeout(() => { pageIndex = 0; renderCandidates(); }, 180); };
   $("clear-selection").onclick = () => { selected.clear(); renderCandidates(); paintPdf(); };
   $("preview").onclick = () => task(async () => { await change("preview"); notice(t("preview_ready")); });
   $("attest").onchange = updateAccept;
@@ -396,10 +439,12 @@
     $("column-types").querySelectorAll("input").forEach((el) => el.setAttribute("aria-label", t("key_column", { column: el.dataset.column })));
     $("column-types").querySelectorAll("select").forEach((el) => el.setAttribute("aria-label", t("type_column", { column: el.dataset.column })));
     const keyHint = $("column-types").querySelector("p"); if (keyHint) keyHint.textContent = t("primary_key_hint");
+    await reviewWorkbench.localize();
   });
   window.addEventListener("beforeunload", (event) => {
     if (state?.additions && Object.values(state.additions).some((group) => Object.keys(group).length)) { event.preventDefault(); event.returnValue = ""; }
   });
+  reviewWorkbench = window.createPaperDeltaReview({ t, node, api, task, update, download, pageButtons, metricDetails, state: () => state, busy: () => busy });
   localize(); setStep(activeStep);
-  await task(async () => { update((await api("state")).state); });
+  await task(async () => { update((await api("state")).state); if (state.initialized) await reviewWorkbench.load(); });
 })();
