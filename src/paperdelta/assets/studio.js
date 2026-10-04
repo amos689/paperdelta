@@ -21,7 +21,7 @@
   if (!Object.hasOwn(strings, language)) language = "en";
   let state, busy = false, sourcePreview, sourcePath, pageIndex = 0, pdfPage, pdfKey;
   let activeStep = "evidence", previewIdentity;
-  let reviewWorkbench, candidatePage, candidateKey, candidatePending, candidateRequest, candidateSequence = 0, searchTimer;
+  let reviewWorkbench, batchWorkbench, candidatePage, candidateKey, candidatePending, candidateRequest, candidateSequence = 0, searchTimer;
   let pdfCandidates = [];
   let metricOffset = 0;
   const selected = new Set(), accepted = new Set();
@@ -148,6 +148,7 @@
     $("setup").hidden = state.initialized;
     $("workspace").hidden = !state.initialized;
     reviewWorkbench?.render(state);
+    batchWorkbench?.render(state);
     $("stale").hidden = !state.stale;
     $("undo").disabled = !state.can_undo || state.stale;
     for (const id of ["load-draft", "download-report", "preview"]) $(id).disabled = state.stale;
@@ -211,7 +212,7 @@
   $("metric-search").oninput = () => { metricOffset = 0; renderMetrics(); };
   function setStep(step) {
     activeStep = step;
-    for (const name of ["evidence", "locations", "review"]) $("step-" + name).hidden = name !== step;
+    for (const name of ["evidence", "locations", "batch", "review"]) $("step-" + name).hidden = name !== step;
     document.querySelectorAll("nav [data-step]").forEach((button) => {
       button.classList.toggle("active", button.dataset.step === step);
       button.setAttribute("aria-current", button.dataset.step === step ? "step" : "false");
@@ -349,9 +350,9 @@
   }
   function renderReview() {
     const additions = state.additions;
-    $("staged-count").textContent = Object.keys(additions.occurrences).length;
+    $("staged-count").textContent = ["occurrences", "claims", "figures"].reduce((total, group) => total + Object.keys(additions[group]).length, 0);
     $("draft-summary").replaceChildren(); $("review-items").replaceChildren(); $("review-diagnostics").replaceChildren();
-    for (const group of ["sources", "metrics", "occurrences"]) for (const name of Object.keys(additions[group])) $("draft-summary").append(node("span", t(group) + ": " + name, "draft-chip"));
+    for (const group of ["sources", "metrics", "occurrences", "claims", "figures"]) for (const name of Object.keys(additions[group])) $("draft-summary").append(node("span", t(group) + ": " + name, "draft-chip"));
     const preview = state.preview; $("accept-controls").hidden = !preview;
     if (!preview) { $("review-items").append(node("p", t("preview_empty"), "empty")); return; }
     for (const item of preview.items) {
@@ -362,8 +363,10 @@
       const context = node("p", undefined, "candidate-context");
       context.append(node("span", item.context_before), node("mark", item.candidate_text), node("span", item.context_after)); card.append(context);
       const values = node("div", undefined, "preview-values");
-      values.append(node("code", item.actual ?? item.location?.text ?? ""), node("span", "→"), node("code", item.expected ?? ""), node("span", t(item.status), "status status-" + item.status));
+      if (item.group === "occurrences") values.append(node("code", item.actual ?? item.location?.text ?? ""), node("span", "→"), node("code", item.expected ?? ""));
+      values.append(node("span", t(item.status), "status status-" + item.status));
       card.append(values, node("p", t("rationale") + ": " + item.rationale));
+      if (item.definition_json) { const definition = node("details"); definition.append(node("summary", t("proposal_definition")), node("pre", item.definition_json)); card.append(definition); }
       const metric = state.metrics[item.metric]; if (metric) card.append(metricDetails(metric));
       $("review-items").append(card);
     }
@@ -440,11 +443,14 @@
     $("column-types").querySelectorAll("select").forEach((el) => el.setAttribute("aria-label", t("type_column", { column: el.dataset.column })));
     const keyHint = $("column-types").querySelector("p"); if (keyHint) keyHint.textContent = t("primary_key_hint");
     await reviewWorkbench.localize();
+    await batchWorkbench.localize();
   });
   window.addEventListener("beforeunload", (event) => {
     if (state?.additions && Object.values(state.additions).some((group) => Object.keys(group).length)) { event.preventDefault(); event.returnValue = ""; }
   });
   reviewWorkbench = window.createPaperDeltaReview({ t, node, api, task, update, download, pageButtons, metricDetails, state: () => state, busy: () => busy });
+  batchWorkbench = window.createPaperDeltaBatch({ t, node, api, task, update, download, pageButtons, metricDetails, notice, setStep, state: () => state });
   localize(); setStep(activeStep);
+  await batchWorkbench.localize();
   await task(async () => { update((await api("state")).state); if (state.initialized) await reviewWorkbench.load(); });
 })();

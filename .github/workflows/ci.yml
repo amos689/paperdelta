@@ -12,7 +12,7 @@ jobs:
   browser:
     name: Local studio / browser
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: '3.12'
-      - run: python -m pip install '.[dev]'
+      - run: python -m pip install '.[dev,mcp]'
       - run: npm install --prefix build/browser-tools --no-audit --no-fund playwright@1.62.1
       - run: node build/browser-tools/node_modules/playwright/cli.js install --with-deps chromium
       - name: Test bilingual native binding workflows
@@ -35,6 +35,10 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_studio_scale.cjs build/studio-scale
+      - name: Test bilingual batch binding, templates and CLI/MCP proposal imports
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_batch_browser.cjs build/studio-batch-browser
       - name: Keep browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -49,6 +53,8 @@ jobs:
             build/studio-scale/evidence.json
             build/studio-scale/*.png
             build/studio-scale/*-errors.json
+            build/studio-batch-browser/evidence.json
+            build/studio-batch-browser/*.png
           if-no-files-found: warn
 
   test:

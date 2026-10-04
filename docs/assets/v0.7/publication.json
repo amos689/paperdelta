@@ -1,0 +1,50 @@
+{
+  "version": "0.7.0",
+  "commit": "1a52bcd221170256090c633b24c79a3bd7c5309c",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37183978866",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-0.7.0-py3-none-any.whl": "d6515cae0fb419dc43702b9947e989d7c1c45d1d7a3ad15f0e6e5a970d262205",
+    "paperdelta-0.7.0.tar.gz": "7ee668d756ba7da3255def704452eb8b631a4ecf0db23beaf205f1b02e79c0fb",
+    "paperdelta-evaluation-0.7.0.zip": "e958876b2743ea114dd4b11dee1704feb37114eab64f9486fb0fdd36699de5f3"
+  },
+  "status": "passed",
+  "checked_at": "2026-10-04T07:10:51.602244+00:00",
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v0.7.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37184846985",
+  "pypi": "https://pypi.org/project/paperdelta/0.7.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-0.7.0-py3-none-any.whl": "d6515cae0fb419dc43702b9947e989d7c1c45d1d7a3ad15f0e6e5a970d262205",
+    "paperdelta-0.7.0.tar.gz": "7ee668d756ba7da3255def704452eb8b631a4ecf0db23beaf205f1b02e79c0fb"
+  },
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true,
+  "first_ci_attempt": {
+    "url": "https://github.com/amos689/paperdelta/actions/runs/37183342370",
+    "result": "16 passed; Intel macOS/Python 3.12 exceeded the full-suite 240-second limit; subsequent commit permits 480 seconds and retains timeout diagnostics"
+  },
+  "local_installed_suite": {
+    "tests": 491,
+    "passed": 488,
+    "skipped": 3,
+    "evidence": "build/v07-installed-windows/evidence.json"
+  }
+}

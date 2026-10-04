@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.7.0"><img src="docs/assets/badges/release.svg" alt="Release 0.7.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.8.0"><img src="docs/assets/badges/release.svg" alt="Release 0.8.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -46,21 +46,23 @@ Checking needs no model key, GPU or TeX installation.
 
 <p>
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.7/report.png">
-    <img src="docs/assets/v0.7/demo.en.gif" alt="PaperDelta Studio: snapshot comparison, changed accuracy from 84.1% to 80.1%, exact evidence rows and a declaration-change preview." width="960">
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.8/report.png">
+    <img src="docs/assets/v0.8/demo.en.gif" alt="PaperDelta Studio: reuse experiment definitions across 24 result cells, inspect exact identities, select paper positions and accept a reviewed subset." width="960">
   </picture>
 </p>
 
-A 22-second walkthrough of real Studio screens: create a snapshot, change accuracy
-from 84.1% to 80.1%, inspect the evidence, and preview a declaration edit.
-[Open the full-size animation](docs/assets/v0.7/demo.en.gif?raw=true) ·
-[View the static screenshot](docs/assets/v0.7/report.png).
+A 22-second walkthrough of real Studio screens: reuse experiment settings,
+inspect exact identities, select result cells and accept only reviewed bindings.
+Playback is paced for reading.
+[Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
+[View the static screenshot](docs/assets/v0.8/report.png).
 
-**0.7.0** brings ongoing review into Studio: compare experiments with snapshots,
-inspect affected paper positions, maintain declarations and repair moved bindings.
-Continuous checks and local draft recovery support the next editing session.
+**0.8.0** adds batch binding, portable experiment templates and graphical review
+of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded browser
+interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
+Snapshot comparison, ongoing checks and local draft recovery remain available.
 Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v0.7.md).
+See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v0.8.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -99,7 +101,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-0.7.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-0.8.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -204,7 +206,7 @@ relations. See the [PDF boundary and workflow](docs/pdf.md).
 [Cross-platform CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml)
 covers Python 3.11–3.14 on Windows, Linux, Apple Silicon and Intel macOS.
 [Historical validation](docs/v0.2-acceptance.md), [native Mac evidence](docs/macos-validation-2026-10-03.md)
-and [current release checks](docs/v0.7.md) distinguish what each run established.
+and [current release checks](docs/v0.8.md) distinguish what each run established.
 
 ## Development
 

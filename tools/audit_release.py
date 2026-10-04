@@ -173,6 +173,7 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.5").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.6").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.7").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v0.8").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")

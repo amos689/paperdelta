@@ -5,7 +5,7 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light"><title>PaperDelta Studio</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="/studio.css">
-<script src="/studio-review.js" defer></script><script src="/studio.js" defer></script></head><body>
+<script src="/studio-review.js" defer></script><script src="/studio-batch.js" defer></script><script src="/studio.js" defer></script></head><body>
 <header><div class="brand"><span class="brand-mark" aria-hidden="true">Δ</span>
 <div><strong>PaperDelta<span class="dot">.</span></strong><span data-i18n="workbench"></span></div></div>
 <div class="header-right"><span id="project" class="project"></span>
@@ -67,7 +67,8 @@ PAGE = """<!doctype html>
 <nav class="steps" aria-label="Workflow">
 <button data-step="evidence" class="active"><span>01</span><span data-i18n="step_evidence"></span></button>
 <button data-step="locations"><span>02</span><span data-i18n="step_locations"></span></button>
-<button data-step="review"><span>03</span><span data-i18n="step_review"></span><span id="staged-count" class="badge">0</span></button></nav>
+<button data-step="batch"><span>03</span><span data-i18n="batch_title"></span></button>
+<button data-step="review"><span>04</span><span data-i18n="step_review"></span><span id="staged-count" class="badge">0</span></button></nav>
 <section id="step-evidence" class="step"><div class="two-columns">
 <section class="panel"><div class="section-heading"><h2 data-i18n="sources"></h2><span class="eyebrow" data-i18n="source_first"></span></div>
 <div id="source-list"></div><details id="add-source"><summary data-i18n="add_source"></summary>
@@ -113,7 +114,28 @@ PAGE = """<!doctype html>
 <section id="pdf-panel" class="panel" hidden><div class="section-heading"><h2 data-i18n="original_page"></h2><button id="pdf-zoom" class="secondary" data-i18n="zoom"></button></div>
 <p id="pdf-caption" class="muted"></p><div id="pdf-view" tabindex="0"><div id="pdf-page"></div></div><p data-i18n="pdf_hint" class="muted"></p></section></div></div>
 <button class="next" data-step="review" data-i18n="to_review"></button></section>
-<section id="step-review" class="step" hidden><section class="panel"><div class="section-heading"><div><h2 data-i18n="review_title"></h2><p data-i18n="review_hint"></p></div><button id="preview" data-i18n="preview"></button></div>
+<section id="step-batch" class="step" hidden>
+<section class="panel"><h2 data-i18n="batch_title"></h2><p data-i18n="batch_hint"></p>
+<form id="batch-form"><label><span data-i18n="source"></span><select name="source" required></select></label>
+<div class="two-columns"><fieldset><legend data-i18n="batch_fields"></legend><div id="batch-fields"></div></fieldset>
+<fieldset><legend data-i18n="batch_groups"></legend><div id="batch-groups"></div></fieldset></div>
+<fieldset><legend data-i18n="selector"></legend><p data-i18n="selector_hint"></p><div id="batch-filters"></div></fieldset>
+<div class="form-row"><label><span data-i18n="unit"></span><select name="unit"></select></label><label><span data-i18n="aggregation"></span><select name="reduce"></select></label></div>
+<div class="form-row"><label><span data-i18n="expected_count"></span><input name="expected_count" type="number" min="1" max="10000" value="1" required></label><label><span data-i18n="seed_column"></span><input name="seed_column" value="seed"></label></div>
+<label><span data-i18n="expected_seeds"></span><textarea name="expected_seeds" rows="2"></textarea></label>
+<div class="form-row"><label><span data-i18n="display"></span><select name="display_kind"></select></label><label><span data-i18n="places"></span><input name="places" type="number" min="0" max="15" value="1" required></label></div>
+<label class="check"><input name="percent_symbol" type="checkbox" checked><span data-i18n="percent_symbol"></span></label>
+<button type="submit" data-i18n="batch_generate"></button></form>
+<details id="batch-templates"><summary data-i18n="template_title"></summary><p data-i18n="template_hint"></p>
+<div class="form-row"><label><span data-i18n="template_title"></span><select id="template-select"></select></label><div class="tools"><button id="template-load" class="secondary" data-i18n="template_load"></button><button id="template-export" class="secondary" data-i18n="template_export"></button></div></div>
+<form id="template-save-form"><label><span data-i18n="template_name_label"></span><input name="name" required pattern="[A-Za-z](?:[A-Za-z0-9_.]|-){0,99}" placeholder="test_accuracy_v1"></label><button type="submit" data-i18n="template_save"></button></form>
+<button id="template-import" class="secondary" data-i18n="template_import"></button><input id="template-file" type="file" accept=".json,application/json" hidden><div id="template-errors"></div></details></section>
+<section id="batch-catalog" class="panel" hidden><h2 data-i18n="batch_choose"></h2><p data-i18n="batch_positions_hint"></p>
+<div class="two-columns"><div><label><span data-i18n="batch_search"></span><input id="batch-search" type="search"></label><div id="batch-choices"></div><div id="batch-choice-pages" class="pagination"></div></div>
+<div><div id="batch-choice-evidence"></div><label><span data-i18n="search"></span><input id="batch-location-search" type="search"></label><div id="batch-locations"></div><div id="batch-location-pages" class="pagination"></div><div id="batch-native-page" class="repair-page" hidden></div></div></div>
+<p id="batch-selected" role="status"></p><label><span data-i18n="batch_rationale"></span><textarea id="batch-rationale" rows="3" maxlength="4000"></textarea></label>
+<button id="batch-stage" data-i18n="batch_stage" disabled></button></section></section>
+<section id="step-review" class="step" hidden><section class="panel"><div class="section-heading"><div><h2 data-i18n="review_title"></h2><p data-i18n="review_hint"></p></div><div class="tools"><button id="proposal-import" class="secondary" data-i18n="proposal_import"></button><input id="proposal-file" type="file" accept=".json,application/json" hidden><button id="preview" data-i18n="preview"></button></div></div>
 <div id="draft-summary"></div><div id="review-items"></div><div id="review-diagnostics"></div>
 <div id="accept-controls" hidden><label class="check attest"><input id="attest" type="checkbox"><span data-i18n="attest"></span></label><button id="accept" data-i18n="accept" disabled></button><p class="muted" data-i18n="accept_hint"></p></div></section></section>
 </div></div></main><footer><span>PaperDelta <span id="version"></span></span><span data-i18n="footer"></span></footer>

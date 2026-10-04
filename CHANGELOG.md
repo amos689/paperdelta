@@ -2,6 +2,17 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 0.8.0 — batch binding and portable experiment templates
+
+- Reuse explicit CSV identities, units, aggregations and seed contracts across Studio batch choices.
+- Search and paginate metrics/positions, inspect original PDF highlights, and preserve explicit cross-page selections through language changes.
+- Save, export and import typed experiment templates across compatible source declarations without reusing paper positions.
+- Import existing CLI/MCP proposals, including numeric occurrences, claims and figures, into recoverable graphical subset review.
+- Keep missing evidence unknown, refuse stale proposals and overlapping locations, and accept only selected bindings with their dependencies.
+- Add six bilingual native-format batch browser flows and an identical-input 24-metric comparison: 270 to 103 recorded interactions versus published 0.6.0.
+
+See the [0.8 release and upgrade guide](docs/v0.8.md).
+
 ## 0.7.0 — ongoing review in Studio
 
 - Compare experiments with named snapshots and grouped evidence, numeric, claim and figure impacts.

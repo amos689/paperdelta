@@ -1,0 +1,1624 @@
+{
+  "suite": "studio-batch",
+  "results": [],
+  "effort": [
+    {
+      "version": "0.6.0",
+      "inputs_sha256": {
+        "paper.tex": "755727490a05041dff6a554cb46308d59b89d665ed3ae2700432ee6767b053e1",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "metrics": 24,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#column-types input[data-column=\"model\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types input[data-column=\"split\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types input[data-column=\"seed\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types select[data-column=\"accuracy\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"f1\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"precision\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"recall\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"seed\"]",
+          "action": "selectOption",
+          "value": "integer"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=source]",
+          "action": "selectOption",
+          "value": "results"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_0"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors input[type=checkbox][data-column=\"model\"]",
+          "action": "check"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "001"
+        },
+        {
+          "control": "#selectors input[type=checkbox][data-column=\"split\"]",
+          "action": "check"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"split\"]) input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#metric-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#metric-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#metric-form details summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:9681ea275dd5f80a5e8f143887f2bb59594c336f02bc783686910582152c6ada\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_0"
+        },
+        {
+          "control": "#locations-form [name=rationale]",
+          "action": "fill",
+          "value": "The explicit model and result column, test split and seeds 1–3."
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_1"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:418d2139e19f77ae76f9413eed2a5207f95f10025eaf087ce8eb2e0f651181f3\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_1"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_2"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:611779be60db2b33aca2624b11817419bf45317e1ff03c1deb375b0d5c92fd4a\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_2"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_3"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:27347f843e883f85e641f6db56ca1004e285910f74183ff19e458a25a76a1b82\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_3"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_4"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:b424d894883a9475f2426cb7d4565d3ff7ebcecfbfe2f0cb88deae0aeb31ad1e\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_4"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_5"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:426ea0bb34090322d6a4cd0ffd85bfad9c68fae3ee665fd9497f045e1ce46ffd\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_5"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_6"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:b5ec847ef7ab8778304da82c0d3f0ea5c76e830ed7d37aeda4cf849cc111b11f\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_6"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_7"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:4702a66378ef04912ffd830fcb1b3fe3046edbcdd5588110dec58e106c666d31\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_7"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_8"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "Model-C"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:baf7ee11e9fb1353936b3e7f51203d46d77f1f5fc19fa44daa163e1b1a9b9666\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_8"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_9"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:2602bd4c9e7a9775636352aeee4ab1be269c59714307448f254bc287cdcb0605\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_9"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_10"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:2b278d8d5ac1d02abdd052bb2ffa2cd77e97c5264fc1ac46e9b1abbe5bf577eb\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_10"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_11"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:4b0d002b3e7fea49f9e90adf7f5adb948d758f9f00481e6fb00658226d1d0bb9\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_11"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_12"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "Model-D"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:41533184208f6cc26f8a3d8c0d2276317ddd91832812f1f1ef9eacd180b2308d\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_12"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_13"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:0c29a5f88a10287af316f205d447bed72bb491cb2e7a357f0e7854d4ba5559ea\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_13"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_14"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:31080487e5cc9ff641b0898c3ac5d74e1745df1569f335b6b1c936d0f399d337\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_14"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_15"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:342c9392f37450cc064c8dfa6d3753f74ead6a6917e7e9b6d65d10e36b4cd222\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_15"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_16"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "Model-E"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:9980f28604e6ad0c0844800c1cf733dd59d4696b1057ce96ea884180ff0b809d\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_16"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_17"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:4ea2d721c6bfa98d3fda18df95e32598fc1737ca52f2032bd70a5c1ed21655fd\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_17"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_18"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:0400066225abc037b3b1b3772c5633dafdb772e74e1de5b52c2da32c71a62929\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_18"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_19"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:598b2ce3f830009f781855365cd41fce41cb844ccbbbf90225110287e61eeba8\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_19"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_20"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "accuracy"
+        },
+        {
+          "control": "#selectors .selector-row:has(input[data-column=\"model\"]) input[type=text]",
+          "action": "fill",
+          "value": "Model-F"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:2758288f9b3b0f5acb6eae3b715a0e8661b4f4b8a40693913f6346767f8b0da3\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_20"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_21"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "precision"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:dcdd58e664b0ef629327b5cdeb96d9c6cc3127ae1f93235947bdfd39b4cc781f\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_21"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_22"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "recall"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:0449c1932d7d2cb7c1535bc8008da04dc9043114c1c5392da599e7fd5e8bd7e9\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_22"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=evidence]",
+          "action": "click"
+        },
+        {
+          "control": "#add-metric > summary",
+          "action": "click"
+        },
+        {
+          "control": "#metric-form [name=name]",
+          "action": "fill",
+          "value": "metric_23"
+        },
+        {
+          "control": "#metric-form [name=field]",
+          "action": "fill",
+          "value": "f1"
+        },
+        {
+          "control": "#metric-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=locations]",
+          "action": "click"
+        },
+        {
+          "control": "#candidates [data-candidate=\"sha256:a947659d075c11bae99949c32c264ddda301d1f09ef3de864493b4f304e9485c\"] input",
+          "action": "check"
+        },
+        {
+          "control": "#locations-form [name=prefix]",
+          "action": "fill",
+          "value": "result_23"
+        },
+        {
+          "control": "#locations-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_2\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_3\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_4\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_5\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_6\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_7\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_8\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_9\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_10\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_11\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_12\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_13\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_14\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_15\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_16\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_17\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_18\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_19\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_20\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_21\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_22\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:result_23\"]",
+          "action": "check"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "action_count": 270
+    },
+    {
+      "version": "0.8.0",
+      "inputs_sha256": {
+        "paper.tex": "755727490a05041dff6a554cb46308d59b89d665ed3ae2700432ee6767b053e1",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "metrics": 24,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#column-types input[data-column=\"model\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types input[data-column=\"split\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types input[data-column=\"seed\"]",
+          "action": "check"
+        },
+        {
+          "control": "#column-types select[data-column=\"accuracy\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"f1\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"precision\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"recall\"]",
+          "action": "selectOption",
+          "value": "decimal"
+        },
+        {
+          "control": "#column-types select[data-column=\"seed\"]",
+          "action": "selectOption",
+          "value": "integer"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:9681ea275dd5f80a5e8f143887f2bb59594c336f02bc783686910582152c6ada\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:418d2139e19f77ae76f9413eed2a5207f95f10025eaf087ce8eb2e0f651181f3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:611779be60db2b33aca2624b11817419bf45317e1ff03c1deb375b0d5c92fd4a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:27347f843e883f85e641f6db56ca1004e285910f74183ff19e458a25a76a1b82\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:b424d894883a9475f2426cb7d4565d3ff7ebcecfbfe2f0cb88deae0aeb31ad1e\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:426ea0bb34090322d6a4cd0ffd85bfad9c68fae3ee665fd9497f045e1ce46ffd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:b5ec847ef7ab8778304da82c0d3f0ea5c76e830ed7d37aeda4cf849cc111b11f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:4702a66378ef04912ffd830fcb1b3fe3046edbcdd5588110dec58e106c666d31\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:baf7ee11e9fb1353936b3e7f51203d46d77f1f5fc19fa44daa163e1b1a9b9666\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:2602bd4c9e7a9775636352aeee4ab1be269c59714307448f254bc287cdcb0605\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:2b278d8d5ac1d02abdd052bb2ffa2cd77e97c5264fc1ac46e9b1abbe5bf577eb\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:4b0d002b3e7fea49f9e90adf7f5adb948d758f9f00481e6fb00658226d1d0bb9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:41533184208f6cc26f8a3d8c0d2276317ddd91832812f1f1ef9eacd180b2308d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:0c29a5f88a10287af316f205d447bed72bb491cb2e7a357f0e7854d4ba5559ea\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:31080487e5cc9ff641b0898c3ac5d74e1745df1569f335b6b1c936d0f399d337\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:342c9392f37450cc064c8dfa6d3753f74ead6a6917e7e9b6d65d10e36b4cd222\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:9980f28604e6ad0c0844800c1cf733dd59d4696b1057ce96ea884180ff0b809d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:4ea2d721c6bfa98d3fda18df95e32598fc1737ca52f2032bd70a5c1ed21655fd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:0400066225abc037b3b1b3772c5633dafdb772e74e1de5b52c2da32c71a62929\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:598b2ce3f830009f781855365cd41fce41cb844ccbbbf90225110287e61eeba8\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-choice-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:2758288f9b3b0f5acb6eae3b715a0e8661b4f4b8a40693913f6346767f8b0da3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:dcdd58e664b0ef629327b5cdeb96d9c6cc3127ae1f93235947bdfd39b4cc781f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:0449c1932d7d2cb7c1535bc8008da04dc9043114c1c5392da599e7fd5e8bd7e9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".batch-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] button",
+          "action": "click"
+        },
+        {
+          "control": "#batch-locations input[data-batch-candidate=\"sha256:a947659d075c11bae99949c32c264ddda301d1f09ef3de864493b4f304e9485c\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Each selected result cell uses its explicit model, result column, test split and seeds 1–3."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_4bfd9f5c421a_9681ea275dd5\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_6c21a75517a0_418d2139e19f\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_4a6dd67f281f_611779be60db\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_0087046419a3_27347f843e88\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_6bb31e0695a2_b424d894883a\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_cc73fb2b296e_426ea0bb3409\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_970e6d5390aa_b5ec847ef7ab\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_f10dfb8de378_4702a66378ef\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_5bd8011c4eee_baf7ee11e9fb\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_97fdf9e67da6_2602bd4c9e7a\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_28c10fb2a379_2b278d8d5ac1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_8c90e2ba457b_4b0d002b3e7f\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_3b5a65825fa3_41533184208f\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_3a0a8067e074_0c29a5f88a10\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_3e550f5e012e_31080487e5cc\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_07e7fc7f1656_342c9392f374\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_a8857d319ee4_9980f28604e6\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_81753e181c61_4ea2d721c6bf\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_6b56651b42fe_0400066225ab\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_d65260105f93_598b2ce3f830\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_afff6b897b2d_2758288f9b3b\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_f9a5b4a99893_dcdd58e664b0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_3598881f3fec_0449c1932d7d\"]",
+          "action": "check"
+        },
+        {
+          "control": "#review-items input[data-binding=\"occurrences:batch_8643e0ebf435_a947659d075c\"]",
+          "action": "check"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "action_count": 103
+    }
+  ],
+  "scope": "Recorded machine browser workflows. Actions include filling, selecting, checking and clicking; they do not measure human time or error rates."
+}

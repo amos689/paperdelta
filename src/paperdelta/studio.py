@@ -20,6 +20,7 @@ from pydantic import Field
 
 from paperdelta import __version__, builder
 from paperdelta.analysis import check_project
+from paperdelta.batch import BatchRequest, BatchSelection
 from paperdelta.config import load_config
 from paperdelta.declarations import (
     DeclarationEdit,
@@ -48,7 +49,6 @@ from paperdelta.onboarding import (
     _source_summary,
     accept_bindings,
     init_project,
-    inspect_proposal,
     scan_project,
 )
 from paperdelta.patches import _write_lock
@@ -62,7 +62,18 @@ from paperdelta.repairs import (
     scan_repairs,
 )
 from paperdelta.sources import EvidenceStore
-from paperdelta.storage import Project, fingerprint, json_text, sha256
+from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
+from paperdelta.studio_batch import (
+    MAX_TEMPLATE_BYTES,
+    StudioBatch,
+    make_template,
+    proposal_draft,
+    proposal_preview,
+    read_template,
+    save_template,
+    template_list,
+    template_request,
+)
 from paperdelta.studio_recovery import DraftRecovery, migrate_draft, rebuild_draft
 from paperdelta.studio_review import StudioReview
 
@@ -133,6 +144,45 @@ class Accept(StrictModel):
 
 class ImportDraft(StrictModel):
     draft: dict
+
+
+class ImportProposal(StrictModel):
+    value_json: str = Field(min_length=1, max_length=900000)
+
+
+class BatchIdentity(StrictModel):
+    catalog_id: str
+
+
+class BatchPage(BatchIdentity):
+    query: str = Field(default="", max_length=1000)
+    offset: int = Field(default=0, ge=0, le=10000000)
+    limit: int = Field(default=20, ge=1, le=100)
+
+
+class BatchLocations(BatchPage):
+    choice_id: str
+
+
+class BatchStage(BatchIdentity):
+    selections: list[BatchSelection] = Field(min_length=1, max_length=200)
+
+
+class TemplateSave(BatchIdentity):
+    name: Identifier
+
+
+class TemplateName(StrictModel):
+    name: Identifier
+
+
+class TemplateLoad(TemplateName):
+    source: Identifier
+
+
+class TemplateImport(StrictModel):
+    value_json: str = Field(min_length=1, max_length=MAX_TEMPLATE_BYTES)
+    source: Identifier
 
 
 class CandidateQuery(StrictModel):
@@ -213,6 +263,16 @@ PARAMETERS = {
     "report": Empty,
     "draft-export": Empty,
     "draft-import": ImportDraft,
+    "proposal-import": ImportProposal,
+    "batch-catalog": BatchRequest,
+    "batch-choices": BatchPage,
+    "batch-locations": BatchLocations,
+    "batch-stage": BatchStage,
+    "template-list": Empty,
+    "template-save": TemplateSave,
+    "template-export": TemplateName,
+    "template-load": TemplateLoad,
+    "template-import": TemplateImport,
     "candidates": CandidateQuery,
     "poll": Empty,
     "review": Empty,
@@ -297,6 +357,7 @@ class StudioSession:
         self.maintenance = None
         self.repair = None
         self.rebuild = None
+        self.batch = None
         self.recovery_archive = None
         self.recovery = DraftRecovery(project, self.config_path)
         self.reviewer = StudioReview(project, self.config_path)
@@ -322,6 +383,7 @@ class StudioSession:
         self.proposal = self.preview = None
         self.maintenance = self.repair = None
         self.rebuild = None
+        self.batch = None
         self._cached_state = self._all_candidates = None
 
     def _require_draft(self):
@@ -354,6 +416,7 @@ class StudioSession:
             "maintenance": self.maintenance[1] if self.maintenance else None,
             "repair": self.repair[1] if self.repair else None,
             "rebuild": self.rebuild[2] if self.rebuild else None,
+            "batch_id": self.batch.catalog_id if self.batch else None,
             "recovery_archive": self.recovery_archive,
         }
         if self.draft is None:
@@ -587,6 +650,60 @@ class StudioSession:
             return {"source": {**summary, "hash": identity}}
         else:
             self._require_draft()
+            if action == "batch-catalog":
+                batch = StudioBatch(self.project, self.draft, parameters)
+                self._advance()
+                self.batch = batch
+                return {"state": self.state(), "batch": batch.choices()}
+            if action in {"batch-choices", "batch-locations", "batch-stage", "template-save"}:
+                if self.batch is None:
+                    raise PaperDeltaError("STUDIO_BATCH_STALE", msg("studio.batch_stale"))
+                self.batch.validate(self.project, self.draft, parameters.pop("catalog_id"))
+                if action == "batch-choices":
+                    return self.batch.choices(**parameters)
+                if action == "batch-locations":
+                    return self.batch.locations(**parameters)
+                if action == "template-save":
+                    request = self.batch.catalog["request"]
+                    _, config = self._require_draft()
+                    template = make_template(
+                        parameters["name"], config.sources[request["source"]], request
+                    )
+                    save_template(self.project, template)
+                    return template_list(self.project)
+                if sum(len(item["candidate_ids"]) for item in parameters["selections"]) > 200:
+                    raise PaperDeltaError("STUDIO_LIMIT", msg("studio.selection_limit"))
+                draft = self.batch.draft(self.project, parameters["selections"])
+                self._stage(draft)
+                return {"state": self.state()}
+            if action == "template-list":
+                return template_list(self.project)
+            if action == "template-export":
+                template = read_template(self.project, parameters["name"])
+                return {"json": json_text(template.model_dump())}
+            if action in {"template-load", "template-import"}:
+                if (
+                    action == "template-import"
+                    and len(parameters["value_json"].encode("utf-8")) > MAX_TEMPLATE_BYTES
+                ):
+                    raise PaperDeltaError("STUDIO_TEMPLATE_LIMIT", msg("studio.template_limit"))
+                value = (
+                    read_template(self.project, parameters["name"]).model_dump()
+                    if action == "template-load"
+                    else parse_json(parameters["value_json"])
+                )
+                return {
+                    "request": template_request(
+                        self.project, self.draft, value, parameters["source"]
+                    ),
+                    "requires_confirmation": True,
+                }
+            if action == "proposal-import":
+                draft = proposal_draft(
+                    self.project, self.draft, parse_json(parameters["value_json"])
+                )
+                self._stage(draft)
+                return self._execute("preview", {})
             if action == "candidates":
                 return self.candidates(parameters)
             if action == "declarations":
@@ -707,40 +824,9 @@ class StudioSession:
                 self._advance()
             elif action == "preview":
                 proposal = builder.finalize_draft(self.project, self.draft)
-                _, _, report = inspect_proposal(self.project, proposal)
-                items = []
-                for binding, rationale in proposal["rationale"].items():
-                    group, name = binding.split(":", 1)
-                    item = report[group][name]
-                    candidate = next(
-                        (
-                            entry
-                            for entry in self.scan["candidates"]
-                            if entry["file"] == item["location"]["file"]
-                            and entry["start"] == item["location"]["start"]
-                        ),
-                        {},
-                    )
-                    items.append(
-                        {
-                            "binding": binding,
-                            "rationale": rationale,
-                            **item,
-                            "label": location_label(item["location"]),
-                            "context_before": candidate.get("context_before", ""),
-                            "context_after": candidate.get("context_after", ""),
-                            "candidate_text": candidate.get("text", item["location"]["text"]),
-                        }
-                    )
+                preview = proposal_preview(self.project, proposal, self.scan["candidates"])
                 self.proposal = proposal
-                self.preview = {
-                    "proposal_id": proposal["proposal_id"],
-                    "items": items,
-                    "metrics": report["metrics"],
-                    "coverage": report["coverage"],
-                    "diagnostics": report["diagnostics"],
-                    "exit_code": report["exit_code"],
-                }
+                self.preview = preview
             elif action == "accept":
                 if (
                     self.proposal is None
@@ -791,11 +877,9 @@ class StudioSession:
                 draft, _ = builder.resume_draft(
                     self.project, migrate_draft(self.project, parameters["draft"])
                 )
-                if (
-                    draft.config_path != self.config_path
-                    or draft.additions.claims
-                    or draft.additions.figures
-                ):
+                if draft.config_path != self.config_path:
                     raise PaperDeltaError("STUDIO_DRAFT", msg("studio.draft_project"))
+                if draft.additions.claims or draft.additions.figures:
+                    builder.finalize_draft(self.project, draft.model_dump())
                 self._stage(draft.model_dump())
         return {"state": self.state()}

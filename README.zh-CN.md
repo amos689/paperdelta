@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.7.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.7.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v0.8.0"><img src="docs/assets/badges/release.svg" alt="正式版 0.8.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -44,20 +44,21 @@
 
 <p>
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.7/report.zh-CN.png">
-    <img src="docs/assets/v0.7/demo.zh-CN.gif" alt="PaperDelta Studio：快照比较、准确率从 84.1% 变为 80.1%、精确证据记录及声明修改预览。" width="960">
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.8/report.zh-CN.png">
+    <img src="docs/assets/v0.8/demo.zh-CN.gif" alt="PaperDelta Studio：在 24 个结果单元格中复用实验定义，核对精确身份、选择论文位置并只接受已复核子集。" width="960">
   </picture>
 </p>
 
-约 22 秒的真实 Studio 界面演示：创建快照，将准确率从 84.1% 改为 80.1%，
-查看所选证据，再预览声明修改。播放节奏经过编排以便阅读。
-[打开原尺寸动图](docs/assets/v0.7/demo.zh-CN.gif?raw=true) ·
-[查看静态截图](docs/assets/v0.7/report.zh-CN.png)。
+约 22 秒的真实 Studio 界面演示：复用实验设置、核对精确身份、选择结果单元格，
+只接受已复核的绑定。播放节奏经过编排以便阅读。
+[打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
+[查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
 
-**0.7.0** 将日常审查接入 Studio：用快照比较实验、查看受影响的论文位置、
-维护已有声明并修复移动的绑定。持续检查和本地草稿恢复支持下一次编辑。
+**0.8.0** 新增批量绑定、可迁移实验模板和 CLI/MCP 提案的图形复核。
+可复现的 24 指标流程，记录的浏览器操作量从 0.6.0 的 270 次降为 103 次；
+[测量范围与原始轨迹](docs/zh-CN/v0.8.md)已公开。快照比较、持续检查和本地草稿恢复继续可用。
 运行 `paperdelta --lang zh-CN studio` 即可开始。详见
-[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v0.7.md)。界面全程支持中英文切换。
+[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v0.8.md)。界面全程支持中英文切换。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
 后续发行继续采用正式版本号。
 
@@ -92,7 +93,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-0.7.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-0.8.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -181,7 +182,7 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.7.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v0.8.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

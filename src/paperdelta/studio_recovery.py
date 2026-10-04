@@ -41,7 +41,7 @@ def _compatible_draft(value):
     current = tuple(map(int, __version__.split(".")))
     # These versions share schema 1 and exactly the same binding contracts.
     # Unknown future schemas/versions must be deliberately added after evaluation.
-    if len(before) != 3 or before > current or before[:2] not in {(0, 6), (0, 7)}:
+    if len(before) != 3 or before > current or before[:2] not in {(0, 6), (0, 7), (0, 8)}:
         raise PaperDeltaError("DRAFT_IDENTITY", msg("builder.identity"))
     return draft
 
@@ -63,8 +63,6 @@ def rebuild_draft(project, value, selected):
     available = {f"{group}:{name}" for group, items in additions.items() for name in items}
     if not selected or len(set(selected)) != len(selected) or not set(selected) <= available:
         raise PaperDeltaError("STUDIO_RECOVERY_SELECTION", msg("recovery.selection"))
-    if additions["claims"] or additions["figures"]:
-        raise PaperDeltaError("STUDIO_DRAFT", msg("studio.draft_project"))
     required, pending = set(), list(selected)
     while pending:
         identity = pending.pop()
@@ -77,6 +75,13 @@ def rebuild_draft(project, value, selected):
             continue  # Current accepted definitions are shown in the resulting preview.
         if group == "occurrences":
             pending.append("metrics:" + definition["metric"])
+        elif group == "claims":
+            predicate = definition["predicate"]
+            pending.extend(
+                "metrics:" + item for item in [predicate["left"], *predicate["candidates"]]
+            )
+            if isinstance(predicate["right"], str):
+                pending.append("metrics:" + predicate["right"])
         elif group == "metrics":
             if "args" in definition:
                 pending.extend("metrics:" + item for item in definition["args"])
@@ -105,12 +110,14 @@ def rebuild_draft(project, value, selected):
         evidence.resolve(name)
     fresh["additions"] = chosen
     fresh["rationale"] = {
-        f"occurrences:{name}": old.rationale[f"occurrences:{name}"]
-        for name in chosen["occurrences"]
+        f"{group}:{name}": old.rationale[f"{group}:{name}"]
+        for group in ("occurrences", "claims", "figures")
+        for name in chosen[group]
     }
     rebuilt = builder._seal(project, fresh, evidence.hashes)
-    if chosen["occurrences"]:
-        builder.finalize_draft(project, rebuilt)  # Refuse ambiguous/unresolved old positions.
+    if any(chosen[group] for group in ("occurrences", "claims", "figures")):
+        proposal = builder.finalize_draft(project, rebuilt)  # Refuse unresolved old positions.
+        rebuilt = builder._seal(project, rebuilt, proposal["input_hashes"])
     preview = check_configuration(project, merged, old.config_path, identity)
     builder.resume_draft(project, rebuilt)
     return rebuilt, {
