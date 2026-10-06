@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "scope": "Developer-operated Windows checks of the recorded installed wheel. Not independent human usability or new model accuracy measurements.",
+  "wheel_tested": {
+    "name": "paperdelta-1.4.0-py3-none-any.whl",
+    "sha256": "a1f657193dde5f9843f3d77e30366410b7f98cbd12fc3c881088613b8ff35c56"
+  },
+  "host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "suite": {
+    "installed_package": true,
+    "versions": {
+      "paperdelta": "1.4.0",
+      "pydantic": "2.13.5",
+      "PyYAML": "6.0.3",
+      "pylatexenc": "2.11",
+      "mcp": "2.3.0",
+      "pytest": "9.1.1"
+    },
+    "tests": {
+      "tests": 804,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    "seconds": 332.814,
+    "suite_timeout_seconds": 480
+  },
+  "bilingual_browser_cases": {
+    "onboarding": 6,
+    "definitions": 2
+  },
+  "onboarding_actions": [
+    54,
+    54,
+    54,
+    54,
+    54,
+    54
+  ],
+  "uvx_status": "passed",
+  "model_response_replay": {
+    "status": "passed",
+    "replays": [
+      {
+        "run": 1,
+        "status": "passed",
+        "cases": 12
+      },
+      {
+        "run": 2,
+        "status": "passed",
+        "cases": 12
+      }
+    ],
+    "scope": "Replayed recorded responses against frozen code; no new model inference."
+  },
+  "historical_paths_unchanged_since": {
+    "commit": "a9171b7",
+    "paths": [
+      "docs/evidence",
+      "tests/corpus",
+      "evaluations",
+      "LICENSE",
+      "validation/native-v1"
+    ]
+  },
+  "failures_retained": [
+    "First definition browser assertion expected a fingerprint in the old config schema; a retained binding-review record was implemented and tested.",
+    "First archive audit found missing licenses in frozen model snapshots. The manifest now includes those original license bytes.",
+    "First installed-browser launch used an incorrect virtual-environment directory. Corrected the harness interpreter path and reran all eight flows."
+  ],
+  "release_gate": "All 17 named CI jobs and exact public artifact verification remain required before recording stable publication."
+}
