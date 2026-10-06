@@ -1,0 +1,86 @@
+{
+  "locked_at": "2026-10-06T10:00:06.263118+00:00",
+  "gold_sha256": "bce429de1a6d3bc4f0aeecfb3781a207bbcfd6032ebae6bd44c7f1802980819b",
+  "annotator": "developer",
+  "core_changes_before_gold": false,
+  "reviewed_pdf_pages": {
+    "plos-0290868": [
+      1,
+      7
+    ],
+    "plos-0303601": [
+      1,
+      6
+    ],
+    "plos-0308906": [
+      5
+    ],
+    "plos-0317954": [
+      2,
+      6
+    ],
+    "elife-110428": [
+      2,
+      3,
+      4
+    ],
+    "elife-109903": [
+      3,
+      4
+    ]
+  },
+  "reviewed_word_render_pages": {
+    "plos-0290868": [
+      1,
+      2,
+      3
+    ],
+    "plos-0303601": [
+      1,
+      2,
+      3
+    ],
+    "plos-0308906": [
+      1
+    ],
+    "plos-0317954": [
+      1
+    ]
+  },
+  "renderer": "Poppler 1500/1600-pixel PNGs; Microsoft Word 16.0 read-only PDF export for DOCX visual annotation; original OOXML for source offsets. Packaged render_docx.py and bundled LibreOffice unavailable on this Windows host.",
+  "visual_observations": "All 112 selected values match original text/positions. Three Word attachments contain no measured values. Corrected a draft selection of confidence level 95 to measured bound 51.0 before lock and before scores. Original bytes unchanged.",
+  "sheets": {
+    "elife-109903-3-targets.png": "2cc1053dbbe33e78360ac36feaeaf4ae359c323f6693a2a37a01df1ffb6c36f7",
+    "elife-109903-3.png": "5f7817f76bf7b472b20949fefb2200c4da8a4083232f0f66a2bed8240d0a4bf6",
+    "elife-109903-4-targets.png": "b155ef6a26e5c98160c703c7f8980b12b5bfe60468d41cda998788ff725236c7",
+    "elife-109903-4.png": "ca33cbec1f9af4ff9753e83ff8f81485e4daf316debe80c488f4ce90ccd0a6cc",
+    "elife-110428-2-targets.png": "37110c8092ad6cea8ead66fef64fa9b9ed30d7168c139a4d274c78d0280d3092",
+    "elife-110428-2.png": "912b96651278dc9b22be7a73d73f5200921f157d4147438befc0a4a2cea64b2f",
+    "elife-110428-3-targets.png": "e3a44381dfaa31bdc9e70dfbdb4f8187577d56affaea397ff8e4374cf30c8fa4",
+    "elife-110428-3.png": "c57667ab25ef1a063a1dc1e63b9f2f4adc22624439ef4b5cf85c8f66d8001e18",
+    "elife-110428-4-targets.png": "79e3e682089294a15951a9914c36662f553b2e7cb9c6ec3ef9672598f803a25b",
+    "elife-110428-4.png": "473c748f32afdbbdb7e826fd12923709d82fd6e457a72eed1a4902cf112c903d",
+    "plos-0290868-1-targets.png": "1c81f93999e75cfd062bd104f4f928d31601b840ccb4b01a0175d76fa9b33b38",
+    "plos-0290868-1.png": "c1ceb6aefa103fb28d89b0f227729f6b90e81d8791a08eb6f372ca049c004912",
+    "plos-0290868-7-targets.png": "568574ea93b0eaf8594a048d412351f0448c4fd92634e007e15052c17570286c",
+    "plos-0290868-7.png": "f923dd0f0e83a850e34abd3412c0af1db631bd991aff9d096214db2ea4b13e2f",
+    "plos-0290868-word-1.png": "9696cc17f6b0feda257fb2177cdee7bf094b35aa82a4ffcec27dd9989b49814e",
+    "plos-0290868-word-2.png": "0b9072041adbf5b029ec79a71fae97e6759c5d6949f557891289688b789f0d27",
+    "plos-0290868-word-3.png": "71c1f8693c7774151228dfb626c55ab0cb0eaea15171567e17dcd5ee4248c90f",
+    "plos-0303601-1-targets.png": "b360127975bf94fdcf7cf03e6800a14fc2e827038ca4d6802a68b482bde46af4",
+    "plos-0303601-1.png": "3cead8c04f5636c88ef567fddc6be73cde239800e73581336b2bc9efb8bd29dd",
+    "plos-0303601-6-targets.png": "2305d9144d10e3e0ff2ee561a820b430e88b026fbb019e737a634292dca6a629",
+    "plos-0303601-6.png": "adfc96bcd076d8b87ef06aeb4467a8f9405e0215489a13b8c7655898a2507e26",
+    "plos-0303601-word-01.png": "18acb431f880cefa122a96f816bd319773d78de4e185d576d1c54e39c7ac6476",
+    "plos-0303601-word-02.png": "496f5825a30289666479aa348f91774fdfcca06ad539d4221ec04e4eda5eb786",
+    "plos-0303601-word-03.png": "3faec0d3ceb86df39b99651ec990f94c6a2878f9c467eb4da083e3aa64f3e459",
+    "plos-0308906-5-targets.png": "8855866d071a7f87f2aa68699b7a808531fc3421928448c749833c401a000b6a",
+    "plos-0308906-5.png": "b4d5abfbc48ffc05dadc40bcbddec6042df0f70d73821c45b4eeb9abaa467eb1",
+    "plos-0308906-word-1.png": "cfca1f9a857b56de706faf5057bb8a9c160e8bbdb72512bb166cd60cd16883d2",
+    "plos-0317954-2-targets.png": "531df78d3bda1869db00b3231507bfa2cc5dfb662e7430d7e92792cd9c8df612",
+    "plos-0317954-2.png": "92a62ae373f193698d83da1c56c5095c56c16074ff5223f796efb7b749638b20",
+    "plos-0317954-6-targets.png": "19d2bfa593ac67710d40afdf45637b701ec70856ec34c8ea1f4d1e4e2bad12c7",
+    "plos-0317954-6.png": "2908ecff5d90dedb698975adbb727e3c5ef87810ae3205b0e062267f2b77cb9c",
+    "plos-0317954-word-1.png": "b94d4a3d2a1397b6f9dfad07618f49eb1b7342f020ab7306fe5c50cc455afb70"
+  }
+}

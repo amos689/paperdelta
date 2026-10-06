@@ -70,7 +70,9 @@ def check():
         if not {"build", ".paperdelta"}.intersection(p.relative_to(ROOT).parts)
     )
     actual.update(
-        p.relative_to(ROOT).as_posix() for p in (ROOT / "validation/native-v1").glob("README*.md")
+        p.relative_to(ROOT).as_posix()
+        for study in ("native-v1", "native-v2")
+        for p in (ROOT / "validation" / study).glob("README*.md")
     )
     assert actual == registered, {
         "unpaired": sorted(actual - registered),

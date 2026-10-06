@@ -10,6 +10,7 @@ recursive-include tests *.py
 recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
 prune tests/corpus
 prune validation/native-v1
+prune validation/native-v2
 exclude docs/evidence/corpus*.json
 # Artifact hashes are sidecars, avoiding self-referential distribution contents.
 exclude docs/evidence/package-audit*.json

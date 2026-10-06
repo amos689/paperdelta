@@ -2,7 +2,7 @@
 
 [简体中文](zh-CN/word.md)
 
-PaperDelta 1.1 reads `.docx` manuscripts and checks explicitly bound numbers and
+PaperDelta 1.3 reads `.docx` manuscripts and checks explicitly bound numbers and
 comparisons against declared experiment evidence. It does not require Microsoft Word, a TeX
 installation, a model key or network access during checking.
 
@@ -109,3 +109,18 @@ scope, snapshots, watch, bilingual reports and read-only MCP behavior. They do n
 establish support for every Word layout. The separately licensed native study
 found **0/32 supported held-out Word scalar targets**, chiefly multi-number cells
 and uncertain table identities. See the [full four-outcome results](v1.1.md).
+
+## Changes in 1.3
+
+Explicit OOXML edge omissions (`gridBefore`/`gridAfter`) retain logical column
+positions; undeclared gaps remain unverified. Studio can review the literal row
+label and header-row count before creating a binding. Numeric row IDs remain
+strings; the proposed identity must resolve to the selected original position.
+Multiple values in one cell can be bound using a unique nonnumeric structure and
+context. Selecting a component does not verify the whole statistical display.
+
+New component and numeric-only contexts require configuration schema 9; stored
+report schema remains 8. Diagnostic messages distinguish unread content from
+ambiguous identity and suggest the next review action. See the [upgrade guide](v1.3.md)
+and [new native study](../validation/native-v2/README.md). The 1.1 figures above
+are preserved historical measurements, not the current version's score.

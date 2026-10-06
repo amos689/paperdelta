@@ -1,0 +1,112 @@
+[
+  {
+    "case": "plos-0294127",
+    "file": "article.pdf",
+    "source_sha256": "1ac5b213c5bf1014964e98f2f891a1bcead7b207cf99efeabe229a137513a166",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 3,
+    "text_items": 242,
+    "seconds": 15.948
+  },
+  {
+    "case": "plos-0294127",
+    "file": "supplement.docx",
+    "source_sha256": "3bde91eb7605e0623433c5558a5231b3b8826fc92a125dcecfb31750c2ad6587",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 1,
+    "text_items": 6,
+    "seconds": 0.03
+  },
+  {
+    "case": "plos-0304516",
+    "file": "article.pdf",
+    "source_sha256": "6dbbc258b943dd141382793fa83a8eedf3e05a8cf0d1c48eae9817d178869cb2",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 7,
+    "text_items": 205,
+    "seconds": 37.058
+  },
+  {
+    "case": "plos-0304516",
+    "file": "supplement.docx",
+    "source_sha256": "548f8bbdfee1e9218eb5aadbe908f0294cc9649c0d7c857055274b9abcc42db6",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 1,
+    "text_items": 13,
+    "seconds": 0.023
+  },
+  {
+    "case": "plos-0312751",
+    "file": "article.pdf",
+    "source_sha256": "09b7c54e81501bde3240e3d57b3cc4d76a82e8403812ee281b0c1c7733db09ce",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 7,
+    "text_items": 314,
+    "seconds": 41.573
+  },
+  {
+    "case": "plos-0312751",
+    "file": "supplement.docx",
+    "source_sha256": "586edb9804a80c1d188b8bd5d19b4768c2e358303c5caf077b839b30217cea6e",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 1,
+    "text_items": 23,
+    "seconds": 0.029
+  },
+  {
+    "case": "plos-0324599",
+    "file": "article.pdf",
+    "source_sha256": "483dae24b2bcc42fe12ef836ebc57d0844e3e339014f82e2acd5e74208986df3",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 0,
+    "text_items": 270,
+    "seconds": 12.042
+  },
+  {
+    "case": "plos-0324599",
+    "file": "supplement.docx",
+    "source_sha256": "478bdc6ca0e94ba03671566454c2fcf800d6a121b86961a8c5474edf3802437f",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 1,
+    "text_items": 14,
+    "seconds": 0.041
+  },
+  {
+    "case": "elife-110341",
+    "file": "article.pdf",
+    "source_sha256": "93ac011ebb526d12447736c10c1643ac0d1cbdbc33ba4bed60490ee7521133be",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 6,
+    "text_items": 1539,
+    "seconds": 23.428
+  },
+  {
+    "case": "elife-110200",
+    "file": "article.pdf",
+    "source_sha256": "8118ecc71fd60c3e7d76454adf4aa485a3a7693d652e4366afb5a3d096c6cac9",
+    "docling": "2.134.0",
+    "backend": "pdfium",
+    "status": "ConversionStatus.SUCCESS",
+    "tables": 12,
+    "text_items": 1034,
+    "seconds": 48.96
+  }
+]

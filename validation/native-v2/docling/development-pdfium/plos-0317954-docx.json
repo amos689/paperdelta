@@ -1,0 +1,2502 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "supplement",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 16217220515148400972,
+    "filename": "supplement.docx"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/tables/0"
+      },
+      {
+        "$ref": "#/groups/3"
+      },
+      {
+        "$ref": "#/groups/5"
+      },
+      {
+        "$ref": "#/groups/7"
+      },
+      {
+        "$ref": "#/groups/9"
+      },
+      {
+        "$ref": "#/groups/11"
+      },
+      {
+        "$ref": "#/groups/13"
+      },
+      {
+        "$ref": "#/texts/23"
+      },
+      {
+        "$ref": "#/texts/24"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/1"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/2"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/3"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/4"
+        },
+        {
+          "$ref": "#/texts/5"
+        },
+        {
+          "$ref": "#/texts/6"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_2",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/7"
+        },
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_6",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/10"
+        },
+        {
+          "$ref": "#/texts/11"
+        },
+        {
+          "$ref": "#/texts/12"
+        },
+        {
+          "$ref": "#/texts/13"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_11",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/14"
+        },
+        {
+          "$ref": "#/texts/15"
+        },
+        {
+          "$ref": "#/texts/16"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_14",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/12",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/17"
+        },
+        {
+          "$ref": "#/texts/18"
+        },
+        {
+          "$ref": "#/texts/19"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_18",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/13",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "group",
+      "label": "inline"
+    },
+    {
+      "self_ref": "#/groups/14",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/20"
+        },
+        {
+          "$ref": "#/texts/21"
+        },
+        {
+          "$ref": "#/texts/22"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_21",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "S1 Table. Appendix: Survey Instruments",
+      "text": "S1 Table. Appendix: Survey Instruments",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Construct",
+      "text": "Construct",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Item",
+      "text": "Item",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Description",
+      "text": "Description",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Perceived Usefulness",
+      "text": "Perceived Usefulness",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Sykes, Venkatesh [39]",
+      "text": "Sykes, Venkatesh [39]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Perceived Ease of Use",
+      "text": "Perceived Ease of Use",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Sykes, Venkatesh [39]",
+      "text": "Sykes, Venkatesh [39]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Data aggregation",
+      "text": "Data aggregation",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Wang and Byrd [6]",
+      "text": "Wang and Byrd [6]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Data analysis",
+      "text": "Data analysis",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Wang and Byrd [6]",
+      "text": "Wang and Byrd [6]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Data interpretation",
+      "text": "Data interpretation",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/groups/12"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Wang and Byrd [6]",
+      "text": "Wang and Byrd [6]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Decision-making effectiveness",
+      "text": "Decision-making effectiveness",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Adapted from",
+      "text": "Adapted from",
+      "formatting": {
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/groups/14"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Wang and Byrd [6]",
+      "text": "Wang and Byrd [6]",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Note: All questions were asked using a 7-point Likert\u2019s scale.",
+      "text": "Note: All questions were asked using a 7-point Likert\u2019s scale.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/groups/1"
+        },
+        {
+          "$ref": "#/groups/2"
+        },
+        {
+          "$ref": "#/groups/4"
+        },
+        {
+          "$ref": "#/groups/6"
+        },
+        {
+          "$ref": "#/groups/8"
+        },
+        {
+          "$ref": "#/groups/10"
+        },
+        {
+          "$ref": "#/groups/12"
+        },
+        {
+          "$ref": "#/groups/14"
+        }
+      ],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Construct",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/0"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Item",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/1"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Description",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/2"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 3,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 3,
+            "text": "Please indicate how much you agree or disagree to the following:",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 4,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Perceived Usefulness \n\nAdapted from Sykes, Venkatesh [39]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/4"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PU01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "I believe EMR would be useful in my job.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PU02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Using EMR will enable me to accomplish tasks more quickly.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PU03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Using EMR will increase my productivity.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PU04",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "If I use EMR, I will increase my chances of getting a raise.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 4,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Perceived Ease of Use \n\nAdapted from Sykes, Venkatesh [39]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/6"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PEU01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "My interaction with EMR would be clear and understandable.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PEU02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "It would be easy for me to become skillful at using EMR.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PEU03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "I would find EMR to be easy to use.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "PEU04",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Learning to operate EMR would be easy for me.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 3,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 3,
+            "text": "Please indicate how much you agree or disagree that EMR can effectively enable you to do the following: ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 3,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Data aggregation \n\nAdapted from Wang and Byrd [6]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/8"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAG01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Collect data from various health systems throughout our hospital and external healthcare sources.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAG02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Make patient records consistent, visible and easily accessible for further analysis.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAG03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Store patient data into appropriate databases.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 4,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Data analysis \n\nAdapted from Wang and Byrd [6]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/10"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAN01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Identify important business insights and trends to improve healthcare services.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAN02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Predict patterns of care in response to patient needs.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAN03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Analyze data in near-real or real time that allows responses to unexpected clinical events.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DAN04",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Analyze social media data to understand current trends from a large population.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 3,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Data interpretation\n\nAdapted from Wang and Byrd [6]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/12"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DIT01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Provide systemic and comprehensive reporting to help recognize feasible opportunities for care improvement.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DIT02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Support data visualization that enables us to easily interpret results.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DIT03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Provide near-real or real-time information on health care operations and services within healthcare facilities and across health care systems.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 3,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Decision-making effectiveness\n\nAdapted from Wang and Byrd [6]",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/14"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DME01",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "As a result of EMR, the quality of decisions has improved.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DME02",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "As a result of EMR, the speed at which decisions are analyzed has increased.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "DME03",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "As a result of EMR, our hospital staffs have an increased understanding of our patients.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 24,
+        "num_cols": 3,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Construct",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Item",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Description",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree to the following:",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree to the following:",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree to the following:",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Usefulness \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PU01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "I believe EMR would be useful in my job.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Usefulness \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PU02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Using EMR will enable me to accomplish tasks more quickly.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Usefulness \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PU03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Using EMR will increase my productivity.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Usefulness \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PU04",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "If I use EMR, I will increase my chances of getting a raise.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Ease of Use \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PEU01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "My interaction with EMR would be clear and understandable.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Ease of Use \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PEU02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "It would be easy for me to become skillful at using EMR.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Ease of Use \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PEU03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "I would find EMR to be easy to use.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Perceived Ease of Use \n\nAdapted from Sykes, Venkatesh [39]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "PEU04",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Learning to operate EMR would be easy for me.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree that EMR can effectively enable you to do the following: ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree that EMR can effectively enable you to do the following: ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 3,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 3,
+              "text": "Please indicate how much you agree or disagree that EMR can effectively enable you to do the following: ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data aggregation \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAG01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Collect data from various health systems throughout our hospital and external healthcare sources.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data aggregation \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAG02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Make patient records consistent, visible and easily accessible for further analysis.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data aggregation \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAG03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Store patient data into appropriate databases.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data analysis \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAN01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Identify important business insights and trends to improve healthcare services.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data analysis \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAN02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Predict patterns of care in response to patient needs.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data analysis \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAN03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Analyze data in near-real or real time that allows responses to unexpected clinical events.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 4,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data analysis \n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DAN04",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Analyze social media data to understand current trends from a large population.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data interpretation\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DIT01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Provide systemic and comprehensive reporting to help recognize feasible opportunities for care improvement.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data interpretation\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DIT02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Support data visualization that enables us to easily interpret results.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Data interpretation\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DIT03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Provide near-real or real-time information on health care operations and services within healthcare facilities and across health care systems.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Decision-making effectiveness\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DME01",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "As a result of EMR, the quality of decisions has improved.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Decision-making effectiveness\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DME02",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "As a result of EMR, the speed at which decisions are analyzed has increased.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 3,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Decision-making effectiveness\n\nAdapted from Wang and Byrd [6]",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "DME03",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "As a result of EMR, our hospital staffs have an increased understanding of our patients.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

@@ -1,0 +1,1787 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "supplement",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 14215417469442605951,
+    "filename": "supplement.docx"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/tables/0"
+      },
+      {
+        "$ref": "#/texts/11"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/groups/8"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/2"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/3"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/4"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_3_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/6"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_4_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/7"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_5_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/8"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_6_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_2_1",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/13"
+        }
+      ],
+      "content_layer": "furniture",
+      "name": "page header",
+      "label": "section"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "S1 Appendix:",
+      "text": "S1 Appendix:",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Data Description Table",
+      "text": "Data Description Table",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Variable",
+      "text": "Variable",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Description",
+      "text": "Description",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Source",
+      "text": "Source",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Period",
+      "text": "Period",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Frequency",
+      "text": "Frequency",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Currency",
+      "text": "Currency",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Dataset link",
+      "text": "Dataset link",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Investing Database",
+      "text": "Investing Database",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "text",
+      "prov": [],
+      "orig": "14",
+      "text": "14",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/groups/1"
+        },
+        {
+          "$ref": "#/groups/2"
+        },
+        {
+          "$ref": "#/groups/3"
+        },
+        {
+          "$ref": "#/groups/4"
+        },
+        {
+          "$ref": "#/groups/5"
+        },
+        {
+          "$ref": "#/groups/6"
+        },
+        {
+          "$ref": "#/groups/7"
+        }
+      ],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Variable",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/0"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Description",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/1"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Source",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/2"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Period",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/3"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Frequency",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/4"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "Currency",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/5"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "Dataset link",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/6"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Bitcoin Price",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily closing price of Bitcoin in USD.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Investing Database\n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/7"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "USD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.investing.com/crypto/bitcoin/historical-data ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Gold Price",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily closing price of gold per ounce in USD.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Investing Database",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "USD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.investing.com/commodities/gold-historical-data ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Crude Oil Price (WTI)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily closing price of West Texas Intermediate (WTI) in USD per barrel.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Investing Database",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "USD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.investing.com/commodities/crude-oil-historical-data ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Natural Gas Price",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily closing price of natural gas in USD per MMBtu.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Investing Database",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "USD",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.investing.com/commodities/natural-gas-historical-data ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Geopolitical Risk Index (GPR)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily index capturing geopolitical risks (wars, terrorism, tensions).",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Caldara & Iacoviello (2022)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "N/A",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.matteoiacoviello.com/gpr.htm ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Infectious Disease Equity Market Volatility Index (IDEMV)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Daily index assessing the impact of pandemics on equity markets.",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Baker et al. (2020)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Jan 2017 - Jan 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 4,
+            "end_col_offset_idx": 5,
+            "text": "Daily",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 5,
+            "end_col_offset_idx": 6,
+            "text": "N/A",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 6,
+            "end_col_offset_idx": 7,
+            "text": "https://www.policyuncertainty.com/infectious_EMV.html ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 7,
+        "num_cols": 7,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Variable",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Description",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Source",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Period",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Frequency",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "Currency",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "Dataset link",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Bitcoin Price",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily closing price of Bitcoin in USD.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Investing Database\n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "USD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.investing.com/crypto/bitcoin/historical-data ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Gold Price",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily closing price of gold per ounce in USD.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Investing Database",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "USD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.investing.com/commodities/gold-historical-data ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Crude Oil Price (WTI)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily closing price of West Texas Intermediate (WTI) in USD per barrel.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Investing Database",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "USD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.investing.com/commodities/crude-oil-historical-data ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Natural Gas Price",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily closing price of natural gas in USD per MMBtu.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Investing Database",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "USD",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.investing.com/commodities/natural-gas-historical-data ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Geopolitical Risk Index (GPR)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily index capturing geopolitical risks (wars, terrorism, tensions).",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Caldara & Iacoviello (2022)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "N/A",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.matteoiacoviello.com/gpr.htm ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Infectious Disease Equity Market Volatility Index (IDEMV)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Daily index assessing the impact of pandemics on equity markets.",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Baker et al. (2020)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Jan 2017 - Jan 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 4,
+              "end_col_offset_idx": 5,
+              "text": "Daily",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 5,
+              "end_col_offset_idx": 6,
+              "text": "N/A",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 6,
+              "end_col_offset_idx": 7,
+              "text": "https://www.policyuncertainty.com/infectious_EMV.html ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

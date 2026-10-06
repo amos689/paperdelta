@@ -1,0 +1,123 @@
+{
+  "locked_at": "2026-10-06T11:05:43.058041+00:00",
+  "gold_sha256": "e2540d6b63a4bf4f9136dfbc832784ece054497e2f93445a7bcad5b9fe406589",
+  "font_boxes_sha256": "9b7038defc7b977328f25e8cfbbc9d7cba07b94ed2f035163c92db6cfea9ac4c",
+  "implementation_lock_sha256": "f96f2f934722ef9b14b4814b0a8328e9b29f1c8e63d1cd375ac4b685519f6eb2",
+  "annotator": "developer",
+  "production_changes_after_freeze": false,
+  "targets": 110,
+  "planned_slots": 160,
+  "combined_targets": 222,
+  "method": "PDFium and OOXML independent original positions; visual review before any PaperDelta held-out candidates or scores. Not independent human annotation.",
+  "reviewed_pdf_pages": {
+    "plos-0294127": [
+      2,
+      7
+    ],
+    "plos-0304516": [
+      1,
+      6
+    ],
+    "plos-0312751": [
+      1,
+      6
+    ],
+    "plos-0324599": [
+      10,
+      11
+    ],
+    "elife-110341": [
+      3,
+      4,
+      7,
+      9,
+      11,
+      15,
+      16
+    ],
+    "elife-110200": [
+      3,
+      5,
+      7,
+      8,
+      10,
+      12
+    ]
+  },
+  "reviewed_word_pages": {
+    "plos-0294127": [
+      1,
+      2,
+      3
+    ],
+    "plos-0304516": [
+      1
+    ],
+    "plos-0312751": [
+      1,
+      2
+    ],
+    "plos-0324599": [
+      1
+    ]
+  },
+  "visual_observations": "110 literal measurements confirmed at original positions, including the complete raised-exponent value 3 x 10^4 as one target. Word 0304516 first eight result rows match all 16 counts; Word 0312751 contains 9 observed cases. Other two Word files contain bibliography or source dictionary metadata only. Shortfalls retained; no replacement files.",
+  "renderer": "Poppler original PDF pages; Word 16.0 read-only macro-disabled PDF export for visual Word inspection; original bytes unchanged.",
+  "visual_sha256": {
+    "elife-110200-10-targets.png": "a7f0bd5a5cb956232a03e0d885db6d817f712b090bbd31a597e29c333daee6dc",
+    "elife-110200-10.png": "c4740dd3d0d3b0702cff0d42afdcba2e4ed640dbf7e75f3899b83fa76c807a94",
+    "elife-110200-12-targets.png": "9b5dd02b28bf85a6ac92ab3c1254784125c37b51efc66aef605e5418d912c8f1",
+    "elife-110200-12.png": "3260c7c5195644c58a6734027335550391ae79af7580e0d097749d77ebf20870",
+    "elife-110200-3-targets.png": "11d3172d76a23401cd22adb47990ea617956a56da9baf603da0777a086d196e6",
+    "elife-110200-3.png": "df50e8dc3ec6073235ec43baff00b5023a62a65589ffead7a5e0104cfb16b725",
+    "elife-110200-5-targets.png": "7a4302801a9f7a8446167389fe3aaa4ab01dcdac003f0a9eb10941b284b9a3fe",
+    "elife-110200-5.png": "98099eb52f310b1b1f984410c838665a7c4cf1f9c0d492337ee78b1a1d6c51e6",
+    "elife-110200-7-targets.png": "5bf3e7cb105fe20e191562158d1efd9d57846270eaf881386eb6be64e6cdfa36",
+    "elife-110200-7.png": "7baa152c7dfb73f728dc31763ff74368e28747eea86aa6726969be94eeff7d9a",
+    "elife-110200-8-targets.png": "76ef150c5dae76502cc254e3aca742b896ba30775537a9ad69234a5ae9bd8c45",
+    "elife-110200-8.png": "a8fa45968aa0e6d4eed65c7cb0ce5b964e838b6904967c7f86a77bf8d3741ce0",
+    "elife-110200-sheet.png": "edc4a1909171042a0f675246bb6e19fb9c5aef831fd7278c8f0fab48b6c684ac",
+    "elife-110341-11-targets.png": "b044668a297efceb0b76369e5d94ed79c1f8e19b1e542fe687984a2beb09cbb9",
+    "elife-110341-11.png": "1f1650e4656f0e523897d9512b2eadd3db9af313c2f1709d97a3fbb74e97e57c",
+    "elife-110341-15-targets.png": "cccd79d3b0a07ddc01b432fb680b561857fe68746299d7caa87b8b0a66c6567c",
+    "elife-110341-15.png": "768bc1011bcc07333486c942c74e69796761561450de9141fa0cfbf965d1a9ed",
+    "elife-110341-16-targets.png": "7e9006a4bd1a0dc6ca0dff92a10eff21bd064374a1238ab2eb35f2b019166bba",
+    "elife-110341-16.png": "de3ce0eaf99f59af25c3cecab9110d67eb9aab2074521cd3770c38a13ce17fc4",
+    "elife-110341-3-targets.png": "92b2c73bc9773dbd991af31b213799a406d57fd73a14cda055c087400931e20d",
+    "elife-110341-3.png": "795f724853d10bb1473b2bb85b7e435056d0a6719fb34750e0b363c28f6111e9",
+    "elife-110341-4-targets.png": "6c05b3c3256831884feec3e22773e36980a470f8d18773a43c3d65ce2073db8a",
+    "elife-110341-4.png": "f924d7c18431fe839ee60314daaba5e718a1f06610b179d74bc4521207031df2",
+    "elife-110341-7-targets.png": "221c8b71687d8c018c4ea34cb1801f45c3768d817228e1f6d9004ed8b085c8cb",
+    "elife-110341-7.png": "b18986493dfa116ca59c92fe0cd094b29f059511d662654cd0ee9a4cc44bd459",
+    "elife-110341-9-targets.png": "5b9766a725dd041474cc4f4be0a0243ee22d110c7836ed6ce87f57d45fa8f25c",
+    "elife-110341-9.png": "f98a86caf06e22d5bb8c8d0f466b59e56f4f021edcd0bd7d3aa2a855d08b38a4",
+    "elife-110341-sheet.png": "6e5313e83b3290da8a5f54349b0a4149969a6d93ed049ad5240177007eb5e517",
+    "plos-0294127-2-targets.png": "f0bebfc54e9330b16da23684e151458a45803fc6f064c3d040bc67de78cfff01",
+    "plos-0294127-2.png": "23640552c0a54378516a60b894e9e68898fb79eb5940679a955f0cb608ded47a",
+    "plos-0294127-7-targets.png": "36946d0d8c050967a0646e1cf6e7a953f45d2d1a10dd866d016efe0e5eadc3a8",
+    "plos-0294127-7.png": "96f040e1b32a81e45c521a0e2e1a4637aab648ec400cc942533eaac18b40c3be",
+    "plos-0294127-sheet.png": "106cf83901031dc75caa54aaa947877458caf99c52325a369068c21fa4868e3f",
+    "plos-0294127-word-1.png": "e2de03f2f04737967b79cef2c777066e90a0de56ce8b67eee1eed1440ab236d4",
+    "plos-0294127-word-2.png": "b255416e9f76054ecf3879e9f29e5b65c2c19d8f1771cdb8a6d0f0632f36a5bf",
+    "plos-0294127-word-3.png": "49a4b747c079fa76d4000a0b884ecbcc0dd51300b6b259fc28bdaf2eb08c282b",
+    "plos-0304516-1-targets.png": "b441cceaf3996bc975ed705394f2bfa0e5047274839ecdd707ccb18588f69260",
+    "plos-0304516-1.png": "5a9b8706434fb745e214cf3729e96d686241b6241ea3b1add51853ddb153b6c9",
+    "plos-0304516-6-targets.png": "6b1e5a704dbfd12c23e1cebad5188eb7bf895e8ecf5af820f5b14723726f68d8",
+    "plos-0304516-6.png": "65d03c11048c1bcaeb6dcabce07e868e181c38e81ba8d47fdef077094d757693",
+    "plos-0304516-sheet.png": "79e39b06698d683151c321538ab28ff518cac43da00820b85b820a53509fc644",
+    "plos-0304516-word-1.png": "9b243420372088f00bc095e6d40bf81ef5220a987c1be7a5871bcf30dc666f9a",
+    "plos-0312751-1-targets.png": "9adaa8e10358eba304e1dec18b96a06c0c74bfb28694847015d207d49b5efe54",
+    "plos-0312751-1.png": "03f8bde5707ac5bcbd093fa1567d8da9390888ba4324761786368a07d37d88ba",
+    "plos-0312751-6-targets.png": "9c4291b0ea8339e199cf204d40a8189f62a3b525e8c1aa5fcf033f77b1e35bd9",
+    "plos-0312751-6.png": "fc989fdd3fedc628fdc6c53a3627ba6923e26648783b941fbd08229a81e3c39a",
+    "plos-0312751-sheet.png": "f5739ac11f384913533396bee458a612ec4c8b1130cf91895fa1f3582a5f7883",
+    "plos-0312751-word-1.png": "918f5e3bcb4aa6bbdfdaee219212caa2d4f39497c40a64b8143ecee213453b3a",
+    "plos-0312751-word-2.png": "068ef8c61383de2c7de51dd9a6b8469638f0cc54fd333d3512a227b0df63c51b",
+    "plos-0324599-10-targets.png": "b8c6c0b71aa5ae84d8e60371dbe82ba206bf7f62890f4d3ea9be62cf55b443ea",
+    "plos-0324599-10.png": "b205fb007fbbc8ee128a03dbb07366967fb2dda42a391659e4dab37280afb3e0",
+    "plos-0324599-11-targets.png": "34932d4b4b30f9d6a4adbabb301265e41a4bac25d53ac126fe7435490f0a2b6e",
+    "plos-0324599-11.png": "c7568c68da70c35830b37c264a3ca731445470f41029d80d85a61974a1ec3cc8",
+    "plos-0324599-sheet.png": "4c1cbb0e48bb1dc7252a87d7c95386aa6d898734a6ef03336caea74a40b1d73a",
+    "plos-0324599-word-1.png": "8b153ac7bf0be4752afc2811c2367c51fc6d21aa7c995f0a25459940ba90d19d"
+  }
+}

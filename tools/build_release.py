@@ -45,7 +45,8 @@ def main():
     )
     files.update(
         p.relative_to(ROOT).as_posix()
-        for p in (ROOT / "validation/native-v1").rglob("*")
+        for study in ("native-v1", "native-v2")
+        for p in (ROOT / "validation" / study).rglob("*")
         if p.is_file() and "__pycache__" not in p.parts
     )
     files.update(
@@ -57,6 +58,8 @@ def main():
             "docs/zh-CN/evaluation.md",
             "docs/v1.1.md",
             "docs/zh-CN/v1.1.md",
+            "docs/v1.3.md",
+            "docs/zh-CN/v1.3.md",
         }
     )
     manifest = {
@@ -97,7 +100,12 @@ def main():
             "Native Word/PDF study: read validation/native-v1/README.md and run "
             "`python tools/replay_native.py --out build/native-replay` with the documented "
             "dependencies. The frozen implementation and first held-out failures are retained; "
-            "replays are regressions on already seen inputs.\n",
+            "replays are regressions on already seen inputs.\n\n"
+            "The new 1.3 study is separate: validation/native-v2/README.md, with "
+            "`python tools/replay_native_v2.py --out build/native-v2-replay`. "
+            "It preserves twenty original files, independently selected positions, "
+            "the frozen implementation, baseline, development history "
+            "and first held-out results.\n",
         )
         bundle.writestr(
             "EVALUATION_README.zh-CN.md",
@@ -113,7 +121,10 @@ def main():
             "原生 Word/PDF 试验见 validation/native-v1/README.zh-CN.md。按文档安装依赖后运行 "
             "`python tools/replay_native.py --out build/native-replay`。"
             "冻结实现和首次留出失败均保留，"
-            "重放属于已见输入的回归验证。\n",
+            "重放属于已见输入的回归验证。\n\n"
+            "1.3 的新试验独立保存在 validation/native-v2/README.zh-CN.md，运行 "
+            "`python tools/replay_native_v2.py --out build/native-v2-replay` 重放。"
+            "保留二十份原文件、独立定位、冻结实现、基线、开发历史和首次留出结果。\n",
         )
     print(
         json.dumps(

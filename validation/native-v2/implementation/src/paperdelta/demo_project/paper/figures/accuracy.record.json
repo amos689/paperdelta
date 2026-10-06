@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "path": "paper/figures/accuracy.pdf",
+  "output_hash": "sha256:80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+  "inputs": {
+    "results/metrics.csv": "sha256:ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46"
+  },
+  "script": {
+    "path": "scripts/plot_accuracy.py",
+    "hash": "sha256:145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907"
+  },
+  "recorded_at": "2026-10-02T15:52:50.173225+00:00",
+  "method": "imported"
+}

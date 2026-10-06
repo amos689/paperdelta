@@ -1,0 +1,5816 @@
+{
+  "by_file": [
+    {
+      "case": "plos-0294127",
+      "counts": {
+        "supported": 4,
+        "unknown": 12
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0304516",
+      "counts": {
+        "supported": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0312751",
+      "counts": {
+        "missed": 2,
+        "supported": 4,
+        "unknown": 10
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0324599",
+      "counts": {
+        "supported": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-110341",
+      "counts": {
+        "supported": 11,
+        "unknown": 2
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-110200",
+      "counts": {
+        "missed": 1,
+        "supported": 15
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0304516",
+      "counts": {
+        "supported": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "plos-0312751",
+      "counts": {
+        "unknown": 1
+      },
+      "format": "docx"
+    }
+  ],
+  "coordinates": "font",
+  "counts": {
+    "mislocated": 0,
+    "missed": 3,
+    "supported": 82,
+    "unknown": 25
+  },
+  "created_at": "2026-10-06T11:09:36.821046+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "held-out": "e2540d6b63a4bf4f9136dfbc832784ece054497e2f93445a7bcad5b9fe406589"
+  },
+  "implementation": {
+    "pyproject.toml": "61cbb7802976752e407f3a7e0d3324d31e5ff39ff4ad673e1189b76b2ce32646",
+    "src/paperdelta/__init__.py": "bb60f9169cbcc1d7e6258ea1c6200c29bf2c9793db8ace00ec38f535cd86782c",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "836d836d596f010cee7216021c160190fd7d0e40cf59ff2a4662f8a58934ae53",
+    "src/paperdelta/agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+    "src/paperdelta/analysis.py": "b220f3d79e2a8a15a527431ddd7a56e70b83fb6a1833cbd28f445781278033e8",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+    "src/paperdelta/assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio.css": "bd46b2b82fa09fcdabe8b83ecd4d83389655332318af4b20992399f56dfb4efa",
+    "src/paperdelta/assets/studio.js": "36228f21497cd384da529ede6fad588df8616f01d90c59757c747343e3571f03",
+    "src/paperdelta/batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+    "src/paperdelta/cli.py": "4fbe34719879b59cbb807a09b8e249f6385b94caff546203aa06c078c6cb54de",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "c1bf45bd5f8b9bbeacc6175a08dfedd5b49095496230581af1d0071955bc7406",
+    "src/paperdelta/demo_markdown/paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_markdown/paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+    "src/paperdelta/demo_markdown/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_quarto/paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_quarto/paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+    "src/paperdelta/demo_quarto/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+    "src/paperdelta/docx_document.py": "1d416956b01e52815935d002200b7322af5d2201bafc612ac0ad0f17586a0f74",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "e6acc88488197fbf65d65a96e6f90a3a4c4f7f9393485272feb0a4e73618386c",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "477cd3603d7fba6855ba4495bc2b1d10c9191dd558bb670259c620126b706e4f",
+    "src/paperdelta/locales/zh-CN.json": "557a37f5b29682fc15c46453289a91dd7d351fbbfe5f27a74b7826c7cbd87971",
+    "src/paperdelta/locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+    "src/paperdelta/manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+    "src/paperdelta/markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+    "src/paperdelta/mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "43f5fe801a3d9d44265934235caa28200465af697ce0e33cb766ab8d29e59319",
+    "src/paperdelta/native_document.py": "2e9547e4d3b6a2336907cfc61718b5ba042b0a9598cf43499d192ffbbc405900",
+    "src/paperdelta/onboarding.py": "b238e799b2c19f6a0842ca378601482e5307e2f93d304aa732989abad4582f75",
+    "src/paperdelta/patches.py": "93eb89bba01d58d774f9f3417d95cfee15749814c51ae0bca4130a31e2176b37",
+    "src/paperdelta/pdf_document.py": "7e2b6066dc16179d77699dc3ebeb671d5b45fa59ee9f68c93dea82b2669b6cbf",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/records.py": "10bbc5dd3675a78fa342897020924e6203ff77364a0f502bc1b75227194bafa4",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "b46984e54a2ff810b48a4e4beed17c2a4333cb72bc703a3219d0bdb9dbe3d0d8",
+    "src/paperdelta/studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+    "src/paperdelta/studio_recovery.py": "11adecab72ab47986efa76478d8766ca2075c2dee6ca43774de0380476724e33",
+    "src/paperdelta/studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+    "src/paperdelta/studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+    "src/paperdelta/studio_ui.py": "3af66eed567f112c5af42178b0d9a46c32d6da432d0ae8c45095cd986a2b8e24",
+    "src/paperdelta/tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+    "src/paperdelta/watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+    "src/paperdelta/word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/compare_docling_v2.py": "8efbec861756f69758378d9bb85731be5bd14d51213b6f1d7f5d5423e2b2d4f3",
+    "tools/evaluate_native_v2.py": "bafedf538669ae23f589cf163ba731852c43b8afd97e6306cc839ed951f61208",
+    "tools/prepare_native_v2.py": "b02c89d179cb1cf56e48fbcc1fcd995a16866d40554720371d530ed6ce8dcb7b",
+    "tools/prepare_native_v2_font_boxes.py": "bbb3dd96fab76b666185adb063e9d062b21a33c0c74f8f87610feb9e43060fea",
+    "tools/score_docling_v2.py": "57f34c7a11d745cb957d0c65534ee75eee5447ec1b4290175d4aaf03b20780de"
+  },
+  "matches_implementation_lock": true,
+  "mode": "first-held-out",
+  "planned_slots": 160,
+  "python": "3.12.14",
+  "results": [
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          583.1006317138672,
+          116.97975158691406,
+          594.5964965820312
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          583.2846374511719,
+          115.61976623535156,
+          594.2124938964844
+        ],
+        "page": 7
+      },
+      "id": "held-001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "534"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          567.9632263183594,
+          116.97975158691406,
+          579.4591064453125
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          568.2752380371094,
+          115.53976440429688,
+          579.2030944824219
+        ],
+        "page": 7
+      },
+      "id": "held-002",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "222"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          553.8034210205078,
+          116.97975158691406,
+          565.2992858886719
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          554.1154022216797,
+          115.61976623535156,
+          564.947265625
+        ],
+        "page": 7
+      },
+      "id": "held-003",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "312"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          528.7653503417969,
+          116.97975158691406,
+          536.4292144775391
+        ],
+        "ink_bbox": [
+          110.41182708740234,
+          529.1173095703125,
+          115.61976623535156,
+          536.1332397460938
+        ],
+        "page": 7
+      },
+      "id": "held-004",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "68"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          516.5542602539062,
+          116.97975158691406,
+          524.2181701660156
+        ],
+        "ink_bbox": [
+          110.41182708740234,
+          516.8102722167969,
+          115.61976623535156,
+          523.8341979980469
+        ],
+        "page": 7
+      },
+      "id": "held-005",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "56"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          504.73040771484375,
+          116.97975158691406,
+          512.3943176269531
+        ],
+        "ink_bbox": [
+          110.48382568359375,
+          504.9144287109375,
+          115.61976623535156,
+          512.0183410644531
+        ],
+        "page": 7
+      },
+      "id": "held-006",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "74"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          528.7653503417969,
+          126.50362396240234,
+          536.4292144775391
+        ],
+        "ink_bbox": [
+          119.93570709228516,
+          529.1493225097656,
+          125.14364624023438,
+          536.1332397460938
+        ],
+        "page": 7
+      },
+      "id": "held-007",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "65"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          516.5542602539062,
+          126.50362396240234,
+          524.2181701660156
+        ],
+        "ink_bbox": [
+          120.07970428466797,
+          516.9382934570312,
+          125.14364624023438,
+          523.8341979980469
+        ],
+        "page": 7
+      },
+      "id": "held-008",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "55"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          504.73040771484375,
+          126.50362396240234,
+          512.3943176269531
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          505.04241943359375,
+          125.14364624023438,
+          512.0183410644531
+        ],
+        "page": 7
+      },
+      "id": "held-009",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "72"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          479.2163391113281,
+          116.97975158691406,
+          486.8802490234375
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          479.600341796875,
+          115.61976623535156,
+          486.0082702636719
+        ],
+        "page": 7
+      },
+      "id": "held-010",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "15"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          476.47235107421875,
+          126.50362396240234,
+          484.13629150390625
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          477.23236083984375,
+          125.06364440917969,
+          483.2642822265625
+        ],
+        "page": 7
+      },
+      "id": "held-011",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          464.64849853515625,
+          126.50362396240234,
+          472.31243896484375
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          464.96051025390625,
+          125.16764068603516,
+          471.4404296875
+        ],
+        "page": 7
+      },
+      "id": "held-012",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "19"
+    },
+    {
+      "actual": {
+        "context": "We found 7 observational cohorts. Non-perfusion versus perfusion CT was not statistically",
+        "end": 5331,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            241.851,
+            197.6945,
+            247.133,
+            207.1945
+          ],
+          "block": "sha256:c93aa822e747cfce6f599f7634760c2938d7733f56e8cc7825d79093b636b73a",
+          "offset": 9,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 5330,
+        "text": "7"
+      },
+      "anchor": {
+        "block": "sha256:c93aa822e747cfce6f599f7634760c2938d7733f56e8cc7825d79093b636b73a",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "We found ",
+        "suffix": " observational cohorts. Non-perfusion versus perfusion CT was not statistically"
+      },
+      "case": "plos-0294127",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          241.8509521484375,
+          198.38800048828125,
+          247.09495544433594,
+          206.93804931640625
+        ],
+        "ink_bbox": [
+          242.20245361328125,
+          198.6920166015625,
+          246.8194580078125,
+          205.22802734375
+        ],
+        "page": 2
+      },
+      "id": "held-013",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "significantly different for both long-term clinical (n = 3,224; RR: 0.96; 95% CI 0.86 to 1.06;",
+        "end": 5473,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            409.8879,
+            211.6975,
+            433.4973,
+            221.1975
+          ],
+          "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+          "offset": 57,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 5468,
+        "text": "3,224"
+      },
+      "anchor": {
+        "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "significantly different for both long-term clinical (n = ",
+        "suffix": "; RR: "
+      },
+      "case": "plos-0294127",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          409.88787841796875,
+          212.3909912109375,
+          433.3738098144531,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          410.21087646484375,
+          212.552490234375,
+          433.0982666015625,
+          220.6085205078125
+        ],
+        "page": 2
+      },
+      "id": "held-014",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "3,224"
+    },
+    {
+      "actual": {
+        "context": "significantly different for both long-term clinical (n = 3,224; RR: 0.96; 95% CI 0.86 to 1.06;",
+        "end": 5483,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            456.4332,
+            211.6975,
+            474.8005,
+            221.1975
+          ],
+          "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+          "offset": 68,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 5479,
+        "text": "0.96"
+      },
+      "anchor": {
+        "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "; RR: ",
+        "suffix": "; "
+      },
+      "case": "plos-0294127",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          456.4331359863281,
+          212.3909912109375,
+          474.7149658203125,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          456.7846374511719,
+          212.552490234375,
+          474.3919372558594,
+          219.39251708984375
+        ],
+        "page": 2
+      },
+      "id": "held-015",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.96"
+    },
+    {
+      "actual": {
+        "context": "significantly different for both long-term clinical (n = 3,224; RR: 0.96; 95% CI 0.86 to 1.06;",
+        "end": 5496,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            511.878,
+            211.6975,
+            530.2453,
+            221.1975
+          ],
+          "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+          "offset": 81,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 5492,
+        "text": "0.86"
+      },
+      "anchor": {
+        "block": "sha256:e16b7dcc4a95c3bccda66d94759841ae2598db33792704a737607cd88df8edc3",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "% CI ",
+        "suffix": " to "
+      },
+      "case": "plos-0294127",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          511.87799072265625,
+          212.3909912109375,
+          530.1597900390625,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          512.2294921875,
+          212.552490234375,
+          529.8367919921875,
+          219.39251708984375
+        ],
+        "page": 2
+      },
+      "id": "held-016",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.86"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 15868,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            194.7992,
+            104.0469,
+            211.959,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15863,
+        "text": "47.43"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          194.79922485351562,
+          104.84686279296875,
+          211.95901489257812,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          194.959228515625,
+          105.52691650390625,
+          211.51901245117188,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-017",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "47.43"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 15875,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            220.2541,
+            104.0469,
+            233.5819,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 2,
+          "offset": 8,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15871,
+        "text": "0.28"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "±",
+            "shape": "<number>±<number>",
+            "suffix": ""
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          220.2541046142578,
+          104.84686279296875,
+          233.58192443847656,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          220.53408813476562,
+          105.52691650390625,
+          233.2299346923828,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-018",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.28"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 16361,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            306.0298,
+            104.0469,
+            323.1896,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16356,
+        "text": "40.18"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          306.02984619140625,
+          104.84686279296875,
+          323.1896057128906,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          306.1898193359375,
+          105.52691650390625,
+          322.8376159667969,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-019",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "40.18"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 16368,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.4847,
+            104.0469,
+            344.8126,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 8,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16364,
+        "text": "0.40"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "±",
+            "shape": "<number>±<number>",
+            "suffix": ""
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.4847106933594,
+          104.84686279296875,
+          344.81256103515625,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          331.76470947265625,
+          105.52691650390625,
+          344.5245361328125,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-020",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.40"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 16830,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.8354,
+            104.0469,
+            451.9952,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 4,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16825,
+        "text": "50.62"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.83538818359375,
+          104.84686279296875,
+          451.99517822265625,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          435.21942138671875,
+          105.47894287109375,
+          451.6831970214844,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-021",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "50.62"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 16837,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            460.2335,
+            104.0469,
+            473.5613,
+            112.0468
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 4,
+          "offset": 8,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16833,
+        "text": "0.30"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "±",
+            "shape": "<number>±<number>",
+            "suffix": ""
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          460.2334899902344,
+          104.84686279296875,
+          473.56134033203125,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          460.51348876953125,
+          105.52691650390625,
+          473.2733154296875,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-022",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.30"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nAge, mean ± SE | 47.43 ± 0.28 | 40.18 ± 0.40 | 50.62 ± 0.30 | < 0.0001",
+        "end": 17965,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            538.9789,
+            104.0469,
+            559.9707,
+            112.0468
+          ],
+          "block": "sha256:b21be0881f11ced28c7183d6b6c98f74556e09a78265e95744281c10294f7918",
+          "cell": 5,
+          "offset": 2,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 17959,
+        "text": "0.0001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age, mean ± SE"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          538.9789428710938,
+          104.84686279296875,
+          559.9706420898438,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          539.2588500976562,
+          105.52691650390625,
+          559.2106323242188,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-023",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.0001"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nBMI, mean ± SE | 28.86 ± 0.11 | 26.94 ± 0.16 | 29.71 ± 0.13 | < 0.0001",
+        "end": 15881,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            194.7992,
+            116.5764,
+            211.959,
+            124.5763
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15876,
+        "text": "28.86"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "BMI, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          194.79922485351562,
+          117.3763427734375,
+          211.95901489257812,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          195.0552215576172,
+          118.00836181640625,
+          211.70301818847656,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-024",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "28.86"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nBMI, mean ± SE | 28.86 ± 0.11 | 26.94 ± 0.16 | 29.71 ± 0.13 | < 0.0001",
+        "end": 15888,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            220.2541,
+            116.5764,
+            233.5819,
+            124.5763
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 2,
+          "offset": 8,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15884,
+        "text": "0.11"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "BMI, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "±",
+            "shape": "<number>±<number>",
+            "suffix": ""
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          220.2541046142578,
+          117.3763427734375,
+          233.58192443847656,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          220.53408813476562,
+          118.05633544921875,
+          232.82192993164062,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-025",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.11"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nBMI, mean ± SE | 28.86 ± 0.11 | 26.94 ± 0.16 | 29.71 ± 0.13 | < 0.0001",
+        "end": 16374,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            306.0298,
+            116.5764,
+            323.1896,
+            124.5763
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16369,
+        "text": "26.94"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "BMI, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          306.02984619140625,
+          117.3763427734375,
+          323.1896057128906,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          306.28582763671875,
+          118.00836181640625,
+          323.005615234375,
+          123.24029541015625
+        ],
+        "page": 6
+      },
+      "id": "held-026",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "26.94"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nBMI, mean ± SE | 28.86 ± 0.11 | 26.94 ± 0.16 | 29.71 ± 0.13 | < 0.0001",
+        "end": 16381,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.4847,
+            116.5764,
+            344.8126,
+            124.5763
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 8,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16377,
+        "text": "0.16"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "BMI, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "±",
+            "shape": "<number>±<number>",
+            "suffix": ""
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.4847106933594,
+          117.3763427734375,
+          344.81256103515625,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          331.76470947265625,
+          118.00836181640625,
+          344.5565490722656,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-027",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.16"
+    },
+    {
+      "actual": {
+        "context": "Variable | Total n = 8,983a | Non-hyperlipidemia n = 2,666a | Hyperlipidemia n = 6,317a | P value\nBMI, mean ± SE | 28.86 ± 0.11 | 26.94 ± 0.16 | 29.71 ± 0.13 | < 0.0001",
+        "end": 16843,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.8354,
+            116.5764,
+            451.9952,
+            124.5763
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 4,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16838,
+        "text": "29.71"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 3,
+          "headers": [
+            "Variable & Total n = 8,983a & Non-hyperlipidemia n = 2,666a & Hyperlipidemia n = 6,317a & P value"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "BMI, mean ± SE"
+          ],
+          "value_context": {
+            "prefix": "",
+            "shape": "<number>±<number>",
+            "suffix": "±"
+          }
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.83538818359375,
+          117.3763427734375,
+          451.99517822265625,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          435.0914306640625,
+          118.05633544921875,
+          451.2351989746094,
+          123.24029541015625
+        ],
+        "page": 6
+      },
+      "id": "held-028",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "29.71"
+    },
+    {
+      "actual": {
+        "context": "This study included 8,983 participants, of whom 6,317 (70.3%) were diagnosed with hyper-",
+        "end": 1735,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            281.4222,
+            518.9735,
+            305.0316,
+            528.4735
+          ],
+          "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+          "offset": 20,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1730,
+        "text": "8,983"
+      },
+      "anchor": {
+        "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "This study included ",
+        "suffix": " participants, of whom "
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          281.4222412109375,
+          519.6669921875,
+          304.9081726074219,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          281.7832336425781,
+          519.8284912109375,
+          304.6231384277344,
+          527.8844909667969
+        ],
+        "page": 1
+      },
+      "id": "held-029",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "8,983"
+    },
+    {
+      "actual": {
+        "context": "This study included 8,983 participants, of whom 6,317 (70.3%) were diagnosed with hyper-",
+        "end": 1763,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            396.8482,
+            518.9735,
+            420.4576,
+            528.4735
+          ],
+          "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+          "offset": 48,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1758,
+        "text": "6,317"
+      },
+      "anchor": {
+        "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " participants, of whom ",
+        "suffix": " ("
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          396.84820556640625,
+          519.6669921875,
+          420.3341369628906,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          397.2091979980469,
+          519.8284912109375,
+          420.05859375,
+          527.8844909667969
+        ],
+        "page": 1
+      },
+      "id": "held-030",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "6,317"
+    },
+    {
+      "actual": {
+        "context": "This study included 8,983 participants, of whom 6,317 (70.3%) were diagnosed with hyper-",
+        "end": 1769,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            425.5411,
+            518.9735,
+            443.9083,
+            528.4735
+          ],
+          "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+          "offset": 55,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1765,
+        "text": "70.3"
+      },
+      "anchor": {
+        "block": "sha256:de893d4512b55c6c81e27d9fb4a732c4528b1feb57e1d890e8f34f900a1dc909",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " (",
+        "suffix": "%) were diagnosed with hyper-"
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          425.5410461425781,
+          519.6669921875,
+          443.8228454589844,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          425.8925476074219,
+          519.8284912109375,
+          443.537841796875,
+          526.6684875488281
+        ],
+        "page": 1
+      },
+      "id": "held-031",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "70.3"
+    },
+    {
+      "actual": {
+        "context": "emia group than those without hyperlipidemia (3.87 ± 0.32 vs. 2.98 ± 0.14, P = 0.01).",
+        "end": 1964,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            391.4113,
+            546.9795,
+            409.7786,
+            556.4795
+          ],
+          "block": "sha256:31aa469200f67bdf0caa8ff1430b7e7fe9954fac9f18243d65a7c552dd890fa8",
+          "offset": 46,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1960,
+        "text": "3.87"
+      },
+      "anchor": {
+        "block": "sha256:31aa469200f67bdf0caa8ff1430b7e7fe9954fac9f18243d65a7c552dd890fa8",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "emia group than those without hyperlipidemia (",
+        "suffix": " ± "
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          391.411376953125,
+          547.6730041503906,
+          409.6932067871094,
+          556.2230072021484
+        ],
+        "ink_bbox": [
+          391.734375,
+          547.8344879150391,
+          409.4176940917969,
+          554.6744842529297
+        ],
+        "page": 1
+      },
+      "id": "held-032",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "3.87"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.09857177734375,
+          126.8446044921875,
+          419.7624816894531,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          412.4505615234375,
+          127.52459716796875,
+          419.4504699707031,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-033",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "32"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          439.9349670410156,
+          126.8446044921875,
+          447.598876953125,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          440.1910095214844,
+          127.52459716796875,
+          447.2868957519531,
+          132.70855712890625
+        ],
+        "page": 6
+      },
+      "id": "held-034",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "29"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          472.1930236816406,
+          126.8446044921875,
+          476.02496337890625,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          472.54498291015625,
+          127.52459716796875,
+          475.5849609375,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-035",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "3"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          498.1014404296875,
+          126.8446044921875,
+          505.7653503417969,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          498.35748291015625,
+          127.47662353515625,
+          505.5093688964844,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-036",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "26"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          526.3907470703125,
+          126.8446044921875,
+          534.0546875,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          526.646728515625,
+          127.52459716796875,
+          533.8706665039062,
+          132.60455322265625
+        ],
+        "page": 6
+      },
+      "id": "held-037",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "24"
+    },
+    {
+      "actual": {
+        "context": "2",
+        "end": 18178,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            559.1591,
+            126.0447,
+            562.991,
+            134.0446
+          ],
+          "block": "sha256:f79c5acf4cb2c096c5ce613895abf0c220e64ca58a955ba8060caaa67b604914",
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18177,
+        "text": "2"
+      },
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          559.1591796875,
+          126.8446044921875,
+          562.9911499023438,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          559.4151000976562,
+          127.52459716796875,
+          562.6790771484375,
+          132.60455322265625
+        ],
+        "page": 6
+      },
+      "id": "held-038",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "2"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.09857177734375,
+          148.841064453125,
+          419.7624816894531,
+          156.041015625
+        ],
+        "ink_bbox": [
+          412.9705505371094,
+          149.5211181640625,
+          419.4104919433594,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-039",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "18"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          439.9349670410156,
+          148.841064453125,
+          447.598876953125,
+          156.041015625
+        ],
+        "ink_bbox": [
+          440.8069763183594,
+          149.5211181640625,
+          447.2469177246094,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-040",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "18"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          472.1930236816406,
+          148.841064453125,
+          476.02496337890625,
+          156.041015625
+        ],
+        "ink_bbox": [
+          472.4729919433594,
+          149.5211181640625,
+          475.7369384765625,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-041",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          498.1014404296875,
+          148.841064453125,
+          505.7653503417969,
+          156.041015625
+        ],
+        "ink_bbox": [
+          498.97344970703125,
+          149.47314453125,
+          505.5093688964844,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-042",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          526.3907470703125,
+          148.841064453125,
+          534.0546875,
+          156.041015625
+        ],
+        "ink_bbox": [
+          527.2627563476562,
+          149.5211181640625,
+          533.8706665039062,
+          154.60107421875
+        ],
+        "page": 6
+      },
+      "id": "held-043",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "2",
+        "end": 18202,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            559.1591,
+            148.0412,
+            562.991,
+            156.0411
+          ],
+          "block": "sha256:f79c5acf4cb2c096c5ce613895abf0c220e64ca58a955ba8060caaa67b604914",
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18201,
+        "text": "2"
+      },
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          559.1591796875,
+          148.841064453125,
+          562.9911499023438,
+          156.041015625
+        ],
+        "ink_bbox": [
+          559.4151000976562,
+          149.5211181640625,
+          562.6790771484375,
+          154.60107421875
+        ],
+        "page": 6
+      },
+      "id": "held-044",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "2"
+    },
+    {
+      "actual": {
+        "context": "Out of 1,605 records, 16 studies with 690 lesions were included. Overall, GTR procedures",
+        "end": 3060,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            227.2808,
+            659.4585,
+            250.8902,
+            668.9585
+          ],
+          "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+          "offset": 7,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3055,
+        "text": "1,605"
+      },
+      "anchor": {
+        "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "Out of ",
+        "suffix": " records, "
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          227.28079223632812,
+          660.1519927978516,
+          250.76669311523438,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          228.24029541015625,
+          660.3134918212891,
+          250.40570068359375,
+          668.369499206543
+        ],
+        "page": 1
+      },
+      "id": "held-045",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "1,605"
+    },
+    {
+      "actual": {
+        "context": "Out of 1,605 records, 16 studies with 690 lesions were included. Overall, GTR procedures",
+        "end": 3072,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            288.9054,
+            659.4585,
+            299.4295,
+            668.9585
+          ],
+          "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+          "offset": 22,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3070,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " records, ",
+        "suffix": " studies with "
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          288.9053955078125,
+          660.1519927978516,
+          299.3534851074219,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          289.8648986816406,
+          660.3134918212891,
+          299.0304870605469,
+          667.1534957885742
+        ],
+        "page": 1
+      },
+      "id": "held-046",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "Out of 1,605 records, 16 studies with 690 lesions were included. Overall, GTR procedures",
+        "end": 3089,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            352.0614,
+            659.4585,
+            367.8276,
+            668.9585
+          ],
+          "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+          "offset": 38,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3086,
+        "text": "690"
+      },
+      "anchor": {
+        "block": "sha256:61eb91c20cc278367d98c8e004ce5099c6e4c7f96303893d391d44d03a9ea3f1",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " studies with ",
+        "suffix": " lesions were included. Overall, GTR procedures"
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          352.0614013671875,
+          660.1519927978516,
+          367.7135925292969,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          352.4223937988281,
+          660.3134918212891,
+          367.4001159667969,
+          667.1534957885742
+        ],
+        "page": 1
+      },
+      "id": "held-047",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "690"
+    },
+    {
+      "actual": {
+        "context": "significantly improved healing after SRCT in both 2D (RR: 0.50; 95% CI, 0.34–0.73; P <",
+        "end": 3199,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            437.4407,
+            673.4615,
+            455.808,
+            682.9615
+          ],
+          "block": "sha256:458cc86dfa100a0c180d21f1363b5b7d320cadf816de0be1a085c6f63b7d3130",
+          "offset": 58,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3195,
+        "text": "0.50"
+      },
+      "anchor": {
+        "block": "sha256:458cc86dfa100a0c180d21f1363b5b7d320cadf816de0be1a085c6f63b7d3130",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "significantly improved healing after SRCT in both 2D (RR: ",
+        "suffix": "; "
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          437.44073486328125,
+          674.1550064086914,
+          455.7225646972656,
+          682.7050018310547
+        ],
+        "ink_bbox": [
+          437.792236328125,
+          674.3164978027344,
+          455.4090270996094,
+          681.156494140625
+        ],
+        "page": 1
+      },
+      "id": "held-048",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.50"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33317,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            347.8,
+            266.7096,
+            353.36,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 72,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33316,
+        "text": "1"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "we observe various periods of significant coherence, essentially in the ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          347.7999572753906,
+          265.36962890625,
+          353.3599548339844,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          348.909912109375,
+          267.39959716796875,
+          351.5499267578125,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-049",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "1"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33319,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            358.92,
+            266.7096,
+            364.48,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 74,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33318,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " and "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          358.9199523925781,
+          265.36962890625,
+          364.4799499511719,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          359.0699157714844,
+          267.42962646484375,
+          364.0198974609375,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-050",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33325,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            386.72,
+            266.7096,
+            392.28,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 80,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33324,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          386.7199401855469,
+          265.36962890625,
+          392.2799377441406,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          386.8699035644531,
+          267.42962646484375,
+          391.81988525390625,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-051",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33328,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            397.84,
+            266.7096,
+            408.96,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 82,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33326,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " days throughout the crises."
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          397.8399353027344,
+          265.36962890625,
+          408.9599304199219,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          398.94989013671875,
+          267.39959716796875,
+          408.5198974609375,
+          274.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-052",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33431,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            380.34,
+            280.7096,
+            391.46,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 72,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33429,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          380.3399353027344,
+          279.36962890625,
+          391.4599304199219,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          381.449951171875,
+          281.39959716796875,
+          391.01995849609375,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-053",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33434,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            397.02,
+            280.7096,
+            408.14,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 75,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33432,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " and "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          397.0199279785156,
+          279.36962890625,
+          408.1399230957031,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          397.4099426269531,
+          281.39959716796875,
+          407.6799011230469,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-054",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33441,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            430.38,
+            280.7096,
+            441.5,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 82,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33439,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          430.3799133300781,
+          279.36962890625,
+          441.4999084472656,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          430.7699279785156,
+          281.39959716796875,
+          441.0398864746094,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-055",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33445,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            447.06,
+            280.7096,
+            463.74,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 85,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33442,
+        "text": "256"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " days). Most arrows point"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          447.0599060058594,
+          279.36962890625,
+          463.7398986816406,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          447.369873046875,
+          281.39959716796875,
+          463.2999267578125,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-056",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "256"
+    },
+    {
+      "actual": {
+        "context": "(B) Gold exhibits significant short-term coherence within the 16–64 day band, especially during 2020. The arrows",
+        "end": 34189,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            314.76,
+            487.5176,
+            325.88,
+            497.5176
+          ],
+          "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+          "offset": 62,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34187,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(B) Gold exhibits significant short-term coherence within the ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          314.75994873046875,
+          486.1776428222656,
+          325.87994384765625,
+          497.51763916015625
+        ],
+        "ink_bbox": [
+          315.86993408203125,
+          488.2076110839844,
+          325.43994140625,
+          495.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-057",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(B) Gold exhibits significant short-term coherence within the 16–64 day band, especially during 2020. The arrows",
+        "end": 34192,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.44,
+            487.5176,
+            342.56,
+            497.5176
+          ],
+          "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+          "offset": 65,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34190,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " day band, especially during "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.43994140625,
+          486.1776428222656,
+          342.5599365234375,
+          497.51763916015625
+        ],
+        "ink_bbox": [
+          331.8299255371094,
+          488.2076110839844,
+          342.0999450683594,
+          495.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-058",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "16–64, the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those",
+        "end": 34480,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            36,
+            543.5176,
+            47.12,
+            553.5176
+          ],
+          "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34478,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          36.000003814697266,
+          542.1775970458984,
+          47.12000274658203,
+          553.5175933837891
+        ],
+        "ink_bbox": [
+          37.11000061035156,
+          544.2075958251953,
+          46.68000030517578,
+          551.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-059",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "16–64, the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those",
+        "end": 34483,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            52.68,
+            543.5176,
+            63.8,
+            553.5176
+          ],
+          "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+          "offset": 3,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34481,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": ", the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          52.68000030517578,
+          542.1775970458984,
+          63.79999923706055,
+          553.5175933837891
+        ],
+        "ink_bbox": [
+          53.06999969482422,
+          544.2075958251953,
+          63.34000015258789,
+          551.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-060",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "positive medium-term relationship in the 16–64 day band. Between 2019–2021, arrows point down and left-down, show-",
+        "end": 34825,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            215.5,
+            585.5176,
+            226.62,
+            595.5176
+          ],
+          "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+          "offset": 41,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34823,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "positive medium-term relationship in the ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          215.49998474121094,
+          584.1775970458984,
+          226.61997985839844,
+          595.5175933837891
+        ],
+        "ink_bbox": [
+          216.6099853515625,
+          586.2075958251953,
+          226.1799774169922,
+          593.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-061",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "positive medium-term relationship in the 16–64 day band. Between 2019–2021, arrows point down and left-down, show-",
+        "end": 34828,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            232.18,
+            585.5176,
+            243.3,
+            595.5176
+          ],
+          "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+          "offset": 44,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34826,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " day band. Between "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          232.1799774169922,
+          584.1775970458984,
+          243.2999725341797,
+          595.5175933837891
+        ],
+        "ink_bbox": [
+          232.56997680664062,
+          586.2075958251953,
+          242.83998107910156,
+          593.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-062",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "ing that IDEMV negatively affected WTI returns. At longer scales (256–512 days), arrows shift to right-down. ↘ suggesting",
+        "end": 34966,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            326.499,
+            599.5176,
+            343.179,
+            609.5176
+          ],
+          "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+          "offset": 66,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34963,
+        "text": "256"
+      },
+      "anchor": {
+        "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "ing that IDEMV negatively affected WTI returns. At longer scales (",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          326.4989318847656,
+          598.1775970458984,
+          343.1789245605469,
+          609.5175933837891
+        ],
+        "ink_bbox": [
+          326.8089599609375,
+          600.2075958251953,
+          342.7389221191406,
+          607.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-063",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "256"
+    },
+    {
+      "actual": {
+        "context": "ing that IDEMV negatively affected WTI returns. At longer scales (256–512 days), arrows shift to right-down. ↘ suggesting",
+        "end": 34970,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            348.739,
+            599.5176,
+            365.419,
+            609.5176
+          ],
+          "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+          "offset": 70,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34967,
+        "text": "512"
+      },
+      "anchor": {
+        "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " days), arrows shift to right-down. ↘ suggesting"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          348.7389221191406,
+          598.1775970458984,
+          365.4189758300781,
+          609.5175933837891
+        ],
+        "ink_bbox": [
+          349.178955078125,
+          600.2075958251953,
+          364.8989562988281,
+          607.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-064",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "512"
+    },
+    {
+      "actual": {
+        "context": "T- cells isolated from 14 healthy donors were labelled with the proliferation marker",
+        "end": 12479,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            323.2807,
+            504.5739,
+            333.3787,
+            513.5739
+          ],
+          "block": "sha256:f36c4570bfd13b9068ef2dc258d5d078bfdfc98d46e2ad7a202e34659ba8364f",
+          "offset": 23,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 12477,
+        "text": "14"
+      },
+      "anchor": {
+        "block": "sha256:f36c4570bfd13b9068ef2dc258d5d078bfdfc98d46e2ad7a202e34659ba8364f",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "T- cells isolated from ",
+        "suffix": " healthy donors were labelled with the proliferation marker"
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          323.28070068359375,
+          502.971923828125,
+          333.3786926269531,
+          513.5739135742188
+        ],
+        "ink_bbox": [
+          324.1537170410156,
+          504.951904296875,
+          333.063720703125,
+          511.32391357421875
+        ],
+        "page": 3
+      },
+      "id": "held-065",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          322.8323059082031,
+          579.7120056152344,
+          331.1523132324219,
+          589.1679992675781
+        ],
+        "ink_bbox": [
+          323.5923156738281,
+          581.5039978027344,
+          330.96832275390625,
+          587.1679992675781
+        ],
+        "page": 4
+      },
+      "id": "held-066",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "and manual curation, 11 single cells yielded productive",
+        "end": 23875,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.098,
+            652.7439,
+            444.106,
+            661.7439
+          ],
+          "block": "sha256:14fae19f1b0ad1ef5be780e347913cf9e7a861ac494431066df1ea96d1d8438c",
+          "offset": 21,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23873,
+        "text": "11"
+      },
+      "anchor": {
+        "block": "sha256:14fae19f1b0ad1ef5be780e347913cf9e7a861ac494431066df1ea96d1d8438c",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "and manual curation, ",
+        "suffix": " single cells yielded productive"
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.09783935546875,
+          651.1418914794922,
+          444.1058349609375,
+          661.743896484375
+        ],
+        "ink_bbox": [
+          434.97088623046875,
+          653.1219024658203,
+          442.34185791015625,
+          659.493896484375
+        ],
+        "page": 7
+      },
+      "id": "held-067",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "actual": {
+        "context": "accounting for 10 of 11 paired TCRs. The dominant clonotype, designated EM1, was detected in 6",
+        "end": 24022,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            230.599,
+            676.7379,
+            240.607,
+            685.7379
+          ],
+          "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+          "offset": 15,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24020,
+        "text": "10"
+      },
+      "anchor": {
+        "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "accounting for ",
+        "suffix": " of "
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          230.5989532470703,
+          675.1358947753906,
+          240.60694885253906,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          231.47195434570312,
+          677.0078887939453,
+          240.26495361328125,
+          683.5868911743164
+        ],
+        "page": 7
+      },
+      "id": "held-068",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "accounting for 10 of 11 paired TCRs. The dominant clonotype, designated EM1, was detected in 6",
+        "end": 24028,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            254.98,
+            676.7379,
+            264.988,
+            685.7379
+          ],
+          "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+          "offset": 21,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24026,
+        "text": "11"
+      },
+      "anchor": {
+        "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " of ",
+        "suffix": " paired TCRs. The dominant clonotype, designated EM1, was detected in "
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          254.97991943359375,
+          675.1358947753906,
+          264.9879455566406,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          255.85293579101562,
+          677.1158905029297,
+          263.22393798828125,
+          683.4878921508789
+        ],
+        "page": 7
+      },
+      "id": "held-069",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "actual": {
+        "context": "accounting for 10 of 11 paired TCRs. The dominant clonotype, designated EM1, was detected in 6",
+        "end": 24099,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            569.989,
+            676.7379,
+            574.993,
+            685.7379
+          ],
+          "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+          "offset": 93,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24098,
+        "text": "6"
+      },
+      "anchor": {
+        "block": "sha256:f8cc522caa8fcd859e962de8bb5690452c4b1635b47a2b93f39408b0edd02639",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " paired TCRs. The dominant clonotype, designated EM1, was detected in ",
+        "suffix": ""
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          569.9889526367188,
+          675.1358947753906,
+          574.9929809570312,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          570.3580322265625,
+          677.1158905029297,
+          574.6240234375,
+          683.5868911743164
+        ],
+        "page": 7
+      },
+      "id": "held-070",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "actual": {
+        "context": "of 11 cells and consisted of an alpha chain containing TRAV4 and TRAJ5 paired with a beta chain",
+        "end": 24105,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            180.145,
+            688.7349,
+            190.153,
+            697.7349
+          ],
+          "block": "sha256:d8c0b94079bdfbbb793b87a230d60ab6928de2060af1e3d62f9513a13d2905f6",
+          "offset": 3,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24103,
+        "text": "11"
+      },
+      "anchor": {
+        "block": "sha256:d8c0b94079bdfbbb793b87a230d60ab6928de2060af1e3d62f9513a13d2905f6",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "of ",
+        "suffix": " cells and consisted of an alpha chain containing TRAV4 and TRAJ5 paired with a beta chain"
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          180.14495849609375,
+          687.1328964233398,
+          190.1529541015625,
+          697.7348937988281
+        ],
+        "ink_bbox": [
+          181.01795959472656,
+          689.1128921508789,
+          188.3889617919922,
+          695.4848937988281
+        ],
+        "page": 7
+      },
+      "id": "held-071",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "actual": {
+        "context": "4 of 11 cells and consisted of an alpha chain containing TRAV1- 2 and TRAJ26 paired with a beta chain",
+        "end": 24293,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            168.526,
+            712.7289,
+            173.53,
+            721.7289
+          ],
+          "block": "sha256:8bf5c616dcf33eb3d7f423540108b432f9bf95caafdbacdf8e3635c8ea01e31d",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24292,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:8bf5c616dcf33eb3d7f423540108b432f9bf95caafdbacdf8e3635c8ea01e31d",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": " of "
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          168.5259552001953,
+          711.1268997192383,
+          173.5299530029297,
+          721.7288970947266
+        ],
+        "ink_bbox": [
+          168.84095764160156,
+          713.1068954467773,
+          173.21495056152344,
+          719.4788970947266
+        ],
+        "page": 7
+      },
+      "id": "held-072",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "4 of 11 cells and consisted of an alpha chain containing TRAV1- 2 and TRAJ26 paired with a beta chain",
+        "end": 24299,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            186.193,
+            712.7289,
+            196.201,
+            721.7289
+          ],
+          "block": "sha256:8bf5c616dcf33eb3d7f423540108b432f9bf95caafdbacdf8e3635c8ea01e31d",
+          "offset": 5,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24297,
+        "text": "11"
+      },
+      "anchor": {
+        "block": "sha256:8bf5c616dcf33eb3d7f423540108b432f9bf95caafdbacdf8e3635c8ea01e31d",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " of ",
+        "suffix": " cells and consisted of an alpha chain containing TRAV1- "
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          186.1929473876953,
+          711.1268997192383,
+          196.20094299316406,
+          721.7288970947266
+        ],
+        "ink_bbox": [
+          187.06594848632812,
+          713.1068954467773,
+          194.43695068359375,
+          719.4788970947266
+        ],
+        "page": 7
+      },
+      "id": "held-073",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "actual": {
+        "context": "the CD1c- endo streptamer positive T- cell fraction (containing 1.14% CD1c- endo- positive T- cells) stained with CD1c- endo dextramers.",
+        "end": 27184,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            254.5147,
+            151.0959,
+            269.0747,
+            159.0959
+          ],
+          "block": "sha256:99e6f8b61b2ba7ccc7e54f637fb1abc0299bb2e184bcf9d32a14af0992d5b505",
+          "offset": 64,
+          "page": 9,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 27180,
+        "text": "1.14"
+      },
+      "anchor": {
+        "block": "sha256:99e6f8b61b2ba7ccc7e54f637fb1abc0299bb2e184bcf9d32a14af0992d5b505",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "the CD1c- endo streptamer positive T- cell fraction (containing ",
+        "suffix": "% CD1c- endo- positive T- cells) stained with CD1c- endo dextramers."
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          254.5146942138672,
+          149.639892578125,
+          269.07470703125,
+          159.09588623046875
+        ],
+        "ink_bbox": [
+          255.27468872070312,
+          151.431884765625,
+          268.89068603515625,
+          157.1358642578125
+        ],
+        "page": 9
+      },
+      "id": "held-074",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "1.14"
+    },
+    {
+      "actual": {
+        "context": "2117 such cells across both donors (Figure",
+        "end": 35489,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            360.7904,
+            329.7439,
+            380.8064,
+            338.7439
+          ],
+          "block": "sha256:58840c79aedf576eaf6f053a217e842ee1a4541e8999bc188673c40509f2b428",
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 35485,
+        "text": "2117"
+      },
+      "anchor": {
+        "block": "sha256:58840c79aedf576eaf6f053a217e842ee1a4541e8999bc188673c40509f2b428",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": " such cells across both donors (Figure"
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          360.7904052734375,
+          328.1418762207031,
+          380.8064270019531,
+          338.7438659667969
+        ],
+        "ink_bbox": [
+          361.24041748046875,
+          330.0138854980469,
+          380.1224060058594,
+          336.493896484375
+        ],
+        "page": 11
+      },
+      "id": "held-075",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "2117"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          368.9662170410156,
+          699.0980987548828,
+          391.8462219238281,
+          708.5541000366211
+        ],
+        "ink_bbox": [
+          369.7262268066406,
+          700.7940979003906,
+          391.6622314453125,
+          707.6501007080078
+        ],
+        "page": 15
+      },
+      "id": "held-076",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "11,804"
+    },
+    {
+      "actual": {
+        "context": "(n=11,804).",
+        "end": 48270,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            48.365,
+            231.0959,
+            71.245,
+            239.0959
+          ],
+          "block": "sha256:ba4df4cbd4ac910967bd8130c1a01dc66172be81fca39a4c509a4cd71b29dc40",
+          "offset": 3,
+          "page": 16,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 48264,
+        "text": "11,804"
+      },
+      "anchor": {
+        "block": "sha256:ba4df4cbd4ac910967bd8130c1a01dc66172be81fca39a4c509a4cd71b29dc40",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(n=",
+        "suffix": ")."
+      },
+      "case": "elife-110341",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          48.364986419677734,
+          229.639892578125,
+          71.24497985839844,
+          239.09588623046875
+        ],
+        "ink_bbox": [
+          49.1249885559082,
+          231.33587646484375,
+          71.06098937988281,
+          238.19189453125
+        ],
+        "page": 16
+      },
+      "id": "held-077",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "11,804"
+    },
+    {
+      "actual": {
+        "context": "ating a total of 63 Gb of sequence data. Reads were then mapped to a mouse microbiome-",
+        "end": 12005,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            232.201,
+            445.5006,
+            242.209,
+            454.5006
+          ],
+          "block": "sha256:b79dec5546c61744dfc2f2cd11408256dc0f90d376e1a2bcbb9deec8b2de99e7",
+          "offset": 17,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 12003,
+        "text": "63"
+      },
+      "anchor": {
+        "block": "sha256:b79dec5546c61744dfc2f2cd11408256dc0f90d376e1a2bcbb9deec8b2de99e7",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "ating a total of ",
+        "suffix": " Gb of sequence data. Reads were then mapped to a mouse microbiome-"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          232.20098876953125,
+          443.8985900878906,
+          242.208984375,
+          454.5005798339844
+        ],
+        "ink_bbox": [
+          232.5699920654297,
+          445.77056884765625,
+          241.69598388671875,
+          452.3495788574219
+        ],
+        "page": 3
+      },
+      "id": "held-078",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "63"
+    },
+    {
+      "actual": {
+        "context": "these communities and lack 24 genera found in each wild-m ouse- derived microbiome (Figure 1D, E,",
+        "end": 12700,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            282.853,
+            529.4796,
+            292.861,
+            538.4796
+          ],
+          "block": "sha256:b4e9f1d2c0af08fc8dde323a7f25896dd1ef236ccfb678782e7a9095a4b22dcc",
+          "offset": 27,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 12698,
+        "text": "24"
+      },
+      "anchor": {
+        "block": "sha256:b4e9f1d2c0af08fc8dde323a7f25896dd1ef236ccfb678782e7a9095a4b22dcc",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "these communities and lack ",
+        "suffix": " genera found in each wild-m ouse- derived microbiome (Figure 1D, E,"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          282.8529968261719,
+          527.8775939941406,
+          292.8609924316406,
+          538.4795837402344
+        ],
+        "ink_bbox": [
+          283.302978515625,
+          529.7495727539062,
+          292.5459899902344,
+          536.2295837402344
+        ],
+        "page": 3
+      },
+      "id": "held-079",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "24"
+    },
+    {
+      "actual": {
+        "context": "conjugative element (ICE) (Coyne et al., 2016). The ICE encompasses a 115-k b region, includes genes",
+        "end": 14626,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            455.0356,
+            102.33,
+            470.0476,
+            111.33
+          ],
+          "block": "sha256:882d298475ac3fb0d70ca243fe2b891df056269a708980b515c9da1070d12982",
+          "offset": 70,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 14623,
+        "text": "115"
+      },
+      "anchor": {
+        "block": "sha256:882d298475ac3fb0d70ca243fe2b891df056269a708980b515c9da1070d12982",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "). The ICE encompasses a ",
+        "suffix": "-k b region, includes genes"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          455.03558349609375,
+          100.72802734375,
+          470.0475769042969,
+          111.33001708984375
+        ],
+        "ink_bbox": [
+          455.9085693359375,
+          102.7080078125,
+          469.5345458984375,
+          109.17901611328125
+        ],
+        "page": 5
+      },
+      "id": "held-080",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "115"
+    },
+    {
+      "actual": {
+        "context": "Interestingly, the T6SS we found in B. acidifaciens and B. caecimuris shares only 82–83% identity with",
+        "end": 15339,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            490.609,
+            186.813,
+            500.617,
+            195.813
+          ],
+          "block": "sha256:d343a70e5deca8ec12e2d901e06582d5e7915ed796b66e93be532bf65639754e",
+          "offset": 82,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15337,
+        "text": "82"
+      },
+      "anchor": {
+        "block": "sha256:d343a70e5deca8ec12e2d901e06582d5e7915ed796b66e93be532bf65639754e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "Interestingly, the T6SS we found in B. acidifaciens and B. caecimuris shares only ",
+        "suffix": "–"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          490.60894775390625,
+          185.21099853515625,
+          500.616943359375,
+          195.81298828125
+        ],
+        "ink_bbox": [
+          491.0769348144531,
+          187.0830078125,
+          500.1669616699219,
+          193.6619873046875
+        ],
+        "page": 5
+      },
+      "id": "held-081",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "82"
+    },
+    {
+      "actual": {
+        "context": "Interestingly, the T6SS we found in B. acidifaciens and B. caecimuris shares only 82–83% identity with",
+        "end": 15342,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            505.117,
+            186.813,
+            515.125,
+            195.813
+          ],
+          "block": "sha256:d343a70e5deca8ec12e2d901e06582d5e7915ed796b66e93be532bf65639754e",
+          "offset": 85,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15340,
+        "text": "83"
+      },
+      "anchor": {
+        "block": "sha256:d343a70e5deca8ec12e2d901e06582d5e7915ed796b66e93be532bf65639754e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": "% identity with"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          505.116943359375,
+          185.21099853515625,
+          515.1249389648438,
+          195.81298828125
+        ],
+        "ink_bbox": [
+          505.5849609375,
+          187.0830078125,
+          514.6119384765625,
+          193.6619873046875
+        ],
+        "page": 5
+      },
+      "id": "held-082",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "83"
+    },
+    {
+      "actual": {
+        "context": "conferred by the T6SS in these experiments was relatively modest (<10-",
+        "end": 23995,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            562.0231,
+            283.2619,
+            572.0311,
+            292.2619
+          ],
+          "block": "sha256:63138aeb32590bccf87ae27e69be5f403391fc58c659338b00680d7936fd9ecc",
+          "offset": 67,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23993,
+        "text": "10"
+      },
+      "anchor": {
+        "block": "sha256:63138aeb32590bccf87ae27e69be5f403391fc58c659338b00680d7936fd9ecc",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "conferred by the T6SS in these experiments was relatively modest (<",
+        "suffix": "-"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          562.02294921875,
+          281.6598815917969,
+          572.031005859375,
+          292.2618713378906
+        ],
+        "ink_bbox": [
+          562.89599609375,
+          283.5318603515625,
+          571.68896484375,
+          290.1108703613281
+        ],
+        "page": 7
+      },
+      "id": "held-083",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "representing ~80% of the total population by 7 days post-g avage. This overall level of competitive-",
+        "end": 27166,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            228.6415,
+            687.7759,
+            238.6495,
+            696.7759
+          ],
+          "block": "sha256:671cb2f6b61cdfe29fe78effa5bdab0c272ea778a62c36d13d05c6987e3f68e4",
+          "offset": 14,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 27164,
+        "text": "80"
+      },
+      "anchor": {
+        "block": "sha256:671cb2f6b61cdfe29fe78effa5bdab0c272ea778a62c36d13d05c6987e3f68e4",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "representing ~",
+        "suffix": "% of the total population by "
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          228.6414337158203,
+          686.1737518310547,
+          238.64944458007812,
+          696.775749206543
+        ],
+        "ink_bbox": [
+          229.10943603515625,
+          688.0457534790039,
+          238.30743408203125,
+          694.624755859375
+        ],
+        "page": 7
+      },
+      "id": "held-084",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "80"
+    },
+    {
+      "actual": {
+        "context": "6 mice from two independent replicates. Boxplots represent the interquartile range and mean for each condition; whiskers represent minimum and",
+        "end": 22525,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            36.5029,
+            79.0959,
+            40.6629,
+            87.0959
+          ],
+          "block": "sha256:b350ba46f5796ce76c736f6aa48e961fe80411b23ae05d8de5d205a20a8c0369",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 22524,
+        "text": "6"
+      },
+      "anchor": {
+        "block": "sha256:b350ba46f5796ce76c736f6aa48e961fe80411b23ae05d8de5d205a20a8c0369",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": " mice from two independent replicates. Boxplots represent the interquartile range and mean for each condition; whiskers represent minimum and"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          36.502899169921875,
+          77.639892578125,
+          40.662899017333984,
+          87.09588623046875
+        ],
+        "ink_bbox": [
+          36.726898193359375,
+          79.431884765625,
+          40.438899993896484,
+          85.18389892578125
+        ],
+        "page": 7
+      },
+      "id": "held-085",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          378.0097961425781,
+          295.67034912109375,
+          408.7793273925781,
+          306.3219909667969
+        ],
+        "ink_bbox": [
+          378.3427734375,
+          296.8385009765625,
+          408.593505859375,
+          304.1709899902344
+        ],
+        "page": 8
+      },
+      "id": "held-086",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "3×104"
+    },
+    {
+      "actual": {
+        "context": "(Figure 3B). We also observed that at each titration level, we successfully replaced ~80% of the B.",
+        "end": 30172,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            518.4123,
+            369.307,
+            528.4203,
+            378.307
+          ],
+          "block": "sha256:4f9233ecc6dfa8d80c17d5f7dda4311b67dd1b0b9bb21e33687f8c618b8db81e",
+          "offset": 86,
+          "page": 8,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 30170,
+        "text": "80"
+      },
+      "anchor": {
+        "block": "sha256:4f9233ecc6dfa8d80c17d5f7dda4311b67dd1b0b9bb21e33687f8c618b8db81e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(Figure 3B). We also observed that at each titration level, we successfully replaced ~",
+        "suffix": "% of the B."
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          518.4122314453125,
+          367.7049865722656,
+          528.4202880859375,
+          378.3069763183594
+        ],
+        "ink_bbox": [
+          518.8802490234375,
+          369.5769958496094,
+          528.0782470703125,
+          376.156005859375
+        ],
+        "page": 8
+      },
+      "id": "held-087",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "80"
+    },
+    {
+      "actual": {
+        "context": "nearly 100- fold difference in the abundance of the two strains in both fecal and cecal content samples",
+        "end": 32329,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            195.1041,
+            676.7259,
+            210.1161,
+            685.7259
+          ],
+          "block": "sha256:f82c5edf700160d4eaf7fdd82db98097658f0263ee9062011d59471e79626ed0",
+          "offset": 7,
+          "page": 8,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 32326,
+        "text": "100"
+      },
+      "anchor": {
+        "block": "sha256:f82c5edf700160d4eaf7fdd82db98097658f0263ee9062011d59471e79626ed0",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "nearly ",
+        "suffix": "- fold difference in the abundance of the two strains in both fecal and cecal content samples"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          195.10409545898438,
+          675.1239166259766,
+          210.1160888671875,
+          685.7259140014648
+        ],
+        "ink_bbox": [
+          195.9770965576172,
+          676.9959030151367,
+          209.7740936279297,
+          683.5749053955078
+        ],
+        "page": 8
+      },
+      "id": "held-088",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "100"
+    },
+    {
+      "actual": {
+        "context": "that this species is present at 5- to 10-f old lower abundance than",
+        "end": 36925,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            365.9732,
+            507.7259,
+            370.9772,
+            516.7259
+          ],
+          "block": "sha256:5ed908dee4ab51fecd608ee86d86cb6a9baca49dbe44edfe674ecfb9ffa2c830",
+          "offset": 32,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 36924,
+        "text": "5"
+      },
+      "anchor": {
+        "block": "sha256:5ed908dee4ab51fecd608ee86d86cb6a9baca49dbe44edfe674ecfb9ffa2c830",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "that this species is present at ",
+        "suffix": "- to "
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          365.83819580078125,
+          506.1239318847656,
+          370.8421936035156,
+          516.7259521484375
+        ],
+        "ink_bbox": [
+          366.2611999511719,
+          508.1039123535156,
+          370.3291931152344,
+          514.5749206542969
+        ],
+        "page": 10
+      },
+      "id": "held-089",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "that this species is present at 5- to 10-f old lower abundance than",
+        "end": 36932,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            387.6722,
+            507.7259,
+            397.5452,
+            516.7259
+          ],
+          "block": "sha256:5ed908dee4ab51fecd608ee86d86cb6a9baca49dbe44edfe674ecfb9ffa2c830",
+          "offset": 38,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 36930,
+        "text": "10"
+      },
+      "anchor": {
+        "block": "sha256:5ed908dee4ab51fecd608ee86d86cb6a9baca49dbe44edfe674ecfb9ffa2c830",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "- to ",
+        "suffix": "-f old lower abundance than"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          387.5372314453125,
+          506.1239318847656,
+          397.41021728515625,
+          516.7259521484375
+        ],
+        "ink_bbox": [
+          388.41021728515625,
+          507.99591064453125,
+          397.0682373046875,
+          514.5749206542969
+        ],
+        "page": 10
+      },
+      "id": "held-090",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "(n = 4 mice/sample, mixed-e ffects analysis). (C) Relative abundance of B. acidexo in the indicated fecal samples compared to total B. acidifaciens as",
+        "end": 33336,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            52.5157,
+            101.0959,
+            56.6757,
+            109.0959
+          ],
+          "block": "sha256:3ce6caee75b69079a5d8a1ad43858845fa291581f3258585ad6dc1b71c39b123",
+          "offset": 5,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33335,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:3ce6caee75b69079a5d8a1ad43858845fa291581f3258585ad6dc1b71c39b123",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(n = ",
+        "suffix": " mice/sample, mixed-e ffects analysis). (C) Relative abundance of B. acidexo in the indicated fecal samples compared to total B. acidifaciens as"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          52.51567840576172,
+          99.639892578125,
+          56.67567825317383,
+          109.09588623046875
+        ],
+        "ink_bbox": [
+          52.69968032836914,
+          101.431884765625,
+          56.49168014526367,
+          107.09588623046875
+        ],
+        "page": 10
+      },
+      "id": "held-091",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "and post- gavage fecal samples from germ- free mice colonized with the WildR community and 10- fold excess wild- type or ΔtssC B. acidexo. n = 8 mice",
+        "end": 34070,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            539.5066,
+            145.0959,
+            543.6666,
+            153.0959
+          ],
+          "block": "sha256:28bc789ed9963ae8e929c0024ce74ccd9180848d260b9329a9bf93a7235bb585",
+          "offset": 143,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34069,
+        "text": "8"
+      },
+      "anchor": {
+        "block": "sha256:28bc789ed9963ae8e929c0024ce74ccd9180848d260b9329a9bf93a7235bb585",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "- fold excess wild- type or ΔtssC B. acidexo. n = ",
+        "suffix": " mice"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          539.5065307617188,
+          143.639892578125,
+          543.66650390625,
+          153.09588623046875
+        ],
+        "ink_bbox": [
+          539.8345336914062,
+          145.33587646484375,
+          543.3385620117188,
+          151.18389892578125
+        ],
+        "page": 10
+      },
+      "id": "held-092",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "8"
+    },
+    {
+      "actual": {
+        "context": "post- gavage of the WildR into germ- free mice (n = 4). Mice housed in separate or shared cages are indicated. (B) Relative competitive index from in",
+        "end": 45352,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            217.6709,
+            652.5317,
+            221.8309,
+            660.5317
+          ],
+          "block": "sha256:2f9a7c784e5b9e2878ab67b6c1547cc34c04356e8230d86fe8c60f9906e454ef",
+          "offset": 52,
+          "page": 12,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 45351,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:2f9a7c784e5b9e2878ab67b6c1547cc34c04356e8230d86fe8c60f9906e454ef",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "post- gavage of the WildR into germ- free mice (n = ",
+        "suffix": "). Mice housed in separate or shared cages are indicated. (B) Relative competitive index from in"
+      },
+      "case": "elife-110200",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          217.6708984375,
+          651.0756988525391,
+          221.83090209960938,
+          660.5316925048828
+        ],
+        "ink_bbox": [
+          217.85488891601562,
+          652.8676910400391,
+          221.6468963623047,
+          658.5316925048828
+        ],
+        "page": 12
+      },
+      "id": "held-093",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAccidents | 7 | 29",
+        "end": 41,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 7,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 40,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Accidents"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 7,
+        "part": "word/document.xml"
+      },
+      "id": "held-094",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAccidents | 7 | 29",
+        "end": 44,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 8,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 42,
+        "text": "29"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Accidents"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 8,
+        "part": "word/document.xml"
+      },
+      "id": "held-095",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "29"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAd | 7 | 37",
+        "end": 49,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 10,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 48,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ad"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 10,
+        "part": "word/document.xml"
+      },
+      "id": "held-096",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAd | 7 | 37",
+        "end": 52,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 11,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 50,
+        "text": "37"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ad"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 11,
+        "part": "word/document.xml"
+      },
+      "id": "held-097",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "37"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nBrain | 10 | 51",
+        "end": 61,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 13,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 59,
+        "text": "10"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Brain"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "held-098",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nBrain | 10 | 51",
+        "end": 64,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 62,
+        "text": "51"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Brain"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "held-099",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "51"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nCancer | 79 | 219",
+        "end": 74,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 72,
+        "text": "79"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Cancer"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "held-100",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "79"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nCancer | 79 | 219",
+        "end": 78,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 75,
+        "text": "219"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Cancer"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "held-101",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "219"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nDm | 5 | 39",
+        "end": 83,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 82,
+        "text": "5"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Dm"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "held-102",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nDm | 5 | 39",
+        "end": 86,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 20,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 84,
+        "text": "39"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Dm"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "held-103",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "39"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nHeart | 60 | 275",
+        "end": 95,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 93,
+        "text": "60"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Heart"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "held-104",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "60"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nHeart | 60 | 275",
+        "end": 99,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 23,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 96,
+        "text": "275"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Heart"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 23,
+        "part": "word/document.xml"
+      },
+      "id": "held-105",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "275"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nIp | 7 | 14",
+        "end": 104,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 25,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 103,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ip"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 25,
+        "part": "word/document.xml"
+      },
+      "id": "held-106",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nIp | 7 | 14",
+        "end": 107,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 26,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 105,
+        "text": "14"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ip"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "held-107",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nKidney | 6 | 19",
+        "end": 116,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 28,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 115,
+        "text": "6"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Kidney"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "held-108",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nKidney | 6 | 19",
+        "end": 119,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 29,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 117,
+        "text": "19"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Kidney"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 29,
+        "part": "word/document.xml"
+      },
+      "id": "held-109",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "19"
+    },
+    {
+      "actual": {
+        "context": "Author, year | Title | Reason for exclusion\nStasscn et al. 1994 | Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography–comparative clinical study | 9 cases with lateral perforation, the criteria for evaluation not clear",
+        "end": 2805,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:f277442e41a5209ffbcfeab5e176408970ead70036b97a86c8f62b6fdf9349ba",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 58,
+          "part": "word/document.xml",
+          "row": 16,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2804,
+        "text": "9"
+      },
+      "case": "plos-0312751",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 58,
+        "part": "word/document.xml"
+      },
+      "id": "held-110",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "9"
+    }
+  ],
+  "shortfalls": [
+    {
+      "case": "plos-0294127",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Excluded-study bibliography and reasons; no measured result values."
+    },
+    {
+      "case": "plos-0312751",
+      "file": "supplement.docx",
+      "missing": 15,
+      "reason": "Excluded-study bibliography; one observed sample-count value. Dates, study IDs and protocol follow-up periods excluded."
+    },
+    {
+      "case": "plos-0324599",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Data-description dictionary; dates and source metadata are not measured results."
+    },
+    {
+      "case": "elife-110341",
+      "file": "article.pdf",
+      "missing": 3,
+      "reason": "Thirteen eligible literal measured numbers in result prose/captions; graph ticks, method thresholds, IDs and results from cited background work excluded."
+    }
+  ],
+  "tool_version": "1.3.0"
+}

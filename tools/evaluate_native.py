@@ -105,7 +105,7 @@ def score_file(output, case, filename, items):
     data = "id,value\n" + "".join(t["id"] + "," + t["value"] + "\n" for t in items)
     project.write("results.csv", data.encode())
     config = {
-        "schema_version": 7,
+        "schema_version": Config.model_json_schema()["properties"]["schema_version"]["maximum"],
         "paper": {"entry": filename},
         "sources": {
             "synthetic": {

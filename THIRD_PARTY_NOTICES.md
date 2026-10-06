@@ -74,3 +74,31 @@ The core uses markdown-it-py and its mdurl dependency, both under MIT licenses.
 They are installed separately, are not vendored, and retain their distributed
 license notices. The parser is used for static source structure only; it does
 not provide or execute a Quarto/Pandoc engine.
+
+## Native Word/PDF study (1.3)
+
+The twenty original files under `validation/native-v2/papers/` retain **CC BY 4.0**, copyright their respective authors. Original PDF/DOCX bytes are unchanged; annotations, excerpts and result records are study derivatives. Preserve attribution, the [license link](https://creativecommons.org/licenses/by/4.0/) and a description of changes when reusing derivatives. No author endorses PaperDelta. Sources, exact file hashes and the metadata-only family split are in the [study manifest](validation/native-v2/sources.json) and [study guide](validation/native-v2/README.md). The MIT Python distributions exclude these materials; the separately licensed evaluation bundle includes them.
+
+- **plos-0290868** (development): Joseph Kathono, Vincent Nyongesa, Shillah Mwaniga, Georgina Obonyo, Obadia Yator, Maryann Wambugu, Joy Banerjee, Erica Breuer, Malia Duffy, Joanna Lai, Marcy Levy, Simon Njuguna, Manasi Kumar. [Adolescent perspectives on peripartum mental health prevention and promotion from Kenya: Findings from a design thinking approach](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290868) (2024-01-02). DOI `10.1371/journal.pone.0290868`.
+
+- **plos-0294127** (held-out): Jose Danilo B. Diestro, Abdelsimar T. Omar II, Yu-qing Zhang, Teruko Kishibe, Alexander Mastrolonardo, Melissa Mary Lannon, Katrina Ignacio, Eduardo Pimenta Ribeiro Pontes Almeida, Anahita Malvea, Ange Diouf, Arjun Vishnu Sharma, Qingwu Yang, Zhongming Qiu, Mohammed A. Almekhlafi, Thanh N. Nguyen, Atif Zafar, Vitor Mendes Pereira, Julian Spears, Thomas R. Marotta, Forough Farrokhyar, Sunjay Sharma. [Perfusion vs non-perfusion computed tomography imaging in the late window of emergent large vessel ischemic stroke: A systematic review and meta-analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294127) (2024-01-02). DOI `10.1371/journal.pone.0294127`.
+
+- **plos-0303601** (development): B. Dempsey, S. Callaghan, M. F. Higgins. [Providers’ experiences with abortion care: A scoping review](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303601) (2024-07-01). DOI `10.1371/journal.pone.0303601`.
+
+- **plos-0304516** (held-out): Lijuan Guo, Pin Zhao, Shilong Xue, Zhaowei Zhu. [Association of urinary bisphenol A with hyperlipidemia and all-cause mortality: NHANES 2003–2016](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304516) (2024-07-01). DOI `10.1371/journal.pone.0304516`.
+
+- **plos-0308906** (development): Inge Dhamanti, Elida Zairina, Ida Nurhaida, Salsabila Salsabila, Fitri Yakub. [Development and validation of trigger tools in primary care: A scoping review](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308906) (2025-01-02). DOI `10.1371/journal.pone.0308906`.
+
+- **plos-0312751** (held-out): Nader Muthanna, Xiaoyue Guan, Fouad Alzahrani, Badr Sultan Saif, Abdelrahman Seyam, Ahmed Alsalman, Ahmed Es Alajami, Ang Li. [Impact of regenerative procedure on the healing process following surgical root canal treatment: A systematic review and meta-analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312751) (2025-01-02). DOI `10.1371/journal.pone.0312751`.
+
+- **plos-0317954** (development): Ewilly Jie Ying Liew, Andrei O. J. Kwok, Sharon G. M. Koh, Shairil R. Ruslan, M. Shahnaz Hasan, Yeh Han Poh. [Examining doctors’ business analytics capabilities in using the electronic medical record system for decision-making effectiveness in intensive care units: Impact of the COVID-19 pandemic](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317954) (2025-07-01). DOI `10.1371/journal.pone.0317954`.
+
+- **plos-0324599** (held-out): Hanen Ben Ameur, Fouad Jamaani, Mohammed N. Abu Alfoul. [The dynamic connectedness among infectious diseases, geopolitical risks, cryptocurrency, and commodity markets: Evidence from a partial and multiple wavelet analysis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324599) (2025-07-01). DOI `10.1371/journal.pone.0324599`.
+
+- **elife-110428** (development): Stijn Robben, Patricia Davidson, Rita S Rodrigues Ribeiro, Thomas Voets. [A high-throughput assay for the measurement of Ca<sup>2+</sup> oscillations and insulin release from uniformly sized <i>mouse β-cell (MIN6</i>) spheroids](https://elifesciences.org/articles/110428) (2026-10-05). DOI `10.7554/eLife.110428`.
+
+- **elife-110341** (held-out): Matthew Milton, Sahar H Farag, Diana Garay-Baquero, Jennie Gullick, Kinga Niedobecka, Daniel Burns, Rita Szoke-Kovacs, Patrick Trimby-Smith, Alex Look, Richard Stopforth, Marco Lepore, David K Cole, Laura Denney, Andrew White, Sally Sharpe, Alasdair Leslie, Andres Vallejo, Liku Tezera, Paul Elkington, Salah Mansour. [Human CD1c-autoreactive T-cells recognise <i>Mycobacterium tuberculosis</i>-infected antigen-presenting cells and display cytotoxic effector programmes](https://elifesciences.org/articles/110341) (2026-10-05). DOI `10.7554/eLife.110341`.
+
+- **elife-109903** (development): Pedro A Perez, Chung-Chih Liu, Alessandra Ferrari, Nicole K Littlejohn, John Paul Kennelly, Emma Marie Robinson, Vân TB Nguyen-Tran, Jon Athanacio, Sean B Joesph, Zaid Amso, Peter Tontonoz, Supriya Srinivasan. [NK2R signaling governs intestinal lipid mobilization and mucosal inflammation](https://elifesciences.org/articles/109903) (2026-10-05). DOI `10.7554/eLife.109903`.
+
+- **elife-110200** (held-out): Beth A Shen, Kyle L Asfahl, Bentley Lim, Savannah K Bertolli, Samuel S Minot, Matthew C Radey, Kelsi M Penewit, Billy Ngo, Stephen J Salipante, Christopher D Johnston, S Brook Peterson, Andrew L Goodman, Joseph D Mougous. [The type VI secretion system governs strain maintenance in a wild mammalian gut microbiome](https://elifesciences.org/articles/110200) (2026-10-02). DOI `10.7554/eLife.110200`.

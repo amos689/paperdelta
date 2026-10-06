@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.1"><img src="docs/assets/badges/release.svg" alt="Release 1.2.1"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.3.0"><img src="docs/assets/badges/release.svg" alt="Release 1.3.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -47,36 +47,27 @@ Checking needs no model key, GPU or TeX installation.
 
 <p>
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.8/report.png">
-    <img src="docs/assets/v0.8/demo.en.gif" alt="PaperDelta Studio: reuse experiment definitions across 24 result cells, inspect exact identities, select paper positions and accept a reviewed subset." width="960">
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v1.3/report.png">
+    <img src="docs/assets/v1.3/demo.en.gif" alt="PaperDelta: trace changed evidence to the abstract, table and claim, then inspect a stale PDF export." width="960">
   </picture>
 </p>
 
-A 22-second walkthrough of real Studio screens: reuse experiment settings,
-inspect exact identities, select result cells and accept only reviewed bindings.
-Playback is paced for reading.
-[Open the full-size animation](docs/assets/v0.8/demo.en.gif?raw=true) ·
-[View the static screenshot](docs/assets/v0.8/report.png).
+A 27-second walkthrough of real reports: change experiment evidence, inspect the
+abstract, table and claim, then open a separate source/PDF example with a stale export.
+[Open the full-size animation](docs/assets/v1.3/demo.en.gif?raw=true) ·
+[View the static screenshot](docs/assets/v1.3/report.png).
 
-**1.2.1** adds static Markdown/Quarto prose and pipe tables, original source positions,
-shared evidence and explicit source/PDF comparisons. Core installation is enough;
-[syntax and read-only limits](docs/markdown-quarto.md) are explicit.
+**1.3.0** improves original Word/PDF positions, reviewed table identities and
+multi-value cells, with actionable diagnostics and a previewable private diagnostic
+bundle. [Upgrade and isolated startup](docs/v1.3.md) ·
+[Real-document results and limits](validation/native-v2/README.md).
 
-**1.1.0** adds linked Word notes, common merged headers and rotated/cropped PDF pages.
-[Native study and limits](docs/v1.1.md) publish the first held-out misses and unknowns.
-
-**1.0.0** checks declared mean/SD/SE/n and Student-t intervals, including whole
-compound displays and missing seeds. See the [statistical guide](docs/statistics.md).
-
-Version 0.9 added TSV, static Excel and portable experiment exports, with explicit
-MLflow/W&B imports and offline provenance checks. See the [experiment guide](docs/experiment-evidence.md).
-
-The animation shows the batch workflow introduced in **0.8.0**: portable experiment templates and graphical review
-of CLI/MCP proposals. A reproducible 24-metric workflow takes 103 recorded browser
-interactions versus 270 in 0.6.0; [scope and raw traces](docs/v0.8.md) are published.
-Snapshot comparison, ongoing checks and local draft recovery remain available.
-Run `paperdelta studio` to start. The interface supports English/Chinese throughout.
-See the [Studio guide](docs/studio.md) and [upgrade notes](docs/v1.2.md).
+Use static [LaTeX](docs/rules.md), [Markdown/Quarto](docs/markdown-quarto.md),
+[Word](docs/word.md) or [PDF](docs/pdf.md) with the same declared
+[experiment evidence](docs/experiment-evidence.md) and [statistical contracts](docs/statistics.md).
+Run `paperdelta studio` for local binding review, snapshots, ongoing checks and draft
+recovery. The interface supports English/Chinese throughout; see the
+[Studio guide](docs/studio.md) and [delivery roadmap](docs/roadmap.md).
 The project has received positive informal feedback from several users; it is
 not presented as a measured usability study. Releases use normal version numbers.
 
@@ -100,6 +91,11 @@ python -m pip install paperdelta
 paperdelta demo --out paperdelta-demo --open
 ```
 
+With [uv installed](https://docs.astral.sh/uv/getting-started/installation/), try
+`uvx --python 3.12 paperdelta@1.3.0 demo --out paperdelta-demo --open` in an isolated
+tool environment. Use a new output directory for each run. See
+[optional native readers and startup diagnostics](docs/v1.3.md#isolated-startup).
+
 If needed, create the environment first with `python -m venv .venv`. Activate it
 with `.venv\Scripts\Activate.ps1` on Windows PowerShell or
 `source .venv/bin/activate` on macOS/Linux (use `python3` when creating it there).
@@ -118,7 +114,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.2.1-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.3.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 

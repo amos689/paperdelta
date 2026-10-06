@@ -1,0 +1,19 @@
+{
+  "time": "2026-10-06T11:16:42.131529+00:00",
+  "phase": "After first held-out score; before final package and CI",
+  "change": "Normalize two locale JSON files from CRLF to LF to follow repository Git attributes. Parsed values and program behavior unchanged. Frozen snapshots and scores retain original bytes.",
+  "files": [
+    {
+      "path": "src/paperdelta/locales/en.json",
+      "frozen_sha256": "477cd3603d7fba6855ba4495bc2b1d10c9191dd558bb670259c620126b706e4f",
+      "release_sha256": "c1c4669e319edf5666d6421dd9fff3185bb66097db50e94c4ddbc83f94b9ffe0",
+      "parsed_json_identical": true
+    },
+    {
+      "path": "src/paperdelta/locales/zh-CN.json",
+      "frozen_sha256": "557a37f5b29682fc15c46453289a91dd7d351fbbfe5f27a74b7826c7cbd87971",
+      "release_sha256": "6e50abf24fbd734504b25dae2de97174d76c187ae177a65590cdbf4971a253c8",
+      "parsed_json_identical": true
+    }
+  ]
+}

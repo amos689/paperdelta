@@ -1,0 +1,4315 @@
+{
+  "by_file": [
+    {
+      "case": "plos-0290868",
+      "counts": {
+        "missed": 6,
+        "supported": 8,
+        "unknown": 2
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0303601",
+      "counts": {
+        "missed": 3,
+        "supported": 13
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0308906",
+      "counts": {
+        "missed": 12,
+        "unknown": 4
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0317954",
+      "counts": {
+        "missed": 1,
+        "supported": 5,
+        "unknown": 10
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-110428",
+      "counts": {
+        "missed": 2,
+        "supported": 9,
+        "unknown": 5
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-109903",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0303601",
+      "counts": {
+        "supported": 13,
+        "unknown": 3
+      },
+      "format": "docx"
+    }
+  ],
+  "counts": {
+    "mislocated": 0,
+    "missed": 24,
+    "supported": 48,
+    "unknown": 40
+  },
+  "created_at": "2026-10-06T10:10:28.268342+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "development": "bce429de1a6d3bc4f0aeecfb3781a207bbcfd6032ebae6bd44c7f1802980819b"
+  },
+  "implementation": {
+    "pyproject.toml": "65332f6973716891b25b3eefe20d16ca4d0f9ee59a679c77a8d632ab97365241",
+    "src/paperdelta/__init__.py": "3070923e937166a6dca4187b5fc868f83343ec32f41d5015fbd81397d054f9f2",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "836d836d596f010cee7216021c160190fd7d0e40cf59ff2a4662f8a58934ae53",
+    "src/paperdelta/agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+    "src/paperdelta/analysis.py": "9289cc3ccf27b3469163f7aa8a0d9a32c0f5a669db829f09882b9bdaa195317b",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+    "src/paperdelta/assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio.css": "a930b61337abd345226f2f9e43c2118abe8b5db80967467c7cdafe9178c26ee9",
+    "src/paperdelta/assets/studio.js": "17f113d19539f16d139b24fe11d4c840411c345fe89349cdf0f0ecfc257c7013",
+    "src/paperdelta/batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "0a43681504b35294fade7bb505e7948d8b6e7962cedc6ec9ff6f0369415c3667",
+    "src/paperdelta/cli.py": "89a8ad2c3d1fba3f1e68b8cb55510c7a1b39d710bee9c81dda2b260b11e8935b",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "8c1f3980eaab641afdb439862fadbe5412127b8aa32b89b44e42af54d1df9dde",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "c1bf45bd5f8b9bbeacc6175a08dfedd5b49095496230581af1d0071955bc7406",
+    "src/paperdelta/demo_markdown/paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_markdown/paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+    "src/paperdelta/demo_markdown/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_quarto/paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_quarto/paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+    "src/paperdelta/demo_quarto/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+    "src/paperdelta/docx_document.py": "5ad7d25f218a9083a5cfeb3c7e3d27cab7ad9d507f52d7bfb944481c6d38221e",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "e6acc88488197fbf65d65a96e6f90a3a4c4f7f9393485272feb0a4e73618386c",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "a91073b75e0099f44590861796b1f852cbcdcd2473c79415bca156f23668febd",
+    "src/paperdelta/locales/zh-CN.json": "c879f93d3a75bd2231f903f93f989d8cb7b8f687b35a951348755b596f890aad",
+    "src/paperdelta/locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+    "src/paperdelta/manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+    "src/paperdelta/markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+    "src/paperdelta/mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "43d4f4588434ea9105eeb1bf1908d8373e6483e7900fd844f5c136c565cf17fd",
+    "src/paperdelta/native_document.py": "1eed25f53575717387f5ceccf8e7a17822b5bb81cdcae33d3dd1f061f46edac5",
+    "src/paperdelta/onboarding.py": "b238e799b2c19f6a0842ca378601482e5307e2f93d304aa732989abad4582f75",
+    "src/paperdelta/patches.py": "93eb89bba01d58d774f9f3417d95cfee15749814c51ae0bca4130a31e2176b37",
+    "src/paperdelta/pdf_document.py": "087d2c46bec4dec9a0d642b6259bdf95d5b395bb54dd8a8575ee71459b3ff96d",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/records.py": "10bbc5dd3675a78fa342897020924e6203ff77364a0f502bc1b75227194bafa4",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "7512e8f5d5990111cc0d77f24307135e10608d452862d6c48595286eabfc4691",
+    "src/paperdelta/studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+    "src/paperdelta/studio_recovery.py": "11adecab72ab47986efa76478d8766ca2075c2dee6ca43774de0380476724e33",
+    "src/paperdelta/studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+    "src/paperdelta/studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+    "src/paperdelta/studio_ui.py": "27e5592576f8d817659da52b0ed646503ad5a451f8a4ddb4d7a8c85d80a74a2c",
+    "src/paperdelta/tables.py": "0a6477451ef1c0a294b418b7f4f3d0412c398dcb499834607f6668ec47c54b11",
+    "src/paperdelta/watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+    "src/paperdelta/word_tables.py": "88978d9e0afc9474940eaca2d8f0f37b6793e473c0ff8bb92f3aa563cf91cb45",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/evaluate_native_v2.py": "f412c6fa9ad780f574a9164ce27ec82bc40522cbbea0b4d9e8b525856f1db75c",
+    "tools/prepare_native_v2.py": "83328d1feb3c85ab3ca6eae2e39c9bd7f5d72f64a384f5c95629b21d502a1307"
+  },
+  "matches_implementation_lock": false,
+  "mode": "regression",
+  "planned_slots": 160,
+  "python": "3.12.14",
+  "results": [
+    {
+      "actual": {
+        "context": "5(17.4Years)",
+        "end": 23885,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            553.169,
+            415.9877,
+            561.1689
+          ],
+          "block": "sha256:31339287008e2acc20df4acf49b95479b28719e50a9f6c85a963d917af51096e",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23884,
+        "text": "5"
+      },
+      "anchor": {
+        "block": "sha256:31339287008e2acc20df4acf49b95479b28719e50a9f6c85a963d917af51096e",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "(17.4Years)"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.53973388671875,
+          554.7449645996094,
+          415.60369873046875,
+          559.8088989257812
+        ],
+        "page": 7
+      },
+      "id": "dev-001",
+      "outcome": "supported",
+      "split": "development",
+      "text": "5"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          421.4404296875,
+          554.6489562988281,
+          433.7122497558594,
+          559.8088989257812
+        ],
+        "page": 7
+      },
+      "id": "dev-002",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "17.4"
+    },
+    {
+      "actual": {
+        "context": "3(18.3Years)",
+        "end": 23916,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            565.6976,
+            415.9877,
+            573.6975
+          ],
+          "block": "sha256:64262e8ed5da865472ccb7ba6905afee39642a7deeb2dbf1f4d05d39c5e28cae",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23915,
+        "text": "3"
+      },
+      "anchor": {
+        "block": "sha256:64262e8ed5da865472ccb7ba6905afee39642a7deeb2dbf1f4d05d39c5e28cae",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "(18.3Years)"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.5076904296875,
+          567.1775970458984,
+          415.54766845703125,
+          572.3375396728516
+        ],
+        "page": 7
+      },
+      "id": "dev-003",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          421.4403991699219,
+          567.1775970458984,
+          433.45623779296875,
+          572.3375396728516
+        ],
+        "page": 7
+      },
+      "id": "dev-004",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "18.3"
+    },
+    {
+      "actual": {
+        "context": "2(38Years)",
+        "end": 23940,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            578.1703,
+            415.9877,
+            586.1702
+          ],
+          "block": "sha256:57e6e143bf9750cc0ae02f72e4ea2be227214ad925ea85aafe4875862dcb6fd8",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23939,
+        "text": "2"
+      },
+      "anchor": {
+        "block": "sha256:57e6e143bf9750cc0ae02f72e4ea2be227214ad925ea85aafe4875862dcb6fd8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "(38Years)"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.4117126464844,
+          579.6502532958984,
+          415.6756591796875,
+          584.7301940917969
+        ],
+        "page": 7
+      },
+      "id": "dev-005",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          420.9203796386719,
+          579.6502532958984,
+          427.88031005859375,
+          584.8101959228516
+        ],
+        "page": 7
+      },
+      "id": "dev-006",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "38"
+    },
+    {
+      "actual": {
+        "context": "3(20.3Years)",
+        "end": 23969,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            590.6997,
+            415.9877,
+            598.6996
+          ],
+          "block": "sha256:8738e269b2ced206fa61aea30c6778836ae992658d5607a8cb96f9a651eac92b",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23968,
+        "text": "3"
+      },
+      "anchor": {
+        "block": "sha256:8738e269b2ced206fa61aea30c6778836ae992658d5607a8cb96f9a651eac92b",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "(20.3Years)"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.5076904296875,
+          592.1797027587891,
+          415.54766845703125,
+          597.3396453857422
+        ],
+        "page": 7
+      },
+      "id": "dev-007",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          420.8243713378906,
+          592.1797027587891,
+          433.4562072753906,
+          597.3396453857422
+        ],
+        "page": 7
+      },
+      "id": "dev-008",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "20.3"
+    },
+    {
+      "actual": {
+        "context": "2(28Years)",
+        "end": 23995,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            603.1716,
+            415.9877,
+            611.1715
+          ],
+          "block": "sha256:a0beec6e91de872c8d62c539d9b2e421d0fc6d49ad8b0c09b1c3e6d6e8e16de9",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23994,
+        "text": "2"
+      },
+      "anchor": {
+        "block": "sha256:a0beec6e91de872c8d62c539d9b2e421d0fc6d49ad8b0c09b1c3e6d6e8e16de9",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "(28Years)"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.4117126464844,
+          604.6515350341797,
+          415.6756591796875,
+          609.7314758300781
+        ],
+        "page": 7
+      },
+      "id": "dev-009",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          420.8243713378906,
+          604.6515350341797,
+          427.8802795410156,
+          609.8114776611328
+        ],
+        "page": 7
+      },
+      "id": "dev-010",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "28"
+    },
+    {
+      "actual": {
+        "context": "3",
+        "end": 24043,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            628.1736,
+            415.9877,
+            636.1735
+          ],
+          "block": "sha256:009d39e7385296a8d1e6dbaf113168190c4b69cbcbd91634bfdb74712e033073",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24042,
+        "text": "3"
+      },
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.5076904296875,
+          629.6536407470703,
+          415.54766845703125,
+          634.8135833740234
+        ],
+        "page": 7
+      },
+      "id": "dev-011",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "2",
+        "end": 24059,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.1557,
+            640.7023,
+            415.9877,
+            648.7022
+          ],
+          "block": "sha256:009d39e7385296a8d1e6dbaf113168190c4b69cbcbd91634bfdb74712e033073",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24058,
+        "text": "2"
+      },
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.4117126464844,
+          642.1822662353516,
+          415.6756591796875,
+          647.26220703125
+        ],
+        "page": 7
+      },
+      "id": "dev-012",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "development",
+      "text": "2"
+    },
+    {
+      "case": "plos-0290868",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          312.5860900878906,
+          559.9094390869141,
+          322.3501892089844,
+          566.7494354248047
+        ],
+        "page": 1
+      },
+      "id": "dev-013",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "39"
+    },
+    {
+      "actual": {
+        "context": "in the adolescent advisory and design thinking workshops, including 5 pregnant adolescent",
+        "end": 21785,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            475.198,
+            176.448,
+            479.988,
+            186.448
+          ],
+          "block": "sha256:88de246c5deee32683196d396879d164f74b051f8c9e404eba685a9db28017ef",
+          "offset": 68,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21784,
+        "text": "5"
+      },
+      "anchor": {
+        "block": "sha256:88de246c5deee32683196d396879d164f74b051f8c9e404eba685a9db28017ef",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "in the adolescent advisory and design thinking workshops, including ",
+        "suffix": " pregnant adolescent"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          475.67803955078125,
+          178.41802978515625,
+          479.5080261230469,
+          184.74798583984375
+        ],
+        "page": 7
+      },
+      "id": "dev-014",
+      "outcome": "supported",
+      "split": "development",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "girls, and 3 postpartum adolescent girls (Table 3). All 5 of the pregnant adolescents gave birth",
+        "end": 21818,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            238.847,
+            189.431,
+            243.637,
+            199.431
+          ],
+          "block": "sha256:7019d17fff222c5629baba2bb771c88c089005b4d87c126b19ea70d45c3739c8",
+          "offset": 11,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21817,
+        "text": "3"
+      },
+      "anchor": {
+        "block": "sha256:7019d17fff222c5629baba2bb771c88c089005b4d87c126b19ea70d45c3739c8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "girls, and ",
+        "suffix": " postpartum adolescent girls (Table "
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          239.2870330810547,
+          191.28106689453125,
+          243.0870361328125,
+          197.73101806640625
+        ],
+        "page": 7
+      },
+      "id": "dev-015",
+      "outcome": "supported",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "girls, and 3 postpartum adolescent girls (Table 3). All 5 of the pregnant adolescents gave birth",
+        "end": 21863,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            412.383,
+            189.431,
+            417.173,
+            199.431
+          ],
+          "block": "sha256:7019d17fff222c5629baba2bb771c88c089005b4d87c126b19ea70d45c3739c8",
+          "offset": 56,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21862,
+        "text": "5"
+      },
+      "anchor": {
+        "block": "sha256:7019d17fff222c5629baba2bb771c88c089005b4d87c126b19ea70d45c3739c8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "). All ",
+        "suffix": " of the pregnant adolescents gave birth"
+      },
+      "case": "plos-0290868",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.863037109375,
+          191.40106201171875,
+          416.6930236816406,
+          197.73101806640625
+        ],
+        "page": 7
+      },
+      "id": "dev-016",
+      "outcome": "supported",
+      "split": "development",
+      "text": "5"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          396.0511169433594,
+          436.1495056152344,
+          410.4208068847656,
+          442.989501953125
+        ],
+        "page": 1
+      },
+      "id": "dev-017",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "106"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          242.5415496826172,
+          450.1524963378906,
+          265.4764404296875,
+          458.20849609375
+        ],
+        "page": 1
+      },
+      "id": "dev-018",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "4,250"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          329.80096435546875,
+          450.1524963378906,
+          339.6695556640625,
+          456.99249267578125
+        ],
+        "page": 1
+      },
+      "id": "dev-019",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "28"
+    },
+    {
+      "actual": {
+        "context": "qualitative(n= 83), thoughquantitative(n= 15)andmixed methods(n= 8) studies were",
+        "end": 1429,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            262.3168,
+            463.3005,
+            272.8409,
+            472.8005
+          ],
+          "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+          "offset": 15,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1427,
+        "text": "83"
+      },
+      "anchor": {
+        "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "qualitative(n= ",
+        "suffix": "), thoughquantitative(n= "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          262.6778259277344,
+          464.155517578125,
+          272.47991943359375,
+          470.9955139160156
+        ],
+        "page": 1
+      },
+      "id": "dev-020",
+      "outcome": "supported",
+      "split": "development",
+      "text": "83"
+    },
+    {
+      "actual": {
+        "context": "qualitative(n= 83), thoughquantitative(n= 15)andmixed methods(n= 8) studies were",
+        "end": 1456,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            379.5003,
+            463.3005,
+            390.0244,
+            472.8005
+          ],
+          "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+          "offset": 42,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1454,
+        "text": "15"
+      },
+      "anchor": {
+        "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "), thoughquantitative(n= ",
+        "suffix": ")andmixed methods(n= "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          380.4598083496094,
+          464.155517578125,
+          389.58740234375,
+          470.9955139160156
+        ],
+        "page": 1
+      },
+      "id": "dev-021",
+      "outcome": "supported",
+      "split": "development",
+      "text": "15"
+    },
+    {
+      "actual": {
+        "context": "qualitative(n= 83), thoughquantitative(n= 15)andmixed methods(n= 8) studies were",
+        "end": 1478,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            496.2306,
+            463.3005,
+            501.5126,
+            472.8005
+          ],
+          "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+          "offset": 65,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1477,
+        "text": "8"
+      },
+      "anchor": {
+        "block": "sha256:782ba009189f2e9d7a87cfafbc1c9d5d093ea2d8b73b4a09a523c72baaf8b786",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ")andmixed methods(n= ",
+        "suffix": ") studies were"
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          496.59161376953125,
+          464.155517578125,
+          501.1421203613281,
+          470.9955139160156
+        ],
+        "page": 1
+      },
+      "id": "dev-022",
+      "outcome": "supported",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "actual": {
+        "context": "The first search conducted in September 2020 identified a total of 11,402 citations. After",
+        "end": 19787,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            461.478,
+            375.781,
+            487.518,
+            385.781
+          ],
+          "block": "sha256:21f90499b25976afa1836c5e3887c698f9fc3798c5cc94c76ae8db0a6d675b6a",
+          "offset": 67,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19781,
+        "text": "11,402"
+      },
+      "anchor": {
+        "block": "sha256:21f90499b25976afa1836c5e3887c698f9fc3798c5cc94c76ae8db0a6d675b6a",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " identified a total of ",
+        "suffix": " citations. After"
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          462.5679931640625,
+          377.6309814453125,
+          487.12799072265625,
+          385.1309814453125
+        ],
+        "page": 6
+      },
+      "id": "dev-023",
+      "outcome": "supported",
+      "split": "development",
+      "text": "11,402"
+    },
+    {
+      "actual": {
+        "context": "removing duplicates, a total of 6,624 unique citations which were screened for inclusion. Of",
+        "end": 19842,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            322.241,
+            388.82,
+            343.531,
+            398.82
+          ],
+          "block": "sha256:6b9bf2b6dc27d6f9b28cb16c606cecf6af5de69570b2bc452f38cc163fd6128b",
+          "offset": 32,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19837,
+        "text": "6,624"
+      },
+      "anchor": {
+        "block": "sha256:6b9bf2b6dc27d6f9b28cb16c606cecf6af5de69570b2bc452f38cc163fd6128b",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "removing duplicates, a total of ",
+        "suffix": " unique citations which were screened for inclusion. Of"
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          322.6109619140625,
+          390.6099853515625,
+          343.30096435546875,
+          398.16998291015625
+        ],
+        "page": 6
+      },
+      "id": "dev-024",
+      "outcome": "supported",
+      "split": "development",
+      "text": "6,624"
+    },
+    {
+      "actual": {
+        "context": "these, 78 relevant citations were included in the first draft of the scoping review. A further 14",
+        "end": 19907,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            224.786,
+            401.802,
+            234.326,
+            411.802
+          ],
+          "block": "sha256:92bfba12a2326a036cb6bd367a169f542d532015874c9ad4b3745d1ab159aad2",
+          "offset": 7,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19905,
+        "text": "78"
+      },
+      "anchor": {
+        "block": "sha256:92bfba12a2326a036cb6bd367a169f542d532015874c9ad4b3745d1ab159aad2",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "these, ",
+        "suffix": " relevant citations were included in the first draft of the scoping review. A further "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          225.25595092773438,
+          403.6519775390625,
+          233.88595581054688,
+          410.10198974609375
+        ],
+        "page": 6
+      },
+      "id": "dev-025",
+      "outcome": "supported",
+      "split": "development",
+      "text": "78"
+    },
+    {
+      "actual": {
+        "context": "these, 78 relevant citations were included in the first draft of the scoping review. A further 14",
+        "end": 19995,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            557.742,
+            401.802,
+            567.282,
+            411.802
+          ],
+          "block": "sha256:92bfba12a2326a036cb6bd367a169f542d532015874c9ad4b3745d1ab159aad2",
+          "offset": 95,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19993,
+        "text": "14"
+      },
+      "anchor": {
+        "block": "sha256:92bfba12a2326a036cb6bd367a169f542d532015874c9ad4b3745d1ab159aad2",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " relevant citations were included in the first draft of the scoping review. A further ",
+        "suffix": ""
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          558.8319702148438,
+          403.6519775390625,
+          567.0519409179688,
+          410.0019836425781
+        ],
+        "page": 6
+      },
+      "id": "dev-026",
+      "outcome": "supported",
+      "split": "development",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "bases in June 2022 and 14 studies were identified after we searched the reference lists of the",
+        "end": 20112,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            292.42,
+            427.824,
+            301.96,
+            437.824
+          ],
+          "block": "sha256:677efec5746668ea972418dc72f010a3e199b14cd67cb8aede904e2cc0297735",
+          "offset": 23,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20110,
+        "text": "14"
+      },
+      "anchor": {
+        "block": "sha256:677efec5746668ea972418dc72f010a3e199b14cd67cb8aede904e2cc0297735",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": " studies were identified after we searched the reference lists of the"
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          293.5099182128906,
+          429.6739807128906,
+          301.72991943359375,
+          436.02398681640625
+        ],
+        "page": 6
+      },
+      "id": "dev-027",
+      "outcome": "supported",
+      "split": "development",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "included studies. This left a final pool of 106 studies in the review [20–125]. Fig 1 provides an",
+        "end": 20229,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            360.565,
+            440.807,
+            374.855,
+            450.807
+          ],
+          "block": "sha256:626e36971ef85bc65a16d8a719212389716df8452fadc18b2e71292b8edcd9c7",
+          "offset": 44,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20226,
+        "text": "106"
+      },
+      "anchor": {
+        "block": "sha256:626e36971ef85bc65a16d8a719212389716df8452fadc18b2e71292b8edcd9c7",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "included studies. This left a final pool of ",
+        "suffix": " studies in the review ["
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          361.6549377441406,
+          442.59698486328125,
+          374.5349426269531,
+          449.10699462890625
+        ],
+        "page": 6
+      },
+      "id": "dev-028",
+      "outcome": "supported",
+      "split": "development",
+      "text": "106"
+    },
+    {
+      "actual": {
+        "context": "Of these 106 studies, 83 were qualitative, 15 were quantitative, and eight were mixed meth-",
+        "end": 20392,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            247.066,
+            479.811,
+            261.356,
+            489.811
+          ],
+          "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+          "offset": 9,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20389,
+        "text": "106"
+      },
+      "anchor": {
+        "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "Of these ",
+        "suffix": " studies, "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          248.15594482421875,
+          481.6009826660156,
+          261.03594970703125,
+          488.1109924316406
+        ],
+        "page": 6
+      },
+      "id": "dev-029",
+      "outcome": "supported",
+      "split": "development",
+      "text": "106"
+    },
+    {
+      "actual": {
+        "context": "Of these 106 studies, 83 were qualitative, 15 were quantitative, and eight were mixed meth-",
+        "end": 20404,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            295.652,
+            479.811,
+            305.192,
+            489.811
+          ],
+          "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+          "offset": 22,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20402,
+        "text": "83"
+      },
+      "anchor": {
+        "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " studies, ",
+        "suffix": " were qualitative, "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          296.1019592285156,
+          481.6609802246094,
+          304.6419372558594,
+          488.1109924316406
+        ],
+        "page": 6
+      },
+      "id": "dev-030",
+      "outcome": "supported",
+      "split": "development",
+      "text": "83"
+    },
+    {
+      "actual": {
+        "context": "Of these 106 studies, 83 were qualitative, 15 were quantitative, and eight were mixed meth-",
+        "end": 20425,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            374.625,
+            479.811,
+            384.165,
+            489.811
+          ],
+          "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+          "offset": 43,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20423,
+        "text": "15"
+      },
+      "anchor": {
+        "block": "sha256:53339c7103ce19802873c670b3fc98070cd177777fa429fad4afa433aaf48c80",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " were qualitative, ",
+        "suffix": " were quantitative, and eight were mixed meth-"
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          375.7149353027344,
+          481.6609802246094,
+          383.6849365234375,
+          488.1109924316406
+        ],
+        "page": 6
+      },
+      "id": "dev-031",
+      "outcome": "supported",
+      "split": "development",
+      "text": "15"
+    },
+    {
+      "actual": {
+        "context": "ods. They report on a total sample of 4,250 abortion care providers from 28 countries and six",
+        "end": 20515,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            347.582,
+            492.794,
+            368.872,
+            502.794
+          ],
+          "block": "sha256:ca08824bda944f539a514bf63045273b583cc8b746515f2ff49b1e2da94e45ab",
+          "offset": 38,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20510,
+        "text": "4,250"
+      },
+      "anchor": {
+        "block": "sha256:ca08824bda944f539a514bf63045273b583cc8b746515f2ff49b1e2da94e45ab",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "ods. They report on a total sample of ",
+        "suffix": " abortion care providers from "
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          347.781982421875,
+          494.64398193359375,
+          368.511962890625,
+          502.14398193359375
+        ],
+        "page": 6
+      },
+      "id": "dev-032",
+      "outcome": "supported",
+      "split": "development",
+      "text": "4,250"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          282.7489929199219,
+          112.68182373046875,
+          291.8347473144531,
+          117.19671630859375
+        ],
+        "page": 5
+      },
+      "id": "dev-033",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "301"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.6282348632812,
+          121.18597412109375,
+          519.7250366210938,
+          125.70086669921875
+        ],
+        "page": 5
+      },
+      "id": "dev-034",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "52"
+    },
+    {
+      "actual": {
+        "context": "Author, Year | Countryand Setting | Aim | StudyDesign | Participants | KeyFindings | Outcomes\nMelle etal, 2018 | Netherlands; Combined primaryand secondarycare | Topilotareviewofmedical recordstoidentify transitionalsafetyincidents (TSIs)foruseinalarge interventionstudyand assessitsreliabilityand validity. | Across-sectional retrospectivemedical recordreviewstudy | 301patientsthat mettheinclusion criteria | Development a.Allitemsofin-hospitalreviewmedicalrecord werereviewedandassessedontheirfitfor transitionalpatientsafety. b.Reformulatedquestionstofittransitional patientsafety.Theunfitquestionsweredeleted. c.Theauthorsaddeditemsbasedonpreviously publishedpilot d.Theresultingrecordreviewwasthendiscussed intheresearchteam,andafteradjustingdiscussed withawiderexpertteamwithGPs,hospital specialistsandpatients. e.Finally,therecordreviewwastestedtwotimes byfourrevieweronactualpatientmedicalrecords Reliability Todetermineinter-raterreliability,arandom sampleof10%ofthemedicalrecordswas reviewedbytworeviewersindependently. Validation a.Contentvalidity:hospitalspecialists,GPsandan expertinmedicalrecordreviewstudieswere consultedtojudgeourTSIidentificationmethod oncompletenessandclarity,bothindividually duringthereviewprocessandinagroup discussionattheendofthereviewprocess. b.Concurrentvalidity:Duetotheabsenceofa criterionmeasureintransitionalpatientsafety,the studyutilizedthreeobjectivelyidentifiable TransitionalSafetyIncidents(TSIs)asareference standard.TheseTSIsincludethepresenceand timelinessofcorrespondencefromhospitalto generalpractitioner(GP),redundantdiagnostic testing,andcommunicationofin-hospital prescriptionchangestoGP.Twolayersreview thenwasconductedbyresearchassistantand researchteam. | Thereviewersidentified TSIsin52(17.3%)ofall transitionalmedicalrecords. Variationbetweenreviewers washigh(range:3–28per50 medicalrecords). Positiveagreementfor findingaTSIbetween reviewerswas0%,negative agreement80%andthe Cohen’skappa−0.15. Thereviewersidentified43 (22%)of194objec",
+        "end": 14791,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            524.0272,
+            119.8909,
+            535.6889,
+            126.8907
+          ],
+          "block": "sha256:98675da82c7c41b1d33a2345c40565215d549bc1af2dc7e64c0b1f2589fffbdc",
+          "cell": 7,
+          "offset": 9,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 14787,
+        "text": "17.3"
+      },
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          524.7901000976562,
+          121.18597412109375,
+          535.3038330078125,
+          125.70086669921875
+        ],
+        "page": 5
+      },
+      "id": "dev-035",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "17.3"
+    },
+    {
+      "actual": {
+        "context": "Author, Year | Countryand Setting | Aim | StudyDesign | Participants | KeyFindings | Outcomes\nMelle etal, 2018 | Netherlands; Combined primaryand secondarycare | Topilotareviewofmedical recordstoidentify transitionalsafetyincidents (TSIs)foruseinalarge interventionstudyand assessitsreliabilityand validity. | Across-sectional retrospectivemedical recordreviewstudy | 301patientsthat mettheinclusion criteria | Development a.Allitemsofin-hospitalreviewmedicalrecord werereviewedandassessedontheirfitfor transitionalpatientsafety. b.Reformulatedquestionstofittransitional patientsafety.Theunfitquestionsweredeleted. c.Theauthorsaddeditemsbasedonpreviously publishedpilot d.Theresultingrecordreviewwasthendiscussed intheresearchteam,andafteradjustingdiscussed withawiderexpertteamwithGPs,hospital specialistsandpatients. e.Finally,therecordreviewwastestedtwotimes byfourrevieweronactualpatientmedicalrecords Reliability Todetermineinter-raterreliability,arandom sampleof10%ofthemedicalrecordswas reviewedbytworeviewersindependently. Validation a.Contentvalidity:hospitalspecialists,GPsandan expertinmedicalrecordreviewstudieswere consultedtojudgeourTSIidentificationmethod oncompletenessandclarity,bothindividually duringthereviewprocessandinagroup discussionattheendofthereviewprocess. b.Concurrentvalidity:Duetotheabsenceofa criterionmeasureintransitionalpatientsafety,the studyutilizedthreeobjectivelyidentifiable TransitionalSafetyIncidents(TSIs)asareference standard.TheseTSIsincludethepresenceand timelinessofcorrespondencefromhospitalto generalpractitioner(GP),redundantdiagnostic testing,andcommunicationofin-hospital prescriptionchangestoGP.Twolayersreview thenwasconductedbyresearchassistantand researchteam. | Thereviewersidentified TSIsin52(17.3%)ofall transitionalmedicalrecords. Variationbetweenreviewers washigh(range:3–28per50 medicalrecords). Positiveagreementfor findingaTSIbetween reviewerswas0%,negative agreement80%andthe Cohen’skappa−0.15. Thereviewersidentified43 (22%)of194objec",
+        "end": 14868,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            539.4275,
+            145.3457,
+            542.7804,
+            152.3455
+          ],
+          "block": "sha256:00c934a700f27bb6fa74d7302984789b46875034d1d29e48cf21fde4665af014",
+          "cell": 7,
+          "offset": 14,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 14867,
+        "text": "3"
+      },
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          539.7354125976562,
+          146.6407470703125,
+          542.3953247070312,
+          151.1556396484375
+        ],
+        "page": 5
+      },
+      "id": "dev-036",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          546.6442260742188,
+          146.6407470703125,
+          552.8180541992188,
+          151.1556396484375
+        ],
+        "page": 5
+      },
+      "id": "dev-037",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "28"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          566.011962890625,
+          146.6407470703125,
+          572.1297607421875,
+          151.1556396484375
+        ],
+        "page": 5
+      },
+      "id": "dev-038",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "50"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          532.3023071289062,
+          180.65625,
+          535.158203125,
+          185.171142578125
+        ],
+        "page": 5
+      },
+      "id": "dev-039",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "0"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          523.30126953125,
+          189.16033935546875,
+          529.4400634765625,
+          193.67523193359375
+        ],
+        "page": 5
+      },
+      "id": "dev-040",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "80"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          535.1427612304688,
+          197.6636962890625,
+          550.164306640625,
+          202.1785888671875
+        ],
+        "page": 5
+      },
+      "id": "dev-041",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "−0.15"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          561.5635375976562,
+          206.167724609375,
+          567.7443237304688,
+          210.6826171875
+        ],
+        "page": 5
+      },
+      "id": "dev-042",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "43"
+    },
+    {
+      "actual": {
+        "context": "Author, Year | Countryand Setting | Aim | StudyDesign | Participants | KeyFindings | Outcomes\nMelle etal, 2018 | Netherlands; Combined primaryand secondarycare | Topilotareviewofmedical recordstoidentify transitionalsafetyincidents (TSIs)foruseinalarge interventionstudyand assessitsreliabilityand validity. | Across-sectional retrospectivemedical recordreviewstudy | 301patientsthat mettheinclusion criteria | Development a.Allitemsofin-hospitalreviewmedicalrecord werereviewedandassessedontheirfitfor transitionalpatientsafety. b.Reformulatedquestionstofittransitional patientsafety.Theunfitquestionsweredeleted. c.Theauthorsaddeditemsbasedonpreviously publishedpilot d.Theresultingrecordreviewwasthendiscussed intheresearchteam,andafteradjustingdiscussed withawiderexpertteamwithGPs,hospital specialistsandpatients. e.Finally,therecordreviewwastestedtwotimes byfourrevieweronactualpatientmedicalrecords Reliability Todetermineinter-raterreliability,arandom sampleof10%ofthemedicalrecordswas reviewedbytworeviewersindependently. Validation a.Contentvalidity:hospitalspecialists,GPsandan expertinmedicalrecordreviewstudieswere consultedtojudgeourTSIidentificationmethod oncompletenessandclarity,bothindividually duringthereviewprocessandinagroup discussionattheendofthereviewprocess. b.Concurrentvalidity:Duetotheabsenceofa criterionmeasureintransitionalpatientsafety,the studyutilizedthreeobjectivelyidentifiable TransitionalSafetyIncidents(TSIs)asareference standard.TheseTSIsincludethepresenceand timelinessofcorrespondencefromhospitalto generalpractitioner(GP),redundantdiagnostic testing,andcommunicationofin-hospital prescriptionchangestoGP.Twolayersreview thenwasconductedbyresearchassistantand researchteam. | Thereviewersidentified TSIsin52(17.3%)ofall transitionalmedicalrecords. Variationbetweenreviewers washigh(range:3–28per50 medicalrecords). Positiveagreementfor findingaTSIbetween reviewerswas0%,negative agreement80%andthe Cohen’skappa−0.15. Thereviewersidentified43 (22%)of194objec",
+        "end": 15024,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            494.0366,
+            213.3768,
+            500.7424,
+            220.3766
+          ],
+          "block": "sha256:32568747ec79d69e989ee043ff127a5d00a17dc8d0d75c629ba9043f9c50fcd1",
+          "cell": 7,
+          "offset": 1,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15022,
+        "text": "22"
+      },
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          494.26043701171875,
+          214.67181396484375,
+          500.46923828125,
+          219.11669921875
+        ],
+        "page": 5
+      },
+      "id": "dev-043",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "22"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          518.13671875,
+          214.67181396484375,
+          527.2714233398438,
+          219.20770263671875
+        ],
+        "page": 5
+      },
+      "id": "dev-044",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "194"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          550.7913208007812,
+          430.159423828125,
+          563.054931640625,
+          434.67431640625
+        ],
+        "page": 5
+      },
+      "id": "dev-045",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "1073"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          516.5203247070312,
+          447.1668701171875,
+          537.708740234375,
+          452.4167175292969
+        ],
+        "page": 5
+      },
+      "id": "dev-046",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "245,158"
+    },
+    {
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          518.4468383789062,
+          498.09185791015625,
+          529.5205078125,
+          502.64874267578125
+        ],
+        "page": 5
+      },
+      "id": "dev-047",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "56.0"
+    },
+    {
+      "actual": {
+        "context": "Author, Year | Countryand Setting | Aim | StudyDesign | Participants | KeyFindings | Outcomes\nMurphy etal, 2017 | US,Combined hospitaland clinic. | Todevelop,refine,andtest triggeralgorithmsthat identifypatientswith delayedfollow-upevaluation offindingssuspiciousof colorectalcanceror hepatocellularcancer | Across-sectional retrospectivemedical recordreviewstudyof bothdelayedandnon- delayedrecordsto calculatetrigger performance. | All patientsseenin theinpatientand outpatientsettings atallVAfacilities nationwide | Development a.Designedthetriggertoautomaticallyexclude patients(exclusioncriteria)andincludepatient withappropriatefollow-up. b.Thetriggersmustachieveaminimumof50% positivepredictivevalue(PPV)tobereviewed(for practicalreason). c.Thecriteriaweresubsequentlyprogrammed intoacombinedcomputerizedalgorithmthatwas designedtoextractstructureddatafieldscode. Validation a.Tworeviewersperformedmanualchartreviews todeterminewhetherthealgorithmappropriately identifiedtheintendedinformation. b.Reviewersindependentlyperformed preliminarytestrecordreviewsandtesttheability tocorrectlyextracteachcriterionandevaluate outputofthecompletealgorithm. c.Reviewersconfirmedwhetherthedataextracted bythetriggeralgorithmappropriatelymetthe criteria. | CRCpatients Thestudyidentified1073 patientswithdelayedfollow upfrom245,158CRC patients. Thealgorithmtoidentify patientswithdelayedfollow- upinCRCcaseshasa positivepredictivevalue (PPV)of56.0%(95%CI, 51.0%–61.0%). Thealgorithmidentified patientswithdelayedfollow- upevaluationforCRCwith 68.6%sensitivity(95%CI, 65.4%–71.6%)and81.1% specificity(95%CI;79.5%– 82.6%) HCCpatients From333,828patients,we identified130HCCpatients withdelayedfollowup. ThePPVofthealgorithm was82.3%(95%CI,74.4%– 88.2%). Itidentifiedpatientswith delayedfollow-up evaluationforHCCwith 89.1%sensitivity(95%CI, 81.8%–93.8%)and96.5% specificity(95%CI,94.8%– 97.7%).",
+        "end": 15264,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            491.6356,
+            505.3419,
+            503.2973,
+            512.3417
+          ],
+          "block": "sha256:42bddb896c9926627a33a75b67be3a418f493153b10a097c0a5dcaf28b75c15e",
+          "cell": 7,
+          "offset": 0,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15260,
+        "text": "51.0"
+      },
+      "case": "plos-0308906",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          491.97149658203125,
+          506.63720703125,
+          503.045166015625,
+          511.152099609375
+        ],
+        "page": 5
+      },
+      "id": "dev-048",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "51.0"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\n | 33.448 ± 3.081 | 32.222 ± 3.108 |  | 0.026**",
+        "end": 18080,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            266.1978,
+            432.0086,
+            290.6618,
+            440.0086
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18074,
+        "text": "33.448"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          266.5498046875,
+          432.5605773925781,
+          290.33380126953125,
+          438.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-049",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "33.448"
+    },
+    {
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          297.685791015625,
+          432.5605773925781,
+          315.90179443359375,
+          438.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-050",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "3.081"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\n | 33.448 ± 3.081 | 32.222 ± 3.108 |  | 0.026**",
+        "end": 18274,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            363.5373,
+            432.0086,
+            388.0013,
+            440.0086
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18268,
+        "text": "32.222"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          363.8892822265625,
+          432.5605773925781,
+          387.5852966308594,
+          438.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-051",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "32.222"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\n | 33.448 ± 3.081 | 32.222 ± 3.108 |  | 0.026**",
+        "end": 18282,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            394.6733,
+            432.0086,
+            414.6893,
+            440.0086
+          ],
+          "block": "sha256:ea94e1aad8a4c0972ae5fd954782cc45f641ae514050c8b83b4c7866fbe3b4de",
+          "cell": 3,
+          "offset": 9,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18277,
+        "text": "3.108"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          395.0252685546875,
+          432.5605773925781,
+          414.36126708984375,
+          438.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-052",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "3.108"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\n | 33.448 ± 3.081 | 32.222 ± 3.108 |  | 0.026**",
+        "end": 18642,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            535.5,
+            432.2006,
+            555.516,
+            440.2006
+          ],
+          "block": "sha256:25db8422a0f804d7a0628c3208629bc2b24b70ba1037f4087ddef4f66283f803",
+          "cell": 5,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18637,
+        "text": "0.026"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          535.8519897460938,
+          432.7525939941406,
+          555.1640014648438,
+          438.5926208496094
+        ],
+        "page": 6
+      },
+      "id": "dev-053",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "0.026"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18091,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            266.1978,
+            445.0086,
+            275.0938,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18089,
+        "text": "33"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          266.5498046875,
+          445.5605773925781,
+          274.74981689453125,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-054",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "33"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18097,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            279.5418,
+            445.0086,
+            295.1098,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 2,
+          "offset": 4,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18093,
+        "text": "25.4"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          279.7898254394531,
+          445.5605773925781,
+          294.7418212890625,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-055",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "25.4"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18285,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            363.5373,
+            445.0086,
+            372.4333,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18283,
+        "text": "25"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          363.7852783203125,
+          445.5605773925781,
+          372.1372985839844,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-056",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "25"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18291,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            376.8813,
+            445.0086,
+            392.4493,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 3,
+          "offset": 4,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18287,
+        "text": "19.2"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          377.769287109375,
+          445.5605773925781,
+          392.0332946777344,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-057",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "19.2"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18461,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            460.8767,
+            445.0086,
+            469.7727,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 4,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18459,
+        "text": "58"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          461.22869873046875,
+          445.5605773925781,
+          469.4447021484375,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-058",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "58"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18467,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            474.2207,
+            445.0086,
+            489.7887,
+            453.0086
+          ],
+          "block": "sha256:7cfbcdbd08704a261b7bd5a663fd84214366eeaf5410f40b9321d34addca81df",
+          "cell": 4,
+          "offset": 4,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18463,
+        "text": "44.6"
+      },
+      "case": "plos-0317954",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          474.3406982421875,
+          445.5605773925781,
+          489.43670654296875,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-059",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "development",
+      "text": "44.6"
+    },
+    {
+      "actual": {
+        "context": "Subgroups | Time 1a | Time 2b | Total | p\nMale | 33 [25.4%] | 25 [19.2%] | 58 [44.6%] | 0.357",
+        "end": 18650,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            535.5,
+            445.0086,
+            555.516,
+            453.0086
+          ],
+          "block": "sha256:8ca8328d8f86c90d3a6d7ccc4d31fe5ba9c4a844c3011c24863fb2afdb64e883",
+          "cell": 5,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18645,
+        "text": "0.357"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Subgroups & Time 1a & Time 2b & Total & p"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Male"
+          ]
+        }
+      },
+      "case": "plos-0317954",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          535.8519897460938,
+          445.5605773925781,
+          555.1799926757812,
+          451.4006042480469
+        ],
+        "page": 6
+      },
+      "id": "dev-060",
+      "outcome": "supported",
+      "split": "development",
+      "text": "0.357"
+    },
+    {
+      "actual": {
+        "context": "and reproduction in any medium, provided the We surveyed a final sample of 130 ICU doctors from public tertiary hospitals in",
+        "end": 3120,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            334.54,
+            116.2986,
+            351.22,
+            126.2986
+          ],
+          "block": "sha256:832c24dafa6f382b581881413a6fae3adec37055b83c1d65a7a101eb465449af",
+          "offset": 75,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3117,
+        "text": "130"
+      },
+      "anchor": {
+        "block": "sha256:832c24dafa6f382b581881413a6fae3adec37055b83c1d65a7a101eb465449af",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "and reproduction in any medium, provided the We surveyed a final sample of ",
+        "suffix": " ICU doctors from public tertiary hospitals in"
+      },
+      "case": "plos-0317954",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          335.64996337890625,
+          116.98858642578125,
+          350.76995849609375,
+          124.28857421875
+        ],
+        "page": 2
+      },
+      "id": "dev-061",
+      "outcome": "supported",
+      "split": "development",
+      "text": "130"
+    },
+    {
+      "actual": {
+        "context": "The final sample consisted of 130 valid responses, combining Time 1 responses (n1 = 67) before and Time 2 responses",
+        "end": 19950,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            168.28,
+            292.9596,
+            184.96,
+            302.9596
+          ],
+          "block": "sha256:c75f3e67ae3b4e62da8f15e2e72ee6c3df86faec0bb12cc7b9bad3e876d9decd",
+          "offset": 30,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19947,
+        "text": "130"
+      },
+      "anchor": {
+        "block": "sha256:c75f3e67ae3b4e62da8f15e2e72ee6c3df86faec0bb12cc7b9bad3e876d9decd",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "The final sample consisted of ",
+        "suffix": " valid responses, combining Time "
+      },
+      "case": "plos-0317954",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          169.38998413085938,
+          293.64959716796875,
+          184.5099639892578,
+          300.9495849609375
+        ],
+        "page": 6
+      },
+      "id": "dev-062",
+      "outcome": "supported",
+      "split": "development",
+      "text": "130"
+    },
+    {
+      "actual": {
+        "context": "The final sample consisted of 130 valid responses, combining Time 1 responses (n1 = 67) before and Time 2 responses",
+        "end": 20003,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            415.61,
+            292.9596,
+            426.73,
+            302.9596
+          ],
+          "block": "sha256:c75f3e67ae3b4e62da8f15e2e72ee6c3df86faec0bb12cc7b9bad3e876d9decd",
+          "offset": 84,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20001,
+        "text": "67"
+      },
+      "anchor": {
+        "block": "sha256:c75f3e67ae3b4e62da8f15e2e72ee6c3df86faec0bb12cc7b9bad3e876d9decd",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " responses (n1 = ",
+        "suffix": ") before and Time "
+      },
+      "case": "plos-0317954",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          416.0,
+          293.64959716796875,
+          426.30999755859375,
+          300.9495849609375
+        ],
+        "page": 6
+      },
+      "id": "dev-063",
+      "outcome": "supported",
+      "split": "development",
+      "text": "67"
+    },
+    {
+      "actual": {
+        "context": "(n2 = 63) during the COVID-19 pandemic. Comparing Time 1 and Time 2 periods indicates a shift in doctors’ technology",
+        "end": 20041,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            58.79,
+            306.9596,
+            69.91,
+            316.9596
+          ],
+          "block": "sha256:404cd42d11d7b751f0f9608fea1b6d1b43d85509c5046e93e8693ededc450e8e",
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20039,
+        "text": "63"
+      },
+      "anchor": {
+        "block": "sha256:404cd42d11d7b751f0f9608fea1b6d1b43d85509c5046e93e8693ededc450e8e",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(n2 = ",
+        "suffix": ") during the COVID-"
+      },
+      "case": "plos-0317954",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          59.18000030517578,
+          307.64959716796875,
+          69.4800033569336,
+          314.9495849609375
+        ],
+        "page": 6
+      },
+      "id": "dev-064",
+      "outcome": "supported",
+      "split": "development",
+      "text": "63"
+    },
+    {
+      "actual": {
+        "context": "tion in those areas. The mean contact point diameter was determined to be 183 µm±23 µm (mean ±",
+        "end": 8212,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            477.433,
+            650.5907,
+            492.445,
+            659.5907
+          ],
+          "block": "sha256:e632fef024a204baff0a65d32aeb16a679d944c19979a85c7d392776fb4a3f64",
+          "offset": 74,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 8209,
+        "text": "183"
+      },
+      "anchor": {
+        "block": "sha256:e632fef024a204baff0a65d32aeb16a679d944c19979a85c7d392776fb4a3f64",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "tion in those areas. The mean contact point diameter was determined to be ",
+        "suffix": " µm±"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          478.305908203125,
+          650.8607025146484,
+          491.931884765625,
+          657.439697265625
+        ],
+        "page": 2
+      },
+      "id": "dev-065",
+      "outcome": "supported",
+      "split": "development",
+      "text": "183"
+    },
+    {
+      "actual": {
+        "context": "tion in those areas. The mean contact point diameter was determined to be 183 µm±23 µm (mean ±",
+        "end": 8218,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            513.6967,
+            650.5907,
+            523.7047,
+            659.5907
+          ],
+          "block": "sha256:e632fef024a204baff0a65d32aeb16a679d944c19979a85c7d392776fb4a3f64",
+          "offset": 81,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 8216,
+        "text": "23"
+      },
+      "anchor": {
+        "block": "sha256:e632fef024a204baff0a65d32aeb16a679d944c19979a85c7d392776fb4a3f64",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " µm±",
+        "suffix": " µm (mean ±"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          514.1466064453125,
+          650.8607025146484,
+          523.1915893554688,
+          657.439697265625
+        ],
+        "page": 2
+      },
+      "id": "dev-066",
+      "outcome": "supported",
+      "split": "development",
+      "text": "23"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          470.5794677734375,
+          662.8577117919922,
+          487.23846435546875,
+          669.4367065429688
+        ],
+        "page": 2
+      },
+      "id": "dev-067",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "0.05"
+    },
+    {
+      "actual": {
+        "context": "deposition or aspiration by the µCELL FDSS. Following all experimental manipulations, 75.0% of the",
+        "end": 10363,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            523.1094,
+            577.7235,
+            540.6234,
+            586.7235
+          ],
+          "block": "sha256:ecac16d4cec7113885fbc6f237fca78b83b0cf639d257b962e333c916e8fd0e8",
+          "offset": 86,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 10359,
+        "text": "75.0"
+      },
+      "anchor": {
+        "block": "sha256:ecac16d4cec7113885fbc6f237fca78b83b0cf639d257b962e333c916e8fd0e8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "deposition or aspiration by the µCELL FDSS. Following all experimental manipulations, ",
+        "suffix": "% of the"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          523.5414428710938,
+          577.9934997558594,
+          540.2814331054688,
+          584.5724945068359
+        ],
+        "page": 3
+      },
+      "id": "dev-068",
+      "outcome": "supported",
+      "split": "development",
+      "text": "75.0"
+    },
+    {
+      "actual": {
+        "context": "wells retained all 19 spheroids, with no wells losing more than three spheroids despite the extensive",
+        "end": 10393,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            238.9884,
+            589.7205,
+            248.9964,
+            598.7205
+          ],
+          "block": "sha256:23c9baa84dc3e436431deb1bf24af9128272a8b73d500eaa08ca5584c3e62f33",
+          "offset": 19,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 10391,
+        "text": "19"
+      },
+      "anchor": {
+        "block": "sha256:23c9baa84dc3e436431deb1bf24af9128272a8b73d500eaa08ca5584c3e62f33",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "wells retained all ",
+        "suffix": " spheroids, with no wells losing more than three spheroids despite the extensive"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          239.8613739013672,
+          589.9904937744141,
+          248.62738037109375,
+          596.4704895019531
+        ],
+        "page": 3
+      },
+      "id": "dev-069",
+      "outcome": "supported",
+      "split": "development",
+      "text": "19"
+    },
+    {
+      "actual": {
+        "context": "during polymerization (top). Mean contact point diameter for two independently moulded samples. N=16 wells (304 contact points) per sample.",
+        "end": 9373,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            402.1589,
+            427.4386,
+            410.4789,
+            435.4386
+          ],
+          "block": "sha256:f3698e958caee08f961d64580f7fa52262359f5ee10cf0cbaedb2b3cc335a95c",
+          "offset": 98,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 9371,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:f3698e958caee08f961d64580f7fa52262359f5ee10cf0cbaedb2b3cc335a95c",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "during polymerization (top). Mean contact point diameter for two independently moulded samples. N=",
+        "suffix": " wells ("
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          402.91888427734375,
+          427.77459716796875,
+          410.2548828125,
+          433.526611328125
+        ],
+        "page": 3
+      },
+      "id": "dev-070",
+      "outcome": "supported",
+      "split": "development",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "during polymerization (top). Mean contact point diameter for two independently moulded samples. N=16 wells (304 contact points) per sample.",
+        "end": 9384,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.0469,
+            427.4386,
+            446.5269,
+            435.4386
+          ],
+          "block": "sha256:f3698e958caee08f961d64580f7fa52262359f5ee10cf0cbaedb2b3cc335a95c",
+          "offset": 108,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 9381,
+        "text": "304"
+      },
+      "anchor": {
+        "block": "sha256:f3698e958caee08f961d64580f7fa52262359f5ee10cf0cbaedb2b3cc335a95c",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " wells (",
+        "suffix": " contact points) per sample."
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.3748474121094,
+          427.6785888671875,
+          446.3428649902344,
+          433.526611328125
+        ],
+        "page": 3
+      },
+      "id": "dev-071",
+      "outcome": "supported",
+      "split": "development",
+      "text": "304"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          328.3927001953125,
+          530.1119995117188,
+          340.15570068359375,
+          536.5289916992188
+        ],
+        "page": 4
+      },
+      "id": "dev-072",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "7.4"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          346.80670166015625,
+          530.0039978027344,
+          358.6596984863281,
+          536.5829925537109
+        ],
+        "page": 4
+      },
+      "id": "dev-073",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "0.4"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          398.53778076171875,
+          530.0039978027344,
+          410.24676513671875,
+          536.5289916992188
+        ],
+        "page": 4
+      },
+      "id": "dev-074",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "7.9"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          416.9517822265625,
+          530.0039978027344,
+          428.8047790527344,
+          536.5829925537109
+        ],
+        "page": 4
+      },
+      "id": "dev-075",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "0.4"
+    },
+    {
+      "actual": {
+        "context": "increasing diazoxide, with concentrations for half- maximal inhibition (IC 50 values) of 2.9±0.1 μM and",
+        "end": 14121,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            509.6947,
+            700.7339,
+            522.2047,
+            709.7339
+          ],
+          "block": "sha256:685afa9dacdee8396b97eddf1827a36df1ca69b72515a4050acf904cfb71396d",
+          "offset": 89,
+          "page": 4,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 14118,
+        "text": "2.9"
+      },
+      "anchor": {
+        "block": "sha256:685afa9dacdee8396b97eddf1827a36df1ca69b72515a4050acf904cfb71396d",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " values) of ",
+        "suffix": "±"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          510.1446838378906,
+          701.0038986206055,
+          521.835693359375,
+          707.5289001464844
+        ],
+        "page": 4
+      },
+      "id": "dev-076",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2.9"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          528.5407104492188,
+          701.0038986206055,
+          538.9447021484375,
+          707.5829010009766
+        ],
+        "page": 4
+      },
+      "id": "dev-077",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "0.1"
+    },
+    {
+      "actual": {
+        "context": "1.9±1.71 μM, respectively.",
+        "end": 14136,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            168.5227,
+            712.7309,
+            181.0327,
+            721.7309
+          ],
+          "block": "sha256:ecb5d6b6413e64cb7c0d66c4439978b55d3725eb7211721cd0a1181dc3f564a2",
+          "offset": 0,
+          "page": 4,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 14133,
+        "text": "1.9"
+      },
+      "anchor": {
+        "block": "sha256:ecb5d6b6413e64cb7c0d66c4439978b55d3725eb7211721cd0a1181dc3f564a2",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "±"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          169.3957061767578,
+          713.0009002685547,
+          180.66371154785156,
+          719.5259017944336
+        ],
+        "page": 4
+      },
+      "id": "dev-078",
+      "outcome": "supported",
+      "split": "development",
+      "text": "1.9"
+    },
+    {
+      "case": "elife-110428",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          187.8997039794922,
+          713.1089019775391,
+          202.77670288085938,
+          719.5259017944336
+        ],
+        "page": 4
+      },
+      "id": "dev-079",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "development",
+      "text": "1.71"
+    },
+    {
+      "actual": {
+        "context": "within the microwell array. (D) Histogram showing the number of spheroids still present per well at the time of the control stimulus. N=48 wells on two",
+        "end": 12444,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            510.2109,
+            432.05,
+            518.5309,
+            440.05
+          ],
+          "block": "sha256:d24b3459c142028b49046ddecb339902805906b4d4b2fc76cf1ab6519c6a2e1d",
+          "offset": 136,
+          "page": 4,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 12442,
+        "text": "48"
+      },
+      "anchor": {
+        "block": "sha256:d24b3459c142028b49046ddecb339902805906b4d4b2fc76cf1ab6519c6a2e1d",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "within the microwell array. (D) Histogram showing the number of spheroids still present per well at the time of the control stimulus. N=",
+        "suffix": " wells on two"
+      },
+      "case": "elife-110428",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          510.39495849609375,
+          432.28997802734375,
+          518.2029418945312,
+          438.13800048828125
+        ],
+        "page": 4
+      },
+      "id": "dev-080",
+      "outcome": "supported",
+      "split": "development",
+      "text": "48"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          90.94290161132812,
+          600.1575012207031,
+          102.88690185546875,
+          606.0054931640625
+        ],
+        "page": 3
+      },
+      "id": "dev-081",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "300"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          510.6364440917969,
+          633.2534942626953,
+          514.3484497070312,
+          639.0054931640625
+        ],
+        "page": 3
+      },
+      "id": "dev-082",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "6"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          162.07958984375,
+          688.2535018920898,
+          165.29559326171875,
+          693.9175033569336
+        ],
+        "page": 3
+      },
+      "id": "dev-083",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "7"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          226.47079467773438,
+          688.2535018920898,
+          230.18280029296875,
+          694.005500793457
+        ],
+        "page": 3
+      },
+      "id": "dev-084",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "6"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          297.781982421875,
+          688.2535018920898,
+          301.4940185546875,
+          694.005500793457
+        ],
+        "page": 3
+      },
+      "id": "dev-085",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "6"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          360.7904052734375,
+          688.2535018920898,
+          364.5024108886719,
+          694.005500793457
+        ],
+        "page": 3
+      },
+      "id": "dev-086",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "6"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.9203491210938,
+          699.1575012207031,
+          517.42431640625,
+          705.005500793457
+        ],
+        "page": 3
+      },
+      "id": "dev-087",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          241.84361267089844,
+          418.0530090332031,
+          254.64161682128906,
+          424.53302001953125
+        ],
+        "page": 4
+      },
+      "id": "dev-088",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "221"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          168.83201599121094,
+          430.0500183105469,
+          188.1730194091797,
+          436.6290283203125
+        ],
+        "page": 4
+      },
+      "id": "dev-089",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "3030"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          47.03889846801758,
+          68.33587646484375,
+          54.270896911621094,
+          74.09588623046875
+        ],
+        "page": 4
+      },
+      "id": "dev-090",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "12"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          126.36810302734375,
+          68.431884765625,
+          132.3361053466797,
+          74.09588623046875
+        ],
+        "page": 4
+      },
+      "id": "dev-091",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "11"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          189.09530639648438,
+          68.33587646484375,
+          196.32730102539062,
+          74.18389892578125
+        ],
+        "page": 4
+      },
+      "id": "dev-092",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "13"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          397.044677734375,
+          79.431884765625,
+          400.26068115234375,
+          85.09588623046875
+        ],
+        "page": 4
+      },
+      "id": "dev-093",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "7"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          462.7398681640625,
+          79.431884765625,
+          465.95587158203125,
+          85.09588623046875
+        ],
+        "page": 4
+      },
+      "id": "dev-094",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "7"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          526.9473876953125,
+          79.431884765625,
+          530.1633911132812,
+          85.09588623046875
+        ],
+        "page": 4
+      },
+      "id": "dev-095",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "7"
+    },
+    {
+      "case": "elife-109903",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          86.64341735839844,
+          90.33587646484375,
+          90.14741516113281,
+          96.18389892578125
+        ],
+        "page": 4
+      },
+      "id": "dev-096",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[1] | Chowdhary, 2022 | United States 12 providers Physicians | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Physician-identified challenges to provider recruitment and retention in the Southern US included restrictive legislation, the separation of abortion from other patient care, lack of training opportunities, safety concerns, identity struggles, and marginalisation within the medical community. Providers experienced stigma related to their abortion work. Motivations to continue providing despite these challenges included the high need for care, a desire to combat health access disparities, and having personal ties to the South. They believed that regional networking and training opportunities could help. | Physician-identified challenges to provider recruitment and retention in the Southern US included restrictive legislation, the separation of abortion from other patient care, lack of training opportunities, safety concerns, identity struggles, and marginalisation within the medical community. Providers experienced stigma related to their abortion work. Motivations to continue providing despite these challenges included the high need ",
+        "end": 369,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 21,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 367,
+        "text": "12"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[1]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 21,
+        "part": "word/document.xml"
+      },
+      "id": "dev-097",
+      "outcome": "supported",
+      "split": "development",
+      "text": "12"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[1] | Chowdhary, 2022 | United States 12 providers Physicians | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Physician-identified challenges to provider recruitment and retention in the Southern US included restrictive legislation, the separation of abortion from other patient care, lack of training opportunities, safety concerns, identity struggles, and marginalisation within the medical community. Providers experienced stigma related to their abortion work. Motivations to continue providing despite these challenges included the high need for care, a desire to combat health access disparities, and having personal ties to the South. They believed that regional networking and training opportunities could help. | Physician-identified challenges to provider recruitment and retention in the Southern US included restrictive legislation, the separation of abortion from other patient care, lack of training opportunities, safety concerns, identity struggles, and marginalisation within the medical community. Providers experienced stigma related to their abortion work. Motivations to continue providing despite these challenges included the high need ",
+        "end": 1073,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 10,
+          "offset": 0,
+          "paragraph": 31,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1072,
+        "text": "4"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 9,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[1]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 31,
+        "part": "word/document.xml"
+      },
+      "id": "dev-098",
+      "outcome": "supported",
+      "split": "development",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[2] | Mainey, 2022 | Australia 18 providers Nurses, Midwives | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Nurses and midwives either worked with or against their healthcare system when providing care to women affected by gender-based violence. Where the system supported women, few issues were raised. Where the system didn’t, providers bent or broke the law, local policy, and cultural norms to facilitate holistic care. They resolved to continue supporting women who were being failed by the system. | Nurses and midwives either worked with or against their healthcare system when providing care to women affected by gender-based violence. Where the system supported women, few issues were raised. Where the system didn’t, providers bent or broke the law, local policy, and cultural norms to facilitate holistic care. They resolved to continue supporting women who were being failed by the system. | 5",
+        "end": 1103,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 35,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1101,
+        "text": "18"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[2]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 35,
+        "part": "word/document.xml"
+      },
+      "id": "dev-099",
+      "outcome": "supported",
+      "split": "development",
+      "text": "18"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[2] | Mainey, 2022 | Australia 18 providers Nurses, Midwives | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Nurses and midwives either worked with or against their healthcare system when providing care to women affected by gender-based violence. Where the system supported women, few issues were raised. Where the system didn’t, providers bent or broke the law, local policy, and cultural norms to facilitate holistic care. They resolved to continue supporting women who were being failed by the system. | Nurses and midwives either worked with or against their healthcare system when providing care to women affected by gender-based violence. Where the system supported women, few issues were raised. Where the system didn’t, providers bent or broke the law, local policy, and cultural norms to facilitate holistic care. They resolved to continue supporting women who were being failed by the system. | 5",
+        "end": 1598,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 10,
+          "offset": 0,
+          "paragraph": 44,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1597,
+        "text": "5"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 9,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[2]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 44,
+        "part": "word/document.xml"
+      },
+      "id": "dev-100",
+      "outcome": "supported",
+      "split": "development",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[3] | Newton-Levinson, 2022 | United States 15 providers Leadership, Clinic Support Staff | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Thematic analysis | Qualitative Interviews Thematic analysis | High levels of staff turnover negatively impacted clinic functioning and patient care. Challenges to recruitment and retention included living the conservative south, a perceived lack of value for staff among managers, gaps in communication between providers, and living in rural area. Proposed strategies to include recruitment and retention included investment in management, career advancement opportunities, prioritizing staff retention, and creating a space for self-care | High levels of staff turnover negatively impacted clinic functioning and patient care. Challenges to recruitment and retention included living the conservative south, a perceived lack of value for staff among managers, gaps in communication between providers, and living in rural area. Proposed strategies to include recruitment and retention included investment in management, career advancement opportunities, prioritizing staff retention, and creating a space for self-care | 4",
+        "end": 1641,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 48,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 1639,
+        "text": "15"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[3]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 48,
+        "part": "word/document.xml"
+      },
+      "id": "dev-101",
+      "outcome": "supported",
+      "split": "development",
+      "text": "15"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[3] | Newton-Levinson, 2022 | United States 15 providers Leadership, Clinic Support Staff | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Thematic analysis | Qualitative Interviews Thematic analysis | High levels of staff turnover negatively impacted clinic functioning and patient care. Challenges to recruitment and retention included living the conservative south, a perceived lack of value for staff among managers, gaps in communication between providers, and living in rural area. Proposed strategies to include recruitment and retention included investment in management, career advancement opportunities, prioritizing staff retention, and creating a space for self-care | High levels of staff turnover negatively impacted clinic functioning and patient care. Challenges to recruitment and retention included living the conservative south, a perceived lack of value for staff among managers, gaps in communication between providers, and living in rural area. Proposed strategies to include recruitment and retention included investment in management, career advancement opportunities, prioritizing staff retention, and creating a space for self-care | 4",
+        "end": 2236,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 10,
+          "offset": 0,
+          "paragraph": 56,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2235,
+        "text": "4"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 9,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[3]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 56,
+        "part": "word/document.xml"
+      },
+      "id": "dev-102",
+      "outcome": "supported",
+      "split": "development",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[4] | Reeves, 2022 | United States 10 providers Anaesthetists | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Anaesthetists were willing to be involved in an abortion procedure in at least some circumstances. Most were comfortable with cases of maternal or fetal health indications. Support for abortions for social or financial reasons waned. | Anaesthetists were willing to be involved in an abortion procedure in at least some circumstances. Most were comfortable with cases of maternal or fetal health indications. Support for abortions for social or financial reasons waned. | 2",
+        "end": 2270,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 60,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2268,
+        "text": "10"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[4]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 60,
+        "part": "word/document.xml"
+      },
+      "id": "dev-103",
+      "outcome": "supported",
+      "split": "development",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[4] | Reeves, 2022 | United States 10 providers Anaesthetists | Comprehensive abortion service | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Anaesthetists were willing to be involved in an abortion procedure in at least some circumstances. Most were comfortable with cases of maternal or fetal health indications. Support for abortions for social or financial reasons waned. | Anaesthetists were willing to be involved in an abortion procedure in at least some circumstances. Most were comfortable with cases of maternal or fetal health indications. Support for abortions for social or financial reasons waned. | 2",
+        "end": 2600,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 10,
+          "offset": 0,
+          "paragraph": 68,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2599,
+        "text": "2"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 9,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[4]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 68,
+        "part": "word/document.xml"
+      },
+      "id": "dev-104",
+      "outcome": "supported",
+      "split": "development",
+      "text": "2"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[5] | Armour, 2021 | New Zealand 8 providers Midwives | Second and Third-trimester abortion | Second and Third-trimester abortion | Qualitative Interviews Hermeneutic-phenomenological thematic analysis | Qualitative Interviews Hermeneutic-phenomenological thematic analysis | Midwives believed that abortion care is a different role within midwifery as they encounter death instead of birth. They said it was important to immerse themselves in the patients’ emotional space to create meaningful connections and support them. Despite this, they felt unprepared for the emotional realities of abortion care, especially when they care for many women. | Midwives believed that abortion care is a different role within midwifery as they encounter death instead of birth. They said it was important to immerse themselves in the patients’ emotional space to create meaningful connections and support them. Despite this, they felt unprepared for the emotional realities of abortion care, especially when they care for many women. | 5",
+        "end": 2631,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 72,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2630,
+        "text": "8"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[5]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 72,
+        "part": "word/document.xml"
+      },
+      "id": "dev-105",
+      "outcome": "supported",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[5] | Armour, 2021 | New Zealand 8 providers Midwives | Second and Third-trimester abortion | Second and Third-trimester abortion | Qualitative Interviews Hermeneutic-phenomenological thematic analysis | Qualitative Interviews Hermeneutic-phenomenological thematic analysis | Midwives believed that abortion care is a different role within midwifery as they encounter death instead of birth. They said it was important to immerse themselves in the patients’ emotional space to create meaningful connections and support them. Despite this, they felt unprepared for the emotional realities of abortion care, especially when they care for many women. | Midwives believed that abortion care is a different role within midwifery as they encounter death instead of birth. They said it was important to immerse themselves in the patients’ emotional space to create meaningful connections and support them. Despite this, they felt unprepared for the emotional realities of abortion care, especially when they care for many women. | 5",
+        "end": 3130,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 10,
+          "offset": 0,
+          "paragraph": 81,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 3129,
+        "text": "5"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 9,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[5]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 81,
+        "part": "word/document.xml"
+      },
+      "id": "dev-106",
+      "outcome": "supported",
+      "split": "development",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[6] | Becker, 2021 | United States 25 providers Nurses, Patient Advocates, Recovery Room, Doula, Patient Services Director, Manager, Physician, director | Comprehensive abortion service | Qualitative Interviews Grounded theory | Qualitative Interviews Grounded theory | Providers experienced tension in the language around abortion and did not support common pro-choice rhetoric that the fetus is just a “clump of cells.” Many believed it important to acknowledge that the potential life of the fetus. Contact with the fetus became more challenging with increased gestation as it becomes more noticeably human, and force some to question their support. Seeing the fetal remains is more challenging than other aspects of care that expose providers to the fetus, such as ultrasound scanning. | Providers experienced tension in the language around abortion and did not support common pro-choice rhetoric that the fetus is just a “clump of cells.” Many believed it important to acknowledge that the potential life of the fetus. Contact with the fetus became more challenging with increased gestation as it becomes more noticeably human, and force some to question their support. Seeing the fetal remains is more challenging than other aspects of care that expose pr",
+        "end": 3305,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 96,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 3303,
+        "text": "25"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[6]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 96,
+        "part": "word/document.xml"
+      },
+      "id": "dev-107",
+      "outcome": "supported",
+      "split": "development",
+      "text": "25"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 106,
+        "part": "word/document.xml"
+      },
+      "id": "dev-108",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[7] | Cannon, 2021 | United States 39 providers Physicians (Obstetricians, Family Medicine, other) | Comprehensive abortion service | Qualitative Interviews Initial coding methods | Qualitative Interviews Initial coding methods | The physicians believed it was important to take a patient-centred approach and educating patients as highly important during contraceptive counselling. They also believed it was their responsibility to prevent recurrent abortions. This was motivated by a despite to prevent women facing additional challenges and by discomfort about repeat abortions. | The physicians believed it was important to take a patient-centred approach and educating patients as highly important during contraceptive counselling. They also believed it was their responsibility to prevent recurrent abortions. This was motivated by a despite to prevent women facing additional challenges and by discomfort about repeat abortions. | 3 | 3",
+        "end": 4048,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 110,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 4046,
+        "text": "39"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[7]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 110,
+        "part": "word/document.xml"
+      },
+      "id": "dev-109",
+      "outcome": "supported",
+      "split": "development",
+      "text": "39"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 118,
+        "part": "word/document.xml"
+      },
+      "id": "dev-110",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "3"
+    },
+    {
+      "actual": {
+        "context": "S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | S2 Table. Summary of characteristics of studies included in the scoping review. | \n[8] | Dempsey, 2021 | Ireland 156 providers General practitioners, Obstetricians, Midwives, Nurses, Administrators, Anesthetist | Comprehensive abortion service | Quantitative (Cross-sectional observational) Survey Statistical analyses | Quantitative (Cross-sectional observational) Survey Statistical analyses | Providers in the Republic of Ireland experienced stigma related to their involvement in abortion care. Levels of stigma were higher among those working in Irish hospitals, e.g. obstetricians, midwives, and nurses, compared to providers working in general practice. | Providers in the Republic of Ireland experienced stigma related to their involvement in abortion care. Levels of stigma were higher among those working in Irish hospitals, e.g. obstetricians, midwives, and nurses, compared to providers working in general practice. | 4 | 4",
+        "end": 4570,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:b8575d7fff4cd79d366f3c6a75eaecbf1bf3e937d10b8b23fb3d0aedc581b0f8",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 122,
+          "part": "word/document.xml",
+          "row": 11,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 4567,
+        "text": "156"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & S2 Table. Summary of characteristics of studies included in the scoping review. & ",
+            "Ref & Author, Year & Country Sample Size Professions & Procedures Provided a & Procedures Provided a & Methodology Data Collection Method Analysis & Methodology Data Collection Method Analysis & Key Findings & Key Findings & MMAT Score b"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "[8]"
+          ]
+        }
+      },
+      "case": "plos-0303601",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 122,
+        "part": "word/document.xml"
+      },
+      "id": "dev-111",
+      "outcome": "supported",
+      "split": "development",
+      "text": "156"
+    },
+    {
+      "case": "plos-0303601",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 130,
+        "part": "word/document.xml"
+      },
+      "id": "dev-112",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "development",
+      "text": "4"
+    }
+  ],
+  "shortfalls": [
+    {
+      "case": "plos-0290868",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Qualitative key informant interview guide; no measured numerical results."
+    },
+    {
+      "case": "plos-0308906",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Search terms; no measured numerical results."
+    },
+    {
+      "case": "plos-0317954",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Survey instrument; scale constants and question/reference IDs are not measured results."
+    }
+  ],
+  "tool_version": "1.2.1"
+}

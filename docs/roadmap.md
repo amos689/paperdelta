@@ -122,3 +122,27 @@ languages. [Local evidence](assets/v1.2/local-validation.json) and
 [static-source limits](v1.2.md) distinguish authored regressions from general accuracy.
 
 All six approved releases, 0.7 through 1.2, have now been delivered.
+
+## Approved continuation: 1.3 through 1.6
+
+Approved on 2026-10-06, starting from published 1.2.1 and documentation commit
+`a9171b7`. All four releases below are required. Completion of an earlier release
+does not replace the remaining scope. The shared release requirements above apply;
+`validation/native-v1/**` also remains byte-frozen.
+
+| Release | Required scope | Acceptance evidence | Status |
+| --- | --- | --- | --- |
+| 1.3 | Word incomplete grids, multilevel headers and multiple values per cell; PDF numeric token boundaries and reading order; actionable extraction/identity/ambiguity diagnostics and reviewed native position selection; same-input Docling comparison; current README demonstration and links, isolated uvx startup and previewable private-by-default diagnostic bundles | Repair the four recorded PDF misses; about twenty newly sourced licensed native documents with at least 200 independently located targets, article-family development/held-out split, preserved first results and all four outcome classes; bilingual browser and installation verification; comparison records state whether an optional backend improves usable positions | In development |
+| 1.4 | Three-stage onboarding; proposed source types, keys and experiment groups with reasons/conflicts; combined evidence/location review; shared experiment definitions; reviewed aliases; complete Agent proposal workflow with explicit errors and bounded correction | Same 24-metric task at no more than 60 recorded operations while retaining explicit review; independently recorded real-model complete mapping, identity error, abstention, latency and cost results; deterministic validation remains separate from model evidence | Required after 1.3 |
+| 1.5 | Reusable GitHub Action; PR-oriented new/resolved/unverified findings and removed declarations; SARIF for actual text locations; selected portable review bundles with content preview; combined workflow with paper-preflight while both tools remain independent | Fresh paper repository setup; data-only changes show all affected locations; removed bindings visibly reduce coverage; SARIF and binary-document report links agree with original positions; bundle inspection and replay preserve declared scope | Required after 1.4 |
+| 1.6 | Notebook cell/input/output provenance; Quarto render-output freshness; generated LaTeX/Markdown result fragments from accepted metrics; experiment-change revision lists across prose/tables/figures | Real notebook/Quarto workflows distinguish new evidence, refreshed tables, stale PDF and stale figures; records distinguish declared provenance from execution proof; generated fragments are deterministic and reviewed; offline checks retain input identities | Required after 1.5 |
+
+The native sample protocol and source split must precede parser work; held-out
+layout and scoring remain unopened until the implementation is frozen. Existing
+observed papers are regressions, not fresh held-out data. The developer may also
+annotate and operate the browser; independent human testing is not a release gate
+and is not claimed. Every release requires installed-package checks, all seventeen
+named CI jobs, distribution audits, stable GitHub/PyPI publication and verification
+of the exact public artifacts. Record failures and repairs rather than rewriting
+historical evidence. Do not replace model or parser measurements with scripted
+successes or a narrower, easier task.

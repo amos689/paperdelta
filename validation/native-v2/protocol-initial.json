@@ -1,0 +1,128 @@
+{
+  "study": "native-layout-v2",
+  "locked_at": "2026-10-06T09:45:50.181257+00:00",
+  "baseline_version": "1.2.1",
+  "baseline_commit": "eee7d663057cda78e1f461a0f95083204eb7cfaf",
+  "selection_sha256": "3ba645e6f71c13b003dbcc6860d77bfad13759f9bbfc77261c9916184e663a2f",
+  "papers": [
+    {
+      "id": "plos-0290868",
+      "doi": "10.1371/journal.pone.0290868",
+      "split": "development",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0294127",
+      "doi": "10.1371/journal.pone.0294127",
+      "split": "held-out",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0303601",
+      "doi": "10.1371/journal.pone.0303601",
+      "split": "development",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0304516",
+      "doi": "10.1371/journal.pone.0304516",
+      "split": "held-out",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0308906",
+      "doi": "10.1371/journal.pone.0308906",
+      "split": "development",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0312751",
+      "doi": "10.1371/journal.pone.0312751",
+      "split": "held-out",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0317954",
+      "doi": "10.1371/journal.pone.0317954",
+      "split": "development",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "plos-0324599",
+      "doi": "10.1371/journal.pone.0324599",
+      "split": "held-out",
+      "files": [
+        "article.pdf",
+        "supplement.docx"
+      ]
+    },
+    {
+      "id": "elife-110428",
+      "doi": "10.7554/eLife.110428",
+      "split": "development",
+      "files": [
+        "article.pdf"
+      ]
+    },
+    {
+      "id": "elife-110341",
+      "doi": "10.7554/eLife.110341",
+      "split": "held-out",
+      "files": [
+        "article.pdf"
+      ]
+    },
+    {
+      "id": "elife-109903",
+      "doi": "10.7554/eLife.109903",
+      "split": "development",
+      "files": [
+        "article.pdf"
+      ]
+    },
+    {
+      "id": "elife-110200",
+      "doi": "10.7554/eLife.110200",
+      "split": "held-out",
+      "files": [
+        "article.pdf"
+      ]
+    }
+  ],
+  "annotation": {
+    "per_file_target": 16,
+    "table": "First twelve visible measured result number tokens after headers in the first result table, continuing subsequent result tables as necessary. Exclude IDs, dates, resource identifiers and method constants. Preserve complex layouts and multi-value cells.",
+    "prose": "First four measured results in abstract/results or explanatory supplement prose. Use subsequent table results if absent; if no result table exists use first sixteen measured prose results. Record each fallback and any unfilled slots. Never replace a source after layout or parser inspection.",
+    "gold": "Independently read original OOXML and PDFium geometry plus visual original renders before scoring. Keep exact original part/paragraph/character offsets or page/bounds. Developer is annotator; no independent-human claim.",
+    "held_out": "No held-out original extraction/render/layout access until production implementation and evaluator are frozen. Lock held-out gold before first score. Preserve first score and subsequent regressions separately."
+  },
+  "outcomes": {
+    "supported": "Unique independently specified original position, accepted explicit binding, controlled-evidence pass and mismatch after +1 evidence change.",
+    "missed": "No unique original candidate and no location-specific conservative refusal.",
+    "mislocated": "Wrong original token/location or changed binding identity, including matching numbers elsewhere.",
+    "unknown": "Explicit unsupported/ambiguous original location. Never counted as success."
+  },
+  "comparison": "Run exact published 1.2.1, current reader and optional Docling on identical originals and locked gold. Conversion token extraction and usable identity-preserving PaperDelta bindings are distinct metrics.",
+  "scope": "Two publishers, native text PDFs and publisher Word supplements; not OCR or all scientific publishing. Controlled synthetic evidence is not reproduction of experiments. Twenty documents and at least 200 targets are the planned scope; report any shortfall without silently shrinking the denominator."
+}

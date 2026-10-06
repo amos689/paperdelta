@@ -1,0 +1,128 @@
+schema_version: 4
+paper:
+  entry: source.tex
+  macros: {}
+  companions:
+  - entry: paper.pdf
+    macros: {}
+    export_of: source.tex
+rounding: half_up
+sources:
+  results:
+    path: results/metrics.csv
+    format: csv
+    primary_key:
+    - model
+    - seed
+    columns:
+      model: string
+      seed: integer
+      accuracy: decimal
+metrics:
+  accuracy:
+    source: results
+    field: accuracy
+    where:
+      model: Ours
+    reduce: mean
+    expected_seeds:
+    - 1
+    - 2
+    - 3
+    seed_column: seed
+    expected_count: 3
+    unit: fraction
+  baseline:
+    source: results
+    field: accuracy
+    where:
+      model: Baseline
+    reduce: unique
+    seed_column: seed
+    expected_count: 1
+    unit: fraction
+occurrences:
+  table_accuracy:
+    file: paper.pdf
+    anchor:
+      table:
+        headers:
+        - Method & Accuracy
+        row_prefix:
+        - Ours
+        column: 1
+        percent_symbol: false
+        page: 1
+        parser: paperdelta-pdf/1;pdfplumber/0.11.10;pdfminer/20260107
+    metric: accuracy
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: false
+  table_baseline:
+    file: paper.pdf
+    anchor:
+      table:
+        headers:
+        - Method & Accuracy
+        row_prefix:
+        - Baseline
+        column: 1
+        percent_symbol: false
+        page: 1
+        parser: paperdelta-pdf/1;pdfplumber/0.11.10;pdfminer/20260107
+    metric: baseline
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: false
+  abstract_accuracy:
+    file: paper.pdf
+    anchor:
+      prefix: 'Our method achieves '
+      suffix: ' accuracy on Data-A.'
+      block: sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6
+      parser: paperdelta-pdf/1;pdfplumber/0.11.10;pdfminer/20260107
+    metric: accuracy
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: true
+  source_accuracy:
+    file: source.tex
+    anchor:
+      prefix: 's '
+      suffix: '. '
+    metric: accuracy
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: true
+  source_baseline:
+    file: source.tex
+    anchor:
+      prefix: 'ine accuracy is '
+      suffix: '.
+
+        '
+    metric: baseline
+    display:
+      kind: percent
+      places: 1
+      percent_symbol: true
+claims:
+  main_comparison:
+    file: paper.pdf
+    anchor:
+      exact: Our method outperforms Baseline on Data-A.
+      parser: paperdelta-pdf/1;pdfplumber/0.11.10;pdfminer/20260107
+    predicate:
+      op: greater_than
+      left: accuracy
+      right: baseline
+      candidates: []
+      allow_ties: false
+    scope: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

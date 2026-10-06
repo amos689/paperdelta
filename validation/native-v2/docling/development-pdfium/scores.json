@@ -1,0 +1,985 @@
+{
+  "comparison_scope": "position-scoped extraction containers, not accepted bindings or exact original token positions",
+  "counts": {
+    "extracted_in_original_container": 96,
+    "unknown_original_position": 16
+  },
+  "results": [
+    {
+      "id": "dev-001",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/4",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-002",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/4",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-003",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/6",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-004",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/6",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-005",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/8",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-006",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/8",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-007",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/10",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-008",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/10",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-009",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/12",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-010",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/12",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-011",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/15",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-012",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/2/17",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-013",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/20",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-014",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/84",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-015",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/84",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-016",
+      "case": "plos-0290868",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/84",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-017",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-018",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-019",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-020",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-021",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-022",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/27",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-023",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-024",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-025",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-026",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-027",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-028",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/88",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-029",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/89",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-030",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/89",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-031",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/89",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-032",
+      "case": "plos-0303601",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/89",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-033",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/11",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-034",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-035",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-036",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-037",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-038",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-039",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-040",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-041",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-042",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-043",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-044",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-045",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/20",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-046",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/20",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-047",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/20",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-048",
+      "case": "plos-0308906",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/20",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-049",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/7",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-050",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/7",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-051",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/8",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-052",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/8",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-053",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/9",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-054",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/12",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-055",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/12",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-056",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-057",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/13",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-058",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/14",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-059",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/14",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-060",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "table_cell",
+      "container": "#/tables/0/15",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-061",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/26",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-062",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/79",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-063",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/79",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-064",
+      "case": "plos-0317954",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/79",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-065",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/23",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-066",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/23",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-067",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/23",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-068",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/32",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-069",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/32",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-070",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/30",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-071",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/30",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-072",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/42",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-073",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/42",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-074",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/42",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-075",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/42",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-076",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/44",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-077",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/44",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-078",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/44",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-079",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/44",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-080",
+      "case": "elife-110428",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/39",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-081",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-082",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-083",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-084",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-085",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-086",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-087",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/36",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-088",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/190",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-089",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/190",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-090",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-091",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-092",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-093",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-094",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-095",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-096",
+      "case": "elife-109903",
+      "format": "pdf",
+      "outcome": "extracted_in_original_container",
+      "container_kind": "text",
+      "container": "#/texts/183",
+      "exact_token_position": false
+    },
+    {
+      "id": "dev-097",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-098",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-099",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-100",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-101",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-102",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-103",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-104",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-105",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-106",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-107",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-108",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-109",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-110",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-111",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    },
+    {
+      "id": "dev-112",
+      "case": "plos-0303601",
+      "format": "docx",
+      "outcome": "unknown_original_position",
+      "reason": "no_OOXML_paragraph_offset_provenance"
+    }
+  ]
+}

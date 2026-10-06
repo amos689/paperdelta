@@ -116,8 +116,7 @@ def main():
         assert len(evaluation[name]) == identity["bytes"], name
         assert evaluation[name] == (ROOT / name).read_bytes(), name
     assert not any(
-        n.startswith(("tests/corpus/", "docs/evidence/corpus", "validation/native-v1/"))
-        for n in sdist
+        n.startswith(("tests/corpus/", "docs/evidence/corpus", "validation/native-")) for n in sdist
     ), "Separately licensed paper sources/results must stay out of the MIT Python distribution"
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]
     metadata = check_metadata(
@@ -185,6 +184,7 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.0").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.1").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.2").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.3").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")
@@ -283,6 +283,32 @@ def main():
     )
     for name, digest in original["identities"].items():
         assert "sha256:" + sha256(evaluation[f"{history}/{name}"]).hexdigest() == digest, name
+    native_v2 = "validation/native-v2"
+    native_sources = json.loads(evaluation[f"{native_v2}/sources.json"])
+    native_files = 0
+    for paper in native_sources["papers"]:
+        assert paper["license"] == "CC-BY-4.0"
+        assert paper["license_url"] == "https://creativecommons.org/licenses/by/4.0/"
+        assert paper["id"] in notices and paper["doi"] in notices
+        for name, identity in paper["files"].items():
+            raw = evaluation[f"{native_v2}/papers/{paper['id']}/{name}"]
+            assert sha256(raw).hexdigest() == identity["sha256"]
+            assert len(raw) == identity["bytes"]
+            native_files += 1
+    native_lock = json.loads(evaluation[f"{native_v2}/implementation-lock.json"])
+    for name, digest in native_lock["files"].items():
+        assert sha256(evaluation[f"{native_v2}/implementation/{name}"]).hexdigest() == digest
+    held_lock = json.loads(evaluation[f"{native_v2}/held-out-gold-lock.json"])
+    for key, name in (
+        ("gold_sha256", "held-out-gold.json"),
+        ("font_boxes_sha256", "held-out-font-boxes.json"),
+        ("implementation_lock_sha256", "implementation-lock.json"),
+    ):
+        assert held_lock[key] == sha256(evaluation[f"{native_v2}/{name}"]).hexdigest()
+    first = json.loads(evaluation[f"{native_v2}/results/held-out-first.json"])
+    assert first["mode"] == "first-held-out" and first["matches_implementation_lock"]
+    assert first["implementation"] == native_lock["files"]
+    assert first["gold"]["held-out"] == held_lock["gold_sha256"]
     record = {
         "checked_at": datetime.now(UTC).isoformat(),
         "artifacts": [
@@ -317,6 +343,13 @@ def main():
         "study": study,
         "retained_original_protocol_identity_count": len(original["identities"]),
         "wheel_record_verified": True,
+        "native_v2": {
+            "families": len(native_sources["papers"]),
+            "original_files": native_files,
+            "implementation_files": len(native_lock["files"]),
+            "first_held_out_counts": first["counts"],
+            "original_hashes_licenses_and_locks_verified": True,
+        },
         "excluded": ["virtual environments", "scratch trees", "transactions", "native executables"],
         "scope": "Content and metadata inspection of these exact locally built artifacts.",
     }

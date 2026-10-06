@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-10-06T10:52:30.351228+00:00",
+  "phase": "Development observed; before held-out original layout/text access",
+  "unchanged_gold_sha256": "bce429de1a6d3bc4f0aeecfb3781a207bbcfd6032ebae6bd44c7f1802980819b",
+  "reason": "PDFium ink boxes omit glyph side bearings; pdfminer spans use font advances. Comparing the two under the original 1.2 pt horizontal tolerance mislabeled correctly extracted original digits as missed.",
+  "policy": "Keep original ink coordinates and targets byte-for-byte. Derive PDFium loose=True font boxes from the same original glyph indices. Compare both published baseline and current reader to those font boxes with the same 1.2 pt horizontal and vertical-midpoint policy. Use this fixed method before held-out inspection.",
+  "scope": "Geometry measurement correction, not a product improvement. No target added, removed, or moved to a different original token.",
+  "preserved_runs": {
+    "v13-native-v2-published-baseline-complete": {
+      "sha256": "404f759eec9a71903f015a5aee98a746694325eafa1a4fff31cd22b02c2a1353",
+      "counts": {
+        "mislocated": 0,
+        "missed": 24,
+        "supported": 48,
+        "unknown": 40
+      }
+    },
+    "v13-native-v2-development-r1": {
+      "sha256": "a2f0e20e9257250fb97d9434ca77dcb5094df38be59debb4952323d8fd19b276",
+      "counts": {
+        "mislocated": 0,
+        "missed": 4,
+        "supported": 54,
+        "unknown": 54
+      }
+    },
+    "v13-native-v2-published-baseline-font": {
+      "sha256": "007b0dca8e3c66f8a39b2f71c8f4c6fb97162231062e9e0cb5e9fb322248e298",
+      "counts": {
+        "mislocated": 0,
+        "missed": 21,
+        "supported": 50,
+        "unknown": 41
+      }
+    },
+    "v13-native-v2-development-r2": {
+      "sha256": "1598607209d2602605652621df74ccb5dd8679339801aed224435750f087ccc3",
+      "counts": {
+        "mislocated": 0,
+        "missed": 0,
+        "supported": 57,
+        "unknown": 55
+      }
+    },
+    "v13-native-v2-development-r3": {
+      "sha256": "1d99b114128e3c4ea1e514d7363c86d1baac0ef28e360e1e0be577c12ef5cf1c",
+      "counts": {
+        "mislocated": 0,
+        "missed": 0,
+        "supported": 74,
+        "unknown": 38
+      }
+    }
+  },
+  "baseline_harness_failure": "The initial published-baseline attempt aborted on an eLife PDF page-edge limit. The complete baseline now records whole-document refusal as unknown; the incomplete attempt is not a complete score."
+}

@@ -1,0 +1,4388 @@
+{
+  "by_file": [
+    {
+      "case": "plos-0294127",
+      "counts": {
+        "missed": 1,
+        "unknown": 15
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0304516",
+      "counts": {
+        "missed": 2,
+        "supported": 3,
+        "unknown": 11
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0312751",
+      "counts": {
+        "missed": 2,
+        "supported": 2,
+        "unknown": 12
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0324599",
+      "counts": {
+        "supported": 11,
+        "unknown": 5
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-110341",
+      "counts": {
+        "unknown": 13
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "elife-110200",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plos-0304516",
+      "counts": {
+        "supported": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "plos-0312751",
+      "counts": {
+        "unknown": 1
+      },
+      "format": "docx"
+    }
+  ],
+  "coordinates": "font",
+  "counts": {
+    "mislocated": 0,
+    "missed": 5,
+    "supported": 32,
+    "unknown": 73
+  },
+  "created_at": "2026-10-06T11:07:30.549036+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "held-out": "e2540d6b63a4bf4f9136dfbc832784ece054497e2f93445a7bcad5b9fe406589"
+  },
+  "implementation": {
+    "pyproject.toml": "61cbb7802976752e407f3a7e0d3324d31e5ff39ff4ad673e1189b76b2ce32646",
+    "src/paperdelta/__init__.py": "3070923e937166a6dca4187b5fc868f83343ec32f41d5015fbd81397d054f9f2",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "836d836d596f010cee7216021c160190fd7d0e40cf59ff2a4662f8a58934ae53",
+    "src/paperdelta/agent.py": "b5f87934aa1c15df3917a71e186e8cfdf1439722aa9a510ac86281c8743c3ecc",
+    "src/paperdelta/analysis.py": "9289cc3ccf27b3469163f7aa8a0d9a32c0f5a669db829f09882b9bdaa195317b",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "a0cb6c2c6378ad04493f4925e42866305fac5383d932cba83cf126d05731ea4f",
+    "src/paperdelta/assets/studio-review.js": "ae35e3d00fb8427bc0348df93d9ea7efc3d1bf9e210dec6b925ffb09f17b9dd2",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio.css": "a930b61337abd345226f2f9e43c2118abe8b5db80967467c7cdafe9178c26ee9",
+    "src/paperdelta/assets/studio.js": "17f113d19539f16d139b24fe11d4c840411c345fe89349cdf0f0ecfc257c7013",
+    "src/paperdelta/batch.py": "295d5229c4041fa7729ae0b362b962631c306eff49c676747687d0caa6d61a0a",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "0a43681504b35294fade7bb505e7948d8b6e7962cedc6ec9ff6f0369415c3667",
+    "src/paperdelta/cli.py": "89a8ad2c3d1fba3f1e68b8cb55510c7a1b39d710bee9c81dda2b260b11e8935b",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "8c1f3980eaab641afdb439862fadbe5412127b8aa32b89b44e42af54d1df9dde",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "c1bf45bd5f8b9bbeacc6175a08dfedd5b49095496230581af1d0071955bc7406",
+    "src/paperdelta/demo_markdown/paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_markdown/paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+    "src/paperdelta/demo_markdown/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_quarto/paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_quarto/paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+    "src/paperdelta/demo_quarto/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+    "src/paperdelta/docx_document.py": "5ad7d25f218a9083a5cfeb3c7e3d27cab7ad9d507f52d7bfb944481c6d38221e",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "e6acc88488197fbf65d65a96e6f90a3a4c4f7f9393485272feb0a4e73618386c",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "a91073b75e0099f44590861796b1f852cbcdcd2473c79415bca156f23668febd",
+    "src/paperdelta/locales/zh-CN.json": "c879f93d3a75bd2231f903f93f989d8cb7b8f687b35a951348755b596f890aad",
+    "src/paperdelta/locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+    "src/paperdelta/manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+    "src/paperdelta/markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+    "src/paperdelta/mcp_server.py": "e66a2af23da4b24706f6bebed349842086f0da76a95efc93dfe381c8514fadcc",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "43d4f4588434ea9105eeb1bf1908d8373e6483e7900fd844f5c136c565cf17fd",
+    "src/paperdelta/native_document.py": "1eed25f53575717387f5ceccf8e7a17822b5bb81cdcae33d3dd1f061f46edac5",
+    "src/paperdelta/onboarding.py": "b238e799b2c19f6a0842ca378601482e5307e2f93d304aa732989abad4582f75",
+    "src/paperdelta/patches.py": "93eb89bba01d58d774f9f3417d95cfee15749814c51ae0bca4130a31e2176b37",
+    "src/paperdelta/pdf_document.py": "087d2c46bec4dec9a0d642b6259bdf95d5b395bb54dd8a8575ee71459b3ff96d",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/records.py": "10bbc5dd3675a78fa342897020924e6203ff77364a0f502bc1b75227194bafa4",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "6c1d5a2ded097405631d814c250f59cd5f7a624176fa1f29cbec8354e74f3786",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "7512e8f5d5990111cc0d77f24307135e10608d452862d6c48595286eabfc4691",
+    "src/paperdelta/studio_batch.py": "dc3f93cba9f3de32242810ba78f98636f55c1e52848d237641d9abb6a4249748",
+    "src/paperdelta/studio_recovery.py": "11adecab72ab47986efa76478d8766ca2075c2dee6ca43774de0380476724e33",
+    "src/paperdelta/studio_review.py": "1d49e000ab2405c6cedb177199f2ed59e8a942def73ef4d19b99e764717e292b",
+    "src/paperdelta/studio_server.py": "9d756c642dddd85bced52f5bd9a2e29a6c3041b70c5dc52b3bac9cefadfd0a8d",
+    "src/paperdelta/studio_ui.py": "27e5592576f8d817659da52b0ed646503ad5a451f8a4ddb4d7a8c85d80a74a2c",
+    "src/paperdelta/tables.py": "0a6477451ef1c0a294b418b7f4f3d0412c398dcb499834607f6668ec47c54b11",
+    "src/paperdelta/watch.py": "b6f715c46f3be7cb7d43867bcfe255524cb6404effdc875840b67a7377d76dbe",
+    "src/paperdelta/word_tables.py": "88978d9e0afc9474940eaca2d8f0f37b6793e473c0ff8bb92f3aa563cf91cb45",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/compare_docling_v2.py": "8efbec861756f69758378d9bb85731be5bd14d51213b6f1d7f5d5423e2b2d4f3",
+    "tools/evaluate_native_v2.py": "bafedf538669ae23f589cf163ba731852c43b8afd97e6306cc839ed951f61208",
+    "tools/prepare_native_v2.py": "b02c89d179cb1cf56e48fbcc1fcd995a16866d40554720371d530ed6ce8dcb7b",
+    "tools/prepare_native_v2_font_boxes.py": "bbb3dd96fab76b666185adb063e9d062b21a33c0c74f8f87610feb9e43060fea",
+    "tools/score_docling_v2.py": "57f34c7a11d745cb957d0c65534ee75eee5447ec1b4290175d4aaf03b20780de"
+  },
+  "matches_implementation_lock": false,
+  "mode": "regression",
+  "planned_slots": 160,
+  "python": "3.12.14",
+  "results": [
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          583.1006317138672,
+          116.97975158691406,
+          594.5964965820312
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          583.2846374511719,
+          115.61976623535156,
+          594.2124938964844
+        ],
+        "page": 7
+      },
+      "id": "held-001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "534"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          567.9632263183594,
+          116.97975158691406,
+          579.4591064453125
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          568.2752380371094,
+          115.53976440429688,
+          579.2030944824219
+        ],
+        "page": 7
+      },
+      "id": "held-002",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "222"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          553.8034210205078,
+          116.97975158691406,
+          565.2992858886719
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          554.1154022216797,
+          115.61976623535156,
+          564.947265625
+        ],
+        "page": 7
+      },
+      "id": "held-003",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "312"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          528.7653503417969,
+          116.97975158691406,
+          536.4292144775391
+        ],
+        "ink_bbox": [
+          110.41182708740234,
+          529.1173095703125,
+          115.61976623535156,
+          536.1332397460938
+        ],
+        "page": 7
+      },
+      "id": "held-004",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "68"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          516.5542602539062,
+          116.97975158691406,
+          524.2181701660156
+        ],
+        "ink_bbox": [
+          110.41182708740234,
+          516.8102722167969,
+          115.61976623535156,
+          523.8341979980469
+        ],
+        "page": 7
+      },
+      "id": "held-005",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "56"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          504.73040771484375,
+          116.97975158691406,
+          512.3943176269531
+        ],
+        "ink_bbox": [
+          110.48382568359375,
+          504.9144287109375,
+          115.61976623535156,
+          512.0183410644531
+        ],
+        "page": 7
+      },
+      "id": "held-006",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "74"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          528.7653503417969,
+          126.50362396240234,
+          536.4292144775391
+        ],
+        "ink_bbox": [
+          119.93570709228516,
+          529.1493225097656,
+          125.14364624023438,
+          536.1332397460938
+        ],
+        "page": 7
+      },
+      "id": "held-007",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "65"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          516.5542602539062,
+          126.50362396240234,
+          524.2181701660156
+        ],
+        "ink_bbox": [
+          120.07970428466797,
+          516.9382934570312,
+          125.14364624023438,
+          523.8341979980469
+        ],
+        "page": 7
+      },
+      "id": "held-008",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "55"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          504.73040771484375,
+          126.50362396240234,
+          512.3943176269531
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          505.04241943359375,
+          125.14364624023438,
+          512.0183410644531
+        ],
+        "page": 7
+      },
+      "id": "held-009",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "72"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          109.77984619140625,
+          479.2163391113281,
+          116.97975158691406,
+          486.8802490234375
+        ],
+        "ink_bbox": [
+          110.45982360839844,
+          479.600341796875,
+          115.61976623535156,
+          486.0082702636719
+        ],
+        "page": 7
+      },
+      "id": "held-010",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "15"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          476.47235107421875,
+          126.50362396240234,
+          484.13629150390625
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          477.23236083984375,
+          125.06364440917969,
+          483.2642822265625
+        ],
+        "page": 7
+      },
+      "id": "held-011",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          119.30371856689453,
+          464.64849853515625,
+          126.50362396240234,
+          472.31243896484375
+        ],
+        "ink_bbox": [
+          119.98370361328125,
+          464.96051025390625,
+          125.16764068603516,
+          471.4404296875
+        ],
+        "page": 7
+      },
+      "id": "held-012",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "19"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          241.8509521484375,
+          198.38800048828125,
+          247.09495544433594,
+          206.93804931640625
+        ],
+        "ink_bbox": [
+          242.20245361328125,
+          198.6920166015625,
+          246.8194580078125,
+          205.22802734375
+        ],
+        "page": 2
+      },
+      "id": "held-013",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          409.88787841796875,
+          212.3909912109375,
+          433.3738098144531,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          410.21087646484375,
+          212.552490234375,
+          433.0982666015625,
+          220.6085205078125
+        ],
+        "page": 2
+      },
+      "id": "held-014",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "3,224"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          456.4331359863281,
+          212.3909912109375,
+          474.7149658203125,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          456.7846374511719,
+          212.552490234375,
+          474.3919372558594,
+          219.39251708984375
+        ],
+        "page": 2
+      },
+      "id": "held-015",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.96"
+    },
+    {
+      "case": "plos-0294127",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          511.87799072265625,
+          212.3909912109375,
+          530.1597900390625,
+          220.94097900390625
+        ],
+        "ink_bbox": [
+          512.2294921875,
+          212.552490234375,
+          529.8367919921875,
+          219.39251708984375
+        ],
+        "page": 2
+      },
+      "id": "held-016",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0.86"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 15511,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            194.7992,
+            104.0469,
+            211.959,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15506,
+        "text": "47.43"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          194.79922485351562,
+          104.84686279296875,
+          211.95901489257812,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          194.959228515625,
+          105.52691650390625,
+          211.51901245117188,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-017",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "47.43"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 15516,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            220.2541,
+            104.0469,
+            233.5819,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 2,
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15512,
+        "text": "0.28"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          220.2541046142578,
+          104.84686279296875,
+          233.58192443847656,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          220.53408813476562,
+          105.52691650390625,
+          233.2299346923828,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-018",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.28"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 15961,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            306.0298,
+            104.0469,
+            323.1896,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15956,
+        "text": "40.18"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          306.02984619140625,
+          104.84686279296875,
+          323.1896057128906,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          306.1898193359375,
+          105.52691650390625,
+          322.8376159667969,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-019",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "40.18"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 15966,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.4847,
+            104.0469,
+            344.8126,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 3,
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15962,
+        "text": "0.40"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.4847106933594,
+          104.84686279296875,
+          344.81256103515625,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          331.76470947265625,
+          105.52691650390625,
+          344.5245361328125,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-020",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.40"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 16387,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.8354,
+            104.0469,
+            451.9952,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 4,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16382,
+        "text": "50.62"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.83538818359375,
+          104.84686279296875,
+          451.99517822265625,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          435.21942138671875,
+          105.47894287109375,
+          451.6831970214844,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-021",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "50.62"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 16392,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            460.2335,
+            104.0469,
+            473.5613,
+            112.0468
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 4,
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16388,
+        "text": "0.30"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          460.2334899902344,
+          104.84686279296875,
+          473.56134033203125,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          460.51348876953125,
+          105.52691650390625,
+          473.2733154296875,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-022",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.30"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nAge,mean±SE | 47.43±0.28 | 40.18±0.40 | 50.62±0.30 | <0.0001",
+        "end": 17421,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            538.9789,
+            104.0469,
+            559.9707,
+            112.0468
+          ],
+          "block": "sha256:115948bf9b41ee9c383351ba64fa79d7acca78ceff27d8f4d86892a210b98ce3",
+          "cell": 5,
+          "offset": 1,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 2,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 17415,
+        "text": "0.0001"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 4,
+          "headers": [
+            "Variable & Totaln=8,983a & Non-hyperlipidemian=2,666a & Hyperlipidemian=6,317a & Pvalue"
+          ],
+          "page": 6,
+          "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+          "percent_symbol": false,
+          "row_prefix": [
+            "Age,mean±SE"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          538.9789428710938,
+          104.84686279296875,
+          559.9706420898438,
+          112.04681396484375
+        ],
+        "ink_bbox": [
+          539.2588500976562,
+          105.52691650390625,
+          559.2106323242188,
+          110.6868896484375
+        ],
+        "page": 6
+      },
+      "id": "held-023",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.0001"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nBMI,mean±SE | 28.86±0.11 | 26.94±0.16 | 29.71±0.13 | <0.0001",
+        "end": 15522,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            194.7992,
+            116.5764,
+            211.959,
+            124.5763
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 2,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15517,
+        "text": "28.86"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          194.79922485351562,
+          117.3763427734375,
+          211.95901489257812,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          195.0552215576172,
+          118.00836181640625,
+          211.70301818847656,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-024",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "28.86"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nBMI,mean±SE | 28.86±0.11 | 26.94±0.16 | 29.71±0.13 | <0.0001",
+        "end": 15527,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            220.2541,
+            116.5764,
+            233.5819,
+            124.5763
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 2,
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15523,
+        "text": "0.11"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          220.2541046142578,
+          117.3763427734375,
+          233.58192443847656,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          220.53408813476562,
+          118.05633544921875,
+          232.82192993164062,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-025",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.11"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nBMI,mean±SE | 28.86±0.11 | 26.94±0.16 | 29.71±0.13 | <0.0001",
+        "end": 15972,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            306.0298,
+            116.5764,
+            323.1896,
+            124.5763
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 3,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15967,
+        "text": "26.94"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          306.02984619140625,
+          117.3763427734375,
+          323.1896057128906,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          306.28582763671875,
+          118.00836181640625,
+          323.005615234375,
+          123.24029541015625
+        ],
+        "page": 6
+      },
+      "id": "held-026",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "26.94"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nBMI,mean±SE | 28.86±0.11 | 26.94±0.16 | 29.71±0.13 | <0.0001",
+        "end": 15977,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.4847,
+            116.5764,
+            344.8126,
+            124.5763
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 3,
+          "offset": 6,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 15973,
+        "text": "0.16"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.4847106933594,
+          117.3763427734375,
+          344.81256103515625,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          331.76470947265625,
+          118.00836181640625,
+          344.5565490722656,
+          123.21630859375
+        ],
+        "page": 6
+      },
+      "id": "held-027",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "0.16"
+    },
+    {
+      "actual": {
+        "context": "Variable | Totaln=8,983a | Non-hyperlipidemian=2,666a | Hyperlipidemian=6,317a | Pvalue\nBMI,mean±SE | 28.86±0.11 | 26.94±0.16 | 29.71±0.13 | <0.0001",
+        "end": 16398,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            434.8354,
+            116.5764,
+            451.9952,
+            124.5763
+          ],
+          "block": "sha256:600903b31f3fb31aca69279c08bb95123b1c387f787f2b17ac3014349feb4fa6",
+          "cell": 4,
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ],
+          "row": 3,
+          "table": 1
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 16393,
+        "text": "29.71"
+      },
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.83538818359375,
+          117.3763427734375,
+          451.99517822265625,
+          124.5762939453125
+        ],
+        "ink_bbox": [
+          435.0914306640625,
+          118.05633544921875,
+          451.2351989746094,
+          123.24029541015625
+        ],
+        "page": 6
+      },
+      "id": "held-028",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "29.71"
+    },
+    {
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          281.4222412109375,
+          519.6669921875,
+          304.9081726074219,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          281.7832336425781,
+          519.8284912109375,
+          304.6231384277344,
+          527.8844909667969
+        ],
+        "page": 1
+      },
+      "id": "held-029",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "8,983"
+    },
+    {
+      "case": "plos-0304516",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          396.84820556640625,
+          519.6669921875,
+          420.3341369628906,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          397.2091979980469,
+          519.8284912109375,
+          420.05859375,
+          527.8844909667969
+        ],
+        "page": 1
+      },
+      "id": "held-030",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "6,317"
+    },
+    {
+      "actual": {
+        "context": "This study included8,983participants,of whom6,317(70.3%) werediagnosedwithhyper-",
+        "end": 1620,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            425.5411,
+            518.9735,
+            443.9083,
+            528.4735
+          ],
+          "block": "sha256:b9c2105f9e381593da6f1913e82a011fb3e5bcd3d5095bb205ee7f85cdd947d4",
+          "offset": 50,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1616,
+        "text": "70.3"
+      },
+      "anchor": {
+        "block": "sha256:b9c2105f9e381593da6f1913e82a011fb3e5bcd3d5095bb205ee7f85cdd947d4",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(",
+        "suffix": "%) werediagnosedwithhyper-"
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          425.5410461425781,
+          519.6669921875,
+          443.8228454589844,
+          528.2169799804688
+        ],
+        "ink_bbox": [
+          425.8925476074219,
+          519.8284912109375,
+          443.537841796875,
+          526.6684875488281
+        ],
+        "page": 1
+      },
+      "id": "held-031",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "70.3"
+    },
+    {
+      "actual": {
+        "context": "emiagroupthanthosewithout hyperlipidemia(3.87± 0.32vs. 2.98± 0.14, P = 0.01).",
+        "end": 1798,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            391.4113,
+            546.9795,
+            409.7786,
+            556.4795
+          ],
+          "block": "sha256:caec070f64117e1f2a68e798d5c0b112bc06bdfcac9c819d6eb37f876fbf8d82",
+          "offset": 41,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 1794,
+        "text": "3.87"
+      },
+      "anchor": {
+        "block": "sha256:caec070f64117e1f2a68e798d5c0b112bc06bdfcac9c819d6eb37f876fbf8d82",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "emiagroupthanthosewithout hyperlipidemia(",
+        "suffix": "± 0.32vs. "
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          391.411376953125,
+          547.6730041503906,
+          409.6932067871094,
+          556.2230072021484
+        ],
+        "ink_bbox": [
+          391.734375,
+          547.8344879150391,
+          409.4176940917969,
+          554.6744842529297
+        ],
+        "page": 1
+      },
+      "id": "held-032",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "3.87"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.09857177734375,
+          126.8446044921875,
+          419.7624816894531,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          412.4505615234375,
+          127.52459716796875,
+          419.4504699707031,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-033",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "32"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          439.9349670410156,
+          126.8446044921875,
+          447.598876953125,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          440.1910095214844,
+          127.52459716796875,
+          447.2868957519531,
+          132.70855712890625
+        ],
+        "page": 6
+      },
+      "id": "held-034",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "29"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          472.1930236816406,
+          126.8446044921875,
+          476.02496337890625,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          472.54498291015625,
+          127.52459716796875,
+          475.5849609375,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-035",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "3"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          498.1014404296875,
+          126.8446044921875,
+          505.7653503417969,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          498.35748291015625,
+          127.47662353515625,
+          505.5093688964844,
+          132.6845703125
+        ],
+        "page": 6
+      },
+      "id": "held-036",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "26"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          526.3907470703125,
+          126.8446044921875,
+          534.0546875,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          526.646728515625,
+          127.52459716796875,
+          533.8706665039062,
+          132.60455322265625
+        ],
+        "page": 6
+      },
+      "id": "held-037",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "24"
+    },
+    {
+      "actual": {
+        "context": "2",
+        "end": 17582,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            559.1591,
+            126.0447,
+            562.991,
+            134.0446
+          ],
+          "block": "sha256:f79c5acf4cb2c096c5ce613895abf0c220e64ca58a955ba8060caaa67b604914",
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 17581,
+        "text": "2"
+      },
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          559.1591796875,
+          126.8446044921875,
+          562.9911499023438,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          559.4151000976562,
+          127.52459716796875,
+          562.6790771484375,
+          132.60455322265625
+        ],
+        "page": 6
+      },
+      "id": "held-038",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "2"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          412.09857177734375,
+          148.841064453125,
+          419.7624816894531,
+          156.041015625
+        ],
+        "ink_bbox": [
+          412.9705505371094,
+          149.5211181640625,
+          419.4104919433594,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-039",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "18"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          439.9349670410156,
+          148.841064453125,
+          447.598876953125,
+          156.041015625
+        ],
+        "ink_bbox": [
+          440.8069763183594,
+          149.5211181640625,
+          447.2469177246094,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-040",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "18"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          472.1930236816406,
+          148.841064453125,
+          476.02496337890625,
+          156.041015625
+        ],
+        "ink_bbox": [
+          472.4729919433594,
+          149.5211181640625,
+          475.7369384765625,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-041",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "0"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          498.1014404296875,
+          148.841064453125,
+          505.7653503417969,
+          156.041015625
+        ],
+        "ink_bbox": [
+          498.97344970703125,
+          149.47314453125,
+          505.5093688964844,
+          154.68109130859375
+        ],
+        "page": 6
+      },
+      "id": "held-042",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          526.3907470703125,
+          148.841064453125,
+          534.0546875,
+          156.041015625
+        ],
+        "ink_bbox": [
+          527.2627563476562,
+          149.5211181640625,
+          533.8706665039062,
+          154.60107421875
+        ],
+        "page": 6
+      },
+      "id": "held-043",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "2",
+        "end": 17603,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            559.1591,
+            148.0412,
+            562.991,
+            156.0411
+          ],
+          "block": "sha256:f79c5acf4cb2c096c5ce613895abf0c220e64ca58a955ba8060caaa67b604914",
+          "offset": 0,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 17602,
+        "text": "2"
+      },
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          559.1591796875,
+          148.841064453125,
+          562.9911499023438,
+          156.041015625
+        ],
+        "ink_bbox": [
+          559.4151000976562,
+          149.5211181640625,
+          562.6790771484375,
+          154.60107421875
+        ],
+        "page": 6
+      },
+      "id": "held-044",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "2"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          227.28079223632812,
+          660.1519927978516,
+          250.76669311523438,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          228.24029541015625,
+          660.3134918212891,
+          250.40570068359375,
+          668.369499206543
+        ],
+        "page": 1
+      },
+      "id": "held-045",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "1,605"
+    },
+    {
+      "actual": {
+        "context": "Out of 1,605records, 16 studieswith 690lesionswereincluded.Overall, GTR procedures",
+        "end": 2791,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            288.9054,
+            659.4585,
+            299.4295,
+            668.9585
+          ],
+          "block": "sha256:333429d60069de7253621ba452646623f7c5e9916e781b08301f68df157c4725",
+          "offset": 21,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2789,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:333429d60069de7253621ba452646623f7c5e9916e781b08301f68df157c4725",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ",605records, ",
+        "suffix": " studieswith 690lesionswereincluded.Overall, GTR procedures"
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          288.9053955078125,
+          660.1519927978516,
+          299.3534851074219,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          289.8648986816406,
+          660.3134918212891,
+          299.0304870605469,
+          667.1534957885742
+        ],
+        "page": 1
+      },
+      "id": "held-046",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "case": "plos-0312751",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          352.0614013671875,
+          660.1519927978516,
+          367.7135925292969,
+          668.7019958496094
+        ],
+        "ink_bbox": [
+          352.4223937988281,
+          660.3134918212891,
+          367.4001159667969,
+          667.1534957885742
+        ],
+        "page": 1
+      },
+      "id": "held-047",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "split": "held-out",
+      "text": "690"
+    },
+    {
+      "actual": {
+        "context": "significantlyimprovedhealingafter SRCT in both2D (RR: 0.50; 95%CI, 0.34–0.73;P <",
+        "end": 2909,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            437.4407,
+            673.4615,
+            455.808,
+            682.9615
+          ],
+          "block": "sha256:38d141b1b0b2743beeeef68ac08726176dd23a7a6a6fb63fb67a2f627cb93f77",
+          "offset": 54,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2905,
+        "text": "0.50"
+      },
+      "anchor": {
+        "block": "sha256:38d141b1b0b2743beeeef68ac08726176dd23a7a6a6fb63fb67a2f627cb93f77",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "significantlyimprovedhealingafter SRCT in both2D (RR: ",
+        "suffix": "; "
+      },
+      "case": "plos-0312751",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          437.44073486328125,
+          674.1550064086914,
+          455.7225646972656,
+          682.7050018310547
+        ],
+        "ink_bbox": [
+          437.792236328125,
+          674.3164978027344,
+          455.4090270996094,
+          681.156494140625
+        ],
+        "page": 1
+      },
+      "id": "held-048",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "0.50"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33284,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            347.8,
+            266.7096,
+            353.36,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 72,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33283,
+        "text": "1"
+      },
+      "case": "plos-0324599",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          347.7999572753906,
+          265.36962890625,
+          353.3599548339844,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          348.909912109375,
+          267.39959716796875,
+          351.5499267578125,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-049",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "1"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33286,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            358.92,
+            266.7096,
+            364.48,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 74,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33285,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " and "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          358.9199523925781,
+          265.36962890625,
+          364.4799499511719,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          359.0699157714844,
+          267.42962646484375,
+          364.0198974609375,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-050",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33292,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            386.72,
+            266.7096,
+            392.28,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 80,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33291,
+        "text": "4"
+      },
+      "anchor": {
+        "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          386.7199401855469,
+          265.36962890625,
+          392.2799377441406,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          386.8699035644531,
+          267.42962646484375,
+          391.81988525390625,
+          274.589599609375
+        ],
+        "page": 10
+      },
+      "id": "held-051",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "we observe various periods of significant coherence, essentially in the 1–4 and 4–16 days throughout the crises.",
+        "end": 33295,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            397.84,
+            266.7096,
+            408.96,
+            276.7096
+          ],
+          "block": "sha256:2b4ec92357381305ad960049b22cd6421223a1342ccd695f0649e08aef1ae8b7",
+          "offset": 82,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33293,
+        "text": "16"
+      },
+      "case": "plos-0324599",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          397.8399353027344,
+          265.36962890625,
+          408.9599304199219,
+          276.7095947265625
+        ],
+        "ink_bbox": [
+          398.94989013671875,
+          267.39959716796875,
+          408.5198974609375,
+          274.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-052",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33398,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            380.34,
+            280.7096,
+            391.46,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 72,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33396,
+        "text": "16"
+      },
+      "case": "plos-0324599",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          380.3399353027344,
+          279.36962890625,
+          391.4599304199219,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          381.449951171875,
+          281.39959716796875,
+          391.01995849609375,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-053",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33401,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            397.02,
+            280.7096,
+            408.14,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 75,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33399,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " and "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          397.0199279785156,
+          279.36962890625,
+          408.1399230957031,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          397.4099426269531,
+          281.39959716796875,
+          407.6799011230469,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-054",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33408,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            430.38,
+            280.7096,
+            441.5,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 82,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33406,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          430.3799133300781,
+          279.36962890625,
+          441.4999084472656,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          430.7699279785156,
+          281.39959716796875,
+          441.0398864746094,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-055",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "(A) Bitcoin shows strong coherence at medium-and long-term frequencies (16–64 and 64–256 days). Most arrows point",
+        "end": 33412,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            447.06,
+            280.7096,
+            463.74,
+            290.7096
+          ],
+          "block": "sha256:d70158797c8f58bc518fb3201dbacd31742aabc3a983e3fdfe119174e4fa8c65",
+          "offset": 85,
+          "page": 10,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 33409,
+        "text": "256"
+      },
+      "case": "plos-0324599",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          447.0599060058594,
+          279.36962890625,
+          463.7398986816406,
+          290.7095947265625
+        ],
+        "ink_bbox": [
+          447.369873046875,
+          281.39959716796875,
+          463.2999267578125,
+          288.6995849609375
+        ],
+        "page": 10
+      },
+      "id": "held-056",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "256"
+    },
+    {
+      "actual": {
+        "context": "(B) Gold exhibits significant short-term coherence within the 16–64 day band, especially during 2020. The arrows",
+        "end": 34156,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            314.76,
+            487.5176,
+            325.88,
+            497.5176
+          ],
+          "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+          "offset": 62,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34154,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "(B) Gold exhibits significant short-term coherence within the ",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          314.75994873046875,
+          486.1776428222656,
+          325.87994384765625,
+          497.51763916015625
+        ],
+        "ink_bbox": [
+          315.86993408203125,
+          488.2076110839844,
+          325.43994140625,
+          495.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-057",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "(B) Gold exhibits significant short-term coherence within the 16–64 day band, especially during 2020. The arrows",
+        "end": 34159,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.44,
+            487.5176,
+            342.56,
+            497.5176
+          ],
+          "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+          "offset": 65,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34157,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:a729576d6ba37cde1d36eb1f74afb785396383a8d4e5379d39a701e7e48a52f5",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " day band, especially during "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.43994140625,
+          486.1776428222656,
+          342.5599365234375,
+          497.51763916015625
+        ],
+        "ink_bbox": [
+          331.8299255371094,
+          488.2076110839844,
+          342.0999450683594,
+          495.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-058",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "16–64, the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those",
+        "end": 34447,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            36,
+            543.5176,
+            47.12,
+            553.5176
+          ],
+          "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+          "offset": 0,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34445,
+        "text": "16"
+      },
+      "anchor": {
+        "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          36.000003814697266,
+          542.1775970458984,
+          47.12000274658203,
+          553.5175933837891
+        ],
+        "ink_bbox": [
+          37.11000061035156,
+          544.2075958251953,
+          46.68000030517578,
+          551.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-059",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "16–64, the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those",
+        "end": 34450,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            52.68,
+            543.5176,
+            63.8,
+            553.5176
+          ],
+          "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+          "offset": 3,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34448,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:2e26e14c831ad4fbbec08e72a2dbbe4d33e2c77caacaea35e9d2c4b09acffe6b",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": ", the arrows mostly point right-down, implying there is a positive relationship. These findings are supported by those"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          52.68000030517578,
+          542.1775970458984,
+          63.79999923706055,
+          553.5175933837891
+        ],
+        "ink_bbox": [
+          53.06999969482422,
+          544.2075958251953,
+          63.34000015258789,
+          551.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-060",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "positive medium-term relationship in the 16–64 day band. Between 2019–2021, arrows point down and left-down, show-",
+        "end": 34792,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            215.5,
+            585.5176,
+            226.62,
+            595.5176
+          ],
+          "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+          "offset": 41,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34790,
+        "text": "16"
+      },
+      "case": "plos-0324599",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          215.49998474121094,
+          584.1775970458984,
+          226.61997985839844,
+          595.5175933837891
+        ],
+        "ink_bbox": [
+          216.6099853515625,
+          586.2075958251953,
+          226.1799774169922,
+          593.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-061",
+      "outcome": "unknown",
+      "reason": "ANCHOR_AMBIGUOUS",
+      "split": "held-out",
+      "text": "16"
+    },
+    {
+      "actual": {
+        "context": "positive medium-term relationship in the 16–64 day band. Between 2019–2021, arrows point down and left-down, show-",
+        "end": 34795,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            232.18,
+            585.5176,
+            243.3,
+            595.5176
+          ],
+          "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+          "offset": 44,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34793,
+        "text": "64"
+      },
+      "anchor": {
+        "block": "sha256:dd7309ba6b988e9e442a2c7515b6d3bdcf120870998080e004d090641126519c",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " day band. Between "
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          232.1799774169922,
+          584.1775970458984,
+          243.2999725341797,
+          595.5175933837891
+        ],
+        "ink_bbox": [
+          232.56997680664062,
+          586.2075958251953,
+          242.83998107910156,
+          593.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-062",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "64"
+    },
+    {
+      "actual": {
+        "context": "ing that IDEMV negatively affected WTI returns. At longer scales (256–512 days), arrows shift to right-down. ↘ suggesting",
+        "end": 34933,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            326.499,
+            599.5176,
+            343.179,
+            609.5176
+          ],
+          "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+          "offset": 66,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34930,
+        "text": "256"
+      },
+      "anchor": {
+        "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "ing that IDEMV negatively affected WTI returns. At longer scales (",
+        "suffix": "–"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          326.4989318847656,
+          598.1775970458984,
+          343.1789245605469,
+          609.5175933837891
+        ],
+        "ink_bbox": [
+          326.8089599609375,
+          600.2075958251953,
+          342.7389221191406,
+          607.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-063",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "256"
+    },
+    {
+      "actual": {
+        "context": "ing that IDEMV negatively affected WTI returns. At longer scales (256–512 days), arrows shift to right-down. ↘ suggesting",
+        "end": 34937,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            348.739,
+            599.5176,
+            365.419,
+            609.5176
+          ],
+          "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+          "offset": 70,
+          "page": 11,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34934,
+        "text": "512"
+      },
+      "anchor": {
+        "block": "sha256:04f641d6d166aa93738044d3fdeefd02e659d1fccef536048a72f92bb45f91e8",
+        "exact": null,
+        "parser": "paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "–",
+        "suffix": " days), arrows shift to right-down. ↘ suggesting"
+      },
+      "case": "plos-0324599",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          348.7389221191406,
+          598.1775970458984,
+          365.4189758300781,
+          609.5175933837891
+        ],
+        "ink_bbox": [
+          349.178955078125,
+          600.2075958251953,
+          364.8989562988281,
+          607.5075988769531
+        ],
+        "page": 11
+      },
+      "id": "held-064",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "512"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          323.28070068359375,
+          502.971923828125,
+          333.3786926269531,
+          513.5739135742188
+        ],
+        "ink_bbox": [
+          324.1537170410156,
+          504.951904296875,
+          333.063720703125,
+          511.32391357421875
+        ],
+        "page": 3
+      },
+      "id": "held-065",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          322.8323059082031,
+          579.7120056152344,
+          331.1523132324219,
+          589.1679992675781
+        ],
+        "ink_bbox": [
+          323.5923156738281,
+          581.5039978027344,
+          330.96832275390625,
+          587.1679992675781
+        ],
+        "page": 4
+      },
+      "id": "held-066",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          434.09783935546875,
+          651.1418914794922,
+          444.1058349609375,
+          661.743896484375
+        ],
+        "ink_bbox": [
+          434.97088623046875,
+          653.1219024658203,
+          442.34185791015625,
+          659.493896484375
+        ],
+        "page": 7
+      },
+      "id": "held-067",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          230.5989532470703,
+          675.1358947753906,
+          240.60694885253906,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          231.47195434570312,
+          677.0078887939453,
+          240.26495361328125,
+          683.5868911743164
+        ],
+        "page": 7
+      },
+      "id": "held-068",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          254.97991943359375,
+          675.1358947753906,
+          264.9879455566406,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          255.85293579101562,
+          677.1158905029297,
+          263.22393798828125,
+          683.4878921508789
+        ],
+        "page": 7
+      },
+      "id": "held-069",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          569.9889526367188,
+          675.1358947753906,
+          574.9929809570312,
+          685.7378921508789
+        ],
+        "ink_bbox": [
+          570.3580322265625,
+          677.1158905029297,
+          574.6240234375,
+          683.5868911743164
+        ],
+        "page": 7
+      },
+      "id": "held-070",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          180.14495849609375,
+          687.1328964233398,
+          190.1529541015625,
+          697.7348937988281
+        ],
+        "ink_bbox": [
+          181.01795959472656,
+          689.1128921508789,
+          188.3889617919922,
+          695.4848937988281
+        ],
+        "page": 7
+      },
+      "id": "held-071",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          168.5259552001953,
+          711.1268997192383,
+          173.5299530029297,
+          721.7288970947266
+        ],
+        "ink_bbox": [
+          168.84095764160156,
+          713.1068954467773,
+          173.21495056152344,
+          719.4788970947266
+        ],
+        "page": 7
+      },
+      "id": "held-072",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          186.1929473876953,
+          711.1268997192383,
+          196.20094299316406,
+          721.7288970947266
+        ],
+        "ink_bbox": [
+          187.06594848632812,
+          713.1068954467773,
+          194.43695068359375,
+          719.4788970947266
+        ],
+        "page": 7
+      },
+      "id": "held-073",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          254.5146942138672,
+          149.639892578125,
+          269.07470703125,
+          159.09588623046875
+        ],
+        "ink_bbox": [
+          255.27468872070312,
+          151.431884765625,
+          268.89068603515625,
+          157.1358642578125
+        ],
+        "page": 9
+      },
+      "id": "held-074",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "1.14"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          360.7904052734375,
+          328.1418762207031,
+          380.8064270019531,
+          338.7438659667969
+        ],
+        "ink_bbox": [
+          361.24041748046875,
+          330.0138854980469,
+          380.1224060058594,
+          336.493896484375
+        ],
+        "page": 11
+      },
+      "id": "held-075",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "2117"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          368.9662170410156,
+          699.0980987548828,
+          391.8462219238281,
+          708.5541000366211
+        ],
+        "ink_bbox": [
+          369.7262268066406,
+          700.7940979003906,
+          391.6622314453125,
+          707.6501007080078
+        ],
+        "page": 15
+      },
+      "id": "held-076",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11,804"
+    },
+    {
+      "case": "elife-110341",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          48.364986419677734,
+          229.639892578125,
+          71.24497985839844,
+          239.09588623046875
+        ],
+        "ink_bbox": [
+          49.1249885559082,
+          231.33587646484375,
+          71.06098937988281,
+          238.19189453125
+        ],
+        "page": 16
+      },
+      "id": "held-077",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "11,804"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          232.20098876953125,
+          443.8985900878906,
+          242.208984375,
+          454.5005798339844
+        ],
+        "ink_bbox": [
+          232.5699920654297,
+          445.77056884765625,
+          241.69598388671875,
+          452.3495788574219
+        ],
+        "page": 3
+      },
+      "id": "held-078",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "63"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          282.8529968261719,
+          527.8775939941406,
+          292.8609924316406,
+          538.4795837402344
+        ],
+        "ink_bbox": [
+          283.302978515625,
+          529.7495727539062,
+          292.5459899902344,
+          536.2295837402344
+        ],
+        "page": 3
+      },
+      "id": "held-079",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "24"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          455.03558349609375,
+          100.72802734375,
+          470.0475769042969,
+          111.33001708984375
+        ],
+        "ink_bbox": [
+          455.9085693359375,
+          102.7080078125,
+          469.5345458984375,
+          109.17901611328125
+        ],
+        "page": 5
+      },
+      "id": "held-080",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "115"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          490.60894775390625,
+          185.21099853515625,
+          500.616943359375,
+          195.81298828125
+        ],
+        "ink_bbox": [
+          491.0769348144531,
+          187.0830078125,
+          500.1669616699219,
+          193.6619873046875
+        ],
+        "page": 5
+      },
+      "id": "held-081",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "82"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          505.116943359375,
+          185.21099853515625,
+          515.1249389648438,
+          195.81298828125
+        ],
+        "ink_bbox": [
+          505.5849609375,
+          187.0830078125,
+          514.6119384765625,
+          193.6619873046875
+        ],
+        "page": 5
+      },
+      "id": "held-082",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "83"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          562.02294921875,
+          281.6598815917969,
+          572.031005859375,
+          292.2618713378906
+        ],
+        "ink_bbox": [
+          562.89599609375,
+          283.5318603515625,
+          571.68896484375,
+          290.1108703613281
+        ],
+        "page": 7
+      },
+      "id": "held-083",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          228.6414337158203,
+          686.1737518310547,
+          238.64944458007812,
+          696.775749206543
+        ],
+        "ink_bbox": [
+          229.10943603515625,
+          688.0457534790039,
+          238.30743408203125,
+          694.624755859375
+        ],
+        "page": 7
+      },
+      "id": "held-084",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "80"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          36.502899169921875,
+          77.639892578125,
+          40.662899017333984,
+          87.09588623046875
+        ],
+        "ink_bbox": [
+          36.726898193359375,
+          79.431884765625,
+          40.438899993896484,
+          85.18389892578125
+        ],
+        "page": 7
+      },
+      "id": "held-085",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          378.0097961425781,
+          295.67034912109375,
+          408.7793273925781,
+          306.3219909667969
+        ],
+        "ink_bbox": [
+          378.3427734375,
+          296.8385009765625,
+          408.593505859375,
+          304.1709899902344
+        ],
+        "page": 8
+      },
+      "id": "held-086",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "3×104"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          518.4122314453125,
+          367.7049865722656,
+          528.4202880859375,
+          378.3069763183594
+        ],
+        "ink_bbox": [
+          518.8802490234375,
+          369.5769958496094,
+          528.0782470703125,
+          376.156005859375
+        ],
+        "page": 8
+      },
+      "id": "held-087",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "80"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          195.10409545898438,
+          675.1239166259766,
+          210.1160888671875,
+          685.7259140014648
+        ],
+        "ink_bbox": [
+          195.9770965576172,
+          676.9959030151367,
+          209.7740936279297,
+          683.5749053955078
+        ],
+        "page": 8
+      },
+      "id": "held-088",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "100"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          365.83819580078125,
+          506.1239318847656,
+          370.8421936035156,
+          516.7259521484375
+        ],
+        "ink_bbox": [
+          366.2611999511719,
+          508.1039123535156,
+          370.3291931152344,
+          514.5749206542969
+        ],
+        "page": 10
+      },
+      "id": "held-089",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "5"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          387.5372314453125,
+          506.1239318847656,
+          397.41021728515625,
+          516.7259521484375
+        ],
+        "ink_bbox": [
+          388.41021728515625,
+          507.99591064453125,
+          397.0682373046875,
+          514.5749206542969
+        ],
+        "page": 10
+      },
+      "id": "held-090",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          52.51567840576172,
+          99.639892578125,
+          56.67567825317383,
+          109.09588623046875
+        ],
+        "ink_bbox": [
+          52.69968032836914,
+          101.431884765625,
+          56.49168014526367,
+          107.09588623046875
+        ],
+        "page": 10
+      },
+      "id": "held-091",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          539.5065307617188,
+          143.639892578125,
+          543.66650390625,
+          153.09588623046875
+        ],
+        "ink_bbox": [
+          539.8345336914062,
+          145.33587646484375,
+          543.3385620117188,
+          151.18389892578125
+        ],
+        "page": 10
+      },
+      "id": "held-092",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "8"
+    },
+    {
+      "case": "elife-110200",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          217.6708984375,
+          651.0756988525391,
+          221.83090209960938,
+          660.5316925048828
+        ],
+        "ink_bbox": [
+          217.85488891601562,
+          652.8676910400391,
+          221.6468963623047,
+          658.5316925048828
+        ],
+        "page": 12
+      },
+      "id": "held-093",
+      "outcome": "unknown",
+      "reason": "PDF_PARSE",
+      "refusal_scope": "entire_document",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAccidents | 7 | 29",
+        "end": 41,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 7,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 40,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Accidents"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 7,
+        "part": "word/document.xml"
+      },
+      "id": "held-094",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAccidents | 7 | 29",
+        "end": 44,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 8,
+          "part": "word/document.xml",
+          "row": 3,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 42,
+        "text": "29"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Accidents"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 8,
+        "part": "word/document.xml"
+      },
+      "id": "held-095",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "29"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAd | 7 | 37",
+        "end": 49,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 10,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 48,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ad"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 10,
+        "part": "word/document.xml"
+      },
+      "id": "held-096",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nAd | 7 | 37",
+        "end": 52,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 11,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 50,
+        "text": "37"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ad"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 11,
+        "part": "word/document.xml"
+      },
+      "id": "held-097",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "37"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nBrain | 10 | 51",
+        "end": 61,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 13,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 59,
+        "text": "10"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Brain"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "held-098",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nBrain | 10 | 51",
+        "end": 64,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 14,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 62,
+        "text": "51"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Brain"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "held-099",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "51"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nCancer | 79 | 219",
+        "end": 74,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 16,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 72,
+        "text": "79"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Cancer"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 16,
+        "part": "word/document.xml"
+      },
+      "id": "held-100",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "79"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nCancer | 79 | 219",
+        "end": 78,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 17,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 75,
+        "text": "219"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Cancer"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "held-101",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "219"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nDm | 5 | 39",
+        "end": 83,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 82,
+        "text": "5"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Dm"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "held-102",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "5"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nDm | 5 | 39",
+        "end": 86,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 20,
+          "part": "word/document.xml",
+          "row": 7,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 84,
+        "text": "39"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Dm"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "held-103",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "39"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nHeart | 60 | 275",
+        "end": 95,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 22,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 93,
+        "text": "60"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Heart"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "held-104",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "60"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nHeart | 60 | 275",
+        "end": 99,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 23,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 96,
+        "text": "275"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Heart"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 23,
+        "part": "word/document.xml"
+      },
+      "id": "held-105",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "275"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nIp | 7 | 14",
+        "end": 104,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 25,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 103,
+        "text": "7"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ip"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 25,
+        "part": "word/document.xml"
+      },
+      "id": "held-106",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "7"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nIp | 7 | 14",
+        "end": 107,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 26,
+          "part": "word/document.xml",
+          "row": 9,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 105,
+        "text": "14"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Ip"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "held-107",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nKidney | 6 | 19",
+        "end": 116,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 28,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 115,
+        "text": "6"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 1,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Kidney"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "held-108",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "actual": {
+        "context": "Causes | Hyperlipidemia | Hyperlipidemia\nKidney | 6 | 19",
+        "end": 119,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 29,
+          "part": "word/document.xml",
+          "row": 10,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 117,
+        "text": "19"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "column": 2,
+          "headers": [
+            "Causes & Hyperlipidemia & Hyperlipidemia",
+            "Causes & No & Yes"
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "Kidney"
+          ]
+        }
+      },
+      "case": "plos-0304516",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 29,
+        "part": "word/document.xml"
+      },
+      "id": "held-109",
+      "outcome": "supported",
+      "split": "held-out",
+      "text": "19"
+    },
+    {
+      "actual": {
+        "context": "Author, year | Title | Reason for exclusion\nStasscn et al. 1994 | Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography–comparative clinical study | 9 cases with lateral perforation, the criteria for evaluation not clear",
+        "end": 2805,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:f277442e41a5209ffbcfeab5e176408970ead70036b97a86c8f62b6fdf9349ba",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 58,
+          "part": "word/document.xml",
+          "row": 16,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 2804,
+        "text": "9"
+      },
+      "case": "plos-0312751",
+      "format": "docx",
+      "gold": {
+        "offset": 0,
+        "paragraph": 58,
+        "part": "word/document.xml"
+      },
+      "id": "held-110",
+      "outcome": "unknown",
+      "reason": "BUILDER_ANCHOR",
+      "split": "held-out",
+      "text": "9"
+    }
+  ],
+  "shortfalls": [
+    {
+      "case": "plos-0294127",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Excluded-study bibliography and reasons; no measured result values."
+    },
+    {
+      "case": "plos-0312751",
+      "file": "supplement.docx",
+      "missing": 15,
+      "reason": "Excluded-study bibliography; one observed sample-count value. Dates, study IDs and protocol follow-up periods excluded."
+    },
+    {
+      "case": "plos-0324599",
+      "file": "supplement.docx",
+      "missing": 16,
+      "reason": "Data-description dictionary; dates and source metadata are not measured results."
+    },
+    {
+      "case": "elife-110341",
+      "file": "article.pdf",
+      "missing": 3,
+      "reason": "Thirteen eligible literal measured numbers in result prose/captions; graph ticks, method thresholds, IDs and results from cited background work excluded."
+    }
+  ],
+  "tool_version": "1.2.1"
+}

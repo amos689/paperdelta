@@ -1,0 +1,2471 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "supplement",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 14966331622313256327,
+    "filename": "supplement.docx"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/tables/0"
+      },
+      {
+        "$ref": "#/texts/5"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/2"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/3"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/4"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "S1 Table: Table of Excluded Studies",
+      "text": "S1 Table: Table of Excluded Studies",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Primary author, Publication Year",
+      "text": "Primary author, Publication Year",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Title",
+      "text": "Title",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Details",
+      "text": "Details",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/groups/1"
+        },
+        {
+          "$ref": "#/groups/2"
+        }
+      ],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Primary author, Publication Year",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/0"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Title",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/1"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Details",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/2"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Nogueira 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Stroke Imaging Selection Modality and Endovascular Therapy Outcomes in the Early and Extended Time Windows",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Significant cohort overlap with another study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Herzberg 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Late Thrombectomy in Clinical Practice",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Also used MRI for advanced imaging",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Alexandre 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "May endovascular thrombectomy without CT perfusion improve clinical outcome?",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Almekhlafi 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Imaging Triage of Patients with Late-Window (6-24 Hours) Acute Ischemic Stroke: A Comparative Study Using Multiphase CT Angiography versus CT Perfusion",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Beaulieu 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Non-Contrast CT and CT-Angiogram for Late Window Ischemic Stroke Treatment Selection",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Beckhauser 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Extended Time Window Mechanical Thrombectomy for Acute Stroke in Brazil",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Bhan 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mechanical Thrombectomy for Acute Stroke: Early versus Late Time Window Outcomes",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Bhuva 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Noncontrast Computed Tomography Alberta Stroke Program Early CT Score May Modify Intra-Arterial Treatment Effect in DAWN",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Bouslama 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Novel selection paradigms for endovascular stroke treatment in the extended time window",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "deHavenon 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Results From DEFUSE 3: Good Collaterals Are Associated With Reduced Ischemic Core Growth but Not Neurologic Outcome",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "DelgadoAcosta 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Endovascular stroke treatment after 6-24\u00ac\u2020hours only needs non-contrast CT",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Hendrix 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Outcomes of Mechanical Thrombectomy in the Early (<6-hour) and Extended (>=6-hour) Time Window Based Solely on Noncontrast CT and CT Angiography: A Propensity Score-Matched Cohort Study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Kim 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Comparison Between Perfusion- and Collateral-Based Triage for Endovascular Thrombectomy in a Late Time Window",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Kim-Tenser 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "CT perfusion core and ASPECT score prediction of outcomes in DEFUSE 3",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Kraj\u221a\u2260\u0192\u00e7kov\u221a\u00b0 2017",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mechanical recanalization in ischemic anterior circulation stroke within an 8-hour time window: A real-world experience",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Krishnaiah 2022",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Yield of ASPECTS and Collateral CTA Selection for Mechanical Thrombectomy within 6-24 hours from Symptom Onset in a Hub and Spoke System",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Lansberg 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Association of Thrombectomy With Stroke Outcomes Among Patient Subgroups: Secondary Analyses of the DEFUSE 3 Randomized Clinical Trial",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Luo 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Therapeutic effect of pre-operative tirofiban on patients with acute ischemic stroke with mechanical thrombectomy within 6-24 hours",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Motyer 2017",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Outcomes of endovascular treatment for acute large-vessel ischaemic stroke more than 6 h after symptom onset",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 19,
+            "end_row_offset_idx": 20,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Nannoni 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Eligibility for late endovascular treatment using DAWN, DEFUSE-3, and more liberal selection criteria in a stroke center",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 20,
+            "end_row_offset_idx": 21,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Nannoni 2022",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "ASPECTS-based selection for late endovascular treatment: a retrospective two-site cohort study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 21,
+            "end_row_offset_idx": 22,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Natera-Villalba 2021",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Mechanical thrombectomy beyond 6 hours in acute ischaemic stroke with large vessel occlusion in the carotid artery territory: experience at a tertiary hospital",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 22,
+            "end_row_offset_idx": 23,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "O'Connor 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Predicting Clinical Outcome After Mechanical Thrombectomy: The GADIS (Gender, Age, Diabetes Mellitus History, Infarct Volume, and Sex) Score",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 23,
+            "end_row_offset_idx": 24,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 24,
+            "end_row_offset_idx": 25,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Santos 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 24,
+            "end_row_offset_idx": 25,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "NCCT and CTA-based imaging protocol for endovascular treatment selection in late presenting or wake-up strokes",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 24,
+            "end_row_offset_idx": 25,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 25,
+            "end_row_offset_idx": 26,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Siegler 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 25,
+            "end_row_offset_idx": 26,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Noncontrast CT versus Perfusion-Based Core Estimation in Large Vessel Occlusion: The Blood Pressure after Endovascular Stroke Therapy Study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 25,
+            "end_row_offset_idx": 26,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 26,
+            "end_row_offset_idx": 27,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Virtanen 2022",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 26,
+            "end_row_offset_idx": 27,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Thrombectomy in acute ischemic stroke in the extended time window: Real-life experience in a high-volume center",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 26,
+            "end_row_offset_idx": 27,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Advanced",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 27,
+            "end_row_offset_idx": 28,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Yang 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 27,
+            "end_row_offset_idx": 28,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Complete Recanalization May Exert the Most Important Effect on Outcomes of Endovascular Treatment in Acute Ischemic Stroke with Small Infarct Core Beyond 6 Hours",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 27,
+            "end_row_offset_idx": 28,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Single arm only: Basic",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 28,
+        "num_cols": 3,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Primary author, Publication Year",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Title",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Details",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Nogueira 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Stroke Imaging Selection Modality and Endovascular Therapy Outcomes in the Early and Extended Time Windows",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Significant cohort overlap with another study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Herzberg 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Late Thrombectomy in Clinical Practice",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Also used MRI for advanced imaging",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Alexandre 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "May endovascular thrombectomy without CT perfusion improve clinical outcome?",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Almekhlafi 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Imaging Triage of Patients with Late-Window (6-24 Hours) Acute Ischemic Stroke: A Comparative Study Using Multiphase CT Angiography versus CT Perfusion",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Beaulieu 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Non-Contrast CT and CT-Angiogram for Late Window Ischemic Stroke Treatment Selection",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Beckhauser 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Extended Time Window Mechanical Thrombectomy for Acute Stroke in Brazil",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Bhan 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mechanical Thrombectomy for Acute Stroke: Early versus Late Time Window Outcomes",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Bhuva 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Noncontrast Computed Tomography Alberta Stroke Program Early CT Score May Modify Intra-Arterial Treatment Effect in DAWN",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Bouslama 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Novel selection paradigms for endovascular stroke treatment in the extended time window",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "deHavenon 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Results From DEFUSE 3: Good Collaterals Are Associated With Reduced Ischemic Core Growth but Not Neurologic Outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "DelgadoAcosta 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Endovascular stroke treatment after 6-24\u00ac\u2020hours only needs non-contrast CT",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Hendrix 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Outcomes of Mechanical Thrombectomy in the Early (<6-hour) and Extended (>=6-hour) Time Window Based Solely on Noncontrast CT and CT Angiography: A Propensity Score-Matched Cohort Study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Kim 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Comparison Between Perfusion- and Collateral-Based Triage for Endovascular Thrombectomy in a Late Time Window",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Kim-Tenser 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "CT perfusion core and ASPECT score prediction of outcomes in DEFUSE 3",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Kraj\u221a\u2260\u0192\u00e7kov\u221a\u00b0 2017",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mechanical recanalization in ischemic anterior circulation stroke within an 8-hour time window: A real-world experience",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Krishnaiah 2022",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Yield of ASPECTS and Collateral CTA Selection for Mechanical Thrombectomy within 6-24 hours from Symptom Onset in a Hub and Spoke System",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Lansberg 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Association of Thrombectomy With Stroke Outcomes Among Patient Subgroups: Secondary Analyses of the DEFUSE 3 Randomized Clinical Trial",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Luo 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Therapeutic effect of pre-operative tirofiban on patients with acute ischemic stroke with mechanical thrombectomy within 6-24 hours",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Motyer 2017",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Outcomes of endovascular treatment for acute large-vessel ischaemic stroke more than 6 h after symptom onset",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 19,
+              "end_row_offset_idx": 20,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Nannoni 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Eligibility for late endovascular treatment using DAWN, DEFUSE-3, and more liberal selection criteria in a stroke center",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 20,
+              "end_row_offset_idx": 21,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Nannoni 2022",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "ASPECTS-based selection for late endovascular treatment: a retrospective two-site cohort study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 21,
+              "end_row_offset_idx": 22,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Natera-Villalba 2021",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Mechanical thrombectomy beyond 6 hours in acute ischaemic stroke with large vessel occlusion in the carotid artery territory: experience at a tertiary hospital",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 22,
+              "end_row_offset_idx": 23,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "O'Connor 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Predicting Clinical Outcome After Mechanical Thrombectomy: The GADIS (Gender, Age, Diabetes Mellitus History, Infarct Volume, and Sex) Score",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 23,
+              "end_row_offset_idx": 24,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 24,
+              "end_row_offset_idx": 25,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Santos 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 24,
+              "end_row_offset_idx": 25,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "NCCT and CTA-based imaging protocol for endovascular treatment selection in late presenting or wake-up strokes",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 24,
+              "end_row_offset_idx": 25,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 25,
+              "end_row_offset_idx": 26,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Siegler 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 25,
+              "end_row_offset_idx": 26,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Noncontrast CT versus Perfusion-Based Core Estimation in Large Vessel Occlusion: The Blood Pressure after Endovascular Stroke Therapy Study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 25,
+              "end_row_offset_idx": 26,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 26,
+              "end_row_offset_idx": 27,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Virtanen 2022",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 26,
+              "end_row_offset_idx": 27,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Thrombectomy in acute ischemic stroke in the extended time window: Real-life experience in a high-volume center",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 26,
+              "end_row_offset_idx": 27,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Advanced",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 27,
+              "end_row_offset_idx": 28,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Yang 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 27,
+              "end_row_offset_idx": 28,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Complete Recanalization May Exert the Most Important Effect on Outcomes of Endovascular Treatment in Acute Ischemic Stroke with Small Infarct Core Beyond 6 Hours",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 27,
+              "end_row_offset_idx": 28,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Single arm only: Basic",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

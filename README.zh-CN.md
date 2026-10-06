@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.2.1"><img src="docs/assets/badges/release.svg" alt="正式版 1.2.1"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.3.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.3.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -45,35 +45,27 @@
 
 <p>
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v0.8/report.zh-CN.png">
-    <img src="docs/assets/v0.8/demo.zh-CN.gif" alt="PaperDelta Studio：在 24 个结果单元格中复用实验定义，核对精确身份、选择论文位置并只接受已复核子集。" width="960">
+    <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/v1.3/report.zh-CN.png">
+    <img src="docs/assets/v1.3/demo.zh-CN.gif" alt="PaperDelta：追踪证据变化影响的摘要、表格和结论，再查看过期 PDF 导出。" width="960">
   </picture>
 </p>
 
-约 22 秒的真实 Studio 界面演示：复用实验设置、核对精确身份、选择结果单元格，
-只接受已复核的绑定。播放节奏经过编排以便阅读。
-[打开原尺寸动图](docs/assets/v0.8/demo.zh-CN.gif?raw=true) ·
-[查看静态截图](docs/assets/v0.8/report.zh-CN.png)。
+约 27 秒的真实报告演示：改变实验证据，查看受影响的摘要、表格与结论，再打开
+另一个源稿/PDF 示例，检查过期的导出文件。
+[打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
+[查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.2.1** 新增 Markdown/Quarto 静态正文与竖线表格、原始源码位置、共享证据及
-明确的源稿/PDF 比较。核心安装即可使用，[语法与只读边界](docs/zh-CN/markdown-quarto.md)有明确说明。
+**1.3.0** 改进 Word/PDF 原文定位、经复核的表格身份与一格多值检查，增加可执行的
+诊断建议和可完整预览的隐私诊断包。详见[升级与隔离启动](docs/zh-CN/v1.3.md)及
+[真实文档结果与边界](validation/native-v2/README.zh-CN.md)。
 
-**1.1.0** 新增 Word 脚注/尾注、常见合并表头和旋转裁切 PDF 页面支持。
-[原生试验与限制](docs/zh-CN/v1.1.md)公开首次留出的漏检与未知结果。
-
-**1.0.0** 新增明确声明的均值、SD、SE、n 与 Student-t 区间检查，支持完整复合显示
-和缺失种子检查，详见[统计指南](docs/zh-CN/statistics.md)。
-
-0.9 版本新增 TSV、静态 Excel、可移植实验导出，以及明确执行的 MLflow/W&B
-导入和离线来源核验，详见[实验证据指南](docs/zh-CN/experiment-evidence.md)。
-
-上方动图展示 **0.8.0** 引入的批量绑定、可迁移实验模板和 CLI/MCP 提案图形复核。
-可复现的 24 指标流程，记录的浏览器操作量从 0.6.0 的 270 次降为 103 次；
-[测量范围与原始轨迹](docs/zh-CN/v0.8.md)已公开。快照比较、持续检查和本地草稿恢复继续可用。
-运行 `paperdelta --lang zh-CN studio` 即可开始。详见
-[工作台指南](docs/zh-CN/studio.md)和[发行及升级说明](docs/zh-CN/v1.2.md)。界面全程支持中英文切换。
+静态 [LaTeX](docs/zh-CN/rules.md)、[Markdown/Quarto](docs/zh-CN/markdown-quarto.md)、
+[Word](docs/zh-CN/word.md) 和 [PDF](docs/zh-CN/pdf.md) 共用明确声明的
+[实验证据](docs/zh-CN/experiment-evidence.md)及[统计契约](docs/zh-CN/statistics.md)。
+运行 `paperdelta --lang zh-CN studio` 进行本地绑定复核、快照比较、持续检查和草稿恢复，
+界面全程支持中英文切换。详见[工作台指南](docs/zh-CN/studio.md)和[交付路线图](docs/zh-CN/roadmap.md)。
 项目已收到数位用户的正面试用反馈；这是非正式反馈，不作为量化易用性研究。
-后续发行继续采用正式版本号。
+发行继续采用正式版本号。
 
 ## 安装并查看第一份报告
 
@@ -95,6 +87,10 @@ python -m pip install paperdelta
 paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
+已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
+`uvx --python 3.12 paperdelta@1.3.0 --lang zh-CN demo --out paperdelta-demo --open`。
+每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
+
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用
 `.venv\Scripts\Activate.ps1` 激活，macOS/Linux 使用 `source .venv/bin/activate`
 （创建时可能需要使用 `python3`）。
@@ -109,7 +105,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.2.1-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.3.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -198,7 +194,7 @@ Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存�
 [跨平台 CI](https://github.com/amos689/paperdelta/actions/workflows/ci.yml) 覆盖 Windows、
 Linux、Apple Silicon 和 Intel macOS 的 Python 3.11–3.14。
 [历史验收](docs/zh-CN/v0.2-acceptance.md)、[Mac 实机记录](docs/zh-CN/macos-validation-2026-10-03.md)
-及[当前发行检查](docs/zh-CN/v0.9.md)分别说明各次运行验证的范围。
+及[当前发行检查](docs/zh-CN/v1.3.md)分别说明各次运行验证的范围。
 
 ## 参与开发
 

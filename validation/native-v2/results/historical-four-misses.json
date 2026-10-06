@@ -1,0 +1,329 @@
+{
+  "coordinate_note": "Exact original PDFium glyphs, compared using independent font boxes.",
+  "counts": {
+    "mislocated": 0,
+    "missed": 0,
+    "supported": 4,
+    "unknown": 0
+  },
+  "created_at": "2026-10-06T10:49:50.970558+00:00",
+  "gold_sha256": "8efa84c2a6f1e7689aecb16b6d67efb217d3812b5131e18838bba0546231d6ba",
+  "independent_locations": [
+    {
+      "glyph_indices": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "id": "held-061",
+      "independent_font_bbox": [
+        257.6114501953125,
+        109.7769775390625,
+        285.3134460449219,
+        118.3270263671875
+      ],
+      "original_ink_bbox": [
+        257.96295166015625,
+        109.9384765625,
+        285.0379638671875,
+        116.77850341796875
+      ]
+    },
+    {
+      "glyph_indices": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "id": "held-062",
+      "independent_font_bbox": [
+        304.3827819824219,
+        109.7769775390625,
+        327.0782470703125,
+        118.3270263671875
+      ],
+      "original_ink_bbox": [
+        304.7342834472656,
+        109.9384765625,
+        326.80279541015625,
+        116.77850341796875
+      ]
+    },
+    {
+      "glyph_indices": [
+        177,
+        178
+      ],
+      "id": "held-063",
+      "independent_font_bbox": [
+        515.2799072265625,
+        109.7769775390625,
+        525.5303955078125,
+        118.3270263671875
+      ],
+      "original_ink_bbox": [
+        515.6029052734375,
+        109.9384765625,
+        523.6968994140625,
+        116.77850341796875
+      ]
+    },
+    {
+      "glyph_indices": [
+        185,
+        186
+      ],
+      "id": "held-064",
+      "independent_font_bbox": [
+        552.7537231445312,
+        109.7769775390625,
+        563.004150390625,
+        118.3270263671875
+      ],
+      "original_ink_bbox": [
+        553.1146850585938,
+        109.9384765625,
+        562.6431884765625,
+        116.77850341796875
+      ]
+    }
+  ],
+  "results": [
+    {
+      "actual": {
+        "context": "variance were 0.5717 and 0.024. Reproducibility and repeatability accounted for 31% and 69%",
+        "end": 4146,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            257.6114,
+            109.0835,
+            285.4749,
+            118.5835
+          ],
+          "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+          "offset": 14,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4140,
+        "text": "0.5717"
+      },
+      "anchor": {
+        "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "variance were ",
+        "suffix": " and "
+      },
+      "case": "pet-repeatability",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          257.6114501953125,
+          109.7769775390625,
+          285.3134460449219,
+          118.3270263671875
+        ],
+        "ink_bbox": [
+          257.96295166015625,
+          109.9384765625,
+          285.0379638671875,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-061",
+      "outcome": "supported",
+      "text": "0.5717"
+    },
+    {
+      "actual": {
+        "context": "variance were 0.5717 and 0.024. Reproducibility and repeatability accounted for 31% and 69%",
+        "end": 4156,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            304.3828,
+            109.0835,
+            327.2018,
+            118.5835
+          ],
+          "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+          "offset": 25,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4151,
+        "text": "0.024"
+      },
+      "anchor": {
+        "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " and ",
+        "suffix": ". Reproducibility and repeatability accounted for "
+      },
+      "case": "pet-repeatability",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          304.3827819824219,
+          109.7769775390625,
+          327.0782470703125,
+          118.3270263671875
+        ],
+        "ink_bbox": [
+          304.7342834472656,
+          109.9384765625,
+          326.80279541015625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-062",
+      "outcome": "supported",
+      "text": "0.024"
+    },
+    {
+      "actual": {
+        "context": "variance were 0.5717 and 0.024. Reproducibility and repeatability accounted for 31% and 69%",
+        "end": 4208,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            515.28,
+            109.0835,
+            525.6065,
+            118.5835
+          ],
+          "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+          "offset": 80,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4206,
+        "text": "31"
+      },
+      "anchor": {
+        "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ". Reproducibility and repeatability accounted for ",
+        "suffix": "% and "
+      },
+      "case": "pet-repeatability",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          515.2799072265625,
+          109.7769775390625,
+          525.5303955078125,
+          118.3270263671875
+        ],
+        "ink_bbox": [
+          515.6029052734375,
+          109.9384765625,
+          523.6968994140625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-063",
+      "outcome": "supported",
+      "text": "31"
+    },
+    {
+      "actual": {
+        "context": "variance were 0.5717 and 0.024. Reproducibility and repeatability accounted for 31% and 69%",
+        "end": 4216,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            552.7537,
+            109.0835,
+            563.0802,
+            118.5835
+          ],
+          "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+          "offset": 88,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4214,
+        "text": "69"
+      },
+      "anchor": {
+        "block": "sha256:6ae2c77718fa8eed95fa50901cec665238c36cb6419702ba8abe660d0aab76b5",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "% and ",
+        "suffix": "%"
+      },
+      "case": "pet-repeatability",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          552.7537231445312,
+          109.7769775390625,
+          563.004150390625,
+          118.3270263671875
+        ],
+        "ink_bbox": [
+          553.1146850585938,
+          109.9384765625,
+          562.6431884765625,
+          116.77850341796875
+        ],
+        "page": 2
+      },
+      "id": "held-064",
+      "outcome": "supported",
+      "text": "69"
+    }
+  ],
+  "scope": "Regression of four previously observed misses; not fresh held-out evidence.",
+  "source_sha256": "80c59956bc9670ee88774d40612ebbb7d789dbb8afe4d01936475dd8ff06193a"
+}

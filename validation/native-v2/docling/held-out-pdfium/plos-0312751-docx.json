@@ -1,0 +1,2079 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "supplement",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 8900127919636802158,
+    "filename": "supplement.docx"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/tables/0"
+      },
+      {
+        "$ref": "#/texts/22"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/1"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/2"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_1_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/3"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_2_0",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/4"
+        },
+        {
+          "$ref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_1",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/6"
+        },
+        {
+          "$ref": "#/texts/7"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_2",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_3",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/10"
+        },
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_4",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/12"
+        },
+        {
+          "$ref": "#/texts/13"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_5",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/14"
+        },
+        {
+          "$ref": "#/texts/15"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_6",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/16"
+        },
+        {
+          "$ref": "#/texts/17"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_9",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/18"
+        },
+        {
+          "$ref": "#/texts/19"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_10",
+      "label": "unspecified"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "$ref": "#/tables/0"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/20"
+        },
+        {
+          "$ref": "#/texts/21"
+        }
+      ],
+      "content_layer": "body",
+      "name": "rich_cell_group_1_0_11",
+      "label": "unspecified"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "S2 Table. The Excluded Studies and Reasons for Exclusion",
+      "text": "S2 Table. The Excluded Studies and Reasons for Exclusion",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Author, year",
+      "text": "Author, year",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Title",
+      "text": "Title",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Reason for exclusion",
+      "text": "Reason for exclusion",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Garg et al. 2023",
+      "text": "Garg et al. 2023",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Johri et al. 2022",
+      "text": "Johri et al. 2022",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Botero et al. 2006",
+      "text": "Botero et al. 2006",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Goyal et al. 2011",
+      "text": "Goyal et al. 2011",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Thakur et al. 2023",
+      "text": "Thakur et al. 2023",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Dietrich et al. 2003",
+      "text": "Dietrich et al. 2003",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Garrett et al. 2002",
+      "text": "Garrett et al. 2002",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Fabbro et al. 2012",
+      "text": "Fabbro et al. 2012",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Meschi et al. 2018",
+      "text": "Meschi et al. 2018",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    }
+  ],
+  "pictures": [],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/groups/1"
+        },
+        {
+          "$ref": "#/groups/2"
+        },
+        {
+          "$ref": "#/groups/3"
+        },
+        {
+          "$ref": "#/groups/4"
+        },
+        {
+          "$ref": "#/groups/5"
+        },
+        {
+          "$ref": "#/groups/6"
+        },
+        {
+          "$ref": "#/groups/7"
+        },
+        {
+          "$ref": "#/groups/8"
+        },
+        {
+          "$ref": "#/groups/9"
+        },
+        {
+          "$ref": "#/groups/10"
+        },
+        {
+          "$ref": "#/groups/11"
+        }
+      ],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Author, year",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/0"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Title",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/1"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Reason for exclusion",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/2"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Garg et al. 2023 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/3"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Application of platelet-rich fibrin and freeze-dried bone allograft following apicoectomy: A comparative assessment of radiographic healing",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 7,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "No control group",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Johri et al. 2022 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/4"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Effect of amniotic membrane and platelet-rich fibrin membrane on bone healing post endodontic surgery: An ultrasonographic, randomized controlled study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Botero et al. 2006 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/5"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Healing response of apicomarginal defects to two guided tissue regeneration techniques in periradicular surgery: A double-blind, randomized-clinical trial",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Goyal et al. 2011 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/6"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Comparative evaluation of platelet-rich plasma and guided tissue regeneration membrane in the healing of apicomarginal defects: A clinical study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Thakur et al. 2023 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/7"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Comparative histological evaluation of two PRF formulations (PRF High and PRF Medium) on quality of life and healing outcome of apicomarginal defects: A randomized clinical trial",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Dietrich et al. 2003 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/8"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Periapical and periodontal healing after osseous grafting and guided tissue regeneration treatment of apicomarginal defects in periradicular surgery: results after 12 months",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Gajiwala et al., 2007",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 7,
+            "end_row_offset_idx": 8,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Evaluation of demineralised, freeze-dried, irradiated bone allografts in the treatment of osseous defects in the oral cavity",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Nazife Begum Karan & Banu Aricioglu 2020",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 9,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Assessment of bone healing after mineral trioxide aggregate and platelet-rich fibrin application in periapical lesions using cone-beam computed tomographic imaging",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 5,
+            "col_span": 1,
+            "start_row_offset_idx": 8,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Non-relevant outcome",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Garrett et al. 2002 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/9"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 9,
+            "end_row_offset_idx": 10,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "The effect of a bioresorbable matrix barrier in endodontic surgery on the rate of periapical healing: an in vivo study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Fabbro et al. 2012 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/10"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 10,
+            "end_row_offset_idx": 11,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Effect of platelet concentrate on quality of life after periradicular surgery: A randomized clinical study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Meschi et al. 2018 \n",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false,
+            "ref": {
+              "$ref": "#/groups/11"
+            }
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 11,
+            "end_row_offset_idx": 12,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Root-end surgery with leucocyte- and platelet-rich fibrin and an occlusive membrane: a randomized controlled clinical trial on patients' quality of life",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Taschieri et al. 2014 ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 12,
+            "end_row_offset_idx": 13,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Impact of the use of plasma rich in growth factors (PRGF) on the quality of life of patients treated with endodontic surgery when a perforation of sinus membrane occurred. A comparative study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "You et al. 2023",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 14,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Volumetric evaluation of effects of platelet-rich fibrin and concentrated growth factor on early bone healing after endodontic microsurgery: a randomized controlled trial",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 2,
+            "col_span": 1,
+            "start_row_offset_idx": 13,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Follow-up period less than 1 year",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Ahmed Mahdi Sahib & Sahar Shakir Al-Adili 2019",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 14,
+            "end_row_offset_idx": 15,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography\u2013comparative clinical study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Stasscn et al. 1994 ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography\u2013comparative clinical study",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 15,
+            "end_row_offset_idx": 16,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "9 cases with lateral perforation, the criteria for evaluation not clear",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Tikku et al. 2010 ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Use of ultrasound, color Doppler imaging and radiography to monitor periapical healing after endodontic surgery",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 16,
+            "end_row_offset_idx": 17,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "No GTR group",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Meschi et al. 2020 ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Multi-modular bone healing assessment in a randomized controlled clinical trial of root-end surgery with the use of leukocyte- and platelet-rich fibrin and an occlusive membrane",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 17,
+            "end_row_offset_idx": 18,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "The data that could not be extracted",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Kim et al. 2008 ",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Prospective clinical study evaluating endodontic microsurgery outcomes for cases with lesions of endodontic origin compared with cases with lesions of combined periodontal-endodontic origin",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 18,
+            "end_row_offset_idx": 19,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "GTR group that was not assigned randomly",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 19,
+        "num_cols": 3,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Author, year",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Title",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Reason for exclusion",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Garg et al. 2023 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Application of platelet-rich fibrin and freeze-dried bone allograft following apicoectomy: A comparative assessment of radiographic healing",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Johri et al. 2022 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Effect of amniotic membrane and platelet-rich fibrin membrane on bone healing post endodontic surgery: An ultrasonographic, randomized controlled study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Botero et al. 2006 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Healing response of apicomarginal defects to two guided tissue regeneration techniques in periradicular surgery: A double-blind, randomized-clinical trial",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Goyal et al. 2011 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Comparative evaluation of platelet-rich plasma and guided tissue regeneration membrane in the healing of apicomarginal defects: A clinical study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Thakur et al. 2023 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Comparative histological evaluation of two PRF formulations (PRF High and PRF Medium) on quality of life and healing outcome of apicomarginal defects: A randomized clinical trial",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Dietrich et al. 2003 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Periapical and periodontal healing after osseous grafting and guided tissue regeneration treatment of apicomarginal defects in periradicular surgery: results after 12 months",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Gajiwala et al., 2007",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 7,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Evaluation of demineralised, freeze-dried, irradiated bone allografts in the treatment of osseous defects in the oral cavity",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 7,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 8,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No control group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Nazife Begum Karan & Banu Aricioglu 2020",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 9,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Assessment of bone healing after mineral trioxide aggregate and platelet-rich fibrin application in periapical lesions using cone-beam computed tomographic imaging",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 5,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Non-relevant outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Garrett et al. 2002 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 9,
+              "end_row_offset_idx": 10,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "The effect of a bioresorbable matrix barrier in endodontic surgery on the rate of periapical healing: an in vivo study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 5,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Non-relevant outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Fabbro et al. 2012 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 10,
+              "end_row_offset_idx": 11,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Effect of platelet concentrate on quality of life after periradicular surgery: A randomized clinical study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 5,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Non-relevant outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Meschi et al. 2018 \n",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 11,
+              "end_row_offset_idx": 12,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Root-end surgery with leucocyte- and platelet-rich fibrin and an occlusive membrane: a randomized controlled clinical trial on patients' quality of life",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 5,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Non-relevant outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Taschieri et al. 2014 ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 12,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Impact of the use of plasma rich in growth factors (PRGF) on the quality of life of patients treated with endodontic surgery when a perforation of sinus membrane occurred. A comparative study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 5,
+              "col_span": 1,
+              "start_row_offset_idx": 8,
+              "end_row_offset_idx": 13,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Non-relevant outcome",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "You et al. 2023",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 14,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Volumetric evaluation of effects of platelet-rich fibrin and concentrated growth factor on early bone healing after endodontic microsurgery: a randomized controlled trial",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 2,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Follow-up period less than 1 year",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Ahmed Mahdi Sahib & Sahar Shakir Al-Adili 2019",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 14,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography\u2013comparative clinical study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 2,
+              "col_span": 1,
+              "start_row_offset_idx": 13,
+              "end_row_offset_idx": 15,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Follow-up period less than 1 year",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Stasscn et al. 1994 ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Evaluation of healing process of periapical defect filled by platelet rich fibrin using cone beam computed tomography\u2013comparative clinical study",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 15,
+              "end_row_offset_idx": 16,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "9 cases with lateral perforation, the criteria for evaluation not clear",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Tikku et al. 2010 ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Use of ultrasound, color Doppler imaging and radiography to monitor periapical healing after endodontic surgery",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 16,
+              "end_row_offset_idx": 17,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "No GTR group",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Meschi et al. 2020 ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Multi-modular bone healing assessment in a randomized controlled clinical trial of root-end surgery with the use of leukocyte- and platelet-rich fibrin and an occlusive membrane",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 17,
+              "end_row_offset_idx": 18,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "The data that could not be extracted",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Kim et al. 2008 ",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Prospective clinical study evaluating endodontic microsurgery outcomes for cases with lesions of endodontic origin compared with cases with lesions of combined periodontal-endodontic origin",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 18,
+              "end_row_offset_idx": 19,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "GTR group that was not assigned randomly",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

@@ -6,7 +6,7 @@ Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
 positions, read-only limits and explicit source/PDF comparisons.
 
-PaperDelta 1.1 reads supported text-based PDFs and checks their explicitly bound
+PaperDelta 1.3 reads supported text-based PDFs and checks their explicitly bound
 results against declared experiment evidence. The same configuration can contain LaTeX,
 Word and PDF manuscripts. PDF and Word files remain read-only.
 
@@ -163,3 +163,17 @@ and [Word support](word.md). The native held-out PDF sample had 4 supported, 4 m
 and 24 unknown targets out of 32; joined words/numbers caused the misses.
 This is not a general extraction-accuracy claim. Scanned OCR, general table
 reconstruction and native-document writeback remain outside the supported scope.
+
+## Changes in 1.3
+
+Tight word spacing and narrow column gutters are handled separately. Words with
+unsafe raised digits remain unverified, while unrelated visible words can retain
+unique bindings. A page exceeding glyph/edge limits receives a page-specific
+refusal; other pages remain available. Exact unique numeric-only contexts help
+when a conjunction repeats within prose, without selecting by matching value.
+
+The adapter is now `paperdelta-pdf/3`; repair existing PDF bindings explicitly.
+See the [upgrade and diagnostics guide](v1.3.md) and
+[new native study](../validation/native-v2/README.md). The four historical misses
+above now pass a controlled regression; the new first held-out results remain
+separate. Neither result promises arbitrary scientific-notation or table support.

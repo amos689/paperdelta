@@ -1,0 +1,2035 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "supplement",
+  "origin": {
+    "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "binary_hash": 18059598452566857232,
+    "filename": "supplement.docx"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/groups/0"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/groups/1"
+      },
+      {
+        "$ref": "#/groups/2"
+      },
+      {
+        "$ref": "#/groups/3"
+      },
+      {
+        "$ref": "#/texts/16"
+      },
+      {
+        "$ref": "#/groups/4"
+      },
+      {
+        "$ref": "#/texts/23"
+      },
+      {
+        "$ref": "#/groups/5"
+      },
+      {
+        "$ref": "#/texts/33"
+      },
+      {
+        "$ref": "#/groups/6"
+      },
+      {
+        "$ref": "#/texts/35"
+      },
+      {
+        "$ref": "#/groups/7"
+      },
+      {
+        "$ref": "#/groups/8"
+      },
+      {
+        "$ref": "#/groups/9"
+      },
+      {
+        "$ref": "#/texts/51"
+      },
+      {
+        "$ref": "#/groups/10"
+      },
+      {
+        "$ref": "#/texts/58"
+      },
+      {
+        "$ref": "#/groups/11"
+      },
+      {
+        "$ref": "#/texts/70"
+      },
+      {
+        "$ref": "#/texts/71"
+      },
+      {
+        "$ref": "#/texts/72"
+      },
+      {
+        "$ref": "#/texts/73"
+      },
+      {
+        "$ref": "#/texts/74"
+      },
+      {
+        "$ref": "#/texts/75"
+      },
+      {
+        "$ref": "#/texts/76"
+      },
+      {
+        "$ref": "#/texts/77"
+      },
+      {
+        "$ref": "#/texts/78"
+      },
+      {
+        "$ref": "#/texts/79"
+      },
+      {
+        "$ref": "#/texts/80"
+      },
+      {
+        "$ref": "#/texts/81"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/2"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/5"
+        },
+        {
+          "$ref": "#/texts/6"
+        },
+        {
+          "$ref": "#/texts/7"
+        },
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/11"
+        },
+        {
+          "$ref": "#/texts/12"
+        },
+        {
+          "$ref": "#/texts/13"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/14"
+        },
+        {
+          "$ref": "#/texts/15"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/17"
+        },
+        {
+          "$ref": "#/texts/18"
+        },
+        {
+          "$ref": "#/texts/19"
+        },
+        {
+          "$ref": "#/texts/20"
+        },
+        {
+          "$ref": "#/texts/21"
+        },
+        {
+          "$ref": "#/texts/22"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/24"
+        },
+        {
+          "$ref": "#/texts/25"
+        },
+        {
+          "$ref": "#/texts/26"
+        },
+        {
+          "$ref": "#/texts/27"
+        },
+        {
+          "$ref": "#/texts/28"
+        },
+        {
+          "$ref": "#/texts/29"
+        },
+        {
+          "$ref": "#/texts/30"
+        },
+        {
+          "$ref": "#/texts/31"
+        },
+        {
+          "$ref": "#/texts/32"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/34"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/36"
+        },
+        {
+          "$ref": "#/texts/37"
+        },
+        {
+          "$ref": "#/texts/38"
+        },
+        {
+          "$ref": "#/texts/39"
+        },
+        {
+          "$ref": "#/texts/40"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/41"
+        },
+        {
+          "$ref": "#/texts/42"
+        },
+        {
+          "$ref": "#/texts/43"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/44"
+        },
+        {
+          "$ref": "#/texts/45"
+        },
+        {
+          "$ref": "#/texts/46"
+        },
+        {
+          "$ref": "#/texts/47"
+        },
+        {
+          "$ref": "#/texts/48"
+        },
+        {
+          "$ref": "#/texts/49"
+        },
+        {
+          "$ref": "#/texts/50"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/10",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/52"
+        },
+        {
+          "$ref": "#/texts/53"
+        },
+        {
+          "$ref": "#/texts/54"
+        },
+        {
+          "$ref": "#/texts/55"
+        },
+        {
+          "$ref": "#/texts/56"
+        },
+        {
+          "$ref": "#/texts/57"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/11",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/59"
+        },
+        {
+          "$ref": "#/texts/60"
+        },
+        {
+          "$ref": "#/texts/61"
+        },
+        {
+          "$ref": "#/texts/62"
+        },
+        {
+          "$ref": "#/texts/63"
+        },
+        {
+          "$ref": "#/texts/64"
+        },
+        {
+          "$ref": "#/texts/65"
+        },
+        {
+          "$ref": "#/texts/66"
+        },
+        {
+          "$ref": "#/texts/67"
+        },
+        {
+          "$ref": "#/texts/68"
+        },
+        {
+          "$ref": "#/texts/69"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Supplement Table 1: Key Informant Interview Guide",
+      "text": "Supplement Table 1: Key Informant Interview Guide",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Interview domains",
+      "text": "Interview domains",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Interview guide for pregnant adolescents",
+      "text": "Interview guide for pregnant adolescents",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Barriers",
+      "text": "Barriers",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Who all are in your family/who do you live with currently/schooling- how are you being treated by schoolmates/friends?",
+      "text": "Who all are in your family/who do you live with currently/schooling- how are you being treated by schoolmates/friends?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does pregnancy experience seem from the point of view of a pregnant adolescent?",
+      "text": "How does pregnancy experience seem from the point of view of a pregnant adolescent?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does the pregnancy come about?",
+      "text": "How does the pregnancy come about?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does the adolescent come to reconcile \u2013 given that many despite being thrown into unplanned pregnancy don\u2019t say it is unwanted?",
+      "text": "How does the adolescent come to reconcile \u2013 given that many despite being thrown into unplanned pregnancy don\u2019t say it is unwanted?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How is your relationship with your parent/caregiver now that you are pregnant?",
+      "text": "How is your relationship with your parent/caregiver now that you are pregnant?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What sort of mismatch happens around emotional attachment to a partner and understanding practically about their support in their lives.",
+      "text": "What sort of mismatch happens around emotional attachment to a partner and understanding practically about their support in their lives.",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does problem solving happen around the following barriers?",
+      "text": "How does problem solving happen around the following barriers?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Social",
+      "text": "Social",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Emotional & relationship",
+      "text": "Emotional & relationship",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Practical & economic",
+      "text": "Practical & economic",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What worries do you have around the delivery of the baby?",
+      "text": "What worries do you have around the delivery of the baby?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How is pregnancy in early stages vs later stages understood?",
+      "text": "How is pregnancy in early stages vs later stages understood?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Solutions-",
+      "text": "Solutions-",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How do you keep yourself from getting another unplanned pregnancy and falling into problems further? Who helps you on that and who all can help better?",
+      "text": "How do you keep yourself from getting another unplanned pregnancy and falling into problems further? Who helps you on that and who all can help better?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What is the role of emotional and mental health in that pregnancy experience?",
+      "text": "What is the role of emotional and mental health in that pregnancy experience?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "When you become stressed what do you do to come out of it?",
+      "text": "When you become stressed what do you do to come out of it?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What gives you hope during this time?",
+      "text": "What gives you hope during this time?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What sort of friends can help or have helped you so far?",
+      "text": "What sort of friends can help or have helped you so far?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What kinds of things do you think will become easier as time goes by?",
+      "text": "What kinds of things do you think will become easier as time goes by?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "UCD/HCD based",
+      "text": "UCD/HCD based",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How do others view you? What kind of criticism do you receive from others?",
+      "text": "How do others view you? What kind of criticism do you receive from others?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What is your mother/father/sibling/school/teacher/friend thinking of you?",
+      "text": "What is your mother/father/sibling/school/teacher/friend thinking of you?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Where and how do they understand or misunderstand what you are going through?",
+      "text": "Where and how do they understand or misunderstand what you are going through?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How would you like to be seen?",
+      "text": "How would you like to be seen?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What do you do on a daily basis?",
+      "text": "What do you do on a daily basis?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How would you wish things to be?",
+      "text": "How would you wish things to be?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who helps you feel better?",
+      "text": "Who helps you feel better?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who helps you communicate with your parents/caregivers/friends?",
+      "text": "Who helps you communicate with your parents/caregivers/friends?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What did you like doing before pregnancy and what is it that you stopped doing?",
+      "text": "What did you like doing before pregnancy and what is it that you stopped doing?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "9."
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Interview guide for adolescent mothers",
+      "text": "Interview guide for adolescent mothers",
+      "formatting": {
+        "bold": true,
+        "italic": true,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Barriers",
+      "text": "Barriers",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does pregnancy and motherhood experience seem from the point of view of a young mother?",
+      "text": "How does pregnancy and motherhood experience seem from the point of view of a young mother?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What do you come to understand your personal and family relationships as you have become a mother now?",
+      "text": "What do you come to understand your personal and family relationships as you have become a mother now?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does the adolescent come to reconcile \u2013 given that many despite being thrown into unplanned pregnancy don\u2019t say it is unwanted \u2013 how is that experience like given you have a little baby to care for?",
+      "text": "How does the adolescent come to reconcile \u2013 given that many despite being thrown into unplanned pregnancy don\u2019t say it is unwanted \u2013 how is that experience like given you have a little baby to care for?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What kind of support do you receive from your partner?",
+      "text": "What kind of support do you receive from your partner?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does problem solving happen around the following barriers?",
+      "text": "How does problem solving happen around the following barriers?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Social",
+      "text": "Social",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Emotional & relationship",
+      "text": "Emotional & relationship",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Practical & economic",
+      "text": "Practical & economic",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What are your worries around care or health or wellbeing of the baby?",
+      "text": "What are your worries around care or health or wellbeing of the baby?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What are the things that have become tougher/difficult now that you have given birth?",
+      "text": "What are the things that have become tougher/difficult now that you have given birth?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How was life a year back and now?",
+      "text": "How was life a year back and now?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What things would you wish to change?",
+      "text": "What things would you wish to change?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "9."
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who are the people who are helping you now?",
+      "text": "Who are the people who are helping you now?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "10."
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who are the people that helped you during your pregnancy?",
+      "text": "Who are the people that helped you during your pregnancy?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "11."
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What do you do for entertainment?",
+      "text": "What do you do for entertainment?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "12."
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "Solutions-",
+      "text": "Solutions-",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How do you keep yourself from getting another unplanned pregnancy and falling into problems further? Who helps you on that and who all can help better?",
+      "text": "How do you keep yourself from getting another unplanned pregnancy and falling into problems further? Who helps you on that and who all can help better?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What is the role of emotional and mental health in that pregnancy experience?",
+      "text": "What is the role of emotional and mental health in that pregnancy experience?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "When you become stressed what do you do to come out of it?",
+      "text": "When you become stressed what do you do to come out of it?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What gives you hope during this time?",
+      "text": "What gives you hope during this time?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What sort of friends can help or have helped you so far?",
+      "text": "What sort of friends can help or have helped you so far?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "$ref": "#/groups/10"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What kinds of things do you think will become easier as time goes by and now that you have a new baby?",
+      "text": "What kinds of things do you think will become easier as time goes by and now that you have a new baby?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "UCD/HCD based",
+      "text": "UCD/HCD based",
+      "formatting": {
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      }
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How do others view you?",
+      "text": "How do others view you?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What sort of relationship do you have with your baby?",
+      "text": "What sort of relationship do you have with your baby?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How does it change or evolve with time?",
+      "text": "How does it change or evolve with time?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "3."
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What is your mother/father/sibling/school/teacher/friend thinking of you as a mother/ young mother?",
+      "text": "What is your mother/father/sibling/school/teacher/friend thinking of you as a mother/ young mother?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "4."
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Where and how do they understand or misunderstand you?",
+      "text": "Where and how do they understand or misunderstand you?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "5."
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How would you like to be seen?",
+      "text": "How would you like to be seen?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "6."
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What do you do on a daily basis?",
+      "text": "What do you do on a daily basis?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "7."
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "How would you wish things to be?",
+      "text": "How would you wish things to be?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "8."
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who helps you feel better?",
+      "text": "Who helps you feel better?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "9."
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "Who helps you communicate with your parents/caregivers/friends?",
+      "text": "Who helps you communicate with your parents/caregivers/friends?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "10."
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "$ref": "#/groups/11"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [],
+      "orig": "What did you like doing before motherhood and what is it that you stopped doing?",
+      "text": "What did you like doing before motherhood and what is it that you stopped doing?",
+      "formatting": {
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "strikethrough": false,
+        "script": "baseline"
+      },
+      "enumerated": true,
+      "marker": "11."
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [],
+      "orig": "",
+      "text": ""
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {}
+}

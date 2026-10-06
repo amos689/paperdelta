@@ -1,7 +1,7 @@
 // Record real local reports, with a separate presentation frame and paced captions.
 // Requires Node Playwright and an installed PaperDelta Python environment.
 // node tools/record_readme_demo.cjs build/readme-demo
-// Then: python tools/encode_readme_demo.py build/readme-demo docs/assets/v0.3
+// Then: python tools/encode_readme_demo.py build/readme-demo docs/assets/v1.3
 const { chromium } = require(process.env.PAPERDELTA_PLAYWRIGHT || 'playwright');
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs/promises');
@@ -12,30 +12,36 @@ const assert = require('node:assert/strict');
 const copy = {
   en: {
     label: 'FROM EXPERIMENT TO PAPER', source: 'Actual local report · guided demo',
-    steps: ['Before', 'Data changes', 'Trace evidence', 'Review the claim', 'Try it'],
+    steps: ['Before', 'Data changes', 'Evidence', 'Table', 'Claim', 'Stale PDF', 'Try it'],
     titles: ['Your paper matches the experiment.', 'The data changes. Your paper hasn’t.',
-      'Follow the number back to its evidence.', 'The conclusion needs review, too.',
+      'Follow the number back to its evidence.', 'The table repeats the old result.',
+      'The conclusion needs review, too.', 'Updated source. Outdated PDF.',
       'One result changes. See what needs review.'],
     subtitles: ['7 declared checks agree with the supplied evidence.',
       '4 numeric references, 1 comparison and 1 figure now need attention.',
       'The abstract says 84.1%. Three selected CSV rows now average 80.9%.',
+      'The same accepted metric also identifies the table entry that needs attention.',
       '80.9% no longer beats the 81.0% baseline. Review this before numeric edits.',
+      'A second bundled example compares a corrected source with its stale PDF export.',
       'Run the bundled example and explore the report in your browser.'],
-    metric: 'ACCURACY', unchanged: 'LaTeX unchanged', baseline: 'Before the change',
+    metric: 'ACCURACY', unchanged: 'LaTeX unchanged', baseline: 'Before the change', stale: 'PDF unchanged',
     footer: 'Local · offline · no model key', file: 'review/report.html',
   },
   'zh-CN': {
     label: '从实验结果到论文表述', source: '实际本地报告 · 引导演示',
-    steps: ['原始结果', '数据变化', '追溯证据', '复核结论', '亲自试用'],
+    steps: ['原始结果', '数据变化', '证据', '表格', '结论', '旧 PDF', '试用'],
     titles: ['论文与实验结果，原本一致。', '数据变了，论文还停在上一轮。',
-      '从旧数字，追溯到真实来源。', '需要复核的，还有比较结论。',
+      '从旧数字，追溯到真实来源。', '表格中，也保留着旧结果。',
+      '需要复核的，还有比较结论。', '源码已更新，PDF 还停在上一轮。',
       '一个结果变化，看清哪些位置受影响。'],
     subtitles: ['7 项已声明检查与给定证据一致。',
       '4 处数值、1 项比较结论和 1 幅图表需要复核。',
       '摘要仍写着 84.1%，选中的三条 CSV 记录均值已是 80.9%。',
+      '同一个已确认指标，也指向表格中需要复核的原始单元格。',
       '80.9% 不再优于 81.0% 的基线，关联数值修改需先等待结论复核。',
+      '第二个内置示例，将已修正的源码与过时的 PDF 导出稿对照。',
       '运行自带示例，在浏览器中展开证据、查看完整报告。'],
-    metric: '准确率', unchanged: 'LaTeX 未改动', baseline: '数据变化前',
+    metric: '准确率', unchanged: 'LaTeX 未改动', baseline: '数据变化前', stale: 'PDF 未更新',
     footer: '本地运行 · 离线报告 · 无需模型密钥', file: 'review/report.html',
   },
 };
@@ -83,6 +89,11 @@ padding:14px 20px;border-radius:8px;width:100%;margin:0}.command span{color:#97d
     '-C', root, 'demo', '--out', path.relative(root, project), '--format', 'json'], { cwd: root });
   const read = name => fs.readFile(path.join(project, name, 'report.json'), 'utf8').then(JSON.parse);
   const before = await read('before'), after = await read('review');
+  const pdfProject = path.join(output, 'pdf-project');
+  execFileSync(process.env.PAPERDELTA_PYTHON || 'python', ['-X', 'utf8', '-m', 'paperdelta',
+    '-C', root, 'demo', '--document', 'pdf', '--out', path.relative(root, pdfProject), '--format', 'json'], {cwd:root,windowsHide:true});
+  const pdfReport = JSON.parse(await fs.readFile(path.join(pdfProject, 'review/report.json'), 'utf8'));
+  assert(pdfReport.exports.some(item=>item.status==='stale'));
   assert.equal(before.coverage.pass, 7);
   assert.equal(after.coverage.mismatch, 6);
   assert.equal(before.metrics.ours.value, '0.841');
@@ -130,15 +141,15 @@ padding:14px 20px;border-radius:8px;width:100%;margin:0}.command span{color:#97d
           document.querySelector('#title').textContent = words.titles[step];
           document.querySelector('#subtitle').textContent = words.subtitles[step];
           document.querySelector('#value').textContent = step === 0 ? '84.1%' : '84.1% → 80.9%';
-          document.querySelector('#file-state').textContent = step === 0 ? words.baseline : words.unchanged;
+          document.querySelector('#file-state').textContent = step === 0 ? words.baseline : step >= 5 ? words.stale : words.unchanged;
           document.querySelector('.metric').classList.toggle('changed', step > 0);
           document.querySelector('.address').textContent = step === 0 ? 'before/report.html' : words.file;
           document.querySelectorAll('.step').forEach((node, index) => node.classList.toggle('active', index === step));
-          document.querySelector('.progress i').style.width = `${(step + 1) * 20}%`;
+          document.querySelector('.progress i').style.width = `${(step + 1) * 100 / words.steps.length}%`;
           const picture = document.querySelector('#report'); picture.src = image; await picture.decode();
           if (final) {
             const code = document.createElement('code'); code.className = 'command';
-            code.textContent = '$ paperdelta ' + (language === 'zh-CN' ? '--lang zh-CN ' : '')
+            code.textContent = '$ uvx paperdelta ' + (language === 'zh-CN' ? '--lang zh-CN ' : '')
               + 'demo --out paperdelta-demo --open';
             document.querySelector('.bottom').replaceChildren(code);
           }
@@ -177,19 +188,28 @@ padding:14px 20px;border-radius:8px;width:100%;margin:0}.command span{color:#97d
         await report.evaluate(y => scrollTo(0, y), start + (end - start) * ease);
         await capture(2, frame === 10 ? 3600 : 70);
       }
+      await report.selectOption('#file', 'paper/results.tex');
+      await report.selectOption('#rule', 'VALUE_MISMATCH');
+      const tableResult = report.locator('#findings article:visible').filter({hasText:'84.1'});
+      assert.equal(await tableResult.count(), 1);
+      await scrollTo(tableResult);
+      await capture(3, 3000);
       await report.selectOption('#file', '');
       await report.selectOption('#rule', 'CLAIM_FALSE');
       const claim = report.locator('#findings article:visible');
       assert.equal(await claim.count(), 1);
       assert((await claim.textContent()).includes('81.0') || (await claim.textContent()).includes('0.810'));
       await scrollTo(claim);
-      await capture(3, 4000);
-      await report.selectOption('#rule', '');
-      await scrollTo(report.locator('#review-actions'));
-      await capture(4, 4200, true);
+      await capture(4, 3800);
+      await report.goto(pathToFileURL(path.join(pdfProject, 'review/report.html')).href);
+      await report.selectOption('#language', language);
+      await scrollTo(report.locator('#exports'));
+      assert((await report.locator('#exports').textContent()).includes('source.tex'));
+      await capture(5, 4200);
+      await capture(6, 4200, true);
       await fs.writeFile(path.join(directory, 'frames.json'), JSON.stringify({ language, size: [960, 768], frames }, null, 2) + '\n');
       records.push({ language, frames: frames.length, duration_ms: frames.reduce((total, item) => total + item.duration, 0),
-        numeric_source_rows: 3, findings: 6 });
+        numeric_source_rows: 3, findings: 6, stale_pdf_example:true });
       await context.close();
     }
     assert.deepEqual(errors, []);
