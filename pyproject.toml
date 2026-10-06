@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "paperdelta"
-version = "1.4.0"
+version = "1.5.0"
 description = "Review how experiment changes affect an existing research paper."
 readme = "docs/package-description.rst"
 requires-python = ">=3.11"

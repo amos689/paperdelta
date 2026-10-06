@@ -1,0 +1,60 @@
+name: PaperDelta
+description: Review experiment changes, manuscript findings and removed checking coverage.
+author: amos689
+branding:
+  icon: file-text
+  color: green
+
+inputs:
+  project:
+    description: Paper Git checkout inside the workflow workspace.
+    default: .
+  base-commit:
+    description: Full target commit SHA, fetched by the caller.
+    required: true
+  snapshot:
+    description: Saved comparison snapshot read from the target commit.
+    default: submitted-v1
+  config:
+    description: Configuration path relative to the paper checkout.
+    default: paperdelta.yaml
+  report:
+    description: Output directory relative to the paper checkout.
+    default: build/paperdelta
+  lang:
+    description: Summary and diagnostic language (en or zh-CN).
+    default: en
+
+outputs:
+  exit-code:
+    description: 0 checked, 1 failed accepted check, 2 incomplete or invalid inputs.
+    value: ${{ steps.check.outputs.exit-code }}
+  report-path:
+    description: Workspace-relative directory containing reports, SARIF and CI context.
+    value: ${{ steps.check.outputs.report-path }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+      with:
+        python-version: '3.12'
+    - name: Install the selected trusted checker in an isolated environment
+      shell: bash
+      env:
+        ACTION_PATH: ${{ github.action_path }}
+        PYTHONUTF8: '1'
+      run: python -I "$ACTION_PATH/tools/action_check.py" --install
+    - name: Review findings and declaration changes
+      id: check
+      shell: bash
+      env:
+        ACTION_PATH: ${{ github.action_path }}
+        PYTHONUTF8: '1'
+        PAPERDELTA_ACTION_PROJECT: ${{ inputs.project }}
+        PAPERDELTA_ACTION_BASE: ${{ inputs.base-commit }}
+        PAPERDELTA_ACTION_SNAPSHOT: ${{ inputs.snapshot }}
+        PAPERDELTA_ACTION_CONFIG: ${{ inputs.config }}
+        PAPERDELTA_ACTION_REPORT: ${{ inputs.report }}
+        PAPERDELTA_ACTION_LANG: ${{ inputs.lang }}
+      run: python -I "$ACTION_PATH/tools/action_check.py"

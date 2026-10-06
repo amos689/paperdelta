@@ -75,6 +75,10 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_static_reports.cjs build/static-reports
+      - name: Test selected bilingual review archives and offline replay
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_review_bundle_browser.cjs build/review-bundle-browser
       - name: Keep all browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -113,6 +117,9 @@ jobs:
             build/reliability-browser/failure.json
             build/static-reports/evidence.json
             build/static-reports/*.png
+            build/review-bundle-browser/evidence.json
+            build/review-bundle-browser/*.png
+            build/review-bundle-browser/failure.json
           if-no-files-found: warn
 
   test:
@@ -148,6 +155,23 @@ jobs:
         run: |
           python -m pip install twine
           python -m twine check --strict build/release-candidate/*.whl build/release-candidate/*.tar.gz
+      - name: Prepare a fresh paper checkout for the composite action
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        id: action-fixture
+        run: python -X utf8 tools/validate_action.py prepare --out build/action-integration
+      - uses: ./
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        id: action-check
+        continue-on-error: true
+        with:
+          project: ${{ steps.action-fixture.outputs.project }}
+          base-commit: ${{ steps.action-fixture.outputs.base }}
+          report: build/action-en
+      - name: Verify the actual action result, preserved inputs and code isolation
+        if: always() && matrix.os == 'ubuntu-latest' && matrix.python == '3.12' && steps.action-fixture.outcome == 'success'
+        env:
+          CHECK_EXIT: ${{ steps.action-check.outputs.exit-code }}
+        run: python -X utf8 tools/validate_action.py verify --out build/action-integration --exit-code "$CHECK_EXIT"
       - name: Keep test evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -157,6 +181,9 @@ jobs:
             build/test-results.xml
             build/uvx-validation/evidence.json
             build/uvx-validation/*.log
+            build/action-integration/fixture.json
+            build/action-integration/verification-*.json
+            build/action-integration/paper/build/action-en/*
           if-no-files-found: warn
 
   macos:

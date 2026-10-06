@@ -1,6 +1,7 @@
 include LICENSE *.md
 include docs/package-description.rst
 include .gitattributes .gitignore
+include action.yml
 recursive-include .github *.yml *.md
 recursive-include docs *.md *.json *.svg *.png *.gif *.webm *.log *.xml
 include docs/evidence/macos-native-20261003/return.zip

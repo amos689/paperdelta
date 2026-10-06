@@ -438,6 +438,65 @@
     link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 10000);
   }
   let diagnosticPreview = null;
+  let reviewBundlePlan = null;
+  const bundleSelection = () => ({
+    reports: [...document.querySelectorAll('[data-bundle-report]:checked')].map((el) => el.dataset.bundleReport),
+    inputs: [...document.querySelectorAll('[data-bundle-input]:checked')].map((el) => el.dataset.bundleInput),
+    baseline: $("bundle-baseline").value.trim() || null,
+  });
+  function invalidateBundle() {
+    reviewBundlePlan = null; $("bundle-attest").checked = false; $("bundle-export").disabled = true; $("bundle-preview-content").hidden = true;
+  }
+  function renderBundlePlan() {
+    const plan = reviewBundlePlan; if (!plan) return;
+    const scope = plan.scope, summary = $("bundle-scope"); summary.replaceChildren();
+    summary.append(node("h3", t("bundle_scope_title")), node("p", t("bundle_scope_counts", {
+      occurrences: scope.bindings.occurrences.length, claims: scope.bindings.claims.length, figures: scope.bindings.figures.length,
+    })), node("p", t("bundle_scope_results", scope.coverage)),
+    node("p", t(scope.require_complete_coverage ? "bundle_scope_required" : "bundle_scope_declared")),
+    node("p", t("bundle_scope_exclusions", { count: scope.coverage_exclusions.length })));
+    if (scope.review_scope) summary.append(node("p", t("bundle_scope_limited")));
+    const details = node("details"); details.append(node("summary", t("bundle_scope_details")), node("pre", JSON.stringify(scope, null, 2))); summary.append(details);
+    $("bundle-replay-status").textContent = plan.replayable ? t("bundle_replay_ready") : t("bundle_replay_missing", { count: plan.missing_inputs.length });
+    $("bundle-files").replaceChildren();
+    if (plan.missing_inputs.length) {
+      const missing = node("details"); missing.append(node("summary", t("bundle_missing")));
+      for (const path of plan.missing_inputs) missing.append(node("p", path, "muted"));
+      $("bundle-files").append(missing);
+    }
+    for (const [path, entry] of Object.entries(plan.files)) {
+      const box = node("details"); box.append(node("summary", `${path} · ${entry.bytes} B`), node("code", entry.sha256));
+      if (entry.preview !== null) box.append(node("pre", entry.preview));
+      else box.append(node("p", t("bundle_binary"), "muted"));
+      if (entry.truncated) box.append(node("p", t("bundle_truncated"), "muted"));
+      $("bundle-files").append(box);
+    }
+    $("bundle-preview-content").hidden = false;
+  }
+  $("bundle-open").onclick = () => task(async () => {
+    const selected = new Set(bundleSelection().inputs), result = await api("bundle-options", { baseline: bundleSelection().baseline });
+    invalidateBundle(); $("bundle-inputs").replaceChildren();
+    for (const item of result.inputs) {
+      const label = node("label", "", "check"), input = node("input"); input.type = "checkbox"; input.dataset.bundleInput = item.path; input.checked = selected.has(item.path);
+      label.append(input, node("span", `${item.path} · ${item.bytes} B`)); $("bundle-inputs").append(label);
+      input.onchange = invalidateBundle;
+    }
+    $("bundle-work").hidden = false;
+  });
+  $("bundle-baseline").oninput = () => { invalidateBundle(); $("bundle-work").hidden = true; };
+  document.querySelectorAll('[data-bundle-report]').forEach((el) => { el.onchange = invalidateBundle; });
+  for (const [id, checked] of [["bundle-all", true], ["bundle-clear", false]]) $(id).onclick = () => {
+    document.querySelectorAll('[data-bundle-input]').forEach((el) => { el.checked = checked; }); invalidateBundle();
+  };
+  $("bundle-preview").onclick = () => task(async () => {
+    invalidateBundle(); reviewBundlePlan = (await api("bundle-preview", bundleSelection())).plan; renderBundlePlan();
+  });
+  $("bundle-attest").onchange = () => { $("bundle-export").disabled = !reviewBundlePlan || !$("bundle-attest").checked; };
+  $("bundle-export").onclick = () => task(async () => {
+    if (!reviewBundlePlan || !$("bundle-attest").checked) return;
+    const result = await api("bundle-export", { preview_id: reviewBundlePlan.preview_id });
+    download(Uint8Array.from(atob(result.base64), (c) => c.charCodeAt(0)), "paperdelta-review.zip", "application/zip");
+  });
   $("diagnostic-preview").onclick = () => task(async () => {
     diagnosticPreview = await api("diagnostic-preview");
     $("diagnostic-content").textContent = JSON.stringify(diagnosticPreview.files, null, 2);
@@ -527,6 +586,10 @@
     if (sourceAdvice) await inspectSourceAdvice();
     await reviewWorkbench.localize();
     await batchWorkbench.localize();
+    if (reviewBundlePlan) {
+      $("bundle-attest").checked = false; $("bundle-export").disabled = true;
+      reviewBundlePlan = (await api("bundle-preview", bundleSelection())).plan; renderBundlePlan();
+    }
   });
   window.addEventListener("beforeunload", (event) => {
     if (state?.additions && Object.values(state.additions).some((group) => Object.keys(group).length)) { event.preventDefault(); event.returnValue = ""; }

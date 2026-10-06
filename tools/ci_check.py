@@ -13,7 +13,7 @@ from pathlib import Path
 
 import yaml
 
-from paperdelta.analysis import check_project
+from paperdelta.analysis import check_stored_project
 from paperdelta.arguments import ArgumentParser, json_errors
 from paperdelta.config import ConfigLoader
 from paperdelta.errors import PaperDeltaError
@@ -25,7 +25,9 @@ from paperdelta.i18n import (
     tr,
     translated,
 )
+from paperdelta.locations import location_label
 from paperdelta.models import Config
+from paperdelta.pr_review import review_delta
 from paperdelta.preferences import read_preferences
 from paperdelta.reports import write_reports
 from paperdelta.snapshots import snapshot_path
@@ -34,6 +36,18 @@ from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha2
 METADATA_DIRECTORIES = (".paperdelta/baselines", ".paperdelta/reviews")
 NAMED_SECTIONS = ("sources", "metrics", "occurrences", "claims", "figures", "coverage_exclusions")
 LIMIT = 32 * 1024 * 1024
+
+
+class CIProject(Project):
+    """Paper inputs and outputs cannot access checkout administration files."""
+
+    def path(self, relative):
+        resolved = super().path(relative)
+        declared = Path(relative.replace("\\", "/")).parts
+        actual = resolved.relative_to(self.root).parts
+        if any(part.casefold() == ".git" for part in (*declared, *actual)):
+            raise PaperDeltaError("CI_PRIVATE_PATH", msg("ci.error.private_path"))
+        return resolved
 
 
 def git_read(root, *arguments):
@@ -207,6 +221,42 @@ def ci_summary(result):
         "| --- | --- | --- | --- | --- |",
     ]
     changes = context["policy_changes"]
+    delta = context.get("finding_changes")
+    if delta:
+        transition_lines = [
+            "",
+            tr("ci.delta.title"),
+            "",
+            tr("ci.delta.scope"),
+            "",
+            tr("ci.delta.table"),
+            "| --- | --- | --- | --- |",
+        ]
+        for category in delta["counts"]:
+            items = delta[category]
+            for item in items[:50]:
+                transition_lines.append(
+                    "| "
+                    + " | ".join(
+                        _cell(value)
+                        for value in (
+                            tr("ci.delta." + category),
+                            item["subject"],
+                            tr("status." + item["before"]) if item["before"] else "—",
+                            tr("status." + item["after"]) if item["after"] else "—",
+                        )
+                    )
+                    + " |"
+                )
+        if not any(delta["counts"].values()):
+            transition_lines.append(tr("ci.delta.none"))
+        if delta["comparison"] == "unavailable":
+            transition_lines.extend(["", tr("ci.delta.unavailable")])
+        elif not delta["same_baseline_contract"]:
+            transition_lines.extend(["", tr("ci.delta.contract")])
+        transition_lines.extend(["", tr("ci.delta.full"), ""])
+        # Put the transition review before the existing declaration-change table.
+        lines[8:8] = transition_lines
     for item in changes[:50]:
         cells = [
             tr("ci.status." + item["kind"]),
@@ -241,7 +291,7 @@ def ci_summary(result):
     lines.extend(["", tr("ci.findings_title"), ""])
     for item in report["diagnostics"][:50]:
         location = item.get("location", {})
-        where = f"{location['file']}:{location['line']}" if location else item["subject"]
+        where = location_label(location) if location else item["subject"]
         lines.append(
             tr(
                 "ci.finding",
@@ -264,7 +314,7 @@ def ci_summary(result):
 
 
 def run_ci(root, base_commit, name, output, config_path="paperdelta.yaml"):
-    project = Project(root)
+    project = CIProject(root)
     project.path(config_path)
     config_path = Path(config_path.replace("\\", "/")).as_posix()
     if ".." in Path(config_path).parts:
@@ -281,7 +331,7 @@ def run_ci(root, base_commit, name, output, config_path="paperdelta.yaml"):
     current = _current_metadata(project, config_path)
     baseline = None
     context = {
-        "ci_context_schema_version": 1,
+        "ci_context_schema_version": 2,
         "base_commit": base_commit,
         "snapshot_path": path,
         "baseline_status": "unavailable",
@@ -292,13 +342,30 @@ def run_ci(root, base_commit, name, output, config_path="paperdelta.yaml"):
         raw = target[path]
         baseline = parse_json(raw.decode("utf-8"))
         context.update({"baseline_status": "read_from_target_commit", "snapshot_hash": sha256(raw)})
-    report = check_project(project.root, config_path, baseline)
+    report = check_stored_project(project, config_path, baseline)
+    context["finding_changes"] = review_delta(
+        report,
+        baseline,
+        context["configuration"],
+        same_baseline_contract=bool(
+            baseline
+            and config_path in target
+            and baseline["report"]["input_hashes"].get(config_path) == sha256(target[config_path])
+        ),
+    )
     if _current_metadata(project, config_path) != current:
         raise PaperDeltaError("CI_INPUT_CHANGED", msg("ci.error.changed"))
     protected = {project.path(p) for p in report["input_hashes"]} | {
         project.path(p) for p in target.keys() | current.keys()
     }
-    for filename in ("report.json", "report.md", "report.html", "ci-context.json", "ci-summary.md"):
+    for filename in (
+        "report.json",
+        "report.md",
+        "report.html",
+        "report.sarif",
+        "ci-context.json",
+        "ci-summary.md",
+    ):
         if project.path((Path(output) / filename).as_posix()) in protected:
             raise PaperDeltaError("CI_OUTPUT", msg("ci.error.output"))
     result = {"context": context, "report": report}

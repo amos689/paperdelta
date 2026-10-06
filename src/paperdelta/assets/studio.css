@@ -21,6 +21,9 @@
 .statistics-summary dd { margin-inline-start: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
 .statistics-summary dt { margin-top: .6rem; font-weight: 600; }
 #diagnostic-content{max-height:420px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
+#bundle-panel pre{max-height:320px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
+#bundle-panel code,#bundle-panel .check span{overflow-wrap:anywhere;min-width:0}
+#bundle-files details{margin-block:12px}#bundle-inputs{max-height:300px;overflow:auto;margin-block:14px}
 @media(max-width:540px){header{flex-wrap:wrap}.header-right{width:100%;gap:12px;justify-content:space-between}.header-right .language>span{display:none}.brand{flex-shrink:0}}
 .joint-choice{border:1px solid var(--line);border-radius:12px;padding:18px;margin:18px 0;overflow-wrap:anywhere}
 .joint-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}

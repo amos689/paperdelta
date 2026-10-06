@@ -105,7 +105,13 @@ def empty_report(config_path: str) -> dict:
 def check_project(
     root: Path | str, config_path: str = "paperdelta.yaml", baseline: dict | None = None
 ) -> dict:
-    project = Project(root)
+    return check_stored_project(Project(root), config_path, baseline)
+
+
+def check_stored_project(
+    project: Project, config_path: str = "paperdelta.yaml", baseline: dict | None = None
+) -> dict:
+    """Run the normal pipeline with the caller's storage boundary intact."""
     try:
         config, config_hash = load_config(project, config_path)
     except PaperDeltaError as exc:

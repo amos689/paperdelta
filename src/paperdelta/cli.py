@@ -54,6 +54,7 @@ def parser() -> argparse.ArgumentParser:
     from paperdelta.demo import register_commands as register_demo
     from paperdelta.evidence_cli import register_commands as register_evidence
     from paperdelta.manuscripts import register_commands as register_manuscripts
+    from paperdelta.review_bundle_cli import register_commands as register_bundle
     from paperdelta.studio_server import register_commands as register_studio
     from paperdelta.watch import register_commands as register_watch
 
@@ -64,6 +65,7 @@ def parser() -> argparse.ArgumentParser:
     register_manuscripts(commands)
     register_studio(commands)
     register_evidence(commands)
+    register_bundle(commands)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
     diagnostics = commands.add_parser("diagnostics", help=tr("diagnostics.help"))
@@ -262,6 +264,10 @@ def _main(argv: list[str]) -> int:
             return run_command(project, arguments)
         if arguments.command == "evidence":
             from paperdelta.evidence_cli import run_command
+
+            return run_command(project, arguments)
+        if arguments.command == "bundle":
+            from paperdelta.review_bundle_cli import run_command
 
             return run_command(project, arguments)
         if arguments.command == "scope":

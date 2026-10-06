@@ -29,6 +29,16 @@ PAGE = """<!doctype html>
 <button type="submit" data-i18n="initialize"></button></form></section>
 <div id="workspace" hidden>
 <nav class="workspace-tabs" aria-label="Studio"><button id="open-review" data-mode="review" data-i18n="ongoing_review"></button><button id="open-binding" data-mode="binding" data-i18n="add_bindings"></button></nav>
+<details id="bundle-panel" class="panel"><summary data-i18n="bundle_title"></summary>
+<p data-i18n="bundle_notice"></p><label><span data-i18n="bundle_baseline"></span><input id="bundle-baseline" maxlength="80" placeholder="submitted-v1"></label>
+<button id="bundle-open" class="secondary" data-i18n="bundle_choose"></button>
+<div id="bundle-work" hidden><fieldset><legend data-i18n="bundle_reports"></legend>
+<label class="check"><input type="checkbox" data-bundle-report="html" checked>HTML</label><label class="check"><input type="checkbox" data-bundle-report="json" checked>JSON</label>
+<label class="check"><input type="checkbox" data-bundle-report="md">Markdown</label><label class="check"><input type="checkbox" data-bundle-report="sarif">SARIF</label></fieldset>
+<h3 data-i18n="bundle_inputs"></h3><div class="tools"><button id="bundle-all" class="secondary" data-i18n="bundle_all"></button><button id="bundle-clear" class="secondary" data-i18n="bundle_clear"></button></div>
+<div id="bundle-inputs"></div><button id="bundle-preview" data-i18n="bundle_preview"></button>
+<div id="bundle-preview-content" hidden><p id="bundle-replay-status"></p><div id="bundle-scope"></div><div id="bundle-files"></div>
+<label class="check attest"><input id="bundle-attest" type="checkbox"><span data-i18n="bundle_attest"></span></label><button id="bundle-export" disabled data-i18n="bundle_export"></button></div></div></details>
 <section id="recovery-banner" class="notice warning" hidden><strong data-i18n="recovery_title"></strong><p id="recovery-description"></p>
 <div class="tools"><button id="restore-local" data-i18n="restore_local"></button><button id="open-rebuild" class="secondary" data-i18n="rebuild_draft"></button><button id="export-recovery" class="secondary" data-i18n="export_recovery"></button><button id="discard-recovery" class="secondary" data-i18n="discard_recovery"></button></div>
 <div id="rebuild-work" hidden><p data-i18n="rebuild_hint"></p><div id="rebuild-items"></div><button id="preview-rebuild" data-i18n="preview_rebuild"></button></div>

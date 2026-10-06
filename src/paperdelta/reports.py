@@ -7,6 +7,7 @@ from paperdelta.html_report import html_report as html_report
 from paperdelta.i18n import msg, tr, translated
 from paperdelta.i18n import translated as translate_location
 from paperdelta.locations import location_label
+from paperdelta.sarif import sarif_report
 from paperdelta.storage import Project, json_text
 
 
@@ -121,6 +122,7 @@ def write_reports(project: Project, directory: str, report: dict) -> None:
         "report.json": json_text(report),
         "report.md": markdown_report(report),
         "report.html": html_report(report, previews=pdf_previews(project, report)),
+        "report.sarif": json_text(sarif_report(report, f"{directory}/report.html")),
     }
     protected = {project.path(name) for name in report["input_hashes"]}
     protected.add(project.path(report["config_path"]))

@@ -69,6 +69,7 @@ from paperdelta.repairs import (
     propose_repairs,
     scan_repairs,
 )
+from paperdelta.review_bundle import BundleSelection
 from paperdelta.sources import EvidenceStore
 from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
 from paperdelta.studio_batch import (
@@ -277,6 +278,14 @@ class RecoveryIdentity(StrictModel):
     record_id: str
 
 
+class BundleOptions(StrictModel):
+    baseline: str | None = Field(default=None, max_length=80)
+
+
+class BundleChoice(BundleSelection):
+    baseline: str | None = Field(default=None, max_length=80)
+
+
 class RecoverySelection(RecoveryIdentity):
     selected: list[str] = Field(min_length=1, max_length=500)
 
@@ -298,6 +307,9 @@ PARAMETERS = {
     "report": Empty,
     "diagnostic-preview": Empty,
     "diagnostic-export": DiagnosticExport,
+    "bundle-options": BundleOptions,
+    "bundle-preview": BundleChoice,
+    "bundle-export": DiagnosticExport,
     "draft-export": Empty,
     "draft-import": ImportDraft,
     "proposal-import": ImportProposal,
@@ -402,6 +414,7 @@ class StudioSession:
         self.rebuild = None
         self.batch = None
         self.experiment = None
+        self.review_bundle_preview = None
         self.recovery_archive = None
         self.recovery = DraftRecovery(project, self.config_path)
         self.reviewer = StudioReview(project, self.config_path)
@@ -429,6 +442,7 @@ class StudioSession:
         self.rebuild = None
         self.batch = None
         self.experiment = None
+        self.review_bundle_preview = None
         self._cached_state = self._all_candidates = None
 
     def _require_draft(self):
@@ -582,6 +596,46 @@ class StudioSession:
         return browser_value(translated(result, request.language))
 
     def _execute(self, action, parameters):
+        if action in {"bundle-options", "bundle-preview", "bundle-export"}:
+            import base64
+
+            from paperdelta.review_bundle import bundle_bytes, preview_bundle
+
+            if action == "bundle-options":
+                plan = preview_bundle(
+                    self.project,
+                    {"reports": ["json"], "inputs": []},
+                    self.config_path,
+                    parameters["baseline"],
+                )
+                self.review_bundle_preview = None
+                return {
+                    "inputs": [
+                        {
+                            "path": name,
+                            "sha256": digest,
+                            "bytes": self.project.path(name).stat().st_size,
+                        }
+                        for name, digest in sorted(plan["required_inputs"].items())
+                    ],
+                    "scope": plan["scope"],
+                    "notice": plan["notice"],
+                }
+            if action == "bundle-preview":
+                self.review_bundle_preview = preview_bundle(
+                    self.project,
+                    {key: parameters[key] for key in ("reports", "inputs")},
+                    self.config_path,
+                    parameters["baseline"],
+                )
+                return {"plan": self.review_bundle_preview}
+            if (
+                self.review_bundle_preview is None
+                or self.review_bundle_preview["preview_id"] != parameters["preview_id"]
+            ):
+                raise PaperDeltaError("REVIEW_BUNDLE_CHANGED", msg("bundle.changed"))
+            raw = bundle_bytes(self.project, self.review_bundle_preview)
+            return {"base64": base64.b64encode(raw).decode("ascii")}
         if action == "diagnostic-preview":
             from paperdelta.diagnostic_bundle import preview_bundle
 
