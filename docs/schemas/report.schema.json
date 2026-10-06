@@ -19,6 +19,35 @@
       "title": "BaselineReference",
       "type": "object"
     },
+    "CellChange": {
+      "additionalProperties": false,
+      "properties": {
+        "code_changed": {
+          "title": "Code Changed",
+          "type": "boolean"
+        },
+        "execution_count_changed": {
+          "title": "Execution Count Changed",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "outputs_changed": {
+          "title": "Outputs Changed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "code_changed",
+        "outputs_changed",
+        "execution_count_changed"
+      ],
+      "title": "CellChange",
+      "type": "object"
+    },
     "Change": {
       "additionalProperties": false,
       "properties": {
@@ -1169,6 +1198,106 @@
       "title": "FigureState",
       "type": "object"
     },
+    "FragmentState": {
+      "additionalProperties": false,
+      "properties": {
+        "changed_paths": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Changed Paths",
+          "type": "array"
+        },
+        "contract_changed": {
+          "default": false,
+          "title": "Contract Changed",
+          "type": "boolean"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "format": {
+          "anyOf": [
+            {
+              "enum": [
+                "latex",
+                "markdown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Format"
+        },
+        "identities": {
+          "additionalProperties": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "title": "Identities",
+          "type": "object"
+        },
+        "metrics": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "occurrences": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "title": "Occurrences",
+          "type": "array"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        },
+        "record": {
+          "title": "Record",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "mismatch",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "record"
+      ],
+      "title": "FragmentState",
+      "type": "object"
+    },
     "IdentityField": {
       "additionalProperties": false,
       "properties": {
@@ -1834,6 +1963,22 @@
             }
           ],
           "default": null
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "enum": [
+                "prose",
+                "table"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Usage"
         }
       },
       "required": [
@@ -2021,6 +2166,156 @@
       "title": "PdfLocator",
       "type": "object"
     },
+    "ProducerState": {
+      "additionalProperties": false,
+      "properties": {
+        "cells": {
+          "items": {
+            "$ref": "#/$defs/CellChange"
+          },
+          "title": "Cells",
+          "type": "array"
+        },
+        "changed_paths": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Changed Paths",
+          "type": "array"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "identities": {
+          "additionalProperties": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "title": "Identities",
+          "type": "object"
+        },
+        "inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Inputs",
+          "type": "array"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "notebook",
+                "quarto"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kind"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "enum": [
+                "declared",
+                "observed_command"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "notice": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notice"
+        },
+        "observed_command": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed Command"
+        },
+        "outputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "record": {
+          "title": "Record",
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "mismatch",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "unverified_cells": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unverified Cells",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "record"
+      ],
+      "title": "ProducerState",
+      "type": "object"
+    },
     "ReviewAction": {
       "additionalProperties": false,
       "properties": {
@@ -2035,6 +2330,8 @@
           "enum": [
             "wait_for_check",
             "resolve_evidence",
+            "review_producers",
+            "update_fragments",
             "repair_bindings",
             "review_exclusions",
             "review_claims",
@@ -2700,6 +2997,15 @@
       "title": "Figures",
       "type": "object"
     },
+    "fragments": {
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_.-]{0,99}$": {
+          "$ref": "#/$defs/FragmentState"
+        }
+      },
+      "title": "Fragments",
+      "type": "object"
+    },
     "impact_groups": {
       "items": {
         "$ref": "#/$defs/ImpactGroup"
@@ -2731,6 +3037,15 @@
       "title": "Occurrences",
       "type": "object"
     },
+    "provenance": {
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_.-]{0,99}$": {
+          "$ref": "#/$defs/ProducerState"
+        }
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
     "removed_bindings": {
       "anyOf": [
         {
@@ -2750,7 +3065,7 @@
       "title": "Removed Bindings"
     },
     "report_schema_version": {
-      "maximum": 8,
+      "maximum": 9,
       "minimum": 1,
       "title": "Report Schema Version",
       "type": "integer"

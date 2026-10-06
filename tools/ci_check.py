@@ -34,7 +34,16 @@ from paperdelta.snapshots import snapshot_path
 from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
 
 METADATA_DIRECTORIES = (".paperdelta/baselines", ".paperdelta/reviews")
-NAMED_SECTIONS = ("sources", "metrics", "occurrences", "claims", "figures", "coverage_exclusions")
+NAMED_SECTIONS = (
+    "sources",
+    "metrics",
+    "occurrences",
+    "claims",
+    "figures",
+    "coverage_exclusions",
+    "provenance",
+    "fragments",
+)
 LIMIT = 32 * 1024 * 1024
 
 
@@ -130,7 +139,7 @@ def _configuration_changes(before, after):
     old, new = configurations
     sections = []
     for section in NAMED_SECTIONS:
-        left, right = old[section], new[section]
+        left, right = old.get(section, {}), new.get(section, {})
         added, removed = sorted(right.keys() - left.keys()), sorted(left.keys() - right.keys())
         changed = sorted(
             name

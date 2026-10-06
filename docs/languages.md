@@ -79,7 +79,7 @@ remain subject to their original byte-identity and recovery checks.
 All action commands accept `--format json`, including `propose`, `fix`, `apply`,
 `recover`, `snapshot create`, `review record`, `init`, `bind`, `settings` and `doctor`.
 Their result objects retain existing result fields and add `command_result_version: 1`
-and `command`. An applied patch reports `transaction_id` directly. LaTeX, Word and PDF `check` reports use schema 2, 3 and 4 respectively; the reader accepts 1–8. Batch and
+and `command`. An applied patch reports `transaction_id` directly. New `check` reports use schema 9; the reader accepts versions 1–9. Batch and
 scope commands also support JSON; watch emits one JSON event per line. `schema` always emits JSON and `mcp`
 reserves standard output for its protocol.
 

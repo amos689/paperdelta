@@ -95,7 +95,7 @@ def test_static_source_demos_run_in_both_languages_without_writing_source(
     project = Project(tmp_path / "demo")
     source = "paper." + ("md" if kind == "markdown" else "qmd")
     report = parse_json(project.text("review/report.json")[0])
-    assert report["report_schema_version"] == 8
+    assert report["report_schema_version"] == 9
     assert result["patch"] is None
     assert project.read(source) == files("paperdelta").joinpath("demo_" + kind, source).read_bytes()
     assert f'<html lang="{language}"' in project.text("review/report.html")[0]

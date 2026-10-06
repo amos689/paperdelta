@@ -281,7 +281,7 @@ def test_read_only_binding_check_snapshot_percent_and_bilingual_report(tmp_path)
     proposal = builder.finalize_draft(project, parse_json(json_text(draft)))
     accept_bindings(project, proposal, list(proposal["rationale"]))
     report = check_project(tmp_path)
-    assert report["report_schema_version"] == 3
+    assert report["report_schema_version"] == 9
     assert report["exit_code"] == 1
     assert report["occurrences"]["abstract_accuracy"]["expected"] == "80.9%"
     assert any(a["kind"] == "update_document" for a in report["actions"])

@@ -47,6 +47,7 @@ class StudioServer(ThreadingHTTPServer):
                     ("studio-review.js", "text/javascript; charset=utf-8"),
                     ("studio-batch.js", "text/javascript; charset=utf-8"),
                     ("studio-statistics.js", "text/javascript; charset=utf-8"),
+                    ("studio-workflows.js", "text/javascript; charset=utf-8"),
                     ("studio.css", "text/css; charset=utf-8"),
                 )
             },

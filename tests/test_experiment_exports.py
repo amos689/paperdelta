@@ -120,7 +120,7 @@ def test_portable_local_export_keeps_original_cells_and_no_longer_needs_source(t
     proposal = builder.finalize_draft(project, draft)
     _, _, report = inspect_proposal(project, proposal)
     StoredReport.model_validate(report)
-    assert report["report_schema_version"] == 5
+    assert report["report_schema_version"] == 9
     accept_bindings(project, proposal, ["occurrences:accuracy"])
     assert load_config(project)[0].schema_version == 5
     assert check_project(project.root)["coverage"]["pass"] == 1

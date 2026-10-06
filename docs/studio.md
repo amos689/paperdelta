@@ -262,3 +262,5 @@ explicit dependent deletion and live language switching. Run
 positions, cross-page acceptance and a 500-metric/10 MB CSV workload. Each output
 directory must be new. The scale tool records actual local browser wall time;
 those samples are not a latency promise for arbitrary projects.
+
+See [generation workflows](v1.6.md) for saved Notebook cells, reviewed input/output records, result fragments and revision lists.

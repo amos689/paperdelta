@@ -205,7 +205,7 @@ def test_full_bind_check_change_snapshot_and_read_only_source(tmp_path, extensio
     original = project.read(file)
     bind_accuracy(project, file)
     before = check_project(tmp_path)
-    assert before["exit_code"] == 0 and before["report_schema_version"] == 8
+    assert before["exit_code"] == 0 and before["report_schema_version"] == 9
     assert before["occurrences"]["accuracy_text"]["status"] == "pass"
     StoredReport.model_validate(before)
     old = deepcopy(before)

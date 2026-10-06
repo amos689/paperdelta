@@ -24,6 +24,7 @@
   let reviewWorkbench, batchWorkbench, candidatePage, candidateKey, candidatePending, candidateRequest, candidateSequence = 0, searchTimer;
   let pdfCandidates = [];
   let metricOffset = 0;
+  let workflowWorkbench;
   const selected = new Set(), accepted = new Set();
   const stats = window.PaperDeltaStatistics;
   stats.mountContract($("metric-form")); stats.mountDisplay($("locations-form"));
@@ -176,7 +177,7 @@
       return;
     }
     $("receipt").hidden = !state.receipt;
-    if (state.receipt) $("receipt").textContent = t("saved", { count: state.receipt.bindings.length, backup: state.receipt.backup });
+    if (state.receipt) $("receipt").textContent = state.receipt.workflow ? t("workflow_saved", { name: state.receipt.name, backup: state.receipt.backup }) : t("saved", { count: state.receipt.bindings.length, backup: state.receipt.backup });
     if (state.stale) { $("accept").disabled = true; return; }
     $("counts").replaceChildren();
     for (const key of ["confirmed", "pass", "mismatch", "unknown"]) {
@@ -586,6 +587,7 @@
     if (sourceAdvice) await inspectSourceAdvice();
     await reviewWorkbench.localize();
     await batchWorkbench.localize();
+    await workflowWorkbench.localize();
     if (reviewBundlePlan) {
       $("bundle-attest").checked = false; $("bundle-export").disabled = true;
       reviewBundlePlan = (await api("bundle-preview", bundleSelection())).plan; renderBundlePlan();
@@ -596,6 +598,7 @@
   });
   reviewWorkbench = window.createPaperDeltaReview({ t, node, api, task, update, download, pageButtons, metricDetails, state: () => state, busy: () => busy });
   batchWorkbench = window.createPaperDeltaBatch({ t, node, api, task, update, download, pageButtons, metricDetails, notice, setStep, state: () => state });
+  workflowWorkbench = window.createPaperDeltaWorkflows({ t, node, api, task, update, notice, language: () => language });
   localize(); setStep(activeStep);
   await batchWorkbench.localize();
   await task(async () => { update((await api("state")).state); if (state.initialized) await reviewWorkbench.load(); });

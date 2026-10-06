@@ -181,7 +181,7 @@ def test_accept_compound_and_recheck_changed_seeds_without_editing_manuscript(tm
     proposal = builder.finalize_draft(project, draft)
     accept_bindings(project, proposal, ["occurrences:abstract"])
     before = check_project(project.root)
-    assert before["report_schema_version"] == 6
+    assert before["report_schema_version"] == 9
     assert before["occurrences"]["abstract"]["status"] == "pass"
     assert before["coverage"]["unbound_numbers"] == []
     assert before["metrics"]["accuracy"]["statistics"]["n"] == 5

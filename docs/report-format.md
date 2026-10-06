@@ -1,11 +1,21 @@
-# Report interchange contract, version 8
+# Report interchange contract, version 9
 
 [简体中文](zh-CN/report-format.md)
 
 `paperdelta schema report` emits the JSON Schema for a **complete stored report**.
-The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–8).
+The checked-in [schema](schemas/report.schema.json) records the current contract (readers accept versions 1–9).
 Configuration, proposals, snapshots, figure records, author-review records and
 patches have separate schemas. A snapshot embeds this complete report.
+
+## Generation workflow in schema 9
+
+New checks emit schema 9. Optional `provenance` and `fragments` maps preserve
+reviewed generation/fragment records, declared byte identities and their separate
+pass/mismatch/unknown states. Numeric occurrences add `usage` (`prose` or `table`).
+Empty extensions are omitted when serializing legacy reports. Paper coverage counts
+still concern occurrences, claims and figures; generation/fragment findings affect
+the overall exit code separately. Configurations using these references require
+schema 10. See [the workflow contract and limits](v1.6.md).
 
 ## Static source locations in schema 8
 

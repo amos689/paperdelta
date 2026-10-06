@@ -101,7 +101,9 @@ def _report_identity(report):
 def _scope(config, report):
     return {
         "bindings": {
-            group: sorted(getattr(config, group)) for group in ("occurrences", "claims", "figures")
+            group: sorted(getattr(config, group))
+            for group in ("occurrences", "claims", "figures", "provenance", "fragments")
+            if group in {"occurrences", "claims", "figures"} or getattr(config, group)
         },
         "review_scope": config.review_scope.model_dump() if config.review_scope else None,
         "coverage_exclusions": sorted(config.coverage_exclusions),

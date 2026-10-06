@@ -1,0 +1,33 @@
+{
+  "version": "1.6.0",
+  "scope": "Authored development checks, not a held-out accuracy or independent usability study. Raw local failures remain under build/.",
+  "adjustments": [
+    {
+      "check": "First full source suite",
+      "observed": "841 passed, 32 failed, 3 POSIX-only cases skipped on Windows.",
+      "cause": "All 32 failures asserted an older newly emitted report schema version after the intentional schema 9 change.",
+      "change": "Update live current-report expectations; preserve frozen historical inputs, implementations and records.",
+      "follow_up": "310 related source cases passed. Final installed-wheel and CI results are recorded separately."
+    },
+    {
+      "check": "First workflow browser run",
+      "observed": "Acceptance saved successfully but the generic receipt renderer then raised a JavaScript TypeError.",
+      "cause": "Generation/fragment receipts do not contain the numeric-binding receipt's bindings array.",
+      "change": "Use an explicit workflow receipt discriminator and localized saved-record summary.",
+      "follow_up": "All four bilingual workflow browser cases passed."
+    },
+    {
+      "check": "Explicit command CLI argument regression",
+      "observed": "The two bilingual cases rejected a child command's --lang argument as a PaperDelta language.",
+      "cause": "Early preference inspection scanned external command arguments.",
+      "change": "Stop preference and JSON-error option inspection at --command; pass the remaining arguments unchanged.",
+      "follow_up": "All 36 targeted producer, fragment and PR transition cases passed, including both corrected command cases."
+    },
+    {
+      "check": "Authored real Notebook/Quarto workflow harness",
+      "observed": "The first run incorrectly expected a globally passing image-containing report; a second attempt reused the demo's existing baseline name.",
+      "change": "Assert the image-content unknown state explicitly and use a distinct workflow baseline; retain the original image and saved output identities.",
+      "follow_up": "Actual Jupyter execution and Quarto/Typst rendering passed all four intended phases."
+    }
+  ]
+}

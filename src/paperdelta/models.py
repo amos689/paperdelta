@@ -406,8 +406,12 @@ class CoverageExclusion(StrictModel):
         return self
 
 
+class ProvenanceReference(StrictModel):
+    record: str
+
+
 class Config(StrictModel):
-    schema_version: Annotated[int, Field(ge=1, le=9)]
+    schema_version: Annotated[int, Field(ge=1, le=10)]
     paper: Paper
     rounding: Literal["half_up", "half_even"] = "half_up"
     sources: dict[Identifier, Source] = Field(default_factory=dict)
@@ -418,9 +422,22 @@ class Config(StrictModel):
     require_complete_coverage: bool = False
     review_scope: ReviewScope | None = None
     coverage_exclusions: dict[Identifier, CoverageExclusion] = Field(default_factory=dict)
+    provenance: dict[Identifier, ProvenanceReference] = Field(default_factory=dict)
+    fragments: dict[Identifier, ProvenanceReference] = Field(default_factory=dict)
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_identity(self, handler):
+        value = handler(self)
+        if not value.get("provenance"):
+            value.pop("provenance", None)
+        if not value.get("fragments"):
+            value.pop("fragments", None)
+        return value
 
     @model_validator(mode="after")
     def validate_references(self) -> Self:
+        if (self.provenance or self.fragments) and self.schema_version < 10:
+            raise validation_error(msg("provenance.schema"))
         if self.schema_version < 9 and any(
             item.anchor.numeric_only
             or (item.anchor.table and item.anchor.table.value_context is not None)

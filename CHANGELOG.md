@@ -2,6 +2,13 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.6.0 — 2026-10-07
+
+- Track explicitly reviewed Notebook cells, input/output hashes and Quarto render freshness. Saved declarations and observed commands stay distinct; checking never executes project code.
+- Preview and explicitly accept deterministic LaTeX/Markdown value or table fragments using existing evidence/display contracts, with backups and refusal to overwrite manual edits.
+- Join prose, tables, claims, figures and exports in bilingual revision lists; add Studio workflows, schema 10 configuration and schema 9 reports with legacy reading.
+- Preserve generation/fragment scope in portable replay and PR transitions, including removed records. Verify actual Jupyter/Quarto execution separately from saved-state browser fixtures.
+
 ## 1.5.0 — 2026-10-07
 
 - Reusable trusted GitHub Action and explicit PR finding transitions; removed or unverified bindings never count as resolved failures.

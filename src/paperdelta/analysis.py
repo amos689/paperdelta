@@ -157,6 +157,8 @@ def check_configuration(
             report["report_schema_version"] = 8
         evidence = EvidenceStore(project, config)
         _check(config, paper, evidence, report)
+        _check_producers(config, project, report)
+        _check_fragments(config, project, report)
         attach_reviews(project, report)
         if baseline is not None:
             _compare_baseline(report, baseline)
@@ -209,6 +211,14 @@ def _check(config: Config, paper: PaperIndex, evidence: EvidenceStore, report: d
             span = doc.locate(occurrence.anchor)
             validate_span(doc, span, occurrence.display)
             state["location"] = span.to_dict()
+            state["usage"] = (
+                "table"
+                if any(
+                    kind == "table" and start <= span.start and span.end <= end
+                    for start, end, kind in doc.priority_regions
+                )
+                else "prose"
+            )
             covered.setdefault(span.file, []).append((span.start, span.end))
             result = evidence.resolve(occurrence.metric)
             expected = render_result(result, occurrence.display, config.rounding)
@@ -462,6 +472,77 @@ def _check_figures(config: Config, project: Project, report: dict) -> None:
             )
 
 
+def _check_producers(config, project, report):
+    if not config.provenance:
+        return
+    from paperdelta.provenance import producer_state
+
+    report["report_schema_version"] = 9
+    report["provenance"] = {}
+    for name, reference in config.provenance.items():
+        state = {"record": reference.record, "status": "unknown"}
+        report["provenance"][name] = state
+        try:
+            text, raw = project.text(reference.record, 4 * 1024 * 1024)
+            report["input_hashes"][reference.record] = sha256(raw)
+            state.update(producer_state(project, parse_json(text)))
+            report["input_hashes"].update(state["identities"])
+            if state["status"] != "pass":
+                unknown = state["status"] == "unknown"
+                report["diagnostics"].append(
+                    _diagnostic(
+                        "NOTEBOOK_OUTPUT_UNVERIFIED" if unknown else "PRODUCER_STALE",
+                        "provenance:" + name,
+                        "unknown" if unknown else "error",
+                        msg(
+                            "provenance.unverified" if unknown else "provenance.changed",
+                            paths=state["unverified_cells"] if unknown else state["changed_paths"],
+                        ),
+                    )
+                )
+        except PaperDeltaError as error:
+            state["error"] = error.code
+            report["diagnostics"].append(
+                _diagnostic(
+                    error.code,
+                    "provenance:" + name,
+                    "unknown",
+                    str(error),
+                )
+            )
+
+
+def _check_fragments(config, project, report):
+    if not config.fragments:
+        return
+    from paperdelta.fragments import fragment_state
+
+    report["report_schema_version"] = 9
+    report["fragments"] = {}
+    for name, reference in config.fragments.items():
+        state = {"record": reference.record, "status": "unknown"}
+        report["fragments"][name] = state
+        try:
+            text, raw = project.text(reference.record, 4 * 1024 * 1024)
+            report["input_hashes"][reference.record] = sha256(raw)
+            state.update(fragment_state(project, config, parse_json(text)))
+            report["input_hashes"].update(state["identities"])
+            if state["status"] != "pass":
+                report["diagnostics"].append(
+                    _diagnostic(
+                        "FRAGMENT_STALE",
+                        "fragment:" + name,
+                        "error",
+                        msg("fragments.changed", path=state["path"]),
+                    )
+                )
+        except PaperDeltaError as error:
+            state["error"] = error.code
+            report["diagnostics"].append(
+                _diagnostic(error.code, "fragment:" + name, "unknown", str(error))
+            )
+
+
 def _compare_baseline(report: dict, baseline: dict) -> None:
     validate_record(Snapshot, baseline, "BASELINE_SCHEMA")
     previous = baseline["report"]
@@ -499,13 +580,16 @@ def _compare_baseline(report: dict, baseline: dict) -> None:
         "config_fingerprint"
     )
     report["removed_bindings"] = {
-        group: sorted(set(previous.get(group, {})) - set(report[group]))
-        for group in ("metrics", "occurrences", "claims", "figures")
+        group: sorted(set(previous.get(group, {})) - set(report.get(group, {})))
+        for group in ("metrics", "occurrences", "claims", "figures", "provenance", "fragments")
+        if group in report or group in previous
     }
 
 
 def _finish(report: dict) -> None:
     from paperdelta.actions import review_actions
+
+    report["report_schema_version"] = 9
 
     coverage = report["coverage"]
     for group in ("occurrences", "claims", "figures"):

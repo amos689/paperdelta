@@ -1,0 +1,871 @@
+{
+  "commands": [
+    {
+      "command": [
+        "<validation-python>",
+        "run_notebook.py"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-10-06T15:32:32.823957+00:00",
+      "input_hashes_before": {
+        "observations.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "source_hash_before": "sha256:7f25eccff3de6ed28171d5902d91668e191880481d5c3d56d25e29f244550a6c",
+      "started_at": "2026-10-06T15:32:31.628192+00:00",
+      "stderr_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "<quarto-executable>",
+        "render",
+        "paper.qmd",
+        "--to",
+        "typst",
+        "--no-execute"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-10-06T15:32:34.001462+00:00",
+      "input_hashes_before": {
+        "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+        "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+      },
+      "source_hash_before": "sha256:f2d2e9276a7a2f98e9558503369ab7df26b5415a203c1fdf436ad5747e583e6e",
+      "started_at": "2026-10-06T15:32:33.155783+00:00",
+      "stderr_hash": "sha256:8c51c6023b0e345b65b8219500775fc7b68603a83b630af773da9043706b0c12",
+      "stdout_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "<validation-python>",
+        "run_notebook.py",
+        "--only",
+        "metrics"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-10-06T15:32:36.037607+00:00",
+      "input_hashes_before": {
+        "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "source_hash_before": "sha256:6372b4585ceb7ff8b71ca89e4c2864dcf2f63210b49ffdecd1bf6f46dee8eeb2",
+      "started_at": "2026-10-06T15:32:34.819322+00:00",
+      "stderr_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "execution_log": "all\r\nmetrics\r\n",
+  "host": {
+    "python": "3.12.14",
+    "system": "Windows"
+  },
+  "phases": [
+    {
+      "check_executed_code": false,
+      "coverage": {
+        "candidate_numbers": 3,
+        "confirmed": 5,
+        "exclusions": [],
+        "mismatch": 0,
+        "outside_scope_numbers": [],
+        "pass": 5,
+        "review_scope": null,
+        "unbound_numbers": [],
+        "unknown": 0,
+        "unregistered_figures": [],
+        "unsupported": [
+          {
+            "code": "MARKDOWN_IMAGE",
+            "file": "paper.qmd",
+            "message": "Unverified content at paper.qmd:18. Image content and alternative text are not numeric manuscript evidence."
+          }
+        ]
+      },
+      "exit_code": 2,
+      "fragments": {
+        "table": {
+          "changed_paths": [],
+          "contract_changed": false,
+          "format": "markdown",
+          "identities": {
+            "generated/results.md": "sha256:09eccaee8302f7e6ec9bd2645c699aaf324d58385d8c520bf82cdbe58dde4217",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+          },
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "occurrences": [
+            "table_accuracy",
+            "table_baseline"
+          ],
+          "path": "generated/results.md",
+          "record": ".paperdelta/fragments/79741d43610e9db029a05157ee9b84198291eba0123555951789ee15b64f17da.json",
+          "status": "pass"
+        }
+      },
+      "input_hashes": {
+        ".paperdelta/fragments/79741d43610e9db029a05157ee9b84198291eba0123555951789ee15b64f17da.json": "sha256:214e2047beb64e224020001d2b90351b1b06f23c469a9e66b1ced1bdb41b5b6e",
+        ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json": "sha256:e1c7fbe46426b085bc461d3a1f495400f3057d8dac93bd581c76e88e9e18c0eb",
+        ".paperdelta/provenance/a8b158499de3990ad619eb1e5260ff1a9fe95d5bdfb09dfb3388a481d2929b35.json": "sha256:ef926961962e1f7210f822b617b2ae33eafad420393afc4be70e100852e4fd4a",
+        "analysis.ipynb": "sha256:6372b4585ceb7ff8b71ca89e4c2864dcf2f63210b49ffdecd1bf6f46dee8eeb2",
+        "figure-record.json": "sha256:ab02e1ce015c98295391c729a3dd166ee6749c472dd034b3246bbfe1d3773754",
+        "generated/results.md": "sha256:09eccaee8302f7e6ec9bd2645c699aaf324d58385d8c520bf82cdbe58dde4217",
+        "observations.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+        "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+        "paper.qmd": "sha256:f2d2e9276a7a2f98e9558503369ab7df26b5415a203c1fdf436ad5747e583e6e",
+        "paperdelta.yaml": "sha256:a5e827993db6c0885a5c08fed8c0fc8b1bc83b321d2d8e11e3d5bf16332d03f4",
+        "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+        "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "phase": "baseline",
+      "provenance": {
+        "paper_export": {
+          "cells": [],
+          "changed_paths": [],
+          "identities": {
+            "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+            "paper.qmd": "sha256:f2d2e9276a7a2f98e9558503369ab7df26b5415a203c1fdf436ad5747e583e6e",
+            "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+          },
+          "inputs": [
+            "results/metrics.csv",
+            "results/figure.svg"
+          ],
+          "kind": "quarto",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<quarto-executable>",
+            "render",
+            "paper.qmd",
+            "--to",
+            "typst",
+            "--no-execute"
+          ],
+          "outputs": [
+            "paper.pdf"
+          ],
+          "record": ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json",
+          "source": "paper.qmd",
+          "status": "pass",
+          "unverified_cells": []
+        },
+        "training": {
+          "cells": [],
+          "changed_paths": [],
+          "identities": {
+            "analysis.ipynb": "sha256:6372b4585ceb7ff8b71ca89e4c2864dcf2f63210b49ffdecd1bf6f46dee8eeb2",
+            "observations.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+            "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+          },
+          "inputs": [
+            "observations.csv",
+            "run_notebook.py"
+          ],
+          "kind": "notebook",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<validation-python>",
+            "run_notebook.py"
+          ],
+          "outputs": [
+            "results/metrics.csv"
+          ],
+          "record": ".paperdelta/provenance/a8b158499de3990ad619eb1e5260ff1a9fe95d5bdfb09dfb3388a481d2929b35.json",
+          "source": "analysis.ipynb",
+          "status": "pass",
+          "unverified_cells": []
+        }
+      },
+      "revisions": []
+    },
+    {
+      "check_executed_code": false,
+      "coverage": {
+        "candidate_numbers": 3,
+        "confirmed": 5,
+        "exclusions": [],
+        "mismatch": 0,
+        "outside_scope_numbers": [],
+        "pass": 5,
+        "review_scope": null,
+        "unbound_numbers": [],
+        "unknown": 0,
+        "unregistered_figures": [],
+        "unsupported": [
+          {
+            "code": "MARKDOWN_IMAGE",
+            "file": "paper.qmd",
+            "message": "Unverified content at paper.qmd:18. Image content and alternative text are not numeric manuscript evidence."
+          }
+        ]
+      },
+      "exit_code": 2,
+      "fragments": {
+        "table": {
+          "changed_paths": [],
+          "contract_changed": false,
+          "format": "markdown",
+          "identities": {
+            "generated/results.md": "sha256:09eccaee8302f7e6ec9bd2645c699aaf324d58385d8c520bf82cdbe58dde4217",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+          },
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "occurrences": [
+            "table_accuracy",
+            "table_baseline"
+          ],
+          "path": "generated/results.md",
+          "record": ".paperdelta/fragments/79741d43610e9db029a05157ee9b84198291eba0123555951789ee15b64f17da.json",
+          "status": "pass"
+        }
+      },
+      "input_hashes": {
+        ".paperdelta/fragments/79741d43610e9db029a05157ee9b84198291eba0123555951789ee15b64f17da.json": "sha256:214e2047beb64e224020001d2b90351b1b06f23c469a9e66b1ced1bdb41b5b6e",
+        ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json": "sha256:e1c7fbe46426b085bc461d3a1f495400f3057d8dac93bd581c76e88e9e18c0eb",
+        ".paperdelta/provenance/a8b158499de3990ad619eb1e5260ff1a9fe95d5bdfb09dfb3388a481d2929b35.json": "sha256:ef926961962e1f7210f822b617b2ae33eafad420393afc4be70e100852e4fd4a",
+        "analysis.ipynb": "sha256:6372b4585ceb7ff8b71ca89e4c2864dcf2f63210b49ffdecd1bf6f46dee8eeb2",
+        "figure-record.json": "sha256:ab02e1ce015c98295391c729a3dd166ee6749c472dd034b3246bbfe1d3773754",
+        "generated/results.md": "sha256:09eccaee8302f7e6ec9bd2645c699aaf324d58385d8c520bf82cdbe58dde4217",
+        "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+        "paper.qmd": "sha256:f2d2e9276a7a2f98e9558503369ab7df26b5415a203c1fdf436ad5747e583e6e",
+        "paperdelta.yaml": "sha256:a5e827993db6c0885a5c08fed8c0fc8b1bc83b321d2d8e11e3d5bf16332d03f4",
+        "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+        "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "phase": "input_changed",
+      "provenance": {
+        "paper_export": {
+          "cells": [],
+          "changed_paths": [],
+          "identities": {
+            "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+            "paper.qmd": "sha256:f2d2e9276a7a2f98e9558503369ab7df26b5415a203c1fdf436ad5747e583e6e",
+            "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+          },
+          "inputs": [
+            "results/metrics.csv",
+            "results/figure.svg"
+          ],
+          "kind": "quarto",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<quarto-executable>",
+            "render",
+            "paper.qmd",
+            "--to",
+            "typst",
+            "--no-execute"
+          ],
+          "outputs": [
+            "paper.pdf"
+          ],
+          "record": ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json",
+          "source": "paper.qmd",
+          "status": "pass",
+          "unverified_cells": []
+        },
+        "training": {
+          "cells": [],
+          "changed_paths": [
+            "observations.csv"
+          ],
+          "identities": {
+            "analysis.ipynb": "sha256:6372b4585ceb7ff8b71ca89e4c2864dcf2f63210b49ffdecd1bf6f46dee8eeb2",
+            "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "results/metrics.csv": "sha256:1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+            "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+          },
+          "inputs": [
+            "observations.csv",
+            "run_notebook.py"
+          ],
+          "kind": "notebook",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<validation-python>",
+            "run_notebook.py"
+          ],
+          "outputs": [
+            "results/metrics.csv"
+          ],
+          "record": ".paperdelta/provenance/a8b158499de3990ad619eb1e5260ff1a9fe95d5bdfb09dfb3388a481d2929b35.json",
+          "source": "analysis.ipynb",
+          "status": "mismatch",
+          "unverified_cells": []
+        }
+      },
+      "revisions": [
+        {
+          "action": "update_notebook",
+          "actual": null,
+          "changed_paths": [
+            "observations.csv"
+          ],
+          "expected": null,
+          "files": [
+            "results/metrics.csv"
+          ],
+          "instruction": "Review selected cells and listed inputs; explicitly rerun outside checking if needed, inspect outputs, and accept a new record.",
+          "kind": "notebook",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "mismatch",
+          "subject": "provenance:training"
+        }
+      ]
+    },
+    {
+      "check_executed_code": false,
+      "coverage": {
+        "candidate_numbers": 3,
+        "confirmed": 5,
+        "exclusions": [],
+        "mismatch": 3,
+        "outside_scope_numbers": [],
+        "pass": 2,
+        "review_scope": null,
+        "unbound_numbers": [],
+        "unknown": 0,
+        "unregistered_figures": [],
+        "unsupported": [
+          {
+            "code": "MARKDOWN_IMAGE",
+            "file": "paper.qmd",
+            "message": "Unverified content at paper.qmd:18. Image content and alternative text are not numeric manuscript evidence."
+          }
+        ]
+      },
+      "exit_code": 2,
+      "fragments": {
+        "table": {
+          "changed_paths": [],
+          "contract_changed": false,
+          "format": "markdown",
+          "identities": {
+            "generated/results.md": "sha256:2fc3f055f4469c422d4b2bf6e05057c3d98c24a6be883567cec107246d2cf5b5",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "occurrences": [
+            "table_accuracy",
+            "table_baseline"
+          ],
+          "path": "generated/results.md",
+          "record": ".paperdelta/fragments/a3982fb6616cdd8455ba016ca95bafaa4f9da6efed26bba7ee027ac27c425202.json",
+          "status": "pass"
+        }
+      },
+      "input_hashes": {
+        ".paperdelta/fragments/a3982fb6616cdd8455ba016ca95bafaa4f9da6efed26bba7ee027ac27c425202.json": "sha256:3cf932a7bb0e614fe8f8eda210b99f70563394a3d90a59d9a69af179da4ab714",
+        ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json": "sha256:e1c7fbe46426b085bc461d3a1f495400f3057d8dac93bd581c76e88e9e18c0eb",
+        ".paperdelta/provenance/755e50e7f706b1a120ef5cbe22f9eb6e9e5fbc22c3b8bee5b4862864c9904abc.json": "sha256:6c4d5aff10f8cb21a930da71641427d96a571e5ab06c888d59bb245e2b7c686f",
+        "analysis.ipynb": "sha256:513a7c3d882ebf2860103d3d998e29e16a1e21ba2925680cfc0a4680309b03c5",
+        "figure-record.json": "sha256:ab02e1ce015c98295391c729a3dd166ee6749c472dd034b3246bbfe1d3773754",
+        "generated/results.md": "sha256:2fc3f055f4469c422d4b2bf6e05057c3d98c24a6be883567cec107246d2cf5b5",
+        "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+        "paper.qmd": "sha256:ce3829ea940f302bf2a702869d90310e70c4709a1b6f77129a30d5f3fea7e1f5",
+        "paperdelta.yaml": "sha256:d2b85cdb8eb8dd96167549f38b0244c9b53ce87d694557412264aaf497aac9dc",
+        "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+        "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "phase": "table_refreshed_old_figure_and_pdf",
+      "provenance": {
+        "paper_export": {
+          "cells": [],
+          "changed_paths": [
+            "paper.qmd",
+            "results/metrics.csv"
+          ],
+          "identities": {
+            "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+            "paper.qmd": "sha256:ce3829ea940f302bf2a702869d90310e70c4709a1b6f77129a30d5f3fea7e1f5",
+            "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "inputs": [
+            "results/metrics.csv",
+            "results/figure.svg"
+          ],
+          "kind": "quarto",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<quarto-executable>",
+            "render",
+            "paper.qmd",
+            "--to",
+            "typst",
+            "--no-execute"
+          ],
+          "outputs": [
+            "paper.pdf"
+          ],
+          "record": ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json",
+          "source": "paper.qmd",
+          "status": "mismatch",
+          "unverified_cells": []
+        },
+        "training": {
+          "cells": [],
+          "changed_paths": [],
+          "identities": {
+            "analysis.ipynb": "sha256:513a7c3d882ebf2860103d3d998e29e16a1e21ba2925680cfc0a4680309b03c5",
+            "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+          },
+          "inputs": [
+            "observations.csv",
+            "run_notebook.py"
+          ],
+          "kind": "notebook",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<validation-python>",
+            "run_notebook.py",
+            "--only",
+            "metrics"
+          ],
+          "outputs": [
+            "results/metrics.csv"
+          ],
+          "record": ".paperdelta/provenance/755e50e7f706b1a120ef5cbe22f9eb6e9e5fbc22c3b8bee5b4862864c9904abc.json",
+          "source": "analysis.ipynb",
+          "status": "pass",
+          "unverified_cells": []
+        }
+      },
+      "revisions": [
+        {
+          "action": "review_claims",
+          "actual": null,
+          "changed_paths": [],
+          "expected": null,
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "Reassess the claim; a numeric replacement alone cannot repair its conclusion.",
+          "kind": "claim",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": "paper.qmd:9:1",
+          "status": "mismatch",
+          "subject": "claim:main_comparison"
+        },
+        {
+          "action": "update_export",
+          "actual": null,
+          "changed_paths": [
+            "paper.qmd",
+            "results/metrics.csv"
+          ],
+          "expected": null,
+          "files": [
+            "paper.pdf"
+          ],
+          "instruction": "Render the reviewed current source and dependencies, inspect the exported document, then accept its new record.",
+          "kind": "export",
+          "metrics": [],
+          "position": null,
+          "status": "mismatch",
+          "subject": "provenance:paper_export"
+        },
+        {
+          "action": "update_figure",
+          "actual": null,
+          "changed_paths": [
+            "results/metrics.csv",
+            "analysis.ipynb"
+          ],
+          "expected": null,
+          "files": [
+            "results/figure.svg"
+          ],
+          "instruction": "Regenerate and review the figure from the current declared inputs, then update its record.",
+          "kind": "figure",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "mismatch",
+          "subject": "figure:accuracy_plot"
+        },
+        {
+          "action": "review_claims",
+          "actual": "84.1%",
+          "changed_paths": [],
+          "expected": "80.9%",
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "Reassess the claim; a numeric replacement alone cannot repair its conclusion.",
+          "kind": "prose",
+          "metrics": [
+            "accuracy"
+          ],
+          "position": "paper.qmd:5:23",
+          "status": "mismatch",
+          "subject": "occurrence:abstract_accuracy"
+        },
+        {
+          "action": "review_refreshed",
+          "actual": null,
+          "changed_paths": [],
+          "expected": null,
+          "files": [
+            "generated/results.md"
+          ],
+          "instruction": "The value matches changed evidence; review the refreshed manuscript wording and context.",
+          "kind": "fragment",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "pass",
+          "subject": "fragment:table"
+        },
+        {
+          "action": "review_refreshed",
+          "actual": null,
+          "changed_paths": [],
+          "expected": null,
+          "files": [
+            "results/metrics.csv"
+          ],
+          "instruction": "The value matches changed evidence; review the refreshed manuscript wording and context.",
+          "kind": "notebook",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "pass",
+          "subject": "provenance:training"
+        },
+        {
+          "action": "review_refreshed",
+          "actual": "80.9",
+          "changed_paths": [],
+          "expected": "80.9",
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "The value matches changed evidence; review the refreshed manuscript wording and context.",
+          "kind": "table",
+          "metrics": [
+            "accuracy"
+          ],
+          "position": "paper.qmd:13:10 · table 1, row 2, cell 2",
+          "status": "pass",
+          "subject": "occurrence:table_accuracy"
+        }
+      ]
+    },
+    {
+      "check_executed_code": false,
+      "coverage": {
+        "candidate_numbers": 3,
+        "confirmed": 5,
+        "exclusions": [],
+        "mismatch": 3,
+        "outside_scope_numbers": [],
+        "pass": 2,
+        "review_scope": null,
+        "unbound_numbers": [],
+        "unknown": 0,
+        "unregistered_figures": [],
+        "unsupported": [
+          {
+            "code": "MARKDOWN_IMAGE",
+            "file": "paper.qmd",
+            "message": "Unverified content at paper.qmd:18. Image content and alternative text are not numeric manuscript evidence."
+          }
+        ]
+      },
+      "exit_code": 2,
+      "fragments": {
+        "table": {
+          "changed_paths": [],
+          "contract_changed": false,
+          "format": "markdown",
+          "identities": {
+            "generated/results.md": "sha256:2fc3f055f4469c422d4b2bf6e05057c3d98c24a6be883567cec107246d2cf5b5",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "occurrences": [
+            "table_accuracy",
+            "table_baseline"
+          ],
+          "path": "generated/results.md",
+          "record": ".paperdelta/fragments/a3982fb6616cdd8455ba016ca95bafaa4f9da6efed26bba7ee027ac27c425202.json",
+          "status": "pass"
+        }
+      },
+      "input_hashes": {
+        ".paperdelta/fragments/a3982fb6616cdd8455ba016ca95bafaa4f9da6efed26bba7ee027ac27c425202.json": "sha256:3cf932a7bb0e614fe8f8eda210b99f70563394a3d90a59d9a69af179da4ab714",
+        ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json": "sha256:e1c7fbe46426b085bc461d3a1f495400f3057d8dac93bd581c76e88e9e18c0eb",
+        ".paperdelta/provenance/755e50e7f706b1a120ef5cbe22f9eb6e9e5fbc22c3b8bee5b4862864c9904abc.json": "sha256:6c4d5aff10f8cb21a930da71641427d96a571e5ab06c888d59bb245e2b7c686f",
+        "analysis.ipynb": "sha256:fe44364569401d9073b9cf3469eaa9476677fa3f833196396442d6a0000a2b97",
+        "figure-record.json": "sha256:ab02e1ce015c98295391c729a3dd166ee6749c472dd034b3246bbfe1d3773754",
+        "generated/results.md": "sha256:2fc3f055f4469c422d4b2bf6e05057c3d98c24a6be883567cec107246d2cf5b5",
+        "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+        "paper.qmd": "sha256:ce3829ea940f302bf2a702869d90310e70c4709a1b6f77129a30d5f3fea7e1f5",
+        "paperdelta.yaml": "sha256:d2b85cdb8eb8dd96167549f38b0244c9b53ce87d694557412264aaf497aac9dc",
+        "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+        "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+      },
+      "phase": "code_changed_saved_outputs_unchanged",
+      "provenance": {
+        "paper_export": {
+          "cells": [],
+          "changed_paths": [
+            "paper.qmd",
+            "results/metrics.csv"
+          ],
+          "identities": {
+            "paper.pdf": "sha256:a494daaf76149ed1f8e5d81fcec7bef171f4e9cadf2d6e63eed196cfeac4b2a1",
+            "paper.qmd": "sha256:ce3829ea940f302bf2a702869d90310e70c4709a1b6f77129a30d5f3fea7e1f5",
+            "results/figure.svg": "sha256:db0ac5c151bd388abff0c3706a9078eb758608c777c0fa21d6a35165b113516b",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "inputs": [
+            "results/metrics.csv",
+            "results/figure.svg"
+          ],
+          "kind": "quarto",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<quarto-executable>",
+            "render",
+            "paper.qmd",
+            "--to",
+            "typst",
+            "--no-execute"
+          ],
+          "outputs": [
+            "paper.pdf"
+          ],
+          "record": ".paperdelta/provenance/3ea526f670de12a3979911edec0009ba3712dd3bf792851f470b0d049e7d0a17.json",
+          "source": "paper.qmd",
+          "status": "mismatch",
+          "unverified_cells": []
+        },
+        "training": {
+          "cells": [
+            {
+              "code_changed": true,
+              "execution_count_changed": false,
+              "id": "metrics",
+              "outputs_changed": false
+            }
+          ],
+          "changed_paths": [
+            "analysis.ipynb"
+          ],
+          "identities": {
+            "analysis.ipynb": "sha256:fe44364569401d9073b9cf3469eaa9476677fa3f833196396442d6a0000a2b97",
+            "observations.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "results/metrics.csv": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "run_notebook.py": "sha256:393d68f336575f215b27de1ce7ae44e28026b7543e03d53178f1732e48383dfe"
+          },
+          "inputs": [
+            "observations.csv",
+            "run_notebook.py"
+          ],
+          "kind": "notebook",
+          "method": "observed_command",
+          "notice": "An explicit command exited 0 and declared inputs matched before and after. This editable local record does not prove causality, unchanged files throughout execution, complete dependencies or scientific validity.",
+          "observed_command": [
+            "<validation-python>",
+            "run_notebook.py",
+            "--only",
+            "metrics"
+          ],
+          "outputs": [
+            "results/metrics.csv"
+          ],
+          "record": ".paperdelta/provenance/755e50e7f706b1a120ef5cbe22f9eb6e9e5fbc22c3b8bee5b4862864c9904abc.json",
+          "source": "analysis.ipynb",
+          "status": "mismatch",
+          "unverified_cells": []
+        }
+      },
+      "revisions": [
+        {
+          "action": "review_claims",
+          "actual": null,
+          "changed_paths": [],
+          "expected": null,
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "Reassess the claim; a numeric replacement alone cannot repair its conclusion.",
+          "kind": "claim",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": "paper.qmd:9:1",
+          "status": "mismatch",
+          "subject": "claim:main_comparison"
+        },
+        {
+          "action": "update_export",
+          "actual": null,
+          "changed_paths": [
+            "paper.qmd",
+            "results/metrics.csv"
+          ],
+          "expected": null,
+          "files": [
+            "paper.pdf"
+          ],
+          "instruction": "Render the reviewed current source and dependencies, inspect the exported document, then accept its new record.",
+          "kind": "export",
+          "metrics": [],
+          "position": null,
+          "status": "mismatch",
+          "subject": "provenance:paper_export"
+        },
+        {
+          "action": "update_figure",
+          "actual": null,
+          "changed_paths": [
+            "results/metrics.csv",
+            "analysis.ipynb"
+          ],
+          "expected": null,
+          "files": [
+            "results/figure.svg"
+          ],
+          "instruction": "Regenerate and review the figure from the current declared inputs, then update its record.",
+          "kind": "figure",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "mismatch",
+          "subject": "figure:accuracy_plot"
+        },
+        {
+          "action": "update_notebook",
+          "actual": null,
+          "changed_paths": [
+            "analysis.ipynb"
+          ],
+          "expected": null,
+          "files": [
+            "results/metrics.csv"
+          ],
+          "instruction": "Review selected cells and listed inputs; explicitly rerun outside checking if needed, inspect outputs, and accept a new record.",
+          "kind": "notebook",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "mismatch",
+          "subject": "provenance:training"
+        },
+        {
+          "action": "review_claims",
+          "actual": "84.1%",
+          "changed_paths": [],
+          "expected": "80.9%",
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "Reassess the claim; a numeric replacement alone cannot repair its conclusion.",
+          "kind": "prose",
+          "metrics": [
+            "accuracy"
+          ],
+          "position": "paper.qmd:5:23",
+          "status": "mismatch",
+          "subject": "occurrence:abstract_accuracy"
+        },
+        {
+          "action": "review_refreshed",
+          "actual": null,
+          "changed_paths": [],
+          "expected": null,
+          "files": [
+            "generated/results.md"
+          ],
+          "instruction": "The value matches changed evidence; review the refreshed manuscript wording and context.",
+          "kind": "fragment",
+          "metrics": [
+            "accuracy",
+            "baseline"
+          ],
+          "position": null,
+          "status": "pass",
+          "subject": "fragment:table"
+        },
+        {
+          "action": "review_refreshed",
+          "actual": "80.9",
+          "changed_paths": [],
+          "expected": "80.9",
+          "files": [
+            "paper.qmd"
+          ],
+          "instruction": "The value matches changed evidence; review the refreshed manuscript wording and context.",
+          "kind": "table",
+          "metrics": [
+            "accuracy"
+          ],
+          "position": "paper.qmd:13:10 · table 1, row 2, cell 2",
+          "status": "pass",
+          "subject": "occurrence:table_accuracy"
+        }
+      ]
+    }
+  ],
+  "publication_note": "Executable paths are redacted in this public summary. Raw local run records remain unchanged. It is not a byte-identical export of those records.",
+  "scope": "Authored real Jupyter execution and Quarto/Typst rendering; not an independent reproducibility or scientific-validity study. Embedded image content remains explicitly unverified.",
+  "status": "passed",
+  "tools": {
+    "ipykernel": "6.30.1",
+    "nbclient": "0.10.2",
+    "nbformat": "5.10.4",
+    "paperdelta": "1.6.0",
+    "quarto": "1.9.38"
+  }
+}

@@ -65,6 +65,41 @@ def text_report(report: dict) -> str:
                 count=len(action["subjects"]),
             )
         )
+    for name, state in report.get("provenance", {}).items():
+        lines.append(
+            name
+            + ": "
+            + tr("workflow.unchanged" if state["status"] == "pass" else "status." + state["status"])
+        )
+        lines.append(
+            tr(
+                "provenance.observed"
+                if state.get("method") == "observed_command"
+                else "provenance.declared"
+            )
+        )
+        lines.append(
+            tr(
+                "workflow.io",
+                inputs=", ".join(state.get("inputs", [])),
+                outputs=", ".join(state.get("outputs", [])),
+            )
+        )
+    from paperdelta.revisions import revision_list
+
+    lines.append(tr("revisions.title"))
+    lines.append(tr("revisions.notice"))
+    for item in revision_list(report):
+        lines.append(
+            item["subject"]
+            + " · "
+            + tr("revisions." + item["kind"])
+            + " · "
+            + tr("status." + item["status"])
+        )
+        lines.append(tr("revisions." + item["action"]))
+        if item["expected"] is not None:
+            lines.append(str(item["actual"]) + " → " + str(item["expected"]))
     for export in report.get("exports", []):
         lines.append(
             tr(

@@ -56,6 +56,26 @@ class Watcher:
             paths.add(config.paper.entry)
             paths.update(item.entry for item in config.paper.companions)
             paths.update(source.path for source in config.sources.values())
+            from paperdelta.fragments import validate_fragment
+            from paperdelta.provenance import validate_producer
+
+            for group, validator in (
+                (config.provenance, validate_producer),
+                (config.fragments, validate_fragment),
+            ):
+                for reference in group.values():
+                    paths.add(reference.record)
+                    try:
+                        record = validator(
+                            parse_json(self.project.text(reference.record, 4 * 1024 * 1024)[0])
+                        )
+                        if hasattr(record, "identities"):
+                            paths.update(record.identities)
+                        else:
+                            paths.update(record.inputs)
+                            paths.add(record.spec.path)
+                    except PaperDeltaError:
+                        pass
             for figure in config.figures.values():
                 paths.add(figure.path)
                 if figure.record:

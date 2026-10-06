@@ -28,7 +28,7 @@ from paperdelta.models import (
 
 Nonnegative = Annotated[int, Field(ge=0)]
 Positive = Annotated[int, Field(ge=1)]
-REPORT_SCHEMA_MAX = 8
+REPORT_SCHEMA_MAX = 9
 CheckStatus = Literal["pass", "mismatch", "unknown"]
 ChangeKind = Literal["added", "changed", "unchanged", "unavailable", "definition_changed"]
 
@@ -471,6 +471,15 @@ class Suggestion(StrictModel):
 
 
 class OccurrenceState(StrictModel):
+    usage: Literal["prose", "table"] | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_usage_identity(self, handler):
+        value = handler(self)
+        if value.get("usage") is None:
+            value.pop("usage", None)
+        return value
+
     metric: Identifier
     status: CheckStatus
     location: SourceLocation | None = None
@@ -606,6 +615,8 @@ class ReviewAction(StrictModel):
     kind: Literal[
         "wait_for_check",
         "resolve_evidence",
+        "review_producers",
+        "update_fragments",
         "repair_bindings",
         "review_exclusions",
         "review_claims",
@@ -634,6 +645,43 @@ class ExportState(StrictModel):
     export_bindings: list[Identifier]
 
 
+class CellChange(StrictModel):
+    id: str
+    code_changed: bool
+    outputs_changed: bool
+    execution_count_changed: bool
+
+
+class ProducerState(StrictModel):
+    status: CheckStatus
+    record: str
+    kind: Literal["notebook", "quarto"] | None = None
+    source: str | None = None
+    inputs: list[str] = Field(default_factory=list)
+    outputs: list[str] = Field(default_factory=list)
+    method: Literal["declared", "observed_command"] | None = None
+    changed_paths: list[str] = Field(default_factory=list)
+    cells: list[CellChange] = Field(default_factory=list)
+    unverified_cells: list[str] = Field(default_factory=list)
+    identities: dict[str, Hash] = Field(default_factory=dict)
+    observed_command: list[str] | None = None
+    notice: str | None = None
+    error: str | None = None
+
+
+class FragmentState(StrictModel):
+    status: CheckStatus
+    record: str
+    path: str | None = None
+    format: Literal["latex", "markdown"] | None = None
+    occurrences: list[Identifier] = Field(default_factory=list)
+    metrics: list[Identifier] = Field(default_factory=list)
+    changed_paths: list[str] = Field(default_factory=list)
+    contract_changed: bool = False
+    identities: dict[str, Hash] = Field(default_factory=dict)
+    error: str | None = None
+
+
 class StoredReport(TimestampedRecord):
     report_schema_version: Annotated[int, Field(ge=1, le=REPORT_SCHEMA_MAX)]
     tool_version: str
@@ -656,9 +704,25 @@ class StoredReport(TimestampedRecord):
     watch: WatchState | None = None
     actions: list[ReviewAction] = Field(default_factory=list)
     exports: list[ExportState] = Field(default_factory=list)
+    provenance: dict[Identifier, ProducerState] = Field(default_factory=dict)
+    fragments: dict[Identifier, FragmentState] = Field(default_factory=dict)
+
+    @model_serializer(mode="wrap")
+    def preserve_optional_workflow_identity(self, handler):
+        value = handler(self)
+        for key in ("provenance", "fragments"):
+            if not value.get(key):
+                value.pop(key, None)
+        return value
 
     @model_validator(mode="after")
     def counted_verdicts(self):
+        if (
+            self.provenance
+            or self.fragments
+            or any(item.usage is not None for item in self.occurrences.values())
+        ) and self.report_schema_version < 9:
+            raise validation_error(msg("provenance.report_schema"))
         if self.report_schema_version < 6 and any(
             metric.statistics is not None
             or getattr(metric.definition, "statistics", None)

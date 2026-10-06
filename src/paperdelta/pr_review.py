@@ -1,6 +1,12 @@
 """Explicit finding transitions; removing coverage never resolves a failed check."""
 
-GROUPS = {"occurrences": "occurrence", "claims": "claim", "figures": "figure"}
+GROUPS = {
+    "occurrences": "occurrence",
+    "claims": "claim",
+    "figures": "figure",
+    "provenance": "provenance",
+    "fragments": "fragment",
+}
 
 
 def review_delta(report, baseline, configuration, *, same_baseline_contract=False):
@@ -29,8 +35,8 @@ def review_delta(report, baseline, configuration, *, same_baseline_contract=Fals
         for section in configuration.get("sections", [])
     )
     for group, prefix in GROUPS.items():
-        before = old[group] if old else {}
-        current = report[group]
+        before = old.get(group, {}) if old else {}
+        current = report.get(group, {})
         for name in sorted(before.keys() | current.keys()):
             left, right = before.get(name), current.get(name)
             subject = f"{prefix}:{name}"

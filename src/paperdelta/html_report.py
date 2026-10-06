@@ -71,6 +71,10 @@ def _priority(item):
 
 def _action(item):
     rule = item["rule"]
+    if item["subject"].startswith("provenance:"):
+        return "actions.detail_review_producers"
+    if item["subject"].startswith("fragment:"):
+        return "actions.detail_update_fragments"
     if rule == "EXPORT_STALE":
         return "actions.detail_reexport_pdf"
     if rule == "PDF_EXTRACTION_CHANGED":
@@ -326,6 +330,112 @@ def _exports(report, labels):
     return f'<section id="exports"><h2>{t("pdf.exports_title")}</h2><p>{t("pdf.exports_note")}</p><ul>{rows}</ul></section>'
 
 
+def _workflow(report, labels):
+    from paperdelta.revisions import revision_list
+
+    t = labels.label
+    sections = []
+    for name, state in report.get("provenance", {}).items():
+        cells = "".join(
+            "<li>"
+            + t(
+                "workflow.cell",
+                id=cell["id"],
+                code=msg("status.changed" if cell["code_changed"] else "status.unchanged"),
+                outputs=msg("status.changed" if cell["outputs_changed"] else "status.unchanged"),
+                count=msg(
+                    "status.changed" if cell["execution_count_changed"] else "status.unchanged"
+                ),
+            )
+            + "</li>"
+            for cell in state.get("cells", [])
+        )
+        sections.append(
+            "<article class=impact><h3>"
+            + esc(name)
+            + " · "
+            + (
+                t("workflow.unchanged")
+                if state["status"] == "pass"
+                else labels.enum("status", state["status"])
+            )
+            + "</h3><p>"
+            + labels.enum("workflow", state.get("method", "declared"))
+            + "</p><p><code>"
+            + esc(state.get("source") or state["record"])
+            + "</code></p><p>"
+            + t(
+                "workflow.io",
+                inputs=", ".join(state.get("inputs", [])),
+                outputs=", ".join(state.get("outputs", [])),
+            )
+            + "</p><p>"
+            + t(
+                "provenance.observed"
+                if state.get("method") == "observed_command"
+                else "provenance.declared"
+            )
+            + "</p><ul>"
+            + cells
+            + "</ul>"
+            + (
+                "<pre>" + esc("\n".join(state["observed_command"])) + "</pre>"
+                if state.get("observed_command")
+                else ""
+            )
+            + "</article>"
+        )
+    workflow = (
+        "<section id=workflow><h2>"
+        + t("workflow.title")
+        + "</h2>"
+        + "".join(sections)
+        + "</section>"
+        if sections
+        else ""
+    )
+    revisions = []
+    for item in revision_list(report):
+        revisions.append(
+            "<article class=impact><h3>"
+            + labels.enum("revisions", item["kind"])
+            + " · "
+            + esc(item["subject"])
+            + "</h3><p>"
+            + labels.enum("status", item["status"])
+            + " · "
+            + labels.text(item["position"] or ", ".join(item["files"]))
+            + "</p><p>"
+            + t("revisions." + item["action"])
+            + "</p>"
+            + (
+                "<p>"
+                + labels.value(item["actual"])
+                + " → "
+                + labels.value(item["expected"])
+                + "</p>"
+                if item["expected"] is not None
+                else ""
+            )
+            + (
+                "<p><code>" + esc(", ".join(item["changed_paths"])) + "</code></p>"
+                if item["changed_paths"]
+                else ""
+            )
+            + "</article>"
+        )
+    return (
+        workflow
+        + "<section id=revision-list><h2>"
+        + t("revisions.title")
+        + "</h2><p>"
+        + t("revisions.notice")
+        + "</p>"
+        + ("".join(revisions) or "<p>" + t("workflow.empty") + "</p>")
+        + "</section>"
+    )
+
+
 def html_report(report: dict, *, previews=None) -> str:
     labels = Labels()
     t = labels.label
@@ -492,7 +602,7 @@ def html_report(report: dict, *, previews=None) -> str:
         next_action = "html.next_unknown"
     elif any(item["rule"] == "CLAIM_FALSE" for item in report["diagnostics"]):
         next_action = "html.next_claim"
-    elif counts["mismatch"]:
+    elif any(item["severity"] == "error" for item in report["diagnostics"]):
         next_action = "html.next_mismatch"
     elif any(counts[name] for name in ("unbound_numbers", "unsupported", "unregistered_figures")):
         next_action = "html.next_coverage"
@@ -564,6 +674,7 @@ def html_report(report: dict, *, previews=None) -> str:
 {t("html.coverage_counts", unbound=len(counts["unbound_numbers"]), unsupported=len(counts["unsupported"]), figures=len(counts["unregistered_figures"]))}</p>
 <aside class="next-action"><b>{t("html.next")}</b><p>{t(next_action)}</p></aside>
 {queue}
+{_workflow(report, labels)}
 {_exports(report, labels)}
 <section><h2>{t("report.changes")}</h2><table><thead><tr>
 {"".join(f"<th>{t('html.' + key)}</th>" for key in ("metric", "change", "before", "after", "unit"))}

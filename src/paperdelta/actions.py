@@ -34,6 +34,10 @@ def review_actions(report):
             kind = "review_claims"
         elif group == "figure":
             kind = "update_figures"
+        elif group == "provenance":
+            kind = "review_producers"
+        elif group == "fragment":
+            kind = "update_fragments"
         elif rule.startswith("ANCHOR_") or rule in {
             "UNREACHABLE_TEX",
             "UNREACHABLE_DOCUMENT",
@@ -56,6 +60,8 @@ def review_actions(report):
     order = (
         "wait_for_check",
         "resolve_evidence",
+        "review_producers",
+        "update_fragments",
         "repair_bindings",
         "review_exclusions",
         "review_claims",

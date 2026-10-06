@@ -43,7 +43,7 @@ def project_and_source(tmp_path, kind, raw=None):
 
 
 @pytest.mark.parametrize("kind", ["tsv", "xlsx"])
-def test_native_table_to_accepted_binding_and_exact_schema5_report(tmp_path, kind):
+def test_native_table_to_accepted_binding_and_versioned_report(tmp_path, kind):
     project, draft = project_and_source(tmp_path, kind)
     draft = builder.add_metric(
         project,
@@ -70,7 +70,7 @@ def test_native_table_to_accepted_binding_and_exact_schema5_report(tmp_path, kin
     )
     proposal = builder.finalize_draft(project, draft)
     _, _, report = inspect_proposal(project, proposal)
-    assert report["report_schema_version"] == 5
+    assert report["report_schema_version"] == 9
     assert report["metrics"]["accuracy"]["value"] == "0.80000000000000000000000000001"
     assert report["coverage"]["pass"] == 1
     StoredReport.model_validate(report)

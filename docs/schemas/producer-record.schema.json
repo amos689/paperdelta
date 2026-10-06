@@ -1,0 +1,250 @@
+{
+  "$defs": {
+    "CommandObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "command": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 128,
+          "minItems": 1,
+          "title": "Command",
+          "type": "array"
+        },
+        "exit_code": {
+          "const": 0,
+          "title": "Exit Code",
+          "type": "integer"
+        },
+        "finished_at": {
+          "title": "Finished At",
+          "type": "string"
+        },
+        "input_hashes_before": {
+          "additionalProperties": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "title": "Input Hashes Before",
+          "type": "object"
+        },
+        "source_hash_before": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Source Hash Before",
+          "type": "string"
+        },
+        "started_at": {
+          "title": "Started At",
+          "type": "string"
+        },
+        "stderr_hash": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Stderr Hash",
+          "type": "string"
+        },
+        "stdout_hash": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Stdout Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "command",
+        "started_at",
+        "finished_at",
+        "exit_code",
+        "input_hashes_before",
+        "source_hash_before",
+        "stdout_hash",
+        "stderr_hash"
+      ],
+      "title": "CommandObservation",
+      "type": "object"
+    },
+    "ProducerSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "cells": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2000,
+          "title": "Cells",
+          "type": "array"
+        },
+        "inputs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 128,
+          "title": "Inputs",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "notebook",
+            "quarto"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "outputs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 128,
+          "minItems": 1,
+          "title": "Outputs",
+          "type": "array"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "source",
+        "inputs",
+        "outputs"
+      ],
+      "title": "ProducerSpec",
+      "type": "object"
+    },
+    "SavedCell": {
+      "additionalProperties": false,
+      "properties": {
+        "execution_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Execution Count"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "index": {
+          "minimum": 1,
+          "title": "Index",
+          "type": "integer"
+        },
+        "outputs_hash": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Outputs Hash",
+          "type": "string"
+        },
+        "source_hash": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Source Hash",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "saved_outputs",
+            "unexecuted",
+            "saved_error",
+            "unsupported_output"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "index",
+        "source_hash",
+        "outputs_hash",
+        "execution_count",
+        "status"
+      ],
+      "title": "SavedCell",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "cells": {
+      "items": {
+        "$ref": "#/$defs/SavedCell"
+      },
+      "title": "Cells",
+      "type": "array"
+    },
+    "identities": {
+      "additionalProperties": {
+        "pattern": "^sha256:[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "title": "Identities",
+      "type": "object"
+    },
+    "method": {
+      "enum": [
+        "declared",
+        "observed_command"
+      ],
+      "title": "Method",
+      "type": "string"
+    },
+    "observation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CommandObservation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "producer_schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Producer Schema Version",
+      "type": "integer"
+    },
+    "rationale": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "record_id": {
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "title": "Record Id",
+      "type": "string"
+    },
+    "recorded_at": {
+      "title": "Recorded At",
+      "type": "string"
+    },
+    "spec": {
+      "$ref": "#/$defs/ProducerSpec"
+    },
+    "tool_version": {
+      "title": "Tool Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "producer_schema_version",
+    "tool_version",
+    "recorded_at",
+    "spec",
+    "identities",
+    "cells",
+    "method",
+    "rationale",
+    "record_id"
+  ],
+  "title": "ProducerRecord",
+  "type": "object"
+}

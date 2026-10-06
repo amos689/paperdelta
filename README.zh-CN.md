@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.5.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.4.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.6.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.6.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,9 +55,10 @@
 [打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.5.0** 增加可复用 GitHub Action、PR 问题变化摘要和 SARIF 报告。
-删除绑定会明确显示覆盖减少；选定的审查包可预览、下载并离线重放。
-[协作审查与 CI](docs/zh-CN/v1.5.md) · [便携审查包](docs/zh-CN/review-bundle.md)。
+**1.6.0** 增加可审核的 Notebook／Quarto 生成记录、确定性的 LaTeX／Markdown
+结果片段，以及覆盖正文、表格、图形和导出稿的实验改动修订清单。检查始终在本地只读
+进行；可选的明确 CLI 命令可记录实际运行。
+[生成流程指南](docs/zh-CN/v1.6.md) · [协作审查与 CI](docs/zh-CN/v1.5.md) · [便携审查包](docs/zh-CN/review-bundle.md)。
 
 静态 [LaTeX](docs/zh-CN/rules.md)、[Markdown/Quarto](docs/zh-CN/markdown-quarto.md)、
 [Word](docs/zh-CN/word.md) 和 [PDF](docs/zh-CN/pdf.md) 共用明确声明的
@@ -88,7 +89,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
 已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
-`uvx --python 3.12 paperdelta@1.5.0 --lang zh-CN demo --out paperdelta-demo --open`。
+`uvx --python 3.12 paperdelta@1.6.0 --lang zh-CN demo --out paperdelta-demo --open`。
 每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
 
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用

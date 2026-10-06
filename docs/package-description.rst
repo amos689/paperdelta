@@ -24,7 +24,7 @@ apply paper edits. Every run uses a new output directory.
 
 Batch binding, explicit review scopes, traceable exclusions and file watching
 support repeated review. Reports and CLI prompts support English and Chinese.
-Verified numeric edits have a preview and recovery journal. Seventeen optional
+Verified numeric edits have a preview and recovery journal. Twenty-two optional
 MCP tools are available through ``python -m pip install 'paperdelta[mcp]'``.
 
 `Quick start <https://github.com/amos689/paperdelta/blob/main/docs/quickstart.md>`_ ·
@@ -62,7 +62,7 @@ sources are excluded from the Python distributions.
 
 批量绑定、明确审查范围、可追踪排除和文件监听支持持续使用。报告及命令行支持
 中英文；验证后的数值修改可预览并通过事务恢复。安装
-``python -m pip install 'paperdelta[mcp]'`` 可使用十七个可选 MCP 工具。
+``python -m pip install 'paperdelta[mcp]'`` 可使用二十二个可选 MCP 工具。
 
 `快速开始 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/quickstart.md>`_ ·
 `工作流 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/workflows.md>`_ ·
@@ -157,3 +157,23 @@ dynamic includes and unsupported syntax remain unverified. Nothing is executed.
 
 `Static-source guide <https://github.com/amos689/paperdelta/blob/main/docs/markdown-quarto.md>`_ ·
 `静态源码指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/markdown-quarto.md>`_
+
+Experiment-to-paper review in 1.6 / 1.6 实验到论文的审查
+--------------------------------------------------------
+
+Review saved Notebook cells and declared input/output identities, track stale
+Quarto renders, and generate deterministic LaTeX/Markdown fragments from accepted
+numeric bindings. A revision list joins affected prose, tables, claims, figures
+and outputs. Bilingual Studio previews require explicit acceptance. Ordinary
+checks never execute project code; the separate ``provenance run --command ...``
+CLI observes only an explicitly supplied command and still requires review.
+Unchanged hashes establish file identity, not causality or scientific validity.
+
+复核 Notebook 保存单元格与明确声明的输入输出，追踪过期的 Quarto 导出，并从已确认
+数值绑定生成确定性的 LaTeX/Markdown 片段。修订清单汇总受影响的正文、表格、论断、
+图表和导出稿；双语工作台的预览须明确确认。普通检查不执行项目代码；独立的
+``provenance run --command ...`` 命令只观察明确给出的命令，之后仍需复核。
+哈希一致表示文件身份不变，不证明因果关系或科学有效性。
+
+`1.6 guide <https://github.com/amos689/paperdelta/blob/main/docs/v1.6.md>`_ ·
+`1.6 中文指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.6.md>`_

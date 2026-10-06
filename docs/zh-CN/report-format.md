@@ -1,10 +1,18 @@
-# 报告交换约定，版本 8
+# 报告交换约定，版本 9
 
 [English](../report-format.md)
 
 `paperdelta schema report` 输出**完整存储报告**的 JSON Schema。
-[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–8。配置、提案、
+[仓库中的 schema](../schemas/report.schema.json)记录当前约定，读取器支持版本 1–9。配置、提案、
 快照、图来源、作者审阅和补丁有各自 schema；快照内嵌完整报告。
+
+## Schema 9 的生成流程
+
+新的检查输出 schema 9。可选 `provenance` 和 `fragments` 映射保留审核后的生成／片段
+记录、声明字节身份及独立的通过／不一致／未知状态。数值位置增加 `usage`（`prose` 或
+`table`）。序列化旧报告时省略空扩展。论文覆盖计数仍只涉及数值位置、结论和图形，
+生成／片段问题单独影响整体退出码。使用这些引用的配置要求 schema 10。
+详见[流程约定和限制](v1.6.md)。
 
 ## Schema 8 的静态源码位置
 
@@ -110,4 +118,4 @@ PDF 位置使用 `format: pdf`、`parser`、原文 `context` 与 `locator`。定
 
 配置 schema 3 引入 Word 原生位置；schema 4 增加 PDF 区域、解析身份以及
 `paper.companions` 和可选 `export_of`。使用旧 CSV/JSON 证据时，LaTeX 报告使用
-schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–8。
+schema 2，Word 使用 3，含 PDF 的使用 4；新证据格式要求 schema 5。读取器兼容版本 1–9。

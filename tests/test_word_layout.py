@@ -172,7 +172,7 @@ def test_referenced_notes_keep_part_id_and_read_only_report(tmp_path, kind):
     project.write("p.docx", raw)
     init_project(project, "p.docx", [])
     report = check_project(tmp_path)
-    assert report["report_schema_version"] == 7
+    assert report["report_schema_version"] == 9
     validate_record(StoredReport, report, "REPORT_SCHEMA")
     old = deepcopy(report)
     old["report_schema_version"] = 3

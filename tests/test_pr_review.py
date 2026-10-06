@@ -103,3 +103,28 @@ def test_changed_metric_contract_does_not_claim_scientific_resolution(project):
     assert any(
         item["subject"] == "occurrence:abstract_accuracy" for item in delta["changed_contracts"]
     )
+
+
+def test_removed_stale_generation_and_fragment_records_never_count_as_resolved(project, git_repo):
+    from test_fragments import spec
+    from test_provenance import setup_notebook
+
+    from paperdelta.fragments import accept_fragment, preview_fragment
+    from paperdelta.provenance import accept_producer
+
+    store, _, proposal = setup_notebook(project)
+    accept_producer(store, proposal)
+    accept_fragment(store, preview_fragment(store, "results", spec()))
+    store.write("observations.csv", b"sample,value\na,2\n")
+    store.write(spec()["path"], b"Manual change makes the fragment stale.\n")
+    base, _ = _commit_baseline(project, git_repo)
+    config, _ = load_config(store)
+    config.provenance = {}
+    config.fragments = {}
+    store.write("paperdelta.yaml", config_text(config).encode())
+    result = run_ci(project, base, "submitted-v1", "build/removed-workflows")
+    delta = result["context"]["finding_changes"]
+    removed = {item["subject"]: item for item in delta["removed_bindings"]}
+    for subject in ("provenance:training", "fragment:results"):
+        assert removed[subject]["before"] == "mismatch"
+    assert delta["counts"]["resolved_failures"] == 0

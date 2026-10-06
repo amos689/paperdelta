@@ -2,7 +2,8 @@
 
 Browser state is presentation, never the authority for a proposal or calculation.
 Every edit names a session revision; only an inspected, server-held proposal can
-be accepted. Nothing writes manuscript or evidence files.
+be accepted. Binding operations never write manuscript or evidence files.
+Explicit fragment acceptance writes only a reviewed generated destination.
 """
 
 from __future__ import annotations
@@ -85,6 +86,12 @@ from paperdelta.studio_batch import (
 )
 from paperdelta.studio_recovery import DraftRecovery, migrate_draft, rebuild_draft
 from paperdelta.studio_review import StudioReview
+from paperdelta.studio_workflows import (
+    FragmentPreview,
+    NotebookPath,
+    ProducerPreview,
+    WorkflowAccept,
+)
 
 MAX_CANDIDATES = 30
 
@@ -291,6 +298,12 @@ class RecoverySelection(RecoveryIdentity):
 
 
 PARAMETERS = {
+    "workflow-options": Empty,
+    "producer-notebook": NotebookPath,
+    "producer-preview": ProducerPreview,
+    "producer-accept": WorkflowAccept,
+    "fragment-preview": FragmentPreview,
+    "fragment-accept": WorkflowAccept,
     "state": Empty,
     "refresh": Empty,
     "initialize": Initialize,
@@ -596,6 +609,17 @@ class StudioSession:
         return browser_value(translated(result, request.language))
 
     def _execute(self, action, parameters):
+        if action in {
+            "workflow-options",
+            "producer-notebook",
+            "producer-preview",
+            "producer-accept",
+            "fragment-preview",
+            "fragment-accept",
+        }:
+            from paperdelta.studio_workflows import execute
+
+            return execute(self, action, parameters)
         if action in {"bundle-options", "bundle-preview", "bundle-export"}:
             import base64
 

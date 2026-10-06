@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "FragmentSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "enum": [
+            "latex",
+            "markdown"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "enum": [
+            "en",
+            "zh-CN"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "layout": {
+          "default": "table",
+          "enum": [
+            "value",
+            "table"
+          ],
+          "title": "Layout",
+          "type": "string"
+        },
+        "occurrences": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+            "type": "string"
+          },
+          "maxItems": 128,
+          "minItems": 1,
+          "title": "Occurrences",
+          "type": "array"
+        },
+        "path": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "format",
+        "path",
+        "occurrences"
+      ],
+      "title": "FragmentSpec",
+      "type": "object"
+    },
+    "FragmentValue": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_fingerprint": {
+          "pattern": "^sha256:[a-f0-9]{64}$",
+          "title": "Evidence Fingerprint",
+          "type": "string"
+        },
+        "metric": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Metric",
+          "type": "string"
+        },
+        "occurrence": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,99}$",
+          "title": "Occurrence",
+          "type": "string"
+        },
+        "rendered": {
+          "title": "Rendered",
+          "type": "string"
+        }
+      },
+      "required": [
+        "occurrence",
+        "metric",
+        "rendered",
+        "evidence_fingerprint"
+      ],
+      "title": "FragmentValue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract": {
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "title": "Contract",
+      "type": "string"
+    },
+    "fragment_schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Fragment Schema Version",
+      "type": "integer"
+    },
+    "inputs": {
+      "additionalProperties": {
+        "pattern": "^sha256:[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "title": "Inputs",
+      "type": "object"
+    },
+    "output_hash": {
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "title": "Output Hash",
+      "type": "string"
+    },
+    "record_id": {
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "title": "Record Id",
+      "type": "string"
+    },
+    "recorded_at": {
+      "title": "Recorded At",
+      "type": "string"
+    },
+    "spec": {
+      "$ref": "#/$defs/FragmentSpec"
+    },
+    "tool_version": {
+      "title": "Tool Version",
+      "type": "string"
+    },
+    "values": {
+      "items": {
+        "$ref": "#/$defs/FragmentValue"
+      },
+      "title": "Values",
+      "type": "array"
+    }
+  },
+  "required": [
+    "fragment_schema_version",
+    "tool_version",
+    "recorded_at",
+    "spec",
+    "contract",
+    "inputs",
+    "values",
+    "output_hash",
+    "record_id"
+  ],
+  "title": "FragmentRecord",
+  "type": "object"
+}

@@ -79,6 +79,19 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_review_bundle_browser.cjs build/review-bundle-browser
+      - name: Install controlled Notebook execution dependencies
+        # Only the authored validation below requests execution; checking stays read-only.
+        run: python -m pip install nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.30.1
+      - name: Install Quarto for the authored render workflow
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2
+        with:
+          version: '1.9.38'
+      - name: Verify actual Notebook execution and Quarto PDF freshness
+        run: python -X utf8 tools/validate_notebook_workflow.py --out build/notebook-workflow --quarto quarto
+      - name: Test bilingual workflow declarations, fragments and revision lists
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_workflows_browser.cjs build/workflows-browser
       - name: Keep all browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -121,6 +134,12 @@ jobs:
             build/review-bundle-browser/evidence.json
             build/review-bundle-browser/*.png
             build/review-bundle-browser/failure.json
+            build/workflows-browser/evidence.json
+            build/workflows-browser/*.png
+            build/workflows-browser/failure.json
+            build/notebook-workflow/evidence.json
+            build/notebook-workflow/paper/reports/**
+            build/notebook-workflow/paper/.paperdelta/run-logs/**
           if-no-files-found: warn
 
   test:

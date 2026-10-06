@@ -5,7 +5,7 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light"><title>PaperDelta Studio</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="/studio.css">
-<script src="/studio-statistics.js" defer></script><script src="/studio-review.js" defer></script><script src="/studio-batch.js" defer></script><script src="/studio.js" defer></script></head><body>
+<script src="/studio-statistics.js" defer></script><script src="/studio-review.js" defer></script><script src="/studio-batch.js" defer></script><script src="/studio-workflows.js" defer></script><script src="/studio.js" defer></script></head><body>
 <header><div class="brand"><span class="brand-mark" aria-hidden="true">Δ</span>
 <div><strong>PaperDelta<span class="dot">.</span></strong><span data-i18n="workbench"></span></div></div>
 <div class="header-right"><span id="project" class="project"></span><button id="diagnostic-preview" class="secondary" data-i18n="diagnostic_preview"></button>
@@ -44,6 +44,27 @@ PAGE = """<!doctype html>
 <div id="rebuild-work" hidden><p data-i18n="rebuild_hint"></p><div id="rebuild-items"></div><button id="preview-rebuild" data-i18n="preview_rebuild"></button></div>
 <div id="rebuild-preview"></div><div id="rebuild-confirm" hidden><label class="check attest"><input id="rebuild-attest" type="checkbox"><span data-i18n="rebuild_attest"></span></label><button id="accept-rebuild" data-i18n="accept_rebuild" disabled></button></div></section>
 <div id="review-workspace" hidden>
+<details id="workflow-panel" class="panel"><summary data-i18n="workflow_title"></summary><p data-i18n="workflow_notice"></p>
+<button id="workflow-load" class="secondary" data-i18n="workflow_load"></button>
+<div id="workflow-states"></div><h3 data-i18n="revision_title"></h3><div id="workflow-revisions"></div>
+<details id="producer-panel"><summary data-i18n="producer_title"></summary><form id="producer-form">
+<div class="form-grid"><label><span data-i18n="workflow_name"></span><input name="name" required maxlength="100" placeholder="training"></label>
+<label><span data-i18n="producer_kind"></span><select name="kind"><option value="notebook">Notebook</option><option value="quarto">Quarto</option></select></label>
+<label><span data-i18n="producer_source"></span><input name="source" required placeholder="analysis.ipynb"></label></div>
+<button id="producer-inspect" type="button" class="secondary" data-i18n="producer_inspect"></button><div id="producer-cells"></div>
+<label><span data-i18n="producer_inputs"></span><textarea name="inputs" rows="2" placeholder="data/observations.csv"></textarea></label>
+<label><span data-i18n="producer_outputs"></span><textarea name="outputs" rows="2" required placeholder="results/metrics.csv"></textarea></label>
+<label><span data-i18n="rationale"></span><textarea name="rationale" required maxlength="4000"></textarea></label>
+<label class="check"><input name="replace" type="checkbox"><span data-i18n="workflow_replace"></span></label><button type="submit" data-i18n="workflow_preview"></button></form></details>
+<details id="fragment-panel"><summary data-i18n="fragment_title"></summary><form id="fragment-form"><p data-i18n="fragment_hint"></p>
+<div class="form-grid"><label><span data-i18n="workflow_name"></span><input name="name" required maxlength="100" placeholder="result-table"></label>
+<label><span data-i18n="fragment_format"></span><select name="format"><option value="latex">LaTeX</option><option value="markdown">Markdown</option></select></label>
+<label><span data-i18n="fragment_layout"></span><select name="layout"><option value="table" data-i18n="fragment_table"></option><option value="value" data-i18n="fragment_value"></option></select></label>
+<label><span data-i18n="fragment_path"></span><input name="path" required placeholder="generated/results.tex"></label></div>
+<fieldset><legend data-i18n="fragment_bindings"></legend><div id="fragment-bindings"></div></fieldset>
+<label class="check"><input name="replace" type="checkbox"><span data-i18n="workflow_replace"></span></label><button type="submit" data-i18n="workflow_preview"></button></form></details>
+<section id="workflow-preview" hidden><h3 data-i18n="workflow_preview_title"></h3><div id="workflow-preview-body"></div>
+<label class="check attest"><input id="workflow-attest" type="checkbox"><span data-i18n="workflow_attest"></span></label><button id="workflow-accept" disabled data-i18n="workflow_accept"></button></section></details>
 <section class="panel"><div class="section-heading"><div><p class="eyebrow" data-i18n="review_eyebrow"></p><h2 data-i18n="ongoing_title"></h2></div><span id="watch-state" role="status"></span></div>
 <details id="watch-details"><summary id="watch-changes"></summary><ul id="watch-paths" class="muted"></ul></details><div id="ongoing-counts" class="counts"></div>
 <div class="snapshot-controls"><label><span data-i18n="compare_snapshot"></span><select id="baseline-select"></select></label>

@@ -340,7 +340,7 @@ def test_pdf_check_report_agent_and_read_only_patch(pdf_project):
     before = project.read("paper.pdf")
     report = check_project(project.root)
     assert report["exit_code"] == 0
-    assert report["report_schema_version"] == 4
+    assert report["report_schema_version"] == 9
     validate_record(StoredReport, report, "TEST_REPORT")
     assert "bbox" in json_text(report)
     create_snapshot(project, "before", report)
@@ -422,7 +422,7 @@ def test_bundled_pdf_source_demo(tmp_path, language, scenario):
     assert result["patch"] is None
     project = Project(tmp_path / "pdf-demo")
     report = check_project(project.root)
-    assert report["report_schema_version"] == 4
+    assert report["report_schema_version"] == 9
     assert len(report["exports"]) == 2
     assert report["exports"][0]["status"] == ("aligned" if scenario == "baseline" else "stale")
     assert "data:image/png;base64," in project.text("review/report.html")[0]

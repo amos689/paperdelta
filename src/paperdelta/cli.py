@@ -54,6 +54,7 @@ def parser() -> argparse.ArgumentParser:
     from paperdelta.demo import register_commands as register_demo
     from paperdelta.evidence_cli import register_commands as register_evidence
     from paperdelta.manuscripts import register_commands as register_manuscripts
+    from paperdelta.provenance_cli import register_commands as register_provenance
     from paperdelta.review_bundle_cli import register_commands as register_bundle
     from paperdelta.studio_server import register_commands as register_studio
     from paperdelta.watch import register_commands as register_watch
@@ -66,6 +67,10 @@ def parser() -> argparse.ArgumentParser:
     register_studio(commands)
     register_evidence(commands)
     register_bundle(commands)
+    register_provenance(commands)
+    from paperdelta.fragment_cli import register_commands as register_fragments
+
+    register_fragments(commands)
     doctor = commands.add_parser("doctor", help=tr("cli.doctor"))
     doctor.add_argument("--require-mcp", action="store_true", help=tr("cli.require_mcp"))
     diagnostics = commands.add_parser("diagnostics", help=tr("diagnostics.help"))
@@ -116,6 +121,10 @@ def parser() -> argparse.ArgumentParser:
             "batch-selection",
             "evidence-import",
             "evidence-export",
+            "producer-record",
+            "producer-proposal",
+            "fragment-record",
+            "fragment-proposal",
         ],
     )
     check = commands.add_parser("check", help=tr("cli.help.6"))
@@ -190,24 +199,28 @@ def main(argv: list[str] | None = None) -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8")
     argv = list(sys.argv[1:] if argv is None else argv)
+    # An explicit producer command owns all subsequent arguments, including flags
+    # named --lang, --project or --format. Do not interpret them as our preferences.
+    boundary = next(
+        (index for index, value in enumerate(argv) if value in {"--", "--command"}), len(argv)
+    )
+    options = argv[:boundary]
     use_json = any(
         value == "--format=json"
-        or (value == "--format" and argv[index + 1 : index + 2] == ["json"])
-        for index, value in enumerate(argv)
+        or (value == "--format" and options[index + 1 : index + 2] == ["json"])
+        for index, value in enumerate(options)
     )
     selected = None
     directory = "."
-    for index, argument in enumerate(argv):
-        if argument == "--":
-            break
+    for index, argument in enumerate(options):
         if argument.startswith("--lang="):
             selected = argument.split("=", 1)[1]
-        elif argument == "--lang" and index + 1 < len(argv):
-            selected = argv[index + 1]
+        elif argument == "--lang" and index + 1 < len(options):
+            selected = options[index + 1]
         elif argument.startswith("--project="):
             directory = argument.split("=", 1)[1]
-        elif argument in {"-C", "--project"} and index + 1 < len(argv):
-            directory = argv[index + 1]
+        elif argument in {"-C", "--project"} and index + 1 < len(options):
+            directory = options[index + 1]
         elif argument.startswith("-C") and len(argument) > 2:
             directory = argument[2:]
     try:
@@ -242,6 +255,14 @@ def _main(argv: list[str]) -> int:
     arguments = parser().parse_args(argv)
     project = Project(Path(arguments.project))
     try:
+        if arguments.command in {"fragment", "revisions"}:
+            from paperdelta.fragment_cli import run_command
+
+            return run_command(project, arguments)
+        if arguments.command == "provenance":
+            from paperdelta.provenance_cli import run_command
+
+            return run_command(project, arguments)
         if arguments.command == "studio":
             from paperdelta.studio_server import run_command
 
@@ -325,9 +346,11 @@ def _main(argv: list[str]) -> int:
             from paperdelta.batch import BatchCatalog, BatchRequest, BatchSelection
             from paperdelta.builder import BindingDraft
             from paperdelta.experiment_exports import ExperimentExport, ImportRequest
+            from paperdelta.fragments import FragmentProposal, FragmentRecord
             from paperdelta.models import Config
             from paperdelta.onboarding import Proposal, ProposalInput
             from paperdelta.patches import Patch
+            from paperdelta.provenance import ProducerProposal, ProducerRecord
             from paperdelta.records import FigureRecord, ReviewRecord, Snapshot, StoredReport
             from paperdelta.repairs import RepairProposal
 
@@ -347,6 +370,10 @@ def _main(argv: list[str]) -> int:
                 "batch-selection": BatchSelection,
                 "evidence-import": ImportRequest,
                 "evidence-export": ExperimentExport,
+                "producer-record": ProducerRecord,
+                "producer-proposal": ProducerProposal,
+                "fragment-record": FragmentRecord,
+                "fragment-proposal": FragmentProposal,
             }
             print(json_text(schemas[arguments.kind].model_json_schema()), end="")
             return 0
@@ -507,7 +534,7 @@ def _main(argv: list[str]) -> int:
         print(json_text(report) if arguments.format == "json" else text_report(report), end="")
         return report["exit_code"]
     except (PaperDeltaError, OSError) as exc:
-        if arguments.command == "bundle" or (
+        if arguments.command in {"bundle", "provenance", "fragment", "revisions"} or (
             getattr(arguments, "format", "text") == "json"
             and (json_errors.get() or arguments.command in {"check", "scan"})
         ):
