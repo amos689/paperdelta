@@ -82,6 +82,7 @@ async function runCase(browser, kind, language, batch=false) {
     if (batch) {
       await act(page,'.batch-choice button');
       for (const id of annotation.mean_sd) await act(page,`#batch-locations input[data-batch-candidate="${id}"]`,'check');
+      await act(page,'nav [data-step=batch]');
       await act(page,'#batch-templates summary');
       await act(page,'#template-save-form [name=name]','fill','seed_statistics');
       await act(page,'#template-save-form button');
