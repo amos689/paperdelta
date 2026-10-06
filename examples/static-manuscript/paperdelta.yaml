@@ -107,7 +107,7 @@ occurrences:
         column: 1
         percent_symbol: false
         page: 1
-        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        parser: paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107
     metric: accuracy
     display:
       kind: percent
@@ -124,7 +124,7 @@ occurrences:
         column: 1
         percent_symbol: false
         page: 1
-        parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+        parser: paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107
     metric: baseline
     display:
       kind: percent
@@ -136,7 +136,7 @@ occurrences:
       prefix: 'Our method achieves '
       suffix: ' accuracy on Data-A.'
       block: sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6
-      parser: paperdelta-pdf/2;pdfplumber/0.11.10;pdfminer/20260107
+      parser: paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107
     metric: accuracy
     display:
       kind: percent

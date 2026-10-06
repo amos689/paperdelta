@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    "occurrences:export_table_accuracy",
+    "occurrences:export_table_baseline",
+    "occurrences:export_abstract_accuracy"
+  ],
+  "check_exit_code": 0,
+  "config_sha256": "f6d288c7d448f777c0e162a105c6d43e15c5dbbfe0cae60139dd4235c477d530",
+  "passing_bindings": 8,
+  "repair_id": "sha256:cfe3f417c33cc8043dc7042a9fdfad3a5a3a75dd06cf7e815bcc7c82d5232652",
+  "scope": "Authored static-manuscript example repaired with normal proposal, preview and explicit developer acceptance. Historical evidence untouched.",
+  "unmodified_inputs": {
+    "appendix.md": "f94134f4d928a538d05ee55e570dbf7b7e41e5eb849502e518b68d2a3115df28",
+    "export.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7"
+  }
+}
