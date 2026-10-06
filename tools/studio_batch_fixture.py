@@ -68,6 +68,8 @@ def create(path, kind):
             )
             + "\n\\end{tabular}\n",
             encoding="utf-8",
+            # Match the original Windows v0.6/v0.8 fixture byte for byte on every host.
+            newline="\r\n",
         )
     elif kind == "docx":
         from docx import Document

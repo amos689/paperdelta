@@ -1,12 +1,32 @@
 {
-  "scope": "Release changes after model revision 2 freeze; the frozen implementations and measured results are unchanged.",
-  "reason_en": "Open contributing-evidence tables in joint review and restore checkbox keyboard focus after redraw. No Agent protocol, source identity, model prompt or scorer change.",
-  "reason_zh_CN": "联合复核默认展开参与计算的证据表，并在重绘后恢复复选框键盘焦点。未修改 Agent 协议、来源身份、模型提示或评分器。",
+  "scope": "Release changes after model revision 2 freeze; frozen implementations and measured results remain unchanged.",
+  "reason_en": "Joint-review evidence tables open and checkbox keyboard focus is restored after redraw. Live CSS uses the canonical LF bytes in Git; its content is otherwise identical. No Agent protocol, source identity, prompt or scorer change.",
+  "reason_zh_CN": "联合复核展开证据表，并在重绘后恢复复选框键盘焦点。当前 CSS 使用 Git 中规范的 LF 字节，其他内容完全相同。未改变 Agent 协议、来源身份、提示词或评分器。",
   "frozen_protocol_sha256": "sha256:255c49c7b988b40a6aab1011cfc5d7b92b098ebbaad835e1ff5ff1e556763dfc",
   "changes": {
     "src/paperdelta/assets/studio-batch.js": {
       "frozen": "sha256:ce0c7ff9dd35c8898255ec9b4c795b9bc819f7e2dead654b365093eade612ed0",
       "release": "sha256:3b910462a4c64c451316f011aeb6f96457b1334b42933ef2a939f6b5f2b8c528"
+    },
+    "src/paperdelta/assets/studio.css": {
+      "frozen": "sha256:f7aa4672d1474f12ce5baf28a531b3cd1f138df8d8598d49e8cc1b146c2856b6",
+      "release": "sha256:e7f43425fbcc2b2fa28eacb93209e2b0c7e9f4596901af698a7d998a8ba60aee"
     }
+  },
+  "packaging": {
+    "normalized_live_files_to_existing_index_bytes": [
+      "docs/agent-guide.md",
+      "docs/assets/v1.4/ci-input-correction.json",
+      "docs/assets/v1.4/local-validation.json",
+      "docs/assets/v1.4/model_response_replay.json",
+      "docs/assets/v1.4/release-adjustments.json",
+      "docs/assets/v1.4/upgrade.json",
+      "docs/assets/v1.4/uvx.json",
+      "docs/translations.json",
+      "docs/zh-CN/agent-guide.md",
+      "src/paperdelta/assets/studio.css",
+      "tools/render_native_v2.ps1"
+    ],
+    "frozen_paths_normalized": false
   }
 }

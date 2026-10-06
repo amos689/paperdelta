@@ -59,7 +59,7 @@ abstract, table and claim, then open a separate source/PDF example with a stale 
 
 **1.4.0** adds three-stage onboarding, reasoned source suggestions and side-by-side
 evidence/location review. Shared experiment definitions and reviewed labels preserve
-explicit identities. The same 24-metric browser task took 54 operations, down from
+explicit identities. The same 24-metric LaTeX/CSV task took 54 operations, down from
 103 in v0.8; this is an automated action count, not a human usability study.
 [New workflow and compatibility](docs/v1.4.md) ·
 [Real-document results and limits](validation/native-v2/README.md).

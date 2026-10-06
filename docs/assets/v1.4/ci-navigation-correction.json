@@ -1,0 +1,24 @@
+{
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37470951015",
+  "cause": "The old statistical batch browser flow attempted to operate experiment templates from the new review stage.",
+  "repair": "Navigate back to the experiment stage before operating the template controls; retain every statistical, selection and language assertion.",
+  "product_code_changed": false,
+  "verification": {
+    "statistics": {
+      "status": "passed",
+      "cases": 16
+    },
+    "layout": {
+      "status": "passed",
+      "cases": 8
+    },
+    "reliability": {
+      "status": "passed",
+      "cases": 8
+    },
+    "reports": {
+      "status": "passed",
+      "cases": 2
+    }
+  }
+}

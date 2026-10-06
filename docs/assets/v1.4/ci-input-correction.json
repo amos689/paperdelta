@@ -1,0 +1,10 @@
+{
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37469270873",
+  "job": "Local studio / browser",
+  "stage": "Measure bilingual three-stage onboarding on identical inputs",
+  "cause": "The LaTeX fixture generator used host-default newlines. Linux LF bytes differed from the preserved Windows CRLF baseline before any browser action.",
+  "original_windows_sha256": "755727490a05041dff6a554cb46308d59b89d665ed3ae2700432ee6767b053e1",
+  "linux_first_failure_sha256": "34e91b91b62a6c7b1561a4213f45449c07701c942c9d58958afe3a2b69e5a2ce",
+  "repair": "Specify CRLF in the authored LaTeX fixture generator on every host. Keep exact baseline hash assertions and all frozen inputs/results unchanged.",
+  "meaning": "Harness input-byte correction; no checker, Agent, browser interaction or scoring change."
+}
