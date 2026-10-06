@@ -1,0 +1,1095 @@
+{
+  "version": "1.6.0",
+  "commit": "57d4bec23c55191a3de4d0982b4b3f65f0eb7c78",
+  "checked_at": "2026-10-06T16:49:26.230144+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37493921506",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-1.6.0-py3-none-any.whl": "29afb8fe2a3084c41367a86d7cc4f953e42cdb0e84fb4df8fc3c0b4fd47e7c8d",
+    "paperdelta-1.6.0.tar.gz": "70d4b6587e56a5ab2b27b04453ad627e0c841fe714c878c3c8043dfe3cc8d926",
+    "paperdelta-evaluation-1.6.0.zip": "0dcad5acfbfc1d517fc7787eb4b9c804e896078ce983936dcae9d181caf2443b"
+  },
+  "status": "passed",
+  "canonical_source_bytes_match_git": true,
+  "installed_wheel_is_exact_release_archive": true,
+  "installed_wheel_sha256": "29afb8fe2a3084c41367a86d7cc4f953e42cdb0e84fb4df8fc3c0b4fd47e7c8d",
+  "local_installed_suite": {
+    "tests": 896,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 893,
+    "seconds": 446.59
+  },
+  "installed_browser_flows": {
+    "workflows": {
+      "status": "passed",
+      "scope": "Four authored saved-state browser workflows; actual Jupyter execution and Quarto rendering are measured separately. Not independent usability or scientific validity.",
+      "cases": [
+        {
+          "name": "latex-en",
+          "status": "passed",
+          "format": "latex",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "latex-zh-CN",
+          "status": "passed",
+          "format": "latex",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-en",
+          "status": "passed",
+          "format": "markdown",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-zh-CN",
+          "status": "passed",
+          "format": "markdown",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        }
+      ]
+    },
+    "studio": {
+      "results": [
+        {
+          "document": "tex",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "tex",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "md",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "md",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "qmd",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "qmd",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        }
+      ]
+    },
+    "evidence": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "tsv",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "tsv",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "xlsx",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "xlsx",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "records",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.pdevidence.json": "0f7165245a20d4dc62633378e3728abb4c29e890c76adbae042fef8e65909017"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "records",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.pdevidence.json": "b1023d3a0c74f89232b76df24e874d8bd823c62683e5f71ad84cdce6e26ebfc8"
+          },
+          "remote_requests": [],
+          "errors": []
+        }
+      ]
+    },
+    "statistics": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "tex",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.docx": "46759560140cc08d4d591dd76374588e6d4dfdb3d89ab6824fdfe7f5946ad3ae",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.docx": "5acf0d0b4564872126ac25040db22faffb60bf1b11ba9a34ac449f85354c9b03",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.pdf": "4b3fc8b3810a9ca4cd3ff906877e7917c00bfb4d719d00a4ae28623f527dda61",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.pdf": "3bdb723a2298fec453c732d47ba985c62c18cef37fc5ace3b4a9f48b6d4918c2",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        }
+      ]
+    },
+    "layout": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "docx-table",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "65e5eef972149939bba79dafe5c45cb75ad1d9d05ab6401b18aa95ff13e56e9f",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 3,
+            "offset": 0,
+            "paragraph": 9,
+            "part": "word/document.xml",
+            "row": 3,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-table",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "3fedf03fc86c9d8749ed94be52ddc37f4689a4b1f067b409e8d0f44793de2a5a",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 3,
+            "offset": 0,
+            "paragraph": 9,
+            "part": "word/document.xml",
+            "row": 3,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-note",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "742a358ba84a831583538249c9d727917819b514daf305971a10dd427ff9d82d",
+          "locator": {
+            "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+            "note_id": 7,
+            "offset": 20,
+            "paragraph": 1,
+            "part": "word/footnotes.xml",
+            "section": [],
+            "style": ""
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-note",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "ca8ffbb6145122cb0d3d39ee99949a3e1f0d7b12a4a937914f4f89dd3f538ee2",
+          "locator": {
+            "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+            "note_id": 7,
+            "offset": 20,
+            "paragraph": 1,
+            "part": "word/footnotes.xml",
+            "section": [],
+            "style": ""
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-rotated",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+          "locator": {
+            "bbox": [
+              297.516,
+              87.344,
+              309.516,
+              110.696
+            ],
+            "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+            "offset": 7,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              500,
+              400
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-rotated",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+          "locator": {
+            "bbox": [
+              297.516,
+              87.344,
+              309.516,
+              110.696
+            ],
+            "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+            "offset": 7,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              500,
+              400
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-merged",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+          "locator": {
+            "bbox": [
+              170,
+              165.484,
+              193.352,
+              177.484
+            ],
+            "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+            "cell": 2,
+            "offset": 0,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ],
+            "row": 2,
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-merged",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+          "locator": {
+            "bbox": [
+              170,
+              165.484,
+              193.352,
+              177.484
+            ],
+            "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+            "cell": 2,
+            "offset": 0,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ],
+            "row": 2,
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        }
+      ]
+    }
+  },
+  "real_notebook_and_quarto": {
+    "status": "passed",
+    "tools": {
+      "ipykernel": "6.30.1",
+      "nbclient": "0.10.2",
+      "nbformat": "5.10.4",
+      "paperdelta": "1.6.0",
+      "quarto": "1.9.38"
+    },
+    "scope": "Authored real Jupyter execution and Quarto/Typst rendering; not an independent reproducibility or scientific-validity study. Embedded image content remains explicitly unverified.",
+    "phases": [
+      "baseline",
+      "input_changed",
+      "table_refreshed_old_figure_and_pdf",
+      "code_changed_saved_outputs_unchanged"
+    ],
+    "actual_commands_completed": 3,
+    "raw_record": "build/v16-notebook-installed3/evidence.json",
+    "same_four_phase_contract_as_public_development_record": "docs/assets/v1.6/workflow-real.json"
+  },
+  "remote_composite_action": {
+    "expected_exit_code": 1,
+    "fresh_paper_git_repository": true,
+    "language": "en",
+    "new_failures": 5,
+    "only_evidence_changed": true,
+    "original_inputs_preserved": true,
+    "paper_code_executed": false,
+    "sarif_written": true,
+    "status": "passed"
+  },
+  "actual_public_previous_version_upgrade": {
+    "status": "passed",
+    "from_version": "1.5.0",
+    "to_version": "1.6.0",
+    "source": "Freshly installed published 1.5.0 wheel produced the original persisted draft.",
+    "bindings_preserved": 2,
+    "preview_passed": 2,
+    "accepted": 0,
+    "input_and_config_sha256_unchanged": {
+      "paper.tex": "b3b6f188b820ae7a5de14b7220e89b975b562f35257595a3d8cead612b46a890",
+      "results.csv": "bd6ae7da4fcd3fc953d1b19758cdfcb610aa9c015e19d5fffe5cdf88c0557fdb",
+      "paperdelta.yaml": "17eed2027b6fe0f5118e6eac726ad3ced83ac28c91a0dca509091d2c9c2d691d"
+    },
+    "scope": "One actual LaTeX upgrade; five-format contract migration and stale-input tests are separate authored regressions."
+  },
+  "uvx": {
+    "status": "passed",
+    "tool": "PaperDelta 1.6.0",
+    "host": "Windows",
+    "architecture": "AMD64",
+    "python": "3.12.14",
+    "wheel_sha256": "29afb8fe2a3084c41367a86d7cc4f953e42cdb0e84fb4df8fc3c0b4fd47e7c8d",
+    "runs": [
+      {
+        "extras": false,
+        "arguments": [
+          "--version"
+        ],
+        "exit_code": 0,
+        "seconds": 1.937
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "latex",
+          "--out",
+          "latex-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.766
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "markdown",
+          "--out",
+          "markdown-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.641
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "quarto",
+          "--out",
+          "quarto-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.515
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "docx",
+          "--out",
+          "docx-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 2.047
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "pdf",
+          "--out",
+          "pdf-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.484
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "-C",
+          "pdf-en",
+          "scan",
+          "--format",
+          "json"
+        ],
+        "exit_code": 2,
+        "seconds": 0.391
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "latex",
+          "--out",
+          "latex-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.656
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "markdown",
+          "--out",
+          "markdown-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.5
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "quarto",
+          "--out",
+          "quarto-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.516
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "docx",
+          "--out",
+          "docx-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.609
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "pdf",
+          "--out",
+          "pdf-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.86
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "-C",
+          "pdf-zh-CN",
+          "scan",
+          "--format",
+          "json"
+        ],
+        "exit_code": 2,
+        "seconds": 0.39
+      }
+    ]
+  },
+  "configuration_schema_max": 10,
+  "report_schema_max": 9,
+  "mcp_tools": 22,
+  "strict_package_description": "passed",
+  "frozen_previous_materials_unchanged": true,
+  "superseded_ci": [
+    {
+      "run": "https://github.com/amos689/paperdelta/actions/runs/37492233692",
+      "browser_job": "failed on old schema expectation; remaining jobs canceled after replacement fix"
+    },
+    {
+      "run": "https://github.com/amos689/paperdelta/actions/runs/37492929393",
+      "reason": "Superseded by the final Chinese conditional-wording correction; canceled rather than used as final release acceptance."
+    }
+  ],
+  "development_adjustments": "docs/assets/v1.6/development-adjustments.json",
+  "scope": "Authored installed-package, real process and remote CI checks. Not independent usability, general parsing accuracy, reproducibility or scientific validity. Recorded execution is separate from author acceptance.",
+  "remote_new_workflow_validation": {
+    "browser": {
+      "status": "passed",
+      "scope": "Four authored saved-state browser workflows; actual Jupyter execution and Quarto rendering are measured separately. Not independent usability or scientific validity.",
+      "cases": [
+        {
+          "name": "latex-en",
+          "status": "passed",
+          "format": "latex",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "latex-zh-CN",
+          "status": "passed",
+          "format": "latex",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-en",
+          "status": "passed",
+          "format": "markdown",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-zh-CN",
+          "status": "passed",
+          "format": "markdown",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "remote_requests": []
+        }
+      ]
+    },
+    "actual_jupyter_and_quarto": {
+      "status": "passed",
+      "tools": {
+        "ipykernel": "6.30.1",
+        "nbclient": "0.10.2",
+        "nbformat": "5.10.4",
+        "paperdelta": "1.6.0",
+        "quarto": "1.9.38"
+      },
+      "phases": [
+        "baseline",
+        "input_changed",
+        "table_refreshed_old_figure_and_pdf",
+        "code_changed_saved_outputs_unchanged"
+      ],
+      "scope": "Authored real Jupyter execution and Quarto/Typst rendering; not an independent reproducibility or scientific-validity study. Embedded image content remains explicitly unverified."
+    },
+    "frozen_native_replay": {
+      "scope": "Frozen code regression on previously observed native documents",
+      "matches_implementation_lock": true,
+      "counts": {
+        "mislocated": 0,
+        "missed": 3,
+        "supported": 158,
+        "unknown": 61
+      },
+      "dependencies": {
+        "lxml": "6.1.3",
+        "pdfminer.six": "20260107",
+        "pdfplumber": "0.11.10",
+        "python-docx": "1.2.0"
+      },
+      "same_dependencies_as_first_run": true,
+      "outcomes_match": true
+    }
+  },
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v1.6.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37498477761",
+  "pypi": "https://pypi.org/project/paperdelta/1.6.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-1.6.0-py3-none-any.whl": "29afb8fe2a3084c41367a86d7cc4f953e42cdb0e84fb4df8fc3c0b4fd47e7c8d",
+    "paperdelta-1.6.0.tar.gz": "70d4b6587e56a5ab2b27b04453ad627e0c841fe714c878c3c8043dfe3cc8d926"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true,
+  "public_demo_formats": [
+    "latex",
+    "markdown",
+    "quarto",
+    "docx",
+    "pdf"
+  ],
+  "downloaded_github_evaluation_sha256": "0dcad5acfbfc1d517fc7787eb4b9c804e896078ce983936dcae9d181caf2443b"
+}

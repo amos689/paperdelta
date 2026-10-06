@@ -135,7 +135,7 @@ does not replace the remaining scope. The shared release requirements above appl
 | 1.3 | Word incomplete grids, multilevel headers and multiple values per cell; PDF numeric token boundaries and reading order; actionable extraction/identity/ambiguity diagnostics and reviewed native position selection; same-input Docling comparison; current README demonstration and links, isolated uvx startup and previewable private-by-default diagnostic bundles | Repair the four recorded PDF misses; about twenty newly sourced licensed native documents with at least 200 independently located targets, article-family development/held-out split, preserved first results and all four outcome classes; bilingual browser and installation verification; comparison records state whether an optional backend improves usable positions | Released 1.3.0; see delivery record below |
 | 1.4 | Three-stage onboarding; proposed source types, keys and experiment groups with reasons/conflicts; combined evidence/location review; shared experiment definitions; reviewed aliases; complete Agent proposal workflow with explicit errors and bounded correction | Same 24-metric task at no more than 60 recorded operations while retaining explicit review; independently recorded real-model complete mapping, identity error, abstention, latency and cost results; deterministic validation remains separate from model evidence | Released 1.4.0; see delivery record below |
 | 1.5 | Reusable GitHub Action; PR-oriented new/resolved/unverified findings and removed declarations; SARIF for actual text locations; selected portable review bundles with content preview; combined workflow with paper-preflight while both tools remain independent | Fresh paper repository setup; data-only changes show all affected locations; removed bindings visibly reduce coverage; SARIF and binary-document report links agree with original positions; bundle inspection and replay preserve declared scope | Released 1.5.0; see delivery record below |
-| 1.6 | Notebook cell/input/output provenance; Quarto render-output freshness; generated LaTeX/Markdown result fragments from accepted metrics; experiment-change revision lists across prose/tables/figures | Real notebook/Quarto workflows distinguish new evidence, refreshed tables, stale PDF and stale figures; records distinguish declared provenance from execution proof; generated fragments are deterministic and reviewed; offline checks retain input identities | Required after 1.5 |
+| 1.6 | Notebook cell/input/output provenance; Quarto render-output freshness; generated LaTeX/Markdown result fragments from accepted metrics; experiment-change revision lists across prose/tables/figures | Real notebook/Quarto workflows distinguish new evidence, refreshed tables, stale PDF and stale figures; records distinguish declared provenance from execution proof; generated fragments are deterministic and reviewed; offline checks retain input identities | Released 1.6.0; delivery record below |
 
 The native sample protocol and source split must precede parser work; held-out
 layout and scoring remain unopened until the implementation is frozen. Existing
@@ -190,3 +190,24 @@ metadata differs. Downloaded wheel, source and evaluation hashes match, and fres
 public installs ran all five manuscript formats in both languages. These authored
 checks do not establish independent usability, registry accuracy or scientific validity.
 Version 1.6 remains required.
+
+
+## 1.6 delivery record
+
+Released at `57d4bec23c55191a3de4d0982b4b3f65f0eb7c78`: [17 named CI jobs](https://github.com/amos689/paperdelta/actions/runs/37493921506),
+[GitHub](https://github.com/amos689/paperdelta/releases/tag/v1.6.0), [PyPI](https://pypi.org/project/paperdelta/1.6.0/) and
+[public verification](assets/v1.6/publication.json). The exact release wheel passed
+893 tests with three POSIX-only Windows skips. Four new bilingual workflow
+browser flows and 40 existing native/evidence/statistics/layout flows passed against
+that wheel. Thirteen isolated startup cases and actual public 1.5 draft recovery passed.
+An installed-package workflow executed an actual Jupyter kernel and Quarto/Typst
+render, then distinguished refreshed tables/fragments from old prose, false claims,
+old figures/PDFs and changed code with unchanged saved outputs. Ordinary checking
+did not execute project code. Embedded image content remains explicitly unverified.
+All three downloaded public artifact hashes match; fresh public installs ran five
+manuscript formats in both languages. Earlier failures and superseded runs remain
+recorded. These authored checks do not establish independent usability, complete
+causal provenance or scientific validity.
+
+All four approved versions from 1.3 through 1.6 have now been delivered. Further
+feature directions require a separately approved scope.
