@@ -507,8 +507,9 @@ def _main(argv: list[str]) -> int:
         print(json_text(report) if arguments.format == "json" else text_report(report), end="")
         return report["exit_code"]
     except (PaperDeltaError, OSError) as exc:
-        if getattr(arguments, "format", "text") == "json" and (
-            json_errors.get() or arguments.command in {"check", "scan"}
+        if arguments.command == "bundle" or (
+            getattr(arguments, "format", "text") == "json"
+            and (json_errors.get() or arguments.command in {"check", "scan"})
         ):
             print(
                 json_text(

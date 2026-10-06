@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "schema": "https://github.com/oasis-tcs/sarif-spec/blob/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "schema_sha256": "c3b4bb2d6093897483348925aaa73af03b3e3f4bd4ca38cef26dcb4212a2682e",
+  "cases": [
+    {
+      "case": "docx-en",
+      "sha256": "eada6b0142bfc0543d96cd1eda51cf940ea1e9f3dcd97f73324115094f7f8e03"
+    },
+    {
+      "case": "docx-zh-CN",
+      "sha256": "be5174a8888bd5240e710f388e988d4fd62aa9d5025e1529c4db9bdeb6969d4f"
+    },
+    {
+      "case": "latex-en",
+      "sha256": "9b4818bbe2865d07c4b495bc05c2ca704fd843819820752ea76386ddb16c1b42"
+    },
+    {
+      "case": "latex-zh-CN",
+      "sha256": "5389a30792fc6d3611856a3e49542f5545fcdd1ab7f0705021bc59b7e412397d"
+    },
+    {
+      "case": "markdown-en",
+      "sha256": "caff37dabc0f31afbd6c44374288f76bf0305ca78da6050299c00317bc4878b8"
+    },
+    {
+      "case": "markdown-zh-CN",
+      "sha256": "d8ae6830010aeb8cd6867f99bc309cb238e6140e94c859384aa7654ac7cdb122"
+    },
+    {
+      "case": "pdf-en",
+      "sha256": "5e357f8d2a6f0957811428a78ab1cfe9c1e1dea39dfb06ece10b3345652f1537"
+    },
+    {
+      "case": "pdf-zh-CN",
+      "sha256": "7c4e5dc2d7d0eef559425f46a6a9ccabb3e26a94c5ed268f727f54e938db2a9a"
+    },
+    {
+      "case": "quarto-en",
+      "sha256": "da1bd8630b0e828c192df4b86d1215c9b10d23698724e502947936b933eedc7b"
+    },
+    {
+      "case": "quarto-zh-CN",
+      "sha256": "61d5f40ebdd4bf3a3cd544283cc6b671ab711bf7951f56185f81b81558a15427"
+    }
+  ],
+  "scope": "Official SARIF 2.1 JSON schema including format validation; not a remote GitHub code-scanning upload."
+}

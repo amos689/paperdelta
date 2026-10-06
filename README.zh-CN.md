@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.4.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.4.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.5.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.4.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,10 +55,9 @@
 [打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.4.0** 增加三阶段接入、带依据的来源建议、证据与原文并排复核，以及共用实验定义
-和经确认的身份别名。同一 24 指标 LaTeX/CSV 任务从 v0.8 的 103 次操作降到 54 次；这是
-自动化操作量，不是真人易用性测量。详见[新流程与兼容性](docs/zh-CN/v1.4.md)及
-[真实文档结果与边界](validation/native-v2/README.zh-CN.md)。
+**1.5.0** 增加可复用 GitHub Action、PR 问题变化摘要和 SARIF 报告。
+删除绑定会明确显示覆盖减少；选定的审查包可预览、下载并离线重放。
+[协作审查与 CI](docs/zh-CN/v1.5.md) · [便携审查包](docs/zh-CN/review-bundle.md)。
 
 静态 [LaTeX](docs/zh-CN/rules.md)、[Markdown/Quarto](docs/zh-CN/markdown-quarto.md)、
 [Word](docs/zh-CN/word.md) 和 [PDF](docs/zh-CN/pdf.md) 共用明确声明的
@@ -89,7 +88,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
 已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
-`uvx --python 3.12 paperdelta@1.4.0 --lang zh-CN demo --out paperdelta-demo --open`。
+`uvx --python 3.12 paperdelta@1.5.0 --lang zh-CN demo --out paperdelta-demo --open`。
 每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
 
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用

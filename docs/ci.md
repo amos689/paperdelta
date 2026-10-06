@@ -2,6 +2,10 @@
 
 [简体中文](zh-CN/ci.md)
 
+For the current reusable Action, finding transitions, SARIF and independent
+paper-preflight workflow, use the [1.5 integration guide](v1.5.md). Historical
+validation below is retained with its original scope.
+
 The execution counts below are historical a2 evidence. Current release validation
 is tracked separately in the [0.3.0 release notes](v0.3.md). Use a 0.3.0-or-newer
 checker commit for schema-2 scope, exclusion and table-cell configurations.

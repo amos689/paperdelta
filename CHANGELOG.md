@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.5.0 — 2026-10-07
+
+- Reusable trusted GitHub Action and explicit PR finding transitions; removed or unverified bindings never count as resolved failures.
+- SARIF with real text positions and native Word/PDF report links.
+- Selected, previewed Studio/CLI review archives with exact-input offline replay and unchanged checking scope.
+- Independent paper-preflight workflow, bilingual guidance and retained compatibility with accepted configurations and 1.4 drafts.
+- [Scope and validation](docs/v1.5.md).
+
 ## 1.4.0 — 2026-10-06
 
 - Three-stage Studio onboarding with reasoned type/key/group suggestions and joint evidence/location review; every acceptance remains explicit.

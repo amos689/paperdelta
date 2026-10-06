@@ -1,0 +1,424 @@
+{
+  "status": "passed",
+  "scope": "Developer-operated browser workflows and exact-input replay, not human usability or scientific validation.",
+  "cases": [
+    {
+      "name": "latex-en",
+      "status": "passed",
+      "checked_inputs": 11,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [
+            "accuracy"
+          ],
+          "occurrences": [
+            "abstract_accuracy",
+            "appendix_accuracy",
+            "gain_text",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 7,
+          "mismatch": 6,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "6ee1b720101d542bc6251d25b39a73e2c2b3bf27c59b260e313a4ac93a69dd9d",
+        "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+        "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+        "paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+        "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+        "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+        "paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+        "results/metrics.csv": "f064b2d251d71d8de97d8ab6933d29c7037d520911433f0410552e20c124d9d2",
+        "scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907"
+      },
+      "archive_sha256": "716c8a2537521fbdb96de93d5ce8bc0480391c4b45998f0a0e8e29f70a732c54",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "latex-zh-CN",
+      "status": "passed",
+      "checked_inputs": 11,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [
+            "accuracy"
+          ],
+          "occurrences": [
+            "abstract_accuracy",
+            "appendix_accuracy",
+            "gain_text",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 7,
+          "mismatch": 6,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "fa48721132dfd423c1ad969f83093e9471e49cd7427764b270f976aeb48185dc",
+        "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+        "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+        "paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+        "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+        "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+        "paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+        "results/metrics.csv": "f064b2d251d71d8de97d8ab6933d29c7037d520911433f0410552e20c124d9d2",
+        "scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907"
+      },
+      "archive_sha256": "983518d35590892da2c27c86bc5fe08282d994834346364a908d58cfa01dbd84",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "docx-en",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "82621db28f8ac316b81a04a7c0107191270128ef41d5e10be6582d0312b7f423",
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "285225ad2a362f0b5f078f5fad2eba7a5c600987df01bff021ecbfd6a3d3c31a",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "docx-zh-CN",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "bd4c12c3392c88f3a0965596f95972ceddede3544f6a7a1fcf2cb46045760dde",
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "92788afebcf4eefd3c42e628a10a2c89430f78bf7394c1289247a20c9feec304",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "pdf-en",
+      "status": "passed",
+      "checked_inputs": 5,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "source_accuracy",
+            "source_baseline",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 6,
+          "mismatch": 3,
+          "pass": 3,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "620ebfef140accc41561cda2e1aa06faee8366eca03688e1e998cac63b85d828",
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+      },
+      "archive_sha256": "80521ef6542a6d7612e7b7c72c9cafe72d06e2930d0cf0cba2f8c88cf228c3ff",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "pdf-zh-CN",
+      "status": "passed",
+      "checked_inputs": 5,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "source_accuracy",
+            "source_baseline",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 6,
+          "mismatch": 3,
+          "pass": 3,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "5a6d584655449085211efc3aba124c6fb9a6acf890a4134e1c85f99f24efcf0e",
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+      },
+      "archive_sha256": "7163c6200ded3436094598f22e210e35c50ea9f60f4559dee9f864accaef4e47",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "markdown-en",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "20c207b464739fb6bffe26c69d7fa5c81cd24ee03c80570343c30d63a816fa43",
+        "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "941c18db40db9ce7d2385796f54823b42ae70bdd2a3765d17378c9de7937975e",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "markdown-zh-CN",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "9f45cd23493cb03485236431ed40b26ce9076cc4417204085bb6ace7156c267e",
+        "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "a87ee5129413b544fd618771e58e9585f7959bc5b70aaaa7136f4b08cc1391d9",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "quarto-en",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "769abff0f1c4b4f5786ed794cd42c9f4cc057aec2fb7a67043bac9421dde0957",
+        "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "20d01eff1e295e4ba75f58970b8fdc9093d7b04482fae6574b6362a7fce85141",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    },
+    {
+      "name": "quarto-zh-CN",
+      "status": "passed",
+      "checked_inputs": 4,
+      "scope": {
+        "bindings": {
+          "claims": [
+            "main_comparison"
+          ],
+          "figures": [],
+          "occurrences": [
+            "abstract_accuracy",
+            "table_accuracy",
+            "table_baseline"
+          ]
+        },
+        "check_exit_code": 1,
+        "coverage": {
+          "confirmed": 4,
+          "mismatch": 3,
+          "pass": 1,
+          "unknown": 0
+        },
+        "coverage_exclusions": [],
+        "require_complete_coverage": false,
+        "review_scope": null
+      },
+      "input_sha256": {
+        ".paperdelta/baselines/before.json": "46348719f684b1c546d0de49d021007e64b3c6e65a49e71a807fcc9e860f6901",
+        "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "30f9d494bb3431e0e3385d740236be3848f0ad4fa751e48874a3af187b19b392",
+      "language_switch_preserved_selection": true,
+      "replayed_same_result": true,
+      "no_project_execution": true,
+      "remote_requests": []
+    }
+  ]
+}

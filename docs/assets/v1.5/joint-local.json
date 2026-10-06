@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "paperdelta": {
+    "cases": [
+      {
+        "expected_exit_code": 1,
+        "fresh_paper_git_repository": true,
+        "language": "en",
+        "new_failures": 5,
+        "only_evidence_changed": true,
+        "original_inputs_preserved": true,
+        "paper_code_executed": false,
+        "sarif_written": true,
+        "status": "passed"
+      },
+      {
+        "expected_exit_code": 1,
+        "fresh_paper_git_repository": true,
+        "language": "zh-CN",
+        "new_failures": 5,
+        "only_evidence_changed": true,
+        "original_inputs_preserved": true,
+        "paper_code_executed": false,
+        "sarif_written": true,
+        "status": "passed"
+      }
+    ],
+    "scope": "Local action entry point; remote composite run is separate.",
+    "status": "passed"
+  },
+  "paper_preflight_version": "0.4.0",
+  "paper_preflight": [
+    {
+      "language": "en",
+      "exit_code": 1,
+      "rules": [
+        "CIT005",
+        "CIT001"
+      ]
+    },
+    {
+      "language": "zh",
+      "exit_code": 1,
+      "rules": [
+        "CIT005",
+        "CIT001"
+      ]
+    }
+  ],
+  "network": "No reference lookup; paper-preflight used explicit offline mode. Package installation can use the index.",
+  "scope": "Local independent tool execution on authored data and undefined citation. Does not measure reference provider accuracy or a remote combined workflow."
+}

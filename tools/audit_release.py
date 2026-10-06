@@ -145,6 +145,7 @@ def main():
         "THIRD_PARTY_NOTICES.md",
         "pyproject.toml",
         "MANIFEST.in",
+        "action.yml",
         ".gitattributes",
         ".gitignore",
         ".github/workflows/ci.yml",
@@ -160,6 +161,7 @@ def main():
         "examples/figure-support/accuracy.pdf",
         "examples/figure-support/accuracy.record.json",
         "examples/ci/paper-check.yml",
+        "examples/ci/paper-review.yml",
     ]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "tools").glob("*.py")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/schemas").glob("*.json")]
@@ -186,6 +188,7 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.2").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.3").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.4").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.5").glob("*")]
     required += [
         p.relative_to(ROOT).as_posix()
         for p in (ROOT / "validation/mapping-v4").rglob("*")

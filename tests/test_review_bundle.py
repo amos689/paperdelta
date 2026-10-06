@@ -149,8 +149,35 @@ def test_baseline_changing_during_preview_cannot_describe_different_input_bytes(
 
 @pytest.mark.parametrize("name", [".", ".git/config", "AUX.txt", "trailing. ", "a?b", "x\x01y"])
 def test_portable_review_refuses_nonportable_names_and_git_metadata(name):
-    from paperdelta.review_bundle import _name
-
+    output = io.BytesIO()
+    with ZipFile(output, "w", compression=ZIP_DEFLATED) as archive:
+        archive.writestr(name, b"untrusted member")
     with pytest.raises(PaperDeltaError) as error:
-        _name(name)
+        inspect_bundle(output.getvalue())
     assert error.value.code == "REVIEW_BUNDLE_PATH"
+
+
+@pytest.mark.parametrize("language", ["en", "zh-CN"])
+def test_cli_preview_create_inspect_and_replay_preserve_failure_exit(
+    project, change_results, capsys, language
+):
+    from paperdelta.cli import main
+
+    change_results(project)
+    prefix = ["--lang", language, "-C", str(project), "bundle"]
+
+    def run(arguments, expected=0):
+        assert main(prefix + arguments) == expected
+        return parse_json(capsys.readouterr().out)
+
+    plan = run(["preview", "--all-inputs", "--out", "review-plan.json"])
+    assert plan["scope"]["check_exit_code"] == 1
+    run(["create", "--plan", "review-plan.json", "--out", "review.zip"])
+    assert run(["inspect", "review.zip"])["plan"] == plan
+    result = run(["replay", "review.zip", "--out", "reproduced"], 1)
+    assert result["same_result"] and result["scope"] == plan["scope"]
+    run(["preview", "--out", "partial-plan.json"])
+    run(["create", "--plan", "partial-plan.json", "--out", "partial.zip"])
+    partial = run(["replay", "partial.zip", "--out", "not-replayable"], 2)
+    assert partial["error"] == "REVIEW_BUNDLE_INCOMPLETE"
+    assert not (project / "not-replayable").exists()
