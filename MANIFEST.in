@@ -9,6 +9,7 @@ recursive-include tools *.py *.cjs
 recursive-include tests *.py
 recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
 recursive-include validation/mapping-v4 *.md *.json *.tex *.csv *.yaml *.py *.css *.js *.log
+recursive-include validation/mapping-v4 LICENSE
 prune tests/corpus
 prune validation/native-v1
 prune validation/native-v2
