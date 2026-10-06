@@ -1,0 +1,207 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.9220000000004802,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:20188f6ea01e01b23df7ff0c5733fc496eb10370124bae27f5224811d3d5e579",
+      "response_sha256": "sha256:c44daa7dcfa6bca401716ae215c319679250b15760030f36b3288296a2749c70",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 64,
+        "prompt_tokens": 3729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3793
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.811999999999898,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ced431e0986dacc7c775d68610ba4b2f8416a0c1f7af785fcb820436af1c5ffb",
+      "response_sha256": "sha256:73b61153ab2d67eac22f069c5054ecfab5040994f66eb048fa0fb6a631e50c0e",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 161,
+        "prompt_tokens": 4211,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4372
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.875,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a9c7a3965c4916dae9845f49f076236f138492cf1c9dd250a501aa08bc2b9068",
+      "response_sha256": "sha256:bdbad97cf0939d1d251301f31b0d4205f70fa701bb94e1fd2108e6a1bd1c262b",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 159,
+        "prompt_tokens": 4351,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4510
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.1559999999990396,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:220e718c90ea23397d1e0ddc29958a7fc9218fa23b35bb78b015109cc4f30425",
+      "response_sha256": "sha256:a96f504b7f68f20076e21e9e881a3327acac5029ae526c6cfe473d4facc1392b",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 4326,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4509
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 5,
+      "elapsed_seconds": 3.75,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:258edbaab7b0b6fe81ac14c6319eb869b2b733a347bc96dfc83f1f313fc963e1",
+      "response_sha256": "sha256:9e5b372b48159317b7a7cca12dbf9379fb10121fd0f00d736b4fa465fa1c0829",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 214,
+        "prompt_tokens": 5047,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5261
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 6,
+      "elapsed_seconds": 2.17200000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:618d42da171edfd79dd691b0063226658a221b69ca0f49a8066bd87410ece4e0",
+      "response_sha256": "sha256:475f5bbba1d1da24c4e031d1db63ef0d6ea129c100cbce8237f40160a7181771",
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 5217,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5289
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics.csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test",
+            "variant": "full"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "metrics.csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string",
+            "variant": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed",
+            "variant"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/main.tex": "sha256:75cef1e2c42f8b4510249f070c5451e44d89138408f0b5394d1ae631d07bbaa2",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:b75ad6c42f8cbc8adc97f0c1aca2ce87898b31742ea8cf96cfeb101bfbaaef9a"
+    },
+    "proposal_id": "sha256:521ef4bc44d8a0fb392a6d5da5649bb05167b022e2b5162190cc27897ea47aa4",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:test_accuracy": "The value '84.1%' is found in the text file 'paper/main.tex' and corresponds to the metric 'test_accuracy' for the full variant of Ours on Data-A with seeds 1, 2, and 3."
+    },
+    "tool_version": "1.4.0"
+  },
+  "reason": "The mapping for the mean test accuracy of the full variant of Ours on Data-A with seeds 1, 2, and 3 has been successfully established. The value is derived from the CSV file and corresponds to the textual occurrence in the LaTeX document.",
+  "status": "proposed"
+}

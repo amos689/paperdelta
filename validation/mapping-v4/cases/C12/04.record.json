@@ -1,0 +1,24 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 2.811999999999898,
+  "error": {
+    "code": "DRAFT_METRIC",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMetric\n  A count metric must use unit: count [type=validation.models.2, input_value={'source': 'metrics.csv',...[1], 'statistics': None}, input_type=dict]"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:2bc35a14a20887bdc250811f7a5e50c29bf2d926c19ef06879a24f830c84eae3",
+  "response_sha256": "sha256:d3750a7df5bce804040d4d360b8533e4c28b5ba93aad48d6040c0f86c7b0822b",
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 145,
+    "prompt_tokens": 4353,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4498
+  },
+  "valid": false
+}

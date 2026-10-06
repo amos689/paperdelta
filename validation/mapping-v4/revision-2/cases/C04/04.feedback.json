@@ -1,0 +1,178 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "finish",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:d44f604087136ea7f8f2716d448c4fe0a5a041192499d2d862515692e0f845b1",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_metrics",
+          "unit": "fraction",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 3
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "results_metrics": {
+          "columns": {
+            "accuracy": "decimal",
+            "accuracy_pct": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy"
+    ],
+    "available_sources": [
+      "results_metrics"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:d44f604087136ea7f8f2716d448c4fe0a5a041192499d2d862515692e0f845b1",
+    "metrics": {
+      "test_accuracy": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": "0.843"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "source": "results_metrics",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:51f052ddcff24600aae6d629cfe75c5541f616faf99fae62c127d834004cd94c",
+        "unit": "fraction",
+        "value": "0.841"
+      }
+    },
+    "rationale": {
+      "occurrences:test_accuracy_value": "The original location in the paper's main.tex file contains the test accuracy value as a percentage, which aligns with the metric 'test_accuracy' derived from the results/metrics.csv file."
+    }
+  },
+  "requires_confirmation": true,
+  "status": "draft"
+}

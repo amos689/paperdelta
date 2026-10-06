@@ -1,0 +1,98 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.8590000000003783,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:39a69f0f67f2f0359f0ee1547508d4027f3a199385c26716663d2b9f8e2d139c",
+      "response_sha256": "sha256:460f5b42a3a74b7a8be5300e31ef60a219068f0bad969a3967f70647b9483bb5",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 61,
+        "prompt_tokens": 3797,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3858
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.4840000000003783,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:64ebab39cb5ba5433f8b3b798c4092904bef48010c03c1ede1aecd48e6dcc57d",
+      "response_sha256": "sha256:8bea30c2043a13bb3aadf84680077dc8a3b69999570ae409e1ffa9868b8c1edc",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 127,
+        "prompt_tokens": 4276,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4403
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.6569999999992433,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:4eb7d891a84b66e9d4b87a956c93d1c0c76aa6c7375a690edc6f9700612badde",
+      "response_sha256": "sha256:55484d9dbf8fc764605631cda5349ba9c06022f564d037cffbec9e5c79e0fbcd",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 129,
+        "prompt_tokens": 4385,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4514
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 2.936999999999898,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7e03449ccd4b4149afd3591324c3d178aa891040bf005e6583d1d51467d43fd6",
+      "response_sha256": "sha256:aeaeb30b106d7788e33a78663c7a52b9cb889cce8e0bad6282a59030d1f431c9",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 157,
+        "prompt_tokens": 4353,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4510
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Defined the metric 'test_accuracy' using the 'accuracy' field from 'metrics.csv', filtered by dataset 'Data-A', model 'Ours', and split 'test'. Expected seeds 1, 2, and 3.",
+  "status": "budget_exhausted"
+}

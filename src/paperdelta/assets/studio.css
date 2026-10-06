@@ -22,3 +22,11 @@
 .statistics-summary dt { margin-top: .6rem; font-weight: 600; }
 #diagnostic-content{max-height:420px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
 @media(max-width:540px){header{flex-wrap:wrap}.header-right{width:100%;gap:12px;justify-content:space-between}.header-right .language>span{display:none}.brand{flex-shrink:0}}
+.joint-choice{border:1px solid var(--line);border-radius:12px;padding:18px;margin:18px 0;overflow-wrap:anywhere}
+.joint-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.joint-columns>*{min-width:0}.joint-choice .candidate{margin:12px 0}.joint-choice .candidate>.muted{margin:8px 12px;font-size:12px}
+#select-reviewed,#clear-reviewed{margin:12px 12px 12px 0}
+@media(max-width:800px){.joint-columns{grid-template-columns:1fr}.joint-choice{padding:12px}}
+.alias-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+#experiment-definition-content{max-height:440px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
+@media(max-width:700px){.alias-row{grid-template-columns:1fr}}

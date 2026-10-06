@@ -1,0 +1,202 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.139999999999418,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:763928a2b4b02d5ae1444ecf1efe7d2ec32033f982bb5744947bd7c49c5a298b",
+      "response_sha256": "sha256:714d06491420651c592b5bbacedb390bbe5dfd8488c07cda869e27d9daed03eb",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 61,
+        "prompt_tokens": 4483,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4544
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.92200000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5cf2547b3ebd6d26a314f4ae7edc5006d911c0b5dc36ef5ecfe88fdb03fccf18",
+      "response_sha256": "sha256:ddea1e2a6b0fe61fb92ff618cf55fe48b93054d1451ae924daf2c146a8e9938b",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 4972,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5106
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 2.82799999999952,
+      "error": {
+        "code": "RECORD_COUNT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Expected 6 records, got 3"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:558f558502ac4b742b887463b0bef914691f1d11ec0bfbc75cebabbbdb1467f7",
+      "response_sha256": "sha256:74ec6dfb908424df20d74ad58e8d5024ce02301373e33dcb8f07efb59937f68a",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 125,
+        "prompt_tokens": 5034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5159
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 2.938000000000102,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:2c0e39331b1ed8d709a8e5acee43e1b07d9fd2a5b34a0d9d003bf7f0628d7625",
+      "response_sha256": "sha256:f43854bccac762a15e989b2a63a14a0052ce04db3b164ce44a86b0d3ff0f7de3",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 127,
+        "prompt_tokens": 5103,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5230
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 5,
+      "elapsed_seconds": 4.203000000001339,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ea0ad2ef4077d98488c92824eb1cc72b119464991ab6ee6697752b056e364713",
+      "response_sha256": "sha256:520b4d491297916f9f8a006bad860ab776522ba382d5b427ceb7b1147ef10031",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 211,
+        "prompt_tokens": 5655,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5866
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 6,
+      "elapsed_seconds": 2.639999999999418,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:330b73fafbf59e8df13c55a1686342101018720adfd61b937afa51c8b5840361",
+      "response_sha256": "sha256:65ef21dd9889bfaed60918b36990e94a78d089056ad86e83b43b7e8037b9ad0e",
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 75,
+        "prompt_tokens": 5902,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5977
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "accuracy_metric": {
+          "expected_count": 3,
+          "expected_seeds": null,
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "accuracy_reported": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": ".\n"
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "accuracy_metric"
+        }
+      },
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/main.tex": "sha256:e799fe5f00097a24ef09943f4a9c6a101e8760d927c94a6c533c85cf65298415",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:5165cb2d3098e0c64bb18f4cf8a3e071fdb3a99647c82248c8ad4790cba1120b"
+    },
+    "proposal_id": "sha256:49555a114d12da4096deed1cf19fdc5c5f0586596cc211ac4a1719c9d0c9303c",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:accuracy_reported": "The reported accuracy value '84.1' in the paper's main.tex file matches the mean accuracy of 0.841 from the metrics.csv file for Data-A, Ours model, test split, and seeds 1-3."
+    },
+    "tool_version": "1.4.0"
+  },
+  "reason": "The reported accuracy value '84.1%' in the paper's main.tex file has been successfully mapped to the mean accuracy of 0.841 from the metrics.csv file for Data-A, Ours model, test split, and seeds 1-3.",
+  "status": "proposed"
+}

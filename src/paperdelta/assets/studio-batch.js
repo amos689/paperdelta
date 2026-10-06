@@ -4,9 +4,10 @@ window.createPaperDeltaBatch = function (ctx) {
   const $ = (id) => document.getElementById(id);
   const field = (name) => $('batch-form').elements.namedItem(name);
   const { t, node, api, task, update, download, pageButtons, metricDetails, notice } = ctx;
-  let catalog, locations, active, sourceSignature, templates = [], sourceDefinitions = {}, formDirty = false;
+  let catalog, locations, active, joint, sourceSignature, templates = [], sourceDefinitions = {}, formDirty = false;
   let choiceOffset = 0, locationOffset = 0, searchTimer, locationTimer;
   const selections = new Map();
+  let definitionRef = null, definitionPreview = null;
   const val = (name) => field(name).value;
   const stats = window.PaperDeltaStatistics;
   stats.mountContract($('batch-form')); stats.mountDisplay($('batch-form'));
@@ -20,6 +21,32 @@ window.createPaperDeltaBatch = function (ctx) {
     return Object.fromEntries([...$('batch-filters').querySelectorAll('.selector-row')]
       .filter((row) => row.querySelector('[type=checkbox]').checked)
       .map((row) => [row.dataset.column, row.querySelector('[type=text]').value]));
+  }
+  function aliases() {
+    return [...$('experiment-alias-rows').children].map(row => Object.fromEntries([...row.querySelectorAll('input')].map(input => [input.dataset.aliasField, input.value])));
+  }
+  function paintAliases(values) {
+    $('experiment-alias-rows').replaceChildren();
+    for (const value of values) {
+      const row = node('div', undefined, 'alias-row');
+      for (const key of ['column', 'value', 'label', 'rationale']) {
+        const label = node('label'), input = node('input'); input.type = 'text'; input.required = true;
+        input.maxLength = { column: 200, value: 1000, label: 500, rationale: 4000 }[key];
+        input.dataset.aliasField = key; input.value = value[key] || '';
+        label.append(node('span', t('experiment_alias_' + key)), input); row.append(label);
+      }
+      const remove = node('button', t('experiment_alias_remove'), 'secondary small'); remove.type = 'button';
+      remove.onclick = () => { row.remove(); dirty(); }; row.append(remove); $('experiment-alias-rows').append(row);
+    }
+  }
+  function paintReference() {
+    $('experiment-reference').hidden = !definitionRef;
+    $('experiment-reference').textContent = definitionRef ? t('experiment_reference', { id: definitionRef }) : '';
+  }
+  function dirty() {
+    formDirty = true; definitionRef = definitionPreview = null;
+    $('experiment-definition-preview').hidden = true; $('experiment-definition-attest').checked = false;
+    paintReference(); paintCounts(); paintJoint();
   }
   function choiceName(choice) {
     const definition = choice.definition;
@@ -53,6 +80,7 @@ window.createPaperDeltaBatch = function (ctx) {
       seed_column: val('seed_column'), expected_seeds: seeds.length ? seeds : null,
       statistics: stats.contract($('batch-form')),
       display: { kind: val('display_kind'), places: Number(val('places')), percent_symbol: field('percent_symbol').checked, statistics: stats.display($('batch-form')) },
+      aliases: aliases(), experiment_definition: definitionRef,
     };
   }
   function applyRequest(value) {
@@ -69,6 +97,8 @@ window.createPaperDeltaBatch = function (ctx) {
     field('display_kind').value = value.display.kind; field('places').value = value.display.places;
     field('percent_symbol').checked = value.display.percent_symbol;
     stats.apply($('batch-form'), value.statistics, value.display.statistics);
+    paintAliases(value.aliases || []); definitionRef = value.experiment_definition || null; paintReference();
+    definitionPreview = null; $('experiment-definition-preview').hidden = true;
     formDirty = true; paintCounts(); notice(t('template_loaded'));
   }
   function paintCounts() {
@@ -83,6 +113,70 @@ window.createPaperDeltaBatch = function (ctx) {
     choiceOffset = offset;
     catalog = await api('batch-choices', { catalog_id: catalog.catalog_id, query: $('batch-search').value, offset });
     paintChoices();
+    if ($('batch-joint-toggle').checked) await loadJoint(offset);
+  }
+  async function loadJoint(offset = 0) {
+    if (!catalog) return;
+    joint = await api('batch-review', { catalog_id: catalog.catalog_id, query: $('batch-search').value, offset });
+    paintJoint();
+  }
+  function choose(choice, candidate, checked) {
+    const ids = selections.get(choice.choice_id) || new Set();
+    if (checked) ids.add(candidate.candidate_id); else ids.delete(candidate.candidate_id);
+    if (ids.size) selections.set(choice.choice_id, ids); else selections.delete(choice.choice_id);
+    paintCounts(); paintChoices(); paintJoint(); paintLocations();
+  }
+  function paintJoint() {
+    const focused = document.activeElement?.dataset.jointCandidate;
+    const focusedChoice = document.activeElement?.closest('.joint-choice')?.dataset.choice;
+    const enabled = $('batch-joint-toggle').checked;
+    $('batch-joint').hidden = $('batch-joint-pages').hidden = !enabled;
+    $('batch-catalog').querySelector('.two-columns').hidden = enabled;
+    $('batch-joint').replaceChildren();
+    if (!enabled || !joint) return;
+    for (const choice of joint.items) {
+      const card = node('article', undefined, 'joint-choice'); card.dataset.choice = choice.choice_id;
+      card.append(node('h3', choiceName(choice)));
+      const columns = node('div', undefined, 'joint-columns'), evidence = node('div'), candidates = node('div');
+      evidence.append(node('h4', t('batch_joint_evidence')));
+      if (choice.result) {
+        const details = metricDetails({ result: choice.result, definition: choice.definition });
+        for (const section of details.querySelectorAll('details')) section.open = true;
+        evidence.append(details, node('p', t('batch_evidence_limit'), 'muted'));
+      }
+      else evidence.append(node('p', choice.message, 'issue'));
+      evidence.append(node('p', t('experiment_guard', { count: choice.definition.expected_count ?? '—', seed_column: choice.definition.seed_column || 'seed', seeds: (choice.definition.expected_seeds || []).join(', ') || '—' }), 'muted'));
+      candidates.append(node('h4', t('batch_joint_positions')), node('p', t('batch_joint_count', { shown: choice.locations.length, matches: choice.context_match_count, total: choice.location_count }), 'muted'));
+      for (const candidate of choice.locations) {
+        const location = node('div', undefined, 'candidate'), label = node('label', undefined, 'check candidate-top'), check = node('input');
+        check.type = 'checkbox'; check.dataset.jointCandidate = candidate.candidate_id;
+        check.checked = selections.get(choice.choice_id)?.has(candidate.candidate_id) || false;
+        check.disabled = choice.status !== 'ready' || formDirty || ctx.state()?.stale || [...selections].some(([key, ids]) => key !== choice.choice_id && ids.has(candidate.candidate_id));
+        check.onchange = () => choose(choice, candidate, check.checked);
+        label.append(check, node('span', candidate.label)); location.append(label);
+        if (candidate.column_header) location.append(node('p', t('batch_column', { column: candidate.column_header }), 'muted'));
+        const context = node('p', undefined, 'candidate-context');
+        context.append(node('span', candidate.context_before), node('mark', candidate.text), node('span', candidate.context_after)); location.append(context);
+        location.append(node('p', t('batch_matched', { matched: candidate.suggestion.matched_identity.join(', ') || '—', missing: candidate.suggestion.missing_identity.join(', ') || '—' }), 'muted'));
+        if (candidate.suggestion.aliases) for (const alias of candidate.suggestion.aliases) location.append(node('p', t('experiment_alias_match', { column: alias.column, value: alias.value, label: alias.label }), 'muted'));
+        if (candidate.format === 'pdf') {
+          const page = node('button', t('original_page'), 'secondary small'); page.type = 'button';
+          page.onclick = () => task(async () => { await showPage(candidate); $('batch-native-page').scrollIntoView({ block: 'start' }); }); location.append(page);
+        }
+        candidates.append(location);
+      }
+      const all = node('button', t('batch_joint_all'), 'secondary'); all.type = 'button';
+      all.onclick = () => task(async () => {
+        active = choice; $('batch-location-search').value = ''; $('batch-joint-toggle').checked = false;
+        await loadLocations(); paintJoint(); paintChoices(); $('batch-choice-evidence').scrollIntoView({ block: 'start' });
+      });
+      candidates.append(all); columns.append(evidence, candidates); card.append(columns); $('batch-joint').append(card);
+    }
+    if (!joint.items.length) $('batch-joint').append(node('p', t('batch_no_results'), 'empty'));
+    pageButtons($('batch-joint-pages'), joint.offset, joint.total, joint.limit, (offset) => task(() => loadChoices(offset)));
+    if (focused) for (const card of $('batch-joint').children) if (card.dataset.choice === focusedChoice) {
+      for (const input of card.querySelectorAll('input[data-joint-candidate]')) if (input.dataset.jointCandidate === focused) input.focus({ preventScroll: true });
+    }
   }
   function paintChoices() {
     $('batch-choices').replaceChildren();
@@ -144,6 +238,7 @@ window.createPaperDeltaBatch = function (ctx) {
       const context = node('p', undefined, 'candidate-context');
       context.append(node('span', candidate.context_before), node('mark', candidate.text), node('span', candidate.context_after)); card.append(context);
       if (candidate.suggestion) card.append(node('p', t('batch_matched', { matched: candidate.suggestion.matched_identity.join(', ') || '—', missing: candidate.suggestion.missing_identity.join(', ') || '—' }), 'muted'));
+      if (candidate.suggestion?.aliases) for (const alias of candidate.suggestion.aliases) card.append(node('p', t('experiment_alias_match', { column: alias.column, value: alias.value, label: alias.label }), 'muted'));
       if (candidate.format === 'pdf') {
         const button = node('button', t('original_page'), 'secondary small'); button.type = 'button';
         button.onclick = () => task(() => showPage(candidate)); card.append(button);
@@ -162,8 +257,9 @@ window.createPaperDeltaBatch = function (ctx) {
   function render(next) {
     if (!next.initialized) return;
     if (catalog && (next.batch_id !== catalog.catalog_id || next.stale)) {
-      catalog = locations = active = null; selections.clear(); $('batch-native-page').hidden = true;
+      catalog = locations = active = joint = null; selections.clear(); $('batch-native-page').hidden = true;
       $('batch-choices').replaceChildren(); $('batch-locations').replaceChildren(); $('batch-choice-evidence').replaceChildren();
+      paintJoint();
     }
     if (next.stale) { paintCounts(); return; }
     sourceDefinitions = next.sources || {};
@@ -178,22 +274,76 @@ window.createPaperDeltaBatch = function (ctx) {
   async function localize() {
     for (const [name, values] of [['unit', ['fraction', 'percent', 'scalar', 'percentage_point', 'count', 'ratio']], ['reduce', ['unique', 'mean', 'sum', 'count', 'statistics']], ['display_kind', ['percent', 'decimal', 'integer', 'scientific']]]) options(field(name), values, true);
     sourceControls(true);
+    paintAliases(aliases()); paintReference();
     if (catalog) {
       await loadChoices(choiceOffset);
       if (active) { active = catalog.items.find((item) => item.choice_id === active.choice_id) || active; await loadLocations(locationOffset); }
     }
     if ($('batch-templates').open) await loadTemplates();
+    if ($('experiment-definitions').open) await loadDefinitions();
+    if (!$('experiment-advice-view').hidden) await inspectExperimentAdvice();
     paintCounts();
   }
-  field('source').onchange = () => { sourceControls(); formDirty = true; paintCounts(); };
-  $('batch-form').oninput = () => { formDirty = true; paintCounts(); };
+  field('source').onchange = () => { sourceControls(); dirty(); $('experiment-advice-view').hidden = true; };
+  $('batch-form').oninput = dirty;
+  $('experiment-alias-add').onclick = () => { paintAliases([...aliases(), {}]); dirty(); };
+  async function inspectExperimentAdvice() {
+    const source = sourceDefinitions[val('source')]; if (!source) return;
+    const advice = await api('source-advice', { path: source.path, sheet: source.sheet, cell_range: source.cell_range });
+    const box = $('experiment-advice-view'); box.replaceChildren(); box.hidden = false;
+    box.append(node('p', advice.notice || advice.reason));
+    if (!advice.available) return;
+    const experiment = advice.experiment;
+    box.append(node('p', experiment.reason), node('p', t('experiment_advice_summary', { groups: experiment.group_by.join(', ') || '—', fields: experiment.result_fields.join(', ') || '—', repeats: experiment.repeat_columns.join(', ') || '—' })));
+    for (const conflict of advice.conflicts) box.append(node('p', conflict, 'issue'));
+    const apply = node('button', t('experiment_advice_apply'), 'secondary'); apply.type = 'button'; apply.disabled = !advice.complete;
+    apply.onclick = () => {
+      for (const [id, chosen] of [['batch-fields', experiment.result_fields], ['batch-groups', experiment.group_by]]) for (const input of $(id).querySelectorAll('input')) input.checked = chosen.includes(input.dataset.column);
+      for (const row of $('batch-filters').children) { const value = experiment.constant_identity[row.dataset.column]; row.querySelector('[type=checkbox]').checked = value !== undefined; row.querySelector('[type=text]').value = value ?? ''; }
+      if (experiment.repeat_columns.length === 1) field('seed_column').value = experiment.repeat_columns[0];
+      dirty(); notice(t('experiment_advice_review'));
+    };
+    box.append(apply);
+  }
+  $('experiment-advice').onclick = () => task(inspectExperimentAdvice);
+  async function loadDefinitions() {
+    const result = await api('experiment-list');
+    const previous = $('experiment-definition-select').value; $('experiment-definition-select').replaceChildren();
+    for (const value of result.items) $('experiment-definition-select').add(new Option(value.name + ' · ' + value.definition_id.slice(7, 19), value.definition_id));
+    if (result.items.some(value => value.definition_id === previous)) $('experiment-definition-select').value = previous;
+    $('experiment-definition-load').disabled = !result.items.length;
+    $('experiment-definition-errors').replaceChildren(...result.errors.map(item => node('p', item.file + ': ' + item.message, 'issue')));
+  }
+  $('experiment-definitions').ontoggle = () => { if ($('experiment-definitions').open && ctx.state()?.initialized) task(loadDefinitions); };
+  $('experiment-definition-load').onclick = () => task(async () => {
+    const loaded = await api('experiment-load', { definition_id: $('experiment-definition-select').value, source: val('source') });
+    applyRequest(loaded.request); notice(loaded.notice);
+  });
+  $('experiment-definition-form').oninput = () => { definitionPreview = null; $('experiment-definition-preview').hidden = true; };
+  $('experiment-definition-form').onsubmit = event => {
+    event.preventDefault(); task(async () => {
+      const form = $('experiment-definition-form');
+      definitionPreview = await api('experiment-preview', { name: form.elements.namedItem('name').value, rationale: form.elements.namedItem('rationale').value, request: request() });
+      $('experiment-definition-content').textContent = JSON.stringify(definitionPreview.definition, null, 2);
+      $('experiment-definition-preview').hidden = false; $('experiment-definition-attest').checked = false; $('experiment-definition-save').disabled = true;
+    });
+  };
+  $('experiment-definition-attest').onchange = () => { $('experiment-definition-save').disabled = !definitionPreview || !$('experiment-definition-attest').checked; };
+  $('experiment-definition-save').onclick = () => task(async () => {
+    if (!definitionPreview || !$('experiment-definition-attest').checked) return;
+    const result = await api('experiment-accept', { preview_id: definitionPreview.preview_id });
+    definitionRef = result.definition_id; definitionPreview = null; formDirty = true;
+    $('experiment-definition-preview').hidden = true; paintReference(); paintCounts(); await loadDefinitions(); notice(result.notice);
+  });
   $('batch-form').onsubmit = (event) => {
     event.preventDefault(); task(async () => {
       if (selections.size && !confirm(t('batch_replace'))) return;
       const result = await api('batch-catalog', request()); update(result.state);
-      catalog = result.batch; locations = active = null; selections.clear(); formDirty = false;
+      catalog = result.batch; locations = active = joint = null; selections.clear(); formDirty = false;
       $('batch-search').value = ''; choiceOffset = locationOffset = 0;
       paintChoices(); paintLocations(); notice(t('batch_generated'));
+      ctx.setStep('review');
+      if ($('batch-joint-toggle').checked) await loadJoint();
     });
   };
   $('batch-stage').onclick = () => task(async () => {
@@ -202,6 +352,7 @@ window.createPaperDeltaBatch = function (ctx) {
     update(result.state); ctx.setStep('review'); notice(t('batch_staged'));
   });
   $('batch-rationale').oninput = paintCounts;
+  $('batch-joint-toggle').onchange = () => task(async () => { if ($('batch-joint-toggle').checked) await loadJoint(choiceOffset); else paintJoint(); });
   $('batch-search').oninput = () => { clearTimeout(searchTimer); searchTimer = setTimeout(() => task(() => loadChoices(0)), 180); };
   $('batch-location-search').oninput = () => { clearTimeout(locationTimer); locationTimer = setTimeout(() => task(() => loadLocations(0)), 180); };
   $('batch-templates').ontoggle = () => { if ($('batch-templates').open && ctx.state()?.initialized) task(loadTemplates); };

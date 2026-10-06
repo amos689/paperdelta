@@ -1,0 +1,24 @@
+{
+  "action": "derived",
+  "action_index": 6,
+  "elapsed_seconds": 2.625,
+  "error": {
+    "code": "UNIT_MISMATCH",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Percentage points require proportions"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:24c3908581dfadf5ba24998961fd38698cffe5edc2f188f67b87e96fc6593dbf",
+  "response_sha256": "sha256:ffb029e9afa36bfe7483516961bcae4459d30f6e0bc65a2f69ca2ee2f884104e",
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 6321,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6401
+  },
+  "valid": false
+}

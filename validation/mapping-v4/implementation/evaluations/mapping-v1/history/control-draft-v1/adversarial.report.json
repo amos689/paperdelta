@@ -1,0 +1,685 @@
+{
+  "candidate_count_exact": true,
+  "candidate_records": 12,
+  "candidate_results": {
+    "invalid_proposal": 2,
+    "proposal_despite_insufficient_evidence": 2,
+    "reference_contract_match": 1,
+    "reference_contract_mismatch": 7
+  },
+  "case_count": 12,
+  "case_states": {
+    "invalid_proposal": 2,
+    "proposed": 10
+  },
+  "evaluated_at": "2026-10-02T18:37:20.661682+00:00",
+  "human_measurements": {
+    "ambiguity_rate": null,
+    "ambiguous": 0,
+    "basis": "Declared review observations, not independently authenticated",
+    "candidate_precision": null,
+    "confirmation_seconds": {},
+    "correct": 0,
+    "incorrect": 0,
+    "reviewed": 0,
+    "reviewer_kind": null,
+    "unreviewed": 12
+  },
+  "outcomes": {
+    "C01": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "train"
+              }
+            }
+          },
+          "core_status": "pass",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C02": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-B",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "pass",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C03": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string",
+                  "variant": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split",
+                  "variant"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test",
+                "variant": "ablated"
+              }
+            }
+          },
+          "core_status": "pass",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C04": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "accuracy_pct": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "mismatch",
+          "duplicate_target": false,
+          "expected_display": "0.8\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C05": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "args": [
+                {
+                  "expected_count": null,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": {
+                    "columns": {
+                      "accuracy": "decimal",
+                      "dataset": "string",
+                      "model": "string",
+                      "seed": "integer",
+                      "split": "string"
+                    },
+                    "format": "csv",
+                    "path": "results/metrics.csv",
+                    "primary_key": [
+                      "dataset",
+                      "model",
+                      "seed",
+                      "split"
+                    ]
+                  },
+                  "unit": "fraction",
+                  "where": {
+                    "dataset": "Data-A",
+                    "model": "Ours",
+                    "split": "test"
+                  }
+                },
+                {
+                  "expected_count": null,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": {
+                    "columns": {
+                      "accuracy": "decimal",
+                      "dataset": "string",
+                      "model": "string",
+                      "seed": "integer",
+                      "split": "string"
+                    },
+                    "format": "csv",
+                    "path": "results/metrics.csv",
+                    "primary_key": [
+                      "dataset",
+                      "model",
+                      "seed",
+                      "split"
+                    ]
+                  },
+                  "unit": "fraction",
+                  "where": {
+                    "dataset": "Data-A",
+                    "model": "Baseline",
+                    "split": "test"
+                  }
+                }
+              ],
+              "op": "relative_change_percent"
+            }
+          },
+          "core_status": "mismatch",
+          "duplicate_target": false,
+          "expected_display": "3.8",
+          "location": {
+            "byte_end": 24,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "3.1",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C06": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "1",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "pass",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C07": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "/runs/evaluation~1train/accuracy.mean",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": {
+                "columns": {},
+                "format": "json",
+                "path": "results/summary.json",
+                "primary_key": []
+              },
+              "unit": "fraction",
+              "where": {}
+            }
+          },
+          "core_status": "pass",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "reference_contract_mismatch"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C08": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "mismatch",
+          "duplicate_target": false,
+          "expected_display": "84.1\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "86.0\\%",
+          "result": "reference_contract_match"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C09": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "result": "invalid_proposal"
+        }
+      ],
+      "error": "PROPOSAL_UNRESOLVED",
+      "message": "occurrences:result could not be verified; inspect scan/check diagnostics",
+      "state": "invalid_proposal"
+    },
+    "C10": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "result": "invalid_proposal"
+        }
+      ],
+      "error": "PROPOSAL_UNRESOLVED",
+      "message": "occurrences:result could not be verified; inspect scan/check diagnostics",
+      "state": "invalid_proposal"
+    },
+    "C11": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "mismatch",
+          "duplicate_target": false,
+          "expected_display": "84.0\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "84.1\\%",
+          "result": "proposal_despite_insufficient_evidence"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    },
+    "C12": {
+      "candidates": [
+        {
+          "binding": "occurrences:result",
+          "contract": {
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": true,
+              "places": 2
+            },
+            "metric": {
+              "expected_count": null,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": {
+                "columns": {
+                  "accuracy": "decimal",
+                  "dataset": "string",
+                  "model": "string",
+                  "seed": "integer",
+                  "split": "string"
+                },
+                "format": "csv",
+                "path": "results/metrics.csv",
+                "primary_key": [
+                  "dataset",
+                  "model",
+                  "seed",
+                  "split"
+                ]
+              },
+              "unit": "fraction",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            }
+          },
+          "core_status": "mismatch",
+          "duplicate_target": false,
+          "expected_display": "0.84",
+          "location": {
+            "byte_end": 28,
+            "byte_start": 24,
+            "file": "paper/main.tex"
+          },
+          "paper_value": "0.01",
+          "result": "proposal_despite_insufficient_evidence"
+        }
+      ],
+      "reason": "Known reference control",
+      "state": "proposed"
+    }
+  },
+  "reference_abstention_cases": 3,
+  "reference_mappable_cases": 9,
+  "reference_targets_matched": 1,
+  "run": {
+    "context_protocol": "Constructed directly from known answers. No model or user trial.",
+    "kind": "control",
+    "label": "Deliberately wrong control",
+    "model": null
+  },
+  "scope": "Synthetic numeric mappings. Reference matches are not measured model accuracy. Contract differences require adjudication; alternative valid formulations may exist. Known invalid candidates remain in the denominator; uncountable proposals disable precision. Abstentions and missing cases remain visible as coverage outcomes.",
+  "submission_sha256": "sha256:f0a7c141178f3ddd143a431b1b81516bdaa835bdbb1aaeaba7afd66559962f35",
+  "suite_id": "mapping-contracts-v1",
+  "suite_lock_sha256": "sha256:32d76556be49aa6696070e2952f3f5a02c26e9a1bb25f083564499cf6b9f2237"
+}

@@ -1,0 +1,24 @@
+{
+  "action": "metric",
+  "action_index": 5,
+  "elapsed_seconds": 3.0939999999991414,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "metrics already contains test_accuracy_mean; choose another identifier."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:03435e11cea4be38b2bba46a3230cc912c277eb53f5467c3393c2031eff94f0c",
+  "response_sha256": "sha256:5e2a1a572b7a1cb163b933dfc0f0a4fe9cb44a9324e15be6a4d2422c50ceac1b",
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 165,
+    "prompt_tokens": 5343,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5508
+  },
+  "valid": false
+}

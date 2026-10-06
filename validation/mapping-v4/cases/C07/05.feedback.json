@@ -1,0 +1,159 @@
+{
+  "actions_remaining": 11,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:daf398f6c539555722337c3016892338635383360d169d1545cc335ac1996530",
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "metrics already contains test_accuracy_mean; choose another identifier."
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy_mean": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics.csv",
+          "unit": "fraction",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "metrics.csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy_mean"
+    ],
+    "available_sources": [
+      "metrics.csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:daf398f6c539555722337c3016892338635383360d169d1545cc335ac1996530",
+    "metrics": {
+      "test_accuracy_mean": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": "0.843"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "source": "metrics.csv",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:85a2a89d04477e081d7138a4b89f5dc083e399463373bb86728b260dc4879ed5",
+        "unit": "fraction",
+        "value": "0.841"
+      }
+    },
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "budget_exhausted"
+}

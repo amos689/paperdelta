@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.3.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.3.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.4.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.4.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,8 +55,9 @@
 [打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.3.0** 改进 Word/PDF 原文定位、经复核的表格身份与一格多值检查，增加可执行的
-诊断建议和可完整预览的隐私诊断包。详见[升级与隔离启动](docs/zh-CN/v1.3.md)及
+**1.4.0** 增加三阶段接入、带依据的来源建议、证据与原文并排复核，以及共用实验定义
+和经确认的身份别名。同一 24 指标浏览器任务从 v0.8 的 103 次操作降到 54 次；这是
+自动化操作量，不是真人易用性测量。详见[新流程与兼容性](docs/zh-CN/v1.4.md)及
 [真实文档结果与边界](validation/native-v2/README.zh-CN.md)。
 
 静态 [LaTeX](docs/zh-CN/rules.md)、[Markdown/Quarto](docs/zh-CN/markdown-quarto.md)、
@@ -88,7 +89,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
 已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
-`uvx --python 3.12 paperdelta@1.3.0 --lang zh-CN demo --out paperdelta-demo --open`。
+`uvx --python 3.12 paperdelta@1.4.0 --lang zh-CN demo --out paperdelta-demo --open`。
 每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
 
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用
@@ -105,7 +106,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.3.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.4.0-py3-none-any.whl`。
 
 ## 接入已有论文
 
@@ -164,13 +165,14 @@ python -m pip install 'paperdelta[mcp]'
 paperdelta --lang zh-CN -C /path/to/paper-project mcp
 ```
 
-十七个可选 MCP 工具提供检查、证据、提案及位置修复。其中四个批量会话工具让
+二十二个可选 MCP 工具提供检查、证据、提案及位置修复。其中四个批量会话工具让
 Agent 选择候选 ID，由程序组装复杂提案。会话在内存中保存，有数量和时效限制，
 输入变化后失效；工具不接受映射、不写论文文件。宿主配置与完整流程见
 [Agent 指南](docs/zh-CN/agent-guide.md)。不安装 MCP 也可使用 CLI JSON 和 schema。
 
-确定性协议测试验证工具行为。历史 [Qwen3-8B 试验](docs/zh-CN/staged-model-evaluation.md)
-未生成完整有效映射，本版不声称自动映射准确率已经得到证明。
+新的有界映射会话返回类型化错误和纠错提示，保留最后有效草稿，并允许明确拒答。
+确定性协议测试验证工具行为。[v1.4 真实模型试验](validation/mapping-v4/README.zh-CN.md)
+首次运行和独立冻结的修订均为 0/9 完整映射、0/3 正确拒答；自动映射仍属实验性能力。
 
 ## 支持范围
 

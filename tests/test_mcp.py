@@ -33,6 +33,11 @@ def test_mcp_exposes_only_read_only_tools(project):
                 "list_batch_candidates",
                 "select_batch_bindings",
                 "finish_batch_binding",
+                "inspect_source_contract",
+                "start_mapping_session",
+                "inspect_mapping_session",
+                "advance_mapping_session",
+                "inspect_experiment_definitions",
             }
             assert all(tool.annotations.read_only_hint for tool in listing.tools)
             schemas = {tool.name: tool.input_schema for tool in listing.tools}
@@ -77,6 +82,52 @@ def test_mcp_keeps_server_language_for_tools_called_outside_creation_context(
             )
 
     asyncio.run(run())
+
+
+def test_bounded_mapping_mcp_returns_recoverable_errors_without_project_writes(project):
+    store = Project(project)
+    before = {
+        p.relative_to(store.root): p.read_bytes() for p in store.root.rglob("*") if p.is_file()
+    }
+    server = create_server(store)
+
+    async def run():
+        async with mcp.Client(server) as client:
+            response = await client.call_tool("start_mapping_session")
+            assert not response.is_error
+            state = response.structured_content
+            original = state["draft_id"]
+            assert state["stage_schemas"]["metric"]["properties"]["unit"]["enum"]
+            error = await client.call_tool(
+                "advance_mapping_session",
+                {
+                    "session_id": state["session_id"],
+                    "revision": state["revision"],
+                    "action": "source",
+                    "arguments": {"name": "incomplete"},
+                },
+            )
+            assert not error.is_error
+            state = error.structured_content
+            assert state["status"] == "needs_correction" and state["draft_id"] == original
+            assert state["error"]["fields"] and state["previous_draft_preserved"]
+            ended = await client.call_tool(
+                "advance_mapping_session",
+                {
+                    "session_id": state["session_id"],
+                    "revision": state["revision"],
+                    "action": "abstain",
+                    "arguments": {},
+                    "reason": "No new mapping was requested.",
+                },
+            )
+            assert ended.structured_content["status"] == "abstained"
+            assert ended.structured_content["requires_confirmation"]
+
+    asyncio.run(run())
+    assert {
+        p.relative_to(store.root): p.read_bytes() for p in store.root.rglob("*") if p.is_file()
+    } == before
 
 
 def test_stdio_cli_handshake_and_data_only_change(project, change_results):

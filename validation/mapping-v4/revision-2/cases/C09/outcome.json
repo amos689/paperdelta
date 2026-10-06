@@ -1,0 +1,117 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.8440000000009604,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a263d3f27c3101a6568226dccb2243308b4006a61eba10b52b3a54e0e14e54b3",
+      "response_sha256": "sha256:b297f4ce43d03e765d9265dbb2411a55f0b7c11a2fad415788e8cfbd9e811d05",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 121,
+        "prompt_tokens": 4730,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4851
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 2.936999999999898,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a740932b4146bc0fd5fb760136593ae518e350a3bffa0e066a54945a96957da9",
+      "response_sha256": "sha256:a5b122284009e00ca7dd4641a977b366759a938629d9926a063e0ca00bf04fd8",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 135,
+        "prompt_tokens": 5264,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5399
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.110000000000582,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:47bf21c4486384c43bdb7f907022a9bc00d459bdf667a69161117614c5080523",
+      "response_sha256": "sha256:3edcd05a454220912325b70fd15eac5778e81ebd4bb8a201610a67896bb41f3e",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 142,
+        "prompt_tokens": 5353,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5495
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.671999999998661,
+      "error": {
+        "code": "BUILDER_SELECTION",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:59ea175a932756b6e295bb9656ca0638b656f9e4d6eb993cab2e61cebbd3b5d3",
+      "response_sha256": "sha256:1cd3a83f87365aea3de6f08a14a4c884e29f078f75db00f56824c64c105c7e6a",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 5937,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6207
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 5,
+      "elapsed_seconds": 4.765000000001237,
+      "error": {
+        "code": "BUILDER_SELECTION",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:519984f237aec3334617fa04fae8e01b4d01867f201938f8ac8e78cbdfd02a90",
+      "response_sha256": "sha256:b5537510bc62810fc2e30fbcd332b99ed34e1aeb2c5272c0908eb8c8b4585acd",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 6151,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6421
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Bind the original cell locations in the LaTeX table to the metric 'ours_accuracy' with the correct display format and rationale.",
+  "status": "budget_exhausted"
+}

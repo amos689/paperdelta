@@ -1,0 +1,420 @@
+{
+  "accepted_bindings": 0,
+  "action_count": 59,
+  "case_count": 12,
+  "comparison_limit": "Same frozen task inputs and Qwen3-8B Q4_K_M as staged v3, but changed product, prompts, source hints, seed and action/error budget. This is not a controlled causal attribution.",
+  "complete_mapping_cases": 0,
+  "core_valid_proposals": 5,
+  "cost": {
+    "electricity_and_hardware_cost": null,
+    "meaning": "Local inference with existing hardware; electricity and amortization not measured.",
+    "paid_api_cost_usd": 0
+  },
+  "exact_reference_matches": 0,
+  "execution_sha256": "sha256:dfe7d869b130219dd03809f5c96f42fb2a1fb1f1df20bfa1a49fc767f0befbc9",
+  "expected_abstentions": 0,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "identity_contract_mismatches": 5,
+  "independent_participants": 0,
+  "inference_seconds": 161.4989999999961572,
+  "invalid_actions": 30,
+  "mappable_cases": 9,
+  "outcomes": {
+    "C01": {
+      "action_count": 6,
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:test_accuracy",
+            "contract": {
+              "display": {
+                "kind": "decimal",
+                "percent_symbol": false,
+                "places": 3
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "percent",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.841",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 25,
+              "byte_start": 21,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "84.1",
+            "result": "wrong_position"
+          }
+        ],
+        "reason": "The mean test accuracy of 84.1% on Data-A, with seeds 1, 2, and 3, has been successfully mapped to the reported value in the paper's main file and confirmed through the metrics derived from the 'metrics.csv' file.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "invalid_actions": 2,
+      "status": "proposed"
+    },
+    "C02": {
+      "action_count": 5,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C03": {
+      "action_count": 6,
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:test_accuracy",
+            "contract": {
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string",
+                    "variant": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split",
+                    "variant"
+                  ]
+                },
+                "unit": "percent",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test",
+                  "variant": "full"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.8\\%",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 27,
+              "byte_start": 21,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "84.1\\%",
+            "result": "reference_contract_mismatch"
+          }
+        ],
+        "reason": "The mapping for the mean test accuracy of the full variant of Ours on Data-A with seeds 1, 2, and 3 has been successfully established. The value is derived from the CSV file and corresponds to the textual occurrence in the LaTeX document.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "invalid_actions": 2,
+      "status": "proposed"
+    },
+    "C04": {
+      "action_count": 5,
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:test_accuracy",
+            "contract": {
+              "display": {
+                "kind": "decimal",
+                "percent_symbol": false,
+                "places": 3
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "accuracy_pct": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.841",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 25,
+              "byte_start": 21,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "84.1",
+            "result": "wrong_position"
+          }
+        ],
+        "reason": "The test accuracy value of 84.1% on Data-A in the paper's main.tex file corresponds to the mean accuracy across seeds 1, 2, and 3 in the metrics CSV file, which has been successfully mapped and validated.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "invalid_actions": 1,
+      "status": "proposed"
+    },
+    "C05": {
+      "action_count": 4,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C06": {
+      "action_count": 4,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C07": {
+      "action_count": 5,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C08": {
+      "action_count": 6,
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:test_accuracy",
+            "contract": {
+              "display": {
+                "kind": "decimal",
+                "percent_symbol": false,
+                "places": 3
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "percent",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.841",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 25,
+              "byte_start": 21,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "86.0",
+            "result": "wrong_position"
+          }
+        ],
+        "reason": "The test accuracy value '86.0' in the paper's main.tex file has been mapped to the derived metric value of 0.841 from the metrics.csv file, representing the mean of the three results (0.839, 0.841, 0.843) for Data-A, model 'Ours', and test split with seeds 1, 2, and 3.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "invalid_actions": 2,
+      "status": "proposed"
+    },
+    "C09": {
+      "action_count": 4,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C10": {
+      "action_count": 6,
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:accuracy",
+            "contract": {
+              "display": {
+                "kind": "percent",
+                "percent_symbol": false,
+                "places": 1
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "percent",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.8",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 20,
+              "byte_start": 16,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "84.1",
+            "result": "proposal_despite_insufficient_evidence"
+          }
+        ],
+        "reason": "The accuracy value '84.1' in the LaTeX file is successfully mapped to the mean accuracy of the experiment with dataset 'Data-A', model 'Ours', split 'test', and seeds 1, 2, 3. The mapping is complete and ready for review.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "invalid_actions": 2,
+      "status": "proposed"
+    },
+    "C11": {
+      "action_count": 4,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    },
+    "C12": {
+      "action_count": 4,
+      "complete_mapping": false,
+      "invalid_actions": 3,
+      "status": "budget_exhausted"
+    }
+  },
+  "protocol_id": "paperdelta-mapping-v4",
+  "protocol_sha256": "sha256:3bdbb583ed0200084b77f145cb8bae7b21b6941a510a92f20b3852655d7c17d0",
+  "required_abstentions": 3,
+  "scope": "Developer-owned synthetic 12-case suite, already observed in v1/v3; not blind or independent human testing. Real local model calls through product AgentSession; MCP transport is separately tested.",
+  "scored_at": "2026-10-06T12:33:12.929055+00:00",
+  "statuses": {
+    "budget_exhausted": 7,
+    "proposed": 5
+  },
+  "usage": {
+    "completion_tokens": 8127,
+    "prompt_tokens": 262210,
+    "total_tokens": 270337
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "actions_remaining": 13,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:64554def03ead09743ff1e0a4a129b15cc627ab087f81b1685506c97727de3fc",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy_ours_data_a": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "results_metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy_ours_data_a"
+    ],
+    "available_sources": [
+      "results_metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:64554def03ead09743ff1e0a4a129b15cc627ab087f81b1685506c97727de3fc",
+    "metrics": {
+      "test_accuracy_ours_data_a": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": "0.843"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "source": "results_metrics_csv",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:d1ae4c16df15f748f216b3b6d4f083657c0b0b64bd40251c2b1b4ca7b8214b3f",
+        "unit": "percent",
+        "value": "0.841"
+      }
+    },
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "status": "draft"
+}

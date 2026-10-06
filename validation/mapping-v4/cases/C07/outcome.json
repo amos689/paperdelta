@@ -1,0 +1,117 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.9680000000007567,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9b37e3bf6428639698a2932e164021208c5d12c323348420fc6d9b4c0dfe60e1",
+      "response_sha256": "sha256:cbf3f214771f55c2697588db5b812c2084c65bff056b09e993b9f961313227dc",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 3878,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3946
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.7189999999991414,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c023cceca9f298247b06243a554122df554bf673247cb826f5910af3ce4a8520",
+      "response_sha256": "sha256:5c03d07730c67234bb769de7b70ceee5d59adc652df4c8688fd2c911e4e7f03f",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 4364,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4504
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 2.938000000000102,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:96b2ea98036c1ca5e4e3c0e05c3cb6091f15ab980add1ecd71dfaa75f397dec0",
+      "response_sha256": "sha256:33905f8d7a1df21946d33a430694243ded16c8a757f3f586840781cf6c8121b7",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 155,
+        "prompt_tokens": 4443,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4598
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 3.8430000000007567,
+      "error": {
+        "code": "DRAFT_SCHEMA",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for BindingDraft\nadditions.occurrences.test accuracy mean.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='test accuracy mean', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:fe4b4d6c82eec44c9dd5a12d1ae9ee0feb3c4f08117cbf7a13f134afdbb7b738",
+      "response_sha256": "sha256:9ac0232d790b51bde1b23f7520ffc9436f2e63cd2671e9bcd8ad03fadfba5721",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 233,
+        "prompt_tokens": 5108,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5341
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 5,
+      "elapsed_seconds": 3.0939999999991414,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "metrics already contains test_accuracy_mean; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:03435e11cea4be38b2bba46a3230cc912c277eb53f5467c3393c2031eff94f0c",
+      "response_sha256": "sha256:5e2a1a572b7a1cb163b933dfc0f0a4fe9cb44a9324e15be6a4d2422c50ceac1b",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 5343,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5508
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The metric 'test_accuracy_mean' is derived from the 'accuracy' field in 'metrics.csv', where it is reduced as a mean over three test runs on Data-A with seeds 1, 2, and 3.",
+  "status": "budget_exhausted"
+}

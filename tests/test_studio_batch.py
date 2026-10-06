@@ -181,6 +181,58 @@ def test_choices_and_locations_are_paginated_without_implicit_selections(batch_s
     )
 
 
+def test_joint_review_preserves_context_identity_without_choosing_or_writing(batch_session):
+    session = batch_session
+    before = session.project.read("paperdelta.yaml")
+    batch = catalog(session)
+    reviewed = call(session, "batch-review", {"catalog_id": batch["catalog_id"]})
+    assert reviewed["total"] == 2
+    for choice in reviewed["items"]:
+        assert len(choice["locations"]) == choice["context_match_count"] == 1
+        candidate = choice["locations"][0]
+        assert candidate["row"].split("&")[0].strip() == choice["definition"]["where"]["model"]
+        assert candidate["suggestion"]["missing_identity"] == ["split"]
+        assert candidate["suggestion"]["field_matches"]
+        assert choice["result"]["value"] == "0.80000000000000000000000000001"
+    assert session.project.read("paperdelta.yaml") == before
+    assert not session.draft["additions"]["occurrences"]
+    reviewed["items"][0]["locations"][0]["suggestion"]["matched_identity"].clear()
+    fresh = call(session, "batch-review", {"catalog_id": batch["catalog_id"]})
+    assert fresh["items"][0]["locations"][0]["suggestion"]["matched_identity"] == ["model"]
+
+
+def test_joint_review_exposes_ties_and_keeps_complete_positions_accessible(batch_session):
+    session = batch_session
+    paper = session.project.read("paper.tex")
+    session.project.write("paper.tex", paper * 5)
+    call(session, "refresh")
+    preview = call(session, "source-preview", {"path": "results.csv"})["source"]
+    call(
+        session,
+        "source",
+        {
+            "name": "results",
+            "path": "results.csv",
+            "format": "csv",
+            "columns": COLUMNS,
+            "primary_key": ["model", "split", "seed"],
+            "source_hash": preview["hash"],
+        },
+    )
+    batch = catalog(session)
+    result = call(session, "batch-review", {"catalog_id": batch["catalog_id"], "limit": 1})
+    choice = result["items"][0]
+    assert result["total"] == 2 and len(result["items"]) == 1
+    assert len(choice["locations"]) == 3 and choice["context_match_count"] == 5
+    locations = call(
+        session,
+        "batch-locations",
+        {"catalog_id": batch["catalog_id"], "choice_id": choice["choice_id"], "limit": 100},
+    )
+    assert locations["total"] == choice["location_count"]
+    assert choice["location_count"] > choice["context_match_count"]
+
+
 def test_missing_seed_stays_unknown_and_cannot_be_staged(batch_session):
     session = batch_session
     request = {**REQUEST, "expected_count": 3, "expected_seeds": ["1", "2", "3"]}

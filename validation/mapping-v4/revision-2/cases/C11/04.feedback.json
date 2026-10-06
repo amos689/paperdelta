@@ -1,0 +1,158 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "finish",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:be5079dfb533f691fb1d646276edfcb0372a340c7676db1cd0394ca6321313b8",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 2,
+          "expected_seeds": [
+            1,
+            2
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "results_metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy"
+    ],
+    "available_sources": [
+      "results_metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:be5079dfb533f691fb1d646276edfcb0372a340c7676db1cd0394ca6321313b8",
+    "metrics": {
+      "test_accuracy": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 2,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              }
+            ],
+            "locations_total": 2,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              }
+            ],
+            "records_total": 2,
+            "reduce": "mean",
+            "source": "results_metrics_csv",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:48186527cab0a0c39124eaea2d7e4a8eebfc84b547efd28e99a29e03b2abf100",
+        "unit": "percent",
+        "value": "0.840"
+      }
+    },
+    "rationale": {
+      "occurrences:test_accuracy_value": "The original occurrence in the paper's main.tex file corresponds to the mean test accuracy on Data-A with seeds 1 and 2."
+    }
+  },
+  "requires_confirmation": true,
+  "status": "draft"
+}

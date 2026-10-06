@@ -1,0 +1,208 @@
+{
+  "actions_remaining": 11,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 2,
+  "deterministic_check": {
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:test_accuracy/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 25,
+          "byte_start": 21,
+          "column": 22,
+          "end": 25,
+          "file": "paper/main.tex",
+          "line": 1,
+          "start": 21,
+          "text": "84.1"
+        },
+        "message": "'84.1' should display '0.841' from metric test_accuracy",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:test_accuracy"
+      }
+    ],
+    "exit_code": 1
+  },
+  "draft_id": "sha256:0a7013c66a8c2d4e820ad96ad875cd72e8e952c01a6a35eff3e770e7feac827a",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "fraction",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": "\\"
+          },
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 3
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "accuracy_pct": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy"
+    ],
+    "available_sources": [
+      "metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:0a7013c66a8c2d4e820ad96ad875cd72e8e952c01a6a35eff3e770e7feac827a",
+    "metrics": {
+      "test_accuracy": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": "0.843"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "source": "metrics_csv",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:3f1ad53c6bb3d24c52fdce9124aa7ec2cb7f3b63153f8ff646e5b1320995b43c",
+        "unit": "fraction",
+        "value": "0.841"
+      }
+    },
+    "rationale": {
+      "occurrences:test_accuracy": "The test accuracy value of 84.1% in the paper's main.tex file corresponds to the mean accuracy across seeds 1, 2, and 3 in the metrics CSV file."
+    }
+  },
+  "proposal_id": "sha256:3fc7182c5df36f20b3da76c81483e8a7cacb6960c4d80057f02d0ec79773a2ac",
+  "proposal_json": "{\n  \"additions\": {\n    \"claims\": {},\n    \"figures\": {},\n    \"metrics\": {\n      \"test_accuracy\": {\n        \"expected_count\": 3,\n        \"expected_seeds\": [\n          1,\n          2,\n          3\n        ],\n        \"field\": \"accuracy\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"metrics_csv\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"dataset\": \"Data-A\",\n          \"model\": \"Ours\",\n          \"split\": \"test\"\n        }\n      }\n    },\n    \"occurrences\": {\n      \"test_accuracy\": {\n        \"anchor\": {\n          \"exact\": null,\n          \"prefix\": \"s \",\n          \"suffix\": \"\\\\\"\n        },\n        \"display\": {\n          \"kind\": \"decimal\",\n          \"percent_symbol\": false,\n          \"places\": 3\n        },\n        \"file\": \"paper/main.tex\",\n        \"metric\": \"test_accuracy\"\n      }\n    },\n    \"sources\": {\n      \"metrics_csv\": {\n        \"columns\": {\n          \"accuracy\": \"decimal\",\n          \"accuracy_pct\": \"decimal\",\n          \"dataset\": \"string\",\n          \"model\": \"string\",\n          \"seed\": \"integer\",\n          \"split\": \"string\"\n        },\n        \"format\": \"csv\",\n        \"path\": \"results/metrics.csv\",\n        \"primary_key\": [\n          \"dataset\",\n          \"model\",\n          \"split\",\n          \"seed\"\n        ]\n      }\n    }\n  },\n  \"config_path\": \"paperdelta.yaml\",\n  \"input_hashes\": {\n    \"paper/main.tex\": \"sha256:75cef1e2c42f8b4510249f070c5451e44d89138408f0b5394d1ae631d07bbaa2\",\n    \"paperdelta.yaml\": \"sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652\",\n    \"results/metrics.csv\": \"sha256:aa6009233836263bb148cbc8dcd11965faa681021e7f1ab082b4bbe22f477c48\"\n  },\n  \"proposal_id\": \"sha256:3fc7182c5df36f20b3da76c81483e8a7cacb6960c4d80057f02d0ec79773a2ac\",\n  \"proposal_schema_version\": 1,\n  \"rationale\": {\n    \"occurrences:test_accuracy\": \"The test accuracy value of 84.1% in the paper's main.tex file corresponds to the mean accuracy across seeds 1, 2, and 3 in the metrics CSV file.\"\n  },\n  \"tool_version\": \"1.4.0\"\n}\n",
+  "requires_confirmation": true,
+  "status": "proposed"
+}

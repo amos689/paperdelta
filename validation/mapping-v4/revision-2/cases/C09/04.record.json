@@ -1,0 +1,24 @@
+{
+  "action": "locations",
+  "action_index": 4,
+  "elapsed_seconds": 4.671999999998661,
+  "error": {
+    "code": "BUILDER_SELECTION",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:59ea175a932756b6e295bb9656ca0638b656f9e4d6eb993cab2e61cebbd3b5d3",
+  "response_sha256": "sha256:1cd3a83f87365aea3de6f08a14a4c884e29f078f75db00f56824c64c105c7e6a",
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 270,
+    "prompt_tokens": 5937,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6207
+  },
+  "valid": false
+}

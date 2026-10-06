@@ -1,0 +1,138 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.235000000000582,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c6495963e937ad56ff410c00b9a73e977b7dcbc50c17ca0c4b015bab293b1c80",
+      "response_sha256": "sha256:218deae33196ec169db63f57aaec630217948b86edbf4a21fd183cf2315641cc",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 74,
+        "prompt_tokens": 4494,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4568
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.0310000000008586,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f1618211ebfba2b2c99efed626a61ec2037ebccee77531b2ad47b6b92229ea98",
+      "response_sha256": "sha256:9ded2ac7ef9f1c097fd401bc2199b7c484ef8831da1674d65ca20cfcaa8c7b61",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 4998,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5145
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.1559999999990396,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e37c2085c0b0b3ce26a66f747a4d9f3aa3c361c661ae99660ec99edcae8ffc1f",
+      "response_sha256": "sha256:712ae25867f9970073013ed28007f8cf568b66867348157463997ebb11089a27",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 153,
+        "prompt_tokens": 5064,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5217
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.3590000000003783,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d1982870a804b5e8ef375f9aac446591499c2006fc255532c6dcebfbf9bc81e0",
+      "response_sha256": "sha256:875a43a2c4fbf950a868fbdfb8cf03e77477d0857cdfe351b968b4c36a7c89f0",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 152,
+        "prompt_tokens": 5706,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5858
+      },
+      "valid": true
+    },
+    {
+      "action": "derived",
+      "action_index": 5,
+      "elapsed_seconds": 2.67200000000048,
+      "error": {
+        "code": "UNIT_MISMATCH",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Percentage points require proportions"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:305f9b3c2302ce9eebf1572b54d20760da6b592229909e0a0da4bdf1fff01760",
+      "response_sha256": "sha256:724a4175f07f5fe254eed6d28bd14a8a0714c63237225909ae02d01240e21306",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 79,
+        "prompt_tokens": 6320,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6399
+      },
+      "valid": false
+    },
+    {
+      "action": "derived",
+      "action_index": 6,
+      "elapsed_seconds": 2.625,
+      "error": {
+        "code": "UNIT_MISMATCH",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Percentage points require proportions"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:24c3908581dfadf5ba24998961fd38698cffe5edc2f188f67b87e96fc6593dbf",
+      "response_sha256": "sha256:ffb029e9afa36bfe7483516961bcae4459d30f6e0bc65a2f69ca2ee2f884104e",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 80,
+        "prompt_tokens": 6321,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6401
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Calculating the percentage point difference between the mean accuracy of 'Ours' and 'Baseline' on Data-A test split.",
+  "status": "budget_exhausted"
+}

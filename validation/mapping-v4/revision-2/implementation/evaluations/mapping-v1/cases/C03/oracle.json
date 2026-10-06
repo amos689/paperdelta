@@ -1,0 +1,75 @@
+{
+  "category": "model_variant",
+  "expected_decision": "map",
+  "expected_reference_status": "pass",
+  "reason": "Bind mean test accuracy for the full variant of Ours on Data-A, seeds 1, 2 and 3.",
+  "reference_inputs": [
+    {
+      "additions": {
+        "metrics": {
+          "target": {
+            "expected_seeds": [
+              1,
+              2,
+              3
+            ],
+            "field": "accuracy",
+            "reduce": "mean",
+            "source": "results",
+            "unit": "fraction",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test",
+              "variant": "full"
+            }
+          }
+        },
+        "occurrences": {
+          "result": {
+            "anchor": {
+              "prefix": "The test accuracy is ",
+              "suffix": " on Data-A."
+            },
+            "display": {
+              "kind": "percent",
+              "places": 1
+            },
+            "file": "paper/main.tex",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "results": {
+            "columns": {
+              "accuracy": "decimal",
+              "dataset": "string",
+              "model": "string",
+              "seed": "integer",
+              "split": "string",
+              "variant": "string"
+            },
+            "format": "csv",
+            "path": "results/metrics.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "split",
+              "seed",
+              "variant"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+      }
+    }
+  ],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "84.1\\%",
+    "prefix": "The test accuracy is ",
+    "suffix": " on Data-A."
+  }
+}

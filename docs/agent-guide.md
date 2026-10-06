@@ -76,8 +76,13 @@ for the session; tool arguments cannot select a different root.
 | `list_batch_candidates` | Paginated metric/location candidates |
 | `select_batch_bindings` | Explicit selection or correction inside the session |
 | `finish_batch_binding` | Revalidated unaccepted batch proposal |
+| `inspect_source_contract` | Reasoned type/key/group suggestions, conflicts and sample limits |
+| `inspect_experiment_definitions` | Saved reviewed definitions and their content identities |
+| `start_mapping_session` | Discovery, typed stage schemas and a bounded session ID |
+| `advance_mapping_session` | Revision-checked stage, typed correction or unaccepted final proposal |
+| `inspect_mapping_session` | Current state and last valid draft for inspection/export |
 
-All seventeen tools are read-only with respect to project files. They do not save proposals, apply changes, accept
+All twenty-two tools are read-only with respect to project files. They do not save proposals, apply changes, accept
 bindings, create snapshots or attest review. The caller can save returned text
 for author inspection through the CLI. The server never sends content to a model
 service; the host's own model and data handling still applies.
@@ -148,3 +153,17 @@ controls pass, but this model configuration is not an accepted automatic mapper.
 For text PDFs and shared LaTeX/Word/PDF metrics, see the [PDF guide](pdf.md).
 Install `paperdelta[pdf]` or `paperdelta[docx,pdf,mcp]` as needed. PDF positions
 use original page boxes; source/export relationships require explicit declarations.
+
+## Bounded mapping and shared definitions in 1.4
+
+See the [complete workflow](v1.4.md#a-bounded-agent-proposal-workflow). Use the
+current revision on each `advance_mapping_session` call. The session permits
+16 actions and at most three invalid actions, retains the last valid draft and
+expires after one hour. `finish` checks a proposal but never accepts it; `abstain`
+records a reason. Changed inputs invalidate the session. Existing stateless tools
+remain available. Batch requests may reference a saved experiment definition and
+reviewed identity aliases; MCP cannot save definitions or review records.
+
+The [two preserved local-model runs](../validation/mapping-v4/README.md) produced
+no complete reference mappings or correct required abstentions. Typed success is
+not evidence of a correct experimental identity; keep explicit author review.

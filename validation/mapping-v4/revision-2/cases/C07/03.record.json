@@ -1,0 +1,19 @@
+{
+  "action": "locations",
+  "action_index": 3,
+  "elapsed_seconds": 3.8440000000009604,
+  "error": null,
+  "finish_reason": "stop",
+  "request_sha256": "sha256:0bb28cc60184d57dd7346bf288d55f1a5e3dbe6518699cbcd8526a475cc2f03b",
+  "response_sha256": "sha256:d46408b907b141ab761e2dcda312301a8873690241fb172d573e85bd57457dff",
+  "status": "draft",
+  "usage": {
+    "completion_tokens": 191,
+    "prompt_tokens": 5740,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5931
+  },
+  "valid": true
+}

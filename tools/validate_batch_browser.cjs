@@ -162,6 +162,7 @@ async function runCase(browser, kind, language, performanceOnly = false, baselin
       await configureBatch(page, annotation);
       if (!performanceOnly) {
         const before = fs.readFileSync(path.join(directory, 'paperdelta.yaml'));
+        await action(page, 'nav [data-step=batch]');
         await action(page, '#batch-templates summary');
         await action(page, '#template-save-form [name=name]', 'fill', 'test_results');
         await action(page, '#template-save-form button');
@@ -175,8 +176,8 @@ async function runCase(browser, kind, language, performanceOnly = false, baselin
         await page.locator('#template-file').setInputFiles(file); await ready(page);
         assert.equal(await page.locator('#batch-form [name=unit]').inputValue(), 'fraction');
         assert.deepEqual(fs.readFileSync(path.join(directory, 'paperdelta.yaml')), before);
-        await action(page, '#batch-form button[type=submit]');
         await action(page, '#batch-templates summary');
+        await action(page, '#batch-form button[type=submit]');
       }
       await capture('shared-experiment-identity-and-result-groups', '#batch-choices', 4000);
       await chooseBatch(page, annotation, !performanceOnly, async (index) => {

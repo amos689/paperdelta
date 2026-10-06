@@ -1,0 +1,87 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "locations",
+      "action_index": 1,
+      "elapsed_seconds": 3.5930000000007567,
+      "error": {
+        "code": "MAPPING_ORDER",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0e176387f44545b7a975f0c710a471be93ee45a482a5ed61b4f6b5c50d044b1e",
+      "response_sha256": "sha256:ac25f0d6c6619f7d3e7ec29f99999b60f1a558b94aa1d27b02566c40d31ba77b",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 195,
+        "prompt_tokens": 4490,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4685
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.125,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:80fc364e72ca81ed32ad43560f53ec37da1d419e4f9d845a70e943569b46f094",
+      "response_sha256": "sha256:e825f66f62959293dd51ff8b435e5a6493e4e3d80015f19d91577c3386cc5f3e",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 5084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5152
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.0939999999991414,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:8e538b1dab402620c467fb2674c24009a4ae48471c282696894f6abc3bab28ee",
+      "response_sha256": "sha256:d2e01b0b338f787d551c0f91a12d6242af05bcde0dfcbe1cbed2c337ea5486a7",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 5024,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5092
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The paper's main.tex file contains the p-value as text, and it needs to be sourced for mapping.",
+  "status": "budget_exhausted"
+}

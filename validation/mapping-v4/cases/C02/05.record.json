@@ -1,0 +1,24 @@
+{
+  "action": "locations",
+  "action_index": 5,
+  "elapsed_seconds": 3.8590000000003783,
+  "error": {
+    "code": "DRAFT_SCHEMA",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for BindingDraft\nadditions.occurrences.test accuracy.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='test accuracy', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:f64a787553968a77afdf262925966622779e6913f7e69192d24097ef684fb403",
+  "response_sha256": "sha256:4d3dff0da841f707dffb3e17affe6aae8ff33e93c85496c1697e99f08c11fd2a",
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 5023,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5247
+  },
+  "valid": false
+}

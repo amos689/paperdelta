@@ -1,0 +1,55 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:83915d55ebb4d3bbb0e42860a03df54794cd5dcb2f7d0550cf017ab454e39333",
+  "error": {
+    "code": "BUILDER_EXPECTATION",
+    "fields": [],
+    "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+    "message": "An aggregation requires an explicitly expected record count."
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "metrics.csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "metrics.csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:83915d55ebb4d3bbb0e42860a03df54794cd5dcb2f7d0550cf017ab454e39333",
+    "metrics": {},
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "budget_exhausted"
+}

@@ -1,0 +1,52 @@
+{
+  "actions_remaining": 14,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:777df35a8a606d1fb81bca368b06b55039cf2802259ad75573a8fbb05f32215d",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "results_metrics": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "results_metrics"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:777df35a8a606d1fb81bca368b06b55039cf2802259ad75573a8fbb05f32215d",
+    "metrics": {},
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "status": "draft"
+}

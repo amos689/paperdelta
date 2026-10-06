@@ -1,0 +1,24 @@
+{
+  "action": "locations",
+  "action_index": 1,
+  "elapsed_seconds": 3.5930000000007567,
+  "error": {
+    "code": "MAPPING_ORDER",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:0e176387f44545b7a975f0c710a471be93ee45a482a5ed61b4f6b5c50d044b1e",
+  "response_sha256": "sha256:ac25f0d6c6619f7d3e7ec29f99999b60f1a558b94aa1d27b02566c40d31ba77b",
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 195,
+    "prompt_tokens": 4490,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4685
+  },
+  "valid": false
+}

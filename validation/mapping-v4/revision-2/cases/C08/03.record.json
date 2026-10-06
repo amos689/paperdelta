@@ -1,0 +1,24 @@
+{
+  "action": "metric",
+  "action_index": 3,
+  "elapsed_seconds": 3.125,
+  "error": {
+    "code": "BUILDER_EXPECTATION",
+    "fields": [],
+    "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+    "message": "An aggregation requires an explicitly expected record count."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:0a2dab03e8cb2466a7dc24771c3f3f8328d8f2edbe5e7dce3b39f040edcd841f",
+  "response_sha256": "sha256:0643363d37cc261f80f812d93dfa3734a987b749427c98f63aa8d99c9a36ae84",
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 157,
+    "prompt_tokens": 5101,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5258
+  },
+  "valid": false
+}

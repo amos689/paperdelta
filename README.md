@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.3.0"><img src="docs/assets/badges/release.svg" alt="Release 1.3.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.4.0"><img src="docs/assets/badges/release.svg" alt="Release 1.4.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -57,9 +57,11 @@ abstract, table and claim, then open a separate source/PDF example with a stale 
 [Open the full-size animation](docs/assets/v1.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v1.3/report.png).
 
-**1.3.0** improves original Word/PDF positions, reviewed table identities and
-multi-value cells, with actionable diagnostics and a previewable private diagnostic
-bundle. [Upgrade and isolated startup](docs/v1.3.md) ·
+**1.4.0** adds three-stage onboarding, reasoned source suggestions and side-by-side
+evidence/location review. Shared experiment definitions and reviewed labels preserve
+explicit identities. The same 24-metric browser task took 54 operations, down from
+103 in v0.8; this is an automated action count, not a human usability study.
+[New workflow and compatibility](docs/v1.4.md) ·
 [Real-document results and limits](validation/native-v2/README.md).
 
 Use static [LaTeX](docs/rules.md), [Markdown/Quarto](docs/markdown-quarto.md),
@@ -92,7 +94,7 @@ paperdelta demo --out paperdelta-demo --open
 ```
 
 With [uv installed](https://docs.astral.sh/uv/getting-started/installation/), try
-`uvx --python 3.12 paperdelta@1.3.0 demo --out paperdelta-demo --open` in an isolated
+`uvx --python 3.12 paperdelta@1.4.0 demo --out paperdelta-demo --open` in an isolated
 tool environment. Use a new output directory for each run. See
 [optional native readers and startup diagnostics](docs/v1.3.md#isolated-startup).
 
@@ -114,7 +116,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.3.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.4.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 
@@ -181,16 +183,18 @@ python -m pip install 'paperdelta[mcp]'
 paperdelta -C /path/to/paper-project mcp
 ```
 
-Seventeen optional MCP tools provide checks, evidence, proposals and repairs.
+Twenty-two optional MCP tools provide checks, evidence, proposals and repairs.
 Four batch-session tools let an Agent select candidate IDs while the program
 assembles the proposal. Sessions are in memory, bounded and invalidated by changed
 inputs. The tools do not accept mappings or write paper files. The
 [Agent guide](docs/agent-guide.md) includes the workflow and host configuration.
 CLI JSON and schemas remain available without MCP.
 
-Deterministic protocol tests verify tool behavior. Historical
-[Qwen3-8B trials](docs/staged-model-evaluation.md) did not produce complete valid
-mappings; this release does not claim proven automatic mapping accuracy.
+The new bounded mapping session returns typed errors and correction hints, keeps
+the last valid draft and allows explicit abstention. Deterministic protocol tests
+verify tool behavior. In the [v1.4 real-model study](validation/mapping-v4/README.md),
+both the first run and its separately frozen correction achieved 0/9 complete
+mappings and 0/3 required abstentions. Automatic mapping remains experimental.
 
 ## Supported scope
 

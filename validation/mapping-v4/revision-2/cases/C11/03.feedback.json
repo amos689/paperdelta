@@ -1,0 +1,139 @@
+{
+  "actions_remaining": 13,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:7a1eb3ff7578988c24d90fcd66386e21611d398ad4010b39f89f3db6c0fea7c7",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 2,
+          "expected_seeds": [
+            1,
+            2
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "results_metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy"
+    ],
+    "available_sources": [
+      "results_metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:7a1eb3ff7578988c24d90fcd66386e21611d398ad4010b39f89f3db6c0fea7c7",
+    "metrics": {
+      "test_accuracy": {
+        "dependencies": [],
+        "evidence": [
+          {
+            "count": 2,
+            "field": "accuracy",
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              }
+            ],
+            "locations_total": 2,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              }
+            ],
+            "records_total": 2,
+            "reduce": "mean",
+            "source": "results_metrics_csv",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "fingerprint": "sha256:48186527cab0a0c39124eaea2d7e4a8eebfc84b547efd28e99a29e03b2abf100",
+        "unit": "percent",
+        "value": "0.840"
+      }
+    },
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "status": "draft"
+}

@@ -1,0 +1,48 @@
+{
+  "category": "json_pointer",
+  "expected_decision": "map",
+  "expected_reference_status": "pass",
+  "reason": "Bind the test accuracy in summary.json at runs → evaluation/test → accuracy.mean. It is already a mean over the declared test runs and is stored as a fraction. metrics.csv is a legacy export with no authority for this request.",
+  "reference_inputs": [
+    {
+      "additions": {
+        "metrics": {
+          "target": {
+            "field": "/runs/evaluation~1test/accuracy.mean",
+            "source": "results",
+            "unit": "fraction"
+          }
+        },
+        "occurrences": {
+          "result": {
+            "anchor": {
+              "prefix": "The test accuracy is ",
+              "suffix": " on Data-A."
+            },
+            "display": {
+              "kind": "percent",
+              "places": 1
+            },
+            "file": "paper/main.tex",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "results": {
+            "format": "json",
+            "path": "results/summary.json"
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+      }
+    }
+  ],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "84.1\\%",
+    "prefix": "The test accuracy is ",
+    "suffix": " on Data-A."
+  }
+}

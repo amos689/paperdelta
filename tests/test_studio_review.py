@@ -107,6 +107,32 @@ def test_patch_release_migration_verifies_original_hashes(project, monkeypatch, 
         migrate_draft(store, tampered)
 
 
+@pytest.mark.parametrize("previous", ["1.2.1", "1.3.0"])
+def test_v14_migration_preserves_compatible_contracts_and_requires_original_inputs(
+    studio_project, monkeypatch, previous
+):
+    project, path = studio_project
+    monkeypatch.setattr(builder, "__version__", previous)
+    session = StudioSession(project)
+    stage_metric(session, path)
+    stage_locations(session)
+    old = deepcopy(session.draft)
+    before = {name: project.read(name) for name in (path, "results.csv", "paperdelta.yaml")}
+    monkeypatch.setattr(builder, "__version__", "1.4.0")
+    monkeypatch.setattr("paperdelta.studio_recovery.__version__", "1.4.0")
+    migrated = migrate_draft(project, old)
+    assert migrated["tool_version"] == "1.4.0"
+    assert migrated["additions"] == old["additions"]
+    assert migrated["input_hashes"] == old["input_hashes"]
+    assert migrated["draft_id"] != old["draft_id"]
+    assert old == session.draft
+    assert all(project.read(name) == raw for name, raw in before.items())
+    project.write("results.csv", before["results.csv"].replace(b"0.840", b"0.800"))
+    with pytest.raises(PaperDeltaError) as error:
+        migrate_draft(project, old)
+    assert error.value.code == "STALE_DRAFT"
+
+
 @pytest.mark.parametrize("version", ["0.7.999", "0.7.invalid", "0.6.-1", "0.5.0", "1.0.0"])
 def test_restore_and_rebuild_reject_unknown_or_future_versions(project, monkeypatch, version):
     store = Project(project)

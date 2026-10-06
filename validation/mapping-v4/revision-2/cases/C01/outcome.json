@@ -1,0 +1,182 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.9220000000004802,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e0603361d1fe2137b02d97a7913360ea3b21cc85a178bd3211463f6f0e32745b",
+      "response_sha256": "sha256:046d417f6f834395baf6455f162d32d5c95e8bfb65a4d6ee5ec7959c76aa4602",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 71,
+        "prompt_tokens": 4493,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4564
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.04700000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:69659a4b5bbbdc5553b721c6119d236bb2cc3ba67385b3926da493804eb91652",
+      "response_sha256": "sha256:f1420d549ea7a7e23d7f7f8cadf15396c8a1395cb3cea0449795aa85e5fcbdc4",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 156,
+        "prompt_tokens": 4986,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5142
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.5309999999990396,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f770d61a0d6babbf62219ec9df21952431171b8e525d3167d6388742b82b3825",
+      "response_sha256": "sha256:9528693e2547c6718a995a01144b3c9a079d840164b12bb2c63a47b51b77eba8",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 197,
+        "prompt_tokens": 5074,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5271
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.359000000000378,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:366241372028a76ff5798adc201fee7ff4b727ce176c269cbba68c3ac4ab85b9",
+      "response_sha256": "sha256:cc774e1d13b69292b54d964464a18b2e8be2fff7cc389635b6c86c94bc03a4a0",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 241,
+        "prompt_tokens": 5777,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6018
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 5,
+      "elapsed_seconds": 2.67200000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5ffcdc563c972e84d58e8ec56d19ff1c4019e573c7540a325b53d9556a0ce797",
+      "response_sha256": "sha256:4c5f3e5313bb508a8a8f618af70e7c85a99dc268c4bd41f05f3859cd7f82da5f",
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 91,
+        "prompt_tokens": 5968,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6059
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy_ours_data_a": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_ours_data_a": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy_ours_data_a"
+        }
+      },
+      "sources": {
+        "results_metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/main.tex": "sha256:75cef1e2c42f8b4510249f070c5451e44d89138408f0b5394d1ae631d07bbaa2",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:0a44000a78040fc97c8229024cc84f5d25c2d980805b66b9c8dc7eace6131776"
+    },
+    "proposal_id": "sha256:8c4bb83352e5d0f9ddf331c300fd7a9e1d8ffde141fa5d4f62a15ec639132666",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:test_accuracy_ours_data_a": "The original location in the paper 'main.tex' contains the reported mean test accuracy of 84.1% on Data-A, which matches the metric 'test_accuracy_ours_data_a' derived from the 'results/metrics.csv' file."
+    },
+    "tool_version": "1.4.0"
+  },
+  "reason": "The metric 'test_accuracy_ours_data_a' has been successfully mapped to the original occurrence in the paper 'main.tex', where the value 84.1% is reported on Data-A. The mapping includes the expected seeds 1, 2, and 3, and the derived mean accuracy from the 'results/metrics.csv' file.",
+  "status": "proposed"
+}

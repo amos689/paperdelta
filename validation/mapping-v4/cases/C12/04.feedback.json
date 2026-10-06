@@ -1,0 +1,55 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:91f63df804f34b4df9e466dd0595dc6c8d42af16f7f7c45d24ed811150eea583",
+  "error": {
+    "code": "DRAFT_METRIC",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMetric\n  A count metric must use unit: count [type=validation.models.2, input_value={'source': 'metrics.csv',...[1], 'statistics': None}, input_type=dict]"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "metrics.csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "metrics.csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:91f63df804f34b4df9e466dd0595dc6c8d42af16f7f7c45d24ed811150eea583",
+    "metrics": {},
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "budget_exhausted"
+}

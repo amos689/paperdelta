@@ -45,7 +45,7 @@ def main():
     )
     files.update(
         p.relative_to(ROOT).as_posix()
-        for study in ("native-v1", "native-v2")
+        for study in ("native-v1", "native-v2", "mapping-v4")
         for p in (ROOT / "validation" / study).rglob("*")
         if p.is_file() and "__pycache__" not in p.parts
     )
@@ -60,6 +60,8 @@ def main():
             "docs/zh-CN/v1.1.md",
             "docs/v1.3.md",
             "docs/zh-CN/v1.3.md",
+            "docs/v1.4.md",
+            "docs/zh-CN/v1.4.md",
         }
     )
     manifest = {

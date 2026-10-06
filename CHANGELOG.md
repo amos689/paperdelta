@@ -2,6 +2,20 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.4.0 — 2026-10-06
+
+- Three-stage Studio onboarding with reasoned type/key/group suggestions and joint evidence/location review; every acceptance remains explicit.
+- Reviewed identity aliases, reusable content-addressed experiment definitions and local binding-review records.
+- Five new read-only MCP tools for source advice, definition inspection and bounded proposal correction; saved compatible drafts from 1.2/1.3 can be reviewed and migrated.
+- The unchanged 24-metric browser task takes 54 actions versus 103 in v0.8. Real-model results retain both runs: 0/9 complete mappings and 0/3 correct abstentions in each.
+- Bilingual guides, tests and measurement scope: [1.4 workflow](docs/v1.4.md).
+
+## 1.3.0 — 2026-10-06
+
+- Improve original Word/PDF positions, reviewed table identities, multi-value cells and actionable diagnostics; add private previewable diagnostic bundles and isolated uvx startup checks.
+- Twenty licensed original documents, 222 selected positions and a frozen first held-out result: 82/110 supported, 3 misses, 0 observed mislocations, 25 unknown.
+- Preserve failures, the same-input Docling comparison and release verification in the [1.3 record](docs/v1.3.md).
+
 ## 1.2.1 — 2026-10-05
 
 - Fix the bilingual PyPI description heading underline so strict rendering checks pass.

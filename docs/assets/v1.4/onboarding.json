@@ -1,0 +1,1464 @@
+{
+  "status": "passed",
+  "scope": "Developer-operated browser action count, not a human usability study. Same unchanged fixture; equal values never establish identity.",
+  "cases": [
+    {
+      "name": "tex-en",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.tex": "755727490a05041dff6a554cb46308d59b89d665ed3ae2700432ee6767b053e1",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:9681ea275dd5f80a5e8f143887f2bb59594c336f02bc783686910582152c6ada\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:418d2139e19f77ae76f9413eed2a5207f95f10025eaf087ce8eb2e0f651181f3\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:611779be60db2b33aca2624b11817419bf45317e1ff03c1deb375b0d5c92fd4a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:27347f843e883f85e641f6db56ca1004e285910f74183ff19e458a25a76a1b82\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:b424d894883a9475f2426cb7d4565d3ff7ebcecfbfe2f0cb88deae0aeb31ad1e\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:426ea0bb34090322d6a4cd0ffd85bfad9c68fae3ee665fd9497f045e1ce46ffd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:b5ec847ef7ab8778304da82c0d3f0ea5c76e830ed7d37aeda4cf849cc111b11f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:4702a66378ef04912ffd830fcb1b3fe3046edbcdd5588110dec58e106c666d31\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:baf7ee11e9fb1353936b3e7f51203d46d77f1f5fc19fa44daa163e1b1a9b9666\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:2602bd4c9e7a9775636352aeee4ab1be269c59714307448f254bc287cdcb0605\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:2b278d8d5ac1d02abdd052bb2ffa2cd77e97c5264fc1ac46e9b1abbe5bf577eb\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:4b0d002b3e7fea49f9e90adf7f5adb948d758f9f00481e6fb00658226d1d0bb9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:41533184208f6cc26f8a3d8c0d2276317ddd91832812f1f1ef9eacd180b2308d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:0c29a5f88a10287af316f205d447bed72bb491cb2e7a357f0e7854d4ba5559ea\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:31080487e5cc9ff641b0898c3ac5d74e1745df1569f335b6b1c936d0f399d337\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:342c9392f37450cc064c8dfa6d3753f74ead6a6917e7e9b6d65d10e36b4cd222\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:9980f28604e6ad0c0844800c1cf733dd59d4696b1057ce96ea884180ff0b809d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:4ea2d721c6bfa98d3fda18df95e32598fc1737ca52f2032bd70a5c1ed21655fd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:0400066225abc037b3b1b3772c5633dafdb772e74e1de5b52c2da32c71a62929\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:598b2ce3f830009f781855365cd41fce41cb844ccbbbf90225110287e61eeba8\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:2758288f9b3b0f5acb6eae3b715a0e8661b4f4b8a40693913f6346767f8b0da3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:dcdd58e664b0ef629327b5cdeb96d9c6cc3127ae1f93235947bdfd39b4cc781f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:0449c1932d7d2cb7c1535bc8008da04dc9043114c1c5392da599e7fd5e8bd7e9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:a947659d075c11bae99949c32c264ddda301d1f09ef3de864493b4f304e9485c\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    },
+    {
+      "name": "tex-zh-CN",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.tex": "755727490a05041dff6a554cb46308d59b89d665ed3ae2700432ee6767b053e1",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:9681ea275dd5f80a5e8f143887f2bb59594c336f02bc783686910582152c6ada\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:418d2139e19f77ae76f9413eed2a5207f95f10025eaf087ce8eb2e0f651181f3\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:611779be60db2b33aca2624b11817419bf45317e1ff03c1deb375b0d5c92fd4a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:27347f843e883f85e641f6db56ca1004e285910f74183ff19e458a25a76a1b82\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:b424d894883a9475f2426cb7d4565d3ff7ebcecfbfe2f0cb88deae0aeb31ad1e\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:426ea0bb34090322d6a4cd0ffd85bfad9c68fae3ee665fd9497f045e1ce46ffd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:b5ec847ef7ab8778304da82c0d3f0ea5c76e830ed7d37aeda4cf849cc111b11f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:4702a66378ef04912ffd830fcb1b3fe3046edbcdd5588110dec58e106c666d31\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:baf7ee11e9fb1353936b3e7f51203d46d77f1f5fc19fa44daa163e1b1a9b9666\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:2602bd4c9e7a9775636352aeee4ab1be269c59714307448f254bc287cdcb0605\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:2b278d8d5ac1d02abdd052bb2ffa2cd77e97c5264fc1ac46e9b1abbe5bf577eb\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:4b0d002b3e7fea49f9e90adf7f5adb948d758f9f00481e6fb00658226d1d0bb9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:41533184208f6cc26f8a3d8c0d2276317ddd91832812f1f1ef9eacd180b2308d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:0c29a5f88a10287af316f205d447bed72bb491cb2e7a357f0e7854d4ba5559ea\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:31080487e5cc9ff641b0898c3ac5d74e1745df1569f335b6b1c936d0f399d337\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:342c9392f37450cc064c8dfa6d3753f74ead6a6917e7e9b6d65d10e36b4cd222\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:9980f28604e6ad0c0844800c1cf733dd59d4696b1057ce96ea884180ff0b809d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:4ea2d721c6bfa98d3fda18df95e32598fc1737ca52f2032bd70a5c1ed21655fd\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:0400066225abc037b3b1b3772c5633dafdb772e74e1de5b52c2da32c71a62929\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:598b2ce3f830009f781855365cd41fce41cb844ccbbbf90225110287e61eeba8\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:2758288f9b3b0f5acb6eae3b715a0e8661b4f4b8a40693913f6346767f8b0da3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:dcdd58e664b0ef629327b5cdeb96d9c6cc3127ae1f93235947bdfd39b4cc781f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:0449c1932d7d2cb7c1535bc8008da04dc9043114c1c5392da599e7fd5e8bd7e9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:a947659d075c11bae99949c32c264ddda301d1f09ef3de864493b4f304e9485c\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    },
+    {
+      "name": "docx-en",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.docx": "6bc9c2dcc016cdabe62a610d8c3f5e9a20ecc6a4ba6e3b6b99d76dedb76dacce",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:0fc1be93e98470a22f259e9ca3b8813bf81fb50e16ec4f9a2e08c42e79f4613a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:66771c95d73734182894d6cf2912f7ea7cd7f2210e84caeca55731930c02c656\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:d71bf75b714be0d668d0482e23a6034302a03c46fab316bdf60b38aad08d6240\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:76e5cc1cf98193ac2576eb16533d6f51227cf84ac48a92f33cc4f86cd4f87861\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:1422779e6163ad0d6005312ff91aba668683bf20cb0932fca44d09cd7ca8214c\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:b6f8b5302e8ecc8327812bcbc299c761862ad5384b4e4312569b5e597d60deee\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:366d50e60b8b350ff9c30d6f4023cce3726558e5d5dde651b14739b90ba29881\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:5a32dfa6c0655fdf6b3b0931d6fbe3aea777d98e0cba2a49a98dd2a6e7f4724f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:9d662381d3f081f4cc1c0a50b3befa0547463bd283297b318507784bda591b1b\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:4ad56c90baee07bb72cbd65fa4d75e09d918bc9c1269067a0933f76b9c275b0a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:3aac324dbd068fdfd2a39c9111a0b94eae266841e39bff230e53300bf1a7be3f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:be2cdd9e777271bcf130ac63b76d777ca4b271f56a3ee80fab19d6709a150871\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:51cacfd1ff6fcd7187168f527b60a34f938d2e9e7fade5922273104ce5f5b7a2\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:4c9d9083443e624e4c9bb9038caf4b549986bd1205fb7b40b4ca54817945ede1\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:862891a4ed05d609032226c064e8456eca18af70ead6043c07ef62827cd69983\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:7f2cafccf490505a35085f76bcde39e8fcedfaff12ff6044ca1b51f1a0417993\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:02f601a11bf9738ce2bcae168f950852818bc236417eec30f8ec2dcd2fc12d2b\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:6db09368fab1c51b4e284a80a467cd483aebbaf9a00454ae2dff44892df6fea9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:ef933f4ad45a970defe5de79ee9ad4a50526cf389331d69221cc05afbf680667\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:00639c8709be999e4ad717fdce3991983d4dd0aaacc03b81b638e7ff1ac60e69\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:d067787e2dbed44cd9fd90dba70f6fd5e71421cd283bbeeef990552151c487e3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:746f1ccf796db240fea1760b4bf056628f269cc0e3894ab1ae2bf652bc0b4f36\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:a39b3ab488eec4573ded32c887d1c8a8ae7dea155a047ac00e858ba609806ec7\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:f071e6bdd9225b1010891fbfc73227381e0040de2febbda023db51436a524eb6\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    },
+    {
+      "name": "docx-zh-CN",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.docx": "75fdfe70911049b8f09cd17ee89d1c5349e194efb2c40828dbc0deb1b80f3c92",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:0fc1be93e98470a22f259e9ca3b8813bf81fb50e16ec4f9a2e08c42e79f4613a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:66771c95d73734182894d6cf2912f7ea7cd7f2210e84caeca55731930c02c656\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:d71bf75b714be0d668d0482e23a6034302a03c46fab316bdf60b38aad08d6240\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:76e5cc1cf98193ac2576eb16533d6f51227cf84ac48a92f33cc4f86cd4f87861\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:1422779e6163ad0d6005312ff91aba668683bf20cb0932fca44d09cd7ca8214c\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:b6f8b5302e8ecc8327812bcbc299c761862ad5384b4e4312569b5e597d60deee\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:366d50e60b8b350ff9c30d6f4023cce3726558e5d5dde651b14739b90ba29881\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:5a32dfa6c0655fdf6b3b0931d6fbe3aea777d98e0cba2a49a98dd2a6e7f4724f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:9d662381d3f081f4cc1c0a50b3befa0547463bd283297b318507784bda591b1b\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:4ad56c90baee07bb72cbd65fa4d75e09d918bc9c1269067a0933f76b9c275b0a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:3aac324dbd068fdfd2a39c9111a0b94eae266841e39bff230e53300bf1a7be3f\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:be2cdd9e777271bcf130ac63b76d777ca4b271f56a3ee80fab19d6709a150871\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:51cacfd1ff6fcd7187168f527b60a34f938d2e9e7fade5922273104ce5f5b7a2\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:4c9d9083443e624e4c9bb9038caf4b549986bd1205fb7b40b4ca54817945ede1\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:862891a4ed05d609032226c064e8456eca18af70ead6043c07ef62827cd69983\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:7f2cafccf490505a35085f76bcde39e8fcedfaff12ff6044ca1b51f1a0417993\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:02f601a11bf9738ce2bcae168f950852818bc236417eec30f8ec2dcd2fc12d2b\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:6db09368fab1c51b4e284a80a467cd483aebbaf9a00454ae2dff44892df6fea9\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:ef933f4ad45a970defe5de79ee9ad4a50526cf389331d69221cc05afbf680667\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:00639c8709be999e4ad717fdce3991983d4dd0aaacc03b81b638e7ff1ac60e69\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:d067787e2dbed44cd9fd90dba70f6fd5e71421cd283bbeeef990552151c487e3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:746f1ccf796db240fea1760b4bf056628f269cc0e3894ab1ae2bf652bc0b4f36\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:a39b3ab488eec4573ded32c887d1c8a8ae7dea155a047ac00e858ba609806ec7\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:f071e6bdd9225b1010891fbfc73227381e0040de2febbda023db51436a524eb6\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    },
+    {
+      "name": "pdf-en",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.pdf": "ec607ade08beaef99e3e7af5aad46e2837ac6fa87277e3c4a65d67369b51b70f",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:6feb72b3736c43a60e4d1050ac4d4d06c9851c69bd481da3abaee634adc37bb8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:be22c4b341e649feb58521b43c5494003d29a012c339c8799b4a7ef3a0c3ab98\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:d097a89d3b0b8a448a56619f3da5a1f148f6cf685b8df14cf6c193805a5124d2\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:aac920f1238ecb6f665aa5c9cc2caa0c4e7fd8d265830ec9d8e6cdf9664c40f8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:bf9972c7d08df988a78931064ac8db952be15bd82d49a92551ef7472e95a6f0a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:c514900ad14b6176ccc9f0bbb6352e3806090a33dcc26133513a6e91970b9d8e\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:1ca2fea2d919fa1f6c7992eba55f4fd9ea887e0d4cd10e000bb03fad7c701ff1\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:e771bdff84e17b284c70b24eb3c12f4ca8c288f5d85ab0b8f1e5fa1a535faf78\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:0d88e3fbe090d2401c0a545b06e9259117d2ff35292d94cafa12762462406bf6\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:844b5ff4e2099489c0adafd0487d9a7b35bb519b64caf96ddaa6dbbd1a00779d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:295a08049aa5c51f28d08574ef28280c24a0c7f64e5b2732bfa90463103f2314\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:233e5557f2a25e7fca1cc2e92d3f75b298f379bb90c0aa8b00ee8fa3fb0749dc\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:221d01fe5d8099081997d2f2db7f8c26e8effc7feb3c8fa9392c2d3bded931d5\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:4de78f38b2e7a033bc340c18591a0f7c3ac35a3850dc702da2a76fca40804015\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:8edd57de7bd795894ca42b06a3a1ea38876cc1aea9a4d36ddacd6be7cd1d7d25\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:9465b50fbc8c3bb8c2643e9931868ed77e857283e5a5675251df591a6621c50c\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:a4584d8f18dd2714d18b15b47f3a6a18f5ad614c3b8acb4f68d1d213404557e8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:8204c2c26f1f8a17c0181f5644230b89754032b3ba423220fa0eacd01e92eee3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:659a978957eb268ac39f97f51018c17cb0f3faa2c21d391d5e85869864e6423a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:90aa36e7560dd63fad3a9a85409e1e44f94fd61a7feb5daf0c1e0e74d74827dd\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:1ae4ac38ea5783112ea46ca486426c1878add2642fdba8df635a6f3b37241030\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:8dab8a796d7241512ea9fc4f31f7adcdaa6fdb7fdc3e34cee41049c5030a60bf\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:8bdc68286c6e9fda47caaf99d7e4418aed94d7307ee3d19e38625d5fee89d4ed\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:898ae5e2cb9e1026308e25bfd3958b88168da98fa18cac2c71acca0257e4cdae\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    },
+    {
+      "name": "pdf-zh-CN",
+      "status": "passed",
+      "version": "1.4.0",
+      "input_sha256": {
+        "paper.pdf": "ec607ade08beaef99e3e7af5aad46e2837ac6fa87277e3c4a65d67369b51b70f",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "non_no_op_actions": 54,
+      "actions": [
+        {
+          "control": "#add-source summary",
+          "action": "click"
+        },
+        {
+          "control": "#source-path-form [name=path]",
+          "action": "fill",
+          "value": "results.csv"
+        },
+        {
+          "control": "#source-path-form button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form [name=name]",
+          "action": "fill",
+          "value": "results"
+        },
+        {
+          "control": "#source-advice-show",
+          "action": "click"
+        },
+        {
+          "control": "#source-advice input[type=radio][value=\"0\"]",
+          "action": "check"
+        },
+        {
+          "control": "#source-advice button",
+          "action": "click"
+        },
+        {
+          "control": "#source-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "nav [data-step=batch]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"accuracy\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"precision\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"recall\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-fields input[data-column=\"f1\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-groups input[data-column=model]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=checkbox]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-filters [data-column=split] input[type=text]",
+          "action": "fill",
+          "value": "test"
+        },
+        {
+          "control": "#batch-form [name=reduce]",
+          "action": "selectOption",
+          "value": "mean"
+        },
+        {
+          "control": "#batch-form [name=expected_count]",
+          "action": "fill",
+          "value": "3"
+        },
+        {
+          "control": "#batch-form [name=expected_seeds]",
+          "action": "fill",
+          "value": "1\n2\n3"
+        },
+        {
+          "control": "#batch-form button[type=submit]",
+          "action": "click"
+        },
+        {
+          "control": "#batch-joint-toggle",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate=\"sha256:6feb72b3736c43a60e4d1050ac4d4d06c9851c69bd481da3abaee634adc37bb8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate=\"sha256:be22c4b341e649feb58521b43c5494003d29a012c339c8799b4a7ef3a0c3ab98\"]",
+          "action": "check"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "en"
+        },
+        {
+          "control": "#language",
+          "action": "selectOption",
+          "value": "zh-CN"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate=\"sha256:d097a89d3b0b8a448a56619f3da5a1f148f6cf685b8df14cf6c193805a5124d2\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate=\"sha256:aac920f1238ecb6f665aa5c9cc2caa0c4e7fd8d265830ec9d8e6cdf9664c40f8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate=\"sha256:bf9972c7d08df988a78931064ac8db952be15bd82d49a92551ef7472e95a6f0a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate=\"sha256:c514900ad14b6176ccc9f0bbb6352e3806090a33dcc26133513a6e91970b9d8e\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate=\"sha256:1ca2fea2d919fa1f6c7992eba55f4fd9ea887e0d4cd10e000bb03fad7c701ff1\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate=\"sha256:e771bdff84e17b284c70b24eb3c12f4ca8c288f5d85ab0b8f1e5fa1a535faf78\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate=\"sha256:0d88e3fbe090d2401c0a545b06e9259117d2ff35292d94cafa12762462406bf6\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate=\"sha256:844b5ff4e2099489c0adafd0487d9a7b35bb519b64caf96ddaa6dbbd1a00779d\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate=\"sha256:295a08049aa5c51f28d08574ef28280c24a0c7f64e5b2732bfa90463103f2314\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate=\"sha256:233e5557f2a25e7fca1cc2e92d3f75b298f379bb90c0aa8b00ee8fa3fb0749dc\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate=\"sha256:221d01fe5d8099081997d2f2db7f8c26e8effc7feb3c8fa9392c2d3bded931d5\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate=\"sha256:4de78f38b2e7a033bc340c18591a0f7c3ac35a3850dc702da2a76fca40804015\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate=\"sha256:8edd57de7bd795894ca42b06a3a1ea38876cc1aea9a4d36ddacd6be7cd1d7d25\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate=\"sha256:9465b50fbc8c3bb8c2643e9931868ed77e857283e5a5675251df591a6621c50c\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate=\"sha256:a4584d8f18dd2714d18b15b47f3a6a18f5ad614c3b8acb4f68d1d213404557e8\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate=\"sha256:8204c2c26f1f8a17c0181f5644230b89754032b3ba423220fa0eacd01e92eee3\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate=\"sha256:659a978957eb268ac39f97f51018c17cb0f3faa2c21d391d5e85869864e6423a\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate=\"sha256:90aa36e7560dd63fad3a9a85409e1e44f94fd61a7feb5daf0c1e0e74d74827dd\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-joint-pages button:last-child",
+          "action": "click"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate=\"sha256:1ae4ac38ea5783112ea46ca486426c1878add2642fdba8df635a6f3b37241030\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate=\"sha256:8dab8a796d7241512ea9fc4f31f7adcdaa6fdb7fdc3e34cee41049c5030a60bf\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate=\"sha256:8bdc68286c6e9fda47caaf99d7e4418aed94d7307ee3d19e38625d5fee89d4ed\"]",
+          "action": "check"
+        },
+        {
+          "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate=\"sha256:898ae5e2cb9e1026308e25bfd3958b88168da98fa18cac2c71acca0257e4cdae\"]",
+          "action": "check"
+        },
+        {
+          "control": "#batch-rationale",
+          "action": "fill",
+          "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+        },
+        {
+          "control": "#batch-stage",
+          "action": "click"
+        },
+        {
+          "control": "#preview",
+          "action": "click"
+        },
+        {
+          "control": "#select-reviewed",
+          "action": "click"
+        },
+        {
+          "control": "#attest",
+          "action": "check"
+        },
+        {
+          "control": "#accept",
+          "action": "click"
+        }
+      ],
+      "checked_metrics": 24,
+      "explicit_positions": 24,
+      "language_switch_preserves_fields": true,
+      "manuscripts_and_data_unchanged": true,
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

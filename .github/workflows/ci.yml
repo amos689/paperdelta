@@ -12,7 +12,7 @@ jobs:
   browser:
     name: Local studio / browser
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
@@ -45,6 +45,16 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_evidence_browser.cjs build/studio-evidence-browser
+      - name: Measure bilingual three-stage onboarding on identical inputs
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_onboarding_browser.cjs build/onboarding-browser
+      - name: Test reviewed experiment definitions and identity labels
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_onboarding_browser.cjs build/experiment-browser --definitions
+      - name: Replay recorded mapping model actions against frozen implementations
+        run: python -X utf8 tools/replay_mapping_v4.py --out build/mapping-replay
       - name: Test bilingual statistical contracts and compound displays
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
@@ -84,6 +94,14 @@ jobs:
             build/studio-evidence-browser/evidence.json
             build/studio-evidence-browser/*.png
             build/studio-evidence-browser/failure.json
+            build/onboarding-browser/evidence.json
+            build/onboarding-browser/*.png
+            build/onboarding-browser/*-actions.json
+            build/onboarding-browser/failure.json
+            build/experiment-browser/evidence.json
+            build/experiment-browser/*.png
+            build/experiment-browser/failure.json
+            build/mapping-replay/*.json
             build/studio-statistics-browser/evidence.json
             build/studio-statistics-browser/*.png
             build/studio-layout-browser/evidence.json

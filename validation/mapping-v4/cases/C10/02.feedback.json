@@ -1,0 +1,37 @@
+{
+  "actions_remaining": 14,
+  "allowed_actions": [
+    "source",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 1,
+  "draft_id": "sha256:170bd3552d19da093d992692b88cb998f9c3426ed91e04e02364fc5f05fd1c6a",
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [],
+    "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+    "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {}
+    },
+    "available_metrics": [],
+    "available_sources": [],
+    "available_stages": [
+      "source"
+    ],
+    "draft_id": "sha256:170bd3552d19da093d992692b88cb998f9c3426ed91e04e02364fc5f05fd1c6a",
+    "metrics": {},
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "needs_correction"
+}

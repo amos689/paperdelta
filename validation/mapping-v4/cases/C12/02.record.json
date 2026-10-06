@@ -1,0 +1,24 @@
+{
+  "action": "source",
+  "action_index": 2,
+  "elapsed_seconds": 2.639999999999418,
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [],
+    "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+    "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:1fdde058e6f98f2d365a2f3765bf17bb1b3d266503d10c7f9467247b3ef7105c",
+  "response_sha256": "sha256:efb22c2ad9c3ea4a37eea3afe7339fabd2e86f23c613109b11c91fc301cb46f6",
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 134,
+    "prompt_tokens": 4282,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4416
+  },
+  "valid": false
+}

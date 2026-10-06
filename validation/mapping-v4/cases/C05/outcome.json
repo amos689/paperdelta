@@ -1,0 +1,98 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.0319999999992433,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:6b6283d0f22f7526f974c25b079330802230985290dbc61a920c1d5669b51484",
+      "response_sha256": "sha256:e1d68e9c58e55594245d2022df8143d563c2ed0db8d5436c61dacc007985ef93",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 74,
+        "prompt_tokens": 3800,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3874
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.7180000000007567,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d44d5ac0eb225e891b6c0dbd8cc72ac40c40726020b986473fc2eb3860683693",
+      "response_sha256": "sha256:3dac7c237ed14c01af9b1a9d9d6b2ae6e0430bd7301156b457539c0f7737f3b1",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 151,
+        "prompt_tokens": 4300,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4451
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.8289999999997235,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:1aed61006fc53d911a90f276f009d151230a89474a3726459c17b5e56e49fe33",
+      "response_sha256": "sha256:513d595b11d0b4b5f5aa76207d4c5a1f8d3eaef89f835138ede5e4afa99b48bb",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 149,
+        "prompt_tokens": 4420,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4569
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 2.7340000000003783,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e0dc3a9697270bded53fd8846a66be324d4d50f3d0bea4730cfa3474d61fee08",
+      "response_sha256": "sha256:2a045847415680a249d0dc0317b3816958f6cf24a0d3ea8078ac16e580091f34",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 146,
+        "prompt_tokens": 4370,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4516
+      },
+      "valid": false
+    }
+  ],
+  "reason": "This metric captures the mean accuracy of the Ours model on the Data-A test split across seeds 1, 2, and 3, expressed in percentage points.",
+  "status": "budget_exhausted"
+}

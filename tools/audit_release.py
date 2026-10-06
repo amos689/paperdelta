@@ -185,6 +185,12 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.1").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.2").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.3").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.4").glob("*")]
+    required += [
+        p.relative_to(ROOT).as_posix()
+        for p in (ROOT / "validation/mapping-v4").rglob("*")
+        if p.is_file() and "__pycache__" not in p.parts
+    ]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]
     required += [
         p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/badges").glob("*.svg")
@@ -244,6 +250,30 @@ def main():
             raw = sdist[f"{study_directory}/{filename}"]
             assert score[field] == "sha256:" + sha256(raw).hexdigest()
     original_model = json.loads(sdist["docs/evidence/local-model-v1/protocol.json"])
+    for mapping_v4 in ("validation/mapping-v4", "validation/mapping-v4/revision-2"):
+        protocol_v4 = json.loads(sdist[f"{mapping_v4}/protocol.json"])
+        for name, digest in protocol_v4["implementation_sha256"].items():
+            assert (
+                "sha256:" + sha256(sdist[f"{mapping_v4}/implementation/{name}"]).hexdigest()
+                == digest
+            )
+        for name, digest in protocol_v4["frozen_case_sha256"].items():
+            assert "sha256:" + sha256(sdist[name]).hexdigest() == digest
+            assert (
+                "sha256:" + sha256(sdist[f"{mapping_v4}/implementation/{name}"]).hexdigest()
+                == digest
+            )
+        for name, digest in protocol_v4["initial_prompt_sha256"].items():
+            assert (
+                "sha256:" + sha256(sdist[f"{mapping_v4}/initial-prompts/{name}.json"]).hexdigest()
+                == digest
+            )
+        score_v4 = json.loads(sdist[f"{mapping_v4}/score.json"])
+        for key, name in (
+            ("protocol_sha256", "protocol.json"),
+            ("execution_sha256", "execution.json"),
+        ):
+            assert score_v4[key] == "sha256:" + sha256(sdist[f"{mapping_v4}/{name}"]).hexdigest()
     for name, identity in original_model["guide_hashes"].items():
         assert "sha256:" + sha256(frozen_bytes(name, "a2")).hexdigest() == identity
     assert (

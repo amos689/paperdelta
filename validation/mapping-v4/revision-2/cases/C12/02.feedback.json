@@ -1,0 +1,41 @@
+{
+  "actions_remaining": 14,
+  "allowed_actions": [
+    "source",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 1,
+  "draft_id": "sha256:2b8b156cb81d32b9701409a2ddb671a9e118710c03a5f8a7046b9d0a377efa8d",
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "format"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {}
+    },
+    "available_metrics": [],
+    "available_sources": [],
+    "available_stages": [
+      "source"
+    ],
+    "draft_id": "sha256:2b8b156cb81d32b9701409a2ddb671a9e118710c03a5f8a7046b9d0a377efa8d",
+    "metrics": {},
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "needs_correction"
+}

@@ -1,0 +1,117 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.7970000000004802,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:3833765470b25c94aec2ff9aecf3a9c02666eecdd19d6877191db9ee19fa5ef1",
+      "response_sha256": "sha256:5461c5b1d7916a915d308248ba907cc06813679258dcb119be677e6e1195ee53",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 3793,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3869
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.75,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:42d07c328cb18ccd036c5a68b416e7ff6ca76afedf07c0a39c8c499bee59dd13",
+      "response_sha256": "sha256:8fd127b4924e88881a5ed50d6ddcacf3b48abf95b297cfb3aaf81fc61b137c91",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 155,
+        "prompt_tokens": 4287,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4442
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.8590000000003783,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:3c08d67da4454f527b34a927d6aac29af9546396bc2a8540f5b10f4eb14abec9",
+      "response_sha256": "sha256:83ac2592077679bb26975e5f43c1fb77f6c7ff4e79eb26c389a2a7ad5d7cc0f6",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 153,
+        "prompt_tokens": 4409,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4562
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.109999999998763,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:18d6b319ee7b1fb2999b6a1409dcda84a7b6e183abfe65a97115875344fe3f2b",
+      "response_sha256": "sha256:7771105a08337ace5fb50a6b1d4c4ec858175dd5585175ff907bc1a55b98fe79",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 173,
+        "prompt_tokens": 4371,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4544
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 5,
+      "elapsed_seconds": 3.8590000000003783,
+      "error": {
+        "code": "DRAFT_SCHEMA",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for BindingDraft\nadditions.occurrences.test accuracy.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='test accuracy', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f64a787553968a77afdf262925966622779e6913f7e69192d24097ef684fb403",
+      "response_sha256": "sha256:4d3dff0da841f707dffb3e17affe6aae8ff33e93c85496c1697e99f08c11fd2a",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 224,
+        "prompt_tokens": 5023,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5247
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The locations stage identifies the original location of the reported mean test accuracy of Ours on Data-A, seeds 1, 2 and 3.",
+  "status": "budget_exhausted"
+}

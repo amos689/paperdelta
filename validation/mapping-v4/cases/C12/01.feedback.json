@@ -1,0 +1,37 @@
+{
+  "actions_remaining": 15,
+  "allowed_actions": [
+    "source",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:2b8b156cb81d32b9701409a2ddb671a9e118710c03a5f8a7046b9d0a377efa8d",
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [],
+    "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+    "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {}
+    },
+    "available_metrics": [],
+    "available_sources": [],
+    "available_stages": [
+      "source"
+    ],
+    "draft_id": "sha256:2b8b156cb81d32b9701409a2ddb671a9e118710c03a5f8a7046b9d0a377efa8d",
+    "metrics": {},
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "status": "needs_correction"
+}

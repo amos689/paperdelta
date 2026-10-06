@@ -1,0 +1,19 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 3.109999999998763,
+  "error": null,
+  "finish_reason": "stop",
+  "request_sha256": "sha256:18d6b319ee7b1fb2999b6a1409dcda84a7b6e183abfe65a97115875344fe3f2b",
+  "response_sha256": "sha256:7771105a08337ace5fb50a6b1d4c4ec858175dd5585175ff907bc1a55b98fe79",
+  "status": "draft",
+  "usage": {
+    "completion_tokens": 173,
+    "prompt_tokens": 4371,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4544
+  },
+  "valid": true
+}

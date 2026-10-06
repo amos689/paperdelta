@@ -10,7 +10,7 @@ Version 1.0 statistical bindings declare seeds, n, SD convention and interval
 method explicitly. Compound displays, batch templates and read-only agents share
 the [statistical contract](statistics.md).
 
-PaperDelta 1.2 combines first-time and batch binding with ongoing review of
+PaperDelta 1.4 combines first-time and batch binding with ongoing review of
 LaTeX, Markdown, Quarto, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
 It uses the same typed drafts, exact calculations, anchors and explicit acceptance
 as the CLI. The interface can switch between English and Simplified Chinese.
@@ -38,6 +38,17 @@ The terminal must stay running. Stop it with Ctrl+C. The address is always
 `127.0.0.1`; a free port is chosen by default. This is a local desktop tool, not a
 network service. A new server creates a new session URL. Open the URL on the same
 computer. macOS/Linux users may use `python3` to create their virtual environment.
+
+## Three-stage onboarding in 1.4
+
+The primary navigation is **paper and data → define experiments → review and
+confirm**. Inspect and explicitly apply source advice, define the batch, then
+enable joint review to see contributing evidence beside original positions. No
+position is preselected. Shared definitions and reviewed aliases reduce repeated
+setup; individual metric and location editors remain available. See the
+[1.4 guide](v1.4.md) for reasons, conflicts, acceptance records and measured limits.
+
+![Evidence and original context reviewed together](assets/v1.4/joint.en.png)
 
 ## Connect a paper
 

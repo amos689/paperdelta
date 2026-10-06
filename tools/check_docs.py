@@ -71,7 +71,7 @@ def check():
     )
     actual.update(
         p.relative_to(ROOT).as_posix()
-        for study in ("native-v1", "native-v2")
+        for study in ("native-v1", "native-v2", "mapping-v4")
         for p in (ROOT / "validation" / study).glob("README*.md")
     )
     assert actual == registered, {

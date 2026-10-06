@@ -1,0 +1,98 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 1.9380000000001019,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:60655fc2d1ce4f33886ad95a1c39a3f83782b197628aee64dbb5c1fa05420ad6",
+      "response_sha256": "sha256:7fc841837c4b5c7ff14020dbbab7559112542b6331fd43f89f1b1c0b8eb18634",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 58,
+        "prompt_tokens": 4036,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4094
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.561999999999898,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Additions\nsources.`results/metrics.csv`.[key]\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:af493bb8543888d9a54114c1fb2debb5165c7a8a37d3e1dbb3a46c95353450b2",
+      "response_sha256": "sha256:c78f36fa47cdc35d09c7c427b0c2f7818353fc373f8198dc1f95d0fdea67bd5d",
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 130,
+        "prompt_tokens": 4506,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4636
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.7190000000009604,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:b76d3c1c66962ec8b0b8f8147786f1dcb06a40ba92ef6a13d2fcc43e6450b6f4",
+      "response_sha256": "sha256:c343d4f248ed3752fd07d6e2b1e594d33c615f288c6d5fc6129a921298bafbaf",
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 132,
+        "prompt_tokens": 4621,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4753
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 2.70299999999952,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:abb2d3ecea02719070ca36aa70530d69f6fcd3b09391a744006667e90f022d5d",
+      "response_sha256": "sha256:22a0e72ffa6377efbea9e03cbca90358015b55aaa1f938ba90ee9eae066869b6",
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 137,
+        "prompt_tokens": 4585,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 4722
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Bind the Ours cell in the Data-A test table using its mean over seeds 1, 2, and 3.",
+  "status": "budget_exhausted"
+}

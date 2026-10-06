@@ -8,6 +8,7 @@ recursive-include examples *.yaml *.yml *.tex *.csv *.tsv *.xlsx *.json *.py *.p
 recursive-include tools *.py *.cjs
 recursive-include tests *.py
 recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
+recursive-include validation/mapping-v4 *.md *.json *.tex *.csv *.yaml *.py *.css *.js *.log
 prune tests/corpus
 prune validation/native-v1
 prune validation/native-v2

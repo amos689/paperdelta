@@ -64,8 +64,13 @@ Windows 使用虚拟环境的 `Scripts/python.exe`。`-C` 固定会话项目根�
 | `list_batch_candidates` | 分页指标和位置候选 |
 | `select_batch_bindings` | 会话内明确选择或纠正 |
 | `finish_batch_binding` | 重新校验的未接受批量提案 |
+| `inspect_source_contract` | 带依据的类型/主键/分组建议、冲突及采样边界 |
+| `inspect_experiment_definitions` | 已保存并复核的定义与内容身份 |
+| `start_mapping_session` | 发现结果、类型化步骤 schema 与有界会话 ID |
+| `advance_mapping_session` | 校验修订号的步骤、类型化纠错或最终未接受提案 |
+| `inspect_mapping_session` | 当前状态与可检查/导出的最后有效草稿 |
 
-十七个工具对项目文件全部只读：不保存提案、不应用修改、不确认绑定、不创建快照、不声明
+二十二个工具对项目文件全部只读：不保存提案、不应用修改、不确认绑定、不创建快照、不声明
 审阅。调用方可原样保存返回文本，再通过 CLI 让作者检查。服务自身不向模型发送
 内容；宿主所用模型及其数据处理方式仍然适用。
 
@@ -119,3 +124,13 @@ v0.2 使用独立版本的[分步评测](staged-model-evaluation.md)。Qwen3-8B 
 文字型 PDF 与 LaTeX/Word/PDF 共享指标流程见 [PDF 指南](pdf.md)。按需安装
 `paperdelta[pdf]` 或 `paperdelta[docx,pdf,mcp]`。PDF 保留原页坐标，源稿与导出稿
 关系需要明确声明。
+
+## 1.4 有界映射与共用定义
+
+详见[完整流程](v1.4.md)。每次调用 `advance_mapping_session` 都传入当前修订号。
+会话最多 16 次操作、三次无效操作，保留最后有效草稿，一小时后过期。`finish` 检查
+提案但不接受；`abstain` 记录拒答原因。输入变化使会话失效，原有无状态工具仍可使用。
+批量请求可引用已保存的实验定义及经复核的身份别名；MCP 不保存定义或审阅记录。
+
+[两轮保留的本地模型试验](../../validation/mapping-v4/README.zh-CN.md)均未得到完整
+参考映射或正确的必需拒答。类型检查通过不能证明实验身份正确，仍需作者明确复核。
