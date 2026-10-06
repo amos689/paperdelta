@@ -1,0 +1,23 @@
+{
+  "time": "2026-10-06T11:39:06.839538+00:00",
+  "scope": "Post-first-score correction to two translated diagnostic command names only. Parser behavior and frozen snapshots/results are unchanged.",
+  "reason": "The registered command is paperdelta pdf region-add; manuscript region-add does not exist.",
+  "changes": [
+    {
+      "path": "src/paperdelta/locales/en.json",
+      "before_sha256": "c1c4669e319edf5666d6421dd9fff3185bb66097db50e94c4ddbc83f94b9ffe0",
+      "after_sha256": "006ddd954c97978ee22946248b2f58d9f1e9f8fd21fa3506e48b3d5be71dbcb9",
+      "key": "native.pdf_region",
+      "before": "Select a named PDF region with manuscript region-add and preview it; ambiguous or image-only regions remain unverified.",
+      "after": "Select a named PDF region with paperdelta pdf region-add and preview it; ambiguous or image-only regions remain unverified."
+    },
+    {
+      "path": "src/paperdelta/locales/zh-CN.json",
+      "before_sha256": "6e50abf24fbd734504b25dae2de97174d76c187ae177a65590cdbf4971a253c8",
+      "after_sha256": "72eb25574e96ed5a36fda2787e59e752a7ebc180755c0244e4b973d295aec61b",
+      "key": "native.pdf_region",
+      "before": "用 manuscript region-add 选择命名 PDF 区域并预览；歧义区域或纯图片区域仍不会标记为已验证。",
+      "after": "用 paperdelta pdf region-add 选择命名 PDF 区域并预览；歧义区域或纯图片区域仍不会标记为已验证。"
+    }
+  ]
+}

@@ -100,3 +100,5 @@ python tools/replay_native_v2.py --out build/native-v2-replay
 首次评分后，两份 locale JSON 源码为符合 Git 规则由 CRLF 统一为 LF。
 [记录](release-normalization.json)核实解析后的值完全一致；冻结快照保留原字节，
 解析器逻辑未改变。
+
+后续[诊断文字修正](diagnostic-text-correction.json)更正双语 PDF 区域命令名称，不改变解析或已记录结果。

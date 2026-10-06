@@ -129,3 +129,5 @@ runtime are redistributed here.
 After the first score, the two locale JSON source files were normalized from CRLF
 to LF for Git. [The receipt](release-normalization.json) verifies identical parsed
 values; frozen snapshots retain their original bytes. No parser logic changed.
+
+The later [diagnostic text correction](diagnostic-text-correction.json) fixes the displayed PDF region command in both languages; it does not change parsing or recorded outcomes.
