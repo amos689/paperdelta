@@ -132,7 +132,7 @@ does not replace the remaining scope. The shared release requirements above appl
 
 | Release | Required scope | Acceptance evidence | Status |
 | --- | --- | --- | --- |
-| 1.3 | Word incomplete grids, multilevel headers and multiple values per cell; PDF numeric token boundaries and reading order; actionable extraction/identity/ambiguity diagnostics and reviewed native position selection; same-input Docling comparison; current README demonstration and links, isolated uvx startup and previewable private-by-default diagnostic bundles | Repair the four recorded PDF misses; about twenty newly sourced licensed native documents with at least 200 independently located targets, article-family development/held-out split, preserved first results and all four outcome classes; bilingual browser and installation verification; comparison records state whether an optional backend improves usable positions | In development |
+| 1.3 | Word incomplete grids, multilevel headers and multiple values per cell; PDF numeric token boundaries and reading order; actionable extraction/identity/ambiguity diagnostics and reviewed native position selection; same-input Docling comparison; current README demonstration and links, isolated uvx startup and previewable private-by-default diagnostic bundles | Repair the four recorded PDF misses; about twenty newly sourced licensed native documents with at least 200 independently located targets, article-family development/held-out split, preserved first results and all four outcome classes; bilingual browser and installation verification; comparison records state whether an optional backend improves usable positions | Released 1.3.0; see delivery record below |
 | 1.4 | Three-stage onboarding; proposed source types, keys and experiment groups with reasons/conflicts; combined evidence/location review; shared experiment definitions; reviewed aliases; complete Agent proposal workflow with explicit errors and bounded correction | Same 24-metric task at no more than 60 recorded operations while retaining explicit review; independently recorded real-model complete mapping, identity error, abstention, latency and cost results; deterministic validation remains separate from model evidence | Required after 1.3 |
 | 1.5 | Reusable GitHub Action; PR-oriented new/resolved/unverified findings and removed declarations; SARIF for actual text locations; selected portable review bundles with content preview; combined workflow with paper-preflight while both tools remain independent | Fresh paper repository setup; data-only changes show all affected locations; removed bindings visibly reduce coverage; SARIF and binary-document report links agree with original positions; bundle inspection and replay preserve declared scope | Required after 1.4 |
 | 1.6 | Notebook cell/input/output provenance; Quarto render-output freshness; generated LaTeX/Markdown result fragments from accepted metrics; experiment-change revision lists across prose/tables/figures | Real notebook/Quarto workflows distinguish new evidence, refreshed tables, stale PDF and stale figures; records distinguish declared provenance from execution proof; generated fragments are deterministic and reviewed; offline checks retain input identities | Required after 1.5 |
@@ -146,3 +146,19 @@ named CI jobs, distribution audits, stable GitHub/PyPI publication and verificat
 of the exact public artifacts. Record failures and repairs rather than rewriting
 historical evidence. Do not replace model or parser measurements with scripted
 successes or a narrower, easier task.
+
+## 1.3 delivery record
+
+Released at `72d11bfb3aa11fa3fd094d1fbdec60f31e73b59e`:
+[17 named CI jobs](https://github.com/amos689/paperdelta/actions/runs/37457832186), [GitHub](https://github.com/amos689/paperdelta/releases/tag/v1.3.0),
+[PyPI](https://pypi.org/project/paperdelta/1.3.0/) and [publication receipt](assets/v1.3/publication.json).
+The final installed wheel passed 772 tests with three POSIX-only Windows skips,
+eight new bilingual browser flows and thirteen isolated startup checks. Downloaded
+wheel, source and evaluation archive hashes match. A fresh public installation ran
+LaTeX, Markdown, Quarto, Word and PDF demos in both languages. The twenty-original
+study has 222 independent targets; the first frozen held-out run supports 82/110,
+with three misses, zero observed mislocations and 25 unknowns. All earlier failures,
+frozen outcomes and the separately scoped Docling comparison remain available in
+[the study](../validation/native-v2/README.md). The stale public PDF example was
+repaired through normal reviewed acceptance, and the final CI reproduces the frozen
+study. Versions 1.4–1.6 remain required and are not represented as delivered.
