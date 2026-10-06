@@ -28,6 +28,18 @@
       "observed": "The first run incorrectly expected a globally passing image-containing report; a second attempt reused the demo's existing baseline name.",
       "change": "Assert the image-content unknown state explicitly and use a distinct workflow baseline; retain the original image and saved output identities.",
       "follow_up": "Actual Jupyter execution and Quarto/Typst rendering passed all four intended phases."
+    },
+    {
+      "check": "First cross-platform CI browser job, run 37492233692",
+      "observed": "After six native bilingual flows, the Markdown flow compared emitted schema 9 with historical expectation 8.",
+      "change": "Update the four live browser helpers to the new report schema while retaining their value, identity, source-preservation and UI assertions. The superseded workflow was canceled after the failed browser job.",
+      "follow_up": "Final exact-commit CI is recorded separately."
+    },
+    {
+      "check": "Nullable historical report normalization",
+      "observed": "A valid persisted unknown occurrence with location:null caused an AttributeError in the new revision list; suggestion:null had the same assumption.",
+      "change": "Treat absent and explicit null optional fields consistently; add a regression using validated schema 8 and schema 9 reports.",
+      "follow_up": "Final installed suite includes unknown-location and refreshed-table cases."
     }
   ]
 }

@@ -37,7 +37,7 @@ def revision_list(report):
         )
 
     for name, state in report["occurrences"].items():
-        location = state.get("location", {})
+        location = state.get("location") or {}
         kind = state.get("usage") or (
             "table" if location.get("locator", {}).get("table") else "prose"
         )
@@ -47,7 +47,7 @@ def revision_list(report):
             state,
             [state["metric"]],
             [location["file"]] if location else [],
-            "review_claims" if state.get("suggestion", {}).get("blocked_by") else None,
+            "review_claims" if (state.get("suggestion") or {}).get("blocked_by") else None,
         )
     for name, state in report["claims"].items():
         add(

@@ -67,7 +67,7 @@ async function runCase(browser, kind, language) {
     const report=check(directory,language);assert.equal(report.coverage.pass,1);
     const location=Object.values(report.occurrences)[0].location;
     if(kind==='docx-note')assert.equal(location.locator.note_id,7);
-    if(kind==='docx-table')assert.equal(report.report_schema_version,7);
+    if(kind==='docx-table')assert.equal(report.report_schema_version,9);
     assert.equal(hash(path.join(directory,label.paper)),before);
     fs.writeFileSync(path.join(directory,'results.csv'),`id,score\nresult,${label.changed}\n`);
     const changed=check(directory,language);assert.equal(changed.coverage.mismatch,1);

@@ -142,7 +142,7 @@ async function click(page, selector) { await page.locator(selector).click(); awa
         const report = JSON.parse(execFileSync(python, ["-X", "utf8", "-m", "paperdelta", "-C", directory, "check", "--format", "json"], { encoding: "utf8", windowsHide: true }));
         assert.equal(report.coverage.confirmed, 1); assert.equal(report.coverage.pass, 1);
         if (['md','qmd'].includes(kind)) {
-          assert.equal(report.report_schema_version, 8);
+          assert.equal(report.report_schema_version, 9);
           const location = Object.values(report.occurrences)[0].location;
           assert.equal(location.format, kind === 'md' ? 'markdown' : 'quarto');
           assert.equal(originalPaper.subarray(location.byte_start, location.byte_end).toString('utf8'), location.text);

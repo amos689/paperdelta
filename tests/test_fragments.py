@@ -170,3 +170,27 @@ def test_fragment_preserves_statistical_convention_and_refuses_missing_seed(tmp_
     store.write("results.tsv", store.read("results.tsv").replace(b"method\t5\t84\n", b""))
     with pytest.raises(PaperDeltaError):
         preview_fragment(store, "statistics", specification)
+
+
+def test_revision_list_accepts_nullable_fields_in_persisted_unknown_and_passed_states(
+    project, change_results
+):
+    from paperdelta.analysis import empty_report
+
+    report = empty_report("paperdelta.yaml")
+    report["report_schema_version"] = 8
+    report["occurrences"]["missing"] = {"metric": "ours", "status": "unknown"}
+    report["coverage"]["confirmed"] = report["coverage"]["unknown"] = 1
+    normalized = validate_record(StoredReport, report, "REPORT_SCHEMA").model_dump()
+    item = revision_list(normalized)[0]
+    assert item["status"] == "unknown" and item["position"] is None
+    store = Project(project)
+    create_snapshot(store, "before", check_project(project))
+    change_results(project)
+    store.write("paper/results.tex", store.read("paper/results.tex").replace(b"84.1", b"80.9"))
+    report = check_project(project, baseline=read_snapshot(store, "before"))
+    normalized = validate_record(StoredReport, report, "REPORT_SCHEMA").model_dump()
+    table = next(
+        item for item in revision_list(normalized) if item["subject"] == "occurrence:table_accuracy"
+    )
+    assert table["status"] == "pass" and table["action"] == "review_refreshed"

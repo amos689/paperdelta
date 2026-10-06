@@ -102,7 +102,7 @@ async function runCase(browser, kind, language) {
     await act(page, '#attest', 'check'); await act(page, '#accept');
     assert(await page.locator('#receipt').isVisible());
     const report = JSON.parse(py(['-m', 'paperdelta', '-C', directory, 'check', '--format', 'json', '--report', 'report']));
-    assert.equal(report.report_schema_version, 5); assert.equal(report.coverage.pass, 2);
+    assert.equal(report.report_schema_version, 9); assert.equal(report.coverage.pass, 2);
     assert(Object.values(report.metrics).some((metric) => metric.value === '0.80000000000000000000000000001'));
     assert.deepEqual(Object.fromEntries(Object.keys(before).map((file) => [file, hash(path.join(directory, file))])), before);
     await page.setViewportSize({ width: 390, height: 844 });
