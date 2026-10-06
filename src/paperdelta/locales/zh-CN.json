@@ -1552,7 +1552,7 @@
   "provenance.stale": "输入或声明已改变。接受前请查看新的来源预览。",
   "provenance.exists": "该来源名称已存在。更新时请明确预览替换。",
   "provenance.config_dependency": "配置和保存的来源记录不能成为生成过程的依赖或输出。",
-  "provenance.declared": "经复核的来源声明：列出的字节未变，不能证明该过程生成了输出。",
+  "provenance.declared": "经复核的来源声明：即使列出的文件字节未变，也不能证明该过程生成了输出。",
   "provenance.observed": "明确发起的命令退出码为 0，声明的输入在运行前后相同。本地可编辑记录不能证明因果关系、运行期间文件始终未变、依赖完整性或科学有效性。",
   "provenance.changed": "已记录的生成来源文件发生变化：{paths}。请先复核或重新运行，再记录新状态。",
   "provenance.unverified": "以下单元格保存的 Notebook 输出状态仍无法验证：{paths}。",
