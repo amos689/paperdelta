@@ -1,0 +1,125 @@
+{
+  "version": "1.4.0",
+  "commit": "2bb274db33e411ba7d94cec3ca611b59dd1f0efc",
+  "checked_at": "2026-10-06T14:31:48.065041+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37475613344",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-1.4.0-py3-none-any.whl": "3bead2bd58d3c4527277f12ca0aa149102447977cdf3463fea3dda52124fdb33",
+    "paperdelta-1.4.0.tar.gz": "0b94005e9d09a4cb60e275c91de8f88d3a7d68c2f77529367e9ca6dca50bd9c6",
+    "paperdelta-evaluation-1.4.0.zip": "c2446fb170c63aff7281db648811d6bdb35df5bb6cc5f4bf2e61903f80a589ff"
+  },
+  "status": "passed",
+  "exact_installed_wheel": true,
+  "canonical_source_bytes_match_git": true,
+  "local_installed_suite": {
+    "tests": 804,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 801
+  },
+  "browser_regressions": {
+    "onboarding": {
+      "status": "passed",
+      "cases": 6
+    },
+    "definitions": {
+      "status": "passed",
+      "cases": 2
+    },
+    "statistics": {
+      "status": "passed",
+      "cases": 16
+    },
+    "layout": {
+      "status": "passed",
+      "cases": 8
+    },
+    "reliability": {
+      "status": "passed",
+      "cases": 8
+    },
+    "reports": {
+      "status": "passed",
+      "cases": 2
+    }
+  },
+  "browser_scope": "Authored installed-candidate flows; final release changes only canonical CSS line endings. Current exact commit also passes browser CI.",
+  "new_bilingual_browser_flows": 8,
+  "onboarding_actions": 54,
+  "identical_effort_comparison": "LaTeX/CSV 24 metrics, v0.8 103 actions to v1.4 54 actions",
+  "model_response_replay": {
+    "status": "passed",
+    "replays": [
+      {
+        "run": 1,
+        "status": "passed",
+        "cases": 12
+      },
+      {
+        "run": 2,
+        "status": "passed",
+        "cases": 12
+      }
+    ],
+    "scope": "Replayed recorded responses against frozen code; no new model inference."
+  },
+  "real_model_first_run": {
+    "complete_mappings": 0,
+    "mapping_cases": 9,
+    "required_abstentions": 0,
+    "abstention_cases": 3
+  },
+  "real_model_revision_2": {
+    "complete_mappings": 0,
+    "mapping_cases": 9,
+    "required_abstentions": 0,
+    "abstention_cases": 3
+  },
+  "configuration_schema_max": 9,
+  "report_schema_max": 8,
+  "strict_package_description": "passed",
+  "frozen_previous_materials_unchanged": true,
+  "preserved_ci_failures": [
+    "https://github.com/amos689/paperdelta/actions/runs/37469270873",
+    "https://github.com/amos689/paperdelta/actions/runs/37470951015"
+  ],
+  "release_adjustments": "docs/assets/v1.4/release-adjustments.json",
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v1.4.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37479403605",
+  "pypi": "https://pypi.org/project/paperdelta/1.4.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-1.4.0-py3-none-any.whl": "3bead2bd58d3c4527277f12ca0aa149102447977cdf3463fea3dda52124fdb33",
+    "paperdelta-1.4.0.tar.gz": "0b94005e9d09a4cb60e275c91de8f88d3a7d68c2f77529367e9ca6dca50bd9c6"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true,
+  "public_demo_formats": [
+    "latex",
+    "markdown",
+    "quarto",
+    "docx",
+    "pdf"
+  ],
+  "downloaded_github_evaluation_sha256": "c2446fb170c63aff7281db648811d6bdb35df5bb6cc5f4bf2e61903f80a589ff"
+}

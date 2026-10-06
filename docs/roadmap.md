@@ -133,7 +133,7 @@ does not replace the remaining scope. The shared release requirements above appl
 | Release | Required scope | Acceptance evidence | Status |
 | --- | --- | --- | --- |
 | 1.3 | Word incomplete grids, multilevel headers and multiple values per cell; PDF numeric token boundaries and reading order; actionable extraction/identity/ambiguity diagnostics and reviewed native position selection; same-input Docling comparison; current README demonstration and links, isolated uvx startup and previewable private-by-default diagnostic bundles | Repair the four recorded PDF misses; about twenty newly sourced licensed native documents with at least 200 independently located targets, article-family development/held-out split, preserved first results and all four outcome classes; bilingual browser and installation verification; comparison records state whether an optional backend improves usable positions | Released 1.3.0; see delivery record below |
-| 1.4 | Three-stage onboarding; proposed source types, keys and experiment groups with reasons/conflicts; combined evidence/location review; shared experiment definitions; reviewed aliases; complete Agent proposal workflow with explicit errors and bounded correction | Same 24-metric task at no more than 60 recorded operations while retaining explicit review; independently recorded real-model complete mapping, identity error, abstention, latency and cost results; deterministic validation remains separate from model evidence | Required after 1.3 |
+| 1.4 | Three-stage onboarding; proposed source types, keys and experiment groups with reasons/conflicts; combined evidence/location review; shared experiment definitions; reviewed aliases; complete Agent proposal workflow with explicit errors and bounded correction | Same 24-metric task at no more than 60 recorded operations while retaining explicit review; independently recorded real-model complete mapping, identity error, abstention, latency and cost results; deterministic validation remains separate from model evidence | Released 1.4.0; see delivery record below |
 | 1.5 | Reusable GitHub Action; PR-oriented new/resolved/unverified findings and removed declarations; SARIF for actual text locations; selected portable review bundles with content preview; combined workflow with paper-preflight while both tools remain independent | Fresh paper repository setup; data-only changes show all affected locations; removed bindings visibly reduce coverage; SARIF and binary-document report links agree with original positions; bundle inspection and replay preserve declared scope | Required after 1.4 |
 | 1.6 | Notebook cell/input/output provenance; Quarto render-output freshness; generated LaTeX/Markdown result fragments from accepted metrics; experiment-change revision lists across prose/tables/figures | Real notebook/Quarto workflows distinguish new evidence, refreshed tables, stale PDF and stale figures; records distinguish declared provenance from execution proof; generated fragments are deterministic and reviewed; offline checks retain input identities | Required after 1.5 |
 
@@ -162,3 +162,17 @@ frozen outcomes and the separately scoped Docling comparison remain available in
 [the study](../validation/native-v2/README.md). The stale public PDF example was
 repaired through normal reviewed acceptance, and the final CI reproduces the frozen
 study. Versions 1.4–1.6 remain required and are not represented as delivered.
+
+## 1.4 delivery record
+
+Released at `2bb274db33e411ba7d94cec3ca611b59dd1f0efc`: [17 named CI jobs](https://github.com/amos689/paperdelta/actions/runs/37475613344),
+[GitHub](https://github.com/amos689/paperdelta/releases/tag/v1.4.0), [PyPI](https://pypi.org/project/paperdelta/1.4.0/) and
+[public verification](assets/v1.4/publication.json). The exact final wheel passed
+801 tests with three POSIX-only Windows skips. The preserved installed browser
+flows cover six onboarding cases and two shared-definition cases; current-commit
+CI also passed the full browser suite. Same-input LaTeX/CSV onboarding takes 54
+actions versus 103 in v0.8. Both frozen real-model runs remain 0/9 complete mappings
+and 0/3 required abstentions; autonomous mapping is not established. Public wheel,
+source and evaluation hashes match, and fresh public installs ran all five formats
+in both languages. The two earlier CI failures and corrections remain documented.
+Versions 1.5 and 1.6 remain required.
