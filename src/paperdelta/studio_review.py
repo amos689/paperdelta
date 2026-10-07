@@ -114,6 +114,8 @@ class StudioReview:
         return {"path": path, "claim": claim, "reviewed_state": state}
 
     def detail(self):
+        from paperdelta.studio_revisions import revision_tasks
+
         report = self.watcher.previous
         positions, texts = {}, {}
         if report is not None:
@@ -148,4 +150,5 @@ class StudioReview:
             "report": report,
             "snapshots": self.snapshots(),
             "positions": positions,
+            "revision_tasks": revision_tasks(report, positions) if report is not None else [],
         }

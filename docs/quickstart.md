@@ -4,7 +4,7 @@
 
 Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
-positions, read-only limits and explicit source/PDF comparisons.
+positions, reviewed-write boundaries and explicit source/PDF comparisons.
 
 **Visual onboarding:** run `paperdelta studio` to declare evidence and confirm numeric bindings in your browser. See the [workbench guide](studio.md). The full CLI / JSON tutorial follows.
 

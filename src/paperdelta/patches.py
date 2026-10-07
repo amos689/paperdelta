@@ -20,6 +20,8 @@ from paperdelta.models import Hash, StrictModel, VersionOne
 from paperdelta.records import REPORT_SCHEMA_MAX, TimestampedRecord, validate_record
 from paperdelta.storage import Project, fingerprint, json_text, parse_json, sha256
 
+TEXT_SUFFIXES = (".tex", ".md", ".qmd")
+
 
 class Change(StrictModel):
     occurrence: str
@@ -31,7 +33,7 @@ class Change(StrictModel):
 
     @model_validator(mode="after")
     def valid_range(self):
-        if self.byte_end <= self.byte_start or not self.file.endswith(".tex"):
+        if self.byte_end <= self.byte_start or not self.file.lower().endswith(TEXT_SUFFIXES):
             raise validation_error(msg("validation.patches"))
         return self
 
@@ -68,7 +70,7 @@ class Transaction(TimestampedRecord):
         for index, item in enumerate(self.files):
             if item.backup != f".paperdelta/transactions/{self.id}/backups/{index}.bin":
                 raise validation_error(msg("validation.patches.3"))
-            if not item.path.endswith(".tex"):
+            if not item.path.lower().endswith(TEXT_SUFFIXES):
                 raise validation_error(msg("validation.patches.4"))
         return self
 
@@ -95,7 +97,7 @@ def _safe_changes(report: dict, selected: list[str] | None = None) -> list[dict]
                 )
             continue
         span = state["location"]
-        if span.get("format") in {"docx", "pdf", "markdown", "quarto"}:
+        if span.get("format") in {"docx", "pdf"}:
             if selected is not None:
                 raise PaperDeltaError(
                     "DOCUMENT_READ_ONLY", msg("document.read_only", file=span["file"])
@@ -133,8 +135,7 @@ def create_patch(project: Project, report: dict, selected: list[str] | None = No
         native = [
             s.get("location", {})
             for s in current["occurrences"].values()
-            if s.get("suggestion")
-            and s.get("location", {}).get("format") in {"docx", "pdf", "markdown", "quarto"}
+            if s.get("suggestion") and s.get("location", {}).get("format") in {"docx", "pdf"}
         ]
         if native:
             raise PaperDeltaError(
@@ -350,7 +351,9 @@ def recover_transaction(project: Project, transaction_id: str, *, write: bool = 
             raise PaperDeltaError("TRANSACTION_SCHEMA", msg("error.TRANSACTION_SCHEMA.3"))
         for index, item in enumerate(record["files"]):
             expected_backup = f"{directory}/backups/{index}.bin"
-            if item["backup"] != expected_backup or not item["path"].endswith(".tex"):
+            if item["backup"] != expected_backup or not item["path"].lower().endswith(
+                TEXT_SUFFIXES
+            ):
                 raise PaperDeltaError("TRANSACTION_SCHEMA", msg("error.TRANSACTION_SCHEMA.4"))
             backup = project.read(expected_backup)
             if sha256(backup) != item["before_hash"]:

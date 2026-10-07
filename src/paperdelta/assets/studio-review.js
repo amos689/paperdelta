@@ -87,6 +87,7 @@ window.createPaperDeltaReview = function (ctx) {
     $('removed-bindings').replaceChildren();
     for (const [group, names] of Object.entries(report?.removed_bindings || {})) if (names.length) $('removed-bindings').append(node('p', t('removed_since_snapshot') + ': ' + group + ' · ' + names.join(', '), 'issue'));
     paintClaims();
+    ctx.revisionBoard.paint(detail);
   }
   function paintClaims() {
     $('claim-list').replaceChildren();
@@ -94,15 +95,34 @@ window.createPaperDeltaReview = function (ctx) {
       const card = node('div', undefined, 'source-card');
       card.append(node('strong', name), status(claim.status), node('p', claim.location?.text || '', 'context-text'));
       card.append(node('p', t('review_' + claim.review), 'muted'));
-      if (claim.state_fingerprint) card.append(button(t('record_claim_review'), async () => {
-        selectedClaim = { name, state: claim.state_fingerprint };
-        $('claim-review-name').textContent = name; $('claim-review-form').hidden = false;
-        $('claim-attest').checked = false; $('claim-note').value = '';
-        $('claim-review-form').scrollIntoView({ block: 'center' });
-      }));
+      if (claim.state_fingerprint) card.append(button(t('record_claim_review'), async () => openClaim(name)));
       $('claim-list').append(card);
     }
     if (!Object.keys(currentReport()?.claims || {}).length) $('claim-list').append(node('p', t('no_claims'), 'muted'));
+  }
+  function openClaim(name) {
+    const claim = currentReport()?.claims[name];
+    if (!claim?.state_fingerprint) return;
+    selectedClaim = { name, state: claim.state_fingerprint };
+    $('advanced-review').open = true;
+    $('claim-review-name').textContent = name; $('claim-review-form').hidden = false;
+    $('claim-attest').checked = false; $('claim-note').value = '';
+    $('claim-review-form').scrollIntoView({ block: 'center' });
+    $('claim-reviewer').focus({ preventScroll: true });
+  }
+  async function openTask(item) {
+    $('advanced-review').open = true;
+    if (item.subject.startsWith('claim:')) { openClaim(item.subject.slice(6)); return; }
+    if (item.patch_blocked_by?.length) { openClaim(item.patch_blocked_by[0].replace(/^claim:/, '')); return; }
+    await scanRepairs();
+    const name = item.subject.replace(/^occurrence:/, 'occurrences:');
+    if (broken.some(candidate => candidate.binding === name)) {
+      $('repair-binding').value = name; selectRepair(); await findRepairs(0);
+      $('repair-work').scrollIntoView({ block: 'start' });
+    } else {
+      await loadDeclarations(); $('declaration-search').value = name;
+      paintDeclarations(); $('declaration-list').scrollIntoView({ block: 'center' });
+    }
   }
   async function loadDeclarations() {
     declarations = (await api('declarations')).items; paintDeclarations();
@@ -363,5 +383,5 @@ window.createPaperDeltaReview = function (ctx) {
   });
   const timer = setInterval(poll, 2000);
   window.addEventListener('pagehide', () => clearInterval(timer), { once: true });
-  return { render, load, poll, setMode, localize };
+  return { render, load, poll, setMode, localize, openTask };
 };

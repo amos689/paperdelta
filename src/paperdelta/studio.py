@@ -4,6 +4,7 @@ Browser state is presentation, never the authority for a proposal or calculation
 Every edit names a session revision; only an inspected, server-held proposal can
 be accepted. Binding operations never write manuscript or evidence files.
 Explicit fragment acceptance writes only a reviewed generated destination.
+Explicit numeric-patch acceptance uses guarded, recoverable source transactions.
 """
 
 from __future__ import annotations
@@ -86,6 +87,7 @@ from paperdelta.studio_batch import (
 )
 from paperdelta.studio_recovery import DraftRecovery, migrate_draft, rebuild_draft
 from paperdelta.studio_review import StudioReview
+from paperdelta.studio_revisions import PatchAcceptance, PatchSelection, TransactionSelection
 from paperdelta.studio_workflows import (
     FragmentPreview,
     NotebookPath,
@@ -298,6 +300,11 @@ class RecoverySelection(RecoveryIdentity):
 
 
 PARAMETERS = {
+    "patch-preview": PatchSelection,
+    "patch-apply": PatchAcceptance,
+    "patch-transactions": Empty,
+    "patch-recover-preview": TransactionSelection,
+    "patch-recover": PatchAcceptance,
     "workflow-options": Empty,
     "producer-notebook": NotebookPath,
     "producer-preview": ProducerPreview,
@@ -428,6 +435,7 @@ class StudioSession:
         self.batch = None
         self.experiment = None
         self.review_bundle_preview = None
+        self.numeric_patch = self.numeric_recovery = None
         self.recovery_archive = None
         self.recovery = DraftRecovery(project, self.config_path)
         self.reviewer = StudioReview(project, self.config_path)
@@ -456,6 +464,7 @@ class StudioSession:
         self.batch = None
         self.experiment = None
         self.review_bundle_preview = None
+        self.numeric_patch = self.numeric_recovery = None
         self._cached_state = self._all_candidates = None
 
     def _require_draft(self):
@@ -609,6 +618,16 @@ class StudioSession:
         return browser_value(translated(result, request.language))
 
     def _execute(self, action, parameters):
+        if action in {
+            "patch-preview",
+            "patch-apply",
+            "patch-transactions",
+            "patch-recover-preview",
+            "patch-recover",
+        }:
+            from paperdelta.studio_revisions import execute
+
+            return execute(self, action, parameters)
         if action in {
             "workflow-options",
             "producer-notebook",

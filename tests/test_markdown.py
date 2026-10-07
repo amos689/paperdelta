@@ -15,7 +15,7 @@ from paperdelta.manuscripts import change_manuscripts
 from paperdelta.markdown_document import MarkdownDocument
 from paperdelta.models import Config
 from paperdelta.onboarding import accept_bindings, init_project, scan_project
-from paperdelta.patches import create_patch
+from paperdelta.patches import apply_patch, create_patch, preview_patch, recover_transaction
 from paperdelta.records import StoredReport
 from paperdelta.reports import html_report, text_report
 from paperdelta.snapshots import create_snapshot, read_snapshot
@@ -200,7 +200,7 @@ def bind_accuracy(project, file, name="accuracy_text"):
 
 @pytest.mark.parametrize("extension", ["md", "qmd"])
 @pytest.mark.parametrize("table", [False, True])
-def test_full_bind_check_change_snapshot_and_read_only_source(tmp_path, extension, table):
+def test_full_bind_check_change_snapshot_and_reviewed_source_patch(tmp_path, extension, table):
     project, file = static_project(tmp_path, extension, table=table)
     original = project.read(file)
     bind_accuracy(project, file)
@@ -218,16 +218,18 @@ def test_full_bind_check_change_snapshot_and_read_only_source(tmp_path, extensio
     state = report["occurrences"]["accuracy_text"]
     assert state["status"] == "mismatch" and state["location"]["text"] == "84.1%"
     assert state["expected"] == "80.9%"
-    with pytest.raises(PaperDeltaError) as failed:
-        create_patch(project, report, ["accuracy_text"])
-    assert failed.value.code == "DOCUMENT_READ_ONLY"
+    patch = create_patch(project, report, ["accuracy_text"])
+    assert "80.9%" in preview_patch(project, patch)
     for language in ("en", "zh-CN"):
         with language_context(language):
             assert file in text_report(report)
             assert "80.9%" in html_report(report)
     assert project.read(file) == original
-    project.write(file, original.replace(b"84.1", b"80.9"))
+    result = apply_patch(project, patch)
+    assert project.read(file) == original.replace(b"84.1", b"80.9")
     assert check_project(tmp_path)["occurrences"]["accuracy_text"]["status"] == "pass"
+    recover_transaction(project, result["transaction_id"], write=True)
+    assert project.read(file) == original
 
 
 @pytest.mark.parametrize("extension", ["md", "qmd"])
@@ -387,6 +389,13 @@ def test_statistics_bind_to_one_contiguous_literal_display(tmp_path, extension, 
     project.write("runs.tsv", project.read("runs.tsv").replace(b"\t84\n", b"\t85\n"))
     after = check_project(tmp_path)
     assert after["occurrences"]["result"]["status"] == "mismatch"
+    assert project.read(file) == source.encode()
+    patch = create_patch(project, after, ["result"])
+    assert len(patch["changes"]) == 1 and patch["changes"][0]["original"] == display
+    assert after["occurrences"]["result"]["expected"] in preview_patch(project, patch)
+    applied = apply_patch(project, patch)
+    assert applied["report"]["occurrences"]["result"]["status"] == "pass"
+    recover_transaction(project, applied["transaction_id"], write=True)
     assert project.read(file) == source.encode()
 
 

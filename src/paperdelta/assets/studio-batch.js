@@ -280,7 +280,7 @@ window.createPaperDeltaBatch = function (ctx) {
       if (active) { active = catalog.items.find((item) => item.choice_id === active.choice_id) || active; await loadLocations(locationOffset); }
     }
     if ($('batch-templates').open) await loadTemplates();
-    if ($('experiment-definitions').open) await loadDefinitions();
+    if (ctx.state()?.initialized && !ctx.state()?.stale) await loadDefinitions();
     if (!$('experiment-advice-view').hidden) await inspectExperimentAdvice();
     paintCounts();
   }
@@ -311,13 +311,19 @@ window.createPaperDeltaBatch = function (ctx) {
     const previous = $('experiment-definition-select').value; $('experiment-definition-select').replaceChildren();
     for (const value of result.items) $('experiment-definition-select').add(new Option(value.name + ' · ' + value.definition_id.slice(7, 19), value.definition_id));
     if (result.items.some(value => value.definition_id === previous)) $('experiment-definition-select').value = previous;
-    $('experiment-definition-load').disabled = !result.items.length;
+    $('experiment-definition-load').disabled = $('experiment-definition-review').disabled = !result.items.length;
+    $('experiment-reuse-empty').hidden = !!result.items.length;
     $('experiment-definition-errors').replaceChildren(...result.errors.map(item => node('p', item.file + ': ' + item.message, 'issue')));
   }
   $('experiment-definitions').ontoggle = () => { if ($('experiment-definitions').open && ctx.state()?.initialized) task(loadDefinitions); };
   $('experiment-definition-load').onclick = () => task(async () => {
     const loaded = await api('experiment-load', { definition_id: $('experiment-definition-select').value, source: val('source') });
     applyRequest(loaded.request); notice(loaded.notice);
+  });
+  $('experiment-definition-review').onclick = () => task(async () => {
+    if (selections.size && !confirm(t('batch_replace'))) return;
+    const loaded = await api('experiment-load', { definition_id: $('experiment-definition-select').value, source: val('source') });
+    applyRequest(loaded.request); $('batch-joint-toggle').checked = true; await generateCatalog();
   });
   $('experiment-definition-form').oninput = () => { definitionPreview = null; $('experiment-definition-preview').hidden = true; };
   $('experiment-definition-form').onsubmit = event => {
@@ -338,14 +344,16 @@ window.createPaperDeltaBatch = function (ctx) {
   $('batch-form').onsubmit = (event) => {
     event.preventDefault(); task(async () => {
       if (selections.size && !confirm(t('batch_replace'))) return;
-      const result = await api('batch-catalog', request()); update(result.state);
-      catalog = result.batch; locations = active = joint = null; selections.clear(); formDirty = false;
-      $('batch-search').value = ''; choiceOffset = locationOffset = 0;
-      paintChoices(); paintLocations(); notice(t('batch_generated'));
-      ctx.setStep('review');
-      if ($('batch-joint-toggle').checked) await loadJoint();
+      await generateCatalog();
     });
   };
+  async function generateCatalog() {
+    const result = await api('batch-catalog', request()); update(result.state);
+    catalog = result.batch; locations = active = joint = null; selections.clear(); formDirty = false;
+    $('batch-search').value = ''; choiceOffset = locationOffset = 0;
+    paintChoices(); paintLocations(); notice(t('batch_generated')); ctx.setStep('review');
+    if ($('batch-joint-toggle').checked) await loadJoint();
+  }
   $('batch-stage').onclick = () => task(async () => {
     const selected = [...selections].map(([choice_id, ids]) => ({ choice_id, candidate_ids: [...ids], rationale: $('batch-rationale').value }));
     const result = await api('batch-stage', { catalog_id: catalog.catalog_id, selections: selected });
@@ -375,5 +383,5 @@ window.createPaperDeltaBatch = function (ctx) {
     update((await api('proposal-import', { value_json: await file.text() })).state);
     ctx.setStep('review'); notice(t('proposal_loaded'));
   });
-  return { render, localize };
+  return { render, localize, loadDefinitions };
 };

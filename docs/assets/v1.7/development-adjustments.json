@@ -1,0 +1,23 @@
+{
+  "version": "1.7.0",
+  "scope": "Authored development checks. Original local failure logs remain in build/. Frozen historical studies are unchanged.",
+  "adjustments": [
+    {
+      "check": "First source-patch regression batch",
+      "observed": "145 passed and 4 failed. Existing Markdown/Quarto demo tests still expected no patch file.",
+      "change": "Update the deliberate safe-update demo contract to expect a reviewed patch and verify explicit apply/recovery. The demo itself still never writes the source automatically.",
+      "follow_up": "44 focused checks passed; later whole-suite evidence is separate."
+    },
+    {
+      "check": "First joined-revision browser run",
+      "observed": "The authored helper assumed a shared metric ID and main manuscript file across different demos.",
+      "change": "Read each demo's accepted occurrence identity and exact file from its initial report; retain the same selected table task and source-preservation assertions.",
+      "follow_up": "All ten format/language workflows passed against the installed candidate."
+    },
+    {
+      "check": "Editable environment version metadata",
+      "observed": "An attempted no-build-isolation editable install could not import setuptools.build_meta.",
+      "change": "Use the project's declared isolated build dependencies. The editable install then succeeded; release acceptance used a separate noneditable wheel installation."
+    }
+  ]
+}

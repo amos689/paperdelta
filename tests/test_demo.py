@@ -96,10 +96,17 @@ def test_static_source_demos_run_in_both_languages_without_writing_source(
     source = "paper." + ("md" if kind == "markdown" else "qmd")
     report = parse_json(project.text("review/report.json")[0])
     assert report["report_schema_version"] == 9
-    assert result["patch"] is None
+    assert (result["patch"] is not None) == (scenario == "safe-update")
     assert project.read(source) == files("paperdelta").joinpath("demo_" + kind, source).read_bytes()
     assert f'<html lang="{language}"' in project.text("review/report.html")[0]
     assert report["exit_code"] == (0 if scenario == "baseline" else 1)
     if scenario == "changed":
         assert report["coverage"]["mismatch"] == 3
         assert report["claims"]["main_comparison"]["status"] == "mismatch"
+    if scenario == "safe-update":
+        original = project.read(source)
+        patch = parse_json(project.text("changes.pdpatch.json")[0])
+        applied = apply_patch(project, patch)
+        assert applied["report"]["coverage"]["mismatch"] == 0
+        recover_transaction(project, applied["transaction_id"], write=True)
+        assert project.read(source) == original

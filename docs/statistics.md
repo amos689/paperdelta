@@ -4,7 +4,7 @@
 
 Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
-positions, read-only limits and explicit source/PDF comparisons.
+positions, reviewed-write boundaries and explicit source/PDF comparisons.
 
 PaperDelta 1.0 can check a mean, SD, SE, sample count, confidence level and interval
 against the same explicitly identified observations. It can bind an entire

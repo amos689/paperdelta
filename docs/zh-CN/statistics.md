@@ -2,7 +2,7 @@
 
 [English](../statistics.md)
 
-静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、只读边界和
+静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、经复核写入及
 明确的源稿/PDF 比较见 [Markdown/Quarto 源码支持](markdown-quarto.md)。
 
 PaperDelta 1.0 可以针对同一组明确标识的观测，检查均值、标准差 SD、标准误 SE、样本数、

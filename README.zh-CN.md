@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.6.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.6.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.7.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.7.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,10 +55,11 @@
 [打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.6.0** 增加可审核的 Notebook／Quarto 生成记录、确定性的 LaTeX／Markdown
-结果片段，以及覆盖正文、表格、图形和导出稿的实验改动修订清单。检查始终在本地只读
-进行；可选的明确 CLI 命令可记录实际运行。
-[生成流程指南](docs/zh-CN/v1.6.md) · [协作审查与 CI](docs/zh-CN/v1.5.md) · [便携审查包](docs/zh-CN/review-bundle.md)。
+**1.7.0** 在 Studio 中汇总原文上下文、实验证据及修订动作。可预览、明确应用并恢复
+所选 LaTeX/Markdown/Quarto 数值修改，也可直接复用已复核实验定义，减少重复填写。
+检查始终在本地进行，不执行论文代码。
+[按任务开始](docs/zh-CN/tasks.md) · [修订指南](docs/zh-CN/v1.7.md) ·
+[Notebook/Quarto 流程](docs/zh-CN/v1.6.md) · [便携审查包](docs/zh-CN/review-bundle.md)。
 
 静态 [LaTeX](docs/zh-CN/rules.md)、[Markdown/Quarto](docs/zh-CN/markdown-quarto.md)、
 [Word](docs/zh-CN/word.md) 和 [PDF](docs/zh-CN/pdf.md) 共用明确声明的
@@ -89,7 +90,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
 已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
-`uvx --python 3.12 paperdelta@1.6.0 --lang zh-CN demo --out paperdelta-demo --open`。
+`uvx --python 3.12 paperdelta@1.7.0 --lang zh-CN demo --out paperdelta-demo --open`。
 每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
 
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用
@@ -106,7 +107,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.4.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-1.7.0-py3-none-any.whl`。
 
 ## 接入已有论文
 

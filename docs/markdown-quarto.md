@@ -15,8 +15,8 @@ paperdelta demo --document quarto --out quarto-demo --open
 Each command needs a new output directory. The default scenario changes the
 evidence from 84.1% to 80.9% while preserving the original manuscript. It shows
 two outdated occurrences and a false comparison. `--scenario baseline` shows
-the matching evidence. `safe-update` changes the evidence but creates no source
-patch for either format.
+the matching evidence. Since 1.7, `safe-update` prepares a reviewed numeric patch
+and a readable diff for both formats; it does not apply them automatically.
 
 ## Connect an existing source
 
@@ -62,7 +62,7 @@ content; it does not certify a rendered page. See the
 and [Quarto execution rules](https://quarto.org/docs/computations/execution-options.html)
 for the broader languages.
 
-## Original positions and read-only review
+## Original positions and reviewed numeric edits
 
 Schema 8 locations include `format: markdown` or `quarto`, source character and
 UTF-8 byte intervals, one-based line/column, parser identity, section and optional
@@ -70,10 +70,12 @@ table/row/cell coordinates. End offsets are exclusive. BOM, CRLF and Unicode are
 retained; the displayed excerpt is escaped text, not executed HTML. Source hashes
 participate in stale-preview rejection, snapshots and file watching.
 
-Markdown and Quarto are **read-only** in this release. Edit the original file in
-your source editor and check again. `fix` cannot apply a patch to these formats,
-even though their original byte positions are available. Guarded LaTeX patching
-continues separately.
+Checking remains read-only. Since 1.7, `fix` can propose replacements for verified
+continuous numeric spans in `.md` and `.qmd`, using the same fresh-input and claim
+guards as LaTeX. Preview the diff before explicitly writing through `apply --write`
+or Studio. Transactions preserve original bytes and support reviewed recovery.
+Uncertain/unsupported positions and false or unknown related claims block edits.
+See the [revision workflow](v1.7.md); manual editing and rechecking remain available.
 
 ## Content that remains unverified
 

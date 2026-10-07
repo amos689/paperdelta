@@ -10,7 +10,8 @@ const out = path.resolve(process.argv[2] || path.join(root, 'build', 'onboarding
 assert(out.startsWith(path.join(root, 'build') + path.sep) && !fs.existsSync(out));
 fs.mkdirSync(out, { recursive: true });
 const results = [];
-const definitionsMode = process.argv.includes('--definitions');
+const reuseMode = process.argv.includes('--reuse');
+const definitionsMode = process.argv.includes('--definitions') || reuseMode;
 const digest = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 async function start(directory, language) {
   const child = spawn(python, ['-X', 'utf8', '-m', 'paperdelta', '--lang', language, '-C', directory, 'studio', '--no-open'], { cwd: root, windowsHide: true });
@@ -24,7 +25,7 @@ async function start(directory, language) {
   return { child, url };
 }
 async function runCase(browser, kind, language) {
-  const name = (definitionsMode ? 'definitions-' : '') + kind + '-' + language, directory = path.join(out, name);
+  const name = (reuseMode ? 'reuse-' : definitionsMode ? 'definitions-' : '') + kind + '-' + language, directory = path.join(out, name);
   execFileSync(python, ['-X', 'utf8', 'tools/studio_batch_fixture.py', '--out', path.relative(root, directory), '--document', kind], { cwd: root, windowsHide: true, encoding: 'utf8' });
   const expected = JSON.parse(fs.readFileSync(path.join(directory, 'browser-annotations.json'), 'utf8'));
   if (definitionsMode) {
@@ -78,7 +79,7 @@ async function runCase(browser, kind, language) {
     await action('#batch-form [name=reduce]', 'selectOption', 'mean');
     await action('#batch-form [name=expected_count]', 'fill', '3');
     await action('#batch-form [name=expected_seeds]', 'fill', '1\n2\n3');
-    let savedDefinition;
+    let savedDefinition, reusedCatalog = false, reuseStart, reuseActions;
     if (definitionsMode) {
       await action('#experiment-aliases summary');
       for (const [index, [value, label]] of [['001', 'Ours'], ['1', 'Baseline']].entries()) {
@@ -101,13 +102,17 @@ async function runCase(browser, kind, language) {
       assert.equal(saved.request.aliases[0].value, '001'); assert.equal(saved.request.aliases[1].value, '1');
       await action('#batch-form [name=unit]', 'selectOption', 'scalar');
       assert(await page.locator('#experiment-reference').isHidden());
-      await action('#experiment-definition-load');
+      if (reuseMode) reuseStart = actions.length;
+      if (reuseMode && await page.locator('#experiment-definition-review').count()) {
+        await action('#experiment-definition-review'); reusedCatalog = true;
+      } else await action('#experiment-definition-load');
       assert.equal(await page.locator('#batch-form [name=unit]').inputValue(), 'fraction');
       assert((await page.locator('#experiment-reference').textContent()).includes(savedDefinition));
       assert.deepEqual(fs.readFileSync(path.join(directory, 'paperdelta.yaml')), before);
     }
-    await action('#batch-form button[type=submit]');
+    if (!reusedCatalog) await action('#batch-form button[type=submit]');
     await action('#batch-joint-toggle', 'check');
+    if (reuseMode) reuseActions = actions.slice(reuseStart);
     assert.equal(await page.locator('#batch-joint input:checked').count(), 0);
     for (let index = 0; index < expected.targets.length; index++) {
       const target = expected.targets[index];
@@ -155,7 +160,7 @@ async function runCase(browser, kind, language) {
     }
     for (const [file, hash] of Object.entries(inputs)) assert.equal(digest(path.join(directory, file)), hash);
     assert.deepEqual(errors, []); assert.deepEqual(remote, []);
-    results.push({ name, status: 'passed', version, input_sha256: inputs, non_no_op_actions: actions.length, actions, checked_metrics: 24, explicit_positions: 24, language_switch_preserves_fields: true, manuscripts_and_data_unchanged: true, ...(savedDefinition ? { reviewed_shared_definition: savedDefinition } : {}), errors, remote });
+    results.push({ name, status: 'passed', version, input_sha256: inputs, non_no_op_actions: actions.length, actions, checked_metrics: 24, explicit_positions: 24, language_switch_preserves_fields: true, manuscripts_and_data_unchanged: true, ...(savedDefinition ? { reviewed_shared_definition: savedDefinition } : {}), ...(reuseMode ? {reuse_actions: reuseActions, reuse_action_count: reuseActions.length} : {}), errors, remote });
   } finally {
     fs.writeFileSync(path.join(out, name + '-actions.json'), JSON.stringify(actions, null, 2) + '\n');
     await context.close(); child.kill();

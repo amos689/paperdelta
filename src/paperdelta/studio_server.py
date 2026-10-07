@@ -45,6 +45,7 @@ class StudioServer(ThreadingHTTPServer):
                 for name, mime in (
                     ("studio.js", "text/javascript; charset=utf-8"),
                     ("studio-review.js", "text/javascript; charset=utf-8"),
+                    ("studio-revisions.js", "text/javascript; charset=utf-8"),
                     ("studio-batch.js", "text/javascript; charset=utf-8"),
                     ("studio-statistics.js", "text/javascript; charset=utf-8"),
                     ("studio-workflows.js", "text/javascript; charset=utf-8"),

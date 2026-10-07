@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.7.0 — 2026-10-07
+
+- Join original context, experiment evidence and revision actions in a searchable bilingual Studio workbench; move detailed maintenance into expandable sections.
+- Preview, explicitly apply and recover selected LaTeX/Markdown/Quarto numeric edits in Studio. Revalidate current inputs; preserve UTF-8/BOM/CRLF, reject forged or overlapping changes, and retain false/unknown claim guards.
+- Make reviewed experiment definitions directly reusable for candidate review without repeating the form; preserve explicit position selection and acceptance.
+- Add task-oriented bilingual tutorials and safe-update Markdown/Quarto demos; retain current config/report schemas and migrate compatible 1.6 drafts after validation.
+- [Scope and verification](docs/v1.7.md).
+
 ## 1.6.0 — 2026-10-07
 
 - Track explicitly reviewed Notebook cells, input/output hashes and Quarto render freshness. Saved declarations and observed commands stay distinct; checking never executes project code.

@@ -85,6 +85,7 @@ async function stop(child) {
           for (const suffix of ['_1', '_2', '_3']) assert(config.includes('cross_page' + suffix));
           Object.assign(record, { candidate_count: 5101, cross_page_acceptance: 3, language_switch_preserves_selection: true });
         } else {
+          await click(page, '#advanced-impacts > summary');
           assert.equal(await page.locator('.impact-card').count(), 20);
           assert((await page.locator('#impact-pages').textContent()).includes('500'));
           const search = performance.now(); await page.locator('#impact-search').fill('result_ATF');

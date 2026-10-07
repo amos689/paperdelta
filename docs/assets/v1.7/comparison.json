@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "from_version": "1.6.0",
+  "to_version": "1.7.0",
+  "baseline": "Installed published 1.6.0 wheel; same source and experiment bytes.",
+  "revision_task": "Inspect the table result, apply only that declared numeric edit, and recover the exact original. The 1.6 browser requires CLI for write/recovery; 1.7 completes it in Studio.",
+  "revision_inputs_identical": true,
+  "revision_before_interfaces": [
+    "browser",
+    "cli"
+  ],
+  "revision_after_interfaces": [
+    "browser"
+  ],
+  "reuse_comparison": [
+    {
+      "name": "reuse-tex-en",
+      "input_sha256": {
+        "paper.tex": "79ae9de97cddea59c47718a0b1e4ec3c22c8bad48ce7fe47540d550bce2a093e",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "reuse_actions_before": 3,
+      "reuse_actions_after": 1,
+      "complete_authored_flow_actions_before": 75,
+      "complete_authored_flow_actions_after": 73
+    },
+    {
+      "name": "reuse-tex-zh-CN",
+      "input_sha256": {
+        "paper.tex": "79ae9de97cddea59c47718a0b1e4ec3c22c8bad48ce7fe47540d550bce2a093e",
+        "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+      },
+      "reuse_actions_before": 3,
+      "reuse_actions_after": 1,
+      "complete_authored_flow_actions_before": 75,
+      "complete_authored_flow_actions_after": 73
+    }
+  ],
+  "scope": "Authored browser workflows, not independent usability. Count reduction applies only to the recorded task, not arbitrary onboarding, speed, or extraction accuracy."
+}

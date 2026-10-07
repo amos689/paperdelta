@@ -2,7 +2,7 @@
 
 [English](../workflows.md)
 
-静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、只读边界和
+静态 `.md` 和 `.qmd` 稿件共用同一证据与复核流程。核心演示、原始位置、经复核写入及
 明确的源稿/PDF 比较见 [Markdown/Quarto 源码支持](markdown-quarto.md)。
 
 安装可选 `docx` 扩展后，Word 稿件沿用相同审查流程。

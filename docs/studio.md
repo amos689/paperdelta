@@ -4,18 +4,18 @@
 
 Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
-positions, read-only limits and explicit source/PDF comparisons.
+positions, reviewed-write boundaries and explicit source/PDF comparisons.
 
 Version 1.0 statistical bindings declare seeds, n, SD convention and interval
 method explicitly. Compound displays, batch templates and read-only agents share
 the [statistical contract](statistics.md).
 
-PaperDelta 1.4 combines first-time and batch binding with ongoing review of
+PaperDelta 1.7 combines first-time and batch binding with ongoing review and selected numeric edits for
 LaTeX, Markdown, Quarto, Word and text-PDF manuscripts against CSV/TSV/JSON, static Excel and imported experiment evidence in `paperdelta studio`.
 It uses the same typed drafts, exact calculations, anchors and explicit acceptance
 as the CLI. The interface can switch between English and Simplified Chinese.
 
-![English workbench: inspect experiment data and stage exact metrics](assets/v0.7/studio.en.png)
+![English workbench: review original context, evidence and claim guards together](assets/v1.7/revisions.en.png)
 
 ## Start
 
@@ -100,7 +100,10 @@ setup; individual metric and location editors remain available. See the
 
 The top counts describe the **accepted** configuration. Staged previews are shown
 separately. Unbound numbers, unsupported content and incomplete checks stay visible.
-The workbench never writes manuscript or evidence files.
+Binding operations do not write manuscript or evidence files. Since 1.7, separate
+reviewed numeric patches can update `.tex`, `.md` and `.qmd` source files with
+transaction backups and recovery. Word/PDF remain read-only. See the
+[revision workflow](v1.7.md) and [task-oriented guide](tasks.md).
 
 ## Batch binding and experiment templates
 

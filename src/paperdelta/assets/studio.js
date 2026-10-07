@@ -24,7 +24,7 @@
   let reviewWorkbench, batchWorkbench, candidatePage, candidateKey, candidatePending, candidateRequest, candidateSequence = 0, searchTimer;
   let pdfCandidates = [];
   let metricOffset = 0;
-  let workflowWorkbench;
+  let workflowWorkbench, revisionWorkbench;
   const selected = new Set(), accepted = new Set();
   const stats = window.PaperDeltaStatistics;
   stats.mountContract($("metric-form")); stats.mountDisplay($("locations-form"));
@@ -226,6 +226,7 @@
       button.classList.toggle("active", button.dataset.step === step);
       button.setAttribute("aria-current", button.dataset.step === step ? "step" : "false");
     });
+    if (step === 'batch' && state?.initialized && !state.stale) task(() => batchWorkbench.loadDefinitions());
   }
   function renderSelectors(preserve = false) {
     const previous = new Map();
@@ -585,6 +586,7 @@
     $("column-types").querySelectorAll("select").forEach((el) => el.setAttribute("aria-label", t("type_column", { column: el.dataset.column })));
     const keyHint = $("column-types").querySelector("p"); if (keyHint) keyHint.textContent = t(sourcePreview?.format === "records" ? "export_contract" : "primary_key_hint");
     if (sourceAdvice) await inspectSourceAdvice();
+    revisionWorkbench.localize();
     await reviewWorkbench.localize();
     await batchWorkbench.localize();
     await workflowWorkbench.localize();
@@ -596,7 +598,10 @@
   window.addEventListener("beforeunload", (event) => {
     if (state?.additions && Object.values(state.additions).some((group) => Object.keys(group).length)) { event.preventDefault(); event.returnValue = ""; }
   });
-  reviewWorkbench = window.createPaperDeltaReview({ t, node, api, task, update, download, pageButtons, metricDetails, state: () => state, busy: () => busy });
+  revisionWorkbench = window.createPaperDeltaRevisions({ t, node, api, task, update, notice, pageButtons, metricDetails, state: () => state,
+    refresh: () => reviewWorkbench.load(), openTask: item => reviewWorkbench.openTask(item),
+    openWorkflow: async () => { $('workflow-panel').open = true; await workflowWorkbench.load(); $('workflow-panel').scrollIntoView({ block: 'start' }); } });
+  reviewWorkbench = window.createPaperDeltaReview({ t, node, api, task, update, download, pageButtons, metricDetails, revisionBoard: revisionWorkbench, state: () => state, busy: () => busy });
   batchWorkbench = window.createPaperDeltaBatch({ t, node, api, task, update, download, pageButtons, metricDetails, notice, setStep, state: () => state });
   workflowWorkbench = window.createPaperDeltaWorkflows({ t, node, api, task, update, notice, language: () => language });
   localize(); setStep(activeStep);

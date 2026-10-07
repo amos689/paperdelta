@@ -148,12 +148,14 @@ Core-only Markdown and Quarto readers preserve original source positions for
 literal prose and pipe tables. Run ``paperdelta demo --document markdown --out md-demo``
 or ``paperdelta demo --document quarto --out qmd-demo``. Shared evidence,
 statistics, templates, snapshots, reviewed repair and explicit source/PDF exports
-use the same bilingual workflow. Both formats remain read-only; code, metadata,
-dynamic includes and unsupported syntax remain unverified. Nothing is executed.
+use the same bilingual workflow. Since 1.7, explicitly reviewed numeric patches
+can edit supported literal spans with recovery. Code, metadata, dynamic includes
+and unsupported syntax remain unverified. Nothing is executed during checking.
 
 核心包支持 Markdown/Quarto 字面正文与竖线表格，保留原始源码位置。运行上述 demo
 即可体验，共用双语证据、统计、模板、快照、经复核修复及明确的源稿/PDF 导出流程。
-两种格式均只读；代码、元数据、动态包含及不支持语法保持未验证，不执行代码。
+自 1.7 起，可明确复核数值补丁后修改受支持的字面区间，并保留恢复。代码、元数据、
+动态包含及不支持语法保持未验证，检查不执行代码。
 
 `Static-source guide <https://github.com/amos689/paperdelta/blob/main/docs/markdown-quarto.md>`_ ·
 `静态源码指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/markdown-quarto.md>`_
@@ -177,3 +179,20 @@ Unchanged hashes establish file identity, not causality or scientific validity.
 
 `1.6 guide <https://github.com/amos689/paperdelta/blob/main/docs/v1.6.md>`_ ·
 `1.6 中文指南 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.6.md>`_
+
+Review and revise in 1.7 / 1.7 审查与修订
+-------------------------------------------------------------------------------
+
+See original manuscript context beside declared evidence, preview selected numeric
+changes and explicitly apply or recover them in bilingual Studio. LaTeX, Markdown
+and Quarto share guarded byte-preserving patches; false/unknown related claims
+block mechanical edits. Reuse reviewed experiment definitions to open candidate
+review without repeating the form. Word/PDF remain read-only in this version.
+
+在双语工作台中并排查看原文与已声明证据，预览所选数值修改后明确写入或恢复。
+LaTeX、Markdown 和 Quarto 共用保留原始字节的受保护补丁；错误/未知的相关结论
+会阻止机械改数值。可直接复用已复核实验定义进入候选复核，减少重复填写。
+本版 Word/PDF 仍保持只读。
+
+`Task guide <https://github.com/amos689/paperdelta/blob/main/docs/tasks.md>`_ ·
+`按任务开始 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/tasks.md>`_

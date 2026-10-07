@@ -13,7 +13,7 @@ paperdelta --lang zh-CN demo --document quarto --out quarto-demo --open
 
 每次需要新的输出目录。默认场景把实验证据从 84.1% 改为 80.9%，保留论文原稿，
 展示两处旧数值和一条失效的比较结论。`--scenario baseline` 展示证据一致的状态；
-`safe-update` 会改变证据，但不会为这两种格式生成源码补丁。
+自 1.7 起，`safe-update` 为两种格式准备经复核的数值补丁和可读差异，不自动应用。
 
 ## 接入现有源码
 
@@ -51,16 +51,17 @@ paperdelta --lang zh-CN studio
 [Quarto Markdown 语法](https://quarto.org/docs/authoring/markdown-basics.html)及
 [Quarto 执行规则](https://quarto.org/docs/computations/execution-options.html)。
 
-## 原始位置与只读审查
+## 原始位置与经复核的数值修改
 
 Schema 8 的位置包含 `format: markdown` 或 `quarto`、原始字符和 UTF-8 字节区间、
 从一开始的行列、解析器身份、章节及可选的表/行/单元格坐标。区间右端不包含在内。
 BOM、CRLF 和 Unicode 原样保留；上下文按文本转义展示，不执行 HTML。源码哈希
 参与过期预览拒绝、快照及文件监听。
 
-本版 Markdown 和 Quarto **保持只读**。请在源码编辑器中修改原文件，再重新检查。
-即使已提供原始字节位置，`fix` 也不能向这两种格式应用补丁；受保护的 LaTeX 补丁
-流程继续独立可用。
+检查仍保持只读。自 1.7 起，`fix` 可为 `.md` 和 `.qmd` 中已验证的连续数值区间
+提出替换，与 LaTeX 共用当前输入和结论保护。先查看差异，再通过 `apply --write`
+或 Studio 明确写入。事务保留原始字节，可经复核后恢复。不确定/不支持的位置及
+错误或未知的相关结论会阻止修改。详见[修订流程](v1.7.md)；仍可手工编辑后重新检查。
 
 ## 保持未验证的内容
 

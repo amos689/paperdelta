@@ -4,7 +4,7 @@
 
 Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
-positions, read-only limits and explicit source/PDF comparisons.
+positions, reviewed-write boundaries and explicit source/PDF comparisons.
 
 Word manuscripts use the same review workflow with the optional `docx` extra.
 See [Word support and read-only limits](word.md); the LaTeX examples below remain valid.

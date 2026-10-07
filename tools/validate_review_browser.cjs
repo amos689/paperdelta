@@ -72,6 +72,8 @@ async function saveMaintenance(page) {
           if (!request.url().startsWith(new URL(server.url).origin) && !request.url().startsWith('data:') && !request.url().startsWith('blob:')) remote.push(request.url());
         });
         await page.goto(server.url); await page.locator('#review-workspace').waitFor({ state: 'visible' }); await ready(page);
+        await click(page, '#advanced-impacts > summary');
+        await click(page, '#advanced-review > summary');
         return page;
       }
       let page;

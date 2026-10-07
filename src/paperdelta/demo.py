@@ -119,7 +119,7 @@ def create_demo(
         raise PaperDeltaError("DEMO_INVALID", msg("demo.invalid"))
     write_reports(project, "review", report)
     patch_path = None
-    if scenario == "safe-update" and document == "latex":
+    if scenario == "safe-update" and document in {"latex", "markdown", "quarto"}:
         patch = create_patch(project, report)
         patch_path = "changes.pdpatch.json"
         project.write(patch_path, json_text(patch).encode("utf-8"), exclusive=True)

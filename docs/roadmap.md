@@ -211,3 +211,29 @@ causal provenance or scientific validity.
 
 All four approved versions from 1.3 through 1.6 have now been delivered. Further
 feature directions require a separately approved scope.
+
+## Approved improvement programme after 1.6
+
+Approved on 2026-10-07: complete all five assessed priorities. Splitting delivery
+into versions does not remove later requirements. Start from the published 1.6.0
+and documentation commit `692b18d`.
+
+| Delivery | Required scope | Acceptance evidence | Status |
+| --- | --- | --- | --- |
+| 1.7 | A joined evidence/location/impact/revision workspace; reuse accepted experiment definitions; fewer repeated inputs; task-oriented bilingual tutorials; reviewed Markdown/Quarto numeric patches with recovery and claim guards | Compare the same authored onboarding and revision tasks before/after; real bilingual browser workflows; preview is read-only, stale/forged/overlapping patches are refused, UTF-8/CRLF preserved, interrupted and completed writes recover, false/unknown claims block mechanical edits | In development |
+| 1.8 | Word comment-copy and PDF annotation-copy exports; improve complex headers, notes and multi-column native positioning using recorded failures | Original files unchanged; annotations point to the reviewed exact original locations; edited inputs invalidate previews; re-run existing misses/unknowns without rewriting frozen results; additional licensed document families with a development/held-out split fixed before parser changes and published all-outcome results | Required |
+| 1.9 | File/configuration identity based incremental checks, dependency invalidation and bounded caches in ongoing review | Cold/warm/change/delete/config/parser-version cases equal full-check verdicts, positions and coverage; measured repeated checks on large authored projects; bounded memory and no stale passing results after missing or changed evidence | Required |
+| 2.0 | Agent suggestions with explicit experiment identity, original positions, evidence, conflicts and abstention; explicit user confirmation remains required | Diagnose the recorded real-model failures, evaluate actual model calls independently of deterministic validators and UI scripts, preserve failures and costs, repeat previous tasks as regression and add separately held-out tasks; no unattended acceptance claims | Required |
+
+Version numbers follow the owner's decimal rollover convention: the minor number
+runs from 0 through 9, then the next release increments the major number and resets
+the minor number to 0. The release after 1.9 is therefore 2.0; its approved Agent
+scope is unchanged. A major-number rollover alone does not imply a breaking change.
+
+The first two assessed priorities span 1.7 and native annotations in 1.8. All
+releases retain bilingual switching without losing selections, reviewed writes,
+local checking without executing paper code, stable publication, native platform
+checks and verified public artifacts. Only the owner's noreply Git identity is
+used. Previously frozen studies and implementation snapshots retain exact bytes;
+new studies and evidence receive new versioned directories. No independent human
+recruitment is required for release, and authored tests are not described as such.
