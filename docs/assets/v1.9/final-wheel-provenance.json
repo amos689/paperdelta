@@ -1,0 +1,21 @@
+{
+  "version": "1.9.0",
+  "identical_internal_files": 127,
+  "tested_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+  "rebuilt_archive_sha256": "b069fdce1560ed22a0bd4c0eb17669a67540c857134298e75d0650129899ae19",
+  "release_wheel_is_exact_tested_archive": true,
+  "metadata_correction": {
+    "version": "1.9.0",
+    "earlier_tested_wheel_sha256": "8295ecdd72cea52083f33c3aaef50042f5b7dd980adc72911612edf03a406baa",
+    "final_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "identical_internal_files": 125,
+    "changed_internal_files": [
+      "paperdelta-1.9.0.dist-info/METADATA",
+      "paperdelta-1.9.0.dist-info/RECORD"
+    ],
+    "all_runtime_source_and_assets_identical": true,
+    "package_identity_and_dependency_headers_identical": true,
+    "reason": "Correct a strict PyPI RST-rendering heading and add the corresponding Chinese paragraph. Only description payload and archive RECORD changed. Repeat final-wheel installed acceptance; performance measurements retain their original measured archive identity."
+  },
+  "reason": "Final documentation, CI workflow wait and release receipts changed after testing; all wheel member names and bytes are identical. Preserve the exact installed archive."
+}
