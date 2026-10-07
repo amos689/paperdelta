@@ -29,6 +29,15 @@
     {
       "observed": "First installed suite completed 978 passing tests and three POSIX-only skips in 498.98 seconds, exceeding the old 480-second harness deadline. The platform receipt remains failed with exit 124 recorded for the suite.",
       "change": "Increase the installed-suite deadline to 900 seconds and its outer platform command to 1200 seconds. Preserve every assertion and rerun the exact candidate wheel in a fresh environment."
+    },
+    {
+      "observed": "First exact-commit CI run 37577011131 cancelled Windows/Python 3.13 and 3.14 after the 15-minute job deadline. GitHub annotations explicitly report the timeout; progress logs contain no failed assertions before cancellation.",
+      "change": "Increase the standard test job deadline to 30 minutes, retain every test, and run all 17 named jobs on the new exact candidate commit. The runtime wheel and frozen native implementation are unchanged.",
+      "first_run": "https://github.com/amos689/paperdelta/actions/runs/37577011131",
+      "jobs": [
+        112648060744,
+        112648060774
+      ]
     }
   ]
 }
