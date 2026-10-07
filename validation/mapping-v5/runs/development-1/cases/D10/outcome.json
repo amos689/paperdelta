@@ -1,0 +1,144 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.889999999999418,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+        "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:061e9bd9174e7725ddbd02ec6521e96eead6976375914571667fd9d18259d706",
+      "response_sha256": "sha256:cef4d8071d19b819d5a0f9d7f6b5df1585fe6bac58e73cdae69d6582d22df634",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 725.134,
+        "predicted_n": 67,
+        "predicted_per_second": 91.01766018418665,
+        "predicted_per_token_ms": 10.986878787878789,
+        "prompt_ms": 1534.739,
+        "prompt_n": 6101,
+        "prompt_per_second": 3975.268759052842,
+        "prompt_per_token_ms": 0.2515553188001967
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 67,
+        "prompt_tokens": 6101,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6168
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.860000000000582,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:bc6c214e02ca2379a8ac5a7baa8b37189e82a7e3a1837dd2f074bab040f6692a",
+      "response_sha256": "sha256:2563a639ebd1d1672cad5c62e68553335fe94df6212be3516a1bb1e184a2dd10",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1755.607,
+        "predicted_n": 158,
+        "predicted_per_second": 89.42775917389257,
+        "predicted_per_token_ms": 11.182210191082802,
+        "prompt_ms": 1857.114,
+        "prompt_n": 7093,
+        "prompt_per_second": 3819.3670393955354,
+        "prompt_per_token_ms": 0.26182348794586213
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 158,
+        "prompt_tokens": 7093,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7251
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.014999999999418,
+      "error": {
+        "code": "SEED_SET",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "预期种子为 ['001', '002', '003']，实际为 ['001', '002', '003', '001', '002', '003']"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:dc6d1525025ac5b278911b1e7252eaeb66cca42da57242360839d6f3d330fcc9",
+      "response_sha256": "sha256:9d9ed4864f2e7e08cb4a6407f4551d34ce787943f47f178abbe0ae8e376202cf",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1976.795,
+        "predicted_n": 179,
+        "predicted_per_second": 90.04474414392995,
+        "predicted_per_token_ms": 11.10558988764045,
+        "prompt_ms": 1846.684,
+        "prompt_n": 7287,
+        "prompt_per_second": 3945.991842675845,
+        "prompt_per_token_ms": 0.2534217098943324
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 179,
+        "prompt_tokens": 7287,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7466
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 4,
+      "elapsed_seconds": 3.969000000000051,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "sources 中已存在 measurements，请选择其他标识符。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:4a5fa1190ff5b76d479e1ba63dcb3e201a1e7529651771f6ce7ebe3fe55eb2fb",
+      "response_sha256": "sha256:8d7bf3b56e83949ac4013b8b740101f50d6f1b04a95811e0458af01c9e903c02",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1894.406,
+        "predicted_n": 171,
+        "predicted_per_second": 89.73789145515798,
+        "predicted_per_token_ms": 11.143564705882353,
+        "prompt_ms": 1908.224,
+        "prompt_n": 7430,
+        "prompt_per_second": 3893.6728602092835,
+        "prompt_per_token_ms": 0.25682691790040374
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 171,
+        "prompt_tokens": 7430,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7601
+      },
+      "valid": false
+    }
+  ],
+  "reason": "声明来源为 measurements，路径为 results/measurements.csv，格式为 csv，列类型为 string、string、string、decimal、string、string，主键为 dataset, model, checkpoint, split, seed。",
+  "status": "budget_exhausted"
+}

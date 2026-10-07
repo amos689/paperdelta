@@ -1,0 +1,39 @@
+{
+  "action": "metric",
+  "action_index": 2,
+  "elapsed_seconds": 3.516000000000531,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "unit"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for MetricMappingStage\nunit\n  Input should be 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio' [type=literal_error, input_value='decimal', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:cd85488dd53e7ef187d9922684237299cc84112642138a4b009cfb0abf5be2d1",
+  "response_sha256": "sha256:1a83d23977b709813bddc051fae9dd4293d97ede7e5d0de64b82c0f01c2229f6",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1791.539,
+    "predicted_n": 168,
+    "predicted_per_second": 93.21594450358045,
+    "predicted_per_token_ms": 10.727778443113772,
+    "prompt_ms": 1559.343,
+    "prompt_n": 6564,
+    "prompt_per_second": 4209.465140126322,
+    "prompt_per_token_ms": 0.23755987202925047
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 168,
+    "prompt_tokens": 6564,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6732
+  },
+  "valid": false
+}

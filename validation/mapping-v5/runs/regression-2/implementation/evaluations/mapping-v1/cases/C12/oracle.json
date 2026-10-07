@@ -1,0 +1,13 @@
+{
+  "category": "unsupported_significance",
+  "expected_decision": "abstain",
+  "expected_reference_status": null,
+  "reason": "No p-value or test specification is provided; means cannot establish it.",
+  "reference_inputs": [],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "0.01",
+    "prefix": "The reported p-value is ",
+    "suffix": " for this comparison."
+  }
+}

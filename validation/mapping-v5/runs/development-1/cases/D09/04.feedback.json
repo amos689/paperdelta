@@ -1,0 +1,90 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:9c63c40ffd4b6f166e138b48b76e376e528754a47ce95827089e96ce0d5f570a",
+  "error": {
+    "code": "SEED_SET",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Expected seeds ['001', '002', '003'], got ['001', '002']"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:9c63c40ffd4b6f166e138b48b76e376e528754a47ce95827089e96ce0d5f570a",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:9c63c40ffd4b6f166e138b48b76e376e528754a47ce95827089e96ce0d5f570a",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.qmd": "sha256:c39b3d23030d88348060b61695e66150f2bc9b4c5a5ce4fb01cd93d01f991358",
+      "paperdelta.yaml": "sha256:223054d618f54f3c9a451037dd7298149158c91a1ebc8cc986c7ffe650fb37a4",
+      "results/measurements.csv": "sha256:099c2065c1abdf5fd3a2c702382e3c09703e3fc5768a50cbf72f44690b6857c6"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Declare the source field unit separately from paper display. Use explicit experiment selectors, required count and exact seed set. Do not infer units from a percentage sign or numeric agreement.",
+  "status": "budget_exhausted",
+  "undo": {
+    "last_action": "source",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

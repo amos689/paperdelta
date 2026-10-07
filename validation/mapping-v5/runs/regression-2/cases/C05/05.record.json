@@ -1,0 +1,35 @@
+{
+  "action": "derived",
+  "action_index": 5,
+  "elapsed_seconds": 3.6719999999986612,
+  "error": {
+    "code": "UNIT_MISMATCH",
+    "fields": [],
+    "hint": "Read the declared SOURCE units of both metrics. A percentage-point operation needs fraction or percent inputs. Use undo to correct a prior stage; never repeat unchanged failing arguments or guess units from magnitude.",
+    "message": "Percentage points require proportions"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:20abd5733fe9bfa2a28bc0cd0bd7158161dbb17824e1c383982d74efd88afaa8",
+  "response_sha256": "sha256:703da52b15c06ee2612778103777232480f9e1762cdbe77373ef4fb2253ad311",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1218.262,
+    "predicted_n": 109,
+    "predicted_per_second": 88.65088133751198,
+    "predicted_per_token_ms": 11.280203703703704,
+    "prompt_ms": 2266.27,
+    "prompt_n": 9101,
+    "prompt_per_second": 4015.8498325442247,
+    "prompt_per_token_ms": 0.24901329524228108
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 9101,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9210
+  },
+  "valid": false
+}

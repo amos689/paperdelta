@@ -1,0 +1,35 @@
+{
+  "action": "locations",
+  "action_index": 5,
+  "elapsed_seconds": 5.155999999999949,
+  "error": {
+    "code": "BUILDER_OVERLAP",
+    "fields": [],
+    "hint": "Inspect original candidate context and display settings. Choose a uniquely supported position; do not select by equal numeric values.",
+    "message": "This location already overlaps a confirmed binding: paper/main.tex:1."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:9ba76e4489991b43d6a96018d0a4149698f3e877ebafee7634e836ff8490035d",
+  "response_sha256": "sha256:fa1a7b86f0309308a5e727188103426fafbc6cdb4a2ddbf6148cb302195c9da9",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2529.171,
+    "predicted_n": 224,
+    "predicted_per_second": 88.1711833640351,
+    "predicted_per_token_ms": 11.341573991031389,
+    "prompt_ms": 2360.175,
+    "prompt_n": 9456,
+    "prompt_per_second": 4006.4825701483996,
+    "prompt_per_token_ms": 0.24959549492385788
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 9456,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9680
+  },
+  "valid": false
+}

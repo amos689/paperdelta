@@ -1,0 +1,219 @@
+{
+  "status": "passed",
+  "tool": "PaperDelta 2.0.0",
+  "host": "Windows",
+  "architecture": "AMD64",
+  "python": "3.12.15",
+  "wheel_sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+  "runs": [
+    {
+      "extras": false,
+      "arguments": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.438
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "latex",
+        "--out",
+        "latex-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.75
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "markdown",
+        "--out",
+        "markdown-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.593
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "quarto",
+        "--out",
+        "quarto-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.485
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "docx",
+        "--out",
+        "docx-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 2.203
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "pdf",
+        "--out",
+        "pdf-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.406
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "-C",
+        "pdf-en",
+        "scan",
+        "--format",
+        "json"
+      ],
+      "exit_code": 2,
+      "timed_out": false,
+      "seconds": 0.391
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "latex",
+        "--out",
+        "latex-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.656
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "markdown",
+        "--out",
+        "markdown-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.484
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "quarto",
+        "--out",
+        "quarto-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.485
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "docx",
+        "--out",
+        "docx-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.5
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "pdf",
+        "--out",
+        "pdf-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.765
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "-C",
+        "pdf-zh-CN",
+        "scan",
+        "--format",
+        "json"
+      ],
+      "exit_code": 2,
+      "timed_out": false,
+      "seconds": 0.344
+    }
+  ]
+}

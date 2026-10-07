@@ -1,0 +1,394 @@
+{
+  "abstention_limit": "Counts explicit abstention with a nonempty reason on a required-abstention case; no independent semantic assessment of the reason.",
+  "accepted_bindings": 0,
+  "action_count": 50,
+  "case_count": 12,
+  "comparison_limit": "Changed product and prompts together; these runs do not isolate a causal improvement.",
+  "complete_mapping_cases": 0,
+  "core_valid_proposals": 4,
+  "cost": {
+    "electricity_and_hardware_cost": null,
+    "paid_api_cost_usd": 0
+  },
+  "count_guards_verified": 4,
+  "execution_sha256": "sha256:8530910bd62726c75687edb61a7b99727d288f5ea9122e965ff2acbcf3d04a35",
+  "expected_abstentions": 1,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "inference_seconds": 194.8450000000029832,
+  "invalid_actions": 21,
+  "mappable_cases": 8,
+  "outcomes": {
+    "D01": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "decimal",
+          "percent_symbol": false,
+          "places": 3
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "mismatch",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "byte_end": 30,
+        "byte_start": 26,
+        "column": 27,
+        "end": 30,
+        "file": "paper/manuscript.tex",
+        "line": 1,
+        "start": 26,
+        "text": "71.4"
+      },
+      "reference_matches": [
+        {
+          "contract": false,
+          "location": false
+        }
+      ],
+      "status": "proposed"
+    },
+    "D02": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D03": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 3
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score_pct",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "score_pct": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "pass",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+        "end": 98,
+        "file": "paper/manuscript.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 6,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [
+            "Results"
+          ],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 93,
+        "text": "71.4%"
+      },
+      "reference_matches": [
+        {
+          "contract": false,
+          "location": true
+        },
+        {
+          "contract": false,
+          "location": true
+        }
+      ],
+      "status": "proposed"
+    },
+    "D04": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D05": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D06": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D07": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 1
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "pass",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 39,
+        "file": "paper/manuscript.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:1742d2c0bd756eb4b1cf1ea991367e93530e76c279ce21dcff170d0b1ef53912",
+          "offset": 26,
+          "paragraph": 2,
+          "part": "word/document.xml",
+          "section": [
+            "Results"
+          ],
+          "style": ""
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 34,
+        "text": "71.4%"
+      },
+      "reference_matches": [
+        {
+          "contract": false,
+          "location": true
+        }
+      ],
+      "status": "proposed"
+    },
+    "D08": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "abstained"
+    },
+    "D09": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "D10": {
+      "complete_mapping": false,
+      "expected_abstention": true,
+      "expected_decision": "abstain",
+      "status": "abstained"
+    },
+    "D11": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 1
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "mismatch",
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "original_location": {
+        "byte_end": 42,
+        "byte_start": 37,
+        "column": 27,
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 42,
+        "file": "paper/manuscript.md",
+        "format": "markdown",
+        "line": 3,
+        "locator": {
+          "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+          "offset": 26,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 37,
+        "text": "71.4%"
+      },
+      "reference_matches": [],
+      "status": "proposed"
+    },
+    "D12": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    }
+  },
+  "protocol_id": "paperdelta-mapping-v5",
+  "protocol_sha256": "sha256:7f0b82f41c7dd5fe835e655c4cab977c70a554410235a91fcfd5d1fc9e0c6a3d",
+  "required_abstentions": 4,
+  "scope": "Authored synthetic development; inference results held out from tuning only when designated held-out. Not blind, independent or human evaluation.",
+  "scored_at": "2026-10-07T09:04:12.587002+00:00",
+  "split": "development",
+  "statuses": {
+    "abstained": 2,
+    "budget_exhausted": 6,
+    "proposed": 4
+  },
+  "usage": {
+    "completion_tokens": 7626,
+    "prompt_tokens": 384348,
+    "total_tokens": 391974
+  }
+}

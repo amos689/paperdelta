@@ -135,8 +135,12 @@ async function click(page, selector) { await page.locator(selector).click(); awa
         await page.screenshot({ path: path.join(out, name + "-review.png"), fullPage: true });
         await page.locator("#language").selectOption(lang === "en" ? "zh-CN" : "en"); await ready(page);
         assert.equal(await page.locator("#review-items input:checked").count(), 1);
-        assert(await page.locator("#attest").isChecked());
+        assert.equal(await page.locator("#attest").isChecked(), false);
+        assert(await page.locator("#accept").isDisabled());
         await page.locator("#language").selectOption(lang); await ready(page);
+        assert.equal(await page.locator("#review-items input:checked").count(), 1);
+        assert.equal(await page.locator("#attest").isChecked(), false);
+        await page.locator("#attest").check();
         await click(page, "#accept");
         assert(await page.locator("#receipt").isVisible());
         const report = JSON.parse(execFileSync(python, ["-X", "utf8", "-m", "paperdelta", "-C", directory, "check", "--format", "json"], { encoding: "utf8", windowsHide: true }));
@@ -168,7 +172,7 @@ async function click(page, selector) { await page.locator(selector).click(); awa
         assert(await page.locator("#accept").isDisabled());
         assert.deepEqual(fs.readFileSync(path.join(directory, "paperdelta.yaml")), acceptedConfig);
         assert(errors.every((item) => item.includes("409")), name + " unexpected browser error");
-        results.push({ document: kind, language: lang, accepted: 1, exact_decimal_preserved: true, original_files_unchanged_before_test_edit: true, desktop_and_mobile: true, stale_acceptance_refused: true, browser_errors_before_test_edit: [], expected_conflict_console_messages: errors.length, remote_requests: remote });
+        results.push({ document: kind, language: lang, accepted: 1, exact_decimal_preserved: true, original_files_unchanged_before_test_edit: true, desktop_and_mobile: true, language_keeps_selection_clears_confirmation: true, stale_acceptance_refused: true, browser_errors_before_test_edit: [], expected_conflict_console_messages: errors.length, remote_requests: remote });
         console.log(name + " passed");
       } finally { await context.close(); child.kill(); }
     }

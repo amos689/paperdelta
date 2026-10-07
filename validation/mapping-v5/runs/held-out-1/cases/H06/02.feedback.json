@@ -1,0 +1,299 @@
+{
+  "actions_remaining": 14,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 3,
+  "draft_id": "sha256:30ce5c9d02bd43dd4c041a88ab096e61cc7ea2f2d4a09247f4bced6f4e168391",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_csv",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "results_csv": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_accuracy"
+    ],
+    "available_sources": [
+      "results_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:30ce5c9d02bd43dd4c041a88ab096e61cc7ea2f2d4a09247f4bced6f4e168391",
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:30ce5c9d02bd43dd4c041a88ab096e61cc7ea2f2d4a09247f4bced6f4e168391",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.pdf": "sha256:e52b58d71a2482a81ba3851ca95805ae9c7c01927c03d7484f4922c494204339",
+      "paperdelta.yaml": "sha256:3261e4117164b021951942316c19bacbde3bc9eb026234c2ef0af0ade96b3c54",
+      "results/measurements.csv": "sha256:f51e93f727d02442f8a1fd1ff9f814ad91c63e426e783997eaf89758b552f238"
+    },
+    "metrics": {
+      "mean_test_accuracy": {
+        "computed": {
+          "fingerprint": "sha256:2e615df016bdac924bb2115edcbfb729d54916644d908d350ec298ad265b820d",
+          "unit": "percent",
+          "value": "68.300"
+        },
+        "declared_contract": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_csv",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        },
+        "declared_identity": {
+          "cell_range": null,
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ],
+          "reduce": "mean",
+          "seed_column": "seed",
+          "selectors": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          },
+          "sha256": "sha256:f51e93f727d02442f8a1fd1ff9f814ad91c63e426e783997eaf89758b552f238",
+          "sheet": null,
+          "source": "results_csv",
+          "unit": "percent"
+        },
+        "evidence": [
+          {
+            "count": 3,
+            "field": "score",
+            "inspect": {
+              "cell_range": null,
+              "field": "score",
+              "full_report_pointer": "/preview/metrics/mean_test_accuracy/evidence",
+              "path": "results/measurements.csv",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Juniper",
+                "model": "VariantAmber",
+                "split": "test"
+              },
+              "sheet": null,
+              "source": "results_csv"
+            },
+            "locations": [
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/measurements.csv",
+            "records": [
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "value": "68.100"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "value": "68.300"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "value": "68.500"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "sha256": "sha256:f51e93f727d02442f8a1fd1ff9f814ad91c63e426e783997eaf89758b552f238",
+            "source": "results_csv",
+            "source_contract": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            },
+            "truncated": false,
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "VariantAmber",
+              "split": "test"
+            }
+          }
+        ],
+        "name": "mean_test_accuracy",
+        "notices": [],
+        "verification": "evaluated_under_declared_contract"
+      }
+    },
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Reference existing metrics; do not add them again. If needed, add a second metric and supported derivation first. Select original candidate IDs and exact display places. Omit statistics for a simple value. Undo a wrong prior declaration; abstain for missing identity or units.",
+  "status": "draft",
+  "undo": {
+    "last_action": "metric",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

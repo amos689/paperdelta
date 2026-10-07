@@ -1,0 +1,124 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.5159999999996217,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:35493da1e83e9375629e9c0b5b59666d81a3f60e00cc82e11feb107d7ae190fa",
+      "response_sha256": "sha256:91f1f581db4f340cfd975742a9d546f43f646bd25ab356b7cb5ef9d318c49e06",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 778.526,
+        "predicted_n": 76,
+        "predicted_per_second": 96.33589629633437,
+        "predicted_per_token_ms": 10.380346666666666,
+        "prompt_ms": 1281.112,
+        "prompt_n": 5485,
+        "prompt_per_second": 4281.436751821855,
+        "prompt_per_token_ms": 0.23356645396536008
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 5485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5561
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 2.4530000000004293,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9b30ecd79f9991369c01468b1ad1d2760ba9575b7386f0c9b0d13ae4b8c39b6f",
+      "response_sha256": "sha256:a102b6260c3bc488ffcd57972edd07b7f867229ae52adf8b374a5a1238a485ad",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 803.894,
+        "predicted_n": 76,
+        "predicted_per_second": 93.29588229293913,
+        "predicted_per_token_ms": 10.718586666666667,
+        "prompt_ms": 1549.811,
+        "prompt_n": 6532,
+        "prompt_per_second": 4214.707470781921,
+        "prompt_per_token_ms": 0.23726439069197794
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 6532,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6608
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 2.483999999999469,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:fa2df6189dbb4ff5ea2a04dfc4b6383aa9cf30eba40d43f8ebcbd8a2ed550e06",
+      "response_sha256": "sha256:368a2c1918f247aed5b9209e452ab2cafd1d509628c4e4505a4aa625963df8ea",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 809.457,
+        "predicted_n": 76,
+        "predicted_per_second": 92.65470556187667,
+        "predicted_per_token_ms": 10.79276,
+        "prompt_ms": 1554.949,
+        "prompt_n": 6532,
+        "prompt_per_second": 4200.780861623114,
+        "prompt_per_token_ms": 0.23805097979179426
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 6532,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6608
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The test accuracy value '84.1%' is explicitly mentioned in the paper/main.tex file, and it matches the requested metric in summary.json.",
+  "status": "budget_exhausted"
+}

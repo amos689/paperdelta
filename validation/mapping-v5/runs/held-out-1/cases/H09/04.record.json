@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 3.54700000000048,
+  "error": {
+    "code": "MISSING_COLUMN",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "指标选择了未声明的列"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:e2db591b3c931d15867c23c0d9e66248d49749e39baa34f1e53e87a6c56bcc62",
+  "response_sha256": "sha256:90983689719ce01d3fdd1c5c55b4b5bc57e3a33a69201095748b9f5033726e1d",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1625.522,
+    "predicted_n": 148,
+    "predicted_per_second": 90.43248876360947,
+    "predicted_per_token_ms": 11.057972789115645,
+    "prompt_ms": 1738.725,
+    "prompt_n": 7224,
+    "prompt_per_second": 4154.768580425312,
+    "prompt_per_token_ms": 0.24068729235880398
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 7224,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7372
+  },
+  "valid": false
+}

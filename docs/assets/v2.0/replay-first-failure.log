@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\tools\replay_mapping_v5.py", line 154, in <module>
+    main()
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\tools\replay_mapping_v5.py", line 100, in main
+    child(args.child.resolve(), args.out.resolve())
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\tools\replay_mapping_v5.py", line 20, in child
+    protocol, cases = verify(study)
+                      ^^^^^^^^^^^^^
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\validation\mapping-v5\runs\regression-1\implementation\tools\evaluate_mapping_v5.py", line 255, in verify
+    cases, hashes = cases_for(protocol["split"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\validation\mapping-v5\runs\regression-1\implementation\tools\evaluate_mapping_v5.py", line 71, in cases_for
+    cases, hashes = frozen_cases()
+                    ^^^^^^^^^^^^^^
+  File "D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\validation\mapping-v5\runs\regression-1\implementation\tools\evaluate_staged_mappings.py", line 87, in frozen_cases
+    lock = parse_json((SUITE / "protocol-lock.json").read_text("utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\apps\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\apps\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\docs\\学习\\项目\\codex项目\\社区贡献2\\build\\v20-worktree\\validation\\mapping-v5\\runs\\regression-1\\implementation\\evaluations\\mapping-v1\\protocol-lock.json'

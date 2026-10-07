@@ -1,0 +1,117 @@
+{
+  "case_id": "D06",
+  "expected_decision": "map",
+  "family": "pdf_raw_percentage",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:73abb4b0302944a5ba0679388e0beeb451401ef87bac951c5d37933fa4c988f8",
+      "expected": "71.4%",
+      "location": {
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 39,
+        "file": "paper/manuscript.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            183.388,
+            80.484,
+            217.408,
+            92.484
+          ],
+          "block": "sha256:b106e568ed9b855b7e7a854df743045c41cd2c4e7ed6610e27476b406bd2c4a5",
+          "offset": 26,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            900,
+            500
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34,
+        "text": "71.4%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:b106e568ed9b855b7e7a854df743045c41cd2c4e7ed6610e27476b406bd2c4a5",
+              "exact": null,
+              "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Cedar for VariantBlue."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.pdf",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

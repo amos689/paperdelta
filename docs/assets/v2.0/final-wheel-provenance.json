@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "identical_internal_files": 128,
+  "tested_wheel_sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+  "compared_rebuilt_archive_sha256": "854f926dad3b4ef5383bbebad72b74b38639cc1b95ae1a9485008b843067ee6f",
+  "comparison_directory": "build/release-v2.0.0-final1",
+  "release_wheel_is_exact_tested_archive": true,
+  "reason": "Only release documentation and evaluation records changed after installed acceptance. Every rebuilt wheel member name and byte is identical; preserve the exact tested archive for publication."
+}

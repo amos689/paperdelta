@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 3.9219999999995707,
+  "error": {
+    "code": "BUILDER_EXPECTATION",
+    "fields": [],
+    "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+    "message": "An aggregation requires an explicitly expected record count."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:afa584be899661613a08407ff4aebab8698cc59c7d194472f51358933642dee6",
+  "response_sha256": "sha256:90988a8bd12a0363ce32973bd94e5885afd87b30270c5cdaccdda8e18675ace8",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2135.918,
+    "predicted_n": 200,
+    "predicted_per_second": 93.16837069587876,
+    "predicted_per_token_ms": 10.733256281407035,
+    "prompt_ms": 1607.643,
+    "prompt_n": 6757,
+    "prompt_per_second": 4203.047567152657,
+    "prompt_per_token_ms": 0.2379225987864437
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 200,
+    "prompt_tokens": 6757,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6957
+  },
+  "valid": false
+}

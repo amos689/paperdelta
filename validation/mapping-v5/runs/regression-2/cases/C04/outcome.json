@@ -1,0 +1,240 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.4689999999991414,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:81a3c9900bc8a5dcece89f3d27987a4fc41e840c1b0240131ed32a1f2a33d1c1",
+      "response_sha256": "sha256:bb3e00148eb3cfbc7b4851ba06c1ed08045f735ef53167b7e91ff6767ce61ed2",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1525.898,
+        "predicted_n": 145,
+        "predicted_per_second": 94.37065911351874,
+        "predicted_per_token_ms": 10.596513888888888,
+        "prompt_ms": 1487.229,
+        "prompt_n": 6317,
+        "prompt_per_second": 4247.49651869349,
+        "prompt_per_token_ms": 0.2354328003799272
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 6317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6462
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.3440000000009604,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c36da5a169951fd755d10540e453ac33257bfb11a740a8f9b4191c9d350d9947",
+      "response_sha256": "sha256:290e72dd4f1fc7f633cb8d497cc9d0263a86118eac971b12b5c0533db6479aa8",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1577.73,
+        "predicted_n": 148,
+        "predicted_per_second": 93.17183548515905,
+        "predicted_per_token_ms": 10.732857142857142,
+        "prompt_ms": 1565.057,
+        "prompt_n": 6633,
+        "prompt_per_second": 4238.1842961630155,
+        "prompt_per_token_ms": 0.23595009799487413
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 148,
+        "prompt_tokens": 6633,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6781
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.4059999999990396,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:983f3af0ecdbba27f17da4c75f3594278a95f183ea4a7170d473855a27781f36",
+      "response_sha256": "sha256:3188b51664e562cbd6f4740189ef8c6de7097ae0c04a0179246576d32dae63de",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1596.298,
+        "predicted_n": 150,
+        "predicted_per_second": 93.34096766393243,
+        "predicted_per_token_ms": 10.713409395973155,
+        "prompt_ms": 1582.074,
+        "prompt_n": 6662,
+        "prompt_per_second": 4210.92818667142,
+        "prompt_per_token_ms": 0.23747733413389374
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 150,
+        "prompt_tokens": 6662,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6812
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.45299999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:cb3ddcfdbfa67308e63397934aa06ce3d53597b764ec2e791273d4a3d5c2b717",
+      "response_sha256": "sha256:2e1720b0ba50f18bcbbc4391363da414cbca76bb34eb099a34f42d2fb12d84b7",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2134.002,
+        "predicted_n": 194,
+        "predicted_per_second": 90.44040258631435,
+        "predicted_per_token_ms": 11.05700518134715,
+        "prompt_ms": 1933.044,
+        "prompt_n": 8003,
+        "prompt_per_second": 4140.102346351144,
+        "prompt_per_token_ms": 0.24153992252905163
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 194,
+        "prompt_tokens": 8003,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8197
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 5,
+      "elapsed_seconds": 3.125,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:aafb9e0fa319dcac8302be4d5bd8cb5392d4ec10793fdfb861d2eba0d0ed97e6",
+      "response_sha256": "sha256:3ea83001c5065f046ce89523106de071b465a21670c6b106076e4fafa64a425d",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 582.699,
+        "predicted_n": 53,
+        "predicted_per_second": 89.23989915891396,
+        "predicted_per_token_ms": 11.205749999999998,
+        "prompt_ms": 2204.737,
+        "prompt_n": 8903,
+        "prompt_per_second": 4038.1233680026235,
+        "prompt_per_token_ms": 0.2476397843423565
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_tokens": 8903,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8956
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy_pct",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": "\\"
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": false,
+            "places": 3
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "accuracy_pct": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/main.tex": "sha256:75cef1e2c42f8b4510249f070c5451e44d89138408f0b5394d1ae631d07bbaa2",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:aa6009233836263bb148cbc8dcd11965faa681021e7f1ab082b4bbe22f477c48"
+    },
+    "proposal_id": "sha256:b2ba7c1b53010ef116e08e011d75022a55cdfb31bde0fafcd3b2b17d9d8fc759",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:test_accuracy_value": "The test accuracy value of 84.1% is found in the paper's main.tex file and corresponds to the metric test_accuracy."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The test accuracy value from the paper's main.tex file is correctly bound to the metric test_accuracy with the expected seeds and units. The identity and display are justified.",
+  "status": "proposed"
+}

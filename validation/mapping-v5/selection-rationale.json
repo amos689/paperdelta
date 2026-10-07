@@ -1,0 +1,20 @@
+{
+  "selected_at": "2026-10-07T09:09:05.022328+00:00",
+  "selected_development": "development-2",
+  "preserved_alternative": "development-1",
+  "mapping_results": {
+    "development-1": "1/8",
+    "development-2": "0/8"
+  },
+  "required_case_explicit_abstention": {
+    "development-1": "0/4",
+    "development-2": "1/4"
+  },
+  "invalid_actions": {
+    "development-1": 33,
+    "development-2": 21
+  },
+  "reason": "Retain typed statistical parameters and clearer general source/state guidance as interface corrections. This is not selection for higher mapping accuracy: complete mappings fell from 1/8 to 0/8. Both model configurations remain unsuitable for autonomous mapping. Preserve both attempts and run one first held-out inference without further tuning.",
+  "unchanged": "Model, sampling parameters, tasks, gold, count guard, scoring and 16-action/3-error/2048-token budgets.",
+  "limits": "No independent semantic assessment of abstention reasons or human confirmation time; no isolated causal attribution. No held-out results have been observed."
+}

@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 5,
+  "elapsed_seconds": 4.092999999999847,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "metrics already contains test_accuracy_data_a; choose another identifier."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:545187062ef6a9b8994380d7be5013cac16970789984e1dfac3cabc1c3809a20",
+  "response_sha256": "sha256:69f9746d29c4ca3a410f3c7ae935f5d1424093b30b573d7d00c26f056859dae3",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1894.014,
+    "predicted_n": 169,
+    "predicted_per_second": 88.70050590967122,
+    "predicted_per_token_ms": 11.273892857142856,
+    "prompt_ms": 1995.714,
+    "prompt_n": 8094,
+    "prompt_per_second": 4055.691346555669,
+    "prompt_per_token_ms": 0.24656708673091177
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 8094,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8263
+  },
+  "valid": false
+}

@@ -1,0 +1,229 @@
+{
+  "case_id": "D03",
+  "expected_decision": "map",
+  "family": "fraction_percent_table",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:e43a5dfd1d9042bc85502d0b1a668362d75c73999460eed7b9253fd0efcbe5a4",
+      "expected": "71.4%",
+      "location": {
+        "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+        "end": 98,
+        "file": "paper/manuscript.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 6,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [
+            "Results"
+          ],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 93,
+        "text": "71.4%"
+      },
+      "status": "pass"
+    },
+    {
+      "candidate_id": "sha256:e43a5dfd1d9042bc85502d0b1a668362d75c73999460eed7b9253fd0efcbe5a4",
+      "expected": "71.4%",
+      "location": {
+        "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+        "end": 98,
+        "file": "paper/manuscript.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+          "cell": 2,
+          "offset": 0,
+          "paragraph": 6,
+          "part": "word/document.xml",
+          "row": 2,
+          "section": [
+            "Results"
+          ],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 93,
+        "text": "71.4%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "exact": null,
+              "prefix": null,
+              "suffix": null,
+              "table": {
+                "column": 1,
+                "header_rows": 1,
+                "headers": [
+                  "Experiment & Score (%)"
+                ],
+                "percent_symbol": true,
+                "row_prefix": [
+                  "Cedar / VariantBlue / selected / test"
+                ]
+              }
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.docx",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "score_pct": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    },
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score_pct",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "exact": null,
+              "prefix": null,
+              "suffix": null,
+              "table": {
+                "column": 1,
+                "header_rows": 1,
+                "headers": [
+                  "Experiment & Score (%)"
+                ],
+                "percent_symbol": true,
+                "row_prefix": [
+                  "Cedar / VariantBlue / selected / test"
+                ]
+              }
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.docx",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "score_pct": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

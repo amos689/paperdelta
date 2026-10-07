@@ -1,0 +1,39 @@
+{
+  "action": "source",
+  "action_index": 1,
+  "elapsed_seconds": 3.360000000000582,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "name"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:008ccfb522bb39b2e7ff9d69a8a326279f59bec519269b26adf3ce3618f7b087",
+  "response_sha256": "sha256:6e1991ec75a6a0f346a4a21d5516e7061a0049f85ab1f72176720d3cf7f07fda",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1480.364,
+    "predicted_n": 139,
+    "predicted_per_second": 93.22031608442248,
+    "predicted_per_token_ms": 10.72727536231884,
+    "prompt_ms": 1458.281,
+    "prompt_n": 6150,
+    "prompt_per_second": 4217.2941977574965,
+    "prompt_per_token_ms": 0.23711886178861788
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 139,
+    "prompt_tokens": 6150,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6289
+  },
+  "valid": false
+}

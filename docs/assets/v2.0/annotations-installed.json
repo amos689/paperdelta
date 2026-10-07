@@ -1,0 +1,832 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "format": "docx",
+      "language": "en",
+      "version": "2.0.0",
+      "status": "passed",
+      "source_sha256": {
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "2f69a31f893f912ada1e8aff03af7d9714a0d26d1dd1f4b8bff4ea3d635b8851",
+      "manifest": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "paper.docx",
+            "path": "copies/001-paper.review.docx"
+          }
+        ],
+        "copies_sha256": {
+          "copies/001-paper.review.docx": "sha256:669b0db0d5db4622ef8803a92b35b409418ef6c1427ea26b8913bbbc1a18ccdf"
+        },
+        "entries": [
+          {
+            "actual": "84.1%",
+            "definition": {
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "model": "Ours"
+              }
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "accuracy",
+                "locations": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "line": 4
+                  }
+                ],
+                "path": "results/metrics.csv",
+                "records": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "value": 0.807
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "value": 0.809
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "value": 0.811
+                  }
+                ],
+                "reduce": "mean",
+                "source": "results",
+                "where": {
+                  "model": "Ours"
+                }
+              }
+            ],
+            "expected": "80.9%",
+            "location": {
+              "context": "Our method achieves 84.1% accuracy on Data-A.",
+              "end": 74,
+              "file": "paper.docx",
+              "format": "docx",
+              "locator": {
+                "block": "sha256:4798a9c1bb86fe86eace2be7e1c79c42a71c5a9703ebc5c386c97244a15f8c96",
+                "offset": 20,
+                "paragraph": 3,
+                "part": "word/document.xml",
+                "section": [
+                  "Abstract"
+                ],
+                "style": ""
+              },
+              "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+              "start": 69,
+              "text": "84.1%"
+            },
+            "metric": "accuracy",
+            "note": "PaperDelta review: abstract_accuracy\nCheck status: Differs from declared evidence\nWritten value: 84.1%\nExpected display: 80.9%\nDeclared metric: accuracy\nEvidence: results/metrics.csv\nRelated claims requiring attention: claim:main_comparison\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+            "occurrence": "abstract_accuracy",
+            "position": "paper.docx · paragraph 3",
+            "related_claims": [
+              "claim:main_comparison"
+            ],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paper.docx": "sha256:e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+          "paperdelta.yaml": "sha256:0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+          "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b"
+        },
+        "language": "en",
+        "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+        "preview_id": "sha256:7f679e1dd1a658b00ae826743942dc56da2cbab6534b8a61240070d42242146a",
+        "refused": [],
+        "report_fingerprint": "sha256:1d32843e8274eadfe5f767b6cc52694a82f5369f82176dd5ebe2c97d07845f75",
+        "selection": {
+          "occurrences": [
+            "abstract_accuracy"
+          ]
+        },
+        "tool_version": "2.0.0"
+      },
+      "input_change_clears_preview": true,
+      "language_retains_selection": true,
+      "explicit_confirmation": true,
+      "originals_unchanged": true,
+      "narrow_viewport": true,
+      "errors": [],
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "[data-native-annotation][value=abstract_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-download",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        }
+      ]
+    },
+    {
+      "format": "docx",
+      "language": "zh-CN",
+      "version": "2.0.0",
+      "status": "passed",
+      "source_sha256": {
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+      },
+      "archive_sha256": "05e06e29b5cea2dabe99817bad6216847f12589e1a592a311929f0d343799bea",
+      "manifest": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "paper.docx",
+            "path": "copies/001-paper.review.docx"
+          }
+        ],
+        "copies_sha256": {
+          "copies/001-paper.review.docx": "sha256:6ba5641755e18b7eb08e0e6b414f2a42978ae4b89fcf2f1b63a052859a743e49"
+        },
+        "entries": [
+          {
+            "actual": "84.1%",
+            "definition": {
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "model": "Ours"
+              }
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "accuracy",
+                "locations": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "line": 4
+                  }
+                ],
+                "path": "results/metrics.csv",
+                "records": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "value": 0.807
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "value": 0.809
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "value": 0.811
+                  }
+                ],
+                "reduce": "mean",
+                "source": "results",
+                "where": {
+                  "model": "Ours"
+                }
+              }
+            ],
+            "expected": "80.9%",
+            "location": {
+              "context": "Our method achieves 84.1% accuracy on Data-A.",
+              "end": 74,
+              "file": "paper.docx",
+              "format": "docx",
+              "locator": {
+                "block": "sha256:4798a9c1bb86fe86eace2be7e1c79c42a71c5a9703ebc5c386c97244a15f8c96",
+                "offset": 20,
+                "paragraph": 3,
+                "part": "word/document.xml",
+                "section": [
+                  "Abstract"
+                ],
+                "style": ""
+              },
+              "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+              "start": 69,
+              "text": "84.1%"
+            },
+            "metric": "accuracy",
+            "note": "PaperDelta 复核：abstract_accuracy\n核对状态：与已声明证据不一致\n原文数值：84.1%\n预期显示：80.9%\n已声明指标：accuracy\n证据：results/metrics.csv\n需关注的相关结论：claim:main_comparison\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+            "occurrence": "abstract_accuracy",
+            "position": "paper.docx · 第 3 段",
+            "related_claims": [
+              "claim:main_comparison"
+            ],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paper.docx": "sha256:e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+          "paperdelta.yaml": "sha256:0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+          "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b"
+        },
+        "language": "zh-CN",
+        "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+        "preview_id": "sha256:b6da5b884e803338d30d7ca39e0166633dabb459b8467493a669f4fdd7284d0a",
+        "refused": [],
+        "report_fingerprint": "sha256:1d32843e8274eadfe5f767b6cc52694a82f5369f82176dd5ebe2c97d07845f75",
+        "selection": {
+          "occurrences": [
+            "abstract_accuracy"
+          ]
+        },
+        "tool_version": "2.0.0"
+      },
+      "input_change_clears_preview": true,
+      "language_retains_selection": true,
+      "explicit_confirmation": true,
+      "originals_unchanged": true,
+      "narrow_viewport": true,
+      "errors": [],
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "[data-native-annotation][value=abstract_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-download",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        }
+      ]
+    },
+    {
+      "format": "pdf",
+      "language": "en",
+      "version": "2.0.0",
+      "status": "passed",
+      "source_sha256": {
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+      },
+      "archive_sha256": "76b5f699002196a25ec5cab3544345877ce8f0ff2c9831b4b49a3c6531cd20e5",
+      "manifest": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "paper.pdf",
+            "path": "copies/001-paper.review.pdf"
+          }
+        ],
+        "copies_sha256": {
+          "copies/001-paper.review.pdf": "sha256:cfcc0bbd117b59489365198bacff9242308033adc5c1661574727176a7754835"
+        },
+        "entries": [
+          {
+            "actual": "84.1%",
+            "definition": {
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "model": "Ours"
+              }
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "accuracy",
+                "locations": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "line": 4
+                  }
+                ],
+                "path": "results/metrics.csv",
+                "records": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "value": 0.807
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "value": 0.809
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "value": 0.811
+                  }
+                ],
+                "reduce": "mean",
+                "source": "results",
+                "where": {
+                  "model": "Ours"
+                }
+              }
+            ],
+            "expected": "80.9%",
+            "location": {
+              "context": "Our method achieves 84.1% accuracy on Data-A.",
+              "end": 173,
+              "file": "paper.pdf",
+              "format": "pdf",
+              "locator": {
+                "bbox": [
+                  165.384,
+                  190.484,
+                  199.404,
+                  202.484
+                ],
+                "block": "sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6",
+                "offset": 20,
+                "page": 1,
+                "page_box": [
+                  0,
+                  0,
+                  600,
+                  800
+                ]
+              },
+              "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+              "start": 168,
+              "text": "84.1%"
+            },
+            "metric": "accuracy",
+            "note": "PaperDelta review: abstract_accuracy\nCheck status: Differs from declared evidence\nWritten value: 84.1%\nExpected display: 80.9%\nDeclared metric: accuracy\nEvidence: results/metrics.csv\nRelated claims requiring attention: claim:main_comparison\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+            "occurrence": "abstract_accuracy",
+            "position": "paper.pdf · page 1",
+            "related_claims": [
+              "claim:main_comparison"
+            ],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paper.pdf": "sha256:633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+          "paperdelta.yaml": "sha256:3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+          "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b",
+          "source.tex": "sha256:a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+        },
+        "language": "en",
+        "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+        "preview_id": "sha256:c5c88e9ff847410e25bd4a38099572b384e7bbf7853c5790ea54bf063c9ad531",
+        "refused": [],
+        "report_fingerprint": "sha256:2d96a8ffab8af42e965422e361e4af18454e0f781473a9528dd25e2779c6d009",
+        "selection": {
+          "occurrences": [
+            "abstract_accuracy"
+          ]
+        },
+        "tool_version": "2.0.0"
+      },
+      "input_change_clears_preview": true,
+      "language_retains_selection": true,
+      "explicit_confirmation": true,
+      "originals_unchanged": true,
+      "narrow_viewport": true,
+      "errors": [],
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "[data-native-annotation][value=abstract_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-download",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        }
+      ]
+    },
+    {
+      "format": "pdf",
+      "language": "zh-CN",
+      "version": "2.0.0",
+      "status": "passed",
+      "source_sha256": {
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+        "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+        "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+      },
+      "archive_sha256": "0ce2fea324e5f8496bd7e69fb3fd06da3fa979c16282757b89858305b771fb93",
+      "manifest": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "paper.pdf",
+            "path": "copies/001-paper.review.pdf"
+          }
+        ],
+        "copies_sha256": {
+          "copies/001-paper.review.pdf": "sha256:dad02f92b29d1f463445fcedc0910da155da23fc7b3e9be20a1e6e0e5fdc1d3f"
+        },
+        "entries": [
+          {
+            "actual": "84.1%",
+            "definition": {
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results",
+              "unit": "fraction",
+              "where": {
+                "model": "Ours"
+              }
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "accuracy",
+                "locations": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "line": 4
+                  }
+                ],
+                "path": "results/metrics.csv",
+                "records": [
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 1
+                    },
+                    "value": 0.807
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 2
+                    },
+                    "value": 0.809
+                  },
+                  {
+                    "key": {
+                      "model": "Ours",
+                      "seed": 3
+                    },
+                    "value": 0.811
+                  }
+                ],
+                "reduce": "mean",
+                "source": "results",
+                "where": {
+                  "model": "Ours"
+                }
+              }
+            ],
+            "expected": "80.9%",
+            "location": {
+              "context": "Our method achieves 84.1% accuracy on Data-A.",
+              "end": 173,
+              "file": "paper.pdf",
+              "format": "pdf",
+              "locator": {
+                "bbox": [
+                  165.384,
+                  190.484,
+                  199.404,
+                  202.484
+                ],
+                "block": "sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6",
+                "offset": 20,
+                "page": 1,
+                "page_box": [
+                  0,
+                  0,
+                  600,
+                  800
+                ]
+              },
+              "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+              "start": 168,
+              "text": "84.1%"
+            },
+            "metric": "accuracy",
+            "note": "PaperDelta 复核：abstract_accuracy\n核对状态：与已声明证据不一致\n原文数值：84.1%\n预期显示：80.9%\n已声明指标：accuracy\n证据：results/metrics.csv\n需关注的相关结论：claim:main_comparison\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+            "occurrence": "abstract_accuracy",
+            "position": "paper.pdf · 第 1 页",
+            "related_claims": [
+              "claim:main_comparison"
+            ],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paper.pdf": "sha256:633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+          "paperdelta.yaml": "sha256:3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+          "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b",
+          "source.tex": "sha256:a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+        },
+        "language": "zh-CN",
+        "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+        "preview_id": "sha256:7fcff239f4f73adaff0ef37e29d7529c290e7b69da91a676af77fd5bc5d1e560",
+        "refused": [],
+        "report_fingerprint": "sha256:2d96a8ffab8af42e965422e361e4af18454e0f781473a9528dd25e2779c6d009",
+        "selection": {
+          "occurrences": [
+            "abstract_accuracy"
+          ]
+        },
+        "tool_version": "2.0.0"
+      },
+      "input_change_clears_preview": true,
+      "language_retains_selection": true,
+      "explicit_confirmation": true,
+      "originals_unchanged": true,
+      "narrow_viewport": true,
+      "errors": [],
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "[data-native-annotation][value=abstract_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#annotation-download",
+          "method": "click"
+        },
+        {
+          "selector": "#annotation-preview-button",
+          "method": "click"
+        }
+      ]
+    }
+  ],
+  "scope": "Authored browser flows; original files are unchanged and every copy is explicitly reviewed. Not independent usability evidence."
+}

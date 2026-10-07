@@ -1,0 +1,240 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.7030000000013388,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/measurements.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:96024ec66117715c94b9289868f311c082980b12ca65aa50b855ece580b4f53b",
+      "response_sha256": "sha256:a1e0c83d4b3d365772155d65765859313679a856381aace02bda2b6753582eee",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1485.434,
+        "predicted_n": 138,
+        "predicted_per_second": 92.22893780538213,
+        "predicted_per_token_ms": 10.84258394160584,
+        "prompt_ms": 1562.667,
+        "prompt_n": 6555,
+        "prompt_per_second": 4194.751664942051,
+        "prompt_per_token_ms": 0.23839313501144163
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 138,
+        "prompt_tokens": 6555,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6693
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.3909999999996217,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:b5276e2ffdd6c67ce550e32c6fa4cc593c6b69157d942bca0abc40379fb59787",
+      "response_sha256": "sha256:5322aef631af20ffd182adc6412ce714874c4e1cb0c90e3edcc35a36e9e789c2",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1522.615,
+        "predicted_n": 140,
+        "predicted_per_second": 91.29031304696197,
+        "predicted_per_token_ms": 10.95406474820144,
+        "prompt_ms": 1638.035,
+        "prompt_n": 6865,
+        "prompt_per_second": 4190.9971398657535,
+        "prompt_per_token_ms": 0.2386067006554989
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 6865,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7005
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.561999999999898,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e52297e6d2575a31032797cb4f96e224992de6db33e014dadc80b12e9523d0d6",
+      "response_sha256": "sha256:5217cba1de5f1150fe73e7f6da5ec9e30da5620b74f95b363e37bf9739800885",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1635.724,
+        "predicted_n": 150,
+        "predicted_per_second": 91.09116207868809,
+        "predicted_per_token_ms": 10.978013422818792,
+        "prompt_ms": 1649.878,
+        "prompt_n": 6908,
+        "prompt_per_second": 4186.976249152968,
+        "prompt_per_token_ms": 0.2388358425014476
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 150,
+        "prompt_tokens": 6908,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7058
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.9690000000009604,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0c5f428cbf0267d5f9d3571e0acb44e3d59e19e093f258e49712f5ff67acd355",
+      "response_sha256": "sha256:0dcfc8158f9100d6c2f90c09b9cfc23cb96060b1fe55c7f0139cf57fb6232640",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1616.125,
+        "predicted_n": 145,
+        "predicted_per_second": 89.10201871761157,
+        "predicted_per_token_ms": 11.223090277777779,
+        "prompt_ms": 2060.836,
+        "prompt_n": 8369,
+        "prompt_per_second": 4060.9733137425787,
+        "prompt_per_token_ms": 0.24624638547018757
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 8369,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8514
+      },
+      "valid": true
+    },
+    {
+      "action": "derived",
+      "action_index": 5,
+      "elapsed_seconds": 3.7969999999986612,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:53d3dd213d45e0c14786bb5a0fc18af4f873b3e807d14719078e94b237c68ffd",
+      "response_sha256": "sha256:55091f81bd83c8f9219d342e2465c2363a32e8d4a98837b70757f0e4b7a1b42d",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1012.251,
+        "predicted_n": 88,
+        "predicted_per_second": 85.94706253686093,
+        "predicted_per_token_ms": 11.635068965517242,
+        "prompt_ms": 2468.216,
+        "prompt_n": 9774,
+        "prompt_per_second": 3959.9451587705453,
+        "prompt_per_token_ms": 0.25252874974421935
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 88,
+        "prompt_tokens": 9774,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9862
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 6,
+      "elapsed_seconds": 5.640000000001237,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "metric"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for LocationsMappingStage\nmetric\n  Field required [type=missing, input_value={'candidate_ids': ['sha25...measurements.csv file.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:20618bbbf130dd505dedab7978fea16bc572938938078c9476a4181d1205c56b",
+      "response_sha256": "sha256:43c8cc7e7effc863a4c81553e517165a2e9a8a0dc0d94dccf7e2411120b379af",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2455.33,
+        "predicted_n": 203,
+        "predicted_per_second": 82.27000036654951,
+        "predicted_per_token_ms": 12.15509900990099,
+        "prompt_ms": 2986.203,
+        "prompt_n": 11518,
+        "prompt_per_second": 3857.0720074958067,
+        "prompt_per_token_ms": 0.2592640215315159
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 203,
+        "prompt_tokens": 11518,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11721
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 7,
+      "elapsed_seconds": 5.813000000000102,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "This name already exists in preview.additions. Reference it instead of adding it again. To change a successful declaration, undo later stages and that declaration, then add the corrected version.",
+        "message": "metrics already contains test_accuracy_variantamber; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c14054a545f2dd35b5352ae04a5f00bf9c8a7b389b05385e51487b4c9ecbc358",
+      "response_sha256": "sha256:ff84fc0722644d59cacb73474585fa7d970b3aa1363e7a1713ce388546a9ef9b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2009.361,
+        "predicted_n": 166,
+        "predicted_per_second": 82.11565766430223,
+        "predicted_per_token_ms": 12.177945454545455,
+        "prompt_ms": 3068.376,
+        "prompt_n": 11774,
+        "prompt_per_second": 3837.2089991578605,
+        "prompt_per_token_ms": 0.26060608119585527
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 11774,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11940
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Declare the metric for the test accuracy of VariantAmber using the exact source and parameters from the measurements.csv file.",
+  "status": "budget_exhausted"
+}

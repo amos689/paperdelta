@@ -1,0 +1,142 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.7659999999996217,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:b7bddece45f6d1de99ccc4d8f4f1e56bafe5af5f5dacf7ff355c0cfc0da6290b",
+      "response_sha256": "sha256:2aff0da5e0ff5c3d1d7771dd12df5ebf66746028169deb767cf999e9b2ebf724",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1764.407,
+        "predicted_n": 165,
+        "predicted_per_second": 92.94907580847276,
+        "predicted_per_token_ms": 10.758579268292683,
+        "prompt_ms": 1530.817,
+        "prompt_n": 6510,
+        "prompt_per_second": 4252.631111360796,
+        "prompt_per_token_ms": 0.23514854070660524
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 6510,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6675
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 2.686999999999898,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+        "message": "聚合操作必须明确指定预期记录数。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:cd1b5c8db303dfad10c448eb728add95cc02d0c53f3fb9f82d36ec04419aaeb9",
+      "response_sha256": "sha256:ee4a9607696a88757ec98aaa25eccffb7c3404afcacce3214426f9df93d2168c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 889.943,
+        "predicted_n": 83,
+        "predicted_per_second": 92.14073260871763,
+        "predicted_per_token_ms": 10.852963414634146,
+        "prompt_ms": 1632.798,
+        "prompt_n": 6854,
+        "prompt_per_second": 4197.7023489739695,
+        "prompt_per_token_ms": 0.2382255617157864
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 6854,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6937
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.2810000000008586,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:2fdaa993f7d9842b61b9e1df58e09a8ac17245721fab5369dc8c485d66525efc",
+      "response_sha256": "sha256:3ed315a6e49c5d0a2cb1c3c2b7687125aea941d2969900a27e9787b1a11d7a75",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1487.505,
+        "predicted_n": 138,
+        "predicted_per_second": 92.10053075451846,
+        "predicted_per_token_ms": 10.857700729927009,
+        "prompt_ms": 1624.317,
+        "prompt_n": 6849,
+        "prompt_per_second": 4216.541475586354,
+        "prompt_per_token_ms": 0.23716119141480507
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 138,
+        "prompt_tokens": 6849,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6987
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 4,
+      "elapsed_seconds": 3.4219999999986612,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "该名称已存在于 preview.additions，请引用它而非重复添加。需要修改成功声明时，先撤回后续步骤和该声明，再添加修正后的版本。",
+        "message": "sources 中已存在 results_measurements_csv，请选择其他标识符。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5a628b680a351500f249f086c1a3da73a5897d7b1e37c61198095df5b17ea083",
+      "response_sha256": "sha256:9f826457d255b9f0b29f491554e213f409531ce015b3d95a4ae7e2cb4b9c5199",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1638.577,
+        "predicted_n": 151,
+        "predicted_per_second": 91.54284479765064,
+        "predicted_per_token_ms": 10.923846666666666,
+        "prompt_ms": 1636.676,
+        "prompt_n": 6904,
+        "prompt_per_second": 4218.305883388038,
+        "prompt_per_token_ms": 0.2370619930475087
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 151,
+        "prompt_tokens": 6904,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7055
+      },
+      "valid": false
+    }
+  ],
+  "reason": "声明数据源 results/measurements.csv，包含所有必要的列和主键，用于后续的指标绑定。",
+  "status": "budget_exhausted"
+}

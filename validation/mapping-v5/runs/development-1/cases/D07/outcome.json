@@ -1,0 +1,179 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 4.657000000000153,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:dbbc3488bfd503277f87549fe91ae92152a2c0164790f6f4b5909f463f2fc8fa",
+      "response_sha256": "sha256:829d83ef7222b2e189aa3e32b45cabf038bebfd483de77396c93a53be51e831d",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1965.931,
+        "predicted_n": 175,
+        "predicted_per_second": 88.50768414557785,
+        "predicted_per_token_ms": 11.298454022988507,
+        "prompt_ms": 1966.418,
+        "prompt_n": 7771,
+        "prompt_per_second": 3951.8556075056267,
+        "prompt_per_token_ms": 0.2530456826663235
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 175,
+        "prompt_tokens": 7771,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7946
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 4.686999999999898,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:af3dd9eae51ec0f0e121bcc1349142f003cb36c3cc30e496790ede6ada748918",
+      "response_sha256": "sha256:de0f80c3754313584ede43dc967bd673144108b57a8d3c5b0c47d88710532ece",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2176.955,
+        "predicted_n": 189,
+        "predicted_per_second": 86.35915763072732,
+        "predicted_per_token_ms": 11.579547872340425,
+        "prompt_ms": 2328.79,
+        "prompt_n": 8995,
+        "prompt_per_second": 3862.5208799419443,
+        "prompt_per_token_ms": 0.2588982768204558
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 189,
+        "prompt_tokens": 8995,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9184
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 5.0,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:844f899ff295e6d8a2041338c28857c66c0ad6febfaed17b325dd0e626c073d6",
+      "response_sha256": "sha256:9af1fc94cd6917389103dd4b9c052f1797e69778f9334496a571c2a0fc1ad140",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2354.528,
+        "predicted_n": 204,
+        "predicted_per_second": 86.21685535275012,
+        "predicted_per_token_ms": 11.598660098522167,
+        "prompt_ms": 2351.822,
+        "prompt_n": 9084,
+        "prompt_per_second": 3862.537215826708,
+        "prompt_per_token_ms": 0.25889718185821226
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 204,
+        "prompt_tokens": 9084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9288
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 6.453000000000429,
+      "error": {
+        "code": "DRAFT_STATISTICS",
+        "fields": [
+          [
+            "component"
+          ],
+          [
+            "mean"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': '0.714'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value='0.714', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:6c7437493534fcc355d55d0974af756fcc67b6302a72203c038dc7368670380e",
+      "response_sha256": "sha256:8d57de63e6da62e2d91d8872d68a6ec47de7f49e5d3cc511145c7dbaf8670381",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 3522.714,
+        "predicted_n": 294,
+        "predicted_per_second": 83.17450692846482,
+        "predicted_per_token_ms": 12.022914675767918,
+        "prompt_ms": 2761.26,
+        "prompt_n": 10556,
+        "prompt_per_second": 3822.89244765071,
+        "prompt_per_token_ms": 0.2615820386510042
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 294,
+        "prompt_tokens": 10556,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10850
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 5,
+      "elapsed_seconds": 5.45299999999952,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "metrics already contains mean_test_accuracy; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a7ca5fd47b5dd5069e012963bec127df79ba68d254c6fcd478ed5c631dffb2a3",
+      "response_sha256": "sha256:d4f14878013c672ed67742509100b7912d1c05c339cc24cc339534a3713e07db",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2410.046,
+        "predicted_n": 201,
+        "predicted_per_second": 82.98596790268734,
+        "predicted_per_token_ms": 12.050229999999999,
+        "prompt_ms": 2848.092,
+        "prompt_n": 10841,
+        "prompt_per_second": 3806.4079390693837,
+        "prompt_per_token_ms": 0.26271487870122684
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 201,
+        "prompt_tokens": 10841,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11042
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The metric 'mean_test_accuracy' is derived from the 'score' field in the 'results_workbook' source, which contains the scores for seeds 001, 002, and 003. The mean of these scores is calculated to determine the mean test accuracy.",
+  "status": "budget_exhausted"
+}

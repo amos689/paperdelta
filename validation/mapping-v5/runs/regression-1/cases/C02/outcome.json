@@ -1,0 +1,217 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.04700000000048,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f1b843ad99da1c0c66f6b7a6c686257ebe5b379d1234f98ba72354607b7e20e5",
+      "response_sha256": "sha256:2106a75754aa174d871e691997f20d78de508cfc9d2453c9a49cef809364cfc5",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 719.108,
+        "predicted_n": 72,
+        "predicted_per_second": 98.73343086156738,
+        "predicted_per_token_ms": 10.128281690140843,
+        "prompt_ms": 1240.171,
+        "prompt_n": 5400,
+        "prompt_per_second": 4354.238246177341,
+        "prompt_per_token_ms": 0.2296612962962963
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 5400,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5472
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.280999999999949,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:77bb346a2b9724fdf2921b344b789bc56199a3da02b182c07a180901d8d72db4",
+      "response_sha256": "sha256:d6f05662ee825e6dccaa08bcb3de44205bed551f3747545beb5e7dce87b56b9f",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1601.647,
+        "predicted_n": 153,
+        "predicted_per_second": 94.90230993471096,
+        "predicted_per_token_ms": 10.537151315789473,
+        "prompt_ms": 1495.238,
+        "prompt_n": 6407,
+        "prompt_per_second": 4284.93657865838,
+        "prompt_per_token_ms": 0.23337568284688623
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 153,
+        "prompt_tokens": 6407,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6560
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.780999999999949,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ffb3266eccd1b3429241bb6dbe7edb60bae7e4919a1cf0306f9a62249eb2c185",
+      "response_sha256": "sha256:0e82d5db26c445e7109aa8c5f919d0553ff39cbc7985c535f32d80df44bbb289",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2010.463,
+        "predicted_n": 191,
+        "predicted_per_second": 94.50559398506712,
+        "predicted_per_token_ms": 10.581384210526316,
+        "prompt_ms": 1536.904,
+        "prompt_n": 6550,
+        "prompt_per_second": 4261.814661162962,
+        "prompt_per_token_ms": 0.2346418320610687
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 191,
+        "prompt_tokens": 6550,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6741
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.905999999999949,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9438a6b4a69aa1b7a5177809e3515b445d8390cc741439e5d6fa291ae3802a17",
+      "response_sha256": "sha256:f87ec16deed59c5e3259cf152f37c71e5e5aa609f187f287be12662ee75d74ff",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2649.341,
+        "predicted_n": 242,
+        "predicted_per_second": 90.96601758701503,
+        "predicted_per_token_ms": 10.993116182572614,
+        "prompt_ms": 1901.378,
+        "prompt_n": 7919,
+        "prompt_per_second": 4164.87410709496,
+        "prompt_per_token_ms": 0.24010329587069074
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 242,
+        "prompt_tokens": 7919,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8161
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 5,
+      "elapsed_seconds": 4.532000000000153,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "expected_seeds",
+            0
+          ],
+          [
+            "expected_seeds",
+            1
+          ],
+          [
+            "expected_seeds",
+            2
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "3 validation errors for MetricMappingStage\nexpected_seeds.0\n  Input should be a valid string [type=string_type, input_value=1, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.1\n  Input should be a valid string [type=string_type, input_value=2, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.2\n  Input should be a valid string [type=string_type, input_value=3, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ac50c06f28c54cf1339cd097ad01b86c7bd3873d538ecd51081c4a774d4261a7",
+      "response_sha256": "sha256:85779c12e802d4e34009d9b78116831ff5195adcad0ee2cd6e651048bd7b1b46",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2004.164,
+        "predicted_n": 179,
+        "predicted_per_second": 88.81508698888914,
+        "predicted_per_token_ms": 11.259348314606742,
+        "prompt_ms": 2289.152,
+        "prompt_n": 9247,
+        "prompt_per_second": 4039.487111384478,
+        "prompt_per_token_ms": 0.24755618038282687
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 179,
+        "prompt_tokens": 9247,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9426
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 6,
+      "elapsed_seconds": 5.25,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "occurrences already contains test_accuracy_data_a_value; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:28c0f4aa8875fcd7da14c39025ca4c017d1f249a11e077536a631cc8d69b0784",
+      "response_sha256": "sha256:b681ddd2d54355b6b961dadf6b32b691005fa3a46f1c1b7c6895c7ffb7660cb0",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2649.965,
+        "predicted_n": 235,
+        "predicted_per_second": 88.30305305919134,
+        "predicted_per_token_ms": 11.324636752136753,
+        "prompt_ms": 2344.485,
+        "prompt_n": 9456,
+        "prompt_per_second": 4033.2951586382505,
+        "prompt_per_token_ms": 0.247936230964467
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 235,
+        "prompt_tokens": 9456,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9691
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The 'locations' stage is used to bind the original occurrence in the paper's main.tex file to the metric 'test_accuracy_data_a'. The value is formatted as a percentage with one decimal place.",
+  "status": "budget_exhausted"
+}

@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "kind": "tsv",
+      "language": "en",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+      },
+      "remote_requests": [],
+      "errors": []
+    },
+    {
+      "kind": "tsv",
+      "language": "zh-CN",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+      },
+      "remote_requests": [],
+      "errors": []
+    },
+    {
+      "kind": "xlsx",
+      "language": "en",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+      },
+      "remote_requests": [],
+      "errors": []
+    },
+    {
+      "kind": "xlsx",
+      "language": "zh-CN",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+      },
+      "remote_requests": [],
+      "errors": []
+    },
+    {
+      "kind": "records",
+      "language": "en",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.pdevidence.json": "afc5e022262d90dd5de026dc890e2cf28568d0ef3805409ded85c1a883d62c61"
+      },
+      "remote_requests": [],
+      "errors": []
+    },
+    {
+      "kind": "records",
+      "language": "zh-CN",
+      "status": "passed",
+      "schema": 5,
+      "accepted": 2,
+      "inputs": {
+        "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+        "results.pdevidence.json": "27807d1825972ff325c6fa538be63b9d6bf6f6b05fc56aa54cd73f94ec78e5f8"
+      },
+      "remote_requests": [],
+      "errors": []
+    }
+  ]
+}

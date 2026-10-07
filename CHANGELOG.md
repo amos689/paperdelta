@@ -2,6 +2,16 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 2.0.0 — 2026-10-07
+
+- Share experiment identity, exact source/manuscript hashes, original context, units, selected records and conflicts across direct, staged and batch proposals, CLI and bilingual Studio.
+- Keep declared identity and supplied rationale distinct from deterministic checks; expose evidence sample totals and complete inspection paths.
+- Add bounded stage undo, clearer field guidance and typed statistical contracts while preserving input freshness, the last valid draft and explicit acceptance.
+- Clear confirmation on language switches and proposal import attempts; restore compatible 1.9 drafts after revalidation.
+- Preserve first failures and real model responses in a separately frozen bilingual study; retain incomplete and incorrect mappings in the reported results.
+- Keep partial uvx output and a failure receipt when isolated startup times out.
+- [Scope and evidence](docs/v2.0.md). This version follows the project's 1.9 → 2.0 rollover convention.
+
 ## 1.9.0 — 2026-10-07
 
 - Reuse content-addressed document parses, typed evidence and dependency-aware metric results in Studio and ongoing checks, with bounded process-local caches.

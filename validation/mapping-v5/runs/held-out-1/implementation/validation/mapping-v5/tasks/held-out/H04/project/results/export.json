@@ -1,0 +1,17 @@
+{
+  "runs": {
+    "evaluation/test": {
+      "checkpoint": "selected",
+      "dataset": "Juniper",
+      "model": "VariantAmber",
+      "score.mean": 0.683,
+      "seeds": [
+        "001",
+        "002",
+        "003"
+      ],
+      "split": "test",
+      "unit": "fraction"
+    }
+  }
+}

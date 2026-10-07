@@ -1,0 +1,79 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.7969999999986612,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ],
+          [
+            "format"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "2 validation errors for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='paper/main.tex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='tex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ff7bb806361e91ef2be7e157a08619a8ed05701ebb9c1cd83a0ce7823c01e7fe",
+      "response_sha256": "sha256:84969fb3c03ee662429c43e79b4bfa2a5637c9ec16ca09a90f22ee98ed17463f",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 768.39,
+        "predicted_n": 73,
+        "predicted_per_second": 93.70241674149847,
+        "predicted_per_token_ms": 10.672083333333333,
+        "prompt_ms": 1476.132,
+        "prompt_n": 6242,
+        "prompt_per_second": 4228.619120783236,
+        "prompt_per_token_ms": 0.23648381928868953
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 6242,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6315
+      },
+      "valid": false
+    },
+    {
+      "action": "abstain",
+      "action_index": 2,
+      "elapsed_seconds": 2.375,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e489c86d7f90ceba7e59dae26cf56db3b494aaf19779db94a0eae592249502f1",
+      "response_sha256": "sha256:d839f8ccc8823aa2ad0f418759790c6c9f36c3e309ff7a21afc67b52e75740e7",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 725.308,
+        "predicted_n": 68,
+        "predicted_per_second": 92.37454984641008,
+        "predicted_per_token_ms": 10.825492537313433,
+        "prompt_ms": 1552.17,
+        "prompt_n": 6554,
+        "prompt_per_second": 4222.475630890946,
+        "prompt_per_token_ms": 0.2368278913640525
+      },
+      "status": "abstained",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 6554,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6622
+      },
+      "valid": true
+    }
+  ],
+  "reason": "The format 'tex' is not supported by the source mapping stage, which requires 'csv', 'json', 'tsv', 'xlsx', or 'records'. The task requires a valid source mapping stage with the correct format.",
+  "status": "abstained"
+}

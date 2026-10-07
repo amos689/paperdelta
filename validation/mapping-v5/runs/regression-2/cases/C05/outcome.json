@@ -1,0 +1,206 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.32799999999952,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:4e32b740a15a6983de46c88deccba3183e7fbf217b598c2f9a9855a0ccbea47f",
+      "response_sha256": "sha256:697899937e8edad961e44ecf3668f104029325745c20472f38c2c867fe51c5ef",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1446.289,
+        "predicted_n": 139,
+        "predicted_per_second": 95.4166145217173,
+        "predicted_per_token_ms": 10.480355072463768,
+        "prompt_ms": 1450.648,
+        "prompt_n": 6156,
+        "prompt_per_second": 4243.620781885062,
+        "prompt_per_token_ms": 0.23564782326185835
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 139,
+        "prompt_tokens": 6156,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6295
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.25,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:fc96b1dc59f967829b6c4338f82c141b5f0ba59a08a4447a54d225d9a8ec3c98",
+      "response_sha256": "sha256:2f7beb622f71f5e0e72e04261143e3cbcc0819f1b435a99893438f574bfe5eb3",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1536.243,
+        "predicted_n": 145,
+        "predicted_per_second": 93.73517080305655,
+        "predicted_per_token_ms": 10.668354166666667,
+        "prompt_ms": 1521.384,
+        "prompt_n": 6466,
+        "prompt_per_second": 4250.077560957654,
+        "prompt_per_token_ms": 0.23528982369316426
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 6466,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6611
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.5310000000008586,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a51938ac37090f383f1660977c63419b3ee7c100da473dc792df03d15f5fb861",
+      "response_sha256": "sha256:6c4eea7a63874638201584e2f7c416d4358c6aee17c5552e6e0df3428cb6ae86",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1776.444,
+        "predicted_n": 168,
+        "predicted_per_second": 94.00802952415049,
+        "predicted_per_token_ms": 10.637389221556885,
+        "prompt_ms": 1530.95,
+        "prompt_n": 6487,
+        "prompt_per_second": 4237.238316078252,
+        "prompt_per_token_ms": 0.2360027747803299
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 168,
+        "prompt_tokens": 6487,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6655
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.938000000000102,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:6ea6b49a234eb7439216638d35d3d3e6912cb7c5259a902e52cb1363cddc22e5",
+      "response_sha256": "sha256:a0d894acb15b4ecc74124e9fd4cb0b853d49491f80874bef9c5120b5f8c339b5",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1793.025,
+        "predicted_n": 164,
+        "predicted_per_second": 90.90782337111864,
+        "predicted_per_token_ms": 11.000153374233129,
+        "prompt_ms": 1895.752,
+        "prompt_n": 7827,
+        "prompt_per_second": 4128.704598491786,
+        "prompt_per_token_ms": 0.24220672032707294
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 7827,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7991
+      },
+      "valid": true
+    },
+    {
+      "action": "derived",
+      "action_index": 5,
+      "elapsed_seconds": 3.6719999999986612,
+      "error": {
+        "code": "UNIT_MISMATCH",
+        "fields": [],
+        "hint": "Read the declared SOURCE units of both metrics. A percentage-point operation needs fraction or percent inputs. Use undo to correct a prior stage; never repeat unchanged failing arguments or guess units from magnitude.",
+        "message": "Percentage points require proportions"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:20abd5733fe9bfa2a28bc0cd0bd7158161dbb17824e1c383982d74efd88afaa8",
+      "response_sha256": "sha256:703da52b15c06ee2612778103777232480f9e1762cdbe77373ef4fb2253ad311",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1218.262,
+        "predicted_n": 109,
+        "predicted_per_second": 88.65088133751198,
+        "predicted_per_token_ms": 11.280203703703704,
+        "prompt_ms": 2266.27,
+        "prompt_n": 9101,
+        "prompt_per_second": 4015.8498325442247,
+        "prompt_per_token_ms": 0.24901329524228108
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 109,
+        "prompt_tokens": 9101,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9210
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 6,
+      "elapsed_seconds": 5.04700000000048,
+      "error": {
+        "code": "BUILDER_SELECTION",
+        "fields": [],
+        "hint": "For a simple value, use one original candidate ID and one binding name per location. Inspect table row and column identity. A range of IDs is not a single table cell. Compound statistics require their explicit display contract.",
+        "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:29311205ac99c84f5dae3c4b5e49822c2c463eb462973b7561a7ff75b1fff711",
+      "response_sha256": "sha256:9fefa19e3bc8d3637ec29c2fe31e9064f457c80e71182fdff965a186831d8817",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2599.709,
+        "predicted_n": 231,
+        "predicted_per_second": 88.47144045737427,
+        "predicted_per_token_ms": 11.303082608695652,
+        "prompt_ms": 2271.124,
+        "prompt_n": 9130,
+        "prompt_per_second": 4020.035894121149,
+        "prompt_per_token_ms": 0.24875399780941948
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 231,
+        "prompt_tokens": 9130,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9361
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Bind the original occurrence of the accuracy gain in paper/main.tex to the derived metric 'percentage_point_improvement_ours_over_baseline_data_a_test'.",
+  "status": "budget_exhausted"
+}

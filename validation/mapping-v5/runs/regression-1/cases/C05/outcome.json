@@ -1,0 +1,162 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.594000000000051,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:76dbeefd282b7a16ae06c6743f4ea9e9740b3f0b1d31d0d534a77209927f10b8",
+      "response_sha256": "sha256:4011766577e372cefaca4739ba7ceb14609b59791c25cd5454e40f259d797a55",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1634.873,
+        "predicted_n": 160,
+        "predicted_per_second": 97.25526080619106,
+        "predicted_per_token_ms": 10.282220125786164,
+        "prompt_ms": 1257.806,
+        "prompt_n": 5396,
+        "prompt_per_second": 4290.0097471311155,
+        "prompt_per_token_ms": 0.23309970348406228
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 160,
+        "prompt_tokens": 5396,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5556
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.608999999999469,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0e917ac9b21001c42194240f705effc4a4bd8a6de6c19bfd68509526d5279470",
+      "response_sha256": "sha256:19f5d763ef1515528eb863144de1f9b4f8ffad8bb650db2f42bd8ea975e6de9c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1784.969,
+        "predicted_n": 168,
+        "predicted_per_second": 93.55904780419155,
+        "predicted_per_token_ms": 10.688437125748504,
+        "prompt_ms": 1556.492,
+        "prompt_n": 6561,
+        "prompt_per_second": 4215.248134908499,
+        "prompt_per_token_ms": 0.23723395823807347
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 168,
+        "prompt_tokens": 6561,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6729
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.0,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:1fc9d53a1168fa168a60125847b1213bdb8c0a2def475cb1239239c69da8f114",
+      "response_sha256": "sha256:f4f22aa7981af5762d43160122d1b6e02029fa0b7211f9697b99ce0a7e3a0871",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1803.132,
+        "predicted_n": 165,
+        "predicted_per_second": 90.95285314663596,
+        "predicted_per_token_ms": 10.994707317073171,
+        "prompt_ms": 1912.583,
+        "prompt_n": 7867,
+        "prompt_per_second": 4113.285541071943,
+        "prompt_per_token_ms": 0.24311465615863737
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 7867,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8032
+      },
+      "valid": true
+    },
+    {
+      "action": "derived",
+      "action_index": 4,
+      "elapsed_seconds": 3.438000000000102,
+      "error": {
+        "code": "UNIT_MISMATCH",
+        "fields": [],
+        "hint": "Read the declared SOURCE units of both metrics. A percentage-point operation needs fraction or percent inputs. Use undo to correct a prior stage; never repeat unchanged failing arguments or guess units from magnitude.",
+        "message": "Percentage points require proportions"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c8a7eb5aed9ea63043281fd5520198c68a2a33f7ba14e1d627ffdcc4d5d64c96",
+      "response_sha256": "sha256:7ee7221e266953e1410ae9c45740ffdf0623c9d3a5abe677b5f29a9c9f378c32",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 971.627,
+        "predicted_n": 87,
+        "predicted_per_second": 88.51133202350285,
+        "predicted_per_token_ms": 11.297988372093023,
+        "prompt_ms": 2262.36,
+        "prompt_n": 9134,
+        "prompt_per_second": 4037.3768984600147,
+        "prompt_per_token_ms": 0.24768557039632144
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 9134,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9221
+      },
+      "valid": false
+    },
+    {
+      "action": "abstain",
+      "action_index": 5,
+      "elapsed_seconds": 3.2030000000004293,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:29fd9c16c8dffca7ba82c337c23cf3105b27f6deab177fdccf21998407508869",
+      "response_sha256": "sha256:4265482c43c5195df03085c2c5d04a6da216453b1143cfd9c5f100d3b40068bc",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 757.371,
+        "predicted_n": 68,
+        "predicted_per_second": 88.46391002560172,
+        "predicted_per_token_ms": 11.304044776119403,
+        "prompt_ms": 2273.185,
+        "prompt_n": 9140,
+        "prompt_per_second": 4020.790212851132,
+        "prompt_per_token_ms": 0.2487073304157549
+      },
+      "status": "abstained",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 9140,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9208
+      },
+      "valid": true
+    }
+  ],
+  "reason": "The unit for both metrics is incorrectly declared as 'percentage_point', but percentage-point differences require inputs in fraction or percent units. The current setup does not support the required operation, and the task requires a valid derivation with correct units.",
+  "status": "abstained"
+}

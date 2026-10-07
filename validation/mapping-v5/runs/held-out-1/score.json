@@ -1,0 +1,253 @@
+{
+  "abstention_limit": "Counts explicit abstention with a nonempty reason on a required-abstention case; no independent semantic assessment of the reason.",
+  "accepted_bindings": 0,
+  "action_count": 48,
+  "case_count": 12,
+  "comparison_limit": "Changed product and prompts together; these runs do not isolate a causal improvement.",
+  "complete_mapping_cases": 1,
+  "core_valid_proposals": 2,
+  "cost": {
+    "electricity_and_hardware_cost": null,
+    "paid_api_cost_usd": 0
+  },
+  "count_guards_verified": 2,
+  "execution_sha256": "sha256:8c679d6d987749fc0dd2bb7650238d07872f13b83d4f79846e0de6c5775ee56a",
+  "expected_abstentions": 2,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "inference_seconds": 180.9220000000041185,
+  "invalid_actions": 25,
+  "mappable_cases": 8,
+  "outcomes": {
+    "H01": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "H02": {
+      "complete_mapping": true,
+      "contract": {
+        "display": {
+          "kind": "decimal",
+          "percent_symbol": false,
+          "places": 4
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "tsv",
+            "path": "results/measurements.tsv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "scalar",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "mismatch",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "byte_end": 28,
+        "byte_start": 22,
+        "column": 23,
+        "end": 28,
+        "file": "paper/manuscript.tex",
+        "line": 1,
+        "start": 22,
+        "text": "0.6900"
+      },
+      "reference_matches": [
+        {
+          "contract": true,
+          "location": true
+        }
+      ],
+      "status": "proposed"
+    },
+    "H03": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "H04": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "abstained"
+    },
+    "H05": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "H06": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 3
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "pass",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "context": "The mean test accuracy is 68.3% on Juniper for VariantAmber.",
+        "end": 39,
+        "file": "paper/manuscript.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            183.388,
+            80.484,
+            217.408,
+            92.484
+          ],
+          "block": "sha256:15b97fc877936a4b66ee54e03b1378f64ef9c0f230d4c0e11bf8c94dbfe15371",
+          "offset": 26,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            900,
+            500
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34,
+        "text": "68.3%"
+      },
+      "reference_matches": [
+        {
+          "contract": false,
+          "location": true
+        }
+      ],
+      "status": "proposed"
+    },
+    "H07": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "H08": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "H09": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "H10": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "H11": {
+      "complete_mapping": false,
+      "expected_abstention": true,
+      "expected_decision": "abstain",
+      "status": "abstained"
+    },
+    "H12": {
+      "complete_mapping": false,
+      "expected_abstention": true,
+      "expected_decision": "abstain",
+      "status": "abstained"
+    }
+  },
+  "protocol_id": "paperdelta-mapping-v5",
+  "protocol_sha256": "sha256:1c56a7a1b7bdccfbb662112b6c95413ba36a368b290649efea62323ed119de45",
+  "required_abstentions": 4,
+  "scope": "Authored synthetic held-out; inference results held out from tuning only when designated held-out. Not blind, independent or human evaluation.",
+  "scored_at": "2026-10-07T09:12:25.577354+00:00",
+  "split": "held-out",
+  "statuses": {
+    "abstained": 3,
+    "budget_exhausted": 7,
+    "proposed": 2
+  },
+  "usage": {
+    "completion_tokens": 7140,
+    "prompt_tokens": 362571,
+    "total_tokens": 369711
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "suite": "studio-scale",
+  "results": [
+    {
+      "kind": "candidates",
+      "server_start_ms": 1648.3230000000003,
+      "first_view_ms": 318.6899000000003,
+      "next_page_ms": 81.3116,
+      "search_after_5000_ms": 312.5466999999999,
+      "candidate_count": 5101,
+      "cross_page_acceptance": 3,
+      "language_switch_preserves_selection": true,
+      "browser_errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "metrics",
+      "server_start_ms": 3989.6757,
+      "first_view_ms": 1883.1952999999994,
+      "impact_search_ms": 8.10280000000057,
+      "metrics": 500,
+      "displayed_per_page": 20,
+      "all_metrics_searchable": true,
+      "browser_errors": [],
+      "remote_requests": []
+    }
+  ],
+  "scope": "Local Chrome browser wall time; includes DOM and local HTTP. Single samples, not a population latency guarantee."
+}

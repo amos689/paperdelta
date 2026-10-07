@@ -1,0 +1,30 @@
+{
+  "action": "locations",
+  "action_index": 3,
+  "elapsed_seconds": 4.703000000001339,
+  "error": null,
+  "finish_reason": "stop",
+  "request_sha256": "sha256:7938a900b6c2f6c02fdac73673cec8a18577b80a8e764fcf71c39bf95434d673",
+  "response_sha256": "sha256:ac8343b9bf7cb04c580334c3cbbfe620c185c9d28ba5950a8e7d04c7e28dc663",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2271.938,
+    "predicted_n": 203,
+    "predicted_per_second": 88.91087696935391,
+    "predicted_per_token_ms": 11.24721782178218,
+    "prompt_ms": 2022.443,
+    "prompt_n": 8220,
+    "prompt_per_second": 4064.3914315508523,
+    "prompt_per_token_ms": 0.24603929440389294
+  },
+  "status": "draft",
+  "usage": {
+    "completion_tokens": 203,
+    "prompt_tokens": 8220,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8423
+  },
+  "valid": true
+}

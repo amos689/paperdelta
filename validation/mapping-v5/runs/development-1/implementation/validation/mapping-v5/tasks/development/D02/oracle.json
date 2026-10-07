@@ -1,0 +1,110 @@
+{
+  "case_id": "D02",
+  "expected_decision": "map",
+  "family": "tsv_scalar_stale_display",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:39536b4ffe710f378c354bb9df401a98deab4b49cfac59ca400f92cc250fbd6c",
+      "expected": "0.7141",
+      "location": {
+        "byte_end": 39,
+        "byte_start": 33,
+        "column": 23,
+        "context": "The mean test loss is 0.7000 on Cedar for VariantBlue.",
+        "end": 39,
+        "file": "paper/manuscript.md",
+        "format": "markdown",
+        "line": 3,
+        "locator": {
+          "block": "sha256:59e0453c0287111014d7f4756e1c95a093f3a679abce0cd984a46c071640c2de",
+          "offset": 22,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 33,
+        "text": "0.7000"
+      },
+      "status": "mismatch"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "scalar",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:59e0453c0287111014d7f4756e1c95a093f3a679abce0cd984a46c071640c2de",
+              "exact": null,
+              "prefix": "The mean test loss is ",
+              "suffix": " on Cedar for VariantBlue."
+            },
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": false,
+              "places": 4
+            },
+            "file": "paper/manuscript.md",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "tsv",
+            "path": "results/measurements.tsv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

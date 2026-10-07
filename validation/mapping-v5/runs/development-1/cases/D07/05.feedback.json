@@ -1,0 +1,310 @@
+{
+  "actions_remaining": 11,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:a772da6fa38751c979b8c280b1ac8e242213992b076305115268a867104f2138",
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "metrics already contains mean_test_accuracy; choose another identifier."
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_workbook",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "results_workbook": {
+          "cell_range": "A2:F11",
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "xlsx",
+          "path": "results/workbook.xlsx",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ],
+          "sheet": "development results"
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_accuracy"
+    ],
+    "available_sources": [
+      "results_workbook"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:a772da6fa38751c979b8c280b1ac8e242213992b076305115268a867104f2138",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:a772da6fa38751c979b8c280b1ac8e242213992b076305115268a867104f2138",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.docx": "sha256:0a8b90f34edc1afdce5cbb3482a6d3b8cd4aa7726f098c500d6933d6f0d63be7",
+      "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+      "results/workbook.xlsx": "sha256:2f4e55a63e36857e940e9f4aae181b1562fe0b48689d02c4706a21cb65b58def"
+    },
+    "metrics": {
+      "mean_test_accuracy": {
+        "computed": {
+          "fingerprint": "sha256:e7f092b3d8a2aacf3e0a3dca2b40bdd7ed02bdb7c9c2dd4216dee392f63c01b0",
+          "unit": "fraction",
+          "value": "0.714"
+        },
+        "declared_contract": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_workbook",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        },
+        "declared_identity": {
+          "cell_range": "A2:F11",
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "format": "xlsx",
+          "path": "results/workbook.xlsx",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ],
+          "reduce": "mean",
+          "seed_column": "seed",
+          "selectors": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          },
+          "sha256": "sha256:2f4e55a63e36857e940e9f4aae181b1562fe0b48689d02c4706a21cb65b58def",
+          "sheet": "development results",
+          "source": "results_workbook",
+          "unit": "fraction"
+        },
+        "evidence": [
+          {
+            "count": 3,
+            "field": "score",
+            "format": "xlsx",
+            "inspect": {
+              "cell_range": "A2:F11",
+              "field": "score",
+              "full_report_pointer": "/preview/metrics/mean_test_accuracy/evidence",
+              "path": "results/workbook.xlsx",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              },
+              "sheet": "development results",
+              "source": "results_workbook"
+            },
+            "locations": [
+              {
+                "cell": "F3",
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "row": 3,
+                "sheet": "development results"
+              },
+              {
+                "cell": "F4",
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "row": 4,
+                "sheet": "development results"
+              },
+              {
+                "cell": "F5",
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "row": 5,
+                "sheet": "development results"
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/workbook.xlsx",
+            "records": [
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "value": "0.712"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "value": "0.714"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "value": "0.716"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "sha256": "sha256:2f4e55a63e36857e940e9f4aae181b1562fe0b48689d02c4706a21cb65b58def",
+            "source": "results_workbook",
+            "source_contract": {
+              "cell_range": "A2:F11",
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "xlsx",
+              "path": "results/workbook.xlsx",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ],
+              "sheet": "development results"
+            },
+            "truncated": false,
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        ],
+        "name": "mean_test_accuracy",
+        "notices": [],
+        "verification": "evaluated_under_declared_contract"
+      }
+    },
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Review source units and contributing identities first. Add any required comparison metric/derivation, then select the original location and its exact decimal/percent formatting. Use undo for an earlier wrong declaration.",
+  "status": "budget_exhausted",
+  "undo": {
+    "last_action": "metric",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

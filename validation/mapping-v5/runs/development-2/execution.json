@@ -1,0 +1,2034 @@
+{
+  "completed_at": "2026-10-07T09:04:11.780293+00:00",
+  "outcomes": {
+    "D01": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.7340000000003783,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:62baa25012328a46407539646d58c856b91538ffdbd1074951ff5df09fc97d08",
+          "response_sha256": "sha256:72240ee613644bd80b0c753f84faa36d2bfe230ed9d4764341be0d60c17bec9d",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1607.378,
+            "predicted_n": 150,
+            "predicted_per_second": 92.69754842980308,
+            "predicted_per_token_ms": 10.787771812080537,
+            "prompt_ms": 1512.809,
+            "prompt_n": 6344,
+            "prompt_per_second": 4193.523438847865,
+            "prompt_per_token_ms": 0.23846295712484236
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 150,
+            "prompt_tokens": 6344,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6494
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.9069999999992433,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:410b4123932032fc7acaa77d398654dbb4e75a0f8578cdb305660267bab35e8a",
+          "response_sha256": "sha256:e983117876283323469bf09438f3187535c1fc0aa1a35c75e5721fab800d5b29",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2074.009,
+            "predicted_n": 193,
+            "predicted_per_second": 92.5743330911293,
+            "predicted_per_token_ms": 10.802130208333333,
+            "prompt_ms": 1600.559,
+            "prompt_n": 6708,
+            "prompt_per_second": 4191.035756882439,
+            "prompt_per_token_ms": 0.23860450208706022
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 193,
+            "prompt_tokens": 6708,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6901
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 4.703000000001339,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7938a900b6c2f6c02fdac73673cec8a18577b80a8e764fcf71c39bf95434d673",
+          "response_sha256": "sha256:ac8343b9bf7cb04c580334c3cbbfe620c185c9d28ba5950a8e7d04c7e28dc663",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2271.938,
+            "predicted_n": 203,
+            "predicted_per_second": 88.91087696935391,
+            "predicted_per_token_ms": 11.24721782178218,
+            "prompt_ms": 2022.443,
+            "prompt_n": 8220,
+            "prompt_per_second": 4064.3914315508523,
+            "prompt_per_token_ms": 0.24603929440389294
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 203,
+            "prompt_tokens": 8220,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8423
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 4,
+          "elapsed_seconds": 3.5,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:045460dfdeb0bb3f327632ae42b0cbb4316136b8b11e2bad647445ea91bf7865",
+          "response_sha256": "sha256:4f354eaad585af0f11a05248efaabc48a80e741c6f5ee172ca2ebfd50d44534a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 689.625,
+            "predicted_n": 61,
+            "predicted_per_second": 87.00380641653072,
+            "predicted_per_token_ms": 11.49375,
+            "prompt_ms": 2377.992,
+            "prompt_n": 9478,
+            "prompt_per_second": 3985.7156794471975,
+            "prompt_per_token_ms": 0.2508959696138426
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 61,
+            "prompt_tokens": 9478,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9539
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "fraction",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "mean_test_accuracy_value": {
+              "anchor": {
+                "exact": null,
+                "prefix": "s ",
+                "suffix": "\\"
+              },
+              "display": {
+                "kind": "decimal",
+                "percent_symbol": false,
+                "places": 3
+              },
+              "file": "paper/manuscript.tex",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "results_measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.tex": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+          "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+          "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+        },
+        "proposal_id": "sha256:d8ac46650884ea5026ea82a52694b8e93fa28ee4afead17714cfe77c76410f7d",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:mean_test_accuracy_value": "The original mean test accuracy value is located in the paper/manuscript.tex file at the specified position. The value is presented as a decimal with three places."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The original mean test accuracy value is correctly bound to the metric mean_test_accuracy with the expected decimal value of 0.714. The display settings and location are justified based on the provided evidence.",
+      "status": "proposed"
+    },
+    "D02": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.875,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:50fb987adef9ae29fb4fe68abbb41230950ba92d61cd7f4837730205d30fd415",
+          "response_sha256": "sha256:664574b719186332c17944db729bfb220b7eac1a3e684e7a59ef44d8ba486a09",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1548.861,
+            "predicted_n": 144,
+            "predicted_per_second": 92.32590916809191,
+            "predicted_per_token_ms": 10.831195804195804,
+            "prompt_ms": 1561.039,
+            "prompt_n": 6570,
+            "prompt_per_second": 4208.735335888469,
+            "prompt_per_token_ms": 0.23760106544901066
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 144,
+            "prompt_tokens": 6570,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6714
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.2660000000014406,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "unit"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:9cb4312eb029dcf23fa3d377ab1eae56a155fe1f6425fc4a85c9fccd9984feb0",
+          "response_sha256": "sha256:946110a8ec85cae6a123cf48ab6612ae1a45abe4cf0745813069bf4121448419",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1461.266,
+            "predicted_n": 134,
+            "predicted_per_second": 91.01696747888474,
+            "predicted_per_token_ms": 10.986962406015039,
+            "prompt_ms": 1647.115,
+            "prompt_n": 6906,
+            "prompt_per_second": 4192.785567492251,
+            "prompt_per_token_ms": 0.23850492325514047
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 134,
+            "prompt_tokens": 6906,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7040
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 3.2819999999992433,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "unit"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e6ce0adfeaef149cb1ae91a3a1994b9069f405e1c763ad14248dfda171ab53f1",
+          "response_sha256": "sha256:39cc53e1e1c2be5166027086cb4dc1f9caf641209fa7ad28d13a641428822d03",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1459.871,
+            "predicted_n": 134,
+            "predicted_per_second": 91.10394000565803,
+            "predicted_per_token_ms": 10.976473684210527,
+            "prompt_ms": 1672.901,
+            "prompt_n": 7012,
+            "prompt_per_second": 4191.521195814934,
+            "prompt_per_token_ms": 0.23857686822589846
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 134,
+            "prompt_tokens": 7012,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7146
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 3.2810000000008586,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "unit"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:a1063b2fb8ef8250a12a7b0f30a3e9b139877362f99b4211f983c3e2b4d2a86e",
+          "response_sha256": "sha256:faffa27af55f5e68ae598214a276360530c84937ff6a52542b9ac46c4ad2f789",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1455.395,
+            "predicted_n": 134,
+            "predicted_per_second": 91.38412595893212,
+            "predicted_per_token_ms": 10.94281954887218,
+            "prompt_ms": 1670.747,
+            "prompt_n": 7012,
+            "prompt_per_second": 4196.92508799956,
+            "prompt_per_token_ms": 0.23826968054763265
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 134,
+            "prompt_tokens": 7012,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7146
+          },
+          "valid": false
+        }
+      ],
+      "reason": "绑定测试损失的均值，使用 results_measurements 中的 score 字段，预期种子为 001、002、003，计算均值。",
+      "status": "budget_exhausted"
+    },
+    "D03": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.0,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:10e93fcc9818282b1100495c4087f9240dd07291979f96057bc855bcaa9a9dfd",
+          "response_sha256": "sha256:6357f6b3020e5afa7257f4e84cc8d13ba8e72d6c397f01982e8c4049811f27fe",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1787.239,
+            "predicted_n": 165,
+            "predicted_per_second": 91.76165023256543,
+            "predicted_per_token_ms": 10.897798780487806,
+            "prompt_ms": 1662.853,
+            "prompt_n": 6968,
+            "prompt_per_second": 4190.388446844068,
+            "prompt_per_token_ms": 0.2386413605051665
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 165,
+            "prompt_tokens": 6968,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7133
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.186999999999898,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:20231affbd4c622daa27bd27ceee34e60a3de93d36dcfa20aa6ef79f369ad287",
+          "response_sha256": "sha256:54b961edbe3bc66f8b30bd4905fb8362b077335dc5873327c6fd2c6f61c3120c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2152.876,
+            "predicted_n": 196,
+            "predicted_per_second": 90.57651253486033,
+            "predicted_per_token_ms": 11.040389743589744,
+            "prompt_ms": 1763.676,
+            "prompt_n": 7332,
+            "prompt_per_second": 4157.226157185333,
+            "prompt_per_token_ms": 0.24054500818330604
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 196,
+            "prompt_tokens": 7332,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7528
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 5.188000000000102,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:96b909b2657e5c3be4e208cd98c8e91249845cbeeb45571885f4df8462213402",
+          "response_sha256": "sha256:94ea44a782fea19ff7f316d8aebab69cd3d11160d5fdd291cd4db2c3b603fc8c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2440.725,
+            "predicted_n": 216,
+            "predicted_per_second": 88.08858023742945,
+            "predicted_per_token_ms": 11.352209302325582,
+            "prompt_ms": 2200.977,
+            "prompt_n": 8841,
+            "prompt_per_second": 4016.852515950871,
+            "prompt_per_token_ms": 0.2489511367492365
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 216,
+            "prompt_tokens": 8841,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9057
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 4,
+          "elapsed_seconds": 3.7180000000007567,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:0b021778258072dce9dcf459fbb37dd3024771772f4a483a6a869d5bfdeec5fd",
+          "response_sha256": "sha256:6073bda9ef792d1a999ac12b3c8360239a8bd0bf1d89d842de7ca498e64bb3ac",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 622.701,
+            "predicted_n": 53,
+            "predicted_per_second": 83.50717278437003,
+            "predicted_per_token_ms": 11.975019230769231,
+            "prompt_ms": 2585.365,
+            "prompt_n": 10238,
+            "prompt_per_second": 3959.9824396168437,
+            "prompt_per_token_ms": 0.2525263723383473
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 53,
+            "prompt_tokens": 10238,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10291
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score_pct",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "percent",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "mean_test_accuracy_value": {
+              "anchor": {
+                "exact": null,
+                "prefix": null,
+                "suffix": null,
+                "table": {
+                  "column": 1,
+                  "headers": [
+                    "Experiment & Score (%)"
+                  ],
+                  "percent_symbol": true,
+                  "row_prefix": [
+                    "Cedar / VariantBlue / selected / test"
+                  ]
+                }
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 3
+              },
+              "file": "paper/manuscript.docx",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "results_measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "score_pct": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.docx": "sha256:4e594158931e93525796ab060d4599e3a647410588e1f5319b81068f16442586",
+          "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+          "results/measurements.csv": "sha256:b222f3154bd9cbb72f43eafee2bb86edcd5dd3f23abb511b18153dd86cf1a5c3"
+        },
+        "proposal_id": "sha256:17673aef5b5a101a13dd634dc62b5cac9cf2f1939b75d03adbdbb5292aa70de8",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:mean_test_accuracy_value": "The mean test accuracy value is located in the Word document's table under the Score (%) column, and it is formatted as a percentage with three decimal places."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The original mean test accuracy result has been successfully bound to the correct location in the manuscript.docx file. The binding is justified by the evidence and the declared schema.",
+      "status": "proposed"
+    },
+    "D04": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.031000000000859,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "CSV/TSV/XLSX 的 source 动作必须提供 columns 和 primary_key；JSON 则必须省略这两项。请核对声明格式与类型，保留前导零 ID 并解决重复身份。",
+            "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:aadce37cd897e40ec8361af3867a3b861e241074427dfa3ab6362c07741f0953",
+          "response_sha256": "sha256:8be67847223f82f07cdaff8adfe867241adf8a6c970c1314b1a6e1d8976d710b",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1843.119,
+            "predicted_n": 171,
+            "predicted_per_second": 92.23495607174577,
+            "predicted_per_token_ms": 10.841876470588234,
+            "prompt_ms": 1606.019,
+            "prompt_n": 6727,
+            "prompt_per_second": 4188.6179428761425,
+            "prompt_per_token_ms": 0.23874223279322135
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 171,
+            "prompt_tokens": 6727,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6898
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 2.9069999999992433,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:98a89c0c4418886c03b19a52f85ba8d4c9e90b5fe1da20c43d439aca73136ac1",
+          "response_sha256": "sha256:672a3271bdd7831ff49748c9ab124401204763e4c15cd8e34f7ad670f6e7c9e4",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1003.434,
+            "predicted_n": 93,
+            "predicted_per_second": 91.68515318396626,
+            "predicted_per_token_ms": 10.906891304347825,
+            "prompt_ms": 1673.798,
+            "prompt_n": 7027,
+            "prompt_per_second": 4198.236585298823,
+            "prompt_per_token_ms": 0.2381952469047958
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 93,
+            "prompt_tokens": 7027,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7120
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.093000000000757,
+          "error": {
+            "code": "BUILDER_SELECTION",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "所选项不可用：['dataset', 'model', 'checkpoint', 'split']。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:de9fcf342e70c729ffae08db75f11642d6ae157c1e9fa1648ae56994e6eaa616",
+          "response_sha256": "sha256:cf081d13bec4a311cdabb2f895d251ce58607583f1d24195b3dc1409626d8e03",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2261.354,
+            "predicted_n": 208,
+            "predicted_per_second": 91.53807851402301,
+            "predicted_per_token_ms": 10.924415458937197,
+            "prompt_ms": 1661.409,
+            "prompt_n": 6974,
+            "prompt_per_second": 4197.641881078049,
+            "prompt_per_token_ms": 0.23822899340407228
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 208,
+            "prompt_tokens": 6974,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7182
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 4,
+          "elapsed_seconds": 3.734999999998763,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "columns",
+                "seeds"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\ncolumns.seeds：值必须为 'string', 'integer' or 'decimal'"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:03bc7a6e590fd31b4f7270b2be70a5619c29f097e3d269559986c019f1141d43",
+          "response_sha256": "sha256:d366b689fa207ea6660f05fe25b2d306d96e40a6c94231ddc3ee1a6a8021c675",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1847.98,
+            "predicted_n": 169,
+            "predicted_per_second": 90.91007478435915,
+            "predicted_per_token_ms": 10.999880952380952,
+            "prompt_ms": 1724.208,
+            "prompt_n": 7178,
+            "prompt_per_second": 4163.070812802168,
+            "prompt_per_token_ms": 0.24020730008358876
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 169,
+            "prompt_tokens": 7178,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7347
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明 results/export.json 作为来源，其字段包括 dataset、model、checkpoint、split、score.mean 和 seeds。主键为 dataset、model、checkpoint、split 和 seed，以确保唯一性。",
+      "status": "budget_exhausted"
+    },
+    "D05": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.625,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "name"
+              ]
+            ],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/measurements.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e2ecb567401ef5e323656ccacde243a11219e697bc4691756e7fd632dc70fe99",
+          "response_sha256": "sha256:4629bec4e2109fd00724f1bcc427dd8dde3f656200d3aaaf48803a53b155bf52",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1635.149,
+            "predicted_n": 152,
+            "predicted_per_second": 92.34632440224102,
+            "predicted_per_token_ms": 10.82880132450331,
+            "prompt_ms": 1554.971,
+            "prompt_n": 6533,
+            "prompt_per_second": 4201.364527055489,
+            "prompt_per_token_ms": 0.23801790907699372
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 152,
+            "prompt_tokens": 6533,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6685
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.625,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5623016f394f97888cd5d4148f98135277d64f3b9e76de1440434359d44b20e9",
+          "response_sha256": "sha256:211ab55ed64ceaf1b42606e22cc1fee853643d5a38419b2f74b52fa6ffc0bcfa",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1753.23,
+            "predicted_n": 162,
+            "predicted_per_second": 91.83050712114212,
+            "predicted_per_token_ms": 10.889627329192546,
+            "prompt_ms": 1637.028,
+            "prompt_n": 6857,
+            "prompt_per_second": 4188.688281446622,
+            "prompt_per_token_ms": 0.23873822371299402
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 162,
+            "prompt_tokens": 6857,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7019
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 3.92200000000048,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:9175bfd84b0bf11532425f4636fa644610e91c6def06eeb3fb01d54524977ecc",
+          "response_sha256": "sha256:9323a57ab9e90fe9bb3bd84fdfdcd67701fc73e21a9f4bb16df93a17f0a26011",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2004.467,
+            "predicted_n": 185,
+            "predicted_per_second": 91.79497592127981,
+            "predicted_per_token_ms": 10.893842391304348,
+            "prompt_ms": 1656.911,
+            "prompt_n": 6913,
+            "prompt_per_second": 4172.221682395735,
+            "prompt_per_token_ms": 0.23968045710979316
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 185,
+            "prompt_tokens": 6913,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7098
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.359999999998763,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:12d84b3d8806eecff22c51652420aa82a2b579a5c36c6ce3d82bf1dcc47efe79",
+          "response_sha256": "sha256:3a68bf3955607618d94f3cd6c5fb8453c339c81069df9bb851dba7ae98f62f3a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2020.521,
+            "predicted_n": 181,
+            "predicted_per_second": 89.08593377648637,
+            "predicted_per_token_ms": 11.225116666666667,
+            "prompt_ms": 2066.661,
+            "prompt_n": 8390,
+            "prompt_per_second": 4059.6885507589295,
+            "prompt_per_token_ms": 0.2463243146603099
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 181,
+            "prompt_tokens": 8390,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8571
+          },
+          "valid": true
+        },
+        {
+          "action": "derived",
+          "action_index": 5,
+          "elapsed_seconds": 3.765000000001237,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e0b504c1e45db058a008d6ca1e213d283c15e9f66fd108d57ef45a019b01d6c1",
+          "response_sha256": "sha256:3f4081da0b857d93840596ca252f5dbdf688c99a4df9dfa0d26e4daf2775561c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1044.292,
+            "predicted_n": 91,
+            "predicted_per_second": 86.1827917862054,
+            "predicted_per_token_ms": 11.603244444444444,
+            "prompt_ms": 2470.16,
+            "prompt_n": 9797,
+            "prompt_per_second": 3966.1398451922146,
+            "prompt_per_token_ms": 0.2521343268347453
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 91,
+            "prompt_tokens": 9797,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9888
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 6,
+          "elapsed_seconds": 3.8439999999991414,
+          "error": {
+            "code": "MAPPING_ORDER",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5f5c54283c58c0b061395adfac14678a27c50b38c18093a7734b1cb6d3599162",
+          "response_sha256": "sha256:dc99e3d35df28bdffd806a0724e18c71de035dc0bf4a809d8ca1aff516d4e6c2",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 686.478,
+            "predicted_n": 58,
+            "predicted_per_second": 83.0325225280344,
+            "predicted_per_token_ms": 12.043473684210525,
+            "prompt_ms": 2975.821,
+            "prompt_n": 11432,
+            "prompt_per_second": 3841.6289151800465,
+            "prompt_per_token_ms": 0.2603062456263121
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 58,
+            "prompt_tokens": 11432,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11490
+          },
+          "valid": false
+        },
+        {
+          "action": "finish",
+          "action_index": 7,
+          "elapsed_seconds": 4.390999999999622,
+          "error": {
+            "code": "MAPPING_ORDER",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:fb765782eb8216c9016ae1f3ee18aef50934e67e1761f7f1ed297dd4948c7d74",
+          "response_sha256": "sha256:a22a04f3f6bf1fca9e2aeb39ba6c51b41711efe3228c3893d0185977f06ca27a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 688.702,
+            "predicted_n": 58,
+            "predicted_per_second": 82.76438866156916,
+            "predicted_per_token_ms": 12.082491228070175,
+            "prompt_ms": 2974.382,
+            "prompt_n": 11481,
+            "prompt_per_second": 3859.9614978842665,
+            "prompt_per_token_ms": 0.2590699416427141
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 58,
+            "prompt_tokens": 11481,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11539
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The test accuracy gain in percentage points has been successfully mapped to the derived metric 'test_accuracy_gain' with a value of 6.200, matching the original paper's claim.",
+      "status": "budget_exhausted"
+    },
+    "D06": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.140000000001237,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:61b138df9a7d61004ccecb690c53dfc2486f6df219f861062c443d79a8c7e915",
+          "response_sha256": "sha256:d4913a0a617f2fd7769b9ad2bb99a6e323bb447f49c570175930014419600c42",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1664.684,
+            "predicted_n": 154,
+            "predicted_per_second": 91.9093353453268,
+            "predicted_per_token_ms": 10.880287581699346,
+            "prompt_ms": 1634.573,
+            "prompt_n": 6840,
+            "prompt_per_second": 4184.57909190963,
+            "prompt_per_token_ms": 0.23897266081871346
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 154,
+            "prompt_tokens": 6840,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6994
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.7659999999996217,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "指标选择了未声明的列"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:4ce22bc685d84b8646aeabc97e0b167741a3f6d992974775e18f810432bc6689",
+          "response_sha256": "sha256:27d4f7441cafe031a02da387ccf878061f558a5f71f583a250b8f236272fa87f",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1845.407,
+            "predicted_n": 169,
+            "predicted_per_second": 91.03682819020412,
+            "predicted_per_token_ms": 10.984565476190475,
+            "prompt_ms": 1723.392,
+            "prompt_n": 7179,
+            "prompt_per_second": 4165.622214795009,
+            "prompt_per_token_ms": 0.24006017551190975
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 169,
+            "prompt_tokens": 7179,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7348
+          },
+          "valid": false
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 4.718999999999141,
+          "error": {
+            "code": "MAPPING_ORDER",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "请选择 allowed_actions 中的动作，只引用已声明的来源和指标。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:37148321e5d1b061ae6ce47095354473b68d6f826b1b706aa98d29084d761199",
+          "response_sha256": "sha256:d9e888f2c7be439cf2a3e4e390cbb6c768c5e7d5690e1c214cb29199ef2ae52e",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2827.293,
+            "predicted_n": 258,
+            "predicted_per_second": 90.89966975477957,
+            "predicted_per_token_ms": 11.001140077821011,
+            "prompt_ms": 1743.776,
+            "prompt_n": 7271,
+            "prompt_per_second": 4169.68693226653,
+            "prompt_per_token_ms": 0.23982615871269428
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 258,
+            "prompt_tokens": 7271,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7529
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 3.6409999999996217,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "指标选择了未声明的列"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:9bcd6f6fbb5660e71984a92ed4cf3c019fb653c295c79e313118a0be485f21ec",
+          "response_sha256": "sha256:dd54826ae58c577c029843c0b2f2ea75f9c5f6537ef7fea26a8e442df65b8082",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1689.223,
+            "predicted_n": 153,
+            "predicted_per_second": 89.98219891630649,
+            "predicted_per_token_ms": 11.113309210526316,
+            "prompt_ms": 1774.123,
+            "prompt_n": 7369,
+            "prompt_per_second": 4153.60152593704,
+            "prompt_per_token_ms": 0.24075491925634415
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 153,
+            "prompt_tokens": 7369,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7522
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明测试准确率的均值指标，使用 results/measurements.csv 中 VariantBlue 模型的 score 字段，单位为百分比，预期种子为 001、002、003。",
+      "status": "budget_exhausted"
+    },
+    "D07": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.54700000000048,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:bd6c635ba22076d96f43e74169d3179cb5d0421062188fdde2f61bd698c7be3a",
+          "response_sha256": "sha256:e7e9f5ca8927cad5d2203e34ca2b5387bb4ce0d7f597313e4a8f559c43ffa4fe",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1810.262,
+            "predicted_n": 162,
+            "predicted_per_second": 88.93740243125028,
+            "predicted_per_token_ms": 11.243863354037266,
+            "prompt_ms": 2099.792,
+            "prompt_n": 8510,
+            "prompt_per_second": 4052.782370825301,
+            "prompt_per_token_ms": 0.24674406580493535
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 162,
+            "prompt_tokens": 8510,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8672
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.483999999998559,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:d22a60db2d1791cf72464107a7eb89864e288ce42fab12e957a3585ff2306211",
+          "response_sha256": "sha256:57759caa4e5b279bae4c6296061cc47105ad76139e9cd818155c6b05bb1e0f8c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2023.872,
+            "predicted_n": 179,
+            "predicted_per_second": 87.95022610125541,
+            "predicted_per_token_ms": 11.370067415730338,
+            "prompt_ms": 2209.411,
+            "prompt_n": 8857,
+            "prompt_per_second": 4008.760705907592,
+            "prompt_per_token_ms": 0.24945365247826579
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 179,
+            "prompt_tokens": 8857,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9036
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 5.625,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:1e35e57c27032167a4d5510a6fc7795981bee78bf2fb7e3f9ebf9eaa763ab38e",
+          "response_sha256": "sha256:2d6159f76a0ba6cc6309c51c0a59aaadf9412573dee84d3ff0ad40a509e4c102",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2511.853,
+            "predicted_n": 214,
+            "predicted_per_second": 84.79795593133834,
+            "predicted_per_token_ms": 11.792737089201879,
+            "prompt_ms": 2632.286,
+            "prompt_n": 10339,
+            "prompt_per_second": 3927.7646881835785,
+            "prompt_per_token_ms": 0.2545977367250218
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 214,
+            "prompt_tokens": 10339,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10553
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 4,
+          "elapsed_seconds": 4.188000000000102,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:242da4968fbb0bedb44fa5776a6d3450d057dacc14caf81678039911b38f7ed3",
+          "response_sha256": "sha256:b1c6bb000d061396a3a2627d3b0f1c185ff5f2ca8613c37aa39649b8bbf9c0f1",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 720.906,
+            "predicted_n": 61,
+            "predicted_per_second": 83.228604006625,
+            "predicted_per_token_ms": 12.015099999999999,
+            "prompt_ms": 3056.13,
+            "prompt_n": 11716,
+            "prompt_per_second": 3833.60655469499,
+            "prompt_per_token_ms": 0.2608509730283373
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 61,
+            "prompt_tokens": 11716,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11777
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "measurements",
+              "unit": "fraction",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "mean_test_accuracy_value": {
+              "anchor": {
+                "block": "sha256:1742d2c0bd756eb4b1cf1ea991367e93530e76c279ce21dcff170d0b1ef53912",
+                "exact": null,
+                "prefix": "The mean test accuracy is ",
+                "suffix": " on Cedar for VariantBlue."
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/manuscript.docx",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.docx": "sha256:0a8b90f34edc1afdce5cbb3482a6d3b8cd4aa7726f098c500d6933d6f0d63be7",
+          "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+          "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+        },
+        "proposal_id": "sha256:96e453aa99e3e2374fdb3ecc9a5c68ef38db60127561486e63469494d3761fe7",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:mean_test_accuracy_value": "The original text in the manuscript mentions the mean test accuracy as 71.4% on Cedar for VariantBlue, which corresponds to the computed mean of the scores from the measurements source."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The original mean test accuracy value from the manuscript has been successfully bound to the computed mean of the scores from the measurements source. The display format, unit, and identity are justified based on the provided evidence.",
+      "status": "proposed"
+    },
+    "D08": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.9530000000013388,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7e52560e660993542a0f433c0d3d54886990e9d080a165be6a209234c6d51d28",
+          "response_sha256": "sha256:ed387d5a25799af6ca43773660fa4a664aff5f57acf4f111df577e77f8882fef",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1648.735,
+            "predicted_n": 154,
+            "predicted_per_second": 92.79841818121166,
+            "predicted_per_token_ms": 10.776045751633987,
+            "prompt_ms": 1541.484,
+            "prompt_n": 6491,
+            "prompt_per_second": 4210.877310435918,
+            "prompt_per_token_ms": 0.23748020335849637
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 154,
+            "prompt_tokens": 6491,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6645
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.2189999999991414,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "指标选择了未声明的列"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:8cfefe1549c1a5e14e94cb299d00a410543382b997bff5c0ae12cb077276de86",
+          "response_sha256": "sha256:3a4f2c09d45d71a690210af5f63e5b3088e0673d23e0d3ec34fe112854c7f8ec",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1428.602,
+            "predicted_n": 132,
+            "predicted_per_second": 91.69803766199402,
+            "predicted_per_token_ms": 10.905358778625954,
+            "prompt_ms": 1636.124,
+            "prompt_n": 6841,
+            "prompt_per_second": 4181.22342805313,
+            "prompt_per_token_ms": 0.23916444964186523
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 132,
+            "prompt_tokens": 6841,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6973
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 3,
+          "elapsed_seconds": 3.5940000000009604,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "该名称已存在于 preview.additions，请引用它而非重复添加。需要修改成功声明时，先撤回后续步骤和该声明，再添加修正后的版本。",
+            "message": "sources 中已存在 results_measurements，请选择其他标识符。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:42c56d648b3beb1ce771694b883a0430277d3ed1066b49a0abe70513be2b988f",
+          "response_sha256": "sha256:a01f532cd843ed3affce52a0aef54365ca3139763f2f508cf5a51abfd69859c7",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1774.257,
+            "predicted_n": 163,
+            "predicted_per_second": 91.30582548075053,
+            "predicted_per_token_ms": 10.952203703703704,
+            "prompt_ms": 1645.877,
+            "prompt_n": 6896,
+            "prompt_per_second": 4189.863519570418,
+            "prompt_per_token_ms": 0.23867125870069605
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 163,
+            "prompt_tokens": 6896,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7059
+          },
+          "valid": false
+        },
+        {
+          "action": "abstain",
+          "action_index": 4,
+          "elapsed_seconds": 2.32799999999952,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e6714a8d7796f32d0dcb02ad7e8722ae283eb9a8acb489b3a901c64e54ead881",
+          "response_sha256": "sha256:d32445c64c3d794c35b41abdae896ca0ef48ff62901f953081006346191b9be4",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 546.382,
+            "predicted_n": 50,
+            "predicted_per_second": 89.68084600151543,
+            "predicted_per_token_ms": 11.150653061224489,
+            "prompt_ms": 1654.82,
+            "prompt_n": 6941,
+            "prompt_per_second": 4194.413893958255,
+            "prompt_per_token_ms": 0.2384123325169284
+          },
+          "status": "abstained",
+          "usage": {
+            "completion_tokens": 50,
+            "prompt_tokens": 6941,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6991
+          },
+          "valid": true
+        }
+      ],
+      "reason": "无法继续绑定，因为已声明的源 'results_measurements' 导致冲突。需要撤回该声明才能继续。",
+      "status": "abstained"
+    },
+    "D09": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.67200000000048,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7bf6763ab716d6314b9850a24cdfeae8ed5ae132134ed5898ed3df0429320b3e",
+          "response_sha256": "sha256:43fbce5cc904864b922dd30c74c124817f7c1d4f5b4059430bf9ecd7d99c0b86",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1632.533,
+            "predicted_n": 152,
+            "predicted_per_second": 92.49430179971861,
+            "predicted_per_token_ms": 10.811476821192052,
+            "prompt_ms": 1541.849,
+            "prompt_n": 6518,
+            "prompt_per_second": 4227.391917107318,
+            "prompt_per_token_ms": 0.2365524700828475
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 152,
+            "prompt_tokens": 6518,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6670
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.875,
+          "error": {
+            "code": "SEED_SET",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Expected seeds ['001', '002', '003'], got ['001', '002']"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7273ebeb55b4c35659a573ba8d08937af5d67465575cce0207064cf2c6ce5d88",
+          "response_sha256": "sha256:937d67430aa148decf280a442f61527397acd7c0fcc902d4e9214e952dd3b7e9",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2064.325,
+            "predicted_n": 191,
+            "predicted_per_second": 92.03977086941254,
+            "predicted_per_token_ms": 10.86486842105263,
+            "prompt_ms": 1639.396,
+            "prompt_n": 6876,
+            "prompt_per_second": 4194.227630175992,
+            "prompt_per_token_ms": 0.23842292030250145
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 191,
+            "prompt_tokens": 6876,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7067
+          },
+          "valid": false
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 4.640999999999622,
+          "error": {
+            "code": "MAPPING_ORDER",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:b750b71e8adad8e3bff50dc5692072de44f8292e4d255d5c71c3330cc03c9f13",
+          "response_sha256": "sha256:793431697172c8430c7321c72904ebe784f46f219e2caded04cd363715a17635",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2813.293,
+            "predicted_n": 258,
+            "predicted_per_second": 91.35202056806737,
+            "predicted_per_token_ms": 10.946665369649805,
+            "prompt_ms": 1681.332,
+            "prompt_n": 7013,
+            "prompt_per_second": 4171.097677317745,
+            "prompt_per_token_ms": 0.2397450449165835
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 258,
+            "prompt_tokens": 7013,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7271
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.2960000000002765,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Metric selects an undeclared column"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:068e15ffb015908d27153bf54ed80c68463755cd52ebcbe3ae6d42a05e9c3b20",
+          "response_sha256": "sha256:ed16eea1994d91a8af3a1dfee029a28f8b45ba24635cc46715c95d8033714d44",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2419.411,
+            "predicted_n": 221,
+            "predicted_per_second": 90.93122251655466,
+            "predicted_per_token_ms": 10.997322727272728,
+            "prompt_ms": 1695.055,
+            "prompt_n": 7064,
+            "prompt_per_second": 4167.416396518107,
+            "prompt_per_token_ms": 0.23995682332955834
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 221,
+            "prompt_tokens": 7064,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7285
+          },
+          "valid": false
+        }
+      ],
+      "reason": "Declare the metric 'mean_test_accuracy' by referencing the existing source 'results_csv'. The metric is derived from the 'score' field of the CSV file, where the dataset is Cedar, the model is VariantBlue, the checkpoint is selected, and the split is test. The unit of the score is a fraction, and the expected count is 3 with seeds 001, 002, and 003.",
+      "status": "budget_exhausted"
+    },
+    "D10": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.8590000000003783,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:9f9765a080837a9d9d57375a9622e1bf4f3b38013b4a0dbd2d3ab5c7d0aa2625",
+          "response_sha256": "sha256:704bd291321d52eb37631b69c7ec1015692aa5a6baa22aaf6173d52f4fd7ca17",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1679.484,
+            "predicted_n": 155,
+            "predicted_per_second": 91.6948300787623,
+            "predicted_per_token_ms": 10.90574025974026,
+            "prompt_ms": 1633.834,
+            "prompt_n": 6836,
+            "prompt_per_second": 4184.023591135941,
+            "prompt_per_token_ms": 0.23900438853130487
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 155,
+            "prompt_tokens": 6836,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6991
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.54700000000048,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "指标选择了未声明的列"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:0422ec35cde95b875e11f2f7383e3d7e2696d1bf1079d7bb7d78240836bc7207",
+          "response_sha256": "sha256:8e11e74f4e7cd4652d738be016b5ede94789346c5a1100dd5208a5f14f4245d1",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1616.325,
+            "predicted_n": 147,
+            "predicted_per_second": 90.32836836651045,
+            "predicted_per_token_ms": 11.070719178082193,
+            "prompt_ms": 1726.279,
+            "prompt_n": 7180,
+            "prompt_per_second": 4159.234978818604,
+            "prompt_per_token_ms": 0.24042883008356547
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 147,
+            "prompt_tokens": 7180,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7327
+          },
+          "valid": false
+        },
+        {
+          "action": "abstain",
+          "action_index": 3,
+          "elapsed_seconds": 2.375,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:20977488154ad646b0ea6d737cf8924b4dd756243460d31f807f32b610b5557b",
+          "response_sha256": "sha256:20e37baed5cb32f2fd7a159d511a4a566729e3ae3ab85d6efba138cb7b399382",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 477.596,
+            "predicted_n": 43,
+            "predicted_per_second": 87.94043501201853,
+            "predicted_per_token_ms": 11.371333333333334,
+            "prompt_ms": 1743.006,
+            "prompt_n": 7249,
+            "prompt_per_second": 4158.907083509753,
+            "prompt_per_token_ms": 0.24044778590150367
+          },
+          "status": "abstained",
+          "usage": {
+            "completion_tokens": 43,
+            "prompt_tokens": 7249,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7292
+          },
+          "valid": true
+        }
+      ],
+      "reason": "指标选择了未声明的列，无法继续绑定。需要确认字段和单位是否符合要求。",
+      "status": "abstained"
+    },
+    "D11": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.686999999999898,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:2806c22324aeee031e930a1d607177a74d0a4bb3c6d65cdf5359c7c42d100c94",
+          "response_sha256": "sha256:252f5bafccd7c9140a72c44f7288e584caace39ad759a91b30010ed359fe06fb",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1597.425,
+            "predicted_n": 149,
+            "predicted_per_second": 92.64910715683054,
+            "predicted_per_token_ms": 10.793412162162161,
+            "prompt_ms": 1546.988,
+            "prompt_n": 6527,
+            "prompt_per_second": 4219.166535228456,
+            "prompt_per_token_ms": 0.23701363566722844
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 6527,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6676
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.6560000000008586,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:d603ef6d6e1905596e47902b358fc7e6a611805b70b166f842c8dfc91e1fc4ad",
+          "response_sha256": "sha256:c541c0fff524fce9a31fdc44abea60935a4dedd062c71680bdae3f6495320510",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1762.78,
+            "predicted_n": 162,
+            "predicted_per_second": 91.333008089495,
+            "predicted_per_token_ms": 10.948944099378881,
+            "prompt_ms": 1647.311,
+            "prompt_n": 6908,
+            "prompt_per_second": 4193.500802216461,
+            "prompt_per_token_ms": 0.23846424435437172
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 162,
+            "prompt_tokens": 6908,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7070
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 4.843999999999141,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:68031a480cc1130bf72d9f16b9ab1661fdec197bf7ea868404cd625fc382bd53",
+          "response_sha256": "sha256:2f1644c0251512b5618a96bc4f6b8cc33c3c9621d8ddc54e8f064f78ec22281a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2362.719,
+            "predicted_n": 211,
+            "predicted_per_second": 88.88064979373341,
+            "predicted_per_token_ms": 11.251042857142858,
+            "prompt_ms": 2052.642,
+            "prompt_n": 8338,
+            "prompt_per_second": 4062.0819412250166,
+            "prompt_per_token_ms": 0.2461791796593907
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 211,
+            "prompt_tokens": 8338,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8549
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 4,
+          "elapsed_seconds": 3.82799999999952,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5b33ae74db2546e84160c40f943e76073812a9e970349aa460f851d1a14fc9ce",
+          "response_sha256": "sha256:d25f1995799631af80ba5323ff3dbe9c2f78b55450684b4b3f5523a57d465acf",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 774.877,
+            "predicted_n": 66,
+            "predicted_per_second": 83.88428098911182,
+            "predicted_per_token_ms": 11.921184615384615,
+            "prompt_ms": 2652.093,
+            "prompt_n": 10430,
+            "prompt_per_second": 3932.7429317146875,
+            "prompt_per_token_ms": 0.25427545541706614
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 66,
+            "prompt_tokens": 10430,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10496
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "percent",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "mean_test_accuracy_value": {
+              "anchor": {
+                "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+                "exact": null,
+                "prefix": "The mean test accuracy is ",
+                "suffix": " on Cedar for VariantBlue."
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/manuscript.md",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "results_measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.md": "sha256:c39b3d23030d88348060b61695e66150f2bc9b4c5a5ce4fb01cd93d01f991358",
+          "paperdelta.yaml": "sha256:980d549d11b6064f325def62925d5358cdbb66cbfbc0b7ddffa2dbdd6a1c652e",
+          "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+        },
+        "proposal_id": "sha256:3b001c0cfdebb8ade70a3239071f10b4f91058d0f2e61d3c73dda4ccdf0c4245",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:mean_test_accuracy_value": "The mean test accuracy value is explicitly stated in the paper as 71.4% and corresponds to the computed mean of the scores for the specified dataset, model, checkpoint, and split."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The mean test accuracy value is correctly bound to the specified dataset, model, checkpoint, and split, with the appropriate display format and unit. The numeric mismatch is due to a stale manuscript value, but the original location is justified.",
+      "status": "proposed"
+    },
+    "D12": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.125,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:8fd2a2ef56df5202032f72ae826d580f27a4f91ae18e66131dd5a4f0d2b0fd17",
+          "response_sha256": "sha256:fcb052035a1e223919a0199770a47bf00a6e641e6d5a92d7968d95d1a813e33c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1804.313,
+            "predicted_n": 168,
+            "predicted_per_second": 92.55600330984701,
+            "predicted_per_token_ms": 10.804269461077846,
+            "prompt_ms": 1540.898,
+            "prompt_n": 6482,
+            "prompt_per_second": 4206.637947482573,
+            "prompt_per_token_ms": 0.23771953100894785
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 168,
+            "prompt_tokens": 6482,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6650
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.75,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:a1810664b2a0ae9cc5c4e4985ecd67fad8492355eea42e2dafc916bfa5fef105",
+          "response_sha256": "sha256:891bf8b6def76101a371ee010a82220a16c8d2472a91637edc27dceece47cdb0",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1964.05,
+            "predicted_n": 181,
+            "predicted_per_second": 91.647361319722,
+            "predicted_per_token_ms": 10.911388888888888,
+            "prompt_ms": 1637.798,
+            "prompt_n": 6853,
+            "prompt_per_second": 4184.276693462808,
+            "prompt_per_token_ms": 0.2389899314168977
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 181,
+            "prompt_tokens": 6853,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7034
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 3.765000000001237,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:8cbdd64ee22274b1f6a406005efd0326e4133b80d5febc5b44863611fc72d78f",
+          "response_sha256": "sha256:2c8cea5336c0cc26c68cece8ecf19fe9a7cd0b992d0698ab4aa0ac0e74d80449",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1962.127,
+            "predicted_n": 181,
+            "predicted_per_second": 91.73718113047728,
+            "predicted_per_token_ms": 10.900705555555556,
+            "prompt_ms": 1649.406,
+            "prompt_n": 6943,
+            "prompt_per_second": 4209.394169779909,
+            "prompt_per_token_ms": 0.23756387728647557
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 181,
+            "prompt_tokens": 6943,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7124
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 3.7819999999992433,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:55edbdce369092cd6408f477fecc207398c2a45344d59e3a51341ee287e82b06",
+          "response_sha256": "sha256:bd773a1d2c77238758a6c13503d9654601389ef613d98271b5f75affdff8ca9e",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1958.221,
+            "predicted_n": 181,
+            "predicted_per_second": 91.92016631422092,
+            "predicted_per_token_ms": 10.879005555555555,
+            "prompt_ms": 1654.01,
+            "prompt_n": 6943,
+            "prompt_per_second": 4197.677160355741,
+            "prompt_per_token_ms": 0.23822699121417254
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 181,
+            "prompt_tokens": 6943,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7124
+          },
+          "valid": false
+        }
+      ],
+      "reason": "绑定论文中声明的显著性检验 p 值位置，使用 measurements 源中的 score 字段，单位为 fraction，筛选条件为 dataset=Cedar, model=VariantBlue, checkpoint=selected, split=test，预期种子为 001、002、003。",
+      "status": "budget_exhausted"
+    }
+  }
+}

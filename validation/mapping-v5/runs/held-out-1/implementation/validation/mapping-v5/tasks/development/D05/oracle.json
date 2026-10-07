@@ -1,0 +1,136 @@
+{
+  "case_id": "D05",
+  "expected_decision": "map",
+  "family": "percentage_point_difference",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:ae5f0213ddfc66dea4e6645eef41727abf2ee0b7d56a3ae4f581365b6b7f20ee",
+      "expected": "6.2",
+      "location": {
+        "byte_end": 61,
+        "byte_start": 58,
+        "column": 48,
+        "context": "The test accuracy gain in percentage points is 6.2 on Cedar for VariantBlue.",
+        "end": 61,
+        "file": "paper/manuscript.qmd",
+        "format": "quarto",
+        "line": 3,
+        "locator": {
+          "block": "sha256:013526447f9dd0bc97eff971370a7673002fa612f08f28212e6b28908fa9217a",
+          "offset": 47,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 58,
+        "text": "6.2"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "contrast": {
+            "args": [
+              "target",
+              "control"
+            ],
+            "op": "percentage_point_difference"
+          },
+          "control": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "Control",
+              "split": "test"
+            }
+          },
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:013526447f9dd0bc97eff971370a7673002fa612f08f28212e6b28908fa9217a",
+              "exact": null,
+              "prefix": "The test accuracy gain in percentage points is ",
+              "suffix": " on Cedar for VariantBlue."
+            },
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": false,
+              "places": 1
+            },
+            "file": "paper/manuscript.qmd",
+            "metric": "contrast"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

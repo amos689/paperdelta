@@ -1,0 +1,111 @@
+{
+  "case_id": "D07",
+  "expected_decision": "map",
+  "family": "excel_string_identity",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:ab19956f9e9773376f5d09d34822cefe26d749d4ac164d8f6d8ee81dd4f2b66d",
+      "expected": "71.4%",
+      "location": {
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 39,
+        "file": "paper/manuscript.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:1742d2c0bd756eb4b1cf1ea991367e93530e76c279ce21dcff170d0b1ef53912",
+          "offset": 26,
+          "paragraph": 2,
+          "part": "word/document.xml",
+          "section": [
+            "Results"
+          ],
+          "style": ""
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 34,
+        "text": "71.4%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:1742d2c0bd756eb4b1cf1ea991367e93530e76c279ce21dcff170d0b1ef53912",
+              "exact": null,
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Cedar for VariantBlue."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.docx",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "cell_range": "A2:F11",
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "xlsx",
+            "path": "results/workbook.xlsx",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ],
+            "sheet": "development results"
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

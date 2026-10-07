@@ -1,0 +1,2167 @@
+{
+  "completed_at": "2026-10-07T08:46:08.789934+00:00",
+  "outcomes": {
+    "D01": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.719000000000051,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e88a2859194242df9469528405a2201740cc0ae0f8b312276a46ffb8892a1662",
+          "response_sha256": "sha256:f11e3c97e17374bd964dce974770bcd4e502537cdaedb32d8f6382ab6a5aa11b",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1764.279,
+            "predicted_n": 167,
+            "predicted_per_second": 94.08942689903354,
+            "predicted_per_token_ms": 10.628186746987952,
+            "prompt_ms": 1322.447,
+            "prompt_n": 5602,
+            "prompt_per_second": 4236.086587969122,
+            "prompt_per_token_ms": 0.23606694037843626
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 167,
+            "prompt_tokens": 5602,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5769
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.296999999999571,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+            "message": "An aggregation requires an explicitly expected record count."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:798371024bd77011bbceae1fe002ead9cc405f7c1094aabdc52d9694d4bb0351",
+          "response_sha256": "sha256:9dc0d563b55cada96374b88626e696fcff5444f99bef427fd1db8c551596f0e9",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2482.094,
+            "predicted_n": 227,
+            "predicted_per_second": 91.05215193300496,
+            "predicted_per_token_ms": 10.982716814159293,
+            "prompt_ms": 1622.27,
+            "prompt_n": 6775,
+            "prompt_per_second": 4176.246863962227,
+            "prompt_per_token_ms": 0.23944944649446495
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 227,
+            "prompt_tokens": 6775,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7002
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.842999999999847,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:4bc2bc28fa4796d2e42948f5258760f0223a46e8e68d77a719a18d5ce8f43143",
+          "response_sha256": "sha256:a98b2589f33fbbb30b2d7e932aff4804355d674aad8864fa4bc4d74ea8750c1d",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2914.977,
+            "predicted_n": 265,
+            "predicted_per_second": 90.56675232771991,
+            "predicted_per_token_ms": 11.041579545454544,
+            "prompt_ms": 1657.626,
+            "prompt_n": 6910,
+            "prompt_per_second": 4168.612220126856,
+            "prompt_per_token_ms": 0.23988798842257597
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 265,
+            "prompt_tokens": 6910,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7175
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 4,
+          "elapsed_seconds": 5.469000000000051,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:f6b0bbf81b24b84cd834479f476c99d1394ba3f4efc05a9b327e6296b971abaf",
+          "response_sha256": "sha256:1e566dbc8bcc258b1d0773409a6a320d5a727801fe90589c20ca1d3c69b1b5bc",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2984.862,
+            "predicted_n": 265,
+            "predicted_per_second": 88.44630002995113,
+            "predicted_per_token_ms": 11.306295454545454,
+            "prompt_ms": 2064.55,
+            "prompt_n": 8317,
+            "prompt_per_second": 4028.480782737158,
+            "prompt_per_token_ms": 0.24823253577010942
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 265,
+            "prompt_tokens": 8317,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8582
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 5,
+          "elapsed_seconds": 3.79700000000048,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:c787737e856b24175d51de66371c35d286594fddff2a050d1297849f734d7892",
+          "response_sha256": "sha256:0eb938c9317962a2971698720c36e7d8166df257e5a26d9b501ddf4ffddc4a7f",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1054.04,
+            "predicted_n": 92,
+            "predicted_per_second": 86.3344844597928,
+            "predicted_per_token_ms": 11.582857142857142,
+            "prompt_ms": 2342.513,
+            "prompt_n": 9306,
+            "prompt_per_second": 3972.6567152455505,
+            "prompt_per_token_ms": 0.2517207178164625
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 92,
+            "prompt_tokens": 9306,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9398
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "measurements",
+              "unit": "fraction",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "mean_test_accuracy_value": {
+              "anchor": {
+                "exact": null,
+                "prefix": "s ",
+                "suffix": " "
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/manuscript.tex",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.tex": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+          "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+          "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+        },
+        "proposal_id": "sha256:3da7d9e1f2605f6963046837d030eb74f23aee7a107b6684434be7e3fd5afa99",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:mean_test_accuracy_value": "The original text in the manuscript.tex file states 'The mean test accuracy is 71.4\\% on Cedar for VariantBlue.' This corresponds to the computed mean of the scores from the measurements.csv file for the specified experiment configuration. The value 71.4 is a percentage, so it is formatted as a percent with one decimal place."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The 'locations' stage has successfully bound the original text in the manuscript.tex file to the computed metric 'mean_test_accuracy'. The value 71.4\\% is a percentage with one decimal place, and it corresponds to the mean of the scores for the specified experiment configuration. All required evidence and declarations have been verified, and the mapping is complete.",
+      "status": "proposed"
+    },
+    "D02": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.25,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:06f470d95d4581f27c24327bfe65cb7c917a6bdc2dd20496d287f4faa03c4ac1",
+          "response_sha256": "sha256:cd4eaa304ec16f3655524337b59a1f75249e127244255ee2308256b17f0bfd89",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1216.076,
+            "predicted_n": 115,
+            "predicted_per_second": 93.74414099118805,
+            "predicted_per_token_ms": 10.667333333333334,
+            "prompt_ms": 1391.63,
+            "prompt_n": 5854,
+            "prompt_per_second": 4206.577897860781,
+            "prompt_per_token_ms": 0.23772292449607108
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 115,
+            "prompt_tokens": 5854,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5969
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.70299999999952,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:474fa0d82bc71cad228c6955a137988f4a6a350a33a86be7a7ba34c69a588b6f",
+          "response_sha256": "sha256:ba5360353ca48bb0d71b66a32e5fbca0e9ef2b177ed1b68d3ea7ddca5e2f3f7e",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1819.494,
+            "predicted_n": 166,
+            "predicted_per_second": 90.68455295813013,
+            "predicted_per_token_ms": 11.027236363636364,
+            "prompt_ms": 1653.491,
+            "prompt_n": 6868,
+            "prompt_per_second": 4153.636155261806,
+            "prompt_per_token_ms": 0.24075291205591148
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 166,
+            "prompt_tokens": 6868,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7034
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.04700000000048,
+          "error": {
+            "code": "MAPPING_ARGUMENTS",
+            "fields": [
+              [
+                "unit"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7fc4f49a5ee48d4883dacac552531f8b79eb4799547fd874774acd3ae702d466",
+          "response_sha256": "sha256:547426e324270214562c9a8ed59ee0bde65c23eb238025fd4d76de6f1195c1b9",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2200.905,
+            "predicted_n": 200,
+            "predicted_per_second": 90.41735104422952,
+            "predicted_per_token_ms": 11.059824120603016,
+            "prompt_ms": 1685.396,
+            "prompt_n": 7032,
+            "prompt_per_second": 4172.313213037173,
+            "prompt_per_token_ms": 0.23967519908987486
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 200,
+            "prompt_tokens": 7032,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7232
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.233999999999469,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:b89dd61fb53682b18f48ec48b2d299714d847de85c3c8a9a8bd76c74eec75566",
+          "response_sha256": "sha256:53679fc1bd7ff3b45c6d8b953034a776c3ce72af6cf152881b14d633b276f7b4",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2290.289,
+            "predicted_n": 207,
+            "predicted_per_second": 89.94498074260497,
+            "predicted_per_token_ms": 11.117907766990292,
+            "prompt_ms": 1738.971,
+            "prompt_n": 7182,
+            "prompt_per_second": 4130.028620373772,
+            "prompt_per_token_ms": 0.24212907268170425
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 207,
+            "prompt_tokens": 7182,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7389
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The unit has been corrected to 'scalar' as per the allowed enum values. The metric mapping selects the 'score' field from the 'test_loss_data' source, with the reduction operation set to 'mean'. The expected seeds are specified as '001', '002', and '003', with the where clause filtering for the correct dataset, model, checkpoint, and split.",
+      "status": "budget_exhausted"
+    },
+    "D03": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.3590000000003783,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+            "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/measure...one, 'cell_range': None}, input_type=dict]"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:307e59d0f38ccaf38634a0a65f7966f19c538401e86887d34d652e2b29d2266e",
+          "response_sha256": "sha256:6a5f83123248a33385671995a95548b4b091c6eda767f71265d9f69f4d8b7de3",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1152.815,
+            "predicted_n": 107,
+            "predicted_per_second": 91.94883827847485,
+            "predicted_per_token_ms": 10.87561320754717,
+            "prompt_ms": 1500.833,
+            "prompt_n": 6230,
+            "prompt_per_second": 4151.02812904567,
+            "prompt_per_token_ms": 0.24090417335473516
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 107,
+            "prompt_tokens": 6230,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6337
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.858999999999469,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:2b7a481231fef4afd1efa273505c1810f2327fe0b3c635f3221ac0d305c4e9f0",
+          "response_sha256": "sha256:8b89f08a0d5bfee438c2d210f6f9fb641a9c4fa5ff26d500524efbfa4d634726",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1841.58,
+            "predicted_n": 166,
+            "predicted_per_second": 89.5969765093018,
+            "predicted_per_token_ms": 11.161090909090909,
+            "prompt_ms": 1780.514,
+            "prompt_n": 7262,
+            "prompt_per_second": 4078.5975285788263,
+            "prompt_per_token_ms": 0.2451823189204076
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 166,
+            "prompt_tokens": 7262,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7428
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.203000000000429,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:d1a451b7ef7eab5fec0d49513191684da48de4bbf128498df09619167392f72f",
+          "response_sha256": "sha256:b184ca319d0133da878e1bfda7ffd8a5c890455b7108a07682dd49aea0b7394c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2077.224,
+            "predicted_n": 185,
+            "predicted_per_second": 88.57975836982433,
+            "predicted_per_token_ms": 11.289260869565219,
+            "prompt_ms": 1832.644,
+            "prompt_n": 7395,
+            "prompt_per_second": 4035.153581382964,
+            "prompt_per_token_ms": 0.24782204192021637
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 185,
+            "prompt_tokens": 7395,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7580
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 4,
+          "elapsed_seconds": 5.282000000000153,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:aa896fe231ac0e74cb615e2751e35742c7916a56d503f2fc35276fbde5bced04",
+          "response_sha256": "sha256:9e2959c0a7b3eb65c45c18b75d244451229e12b95451d611912e6b6d03f398f4",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2490.935,
+            "predicted_n": 216,
+            "predicted_per_second": 86.3129708322377,
+            "predicted_per_token_ms": 11.585744186046512,
+            "prompt_ms": 2299.379,
+            "prompt_n": 8895,
+            "prompt_per_second": 3868.4357820089685,
+            "prompt_per_token_ms": 0.25850241708825183
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 216,
+            "prompt_tokens": 8895,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9111
+          },
+          "valid": true
+        },
+        {
+          "action": "source",
+          "action_index": 5,
+          "elapsed_seconds": 3.9219999999995707,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "sources already contains results_measurements; choose another identifier."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5f510edbe616f09e3969567bfa15535bd9d361cbc137e0ab884324c71c62c9c4",
+          "response_sha256": "sha256:1cca7d93e2bc854362e72b8306eef485f6da0f2f138924e88b6dbc8caba90c81",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 833.922,
+            "predicted_n": 72,
+            "predicted_per_second": 85.13985720487048,
+            "predicted_per_token_ms": 11.74538028169014,
+            "prompt_ms": 2739.237,
+            "prompt_n": 10339,
+            "prompt_per_second": 3774.4087130832418,
+            "prompt_per_token_ms": 0.26494216075055615
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 72,
+            "prompt_tokens": 10339,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10411
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 6,
+          "elapsed_seconds": 5.359000000000378,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "metrics already contains mean_test_accuracy; choose another identifier."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:a6b47774d72701ae33b58e710ab63b3307767b33deb8545ba72f002dc00c5f2d",
+          "response_sha256": "sha256:dfb3cebe9a2eea928139d1f57b88496e70990fc26d2fa8cf25fe7b7f14927e18",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2083.526,
+            "predicted_n": 174,
+            "predicted_per_second": 83.03232117093812,
+            "predicted_per_token_ms": 12.043502890173409,
+            "prompt_ms": 2698.172,
+            "prompt_n": 10276,
+            "prompt_per_second": 3808.5044244770165,
+            "prompt_per_token_ms": 0.26257026080186846
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 174,
+            "prompt_tokens": 10276,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10450
+          },
+          "valid": false
+        }
+      ],
+      "reason": "Binding the mean test accuracy metric from the results_measurements source, using the score_pct field with a percent unit, and aggregating over the three specified seeds.",
+      "status": "budget_exhausted"
+    },
+    "D04": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.719000000000051,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:0fa3a641eb99376e8fe684d54dc46c375435a9222e93781fc87f1c371f0f2f90",
+          "response_sha256": "sha256:a112c090f99818c15c58fc87dd24595cced05c8c19a8416eaff0bb39e1bd54c1",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1396.414,
+            "predicted_n": 128,
+            "predicted_per_second": 90.94724057478656,
+            "predicted_per_token_ms": 10.995385826771653,
+            "prompt_ms": 1464.137,
+            "prompt_n": 6014,
+            "prompt_per_second": 4107.53911689958,
+            "prompt_per_token_ms": 0.2434547721982042
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 128,
+            "prompt_tokens": 6014,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6142
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.342999999999847,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:ae736d6e409af8ba3381088b67a2f6a95b1df3aa8e83e0a3e689eb124b2994b9",
+          "response_sha256": "sha256:cf36adac529fe368f976dbaf1dbff840f51d14558b248ac802851dce77fffd56",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1420.696,
+            "predicted_n": 128,
+            "predicted_per_second": 89.3928046534938,
+            "predicted_per_token_ms": 11.186582677165354,
+            "prompt_ms": 1776.157,
+            "prompt_n": 7052,
+            "prompt_per_second": 3970.369736459108,
+            "prompt_per_token_ms": 0.25186571185479295
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 128,
+            "prompt_tokens": 7052,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7180
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 3,
+          "elapsed_seconds": 3.313000000000102,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:cb16e15055e6bb613afbbb384c96df7ed136b0097d7904669242c2a22cc635c6",
+          "response_sha256": "sha256:edf4ab5509d981c6a1e36eb20851ef0b79be7579f973e0511ad8e5e90a07f24e",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1407.78,
+            "predicted_n": 128,
+            "predicted_per_second": 90.21295941127164,
+            "predicted_per_token_ms": 11.08488188976378,
+            "prompt_ms": 1781.862,
+            "prompt_n": 7052,
+            "prompt_per_second": 3957.657775966938,
+            "prompt_per_token_ms": 0.2526747022121384
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 128,
+            "prompt_tokens": 7052,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7180
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The JSON file contains the required mean accuracy value for the specified dataset, model, and split. The 'score.mean' field is a decimal value representing the mean test accuracy, which aligns with the requested mapping.",
+      "status": "budget_exhausted"
+    },
+    "D05": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.70299999999952,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:33ba3cd4440c8e828084cea4e825e2eaefbef85c892100b04101ac7d152e0cb5",
+          "response_sha256": "sha256:6a1f9766310aee9643dbef48f00e04adf83d459e2eddf531ed5bccf5d26d5e8c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1625.001,
+            "predicted_n": 153,
+            "predicted_per_second": 93.53840397636678,
+            "predicted_per_token_ms": 10.690796052631578,
+            "prompt_ms": 1430.272,
+            "prompt_n": 5793,
+            "prompt_per_second": 4050.2785484159663,
+            "prompt_per_token_ms": 0.2468965993440359
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 153,
+            "prompt_tokens": 5793,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5946
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 3.719000000000051,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+            "message": "An aggregation requires an explicitly expected record count."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:c4bfc2620242ff50683f08d0cc4ddfe123516fdf7ac4c6df8978f06d7c0cccdc",
+          "response_sha256": "sha256:d4e67978650753603cbc66a90f42355e5e6eae76cfe3b9589add6ec528c4c837",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1775.824,
+            "predicted_n": 161,
+            "predicted_per_second": 90.09901882168504,
+            "predicted_per_token_ms": 11.0989,
+            "prompt_ms": 1752.598,
+            "prompt_n": 6958,
+            "prompt_per_second": 3970.106093924562,
+            "prompt_per_token_ms": 0.25188243748203504
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 161,
+            "prompt_tokens": 6958,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7119
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.092999999999847,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:0f8159379e742f8ac9c6090a773d437cb24c87394bdd76951b82271500d97966",
+          "response_sha256": "sha256:2fe87a1170b5d94ceead7f9cd74ad1b2379866619f824d38d2211a6705e1b151",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2007.8,
+            "predicted_n": 183,
+            "predicted_per_second": 90.64647873294153,
+            "predicted_per_token_ms": 11.031868131868132,
+            "prompt_ms": 1775.928,
+            "prompt_n": 7041,
+            "prompt_per_second": 3964.6877576117945,
+            "prompt_per_token_ms": 0.2522266723476779
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 183,
+            "prompt_tokens": 7041,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7224
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.438000000000102,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:70680e19724dcfe4839b5a1d089fa68bb63f72efbea27378ab4889c78d720730",
+          "response_sha256": "sha256:e64dbd198c1b40121fd001b4612598a6cf35ac6b4704eb5b6574b8a040485f2c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2046.553,
+            "predicted_n": 180,
+            "predicted_per_second": 87.46414092378745,
+            "predicted_per_token_ms": 11.433256983240224,
+            "prompt_ms": 2123.629,
+            "prompt_n": 8445,
+            "prompt_per_second": 3976.6833095611332,
+            "prompt_per_token_ms": 0.25146583777383064
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 8445,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8625
+          },
+          "valid": true
+        },
+        {
+          "action": "derived",
+          "action_index": 5,
+          "elapsed_seconds": 4.061999999999898,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5327ceebd21c378cf45c33ba469f47c43f04788d50543689bab4348f07f3cb85",
+          "response_sha256": "sha256:cfb33932561b894f1276a5f62340ebb43b1335f6c539399eb7118cc922043824",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1230.112,
+            "predicted_n": 106,
+            "predicted_per_second": 85.358081215369,
+            "predicted_per_token_ms": 11.715352380952382,
+            "prompt_ms": 2561.912,
+            "prompt_n": 9853,
+            "prompt_per_second": 3845.9556768538505,
+            "prompt_per_token_ms": 0.26001339693494363
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 106,
+            "prompt_tokens": 9853,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9959
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 6,
+          "elapsed_seconds": 6.782000000000153,
+          "error": {
+            "code": "DRAFT_STATISTICS",
+            "fields": [
+              [
+                "component"
+              ],
+              [
+                "mean"
+              ]
+            ],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': Decimal('6.2')}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value=Decimal('6.2'), input_type=Decimal]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e45e6abd4207b55c4c2db31d616de8837d34a90f84f34306a9066254724836c6",
+          "response_sha256": "sha256:15110603c41062a0d31357a58200b28ea88cd1b997a45b20267417a1cc27c3c3",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 3485.589,
+            "predicted_n": 285,
+            "predicted_per_second": 81.47833838126068,
+            "predicted_per_token_ms": 12.273200704225351,
+            "prompt_ms": 3053.664,
+            "prompt_n": 11506,
+            "prompt_per_second": 3767.9325557756188,
+            "prompt_per_token_ms": 0.2653975317225795
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 285,
+            "prompt_tokens": 11506,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11791
+          },
+          "valid": false
+        },
+        {
+          "action": "derived",
+          "action_index": 7,
+          "elapsed_seconds": 5.467999999999847,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "metrics already contains accuracy_gain; choose another identifier."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:cb3c70d1c869fa25979cdb4a095447b88f527e677faaae279e8dcf59852c94a7",
+          "response_sha256": "sha256:e1288298463938f63c73a6b30b43343c41aec2fbd747f2680061704447245acf",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1244.619,
+            "predicted_n": 102,
+            "predicted_per_second": 81.14933164285617,
+            "predicted_per_token_ms": 12.322960396039603,
+            "prompt_ms": 3183.99,
+            "prompt_n": 11881,
+            "prompt_per_second": 3731.4815687235205,
+            "prompt_per_token_ms": 0.26799006817607945
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 102,
+            "prompt_tokens": 11881,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11983
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The derived metric 'accuracy_gain' is calculated as the percentage-point difference between 'test_accuracy_variantblue' and 'test_accuracy_control', which are already defined as metrics based on the mean scores from the measurements.csv file.",
+      "status": "budget_exhausted"
+    },
+    "D06": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.25,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:82d09170aaf4957501bde9e0d13912d082dbdcf93d45c401b93b3f7a094a21f5",
+          "response_sha256": "sha256:b16f1bc1fdaf6282b0f4b7ac1f6376e4b30dea515963664206df61f5692414cc",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1721.711,
+            "predicted_n": 158,
+            "predicted_per_second": 91.1883585572724,
+            "predicted_per_token_ms": 10.966312101910829,
+            "prompt_ms": 1468.296,
+            "prompt_n": 6105,
+            "prompt_per_second": 4157.880972229033,
+            "prompt_per_token_ms": 0.2405071253071253
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 158,
+            "prompt_tokens": 6105,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6263
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.1710000000002765,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:824e20cf161eb7267daebadfc90d3a9340d0bd288601186c42dd524843021e3d",
+          "response_sha256": "sha256:92ebea889f5725becd7fa65ee5e479df3d71f9ced741ac306267fbfa707757cb",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2182.494,
+            "predicted_n": 196,
+            "predicted_per_second": 89.34732466618465,
+            "predicted_per_token_ms": 11.192276923076923,
+            "prompt_ms": 1806.902,
+            "prompt_n": 7288,
+            "prompt_per_second": 4033.422952655982,
+            "prompt_per_token_ms": 0.24792837541163557
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 196,
+            "prompt_tokens": 7288,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7484
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.438000000000102,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:8e63fa054bdcd224ea9d61a0110e76e913d98ad1ec635a5e3880f412cfc0fd0b",
+          "response_sha256": "sha256:4d0080394caa218867563d1d33a5311d265fccb3df0b39a9b1b1735360a213b3",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2349.824,
+            "predicted_n": 211,
+            "predicted_per_second": 89.36839525002723,
+            "predicted_per_token_ms": 11.189638095238095,
+            "prompt_ms": 1833.491,
+            "prompt_n": 7403,
+            "prompt_per_second": 4037.6527618624796,
+            "prompt_per_token_ms": 0.24766864784546805
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 211,
+            "prompt_tokens": 7403,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7614
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 4,
+          "elapsed_seconds": 5.530999999999949,
+          "error": {
+            "code": "DRAFT_STATISTICS",
+            "fields": [
+              [
+                "component"
+              ],
+              [
+                "mean"
+              ]
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 2 个问题：\ncomponent：缺少必填字段\nmean：不允许额外字段"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:fdce34c3079f78e69259a76ad078ac3bf3268dcd811ac47572708f0b183bd450",
+          "response_sha256": "sha256:156c5902700b1439886f3e646e5eb489068f3d2011915c624c3c6f16ca66d642",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 3106.833,
+            "predicted_n": 268,
+            "predicted_per_second": 85.93960473575503,
+            "predicted_per_token_ms": 11.636078651685393,
+            "prompt_ms": 2209.358,
+            "prompt_n": 8784,
+            "prompt_per_second": 3975.8155989205907,
+            "prompt_per_token_ms": 0.2515207194899818
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 268,
+            "prompt_tokens": 8784,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9052
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 5,
+          "elapsed_seconds": 4.969000000000051,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "metrics 中已存在 test_accuracy_mean，请选择其他标识符。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:f6d972c3a675cff5dfbe555062598eeaeb35c2e57a62d644c4b3574096bf9c00",
+          "response_sha256": "sha256:1059b1b16b7c2ae15b9f97ec69a5020245ba14868d86fa8b10262e524a19811a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2494.956,
+            "predicted_n": 216,
+            "predicted_per_second": 86.17386438879082,
+            "predicted_per_token_ms": 11.604446511627907,
+            "prompt_ms": 2300.258,
+            "prompt_n": 8953,
+            "prompt_per_second": 3892.1720954779857,
+            "prompt_per_token_ms": 0.25692594661007484
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 216,
+            "prompt_tokens": 8953,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9169
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明了测试准确率均值的度量，该度量基于 results/measurements.csv 中的 score 字段，使用 mean 聚合方式，筛选条件为 dataset=Cedar, model=VariantBlue, checkpoint=selected, split=test, seeds=001, 002, 003，单位为百分比。",
+      "status": "budget_exhausted"
+    },
+    "D07": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 4.657000000000153,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:dbbc3488bfd503277f87549fe91ae92152a2c0164790f6f4b5909f463f2fc8fa",
+          "response_sha256": "sha256:829d83ef7222b2e189aa3e32b45cabf038bebfd483de77396c93a53be51e831d",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1965.931,
+            "predicted_n": 175,
+            "predicted_per_second": 88.50768414557785,
+            "predicted_per_token_ms": 11.298454022988507,
+            "prompt_ms": 1966.418,
+            "prompt_n": 7771,
+            "prompt_per_second": 3951.8556075056267,
+            "prompt_per_token_ms": 0.2530456826663235
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 175,
+            "prompt_tokens": 7771,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7946
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.686999999999898,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+            "message": "An aggregation requires an explicitly expected record count."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:af3dd9eae51ec0f0e121bcc1349142f003cb36c3cc30e496790ede6ada748918",
+          "response_sha256": "sha256:de0f80c3754313584ede43dc967bd673144108b57a8d3c5b0c47d88710532ece",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2176.955,
+            "predicted_n": 189,
+            "predicted_per_second": 86.35915763072732,
+            "predicted_per_token_ms": 11.579547872340425,
+            "prompt_ms": 2328.79,
+            "prompt_n": 8995,
+            "prompt_per_second": 3862.5208799419443,
+            "prompt_per_token_ms": 0.2588982768204558
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 189,
+            "prompt_tokens": 8995,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9184
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 5.0,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:844f899ff295e6d8a2041338c28857c66c0ad6febfaed17b325dd0e626c073d6",
+          "response_sha256": "sha256:9af1fc94cd6917389103dd4b9c052f1797e69778f9334496a571c2a0fc1ad140",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2354.528,
+            "predicted_n": 204,
+            "predicted_per_second": 86.21685535275012,
+            "predicted_per_token_ms": 11.598660098522167,
+            "prompt_ms": 2351.822,
+            "prompt_n": 9084,
+            "prompt_per_second": 3862.537215826708,
+            "prompt_per_token_ms": 0.25889718185821226
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 204,
+            "prompt_tokens": 9084,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9288
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 4,
+          "elapsed_seconds": 6.453000000000429,
+          "error": {
+            "code": "DRAFT_STATISTICS",
+            "fields": [
+              [
+                "component"
+              ],
+              [
+                "mean"
+              ]
+            ],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': '0.714'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value='0.714', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:6c7437493534fcc355d55d0974af756fcc67b6302a72203c038dc7368670380e",
+          "response_sha256": "sha256:8d57de63e6da62e2d91d8872d68a6ec47de7f49e5d3cc511145c7dbaf8670381",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 3522.714,
+            "predicted_n": 294,
+            "predicted_per_second": 83.17450692846482,
+            "predicted_per_token_ms": 12.022914675767918,
+            "prompt_ms": 2761.26,
+            "prompt_n": 10556,
+            "prompt_per_second": 3822.89244765071,
+            "prompt_per_token_ms": 0.2615820386510042
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 294,
+            "prompt_tokens": 10556,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 10850
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 5,
+          "elapsed_seconds": 5.45299999999952,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "metrics already contains mean_test_accuracy; choose another identifier."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:a7ca5fd47b5dd5069e012963bec127df79ba68d254c6fcd478ed5c631dffb2a3",
+          "response_sha256": "sha256:d4f14878013c672ed67742509100b7912d1c05c339cc24cc339534a3713e07db",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2410.046,
+            "predicted_n": 201,
+            "predicted_per_second": 82.98596790268734,
+            "predicted_per_token_ms": 12.050229999999999,
+            "prompt_ms": 2848.092,
+            "prompt_n": 10841,
+            "prompt_per_second": 3806.4079390693837,
+            "prompt_per_token_ms": 0.26271487870122684
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 201,
+            "prompt_tokens": 10841,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 11042
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The metric 'mean_test_accuracy' is derived from the 'score' field in the 'results_workbook' source, which contains the scores for seeds 001, 002, and 003. The mean of these scores is calculated to determine the mean test accuracy.",
+      "status": "budget_exhausted"
+    },
+    "D08": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.125,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:3eeb1228cd0fc09ab1526913f0757ccab8a4b2b42a34e464a906f94f47618e8f",
+          "response_sha256": "sha256:b6f0b1cec3b9712281a765d6fedfc86b074f05c0e480759cc214b43095d599c3",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 909.763,
+            "predicted_n": 85,
+            "predicted_per_second": 92.33173914524991,
+            "predicted_per_token_ms": 10.830511904761906,
+            "prompt_ms": 1367.885,
+            "prompt_n": 5758,
+            "prompt_per_second": 4209.418189394577,
+            "prompt_per_token_ms": 0.23756252170892672
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 85,
+            "prompt_tokens": 5758,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5843
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.8280000000004293,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:1e054eaef2751d3dfc4e073026dd93508fdad0e6c6306fead375ce6da5d50dae",
+          "response_sha256": "sha256:443e302d45d5e246931bf48c71fb70191921ae089e2019ca182c26507e2a495e",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1935.954,
+            "predicted_n": 178,
+            "predicted_per_second": 91.42779218927724,
+            "predicted_per_token_ms": 10.937593220338982,
+            "prompt_ms": 1672.522,
+            "prompt_n": 6763,
+            "prompt_per_second": 4043.5940453997023,
+            "prompt_per_token_ms": 0.24730474641431316
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 178,
+            "prompt_tokens": 6763,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6941
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 3.7659999999996217,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:4c2180025d1fc3d76512fb3e569f411a236f6644cc151c7fd02e514c8d75a61c",
+          "response_sha256": "sha256:bbe344f5f2f190c5e2b0d925cc12fd1284c1abeff12b3a7e14128f26bda53279",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1861.409,
+            "predicted_n": 170,
+            "predicted_per_second": 90.79143809877357,
+            "predicted_per_token_ms": 11.014254437869823,
+            "prompt_ms": 1740.733,
+            "prompt_n": 6956,
+            "prompt_per_second": 3996.017769525826,
+            "prompt_per_token_ms": 0.25024913743530763
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 170,
+            "prompt_tokens": 6956,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7126
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 3.9840000000003783,
+          "error": {
+            "code": "MISSING_COLUMN",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "指标选择了未声明的列"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:6f8686bb756d589b1a62c5b4e3d0bc844096d9510239de9f115f3d2e4abbc48f",
+          "response_sha256": "sha256:f24c470f37822d6dca6e8224b21f346bc1f95fd3e3713f345744c7eedc331ba4",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2060.368,
+            "predicted_n": 187,
+            "predicted_per_second": 90.27513531563294,
+            "predicted_per_token_ms": 11.077247311827957,
+            "prompt_ms": 1759.67,
+            "prompt_n": 7025,
+            "prompt_per_second": 3992.2258150675975,
+            "prompt_per_token_ms": 0.25048683274021355
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 187,
+            "prompt_tokens": 7025,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7212
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明度量指标为 test_accuracy，其来源为 measurements 数据集中的 score 字段，单位为 fraction。筛选条件包括数据集 Cedar、模型 VariantBlue 和划分 test，并预期种子为 001、002、003，参与计算的记录数为 3。",
+      "status": "budget_exhausted"
+    },
+    "D09": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.7969999999995707,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:d43915ac2c3cc419d34e01c20ca538f54da7307a31841a331b47d80a616a4200",
+          "response_sha256": "sha256:f4d9b8cce3018c25511b1fb1f2d2c6a629f6db8f028c811ed29f8943947b0974",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1800.878,
+            "predicted_n": 169,
+            "predicted_per_second": 93.28782960311582,
+            "predicted_per_token_ms": 10.719511904761905,
+            "prompt_ms": 1398.621,
+            "prompt_n": 5778,
+            "prompt_per_second": 4131.212101062403,
+            "prompt_per_token_ms": 0.24205970924195225
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 169,
+            "prompt_tokens": 5778,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5947
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.390000000000327,
+          "error": {
+            "code": "SEED_SET",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Expected seeds ['001', '002', '003'], got ['001', '002']"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:2d23da047d784a0f784bda5c4498e6de03e902efdbde3acdd27f56de6beb2788",
+          "response_sha256": "sha256:707aae3b4d11b33d0e40d3780b9cefba4fe316b97e8713fad9906994f698306b",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2481.817,
+            "predicted_n": 226,
+            "predicted_per_second": 90.65938383047582,
+            "predicted_per_token_ms": 11.030297777777777,
+            "prompt_ms": 1745.769,
+            "prompt_n": 6977,
+            "prompt_per_second": 3996.519585351785,
+            "prompt_per_token_ms": 0.25021771535043713
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 226,
+            "prompt_tokens": 6977,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7203
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.469000000000051,
+          "error": {
+            "code": "SEED_SET",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Expected seeds ['001', '002', '003'], got ['001', '002']"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:d2a3eeb58f5cec451f6e1da0f69e67320ed3afe5fa446e160811bb241dbd153a",
+          "response_sha256": "sha256:4cb156e8ecdc3479a7bbf063add34cc2803987fd0a891179664d6e198d1ec4c9",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2507.885,
+            "predicted_n": 226,
+            "predicted_per_second": 89.71703247955946,
+            "predicted_per_token_ms": 11.146155555555557,
+            "prompt_ms": 1782.114,
+            "prompt_n": 7132,
+            "prompt_per_second": 4001.988649435446,
+            "prompt_per_token_ms": 0.2498757711721817
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 226,
+            "prompt_tokens": 7132,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7358
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.594000000000051,
+          "error": {
+            "code": "SEED_SET",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "Expected seeds ['001', '002', '003'], got ['001', '002']"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:14b4ceaddde4cfa75f4e4a057291ab5d68b5fbd24a3d4f29c80f5c31297a300c",
+          "response_sha256": "sha256:8d2cc6d5c6dc780e9c7adfa9222441ed2ffca90ed086f48d0f110a0dace15618",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2577.682,
+            "predicted_n": 226,
+            "predicted_per_second": 87.28772594912795,
+            "predicted_per_token_ms": 11.456364444444443,
+            "prompt_ms": 1819.963,
+            "prompt_n": 7132,
+            "prompt_per_second": 3918.760985800261,
+            "prompt_per_token_ms": 0.2551826977005048
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 226,
+            "prompt_tokens": 7132,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7358
+          },
+          "valid": false
+        }
+      ],
+      "reason": "The metric 'mean_test_accuracy' is derived from the 'score' field in the 'measurements' source. The unit is 'fraction' as the paper's value of 71.4% corresponds to the fraction 0.714. The expected count of 3 matches the required seeds 001, 002, and 003. The where clause filters for the correct dataset, model, checkpoint, and split.",
+      "status": "budget_exhausted"
+    },
+    "D10": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 2.889999999999418,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:061e9bd9174e7725ddbd02ec6521e96eead6976375914571667fd9d18259d706",
+          "response_sha256": "sha256:cef4d8071d19b819d5a0f9d7f6b5df1585fe6bac58e73cdae69d6582d22df634",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 725.134,
+            "predicted_n": 67,
+            "predicted_per_second": 91.01766018418665,
+            "predicted_per_token_ms": 10.986878787878789,
+            "prompt_ms": 1534.739,
+            "prompt_n": 6101,
+            "prompt_per_second": 3975.268759052842,
+            "prompt_per_token_ms": 0.2515553188001967
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 67,
+            "prompt_tokens": 6101,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6168
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.860000000000582,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:bc6c214e02ca2379a8ac5a7baa8b37189e82a7e3a1837dd2f074bab040f6692a",
+          "response_sha256": "sha256:2563a639ebd1d1672cad5c62e68553335fe94df6212be3516a1bb1e184a2dd10",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1755.607,
+            "predicted_n": 158,
+            "predicted_per_second": 89.42775917389257,
+            "predicted_per_token_ms": 11.182210191082802,
+            "prompt_ms": 1857.114,
+            "prompt_n": 7093,
+            "prompt_per_second": 3819.3670393955354,
+            "prompt_per_token_ms": 0.26182348794586213
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 158,
+            "prompt_tokens": 7093,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7251
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 4.014999999999418,
+          "error": {
+            "code": "SEED_SET",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "预期种子为 ['001', '002', '003']，实际为 ['001', '002', '003', '001', '002', '003']"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:dc6d1525025ac5b278911b1e7252eaeb66cca42da57242360839d6f3d330fcc9",
+          "response_sha256": "sha256:9d9ed4864f2e7e08cb4a6407f4551d34ce787943f47f178abbe0ae8e376202cf",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1976.795,
+            "predicted_n": 179,
+            "predicted_per_second": 90.04474414392995,
+            "predicted_per_token_ms": 11.10558988764045,
+            "prompt_ms": 1846.684,
+            "prompt_n": 7287,
+            "prompt_per_second": 3945.991842675845,
+            "prompt_per_token_ms": 0.2534217098943324
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 179,
+            "prompt_tokens": 7287,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7466
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 4,
+          "elapsed_seconds": 3.969000000000051,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "sources 中已存在 measurements，请选择其他标识符。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:4a5fa1190ff5b76d479e1ba63dcb3e201a1e7529651771f6ce7ebe3fe55eb2fb",
+          "response_sha256": "sha256:8d7bf3b56e83949ac4013b8b740101f50d6f1b04a95811e0458af01c9e903c02",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1894.406,
+            "predicted_n": 171,
+            "predicted_per_second": 89.73789145515798,
+            "predicted_per_token_ms": 11.143564705882353,
+            "prompt_ms": 1908.224,
+            "prompt_n": 7430,
+            "prompt_per_second": 3893.6728602092835,
+            "prompt_per_token_ms": 0.25682691790040374
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 171,
+            "prompt_tokens": 7430,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7601
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明来源为 measurements，路径为 results/measurements.csv，格式为 csv，列类型为 string、string、string、decimal、string、string，主键为 dataset, model, checkpoint, split, seed。",
+      "status": "budget_exhausted"
+    },
+    "D11": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 3.8590000000003783,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:6e3b7cd36d20ec8533a056485eb94b548e5f841c7747c78679dc7e815276daa3",
+          "response_sha256": "sha256:c5cbe9608c9df34dcc8d90d87008b8c49d9d8c2742f906fd6d79277f43e9eb88",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1855.59,
+            "predicted_n": 174,
+            "predicted_per_second": 93.2318022839097,
+            "predicted_per_token_ms": 10.725953757225433,
+            "prompt_ms": 1395.397,
+            "prompt_n": 5787,
+            "prompt_per_second": 4147.206852243484,
+            "prompt_per_token_ms": 0.24112614480732675
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 174,
+            "prompt_tokens": 5787,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5961
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 2,
+          "elapsed_seconds": 4.015000000000327,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:50400d7ea70c3feeb0c87e5827cc9732ae43e78230739f80b2ff168faa8f862d",
+          "response_sha256": "sha256:4271b9f917966252e6b287e171ab5883a663d69345b0d34b7007f496496bdb10",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2012.281,
+            "predicted_n": 183,
+            "predicted_per_second": 90.44462478152903,
+            "predicted_per_token_ms": 11.056489010989011,
+            "prompt_ms": 1746.524,
+            "prompt_n": 6961,
+            "prompt_per_second": 3985.6308874083616,
+            "prompt_per_token_ms": 0.2509013072834363
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 183,
+            "prompt_tokens": 6961,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7144
+          },
+          "valid": true
+        },
+        {
+          "action": "locations",
+          "action_index": 3,
+          "elapsed_seconds": 6.063000000000102,
+          "error": {
+            "code": "DRAFT_STATISTICS",
+            "fields": [
+              [
+                "component"
+              ],
+              [
+                "mean"
+              ]
+            ],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': Decimal('0.714')}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value=Decimal('0.714'), input_type=Decimal]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:0fa23ee194acad66cc7a0fc68c690aacc57bead666557d3bbf6509351ac3492e",
+          "response_sha256": "sha256:f3d71d523ba7a86142a98632152d2676e5e3604aba1e1908337df16741f24d36",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 3656.518,
+            "predicted_n": 318,
+            "predicted_per_second": 86.69450006809758,
+            "predicted_per_token_ms": 11.534757097791799,
+            "prompt_ms": 2202.345,
+            "prompt_n": 8441,
+            "prompt_per_second": 3832.732837044151,
+            "prompt_per_token_ms": 0.2609104371519962
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 318,
+            "prompt_tokens": 8441,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8759
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 4.686999999999898,
+          "error": {
+            "code": "BINDING_CONFLICT",
+            "fields": [],
+            "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+            "message": "metrics already contains mean_test_accuracy; choose another identifier."
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:5fc5d1fdcda1e90fc25bdcedf37689df67531dcb20f160a58f736c9075089c22",
+          "response_sha256": "sha256:c83385d6376190428d0d2b37694f63df06fd8d65427636b7861123cf2d278507",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2155.901,
+            "predicted_n": 186,
+            "predicted_per_second": 85.81099039334367,
+            "predicted_per_token_ms": 11.653518918918918,
+            "prompt_ms": 2336.005,
+            "prompt_n": 8776,
+            "prompt_per_second": 3756.8412738842594,
+            "prompt_per_token_ms": 0.26618106198723795
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 186,
+            "prompt_tokens": 8776,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8962
+          },
+          "valid": false
+        },
+        {
+          "action": "locations",
+          "action_index": 5,
+          "elapsed_seconds": 5.438000000000102,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:df3eb9f33b55441ba45fa08cefeded856130383058362496f1e5b2486b1d0aa7",
+          "response_sha256": "sha256:821df2e4bead230c08c7a14a5cb985284c3848ac29fe797712324eb649a9f89a",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 2615.388,
+            "predicted_n": 226,
+            "predicted_per_second": 86.02930043267004,
+            "predicted_per_token_ms": 11.623946666666667,
+            "prompt_ms": 2289.832,
+            "prompt_n": 8525,
+            "prompt_per_second": 3722.9805505382055,
+            "prompt_per_token_ms": 0.2686019941348973
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 226,
+            "prompt_tokens": 8525,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 8751
+          },
+          "valid": true
+        },
+        {
+          "action": "finish",
+          "action_index": 6,
+          "elapsed_seconds": 3.82799999999952,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:7b2249f1173f645355b6d7088fa7e2ad3ab9aaa784147879462dfd5b45ad72e9",
+          "response_sha256": "sha256:0ac97b866eb97c7c9221ffac6e3eeac27bfa3f42d8e719c0bd0629d56f0cd362",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 643.445,
+            "predicted_n": 55,
+            "predicted_per_second": 83.92325684401929,
+            "predicted_per_token_ms": 11.915648148148149,
+            "prompt_ms": 2732.636,
+            "prompt_n": 9883,
+            "prompt_per_second": 3616.6543952432744,
+            "prompt_per_token_ms": 0.2764986340180107
+          },
+          "status": "proposed",
+          "usage": {
+            "completion_tokens": 55,
+            "prompt_tokens": 9883,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 9938
+          },
+          "valid": true
+        }
+      ],
+      "proposal": {
+        "additions": {
+          "claims": {},
+          "figures": {},
+          "metrics": {
+            "mean_test_accuracy": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "measurements",
+              "unit": "fraction",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            }
+          },
+          "occurrences": {
+            "paper_mean_test_accuracy": {
+              "anchor": {
+                "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+                "exact": null,
+                "prefix": "The mean test accuracy is ",
+                "suffix": " on Cedar for VariantBlue."
+              },
+              "display": {
+                "kind": "percent",
+                "percent_symbol": true,
+                "places": 1
+              },
+              "file": "paper/manuscript.md",
+              "metric": "mean_test_accuracy"
+            }
+          },
+          "sources": {
+            "measurements": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            }
+          }
+        },
+        "config_path": "paperdelta.yaml",
+        "input_hashes": {
+          "paper/manuscript.md": "sha256:c39b3d23030d88348060b61695e66150f2bc9b4c5a5ce4fb01cd93d01f991358",
+          "paperdelta.yaml": "sha256:980d549d11b6064f325def62925d5358cdbb66cbfbc0b7ddffa2dbdd6a1c652e",
+          "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+        },
+        "proposal_id": "sha256:32e1b9b1c722f3513cc9bc4fb7cd0ebde7681d911a7c9d32560c7203c71482d7",
+        "proposal_schema_version": 1,
+        "rationale": {
+          "occurrences:paper_mean_test_accuracy": "The original text in the manuscript explicitly states the mean test accuracy as 71.4% on Cedar for VariantBlue. This value corresponds to the computed mean of the scores from seeds 001, 002, and 003."
+        },
+        "tool_version": "2.0.0"
+      },
+      "reason": "The locations stage has successfully bound the original text in the manuscript to the computed metric, aligning with the provided evidence and contract. The mapping is complete and ready for review.",
+      "status": "proposed"
+    },
+    "D12": {
+      "accepted_bindings": 0,
+      "actions": [
+        {
+          "action": "source",
+          "action_index": 1,
+          "elapsed_seconds": 2.9219999999986612,
+          "error": {
+            "code": "DRAFT_SOURCE",
+            "fields": [
+              []
+            ],
+            "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+            "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:f6248a8dcd056f55f35321b2b2436e6a1df7c15d668e0a07456cafbb01cccd44",
+          "response_sha256": "sha256:b06ba135ef9f5c117fc88ba64f47c0ab5ee2dda48a876cfd4241e424f504aca2",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 701.21,
+            "predicted_n": 66,
+            "predicted_per_second": 92.69690962764363,
+            "predicted_per_token_ms": 10.787846153846154,
+            "prompt_ms": 1440.532,
+            "prompt_n": 5749,
+            "prompt_per_second": 3990.886700191318,
+            "prompt_per_token_ms": 0.25057088189250304
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 66,
+            "prompt_tokens": 5749,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 5815
+          },
+          "valid": false
+        },
+        {
+          "action": "source",
+          "action_index": 2,
+          "elapsed_seconds": 3.67200000000048,
+          "error": null,
+          "finish_reason": "stop",
+          "request_sha256": "sha256:dc0f8be73eb76a17b0c7a3d6ae982d89b290254258bafb7ee301cbe9b52bf1b4",
+          "response_sha256": "sha256:a071569f2fad36bdedc49dbd097b474cba43944e4d35a4c5458d5391687fb531",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1624.139,
+            "predicted_n": 145,
+            "predicted_per_second": 88.66236202689548,
+            "predicted_per_token_ms": 11.278743055555555,
+            "prompt_ms": 1738.679,
+            "prompt_n": 6728,
+            "prompt_per_second": 3869.604452575777,
+            "prompt_per_token_ms": 0.2584243460166469
+          },
+          "status": "draft",
+          "usage": {
+            "completion_tokens": 145,
+            "prompt_tokens": 6728,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 6873
+          },
+          "valid": true
+        },
+        {
+          "action": "metric",
+          "action_index": 3,
+          "elapsed_seconds": 3.5460000000002765,
+          "error": {
+            "code": "BUILDER_EXPECTATION",
+            "fields": [],
+            "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+            "message": "聚合操作必须明确指定预期记录数。"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:e4f5d61e470e9e2a4e2e284a6fe534863c1b192ed64bef4b98e3701d1d2b7a28",
+          "response_sha256": "sha256:1b531a609e726138530cf7a18ae35067f514895e1ea3aa1dfb5e5ece13ae5f6c",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1589.618,
+            "predicted_n": 145,
+            "predicted_per_second": 90.58780159761653,
+            "predicted_per_token_ms": 11.039013888888888,
+            "prompt_ms": 1771.001,
+            "prompt_n": 6913,
+            "prompt_per_second": 3903.4421776159356,
+            "prompt_per_token_ms": 0.2561841458122378
+          },
+          "status": "needs_correction",
+          "usage": {
+            "completion_tokens": 145,
+            "prompt_tokens": 6913,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7058
+          },
+          "valid": false
+        },
+        {
+          "action": "metric",
+          "action_index": 4,
+          "elapsed_seconds": 3.688000000000102,
+          "error": {
+            "code": "DRAFT_METRIC",
+            "fields": [
+              []
+            ],
+            "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+            "message": "验证发现 1 个问题：\n$：计数指标必须使用 count 单位"
+          },
+          "finish_reason": "stop",
+          "request_sha256": "sha256:2260e9182af0ca9dbf5bd07bdd24889c39f5be7fa5f3ac3398a298e9d0d05342",
+          "response_sha256": "sha256:041c53221d6c48c79785a3eddf846d337d4f58596903d600abfdcb25d75a91af",
+          "server_timings": {
+            "cache_n": 0,
+            "predicted_ms": 1709.125,
+            "predicted_n": 156,
+            "predicted_per_second": 90.68968039201346,
+            "predicted_per_token_ms": 11.026612903225807,
+            "prompt_ms": 1810.67,
+            "prompt_n": 6990,
+            "prompt_per_second": 3860.4494468898247,
+            "prompt_per_token_ms": 0.25903719599427755
+          },
+          "status": "budget_exhausted",
+          "usage": {
+            "completion_tokens": 156,
+            "prompt_tokens": 6990,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 7146
+          },
+          "valid": false
+        }
+      ],
+      "reason": "声明度量字段和单位，筛选符合条件的实验记录，并指定预期种子集合及记录数以确保准确性。",
+      "status": "budget_exhausted"
+    }
+  }
+}

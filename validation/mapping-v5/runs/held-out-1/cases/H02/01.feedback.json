@@ -1,0 +1,88 @@
+{
+  "actions_remaining": 15,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 3,
+  "draft_id": "sha256:25b79e15e6752bc5662706e957633b4792dd61265217731fdb21ad7f43e56b3f",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "tsv",
+          "path": "results/measurements.tsv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "results_measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:25b79e15e6752bc5662706e957633b4792dd61265217731fdb21ad7f43e56b3f",
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:25b79e15e6752bc5662706e957633b4792dd61265217731fdb21ad7f43e56b3f",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.tex": "sha256:9d94fd6720e0f2fa354e73daa5d668165dceb71ca518d982e0263843295bb0b9",
+      "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+      "results/measurements.tsv": "sha256:598cac4b1cc2ec51157ecf731cc7b00c2cdee9e80900f42ffc0f08cf8fdcacda"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Reference an existing source. Declare its field unit, exact single-value where selectors, expected_count and expected_seeds as strings. A seed collection belongs in expected_seeds, not where. Omit statistics for a plain mean; unknown source units require abstention.",
+  "status": "draft",
+  "undo": {
+    "last_action": "source",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 3,
+  "elapsed_seconds": 4.093000000000757,
+  "error": {
+    "code": "BUILDER_SELECTION",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "所选项不可用：['dataset', 'model', 'checkpoint', 'split']。"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:de9fcf342e70c729ffae08db75f11642d6ae157c1e9fa1648ae56994e6eaa616",
+  "response_sha256": "sha256:cf081d13bec4a311cdabb2f895d251ce58607583f1d24195b3dc1409626d8e03",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2261.354,
+    "predicted_n": 208,
+    "predicted_per_second": 91.53807851402301,
+    "predicted_per_token_ms": 10.924415458937197,
+    "prompt_ms": 1661.409,
+    "prompt_n": 6974,
+    "prompt_per_second": 4197.641881078049,
+    "prompt_per_token_ms": 0.23822899340407228
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 208,
+    "prompt_tokens": 6974,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7182
+  },
+  "valid": false
+}

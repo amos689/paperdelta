@@ -1,0 +1,174 @@
+{
+  "abstention_limit": "Counts explicit abstention with a nonempty reason on a required-abstention case; no independent semantic assessment of the reason.",
+  "accepted_bindings": 0,
+  "action_count": 57,
+  "case_count": 12,
+  "comparison_limit": "Changed product and prompts together; these runs do not isolate a causal improvement.",
+  "complete_mapping_cases": 0,
+  "core_valid_proposals": 1,
+  "cost": {
+    "electricity_and_hardware_cost": null,
+    "paid_api_cost_usd": 0
+  },
+  "count_guards_verified": 1,
+  "execution_sha256": "sha256:86dd35e34f5b23bffc01de6de3e0b2e197bb97781422b126c5aa77eb1d00c48d",
+  "expected_abstentions": 0,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "inference_seconds": 222.5159999999987126,
+  "invalid_actions": 32,
+  "mappable_cases": 9,
+  "outcomes": {
+    "C01": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C02": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C03": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C04": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C05": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "abstained"
+    },
+    "C06": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C07": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C08": {
+      "assessment": {
+        "candidates": [
+          {
+            "binding": "occurrences:paper_main_tex_test_accuracy",
+            "contract": {
+              "display": {
+                "kind": "decimal",
+                "percent_symbol": false,
+                "places": 3
+              },
+              "metric": {
+                "expected_count": 3,
+                "expected_seeds": [
+                  1,
+                  2,
+                  3
+                ],
+                "field": "accuracy",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            },
+            "core_status": "mismatch",
+            "duplicate_target": false,
+            "expected_display": "0.841",
+            "identity_contract_match": false,
+            "location": {
+              "byte_end": 25,
+              "byte_start": 21,
+              "file": "paper/main.tex"
+            },
+            "paper_value": "86.0",
+            "result": "wrong_position"
+          }
+        ],
+        "reason": "The binding between the paper's test accuracy value and the metrics CSV file has been established, despite the value mismatch. The paper's value may be stale, but it is the correct original location as per the task instructions.",
+        "state": "proposed"
+      },
+      "complete_mapping": false,
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "proposed"
+    },
+    "C09": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "C10": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "C11": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "C12": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    }
+  },
+  "protocol_id": "paperdelta-mapping-v5",
+  "protocol_sha256": "sha256:31e504b40310c4d932365769b04e49e9f5e4e452b17ca6ba345947549b2e9995",
+  "required_abstentions": 3,
+  "scope": "Old observed regression",
+  "scored_at": "2026-10-07T08:42:03.079742+00:00",
+  "split": "regression",
+  "statuses": {
+    "abstained": 1,
+    "budget_exhausted": 10,
+    "proposed": 1
+  },
+  "usage": {
+    "completion_tokens": 9315,
+    "prompt_tokens": 418175,
+    "total_tokens": 427490
+  }
+}

@@ -1,0 +1,1041 @@
+{
+  "cases": [
+    {
+      "case": "D01",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 32,
+          "byte_start": 26,
+          "column": 27,
+          "end": 32,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4\\%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D02",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 4
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "tsv",
+              "path": "results/measurements.tsv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "scalar",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "mismatch",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 39,
+          "byte_start": 33,
+          "column": 23,
+          "context": "The mean test loss is 0.7000 on Cedar for VariantBlue.",
+          "end": 39,
+          "file": "paper/manuscript.md",
+          "format": "markdown",
+          "line": 3,
+          "locator": {
+            "block": "sha256:59e0453c0287111014d7f4756e1c95a093f3a679abce0cd984a46c071640c2de",
+            "offset": 22,
+            "section": [
+              "Results"
+            ]
+          },
+          "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+          "start": 33,
+          "text": "0.7000"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D03",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "score_pct": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+          "end": 98,
+          "file": "paper/manuscript.docx",
+          "format": "docx",
+          "locator": {
+            "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [
+              "Results"
+            ],
+            "style": "",
+            "table": 1
+          },
+          "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+          "start": 93,
+          "text": "71.4%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          },
+          {
+            "contract": false,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D03",
+      "control": 1,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score_pct",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "score_pct": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+          "end": 98,
+          "file": "paper/manuscript.docx",
+          "format": "docx",
+          "locator": {
+            "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [
+              "Results"
+            ],
+            "style": "",
+            "table": 1
+          },
+          "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+          "start": 93,
+          "text": "71.4%"
+        },
+        "reference_matches": [
+          {
+            "contract": false,
+            "location": true
+          },
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D04",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 1,
+            "expected_seeds": null,
+            "field": "/runs/evaluation~1test/score.mean",
+            "reduce": "unique",
+            "seed_column": "seed",
+            "source": {
+              "columns": {},
+              "format": "json",
+              "path": "results/export.json",
+              "primary_key": []
+            },
+            "unit": "fraction",
+            "where": {}
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 42,
+          "byte_start": 37,
+          "column": 27,
+          "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+          "end": 42,
+          "file": "paper/manuscript.md",
+          "format": "markdown",
+          "line": 3,
+          "locator": {
+            "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+            "offset": 26,
+            "section": [
+              "Results"
+            ]
+          },
+          "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+          "start": 37,
+          "text": "71.4%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D05",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 1
+          },
+          "metric": {
+            "args": [
+              {
+                "expected_count": 3,
+                "expected_seeds": [
+                  "001",
+                  "002",
+                  "003"
+                ],
+                "field": "score",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "checkpoint",
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "split": "test"
+                }
+              },
+              {
+                "expected_count": 3,
+                "expected_seeds": [
+                  "001",
+                  "002",
+                  "003"
+                ],
+                "field": "score",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "checkpoint",
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "Control",
+                  "split": "test"
+                }
+              }
+            ],
+            "op": "percentage_point_difference"
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 61,
+          "byte_start": 58,
+          "column": 48,
+          "context": "The test accuracy gain in percentage points is 6.2 on Cedar for VariantBlue.",
+          "end": 61,
+          "file": "paper/manuscript.qmd",
+          "format": "quarto",
+          "line": 3,
+          "locator": {
+            "block": "sha256:013526447f9dd0bc97eff971370a7673002fa612f08f28212e6b28908fa9217a",
+            "offset": 47,
+            "section": [
+              "Results"
+            ]
+          },
+          "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+          "start": 58,
+          "text": "6.2"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D06",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+          "end": 39,
+          "file": "paper/manuscript.pdf",
+          "format": "pdf",
+          "locator": {
+            "bbox": [
+              183.388,
+              80.484,
+              217.408,
+              92.484
+            ],
+            "block": "sha256:b106e568ed9b855b7e7a854df743045c41cd2c4e7ed6610e27476b406bd2c4a5",
+            "offset": 26,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              900,
+              500
+            ]
+          },
+          "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+          "start": 34,
+          "text": "71.4%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D07",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "cell_range": "A2:F11",
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "xlsx",
+              "path": "results/workbook.xlsx",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ],
+              "sheet": "development results"
+            },
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+          "end": 39,
+          "file": "paper/manuscript.docx",
+          "format": "docx",
+          "locator": {
+            "block": "sha256:1742d2c0bd756eb4b1cf1ea991367e93530e76c279ce21dcff170d0b1ef53912",
+            "offset": 26,
+            "paragraph": 2,
+            "part": "word/document.xml",
+            "section": [
+              "Results"
+            ],
+            "style": ""
+          },
+          "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+          "start": 34,
+          "text": "71.4%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D08",
+      "control": 0,
+      "result": {
+        "complete_mapping": true,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "args": [
+              {
+                "expected_count": 3,
+                "expected_seeds": [
+                  "001",
+                  "002",
+                  "003"
+                ],
+                "field": "score",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "checkpoint",
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "split": "test"
+                }
+              },
+              {
+                "expected_count": 3,
+                "expected_seeds": [
+                  "001",
+                  "002",
+                  "003"
+                ],
+                "field": "score",
+                "reduce": "mean",
+                "seed_column": "seed",
+                "source": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "checkpoint",
+                    "dataset",
+                    "model",
+                    "seed",
+                    "split"
+                  ]
+                },
+                "unit": "fraction",
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "Control",
+                  "split": "test"
+                }
+              }
+            ],
+            "op": "relative_change_percent"
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 47,
+          "byte_start": 42,
+          "column": 43,
+          "end": 47,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 42,
+          "text": "9.5\\%"
+        },
+        "reference_matches": [
+          {
+            "contract": true,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D01",
+      "control": "same_number_wrong_checkpoint",
+      "result": {
+        "complete_mapping": false,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "alternate",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 32,
+          "byte_start": 26,
+          "column": 27,
+          "end": 32,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4\\%"
+        },
+        "reference_matches": [
+          {
+            "contract": false,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D01",
+      "control": "wrong_unit",
+      "result": {
+        "complete_mapping": false,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "mismatch",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 32,
+          "byte_start": 26,
+          "column": 27,
+          "end": 32,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4\\%"
+        },
+        "reference_matches": [
+          {
+            "contract": false,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D01",
+      "control": "wrong_precision",
+      "result": {
+        "complete_mapping": false,
+        "contract": {
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 2
+          },
+          "metric": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "checkpoint",
+                "dataset",
+                "model",
+                "seed",
+                "split"
+              ]
+            },
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        },
+        "core_valid_proposal": true,
+        "count_guard_verified": true,
+        "deterministic_status": "pass",
+        "expected_abstention": false,
+        "expected_decision": "map",
+        "original_location": {
+          "byte_end": 32,
+          "byte_start": 26,
+          "column": 27,
+          "end": 32,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4\\%"
+        },
+        "reference_matches": [
+          {
+            "contract": false,
+            "location": true
+          }
+        ],
+        "status": "proposed"
+      }
+    },
+    {
+      "case": "D01",
+      "control": "wrong_count_rejected",
+      "error": "PROPOSAL_UNRESOLVED"
+    }
+  ],
+  "model_calls": 0,
+  "scope": "Reference and adversarial scorer controls on development tasks only.",
+  "status": "passed"
+}

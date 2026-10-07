@@ -1,0 +1,204 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.686999999999898,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:2806c22324aeee031e930a1d607177a74d0a4bb3c6d65cdf5359c7c42d100c94",
+      "response_sha256": "sha256:252f5bafccd7c9140a72c44f7288e584caace39ad759a91b30010ed359fe06fb",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1597.425,
+        "predicted_n": 149,
+        "predicted_per_second": 92.64910715683054,
+        "predicted_per_token_ms": 10.793412162162161,
+        "prompt_ms": 1546.988,
+        "prompt_n": 6527,
+        "prompt_per_second": 4219.166535228456,
+        "prompt_per_token_ms": 0.23701363566722844
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 149,
+        "prompt_tokens": 6527,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6676
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.6560000000008586,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d603ef6d6e1905596e47902b358fc7e6a611805b70b166f842c8dfc91e1fc4ad",
+      "response_sha256": "sha256:c541c0fff524fce9a31fdc44abea60935a4dedd062c71680bdae3f6495320510",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1762.78,
+        "predicted_n": 162,
+        "predicted_per_second": 91.333008089495,
+        "predicted_per_token_ms": 10.948944099378881,
+        "prompt_ms": 1647.311,
+        "prompt_n": 6908,
+        "prompt_per_second": 4193.500802216461,
+        "prompt_per_token_ms": 0.23846424435437172
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 162,
+        "prompt_tokens": 6908,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7070
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 4.843999999999141,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:68031a480cc1130bf72d9f16b9ab1661fdec197bf7ea868404cd625fc382bd53",
+      "response_sha256": "sha256:2f1644c0251512b5618a96bc4f6b8cc33c3c9621d8ddc54e8f064f78ec22281a",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2362.719,
+        "predicted_n": 211,
+        "predicted_per_second": 88.88064979373341,
+        "predicted_per_token_ms": 11.251042857142858,
+        "prompt_ms": 2052.642,
+        "prompt_n": 8338,
+        "prompt_per_second": 4062.0819412250166,
+        "prompt_per_token_ms": 0.2461791796593907
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 211,
+        "prompt_tokens": 8338,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8549
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 4,
+      "elapsed_seconds": 3.82799999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5b33ae74db2546e84160c40f943e76073812a9e970349aa460f851d1a14fc9ce",
+      "response_sha256": "sha256:d25f1995799631af80ba5323ff3dbe9c2f78b55450684b4b3f5523a57d465acf",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 774.877,
+        "predicted_n": 66,
+        "predicted_per_second": 83.88428098911182,
+        "predicted_per_token_ms": 11.921184615384615,
+        "prompt_ms": 2652.093,
+        "prompt_n": 10430,
+        "prompt_per_second": 3932.7429317146875,
+        "prompt_per_token_ms": 0.25427545541706614
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 66,
+        "prompt_tokens": 10430,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10496
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_measurements",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_accuracy_value": {
+          "anchor": {
+            "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+            "exact": null,
+            "prefix": "The mean test accuracy is ",
+            "suffix": " on Cedar for VariantBlue."
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/manuscript.md",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/manuscript.md": "sha256:c39b3d23030d88348060b61695e66150f2bc9b4c5a5ce4fb01cd93d01f991358",
+      "paperdelta.yaml": "sha256:980d549d11b6064f325def62925d5358cdbb66cbfbc0b7ddffa2dbdd6a1c652e",
+      "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+    },
+    "proposal_id": "sha256:3b001c0cfdebb8ade70a3239071f10b4f91058d0f2e61d3c73dda4ccdf0c4245",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:mean_test_accuracy_value": "The mean test accuracy value is explicitly stated in the paper as 71.4% and corresponds to the computed mean of the scores for the specified dataset, model, checkpoint, and split."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The mean test accuracy value is correctly bound to the specified dataset, model, checkpoint, and split, with the appropriate display format and unit. The numeric mismatch is due to a stale manuscript value, but the original location is justified.",
+  "status": "proposed"
+}

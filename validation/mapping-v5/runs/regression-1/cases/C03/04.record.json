@@ -1,0 +1,48 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 4.469000000000051,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "expected_seeds",
+        0
+      ],
+      [
+        "expected_seeds",
+        1
+      ],
+      [
+        "expected_seeds",
+        2
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "3 validation errors for MetricMappingStage\nexpected_seeds.0\n  Input should be a valid string [type=string_type, input_value=1, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.1\n  Input should be a valid string [type=string_type, input_value=2, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.2\n  Input should be a valid string [type=string_type, input_value=3, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:464f8591bdaf76bec2c48d19dc66db2639421a841a90d8c5d5193de6cb01e47f",
+  "response_sha256": "sha256:1f5da871a6619f1f91afa5818492c396e5b0c4691701c75d8d5f3ac375060ccf",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1913.093,
+    "predicted_n": 170,
+    "predicted_per_second": 88.33862232520845,
+    "predicted_per_token_ms": 11.320076923076924,
+    "prompt_ms": 2298.959,
+    "prompt_n": 9246,
+    "prompt_per_second": 4021.8203108450393,
+    "prompt_per_token_ms": 0.24864362967769846
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 170,
+    "prompt_tokens": 9246,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9416
+  },
+  "valid": false
+}

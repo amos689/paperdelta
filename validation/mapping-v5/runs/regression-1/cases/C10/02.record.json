@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 2,
+  "elapsed_seconds": 3.530999999999949,
+  "error": {
+    "code": "RECORD_COUNT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Expected 6 records, got 3"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:fee5172e83ad5ea74d1f4fa67a18d6c38f708b52ddd09ebd4ccc26fcf0ff1f6d",
+  "response_sha256": "sha256:c2f6860963f41129cbb4928e160ce11f1bdab9be810c784c01bae838da8e0db1",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1782.12,
+    "predicted_n": 165,
+    "predicted_per_second": 92.02522837968263,
+    "predicted_per_token_ms": 10.866585365853657,
+    "prompt_ms": 1545.513,
+    "prompt_n": 6518,
+    "prompt_per_second": 4217.369895950406,
+    "prompt_per_token_ms": 0.23711460570727216
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 165,
+    "prompt_tokens": 6518,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6683
+  },
+  "valid": false
+}

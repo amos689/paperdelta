@@ -1,0 +1,35 @@
+{
+  "action": "locations",
+  "action_index": 3,
+  "elapsed_seconds": 5.390000000001237,
+  "error": {
+    "code": "MAPPING_ORDER",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "请选择 allowed_actions 中的动作，只引用已声明的来源和指标。"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:4ad2991ff84526a36da44d51506708355441c8059093182546ad0fb0c4d542bb",
+  "response_sha256": "sha256:bd6c05fccc380dcc88833890840e6c8660fe460cdc1d4f8d5c88c1caa20273a0",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 3037.736,
+    "predicted_n": 268,
+    "predicted_per_second": 87.89440557046431,
+    "predicted_per_token_ms": 11.377288389513108,
+    "prompt_ms": 2211.061,
+    "prompt_n": 8883,
+    "prompt_per_second": 4017.5282364439513,
+    "prompt_per_token_ms": 0.2489092648879883
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 268,
+    "prompt_tokens": 8883,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9151
+  },
+  "valid": false
+}

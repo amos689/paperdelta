@@ -1,0 +1,98 @@
+{
+  "version": "2.0.0",
+  "installed_runtime": "<checkout>\\build\\v20-installed1\\venv-full\\Lib\\site-packages\\paperdelta\\__init__.py",
+  "results": [
+    {
+      "suite": "studio",
+      "exit_code": 1,
+      "seconds": 4.718000000000757,
+      "expected_cases": 10
+    },
+    {
+      "suite": "agent-review",
+      "exit_code": 0,
+      "seconds": 35.59300000000076,
+      "expected_cases": 10,
+      "cases": 10
+    },
+    {
+      "suite": "revisions",
+      "exit_code": 0,
+      "seconds": 84.09399999999914,
+      "expected_cases": 10,
+      "cases": 10
+    },
+    {
+      "suite": "review",
+      "exit_code": 0,
+      "seconds": 142.95299999999952,
+      "expected_cases": 6,
+      "cases": 6
+    },
+    {
+      "suite": "reuse",
+      "exit_code": 0,
+      "seconds": 33.42200000000048,
+      "expected_cases": 2,
+      "cases": 2
+    },
+    {
+      "suite": "scale",
+      "exit_code": 0,
+      "seconds": 25.95299999999952,
+      "expected_cases": 2,
+      "cases": 2
+    },
+    {
+      "suite": "evidence",
+      "exit_code": 0,
+      "seconds": 35.51599999999962,
+      "expected_cases": 6,
+      "cases": 6
+    },
+    {
+      "suite": "statistics",
+      "exit_code": 0,
+      "seconds": 86.0619999999999,
+      "expected_cases": 16,
+      "cases": 16
+    },
+    {
+      "suite": "layout",
+      "exit_code": 0,
+      "seconds": 32.14100000000144,
+      "expected_cases": 8,
+      "cases": 8
+    },
+    {
+      "suite": "reliability",
+      "exit_code": 0,
+      "seconds": 36.38999999999942,
+      "expected_cases": 8,
+      "cases": 8
+    },
+    {
+      "suite": "workflows",
+      "exit_code": 0,
+      "seconds": 41.20399999999972,
+      "expected_cases": 4,
+      "cases": 4
+    },
+    {
+      "suite": "batch",
+      "exit_code": 0,
+      "seconds": 279.28199999999924,
+      "expected_cases": 6,
+      "cases": 6
+    },
+    {
+      "suite": "annotations",
+      "exit_code": 0,
+      "seconds": 26.061999999999898,
+      "expected_cases": 4,
+      "cases": 4
+    }
+  ],
+  "planned_cases": 92,
+  "scope": "Actual installed-wheel Chrome workflows, two isolated fixture suites at a time."
+}

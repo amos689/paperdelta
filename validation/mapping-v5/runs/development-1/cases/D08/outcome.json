@@ -1,0 +1,144 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.125,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+        "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:3eeb1228cd0fc09ab1526913f0757ccab8a4b2b42a34e464a906f94f47618e8f",
+      "response_sha256": "sha256:b6f0b1cec3b9712281a765d6fedfc86b074f05c0e480759cc214b43095d599c3",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 909.763,
+        "predicted_n": 85,
+        "predicted_per_second": 92.33173914524991,
+        "predicted_per_token_ms": 10.830511904761906,
+        "prompt_ms": 1367.885,
+        "prompt_n": 5758,
+        "prompt_per_second": 4209.418189394577,
+        "prompt_per_token_ms": 0.23756252170892672
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 85,
+        "prompt_tokens": 5758,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5843
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.8280000000004293,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:1e054eaef2751d3dfc4e073026dd93508fdad0e6c6306fead375ce6da5d50dae",
+      "response_sha256": "sha256:443e302d45d5e246931bf48c71fb70191921ae089e2019ca182c26507e2a495e",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1935.954,
+        "predicted_n": 178,
+        "predicted_per_second": 91.42779218927724,
+        "predicted_per_token_ms": 10.937593220338982,
+        "prompt_ms": 1672.522,
+        "prompt_n": 6763,
+        "prompt_per_second": 4043.5940453997023,
+        "prompt_per_token_ms": 0.24730474641431316
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 178,
+        "prompt_tokens": 6763,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6941
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.7659999999996217,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+        "message": "聚合操作必须明确指定预期记录数。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:4c2180025d1fc3d76512fb3e569f411a236f6644cc151c7fd02e514c8d75a61c",
+      "response_sha256": "sha256:bbe344f5f2f190c5e2b0d925cc12fd1284c1abeff12b3a7e14128f26bda53279",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1861.409,
+        "predicted_n": 170,
+        "predicted_per_second": 90.79143809877357,
+        "predicted_per_token_ms": 11.014254437869823,
+        "prompt_ms": 1740.733,
+        "prompt_n": 6956,
+        "prompt_per_second": 3996.017769525826,
+        "prompt_per_token_ms": 0.25024913743530763
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 170,
+        "prompt_tokens": 6956,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7126
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.9840000000003783,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:6f8686bb756d589b1a62c5b4e3d0bc844096d9510239de9f115f3d2e4abbc48f",
+      "response_sha256": "sha256:f24c470f37822d6dca6e8224b21f346bc1f95fd3e3713f345744c7eedc331ba4",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2060.368,
+        "predicted_n": 187,
+        "predicted_per_second": 90.27513531563294,
+        "predicted_per_token_ms": 11.077247311827957,
+        "prompt_ms": 1759.67,
+        "prompt_n": 7025,
+        "prompt_per_second": 3992.2258150675975,
+        "prompt_per_token_ms": 0.25048683274021355
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 187,
+        "prompt_tokens": 7025,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7212
+      },
+      "valid": false
+    }
+  ],
+  "reason": "声明度量指标为 test_accuracy，其来源为 measurements 数据集中的 score 字段，单位为 fraction。筛选条件包括数据集 Cedar、模型 VariantBlue 和划分 test，并预期种子为 001、002、003，参与计算的记录数为 3。",
+  "status": "budget_exhausted"
+}

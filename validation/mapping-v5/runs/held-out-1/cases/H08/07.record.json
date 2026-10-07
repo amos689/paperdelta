@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 7,
+  "elapsed_seconds": 5.813000000000102,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "This name already exists in preview.additions. Reference it instead of adding it again. To change a successful declaration, undo later stages and that declaration, then add the corrected version.",
+    "message": "metrics already contains test_accuracy_variantamber; choose another identifier."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:c14054a545f2dd35b5352ae04a5f00bf9c8a7b389b05385e51487b4c9ecbc358",
+  "response_sha256": "sha256:ff84fc0722644d59cacb73474585fa7d970b3aa1363e7a1713ce388546a9ef9b",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2009.361,
+    "predicted_n": 166,
+    "predicted_per_second": 82.11565766430223,
+    "predicted_per_token_ms": 12.177945454545455,
+    "prompt_ms": 3068.376,
+    "prompt_n": 11774,
+    "prompt_per_second": 3837.2089991578605,
+    "prompt_per_token_ms": 0.26060608119585527
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 166,
+    "prompt_tokens": 11774,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11940
+  },
+  "valid": false
+}

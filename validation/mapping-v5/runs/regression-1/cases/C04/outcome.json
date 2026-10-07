@@ -1,0 +1,215 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.6719999999995707,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:43f4f3732fce79c7431408385bdc5ca26fdaef58f32a198220758e048fa01445",
+      "response_sha256": "sha256:290f33e67918ae35b53a652a64d7a703da4c91448a8864d2c97da87a4aa82305",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1707.271,
+        "predicted_n": 166,
+        "predicted_per_second": 96.64546518976776,
+        "predicted_per_token_ms": 10.347096969696969,
+        "prompt_ms": 1291.565,
+        "prompt_n": 5557,
+        "prompt_per_second": 4302.532199308591,
+        "prompt_per_token_ms": 0.2324212704696779
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 5557,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5723
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.6090000000003783,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7b4a6a03d1e5643f99b5b753f5d84ebe62b7abe1152c2b4c43ac237213414e64",
+      "response_sha256": "sha256:39fb923bb9fdba3c10a57e792bcecc85f957bb73c9bc1d4f911a2205197e077b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1766.617,
+        "predicted_n": 166,
+        "predicted_per_second": 93.39885215640967,
+        "predicted_per_token_ms": 10.706769696969697,
+        "prompt_ms": 1596.098,
+        "prompt_n": 6722,
+        "prompt_per_second": 4211.520846464315,
+        "prompt_per_token_ms": 0.2374439155013389
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 6722,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6888
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 5.015999999999622,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:3cad6cffe8874ee00d3968d19c12c75c58a436f91a1d070dfc25efa397d15f0d",
+      "response_sha256": "sha256:151df641e1be58ed703e030dc6347fdeeeb905f634143211b7b84be1bd90ade2",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2641.447,
+        "predicted_n": 240,
+        "predicted_per_second": 90.48071000478147,
+        "predicted_per_token_ms": 11.05207949790795,
+        "prompt_ms": 1947.589,
+        "prompt_n": 8046,
+        "prompt_per_second": 4131.261780591285,
+        "prompt_per_token_ms": 0.2420567984091474
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 240,
+        "prompt_tokens": 8046,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8286
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 4.640000000000327,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "expected_seeds",
+            0
+          ],
+          [
+            "expected_seeds",
+            1
+          ],
+          [
+            "expected_seeds",
+            2
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "3 validation errors for MetricMappingStage\nexpected_seeds.0\n  Input should be a valid string [type=string_type, input_value=1, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.1\n  Input should be a valid string [type=string_type, input_value=2, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\nexpected_seeds.2\n  Input should be a valid string [type=string_type, input_value=3, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:6df841298bea5fa645f3504afc165f3f7e297ea4797c812bf63de57238364f6b",
+      "response_sha256": "sha256:f9bc9478ac0d57ec43b740304a6692e10b9d61135b87ba6a7c21650063aa9e8a",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2029.86,
+        "predicted_n": 180,
+        "predicted_per_second": 88.18342151675486,
+        "predicted_per_token_ms": 11.34,
+        "prompt_ms": 2340.638,
+        "prompt_n": 9386,
+        "prompt_per_second": 4010.0177814766744,
+        "prompt_per_token_ms": 0.2493754528020456
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 180,
+        "prompt_tokens": 9386,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9566
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 5,
+      "elapsed_seconds": 5.296999999999571,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "occurrences already contains test_accuracy_value; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:95bbd71528b213f6a8ca64551915718ad7733baf303e1eebae7e35ccef0f3003",
+      "response_sha256": "sha256:52865e567976a377f8ea1625b699f747a14c70662444f7ba7a4d0bda9cfd8a43",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2608.565,
+        "predicted_n": 229,
+        "predicted_per_second": 87.40437750257325,
+        "predicted_per_token_ms": 11.441074561403509,
+        "prompt_ms": 2392.506,
+        "prompt_n": 9598,
+        "prompt_per_second": 4011.6931786168984,
+        "prompt_per_token_ms": 0.24927130652219212
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 229,
+        "prompt_tokens": 9598,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9827
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 6,
+      "elapsed_seconds": 5.219000000000051,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "occurrences already contains test_accuracy_value; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7ce50f230cd56e5424efda7fbffe6aaeebbc214599b1c34c91bb443a45ed7cfc",
+      "response_sha256": "sha256:d4283d37ec3446d30b563acdaec4eb60cbff166676593b99fec55306f4d9abbb",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2566.613,
+        "predicted_n": 227,
+        "predicted_per_second": 88.05378917663084,
+        "predicted_per_token_ms": 11.356694690265487,
+        "prompt_ms": 2358.621,
+        "prompt_n": 9457,
+        "prompt_per_second": 4009.546256053855,
+        "prompt_per_token_ms": 0.24940477952839168
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 227,
+        "prompt_tokens": 9457,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9684
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Updating the locations stage with the correct candidate ID, display kind as percent, metric name, names, percent symbol, places, and rationale to align with the paper's text and the computed metric value.",
+  "status": "budget_exhausted"
+}

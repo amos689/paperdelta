@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "replays": [
+    {
+      "run": "regression-1",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "run": "development-1",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "run": "regression-2",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "run": "development-2",
+      "cases": 12,
+      "status": "passed"
+    },
+    {
+      "run": "held-out-1",
+      "cases": 12,
+      "status": "passed"
+    }
+  ],
+  "network_calls": 0,
+  "scope": "Frozen action and score replay; not fresh inference."
+}

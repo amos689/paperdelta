@@ -1,0 +1,39 @@
+{
+  "action": "locations",
+  "action_index": 6,
+  "elapsed_seconds": 5.640000000001237,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "metric"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for LocationsMappingStage\nmetric\n  Field required [type=missing, input_value={'candidate_ids': ['sha25...measurements.csv file.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:20618bbbf130dd505dedab7978fea16bc572938938078c9476a4181d1205c56b",
+  "response_sha256": "sha256:43c8cc7e7effc863a4c81553e517165a2e9a8a0dc0d94dccf7e2411120b379af",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2455.33,
+    "predicted_n": 203,
+    "predicted_per_second": 82.27000036654951,
+    "predicted_per_token_ms": 12.15509900990099,
+    "prompt_ms": 2986.203,
+    "prompt_n": 11518,
+    "prompt_per_second": 3857.0720074958067,
+    "prompt_per_token_ms": 0.2592640215315159
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 203,
+    "prompt_tokens": 11518,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11721
+  },
+  "valid": false
+}

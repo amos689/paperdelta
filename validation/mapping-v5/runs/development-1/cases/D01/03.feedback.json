@@ -1,0 +1,299 @@
+{
+  "actions_remaining": 13,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:3d14c3de419efa93f3e5a2f11a10be0da030eb4532c88b864110f2abd3d4bbcb",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "measurements",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_accuracy"
+    ],
+    "available_sources": [
+      "measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:3d14c3de419efa93f3e5a2f11a10be0da030eb4532c88b864110f2abd3d4bbcb",
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:3d14c3de419efa93f3e5a2f11a10be0da030eb4532c88b864110f2abd3d4bbcb",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.tex": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+      "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+      "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+    },
+    "metrics": {
+      "mean_test_accuracy": {
+        "computed": {
+          "fingerprint": "sha256:797539187ada26719883765cd6f3ff64597e74dcef529fe2a66c307f49012e1d",
+          "unit": "fraction",
+          "value": "0.714"
+        },
+        "declared_contract": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "measurements",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        },
+        "declared_identity": {
+          "cell_range": null,
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ],
+          "reduce": "mean",
+          "seed_column": "seed",
+          "selectors": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          },
+          "sha256": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865",
+          "sheet": null,
+          "source": "measurements",
+          "unit": "fraction"
+        },
+        "evidence": [
+          {
+            "count": 3,
+            "field": "score",
+            "inspect": {
+              "cell_range": null,
+              "field": "score",
+              "full_report_pointer": "/preview/metrics/mean_test_accuracy/evidence",
+              "path": "results/measurements.csv",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              },
+              "sheet": null,
+              "source": "measurements"
+            },
+            "locations": [
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/measurements.csv",
+            "records": [
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "001",
+                  "split": "test"
+                },
+                "value": "0.712"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "002",
+                  "split": "test"
+                },
+                "value": "0.714"
+              },
+              {
+                "key": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "seed": "003",
+                  "split": "test"
+                },
+                "value": "0.716"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "sha256": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865",
+            "source": "measurements",
+            "source_contract": {
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ]
+            },
+            "truncated": false,
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Cedar",
+              "model": "VariantBlue",
+              "split": "test"
+            }
+          }
+        ],
+        "name": "mean_test_accuracy",
+        "notices": [],
+        "verification": "evaluated_under_declared_contract"
+      }
+    },
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Review source units and contributing identities first. Add any required comparison metric/derivation, then select the original location and its exact decimal/percent formatting. Use undo for an earlier wrong declaration.",
+  "status": "draft",
+  "undo": {
+    "last_action": "metric",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

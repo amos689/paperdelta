@@ -48,7 +48,7 @@ available for authorized scripted workflows.
 ## Optional MCP
 
 Install `python -m pip install 'paperdelta[mcp]'` (or `-e '.[mcp]'` in a checkout). The adapter uses official
-[MCP Python SDK 2.2](https://github.com/modelcontextprotocol/python-sdk) stdio APIs;
+[MCP Python SDK 2.x](https://github.com/modelcontextprotocol/python-sdk) stdio APIs;
 the extra is constrained to 2.x. The core checker does not import the SDK.
 
 A host needs this command and argument array; adapt the surrounding configuration

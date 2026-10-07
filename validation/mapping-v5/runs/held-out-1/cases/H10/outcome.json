@@ -1,0 +1,142 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.5160000000014406,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d6db572b37a9800f20ee4ed63f0e9bdc4f9cb2c03d7fd0a51b677e93daeeecec",
+      "response_sha256": "sha256:17c33058820e37e387c734d12d3fac572a181362691d0060f6ca5d099c3922b1",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1453.631,
+        "predicted_n": 136,
+        "predicted_per_second": 92.87088676562347,
+        "predicted_per_token_ms": 10.767637037037037,
+        "prompt_ms": 1516.909,
+        "prompt_n": 6392,
+        "prompt_per_second": 4213.832207469268,
+        "prompt_per_token_ms": 0.2373136733416771
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 136,
+        "prompt_tokens": 6392,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6528
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.4059999999990396,
+      "error": {
+        "code": "SEED_SET",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Expected seeds ['001', '002', '003'], got ['001', '002', '003', '001', '002', '003']"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:088bf40a89c8e02916b85e40a7a142ff31b5a5f684ec82e0f615a2abbfa61fb5",
+      "response_sha256": "sha256:b0bcb503a89fa773df33fd594fc4a7eb8340beabf44aae49a4045d42d0fd296b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1585.576,
+        "predicted_n": 147,
+        "predicted_per_second": 92.08010212061737,
+        "predicted_per_token_ms": 10.860109589041096,
+        "prompt_ms": 1607.609,
+        "prompt_n": 6735,
+        "prompt_per_second": 4189.451539522359,
+        "prompt_per_token_ms": 0.23869472902746844
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 6735,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6882
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 4.04700000000048,
+      "error": {
+        "code": "MAPPING_ORDER",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c61e16464140854d7fb49f9f5ae3cc144902c398b56f8257bab31d70fd77feaf",
+      "response_sha256": "sha256:ef8df63b631891f30d4b56cd012ec5db0b4d8019004fb120a305229970a7fc72",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2262.184,
+        "predicted_n": 209,
+        "predicted_per_second": 91.94654369405848,
+        "predicted_per_token_ms": 10.875884615384617,
+        "prompt_ms": 1636.633,
+        "prompt_n": 6864,
+        "prompt_per_second": 4193.976291569337,
+        "prompt_per_token_ms": 0.23843720862470863
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 209,
+        "prompt_tokens": 6864,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7073
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.2659999999996217,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Metric selects an undeclared column"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:bfa59dd1bb285cbf6936e254e9a3580db4d36d33a7384635e268c2ecebebe59e",
+      "response_sha256": "sha256:92c68160fa319f059bd8d0155f860d41479cd54058551b72c327f0532feb1fbe",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1417.846,
+        "predicted_n": 130,
+        "predicted_per_second": 90.98308278896297,
+        "predicted_per_token_ms": 10.991054263565891,
+        "prompt_ms": 1647.764,
+        "prompt_n": 6890,
+        "prompt_per_second": 4181.424038879355,
+        "prompt_per_token_ms": 0.2391529753265602
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 130,
+        "prompt_tokens": 6890,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7020
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Declare the metric for mean test accuracy, referencing the results_measurements source and specifying the required fields, unit, and reduction method.",
+  "status": "budget_exhausted"
+}

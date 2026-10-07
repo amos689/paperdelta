@@ -1,0 +1,102 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.95299999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:462a2c52c752fe0d8441d51dac27eb94bfa66f680bbe637c5d0ef68072e40756",
+      "response_sha256": "sha256:141e3053eeea0aa34bdbd5392cc33a5efadc5bea7e59eeccabba143e71cae81f",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1690.117,
+        "predicted_n": 155,
+        "predicted_per_second": 91.1179521891088,
+        "predicted_per_token_ms": 10.974785714285714,
+        "prompt_ms": 1641.714,
+        "prompt_n": 6886,
+        "prompt_per_second": 4194.396831604043,
+        "prompt_per_token_ms": 0.23841330235259947
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 155,
+        "prompt_tokens": 6886,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7041
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.5159999999996217,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e9ccd61aee754002b05170b7f60c61dfb8be790aaca3a977b77b55b45af91799",
+      "response_sha256": "sha256:471512d4ab445e9c202f5e1df007c7f2b1c0f2b48f91994bc9a1c4a74fc5e2b7",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1589.802,
+        "predicted_n": 145,
+        "predicted_per_second": 90.57731717534637,
+        "predicted_per_token_ms": 11.040291666666667,
+        "prompt_ms": 1738.06,
+        "prompt_n": 7238,
+        "prompt_per_second": 4164.413196322336,
+        "prompt_per_token_ms": 0.2401298701298701
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 7238,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7383
+      },
+      "valid": false
+    },
+    {
+      "action": "abstain",
+      "action_index": 3,
+      "elapsed_seconds": 2.4680000000007567,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d491f6036496cbdea0a28e207caba03863e8bc7023dddc674725ff505ebd3144",
+      "response_sha256": "sha256:b464b9e6fb96ceffc05c5311e7f0911261f36bc24c02da70c68d56080bd510b9",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 547.443,
+        "predicted_n": 49,
+        "predicted_per_second": 87.68036124308833,
+        "predicted_per_token_ms": 11.4050625,
+        "prompt_ms": 1760.365,
+        "prompt_n": 7305,
+        "prompt_per_second": 4149.707589051134,
+        "prompt_per_token_ms": 0.24098083504449008
+      },
+      "status": "abstained",
+      "usage": {
+        "completion_tokens": 49,
+        "prompt_tokens": 7305,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7354
+      },
+      "valid": true
+    }
+  ],
+  "reason": "指标选择了未声明的列，无法继续绑定测试准确率的均值。需要确认字段和单位后再进行操作。",
+  "status": "abstained"
+}

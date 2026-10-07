@@ -1,0 +1,102 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.8590000000003783,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9f9765a080837a9d9d57375a9622e1bf4f3b38013b4a0dbd2d3ab5c7d0aa2625",
+      "response_sha256": "sha256:704bd291321d52eb37631b69c7ec1015692aa5a6baa22aaf6173d52f4fd7ca17",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1679.484,
+        "predicted_n": 155,
+        "predicted_per_second": 91.6948300787623,
+        "predicted_per_token_ms": 10.90574025974026,
+        "prompt_ms": 1633.834,
+        "prompt_n": 6836,
+        "prompt_per_second": 4184.023591135941,
+        "prompt_per_token_ms": 0.23900438853130487
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 155,
+        "prompt_tokens": 6836,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6991
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.54700000000048,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0422ec35cde95b875e11f2f7383e3d7e2696d1bf1079d7bb7d78240836bc7207",
+      "response_sha256": "sha256:8e11e74f4e7cd4652d738be016b5ede94789346c5a1100dd5208a5f14f4245d1",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1616.325,
+        "predicted_n": 147,
+        "predicted_per_second": 90.32836836651045,
+        "predicted_per_token_ms": 11.070719178082193,
+        "prompt_ms": 1726.279,
+        "prompt_n": 7180,
+        "prompt_per_second": 4159.234978818604,
+        "prompt_per_token_ms": 0.24042883008356547
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 7180,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7327
+      },
+      "valid": false
+    },
+    {
+      "action": "abstain",
+      "action_index": 3,
+      "elapsed_seconds": 2.375,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:20977488154ad646b0ea6d737cf8924b4dd756243460d31f807f32b610b5557b",
+      "response_sha256": "sha256:20e37baed5cb32f2fd7a159d511a4a566729e3ae3ab85d6efba138cb7b399382",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 477.596,
+        "predicted_n": 43,
+        "predicted_per_second": 87.94043501201853,
+        "predicted_per_token_ms": 11.371333333333334,
+        "prompt_ms": 1743.006,
+        "prompt_n": 7249,
+        "prompt_per_second": 4158.907083509753,
+        "prompt_per_token_ms": 0.24044778590150367
+      },
+      "status": "abstained",
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_tokens": 7249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7292
+      },
+      "valid": true
+    }
+  ],
+  "reason": "指标选择了未声明的列，无法继续绑定。需要确认字段和单位是否符合要求。",
+  "status": "abstained"
+}

@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 2,
+  "elapsed_seconds": 3.4059999999990396,
+  "error": {
+    "code": "SEED_SET",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Expected seeds ['001', '002', '003'], got ['001', '002', '003', '001', '002', '003']"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:088bf40a89c8e02916b85e40a7a142ff31b5a5f684ec82e0f615a2abbfa61fb5",
+  "response_sha256": "sha256:b0bcb503a89fa773df33fd594fc4a7eb8340beabf44aae49a4045d42d0fd296b",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1585.576,
+    "predicted_n": 147,
+    "predicted_per_second": 92.08010212061737,
+    "predicted_per_token_ms": 10.860109589041096,
+    "prompt_ms": 1607.609,
+    "prompt_n": 6735,
+    "prompt_per_second": 4189.451539522359,
+    "prompt_per_token_ms": 0.23869472902746844
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 147,
+    "prompt_tokens": 6735,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6882
+  },
+  "valid": false
+}

@@ -1,0 +1,445 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "finish",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:0028d7d7ae399a1436deb343480cbcbad90f105e9e635dfa0f947e9e602cc01e",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score_pct",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_measurements",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_71_4": {
+          "anchor": {
+            "exact": null,
+            "prefix": null,
+            "suffix": null,
+            "table": {
+              "column": 1,
+              "headers": [
+                "Experiment & Score (%)"
+              ],
+              "percent_symbol": true,
+              "row_prefix": [
+                "Cedar / VariantBlue / selected / test"
+              ]
+            }
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 3
+          },
+          "file": "paper/manuscript.docx",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "score_pct": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_accuracy"
+    ],
+    "available_sources": [
+      "results_measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:0028d7d7ae399a1436deb343480cbcbad90f105e9e635dfa0f947e9e602cc01e",
+    "rationale": {
+      "occurrences:test_accuracy_71_4": "The original location in the Word document's table corresponds to the mean test accuracy for the specified dataset, model, checkpoint, and split. The value '71.4%' is formatted as a percentage with three decimal places."
+    }
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [
+      {
+        "asserted_rationale": "The original location in the Word document's table corresponds to the mean test accuracy for the specified dataset, model, checkpoint, and split. The value '71.4%' is formatted as a percentage with three decimal places.",
+        "binding": "occurrences:test_accuracy_71_4",
+        "conflicts": [],
+        "context": {
+          "after": "\non Cedar for VariantBlue.\n",
+          "before": "Results\nThe mean test accuracy is\nExperiment\nScore (%)\nCedar / VariantBlue / selected / test\n",
+          "column_header": "Score (%)",
+          "kind": "table",
+          "row": "Cedar / VariantBlue / selected / test | [value]",
+          "text": "71.4%"
+        },
+        "declared_binding": {
+          "anchor": {
+            "exact": null,
+            "prefix": null,
+            "suffix": null,
+            "table": {
+              "column": 1,
+              "headers": [
+                "Experiment & Score (%)"
+              ],
+              "percent_symbol": true,
+              "row_prefix": [
+                "Cedar / VariantBlue / selected / test"
+              ]
+            }
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 3
+          },
+          "file": "paper/manuscript.docx",
+          "metric": "mean_test_accuracy"
+        },
+        "deterministic_result": {
+          "actual": "71.4%",
+          "evidence_fingerprint": "sha256:72d562d868e08bb94a46af92a38a44eeb6f61f1dd8cfdfcdf83b170d92eca4fe",
+          "expected": "71.400%",
+          "location": {
+            "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+            "end": 98,
+            "file": "paper/manuscript.docx",
+            "format": "docx",
+            "locator": {
+              "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+              "cell": 2,
+              "offset": 0,
+              "paragraph": 6,
+              "part": "word/document.xml",
+              "row": 2,
+              "section": [
+                "Results"
+              ],
+              "style": "",
+              "table": 1
+            },
+            "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+            "start": 93,
+            "text": "71.4%"
+          },
+          "metric": "mean_test_accuracy",
+          "status": "pass",
+          "usage": "table"
+        },
+        "group": "occurrences",
+        "identity_status": "requires_author_review",
+        "label": "paper/manuscript.docx · table 1, row 2, cell 2 · paragraph 6",
+        "location": {
+          "context": "Experiment | Score (%)\nCedar / VariantBlue / selected / test | 71.4%",
+          "end": 98,
+          "file": "paper/manuscript.docx",
+          "format": "docx",
+          "locator": {
+            "block": "sha256:81ab1af144d3b4132d0a42459bc80ddde08abaf1df2fb076cf6e9f94cd75027a",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [
+              "Results"
+            ],
+            "style": "",
+            "table": 1
+          },
+          "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+          "start": 93,
+          "text": "71.4%"
+        },
+        "manuscript_sha256": "sha256:4e594158931e93525796ab060d4599e3a647410588e1f5319b81068f16442586",
+        "metrics": {
+          "mean_test_accuracy": {
+            "computed": {
+              "fingerprint": "sha256:72d562d868e08bb94a46af92a38a44eeb6f61f1dd8cfdfcdf83b170d92eca4fe",
+              "status": "ok",
+              "unit": "percent",
+              "value": "71.400"
+            },
+            "declared_contract": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score_pct",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "percent",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            },
+            "declared_identity": {
+              "cell_range": null,
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "score_pct": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score_pct",
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ],
+              "reduce": "mean",
+              "seed_column": "seed",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              },
+              "sha256": "sha256:b222f3154bd9cbb72f43eafee2bb86edcd5dd3f23abb511b18153dd86cf1a5c3",
+              "sheet": null,
+              "source": "results_measurements",
+              "unit": "percent"
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "score_pct",
+                "inspect": {
+                  "cell_range": null,
+                  "field": "score_pct",
+                  "full_report_pointer": "/preview/metrics/mean_test_accuracy/evidence",
+                  "path": "results/measurements.csv",
+                  "selectors": {
+                    "checkpoint": "selected",
+                    "dataset": "Cedar",
+                    "model": "VariantBlue",
+                    "split": "test"
+                  },
+                  "sheet": null,
+                  "source": "results_measurements"
+                },
+                "locations": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "line": 4
+                  }
+                ],
+                "locations_total": 3,
+                "path": "results/measurements.csv",
+                "records": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "value": "71.200"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "value": "71.400"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "value": "71.600"
+                  }
+                ],
+                "records_total": 3,
+                "reduce": "mean",
+                "sha256": "sha256:b222f3154bd9cbb72f43eafee2bb86edcd5dd3f23abb511b18153dd86cf1a5c3",
+                "source": "results_measurements",
+                "source_contract": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "score_pct": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "checkpoint",
+                    "split",
+                    "seed"
+                  ]
+                },
+                "truncated": false,
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "split": "test"
+                }
+              }
+            ],
+            "name": "mean_test_accuracy",
+            "notices": [],
+            "verification": "evaluated_under_declared_contract"
+          }
+        },
+        "notices": [
+          "Review the declared experiment against the original context. Equal numbers alone do not establish identity."
+        ],
+        "rationale_status": "unverified_assertion"
+      }
+    ],
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 0,
+      "outside_scope_numbers": [],
+      "pass": 1,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [],
+    "evidence_row_limit": 5,
+    "exit_code": 0,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.docx": "sha256:4e594158931e93525796ab060d4599e3a647410588e1f5319b81068f16442586",
+      "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+      "results/measurements.csv": "sha256:b222f3154bd9cbb72f43eafee2bb86edcd5dd3f23abb511b18153dd86cf1a5c3"
+    },
+    "proposal_id": "sha256:aa7f17d69146298ed42cdaf52c896c58c502c7e465a01cf3f14832e44b5acd60",
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Inspect review.bindings before finish: source path/hash, identity, seed/count contract, declared source unit, original context, display precision and computed value. A mismatch may be a stale manuscript. Undo a wrong declaration or abstain if its meaning is unsupported.",
+  "status": "draft",
+  "undo": {
+    "last_action": "locations",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "action": "source",
+  "action_index": 1,
+  "elapsed_seconds": 3.719000000000051,
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [
+      []
+    ],
+    "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+    "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:0fa3a641eb99376e8fe684d54dc46c375435a9222e93781fc87f1c371f0f2f90",
+  "response_sha256": "sha256:a112c090f99818c15c58fc87dd24595cced05c8c19a8416eaff0bb39e1bd54c1",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1396.414,
+    "predicted_n": 128,
+    "predicted_per_second": 90.94724057478656,
+    "predicted_per_token_ms": 10.995385826771653,
+    "prompt_ms": 1464.137,
+    "prompt_n": 6014,
+    "prompt_per_second": 4107.53911689958,
+    "prompt_per_token_ms": 0.2434547721982042
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 6014,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6142
+  },
+  "valid": false
+}

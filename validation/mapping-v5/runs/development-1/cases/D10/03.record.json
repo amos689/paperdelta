@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 3,
+  "elapsed_seconds": 4.014999999999418,
+  "error": {
+    "code": "SEED_SET",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "预期种子为 ['001', '002', '003']，实际为 ['001', '002', '003', '001', '002', '003']"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:dc6d1525025ac5b278911b1e7252eaeb66cca42da57242360839d6f3d330fcc9",
+  "response_sha256": "sha256:9d9ed4864f2e7e08cb4a6407f4551d34ce787943f47f178abbe0ae8e376202cf",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1976.795,
+    "predicted_n": 179,
+    "predicted_per_second": 90.04474414392995,
+    "predicted_per_token_ms": 11.10558988764045,
+    "prompt_ms": 1846.684,
+    "prompt_n": 7287,
+    "prompt_per_second": 3945.991842675845,
+    "prompt_per_token_ms": 0.2534217098943324
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 179,
+    "prompt_tokens": 7287,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7466
+  },
+  "valid": false
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "D12",
+  "expected_decision": "abstain",
+  "family": "missing_significance_evidence",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Only aggregate accuracy scores were retained. Original observations, hypothesis, statistical test and test metadata are absent. Do not manufacture or calculate a significance result.",
+  "reference_controls": [],
+  "reference_inputs": [],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

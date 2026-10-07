@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "cases": 92,
+  "flows": {
+    "agent-review": {
+      "cases": 10,
+      "receipt": "agent-review-installed.json"
+    },
+    "studio": {
+      "cases": 10,
+      "receipt": "studio-installed.json"
+    },
+    "review": {
+      "cases": 6,
+      "receipt": "review-installed.json"
+    },
+    "revisions": {
+      "cases": 10,
+      "receipt": "revisions-installed.json"
+    },
+    "reuse": {
+      "cases": 2,
+      "receipt": "reuse-installed.json"
+    },
+    "batch": {
+      "cases": 6,
+      "receipt": "batch-installed.json"
+    },
+    "scale": {
+      "cases": 2,
+      "receipt": "scale-installed.json"
+    },
+    "evidence": {
+      "cases": 6,
+      "receipt": "evidence-installed.json"
+    },
+    "statistics": {
+      "cases": 16,
+      "receipt": "statistics-installed.json"
+    },
+    "layout": {
+      "cases": 8,
+      "receipt": "layout-installed.json"
+    },
+    "reliability": {
+      "cases": 8,
+      "receipt": "reliability-installed.json"
+    },
+    "workflows": {
+      "cases": 4,
+      "receipt": "workflows-installed.json"
+    },
+    "annotations": {
+      "cases": 4,
+      "receipt": "annotations-installed.json"
+    }
+  },
+  "wheel_sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+  "first_failure": "studio-first-failure.log",
+  "scope": "Actual installed-wheel machine workflows; no model inference or human measurements. The unchanged wheel passed a corrected language-confirmation assertion in a fresh Studio run."
+}

@@ -1,0 +1,3 @@
+# Results
+
+The mean test accuracy is 68.3% on Juniper for VariantAmber.

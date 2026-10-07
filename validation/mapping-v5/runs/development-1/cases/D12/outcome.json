@@ -1,0 +1,146 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.9219999999986612,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+        "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f6248a8dcd056f55f35321b2b2436e6a1df7c15d668e0a07456cafbb01cccd44",
+      "response_sha256": "sha256:b06ba135ef9f5c117fc88ba64f47c0ab5ee2dda48a876cfd4241e424f504aca2",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 701.21,
+        "predicted_n": 66,
+        "predicted_per_second": 92.69690962764363,
+        "predicted_per_token_ms": 10.787846153846154,
+        "prompt_ms": 1440.532,
+        "prompt_n": 5749,
+        "prompt_per_second": 3990.886700191318,
+        "prompt_per_token_ms": 0.25057088189250304
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 66,
+        "prompt_tokens": 5749,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5815
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.67200000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:dc0f8be73eb76a17b0c7a3d6ae982d89b290254258bafb7ee301cbe9b52bf1b4",
+      "response_sha256": "sha256:a071569f2fad36bdedc49dbd097b474cba43944e4d35a4c5458d5391687fb531",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1624.139,
+        "predicted_n": 145,
+        "predicted_per_second": 88.66236202689548,
+        "predicted_per_token_ms": 11.278743055555555,
+        "prompt_ms": 1738.679,
+        "prompt_n": 6728,
+        "prompt_per_second": 3869.604452575777,
+        "prompt_per_token_ms": 0.2584243460166469
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 6728,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6873
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.5460000000002765,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+        "message": "聚合操作必须明确指定预期记录数。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e4f5d61e470e9e2a4e2e284a6fe534863c1b192ed64bef4b98e3701d1d2b7a28",
+      "response_sha256": "sha256:1b531a609e726138530cf7a18ae35067f514895e1ea3aa1dfb5e5ece13ae5f6c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1589.618,
+        "predicted_n": 145,
+        "predicted_per_second": 90.58780159761653,
+        "predicted_per_token_ms": 11.039013888888888,
+        "prompt_ms": 1771.001,
+        "prompt_n": 6913,
+        "prompt_per_second": 3903.4421776159356,
+        "prompt_per_token_ms": 0.2561841458122378
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 6913,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7058
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.688000000000102,
+      "error": {
+        "code": "DRAFT_METRIC",
+        "fields": [
+          []
+        ],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "验证发现 1 个问题：\n$：计数指标必须使用 count 单位"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:2260e9182af0ca9dbf5bd07bdd24889c39f5be7fa5f3ac3398a298e9d0d05342",
+      "response_sha256": "sha256:041c53221d6c48c79785a3eddf846d337d4f58596903d600abfdcb25d75a91af",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1709.125,
+        "predicted_n": 156,
+        "predicted_per_second": 90.68968039201346,
+        "predicted_per_token_ms": 11.026612903225807,
+        "prompt_ms": 1810.67,
+        "prompt_n": 6990,
+        "prompt_per_second": 3860.4494468898247,
+        "prompt_per_token_ms": 0.25903719599427755
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 156,
+        "prompt_tokens": 6990,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7146
+      },
+      "valid": false
+    }
+  ],
+  "reason": "声明度量字段和单位，筛选符合条件的实验记录，并指定预期种子集合及记录数以确保准确性。",
+  "status": "budget_exhausted"
+}

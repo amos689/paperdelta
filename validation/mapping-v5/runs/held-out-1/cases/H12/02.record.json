@@ -1,0 +1,37 @@
+{
+  "action": "metric",
+  "action_index": 2,
+  "elapsed_seconds": 3.936999999999898,
+  "error": {
+    "code": "DRAFT_METRIC",
+    "fields": [
+      []
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMetric\n  A count metric must use unit: count [type=validation.models.2, input_value={'source': 'results_measu...3'], 'statistics': None}, input_type=dict]"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:a5e8db87d667cc10b2cf21e97707e28d7162e9bfdc2c609e3513ce43fb8cf8b7",
+  "response_sha256": "sha256:3fa80bc3d1a071781653f3b8448e988c2e10ebe6736c6141259f5f87eb1e23b5",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2088.021,
+    "predicted_n": 191,
+    "predicted_per_second": 90.9952534002292,
+    "predicted_per_token_ms": 10.989584210526317,
+    "prompt_ms": 1660.202,
+    "prompt_n": 6927,
+    "prompt_per_second": 4172.383842448088,
+    "prompt_per_token_ms": 0.23967114190847408
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 191,
+    "prompt_tokens": 6927,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7118
+  },
+  "valid": false
+}

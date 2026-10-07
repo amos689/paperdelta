@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "version": "2.0.0",
+  "wheel_sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+  "suite": {
+    "tests": 1024,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3
+  },
+  "passed_tests": 1021,
+  "browser_cases": 92,
+  "isolated_starts": 13,
+  "actual_public_previous_version": "1.9.0",
+  "recorded_model_replay_cases": 60,
+  "authored_controls": 13,
+  "config_schema_max": 10,
+  "report_schema_max": 9,
+  "mcp_tools": 22,
+  "remote_ci_and_public_downloads": "Still required before release."
+}

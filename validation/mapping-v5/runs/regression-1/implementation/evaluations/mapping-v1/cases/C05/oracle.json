@@ -1,0 +1,95 @@
+{
+  "category": "percentage_point_difference",
+  "expected_decision": "map",
+  "expected_reference_status": "pass",
+  "reason": "Bind the percentage point improvement of Ours over Baseline on Data-A test. Compute each mean over seeds 1, 2 and 3.",
+  "reference_inputs": [
+    {
+      "additions": {
+        "metrics": {
+          "baseline": {
+            "expected_seeds": [
+              1,
+              2,
+              3
+            ],
+            "field": "accuracy",
+            "reduce": "mean",
+            "source": "results",
+            "unit": "fraction",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Baseline",
+              "split": "test"
+            }
+          },
+          "gain": {
+            "args": [
+              "target",
+              "baseline"
+            ],
+            "op": "percentage_point_difference"
+          },
+          "target": {
+            "expected_seeds": [
+              1,
+              2,
+              3
+            ],
+            "field": "accuracy",
+            "reduce": "mean",
+            "source": "results",
+            "unit": "fraction",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "result": {
+            "anchor": {
+              "prefix": "The accuracy gain is ",
+              "suffix": " percentage points on Data-A."
+            },
+            "display": {
+              "kind": "decimal",
+              "places": 1
+            },
+            "file": "paper/main.tex",
+            "metric": "gain"
+          }
+        },
+        "sources": {
+          "results": {
+            "columns": {
+              "accuracy": "decimal",
+              "dataset": "string",
+              "model": "string",
+              "seed": "integer",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/metrics.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+      }
+    }
+  ],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "3.1",
+    "prefix": "The accuracy gain is ",
+    "suffix": " percentage points on Data-A."
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.875,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:887434ed9c977534a163eac0815e04f3c88c6c5bc2ef793519bdc0ace9c75828",
+      "response_sha256": "sha256:2b9cfceabad116dc74c5815450c0d5353a304b00c055b1977fdedddbd0f07afd",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1343.963,
+        "predicted_n": 132,
+        "predicted_per_second": 97.4729215015592,
+        "predicted_per_token_ms": 10.259259541984733,
+        "prompt_ms": 1441.501,
+        "prompt_n": 6166,
+        "prompt_per_second": 4277.485759635269,
+        "prompt_per_token_ms": 0.23378219266947778
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 132,
+        "prompt_tokens": 6166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6298
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.07799999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:399e0a6d83295f9b5e0e0ec62365167e2d292276a3e658269b92b7f3ba7c590a",
+      "response_sha256": "sha256:101196ab350844c5917b1a951e23a7de9e6f98b3083cc3752832f4978a27d251",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1406.637,
+        "predicted_n": 136,
+        "predicted_per_second": 95.97358806856353,
+        "predicted_per_token_ms": 10.419533333333334,
+        "prompt_ms": 1494.486,
+        "prompt_n": 6469,
+        "prompt_per_second": 4328.578521311006,
+        "prompt_per_token_ms": 0.23102272375946825
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 136,
+        "prompt_tokens": 6469,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6605
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.264999999999418,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ce4ab6d868226a76a9bf372ef275e6bec6979365b4f981b31dc8773ccf5f66b4",
+      "response_sha256": "sha256:46522bfec469d715f1c1c8fbf437c30cf31db9f6d9b5da9004d15f341089fb91",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1551.821,
+        "predicted_n": 149,
+        "predicted_per_second": 95.3718244565578,
+        "predicted_per_token_ms": 10.485277027027026,
+        "prompt_ms": 1503.619,
+        "prompt_n": 6492,
+        "prompt_per_second": 4317.5831111471725,
+        "prompt_per_token_ms": 0.23161105976586566
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 149,
+        "prompt_tokens": 6492,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6641
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.610000000000582,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:12b46a09d3de008f20fbfde1ca2bd5fb6dddccb636e9cfcb48e13d8db11acbfd",
+      "response_sha256": "sha256:600f48f3be65ebd1468db2597c79fa77407355da9712be836661e036a36eb7b9",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2373.471,
+        "predicted_n": 219,
+        "predicted_per_second": 91.84860484918501,
+        "predicted_per_token_ms": 10.887481651376147,
+        "prompt_ms": 1871.217,
+        "prompt_n": 7849,
+        "prompt_per_second": 4194.596350930971,
+        "prompt_per_token_ms": 0.23840196203338007
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 219,
+        "prompt_tokens": 7849,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8068
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 5,
+      "elapsed_seconds": 3.5310000000008586,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:cc352f26e6d483762cf53ad03cc37d862057625d25ef9d5f200c2dbea8215731",
+      "response_sha256": "sha256:46357f2659a29ad99eb7180b252ce508d566ba8a6a2a664922d2f508d3d347ae",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 930.245,
+        "predicted_n": 84,
+        "predicted_per_second": 89.2238066315863,
+        "predicted_per_token_ms": 11.207771084337349,
+        "prompt_ms": 2253.047,
+        "prompt_n": 9195,
+        "prompt_per_second": 4081.139896327063,
+        "prompt_per_token_ms": 0.24502958129418162
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 84,
+        "prompt_tokens": 9195,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9279
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy_ours_data_a": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_ours_data_a_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy_ours_data_a"
+        }
+      },
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/main.tex": "sha256:75cef1e2c42f8b4510249f070c5451e44d89138408f0b5394d1ae631d07bbaa2",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:0a44000a78040fc97c8229024cc84f5d25c2d980805b66b9c8dc7eace6131776"
+    },
+    "proposal_id": "sha256:40c5c463f9466c5955c05173194f288f92eb243b61546decb858cdceff0f2797",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:test_accuracy_ours_data_a_value": "The original text in paper/main.tex reports the mean test accuracy of Ours on Data-A as 84.1\", which corresponds to the metric test_accuracy_ours_data_a."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The requested location is already bound with the metric test_accuracy_ours_data_a, and the display format matches the original text. The mismatch in value is due to a difference in unit representation (84.1% vs. 0.841), which is consistent with the declared metric's unit of percent.",
+  "status": "proposed"
+}

@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 4.2960000000002765,
+  "error": {
+    "code": "MISSING_COLUMN",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Metric selects an undeclared column"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:068e15ffb015908d27153bf54ed80c68463755cd52ebcbe3ae6d42a05e9c3b20",
+  "response_sha256": "sha256:ed16eea1994d91a8af3a1dfee029a28f8b45ba24635cc46715c95d8033714d44",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2419.411,
+    "predicted_n": 221,
+    "predicted_per_second": 90.93122251655466,
+    "predicted_per_token_ms": 10.997322727272728,
+    "prompt_ms": 1695.055,
+    "prompt_n": 7064,
+    "prompt_per_second": 4167.416396518107,
+    "prompt_per_token_ms": 0.23995682332955834
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 221,
+    "prompt_tokens": 7064,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7285
+  },
+  "valid": false
+}

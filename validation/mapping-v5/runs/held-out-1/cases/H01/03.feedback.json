@@ -1,0 +1,95 @@
+{
+  "actions_remaining": 13,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "undo",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 1,
+  "draft_id": "sha256:1d56bfa81d09cd00cafb782d43e8492a9e93124cddbdab22ef04321c5dc594a0",
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "该名称已存在于 preview.additions，请引用它而非重复添加。需要修改成功声明时，先撤回后续步骤和该声明，再添加修正后的版本。",
+    "message": "sources 中已存在 results_measurements，请选择其他标识符。"
+  },
+  "next": "请复核每个实验和原文位置。完成会话只生成未接受提案，仍需在 Studio 或命令行明确接受。",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "results_measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:1d56bfa81d09cd00cafb782d43e8492a9e93124cddbdab22ef04321c5dc594a0",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:1d56bfa81d09cd00cafb782d43e8492a9e93124cddbdab22ef04321c5dc594a0",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "每份证据摘要列出总数和准确来源路径。保存提案后，命令行预览包含全部参与记录；Studio 也提供完整指标证据。",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.md": "sha256:dc640923aa15e83ea624e86c9729f9fd7ba3725ef0c0e1da72d13b9c6b88ce0f",
+      "paperdelta.yaml": "sha256:980d549d11b6064f325def62925d5358cdbb66cbfbc0b7ddffa2dbdd6a1c652e",
+      "results/measurements.csv": "sha256:671ca4ae975d0a2000df3c448942efed7edd63b339ef9073eec71a1a73b9faf1"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "检查按所声明的筛选、单位、计算方式和原文位置核对这些输入字节，不能据此证明科学身份或所提供解释的真实性。"
+  },
+  "stage_guidance": "引用已有来源，声明字段单位、精确单值 where 筛选、expected_count 和字符串 expected_seeds。种子集合放进 expected_seeds，不要放 where。简单均值省略 statistics；来源单位未知时应拒答。",
+  "status": "needs_correction",
+  "undo": {
+    "last_action": "source",
+    "notice": "使用空参数和原因执行 undo，撤回最后一个成功阶段。它消耗一次动作并保留所有已读取输入的哈希，最多允许撤回四次。",
+    "remaining": 4
+  }
+}

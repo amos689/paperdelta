@@ -1,0 +1,42 @@
+{
+  "action": "locations",
+  "action_index": 3,
+  "elapsed_seconds": 6.063000000000102,
+  "error": {
+    "code": "DRAFT_STATISTICS",
+    "fields": [
+      [
+        "component"
+      ],
+      [
+        "mean"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': Decimal('0.714')}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value=Decimal('0.714'), input_type=Decimal]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:0fa23ee194acad66cc7a0fc68c690aacc57bead666557d3bbf6509351ac3492e",
+  "response_sha256": "sha256:f3d71d523ba7a86142a98632152d2676e5e3604aba1e1908337df16741f24d36",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 3656.518,
+    "predicted_n": 318,
+    "predicted_per_second": 86.69450006809758,
+    "predicted_per_token_ms": 11.534757097791799,
+    "prompt_ms": 2202.345,
+    "prompt_n": 8441,
+    "prompt_per_second": 3832.732837044151,
+    "prompt_per_token_ms": 0.2609104371519962
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 318,
+    "prompt_tokens": 8441,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8759
+  },
+  "valid": false
+}

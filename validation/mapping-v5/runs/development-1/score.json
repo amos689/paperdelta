@@ -1,0 +1,241 @@
+{
+  "abstention_limit": "Counts explicit abstention with a nonempty reason on a required-abstention case; no independent semantic assessment of the reason.",
+  "accepted_bindings": 0,
+  "action_count": 57,
+  "case_count": 12,
+  "comparison_limit": "Changed product and prompts together; these runs do not isolate a causal improvement.",
+  "complete_mapping_cases": 1,
+  "core_valid_proposals": 2,
+  "cost": {
+    "electricity_and_hardware_cost": null,
+    "paid_api_cost_usd": 0
+  },
+  "count_guards_verified": 2,
+  "execution_sha256": "sha256:f6e06a57444f903125c737cc418b61dd709f575372d37bf08c4ec2a81502f2e4",
+  "expected_abstentions": 0,
+  "human_confirmation_time": null,
+  "human_precision": null,
+  "inference_seconds": 243.9969999999993885,
+  "invalid_actions": 33,
+  "mappable_cases": 8,
+  "outcomes": {
+    "D01": {
+      "complete_mapping": true,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 1
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "pass",
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "original_location": {
+        "byte_end": 32,
+        "byte_start": 26,
+        "column": 27,
+        "end": 32,
+        "file": "paper/manuscript.tex",
+        "line": 1,
+        "start": 26,
+        "text": "71.4\\%"
+      },
+      "reference_matches": [
+        {
+          "contract": true,
+          "location": true
+        }
+      ],
+      "status": "proposed"
+    },
+    "D02": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D03": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D04": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D05": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D06": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D07": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D08": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "map",
+      "status": "budget_exhausted"
+    },
+    "D09": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "D10": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    },
+    "D11": {
+      "complete_mapping": false,
+      "contract": {
+        "display": {
+          "kind": "percent",
+          "percent_symbol": true,
+          "places": 1
+        },
+        "metric": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "checkpoint",
+              "dataset",
+              "model",
+              "seed",
+              "split"
+            ]
+          },
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "core_valid_proposal": true,
+      "count_guard_verified": true,
+      "deterministic_status": "pass",
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "original_location": {
+        "byte_end": 42,
+        "byte_start": 37,
+        "column": 27,
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 42,
+        "file": "paper/manuscript.md",
+        "format": "markdown",
+        "line": 3,
+        "locator": {
+          "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+          "offset": 26,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 37,
+        "text": "71.4%"
+      },
+      "reference_matches": [],
+      "status": "proposed"
+    },
+    "D12": {
+      "complete_mapping": false,
+      "expected_abstention": false,
+      "expected_decision": "abstain",
+      "status": "budget_exhausted"
+    }
+  },
+  "protocol_id": "paperdelta-mapping-v5",
+  "protocol_sha256": "sha256:d554cfe2ec86a3f3efb6bfc699cd943bbfe30a9d4814a6fab88f9cce959e7959",
+  "required_abstentions": 4,
+  "scope": "Authored synthetic development; inference results held out from tuning only when designated held-out. Not blind, independent or human evaluation.",
+  "scored_at": "2026-10-07T08:46:09.291402+00:00",
+  "split": "development",
+  "statuses": {
+    "budget_exhausted": 10,
+    "proposed": 2
+  },
+  "usage": {
+    "completion_tokens": 9986,
+    "prompt_tokens": 437803,
+    "total_tokens": 447789
+  }
+}

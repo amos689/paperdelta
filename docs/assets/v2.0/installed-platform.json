@@ -1,0 +1,268 @@
+{
+  "started_at": "2026-10-07T09:12:17.430174+00:00",
+  "host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.15",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "wheel": {
+    "name": "paperdelta-2.0.0-py3-none-any.whl",
+    "sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d"
+  },
+  "commands": [
+    {
+      "step": "install-core",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-core\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-v2.0.0-candidate1\\paperdelta-2.0.0-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 2.172
+    },
+    {
+      "step": "core-smoke",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-core\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build\\v20-installed1\\core-smoke.json"
+      ],
+      "exit_code": 0,
+      "seconds": 7.625
+    },
+    {
+      "step": "install-full",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-v2.0.0-candidate1\\paperdelta-2.0.0-py3-none-any.whl[dev,mcp,wandb]"
+      ],
+      "exit_code": 0,
+      "seconds": 10.859
+    },
+    {
+      "step": "lint",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0,
+      "seconds": 0.641
+    },
+    {
+      "step": "format",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0,
+      "seconds": 0.062
+    },
+    {
+      "step": "tests",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "--out",
+        "build\\v20-installed1\\suite"
+      ],
+      "exit_code": 0,
+      "seconds": 576.579
+    },
+    {
+      "step": "examples",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/validate_examples.py",
+        "--out",
+        "build\\v20-installed1\\examples"
+      ],
+      "exit_code": 0,
+      "seconds": 1.375
+    },
+    {
+      "step": "ci-demo",
+      "args": [
+        "<checkout>\\build\\v20-installed1\\venv-full\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/demo_ci.py",
+        "--out",
+        "build\\v20-installed1\\ci-demo"
+      ],
+      "exit_code": 0,
+      "seconds": 1.359
+    }
+  ],
+  "status": "passed",
+  "scope": "Actual installed-wheel execution on the recorded host, not independent users.",
+  "suite": {
+    "checked_at": "2026-10-07T09:22:19.192651+00:00",
+    "host": "Windows-11-10.0.26200-SP0",
+    "results": [
+      {
+        "python": "3.12.15",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "implementation": "CPython",
+        "installed_package": true,
+        "versions": {
+          "paperdelta": "2.0.0",
+          "pydantic": "2.13.5",
+          "PyYAML": "6.0.3",
+          "pylatexenc": "2.11",
+          "mcp": "2.3.0",
+          "pytest": "9.1.1"
+        },
+        "installed_sources_sha256": {
+          "__init__.py": "502397f6ef38d760fc21502056b20794b57608f844e2b6c2e9af441d05a8789b",
+          "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+          "actions.py": "070f0cd9767331c460e7c8174530f71ee23cc1896c2d7479cd6017e5c2fb897e",
+          "agent.py": "af0af890daed7e2cb32b30cff3543fdddd0001885bee9fb838c7461946097708",
+          "analysis.py": "b643240fc73caec2a11a7f266b30aa84094dcf485c85eb51df5ecfcda9a4eb71",
+          "annotation_cli.py": "7f6e5600850b8a102e4bb7ca7c65f83848acc4376aac744fa3ec32b5041e4e25",
+          "annotations.py": "d12836fe062cc8871ca725e023deb4b1238ef073b13ded4c850ded2d4976aea4",
+          "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+          "assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+          "assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+          "assets/studio-annotations.js": "6cbf0cffb96609b998455cdeab055e1baa2893b6f07ce59ff5b3637de6451689",
+          "assets/studio-batch.js": "b7d084aa8caebab0d7ac59ae44b0a8f207e1a4d338d09fadf6c2f9c43559a471",
+          "assets/studio-review.js": "fb3278b71f583193e29a0b82064cb961c36766e3bfd9024415c35dec594895cd",
+          "assets/studio-revisions.js": "3542d21acc4b8b11f15e743deff13733f8cfd1a3e54c9d683c8b7946976bffdb",
+          "assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+          "assets/studio-workflows.js": "29e78d1c32c1c0ee1ea2952d6de44c55e3f936249ae73056de6ab89f2a7928f3",
+          "assets/studio.css": "cb5731f717b9b650cf3cfd0c169832cf836be7a284a0cb51e7ec79c56aa6bc17",
+          "assets/studio.js": "dfaecb917675bc8a770c1030ee4fd0a3839e48de93628dcf37ff7cbfa8b9558a",
+          "batch.py": "729769ea8e2d943b4c9d25431fa430f652e5b1435362902e572ad3e447381a06",
+          "batch_agent.py": "5366ba215888c66d60187a1008409d972a940093e6477595427cdd4b41a5b8f0",
+          "batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+          "builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+          "cli.py": "1771d04d6ab2963f9abe2a9cd1060bf511b0301c9fc3fe24199af711711f83ef",
+          "config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+          "config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+          "coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+          "declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+          "demo.py": "4e170eeb843b7c20e2152852d986f32cbf3ee86b5a360eb86519a0d767654300",
+          "demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+          "demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+          "diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+          "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+          "documents.py": "59aed81d6d9d47d3f2bcd0b28f2b29a5bfaf62aa46e15c9c46ae38524f489c08",
+          "docx_document.py": "449d9eafa111c61f590353a0482a364b9b876d95f5bf2817142ee4a7e375a501",
+          "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+          "evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+          "evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+          "experiment_aliases.py": "941dbc4e522486ec32c6c54bed8e611ecd6781950560da5e91535cb25faaa8bf",
+          "experiment_definitions.py": "501da96211e515a5b67fe5e9256cc48f0551a8d382925c9ca49c0eb6f7788ac9",
+          "experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+          "experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+          "fragment_cli.py": "76c05806f6f40ab81b5edf1aff44f1ac1134ee2d066376715fe3ba193f0ac926",
+          "fragments.py": "39df6fc6014e8c7033ecc8405b820531bd948d3c1250f2ce89997e55d26faa5f",
+          "guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+          "html_report.py": "dbc00be086b608298d36276fcb30d102e6489ab611217d720c1440a0333f115d",
+          "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+          "incremental.py": "9915ffae4c6eee6589be240e9fee2af1a563c91f255dc7843b179857031c20d8",
+          "interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+          "latex.py": "98630ff21b84736308d940ab1e81312cff9bb55068e5099efa2d5a9e3f45ae80",
+          "locales/en.json": "d23c1bf2ac1cae0c3f1082841667be80b3a92573ce075831c9febdbe0c46ad18",
+          "locales/zh-CN.json": "d341bf32eb4826befa1df347ab5f5cd32d9ed0878ab667566c8e20492d01157d",
+          "locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+          "manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+          "markdown_document.py": "27201d6cbb195ea5a6fbe8f684a0da1565a673f8a5e6a9018a0bc398eea2ad11",
+          "mcp_server.py": "a2f4bc224876326ab52897e0a367d4b4c5b6d32cc6cee3779c613c410e5aeba0",
+          "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+          "models.py": "e612f3b8caa71ed0f41383bcf6bce14fc4b687e60a6249efdb1659cbe976d02b",
+          "native_comments.py": "6ddce0dfb76513b23d512c81cecbd5dda06b3c031aeb3757fc4cf012fac7b444",
+          "native_document.py": "abcb05fc181a479a59a7518716a387ff1d6755efbef2671f80134ac98de94eba",
+          "native_scientific.py": "d00e982ff640ada9149e3dbe17e3373a918d1f8c59b90d830ee99d2d28ee0ac4",
+          "notebooks.py": "ab14f5fced2c26d8bbc8119885dfbffc823726923ea42ec9d785fb9f5be45d42",
+          "onboarding.py": "fee177d7887448c25b508ff835d01d13913bae9690c386a1ce62be802c7d1798",
+          "patches.py": "124e629dd30382c1a98883480c1185f1b2c3e10f80b4f9aa6262495b9d45ab7a",
+          "pdf_document.py": "029ae81435f69edf4616ce8c831f538c77db1de6f28399254e421f5a02cbd342",
+          "pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+          "pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+          "pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+          "pr_review.py": "bfa680c254db2fe4afcffaa41c94ecdc268d62d0b74909823b99f94a3ace4e40",
+          "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+          "producer_run.py": "180240f126a08b816a3085b2ef5c5640b2f28780772c12c4472cdbaf41ef2138",
+          "proposal_review.py": "7bb7b43ca23e587ab12be6118725bd24ab308c570a575a58cff88157c598a138",
+          "provenance.py": "94086a8130112d2b751a11d7658696c9bbf7cd5724ef1399db8c8a09fb65f46e",
+          "provenance_cli.py": "b1c3a6d06fbb1ca0b7ee75c4395e88c39a33dfe9a866fe07b33bbf80a0ac52ea",
+          "records.py": "ff9202dbc7514d7ca8533c51de6c6a99f6fb8ca0dad94c0958c3011d77f258b9",
+          "repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+          "reports.py": "a3f7d2f548bb4780607cb764036cab747dcb6162862ef093c9ad8611820481a9",
+          "review_bundle.py": "ce15e19a9789d4babf89aff3a3cf395b312c9fcee5a56452b1fb56b524992313",
+          "review_bundle_cli.py": "1fbdd3cfc429f30f267755303a71ff8e6e7bcc69d7e8be089a37d4c55ced796d",
+          "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+          "revisions.py": "ad2ebc1c60c2d35f622925e3bae89780a22ccbf770ba8b4950319214611ecc17",
+          "sarif.py": "ccad81b34bcb43c2a8c74ce2bcd4c1c613a64578d9470c28ddb0050d4c960073",
+          "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+          "source_advice.py": "6bcebeef6267a8a0c7f84d8dac61a1f47007eca360d01411080d7c4ff93c0237",
+          "sources.py": "cd931b05d292169893c195353545f868d6e92f69a4c248054abec63afcbf2c87",
+          "staged_agent.py": "939ee09d18e86ca595425c1eec8a485fc5b82139efa65f5ad83e83a0cfb44661",
+          "statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+          "statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+          "statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+          "storage.py": "7609db628a0875400d65f33253f297bf5cfa7dde6cf5ad9e9764656bb67d6054",
+          "studio.py": "21625ef3dfd7f9aad64c7e3d466d712ef23fe5f89f1c3e65655910486c8952a2",
+          "studio_batch.py": "f7bbbf7130174249e06287d5b64b878493f9e16b0fc2ac5618519faca370d6b9",
+          "studio_recovery.py": "fe2b7904968cf62a449610c54a650cd6ca2ff0bea2f17515950e7808f26a5a31",
+          "studio_review.py": "586d0904d6bf1c0c138d8f384faf2d59f5039c3ca7d621786fdab48ae21023ac",
+          "studio_revisions.py": "491e697e9f0c0838b82500f3ea7867db67d1879f7f90d6c5a0a33f8a46609c66",
+          "studio_server.py": "93851feac390418872b948dd2761044abca180d0939ddac423df2d67a7ba1cc2",
+          "studio_ui.py": "87a0dc66e0fefa5dcfefa4ba3ab3ea0b6149d8011719612e53fb858a5bd9e0d0",
+          "studio_workflows.py": "dcbe92d0839437fed020970b457139f4ea8cc114556f3f9945c16e188f34ccf5",
+          "tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+          "watch.py": "9751a66fdb3c271582046401a24a2d18604d7f85b83b93adaa405e744f877b02",
+          "word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+          "xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7"
+        },
+        "exit_code": 0,
+        "suite_timeout_seconds": 900,
+        "junit": "build/v20-installed1/suite/3.12.15/junit.xml",
+        "tests": {
+          "tests": 1024,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 3
+        },
+        "seconds": 575.222
+      }
+    ],
+    "system": "Windows",
+    "libc": [
+      "",
+      ""
+    ],
+    "scope": "Local installed-package runs on the recorded host; not remote CI or usability evidence."
+  },
+  "finished_at": "2026-10-07T09:22:21.984523+00:00"
+}

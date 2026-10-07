@@ -1,0 +1,238 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.719000000000051,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e88a2859194242df9469528405a2201740cc0ae0f8b312276a46ffb8892a1662",
+      "response_sha256": "sha256:f11e3c97e17374bd964dce974770bcd4e502537cdaedb32d8f6382ab6a5aa11b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1764.279,
+        "predicted_n": 167,
+        "predicted_per_second": 94.08942689903354,
+        "predicted_per_token_ms": 10.628186746987952,
+        "prompt_ms": 1322.447,
+        "prompt_n": 5602,
+        "prompt_per_second": 4236.086587969122,
+        "prompt_per_token_ms": 0.23606694037843626
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 167,
+        "prompt_tokens": 5602,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5769
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 4.296999999999571,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:798371024bd77011bbceae1fe002ead9cc405f7c1094aabdc52d9694d4bb0351",
+      "response_sha256": "sha256:9dc0d563b55cada96374b88626e696fcff5444f99bef427fd1db8c551596f0e9",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2482.094,
+        "predicted_n": 227,
+        "predicted_per_second": 91.05215193300496,
+        "predicted_per_token_ms": 10.982716814159293,
+        "prompt_ms": 1622.27,
+        "prompt_n": 6775,
+        "prompt_per_second": 4176.246863962227,
+        "prompt_per_token_ms": 0.23944944649446495
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 227,
+        "prompt_tokens": 6775,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7002
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.842999999999847,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:4bc2bc28fa4796d2e42948f5258760f0223a46e8e68d77a719a18d5ce8f43143",
+      "response_sha256": "sha256:a98b2589f33fbbb30b2d7e932aff4804355d674aad8864fa4bc4d74ea8750c1d",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2914.977,
+        "predicted_n": 265,
+        "predicted_per_second": 90.56675232771991,
+        "predicted_per_token_ms": 11.041579545454544,
+        "prompt_ms": 1657.626,
+        "prompt_n": 6910,
+        "prompt_per_second": 4168.612220126856,
+        "prompt_per_token_ms": 0.23988798842257597
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 265,
+        "prompt_tokens": 6910,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7175
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 5.469000000000051,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f6b0bbf81b24b84cd834479f476c99d1394ba3f4efc05a9b327e6296b971abaf",
+      "response_sha256": "sha256:1e566dbc8bcc258b1d0773409a6a320d5a727801fe90589c20ca1d3c69b1b5bc",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2984.862,
+        "predicted_n": 265,
+        "predicted_per_second": 88.44630002995113,
+        "predicted_per_token_ms": 11.306295454545454,
+        "prompt_ms": 2064.55,
+        "prompt_n": 8317,
+        "prompt_per_second": 4028.480782737158,
+        "prompt_per_token_ms": 0.24823253577010942
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 265,
+        "prompt_tokens": 8317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8582
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 5,
+      "elapsed_seconds": 3.79700000000048,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c787737e856b24175d51de66371c35d286594fddff2a050d1297849f734d7892",
+      "response_sha256": "sha256:0eb938c9317962a2971698720c36e7d8166df257e5a26d9b501ddf4ffddc4a7f",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1054.04,
+        "predicted_n": 92,
+        "predicted_per_second": 86.3344844597928,
+        "predicted_per_token_ms": 11.582857142857142,
+        "prompt_ms": 2342.513,
+        "prompt_n": 9306,
+        "prompt_per_second": 3972.6567152455505,
+        "prompt_per_token_ms": 0.2517207178164625
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 92,
+        "prompt_tokens": 9306,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9398
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "measurements",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/manuscript.tex",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/manuscript.tex": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+      "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+      "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+    },
+    "proposal_id": "sha256:3da7d9e1f2605f6963046837d030eb74f23aee7a107b6684434be7e3fd5afa99",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:mean_test_accuracy_value": "The original text in the manuscript.tex file states 'The mean test accuracy is 71.4\\% on Cedar for VariantBlue.' This corresponds to the computed mean of the scores from the measurements.csv file for the specified experiment configuration. The value 71.4 is a percentage, so it is formatted as a percent with one decimal place."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The 'locations' stage has successfully bound the original text in the manuscript.tex file to the computed metric 'mean_test_accuracy'. The value 71.4\\% is a percentage with one decimal place, and it corresponds to the mean of the scores for the specified experiment configuration. All required evidence and declarations have been verified, and the mapping is complete.",
+  "status": "proposed"
+}

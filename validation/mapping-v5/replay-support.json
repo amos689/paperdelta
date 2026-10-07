@@ -1,0 +1,7 @@
+{
+  "supplemental_metadata_sha256": {
+    "evaluations/mapping-v1/protocol-lock.json": "sha256:556fcc9f986505fa2b2d8460ee994977290e6a43ab15e70f1561fe8fccebd0bd"
+  },
+  "source_commit": "ca42e68",
+  "reason": "The old mapping lock is not part of its own identity list and was omitted by the new regression snapshot copier. Supply its exact unchanged metadata only to fresh replay copies; do not rewrite inference snapshots or responses. The initial regression replay failed before executing actions, and its log is retained."
+}

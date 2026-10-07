@@ -1,0 +1,39 @@
+{
+  "action": "source",
+  "action_index": 2,
+  "elapsed_seconds": 2.530999999999949,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "format"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMappingStage\nformat\n  Input should be 'csv', 'json', 'tsv', 'xlsx' or 'records' [type=literal_error, input_value='text', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:06abfcfc11e168991d5a754c289b4744554ac0d5723b3f1c2f8cabc809b427c6",
+  "response_sha256": "sha256:8af9fe14d00bce4227609817c4d2b169ecf1462056d929e45d47bf36d8154846",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 865.186,
+    "predicted_n": 80,
+    "predicted_per_second": 91.30984551298795,
+    "predicted_per_token_ms": 10.951721518987343,
+    "prompt_ms": 1536.611,
+    "prompt_n": 6436,
+    "prompt_per_second": 4188.438062723747,
+    "prompt_per_token_ms": 0.23875248601615912
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 6436,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6516
+  },
+  "valid": false
+}

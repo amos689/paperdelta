@@ -1,0 +1,37 @@
+{
+  "action": "source",
+  "action_index": 1,
+  "elapsed_seconds": 2.889999999999418,
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [
+      []
+    ],
+    "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+    "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:061e9bd9174e7725ddbd02ec6521e96eead6976375914571667fd9d18259d706",
+  "response_sha256": "sha256:cef4d8071d19b819d5a0f9d7f6b5df1585fe6bac58e73cdae69d6582d22df634",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 725.134,
+    "predicted_n": 67,
+    "predicted_per_second": 91.01766018418665,
+    "predicted_per_token_ms": 10.986878787878789,
+    "prompt_ms": 1534.739,
+    "prompt_n": 6101,
+    "prompt_per_second": 3975.268759052842,
+    "prompt_per_token_ms": 0.2515553188001967
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 6101,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6168
+  },
+  "valid": false
+}

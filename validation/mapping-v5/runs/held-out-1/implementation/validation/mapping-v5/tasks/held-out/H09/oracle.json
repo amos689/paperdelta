@@ -1,0 +1,15 @@
+{
+  "case_id": "H09",
+  "expected_decision": "abstain",
+  "family": "missing_required_seed",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "The export is missing a required seed. Do not silently reduce the expected run set.",
+  "reference_controls": [],
+  "reference_inputs": [],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

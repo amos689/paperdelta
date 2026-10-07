@@ -1,0 +1,88 @@
+{
+  "case_id": "H04",
+  "expected_decision": "map",
+  "family": "escaped_json_pointer",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:dce647254c55a87e8e6709da72fa70cf17756d287b96e59cfa41c569d95f7cf8",
+      "expected": "68.3%",
+      "location": {
+        "byte_end": 42,
+        "byte_start": 37,
+        "column": 27,
+        "context": "The mean test accuracy is 68.3% on Juniper for VariantAmber.",
+        "end": 42,
+        "file": "paper/manuscript.qmd",
+        "format": "quarto",
+        "line": 3,
+        "locator": {
+          "block": "sha256:138576b4ba271845e5c14a5c619c8dddd285690d517623b914eb44292b1e91bd",
+          "offset": 26,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 37,
+        "text": "68.3%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 1,
+            "expected_seeds": null,
+            "field": "/runs/evaluation~1test/score.mean",
+            "reduce": "unique",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {}
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:138576b4ba271845e5c14a5c619c8dddd285690d517623b914eb44292b1e91bd",
+              "exact": null,
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Juniper for VariantAmber."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.qmd",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {},
+            "format": "json",
+            "path": "results/export.json",
+            "primary_key": []
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

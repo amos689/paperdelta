@@ -1,0 +1,149 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.04700000000048,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c6813e99a4ab58c4e71db812f59cfa8a456ee8a3aa2a186620cbff7c00f54abb",
+      "response_sha256": "sha256:9b635ff11e3b81125588c7aac3e28625a8ed0d426e78c600657d0261b395c962",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 703.358,
+        "predicted_n": 71,
+        "predicted_per_second": 99.52257598548678,
+        "predicted_per_token_ms": 10.047971428571428,
+        "prompt_ms": 1244.93,
+        "prompt_n": 5406,
+        "prompt_per_second": 4342.412826423975,
+        "prompt_per_token_ms": 0.2302867184609693
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 71,
+        "prompt_tokens": 5406,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5477
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.0159999999996217,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:ac67eb8b3d220150534dd122060f1d04978ae77d87ac7f7a4b387be5924b0c57",
+      "response_sha256": "sha256:5a4f7e8313d2a8139081dc89d08eb6d87a8403de0cb91cfb0a4c82eaa954b3a2",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1339.024,
+        "predicted_n": 130,
+        "predicted_per_second": 96.33882589109682,
+        "predicted_per_token_ms": 10.380031007751937,
+        "prompt_ms": 1481.968,
+        "prompt_n": 6412,
+        "prompt_per_second": 4326.679118577459,
+        "prompt_per_token_ms": 0.23112414223331254
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 130,
+        "prompt_tokens": 6412,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6542
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.469000000000051,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "where",
+            "seed"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for MetricMappingStage\nwhere.seed\n  Input should be a valid string [type=string_type, input_value=['1', '2', '3'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5bec1bb61abcb915528b3131c7452ae5d9f554a2cd915588349f408e0bad3181",
+      "response_sha256": "sha256:debcb0dfcfddcb377fe27aa8928bd01cef927930df4053417fbf52a02b8728a1",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1816.478,
+        "predicted_n": 174,
+        "predicted_per_second": 95.23924869995672,
+        "predicted_per_token_ms": 10.499872832369942,
+        "prompt_ms": 1520.489,
+        "prompt_n": 6536,
+        "prompt_per_second": 4298.617089633664,
+        "prompt_per_token_ms": 0.23263295593635253
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 174,
+        "prompt_tokens": 6536,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6710
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.467999999999847,
+      "error": {
+        "code": "COLUMN_TYPE",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "seed: expected an unambiguous integer"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7d063cd9210de6594e2abd804efbeac587ca8f03537fe620c7976cbc08e7fb75",
+      "response_sha256": "sha256:92599d044d9856dbacc60ecb2c0b4fa0dfc4d9f6443b3d6c77aa2755c8d9ecff",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1745.458,
+        "predicted_n": 166,
+        "predicted_per_second": 94.53106290727132,
+        "predicted_per_token_ms": 10.578533333333334,
+        "prompt_ms": 1572.007,
+        "prompt_n": 6725,
+        "prompt_per_second": 4277.9707723947795,
+        "prompt_per_token_ms": 0.233755687732342
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 6725,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6891
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The metric is derived from the 'accuracy' field in the CSV file, filtered by dataset 'Data-A', model 'Ours', split 'test', and seeds 1, 2, and 3. The unit is fraction as per the task's requirement.",
+  "status": "budget_exhausted"
+}

@@ -1,0 +1,110 @@
+{
+  "case_id": "H01",
+  "expected_decision": "map",
+  "family": "checkpoint_identity",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:ff291c3e12da459104c5432badd7d71293f48ce01e17959344f507254f1d110b",
+      "expected": "68.3%",
+      "location": {
+        "byte_end": 42,
+        "byte_start": 37,
+        "column": 27,
+        "context": "The mean test accuracy is 68.3% on Juniper for VariantAmber.",
+        "end": 42,
+        "file": "paper/manuscript.md",
+        "format": "markdown",
+        "line": 3,
+        "locator": {
+          "block": "sha256:50c937419200f9383188b5cc10d8e8c0e71a0de34a8570c3e0ea9c3664e8443b",
+          "offset": 26,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 37,
+        "text": "68.3%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "VariantAmber",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:50c937419200f9383188b5cc10d8e8c0e71a0de34a8570c3e0ea9c3664e8443b",
+              "exact": null,
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Juniper for VariantAmber."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.md",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

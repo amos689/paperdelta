@@ -1,0 +1,35 @@
+{
+  "action": "source",
+  "action_index": 3,
+  "elapsed_seconds": 3.5310000000008586,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "该名称已存在于 preview.additions，请引用它而非重复添加。需要修改成功声明时，先撤回后续步骤和该声明，再添加修正后的版本。",
+    "message": "sources 中已存在 results_measurements，请选择其他标识符。"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:868dc24907767eac8f0229862d0c0ff67868e82910f2b728181cfa0e2753c54a",
+  "response_sha256": "sha256:75d8ccb70f0a3018f61e3062a32e5aa77e1c19dbdfbebdabd803ea6b30b3fee9",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1743.819,
+    "predicted_n": 163,
+    "predicted_per_second": 92.89954978125598,
+    "predicted_per_token_ms": 10.764314814814815,
+    "prompt_ms": 1640.731,
+    "prompt_n": 7021,
+    "prompt_per_second": 4279.190190226185,
+    "prompt_per_token_ms": 0.2336890756302521
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 163,
+    "prompt_tokens": 7021,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7184
+  },
+  "valid": false
+}

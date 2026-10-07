@@ -1,0 +1,139 @@
+{
+  "runs": {
+    "regression-1": {
+      "split": "regression",
+      "complete_mapping_cases": 0,
+      "mappable_cases": 9,
+      "expected_abstentions": 0,
+      "required_abstentions": 3,
+      "invalid_actions": 32,
+      "action_count": 57,
+      "inference_seconds": 222.5159999999987,
+      "usage": {
+        "completion_tokens": 9315,
+        "prompt_tokens": 418175,
+        "total_tokens": 427490
+      },
+      "statuses": {
+        "abstained": 1,
+        "budget_exhausted": 10,
+        "proposed": 1
+      },
+      "cost": {
+        "electricity_and_hardware_cost": null,
+        "paid_api_cost_usd": 0
+      },
+      "accepted_bindings": 0
+    },
+    "development-1": {
+      "split": "development",
+      "complete_mapping_cases": 1,
+      "mappable_cases": 8,
+      "expected_abstentions": 0,
+      "required_abstentions": 4,
+      "invalid_actions": 33,
+      "action_count": 57,
+      "inference_seconds": 243.9969999999994,
+      "usage": {
+        "completion_tokens": 9986,
+        "prompt_tokens": 437803,
+        "total_tokens": 447789
+      },
+      "statuses": {
+        "budget_exhausted": 10,
+        "proposed": 2
+      },
+      "cost": {
+        "electricity_and_hardware_cost": null,
+        "paid_api_cost_usd": 0
+      },
+      "accepted_bindings": 0
+    },
+    "regression-2": {
+      "split": "regression",
+      "complete_mapping_cases": 0,
+      "mappable_cases": 9,
+      "expected_abstentions": 0,
+      "required_abstentions": 3,
+      "invalid_actions": 20,
+      "action_count": 55,
+      "inference_seconds": 197.85999999999694,
+      "usage": {
+        "completion_tokens": 8219,
+        "prompt_tokens": 389243,
+        "total_tokens": 397462
+      },
+      "statuses": {
+        "abstained": 1,
+        "budget_exhausted": 4,
+        "proposed": 7
+      },
+      "cost": {
+        "electricity_and_hardware_cost": null,
+        "paid_api_cost_usd": 0
+      },
+      "accepted_bindings": 0
+    },
+    "development-2": {
+      "split": "development",
+      "complete_mapping_cases": 0,
+      "mappable_cases": 8,
+      "expected_abstentions": 1,
+      "required_abstentions": 4,
+      "invalid_actions": 21,
+      "action_count": 50,
+      "inference_seconds": 194.84500000000298,
+      "usage": {
+        "completion_tokens": 7626,
+        "prompt_tokens": 384348,
+        "total_tokens": 391974
+      },
+      "statuses": {
+        "abstained": 2,
+        "budget_exhausted": 6,
+        "proposed": 4
+      },
+      "cost": {
+        "electricity_and_hardware_cost": null,
+        "paid_api_cost_usd": 0
+      },
+      "accepted_bindings": 0
+    },
+    "held-out-1": {
+      "split": "held-out",
+      "complete_mapping_cases": 1,
+      "mappable_cases": 8,
+      "expected_abstentions": 2,
+      "required_abstentions": 4,
+      "invalid_actions": 25,
+      "action_count": 48,
+      "inference_seconds": 180.92200000000412,
+      "usage": {
+        "completion_tokens": 7140,
+        "prompt_tokens": 362571,
+        "total_tokens": 369711
+      },
+      "statuses": {
+        "abstained": 3,
+        "budget_exhausted": 7,
+        "proposed": 2
+      },
+      "cost": {
+        "electricity_and_hardware_cost": null,
+        "paid_api_cost_usd": 0
+      },
+      "accepted_bindings": 0
+    }
+  },
+  "total_actions": 267,
+  "total_usage": {
+    "prompt_tokens": 1992140,
+    "completion_tokens": 42286,
+    "total_tokens": 2034426
+  },
+  "total_inference_seconds": 1040.1400000000021,
+  "paid_api_cost_usd": 0,
+  "electricity_and_hardware_cost": null,
+  "accepted_bindings": 0,
+  "scope": "Real local Qwen3-8B Q4_K_M calls; synthetic authored tasks. No independent semantic grading of abstention reasons, human precision or confirmation time. First outcomes retained; no further tuning after held-out results."
+}

@@ -15,6 +15,8 @@
 *.toml text eol=lf
 *.rst text eol=lf
 docs/assets/v1.9/*.log text eol=lf
+docs/assets/v2.0/*.log text eol=lf
+docs/assets/v2.0/*.xml text eol=lf
 MANIFEST.in text eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
@@ -34,3 +36,7 @@ validation/native-v2/** -text whitespace=cr-at-eol
 validation/native-v3/** -text whitespace=cr-at-eol
 validation/mapping-v4/** -text whitespace=cr-at-eol
 validation/mapping-v5/tasks/** -text whitespace=cr-at-eol
+validation/mapping-v5/runs/** -text whitespace=cr-at-eol
+validation/mapping-v5/runtime/** -text whitespace=cr-at-eol
+validation/mapping-v5/visual/** -text whitespace=cr-at-eol
+validation/mapping-v5/preparation.json -text whitespace=cr-at-eol

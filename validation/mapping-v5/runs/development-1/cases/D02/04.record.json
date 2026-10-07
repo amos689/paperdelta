@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 4.233999999999469,
+  "error": {
+    "code": "BUILDER_EXPECTATION",
+    "fields": [],
+    "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+    "message": "聚合操作必须明确指定预期记录数。"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:b89dd61fb53682b18f48ec48b2d299714d847de85c3c8a9a8bd76c74eec75566",
+  "response_sha256": "sha256:53679fc1bd7ff3b45c6d8b953034a776c3ce72af6cf152881b14d633b276f7b4",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2290.289,
+    "predicted_n": 207,
+    "predicted_per_second": 89.94498074260497,
+    "predicted_per_token_ms": 11.117907766990292,
+    "prompt_ms": 1738.971,
+    "prompt_n": 7182,
+    "prompt_per_second": 4130.028620373772,
+    "prompt_per_token_ms": 0.24212907268170425
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 207,
+    "prompt_tokens": 7182,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7389
+  },
+  "valid": false
+}

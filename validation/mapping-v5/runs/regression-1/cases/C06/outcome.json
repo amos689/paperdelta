@@ -1,0 +1,148 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 2.79700000000048,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/metrics...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e34ad3196884438582d03f40def4bff7fcee286a3ec786b846154d6fee13e8e0",
+      "response_sha256": "sha256:45d7d41acc75690cc396d49a6bdd33ba07ffa2ac076433daee8bb595e7a2cd9a",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 924.441,
+        "predicted_n": 90,
+        "predicted_per_second": 96.27439717623948,
+        "predicted_per_token_ms": 10.386977528089888,
+        "prompt_ms": 1271.252,
+        "prompt_n": 5415,
+        "prompt_per_second": 4259.580319244335,
+        "prompt_per_token_ms": 0.23476491228070173
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 90,
+        "prompt_tokens": 5415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5505
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.639999999999418,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:b8cfe0c68a82d2362d2feed88f83af4f901efddea2e60c27d4e17a77d19adc94",
+      "response_sha256": "sha256:8f73d467d22b7d68876768105a07d5c293e742997bd0a84e2c6d36342922ad34",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1867.642,
+        "predicted_n": 176,
+        "predicted_per_second": 93.70104120596989,
+        "predicted_per_token_ms": 10.67224,
+        "prompt_ms": 1528.764,
+        "prompt_n": 6440,
+        "prompt_per_second": 4212.553409159295,
+        "prompt_per_token_ms": 0.23738571428571428
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 176,
+        "prompt_tokens": 6440,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6616
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.67200000000048,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "unit"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for MetricMappingStage\nunit\n  Input should be 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio' [type=literal_error, input_value='decimal', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:f3f7a6bd97657dd13fc9df831d48dce69d762672c7a5a09509a3e75c756c5c6d",
+      "response_sha256": "sha256:b49a0beeab6c0497ca5259cb70c0cb44198b3cceef8a0dd5bf10d42085f9406b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1949.528,
+        "predicted_n": 183,
+        "predicted_per_second": 93.35593025593887,
+        "predicted_per_token_ms": 10.711692307692308,
+        "prompt_ms": 1565.399,
+        "prompt_n": 6598,
+        "prompt_per_second": 4214.8998434265,
+        "prompt_per_token_ms": 0.2372535616853592
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 6598,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6781
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.9219999999995707,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:afa584be899661613a08407ff4aebab8698cc59c7d194472f51358933642dee6",
+      "response_sha256": "sha256:90988a8bd12a0363ce32973bd94e5885afd87b30270c5cdaccdda8e18675ace8",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2135.918,
+        "predicted_n": 200,
+        "predicted_per_second": 93.16837069587876,
+        "predicted_per_token_ms": 10.733256281407035,
+        "prompt_ms": 1607.643,
+        "prompt_n": 6757,
+        "prompt_per_second": 4203.047567152657,
+        "prompt_per_token_ms": 0.2379225987864437
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 200,
+        "prompt_tokens": 6757,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6957
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The metric 'data_a_model_001_accuracy' is derived from the 'metrics_csv' source, which contains the accuracy values for model identifier 001 on Data-A with seeds 1, 2, and 3. The mean of these values is calculated to meet the request, and the unit is set to 'fraction' as per the valid options.",
+  "status": "budget_exhausted"
+}

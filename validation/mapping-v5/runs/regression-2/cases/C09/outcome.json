@@ -1,0 +1,146 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.45299999999952,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "name"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/metrics.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:8e00aac34f02a235ae788be07d518752459bd1d2989abff83fa7945c18f9234d",
+      "response_sha256": "sha256:993b05189228e4e740f1d93d7537d48e59461cdb88a312732bf1e8754dff271b",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1419.935,
+        "predicted_n": 133,
+        "predicted_per_second": 92.9620017817717,
+        "predicted_per_token_ms": 10.757083333333332,
+        "prompt_ms": 1515.92,
+        "prompt_n": 6397,
+        "prompt_per_second": 4219.879677027811,
+        "prompt_per_token_ms": 0.23697358136626545
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 133,
+        "prompt_tokens": 6397,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6530
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.2659999999996217,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9cdf24d5a2c3dca348dc8381192b181901eebeb28d531efc4b4b74bb3f778c41",
+      "response_sha256": "sha256:cfd7a712c2ff2adf2fe52d2f0b09998408c42a1bd13c877b93859e82ecf1ccb4",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1468.459,
+        "predicted_n": 137,
+        "predicted_per_second": 92.61409409455763,
+        "predicted_per_token_ms": 10.797492647058824,
+        "prompt_ms": 1601.57,
+        "prompt_n": 6701,
+        "prompt_per_second": 4184.019430933397,
+        "prompt_per_token_ms": 0.23900462617519772
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 137,
+        "prompt_tokens": 6701,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6838
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.45299999999952,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Metric selects an undeclared column"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:eca239cd92b10fa614e357748547ad346d606d859a37bed00dda935c8ed1cdf3",
+      "response_sha256": "sha256:3b7fd88d3660b646017209e072e9c20bec9bd9e1b3b3cc498a22265cea545eeb",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1682.425,
+        "predicted_n": 156,
+        "predicted_per_second": 92.12892105145846,
+        "predicted_per_token_ms": 10.854354838709677,
+        "prompt_ms": 1603.525,
+        "prompt_n": 6726,
+        "prompt_per_second": 4194.508972420136,
+        "prompt_per_token_ms": 0.23840692833779364
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 156,
+        "prompt_tokens": 6726,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6882
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 4.765999999999622,
+      "error": {
+        "code": "MAPPING_ORDER",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9f2e6d4bfeb1b41cf127bb94c6651bb55c4fdf01ae4772968399e35dbd88d7b7",
+      "response_sha256": "sha256:f980b630772675d9a241d2e689a77a04eb2e97e98db41a7bec74ffc9df955f98",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2996.539,
+        "predicted_n": 277,
+        "predicted_per_second": 92.10625992186318,
+        "predicted_per_token_ms": 10.857025362318842,
+        "prompt_ms": 1628.202,
+        "prompt_n": 6821,
+        "prompt_per_second": 4189.283639253606,
+        "prompt_per_token_ms": 0.2387042955578361
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 277,
+        "prompt_tokens": 6821,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7098
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Bind the 'Ours' accuracy values from the LaTeX table, using the mean over seeds 1, 2, and 3 as specified in the task.",
+  "status": "budget_exhausted"
+}

@@ -1,0 +1,13 @@
+{
+  "category": "missing_experiment_identity",
+  "expected_decision": "abstain",
+  "expected_reference_status": null,
+  "reason": "Both datasets have the same value; the paper and request do not identify one.",
+  "reference_inputs": [],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "84.1\\%",
+    "prefix": "The accuracy is ",
+    "suffix": "."
+  }
+}

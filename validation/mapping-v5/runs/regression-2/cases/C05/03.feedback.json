@@ -1,0 +1,282 @@
+{
+  "actions_remaining": 13,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:c56bd25f52f754da7bea0a9103b0753e1803ffa31de6c7c2441ff996e2191cb8",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "accuracy_ours_data_a_test": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percentage_point",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {},
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "accuracy_ours_data_a_test"
+    ],
+    "available_sources": [
+      "metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations"
+    ],
+    "draft_id": "sha256:c56bd25f52f754da7bea0a9103b0753e1803ffa31de6c7c2441ff996e2191cb8",
+    "rationale": {}
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:c56bd25f52f754da7bea0a9103b0753e1803ffa31de6c7c2441ff996e2191cb8",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/main.tex": "sha256:d3e2dac606f99e58aef5a7132ef201d3b97bea65b0002012b942b2f725ad1142",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:5d81b0a343aa0aa4abfa8dcb2b00aba17a61ef3b78157ce58caf83260bb7c132"
+    },
+    "metrics": {
+      "accuracy_ours_data_a_test": {
+        "computed": {
+          "fingerprint": "sha256:ad85686f0f762da82e2b2dd6e053e01cec79b8dcfac12837b61f8c5cf12c2293",
+          "unit": "percentage_point",
+          "value": "0.841"
+        },
+        "declared_contract": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percentage_point",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        },
+        "declared_identity": {
+          "cell_range": null,
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ],
+          "reduce": "mean",
+          "seed_column": "seed",
+          "selectors": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          },
+          "sha256": "sha256:5d81b0a343aa0aa4abfa8dcb2b00aba17a61ef3b78157ce58caf83260bb7c132",
+          "sheet": null,
+          "source": "metrics_csv",
+          "unit": "percentage_point"
+        },
+        "evidence": [
+          {
+            "count": 3,
+            "field": "accuracy",
+            "inspect": {
+              "cell_range": null,
+              "field": "accuracy",
+              "full_report_pointer": "/preview/metrics/accuracy_ours_data_a_test/evidence",
+              "path": "results/metrics.csv",
+              "selectors": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              },
+              "sheet": null,
+              "source": "metrics_csv"
+            },
+            "locations": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "line": 2
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "line": 3
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "line": 4
+              }
+            ],
+            "locations_total": 3,
+            "path": "results/metrics.csv",
+            "records": [
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 1,
+                  "split": "test"
+                },
+                "value": "0.839"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 2,
+                  "split": "test"
+                },
+                "value": "0.841"
+              },
+              {
+                "key": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "seed": 3,
+                  "split": "test"
+                },
+                "value": "0.843"
+              }
+            ],
+            "records_total": 3,
+            "reduce": "mean",
+            "sha256": "sha256:5d81b0a343aa0aa4abfa8dcb2b00aba17a61ef3b78157ce58caf83260bb7c132",
+            "source": "metrics_csv",
+            "source_contract": {
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ]
+            },
+            "truncated": false,
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        ],
+        "name": "accuracy_ours_data_a_test",
+        "notices": [],
+        "verification": "evaluated_under_declared_contract"
+      }
+    },
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Reference existing metrics; do not add them again. If needed, add a second metric and supported derivation first. Select original candidate IDs and exact display places. Omit statistics for a simple value. Undo a wrong prior declaration; abstain for missing identity or units.",
+  "status": "draft",
+  "undo": {
+    "last_action": "metric",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

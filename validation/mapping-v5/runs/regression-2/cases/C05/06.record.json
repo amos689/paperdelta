@@ -1,0 +1,35 @@
+{
+  "action": "locations",
+  "action_index": 6,
+  "elapsed_seconds": 5.04700000000048,
+  "error": {
+    "code": "BUILDER_SELECTION",
+    "fields": [],
+    "hint": "For a simple value, use one original candidate ID and one binding name per location. Inspect table row and column identity. A range of IDs is not a single table cell. Compound statistics require their explicit display contract.",
+    "message": "Choose a metric and one or more distinct candidate IDs with equally many distinct binding names."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:29311205ac99c84f5dae3c4b5e49822c2c463eb462973b7561a7ff75b1fff711",
+  "response_sha256": "sha256:9fefa19e3bc8d3637ec29c2fe31e9064f457c80e71182fdff965a186831d8817",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2599.709,
+    "predicted_n": 231,
+    "predicted_per_second": 88.47144045737427,
+    "predicted_per_token_ms": 11.303082608695652,
+    "prompt_ms": 2271.124,
+    "prompt_n": 9130,
+    "prompt_per_second": 4020.035894121149,
+    "prompt_per_token_ms": 0.24875399780941948
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 231,
+    "prompt_tokens": 9130,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9361
+  },
+  "valid": false
+}

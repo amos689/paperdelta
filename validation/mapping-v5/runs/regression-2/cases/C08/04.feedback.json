@@ -1,0 +1,422 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "derived",
+    "locations",
+    "finish",
+    "undo",
+    "abstain"
+  ],
+  "applied": true,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:9d5156a708cd6efa15d3ba4b2cb8143a905ebbf032826488d3158be042520604",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            1,
+            2,
+            3
+          ],
+          "field": "accuracy",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "metrics_csv",
+          "unit": "percent",
+          "where": {
+            "dataset": "Data-A",
+            "model": "Ours",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "test_accuracy_paper": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        }
+      },
+      "sources": {
+        "metrics_csv": {
+          "columns": {
+            "accuracy": "decimal",
+            "dataset": "string",
+            "model": "string",
+            "seed": "integer",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/metrics.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "test_accuracy"
+    ],
+    "available_sources": [
+      "metrics_csv"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:9d5156a708cd6efa15d3ba4b2cb8143a905ebbf032826488d3158be042520604",
+    "rationale": {
+      "occurrences:test_accuracy_paper": "The test accuracy value in the paper's main.tex file is 86.0% on Data-A, which corresponds to the metric 'test_accuracy' defined in the metrics_csv source."
+    }
+  },
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [
+      {
+        "asserted_rationale": "The test accuracy value in the paper's main.tex file is 86.0% on Data-A, which corresponds to the metric 'test_accuracy' defined in the metrics_csv source.",
+        "binding": "occurrences:test_accuracy_paper",
+        "conflicts": [
+          {
+            "id": "occurrence:test_accuracy_paper/VALUE_MISMATCH",
+            "location": {
+              "byte_end": 27,
+              "byte_start": 21,
+              "column": 22,
+              "end": 27,
+              "file": "paper/main.tex",
+              "line": 1,
+              "start": 21,
+              "text": "86.0\\%"
+            },
+            "message": "'86.0\\\\%' should display '0.8\\\\%' from metric test_accuracy",
+            "rule": "VALUE_MISMATCH",
+            "severity": "error",
+            "subject": "occurrence:test_accuracy_paper"
+          }
+        ],
+        "context": {
+          "after": " on Data-A.\n",
+          "before": "The test accuracy is ",
+          "column_header": "",
+          "kind": "text",
+          "row": "The test accuracy is [value] on Data-A.\n",
+          "text": "86.0\\%"
+        },
+        "declared_binding": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 1
+          },
+          "file": "paper/main.tex",
+          "metric": "test_accuracy"
+        },
+        "deterministic_result": {
+          "actual": "86.0\\%",
+          "evidence_fingerprint": "sha256:ebebeb222d02b3aba6c355f3dd25bc08b24ee47c09a1481b23955f149c7b5188",
+          "expected": "0.8\\%",
+          "location": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "column": 22,
+            "end": 27,
+            "file": "paper/main.tex",
+            "line": 1,
+            "start": 21,
+            "text": "86.0\\%"
+          },
+          "metric": "test_accuracy",
+          "status": "mismatch",
+          "suggestion": {
+            "blocked_by": [],
+            "replacement": "0.8\\%"
+          },
+          "usage": "prose"
+        },
+        "group": "occurrences",
+        "identity_status": "requires_author_review",
+        "label": "paper/main.tex:1",
+        "location": {
+          "byte_end": 27,
+          "byte_start": 21,
+          "column": 22,
+          "end": 27,
+          "file": "paper/main.tex",
+          "line": 1,
+          "start": 21,
+          "text": "86.0\\%"
+        },
+        "manuscript_sha256": "sha256:1ff7bab670fb3c12cc12abfaa9ddf7b10422b34c8eb6ff4ee6e26b039164fc83",
+        "metrics": {
+          "test_accuracy": {
+            "computed": {
+              "fingerprint": "sha256:ebebeb222d02b3aba6c355f3dd25bc08b24ee47c09a1481b23955f149c7b5188",
+              "status": "ok",
+              "unit": "percent",
+              "value": "0.841"
+            },
+            "declared_contract": {
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "metrics_csv",
+              "unit": "percent",
+              "where": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              }
+            },
+            "declared_identity": {
+              "cell_range": null,
+              "columns": {
+                "accuracy": "decimal",
+                "dataset": "string",
+                "model": "string",
+                "seed": "integer",
+                "split": "string"
+              },
+              "expected_count": 3,
+              "expected_seeds": [
+                1,
+                2,
+                3
+              ],
+              "field": "accuracy",
+              "format": "csv",
+              "path": "results/metrics.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "split",
+                "seed"
+              ],
+              "reduce": "mean",
+              "seed_column": "seed",
+              "selectors": {
+                "dataset": "Data-A",
+                "model": "Ours",
+                "split": "test"
+              },
+              "sha256": "sha256:b4d120277c200d5924da6b4c6d3efa18ae8bc6f0a36fd664265d94b52b2aa4fa",
+              "sheet": null,
+              "source": "metrics_csv",
+              "unit": "percent"
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "accuracy",
+                "inspect": {
+                  "cell_range": null,
+                  "field": "accuracy",
+                  "full_report_pointer": "/preview/metrics/test_accuracy/evidence",
+                  "path": "results/metrics.csv",
+                  "selectors": {
+                    "dataset": "Data-A",
+                    "model": "Ours",
+                    "split": "test"
+                  },
+                  "sheet": null,
+                  "source": "metrics_csv"
+                },
+                "locations": [
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 1,
+                      "split": "test"
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 2,
+                      "split": "test"
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 3,
+                      "split": "test"
+                    },
+                    "line": 4
+                  }
+                ],
+                "locations_total": 3,
+                "path": "results/metrics.csv",
+                "records": [
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 1,
+                      "split": "test"
+                    },
+                    "value": "0.839"
+                  },
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 2,
+                      "split": "test"
+                    },
+                    "value": "0.841"
+                  },
+                  {
+                    "key": {
+                      "dataset": "Data-A",
+                      "model": "Ours",
+                      "seed": 3,
+                      "split": "test"
+                    },
+                    "value": "0.843"
+                  }
+                ],
+                "records_total": 3,
+                "reduce": "mean",
+                "sha256": "sha256:b4d120277c200d5924da6b4c6d3efa18ae8bc6f0a36fd664265d94b52b2aa4fa",
+                "source": "metrics_csv",
+                "source_contract": {
+                  "columns": {
+                    "accuracy": "decimal",
+                    "dataset": "string",
+                    "model": "string",
+                    "seed": "integer",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/metrics.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "split",
+                    "seed"
+                  ]
+                },
+                "truncated": false,
+                "where": {
+                  "dataset": "Data-A",
+                  "model": "Ours",
+                  "split": "test"
+                }
+              }
+            ],
+            "name": "test_accuracy",
+            "notices": [],
+            "verification": "evaluated_under_declared_contract"
+          }
+        },
+        "notices": [
+          "Review the declared experiment against the original context. Equal numbers alone do not establish identity.",
+          "The displayed value differs under this declaration. A stale paper value may still be the correct location; do not change units or selectors just to obtain a pass."
+        ],
+        "rationale_status": "unverified_assertion"
+      }
+    ],
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:test_accuracy_paper/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 27,
+          "byte_start": 21,
+          "column": 22,
+          "end": 27,
+          "file": "paper/main.tex",
+          "line": 1,
+          "start": 21,
+          "text": "86.0\\%"
+        },
+        "message": "'86.0\\\\%' should display '0.8\\\\%' from metric test_accuracy",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:test_accuracy_paper"
+      }
+    ],
+    "evidence_row_limit": 5,
+    "exit_code": 1,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/main.tex": "sha256:1ff7bab670fb3c12cc12abfaa9ddf7b10422b34c8eb6ff4ee6e26b039164fc83",
+      "paperdelta.yaml": "sha256:a73647097c9df69407b54e67e1abf13b626e45679aaacc4e3a65c49e99a53652",
+      "results/metrics.csv": "sha256:b4d120277c200d5924da6b4c6d3efa18ae8bc6f0a36fd664265d94b52b2aa4fa"
+    },
+    "proposal_id": "sha256:961e9f79f75d5039cb962f57b2557f9f5c19dbc917723f364f880c6e572e4efc",
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "The requested location is already bound; do not recreate its source, metric or location. Inspect review.bindings and finish with empty arguments if the identity and display are justified. A numeric mismatch can mean a stale manuscript. Undo a wrong declaration or abstain for missing evidence.",
+  "status": "draft",
+  "undo": {
+    "last_action": "locations",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(await page.locator("#attest").isChecked())
+
+    at D:\docs\学习\项目\codex项目\社区贡献2\build\v20-worktree\tools\validate_studio_browser.cjs:138:9 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

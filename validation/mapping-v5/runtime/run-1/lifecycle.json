@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-10-07T08:38:15.328636+00:00",
+  "runs": [
+    {
+      "directory": "build/v20-mapping-regression1",
+      "started_at": "2026-10-07T08:38:18.908531+00:00",
+      "run_returncode": 0,
+      "score_returncode": 0,
+      "completed_at": "2026-10-07T08:42:03.109554+00:00"
+    },
+    {
+      "directory": "build/v20-mapping-development1",
+      "started_at": "2026-10-07T08:42:03.109554+00:00",
+      "run_returncode": 0,
+      "score_returncode": 0,
+      "completed_at": "2026-10-07T08:46:09.319402+00:00"
+    }
+  ],
+  "owned_process": true,
+  "headless": true,
+  "pid": 5644,
+  "ready_at": "2026-10-07T08:38:18.908531+00:00",
+  "status": "completed",
+  "stopped_at": "2026-10-07T08:46:10.264620+00:00",
+  "returncode": 1,
+  "owned_process_stopped": true
+}

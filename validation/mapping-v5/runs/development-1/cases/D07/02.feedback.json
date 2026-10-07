@@ -1,0 +1,97 @@
+{
+  "actions_remaining": 14,
+  "allowed_actions": [
+    "source",
+    "metric",
+    "undo",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:665f7f66dd7c3a25b4a0c8d83f688b1303f9d21528e0705ab9d19f8765c61403",
+  "error": {
+    "code": "BUILDER_EXPECTATION",
+    "fields": [],
+    "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+    "message": "An aggregation requires an explicitly expected record count."
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "results_workbook": {
+          "cell_range": "A2:F11",
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "xlsx",
+          "path": "results/workbook.xlsx",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ],
+          "sheet": "development results"
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "results_workbook"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:665f7f66dd7c3a25b4a0c8d83f688b1303f9d21528e0705ab9d19f8765c61403",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:665f7f66dd7c3a25b4a0c8d83f688b1303f9d21528e0705ab9d19f8765c61403",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.docx": "sha256:0a8b90f34edc1afdce5cbb3482a6d3b8cd4aa7726f098c500d6933d6f0d63be7",
+      "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+      "results/workbook.xlsx": "sha256:2f4e55a63e36857e940e9f4aae181b1562fe0b48689d02c4706a21cb65b58def"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "Declare the source field unit separately from paper display. Use explicit experiment selectors, required count and exact seed set. Do not infer units from a percentage sign or numeric agreement.",
+  "status": "needs_correction",
+  "undo": {
+    "last_action": "source",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

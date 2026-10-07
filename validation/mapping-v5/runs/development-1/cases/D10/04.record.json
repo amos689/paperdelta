@@ -1,0 +1,35 @@
+{
+  "action": "source",
+  "action_index": 4,
+  "elapsed_seconds": 3.969000000000051,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "sources 中已存在 measurements，请选择其他标识符。"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:4a5fa1190ff5b76d479e1ba63dcb3e201a1e7529651771f6ce7ebe3fe55eb2fb",
+  "response_sha256": "sha256:8d7bf3b56e83949ac4013b8b740101f50d6f1b04a95811e0458af01c9e903c02",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1894.406,
+    "predicted_n": 171,
+    "predicted_per_second": 89.73789145515798,
+    "predicted_per_token_ms": 11.143564705882353,
+    "prompt_ms": 1908.224,
+    "prompt_n": 7430,
+    "prompt_per_second": 3893.6728602092835,
+    "prompt_per_token_ms": 0.25682691790040374
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 171,
+    "prompt_tokens": 7430,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7601
+  },
+  "valid": false
+}

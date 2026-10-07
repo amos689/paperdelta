@@ -1,0 +1,99 @@
+{
+  "case_id": "H02",
+  "expected_decision": "map",
+  "family": "tsv_scalar_stale_display",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:07483b4c48fc75d6aa74dc5f4c01d6a2eea8021e1824dc2f44f984716d452593",
+      "expected": "0.6832",
+      "location": {
+        "byte_end": 28,
+        "byte_start": 22,
+        "column": 23,
+        "end": 28,
+        "file": "paper/manuscript.tex",
+        "line": 1,
+        "start": 22,
+        "text": "0.6900"
+      },
+      "status": "mismatch"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "scalar",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "VariantAmber",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "exact": null,
+              "prefix": " is ",
+              "suffix": " "
+            },
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": false,
+              "places": 4
+            },
+            "file": "paper/manuscript.tex",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "tsv",
+            "path": "results/measurements.tsv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

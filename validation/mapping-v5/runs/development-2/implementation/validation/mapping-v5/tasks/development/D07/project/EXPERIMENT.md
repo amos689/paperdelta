@@ -1,0 +1,9 @@
+# Author's data export notes
+
+Record identity columns are dataset, model, checkpoint, split, seed. All five are strings; preserve leading zeros in seed IDs. Measurement fields are decimal values.
+
+The authoritative evidence file for the requested result is results/workbook.xlsx.
+
+Select worksheet 'development results', range A2:F11. The first row of that range is the column header; cells below it are string identifiers and decimal measurements.
+
+score stores fraction accuracy (0 to 1).

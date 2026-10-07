@@ -1,0 +1,137 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.9530000000013388,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7e52560e660993542a0f433c0d3d54886990e9d080a165be6a209234c6d51d28",
+      "response_sha256": "sha256:ed387d5a25799af6ca43773660fa4a664aff5f57acf4f111df577e77f8882fef",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1648.735,
+        "predicted_n": 154,
+        "predicted_per_second": 92.79841818121166,
+        "predicted_per_token_ms": 10.776045751633987,
+        "prompt_ms": 1541.484,
+        "prompt_n": 6491,
+        "prompt_per_second": 4210.877310435918,
+        "prompt_per_token_ms": 0.23748020335849637
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 154,
+        "prompt_tokens": 6491,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6645
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.2189999999991414,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:8cfefe1549c1a5e14e94cb299d00a410543382b997bff5c0ae12cb077276de86",
+      "response_sha256": "sha256:3a4f2c09d45d71a690210af5f63e5b3088e0673d23e0d3ec34fe112854c7f8ec",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1428.602,
+        "predicted_n": 132,
+        "predicted_per_second": 91.69803766199402,
+        "predicted_per_token_ms": 10.905358778625954,
+        "prompt_ms": 1636.124,
+        "prompt_n": 6841,
+        "prompt_per_second": 4181.22342805313,
+        "prompt_per_token_ms": 0.23916444964186523
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 132,
+        "prompt_tokens": 6841,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6973
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 3,
+      "elapsed_seconds": 3.5940000000009604,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "该名称已存在于 preview.additions，请引用它而非重复添加。需要修改成功声明时，先撤回后续步骤和该声明，再添加修正后的版本。",
+        "message": "sources 中已存在 results_measurements，请选择其他标识符。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:42c56d648b3beb1ce771694b883a0430277d3ed1066b49a0abe70513be2b988f",
+      "response_sha256": "sha256:a01f532cd843ed3affce52a0aef54365ca3139763f2f508cf5a51abfd69859c7",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1774.257,
+        "predicted_n": 163,
+        "predicted_per_second": 91.30582548075053,
+        "predicted_per_token_ms": 10.952203703703704,
+        "prompt_ms": 1645.877,
+        "prompt_n": 6896,
+        "prompt_per_second": 4189.863519570418,
+        "prompt_per_token_ms": 0.23867125870069605
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 163,
+        "prompt_tokens": 6896,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7059
+      },
+      "valid": false
+    },
+    {
+      "action": "abstain",
+      "action_index": 4,
+      "elapsed_seconds": 2.32799999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e6714a8d7796f32d0dcb02ad7e8722ae283eb9a8acb489b3a901c64e54ead881",
+      "response_sha256": "sha256:d32445c64c3d794c35b41abdae896ca0ef48ff62901f953081006346191b9be4",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 546.382,
+        "predicted_n": 50,
+        "predicted_per_second": 89.68084600151543,
+        "predicted_per_token_ms": 11.150653061224489,
+        "prompt_ms": 1654.82,
+        "prompt_n": 6941,
+        "prompt_per_second": 4194.413893958255,
+        "prompt_per_token_ms": 0.2384123325169284
+      },
+      "status": "abstained",
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 6941,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6991
+      },
+      "valid": true
+    }
+  ],
+  "reason": "无法继续绑定，因为已声明的源 'results_measurements' 导致冲突。需要撤回该声明才能继续。",
+  "status": "abstained"
+}

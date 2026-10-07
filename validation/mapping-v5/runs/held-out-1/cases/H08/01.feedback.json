@@ -1,0 +1,73 @@
+{
+  "actions_remaining": 15,
+  "allowed_actions": [
+    "source",
+    "abstain"
+  ],
+  "applied": false,
+  "corrections_remaining": 2,
+  "draft_id": "sha256:aef796dacd1a1b2719fdd4ebd624155f97483cd93f302d8a0873f6d822141a5d",
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "name"
+      ]
+    ],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "1 validation error for SourceMappingStage\nname\n  String should match pattern '^[A-Za-z][A-Za-z0-9_.-]{0,99}$' [type=string_pattern_mismatch, input_value='results/measurements.csv', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_pattern_mismatch"
+  },
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {}
+    },
+    "available_metrics": [],
+    "available_sources": [],
+    "available_stages": [
+      "source"
+    ],
+    "draft_id": "sha256:aef796dacd1a1b2719fdd4ebd624155f97483cd93f302d8a0873f6d822141a5d",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:aef796dacd1a1b2719fdd4ebd624155f97483cd93f302d8a0873f6d822141a5d",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.qmd": "sha256:5966a2b3de1c35b3b8a251faec88ee00c8635fb10bc461b44881cec9c0716eec",
+      "paperdelta.yaml": "sha256:223054d618f54f3c9a451037dd7298149158c91a1ebc8cc986c7ffe650fb37a4"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "First read the original evidence notes. Missing identity or unknown source units require abstention. Declare the authoritative evidence file. CSV/TSV/XLSX require columns and primary_key immediately; JSON omits both and uses a pointer in the metric field.",
+  "status": "needs_correction",
+  "undo": {
+    "last_action": null,
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

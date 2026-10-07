@@ -1,0 +1,42 @@
+{
+  "action": "locations",
+  "action_index": 4,
+  "elapsed_seconds": 5.530999999999949,
+  "error": {
+    "code": "DRAFT_STATISTICS",
+    "fields": [
+      [
+        "component"
+      ],
+      [
+        "mean"
+      ]
+    ],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "验证发现 2 个问题：\ncomponent：缺少必填字段\nmean：不允许额外字段"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:fdce34c3079f78e69259a76ad078ac3bf3268dcd811ac47572708f0b183bd450",
+  "response_sha256": "sha256:156c5902700b1439886f3e646e5eb489068f3d2011915c624c3c6f16ca66d642",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 3106.833,
+    "predicted_n": 268,
+    "predicted_per_second": 85.93960473575503,
+    "predicted_per_token_ms": 11.636078651685393,
+    "prompt_ms": 2209.358,
+    "prompt_n": 8784,
+    "prompt_per_second": 3975.8155989205907,
+    "prompt_per_token_ms": 0.2515207194899818
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 268,
+    "prompt_tokens": 8784,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9052
+  },
+  "valid": false
+}

@@ -1,0 +1,40 @@
+{
+  "action": "source",
+  "action_index": 4,
+  "elapsed_seconds": 3.734999999998763,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "columns",
+        "seeds"
+      ]
+    ],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "验证发现 1 个问题：\ncolumns.seeds：值必须为 'string', 'integer' or 'decimal'"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:03bc7a6e590fd31b4f7270b2be70a5619c29f097e3d269559986c019f1141d43",
+  "response_sha256": "sha256:d366b689fa207ea6660f05fe25b2d306d96e40a6c94231ddc3ee1a6a8021c675",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1847.98,
+    "predicted_n": 169,
+    "predicted_per_second": 90.91007478435915,
+    "predicted_per_token_ms": 10.999880952380952,
+    "prompt_ms": 1724.208,
+    "prompt_n": 7178,
+    "prompt_per_second": 4163.070812802168,
+    "prompt_per_token_ms": 0.24020730008358876
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 7178,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7347
+  },
+  "valid": false
+}

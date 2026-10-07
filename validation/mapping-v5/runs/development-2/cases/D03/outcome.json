@@ -1,0 +1,214 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 4.0,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:10e93fcc9818282b1100495c4087f9240dd07291979f96057bc855bcaa9a9dfd",
+      "response_sha256": "sha256:6357f6b3020e5afa7257f4e84cc8d13ba8e72d6c397f01982e8c4049811f27fe",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1787.239,
+        "predicted_n": 165,
+        "predicted_per_second": 91.76165023256543,
+        "predicted_per_token_ms": 10.897798780487806,
+        "prompt_ms": 1662.853,
+        "prompt_n": 6968,
+        "prompt_per_second": 4190.388446844068,
+        "prompt_per_token_ms": 0.2386413605051665
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 6968,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7133
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 4.186999999999898,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:20231affbd4c622daa27bd27ceee34e60a3de93d36dcfa20aa6ef79f369ad287",
+      "response_sha256": "sha256:54b961edbe3bc66f8b30bd4905fb8362b077335dc5873327c6fd2c6f61c3120c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2152.876,
+        "predicted_n": 196,
+        "predicted_per_second": 90.57651253486033,
+        "predicted_per_token_ms": 11.040389743589744,
+        "prompt_ms": 1763.676,
+        "prompt_n": 7332,
+        "prompt_per_second": 4157.226157185333,
+        "prompt_per_token_ms": 0.24054500818330604
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 196,
+        "prompt_tokens": 7332,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7528
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 5.188000000000102,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:96b909b2657e5c3be4e208cd98c8e91249845cbeeb45571885f4df8462213402",
+      "response_sha256": "sha256:94ea44a782fea19ff7f316d8aebab69cd3d11160d5fdd291cd4db2c3b603fc8c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2440.725,
+        "predicted_n": 216,
+        "predicted_per_second": 88.08858023742945,
+        "predicted_per_token_ms": 11.352209302325582,
+        "prompt_ms": 2200.977,
+        "prompt_n": 8841,
+        "prompt_per_second": 4016.852515950871,
+        "prompt_per_token_ms": 0.2489511367492365
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 216,
+        "prompt_tokens": 8841,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9057
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 4,
+      "elapsed_seconds": 3.7180000000007567,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0b021778258072dce9dcf459fbb37dd3024771772f4a483a6a869d5bfdeec5fd",
+      "response_sha256": "sha256:6073bda9ef792d1a999ac12b3c8360239a8bd0bf1d89d842de7ca498e64bb3ac",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 622.701,
+        "predicted_n": 53,
+        "predicted_per_second": 83.50717278437003,
+        "predicted_per_token_ms": 11.975019230769231,
+        "prompt_ms": 2585.365,
+        "prompt_n": 10238,
+        "prompt_per_second": 3959.9824396168437,
+        "prompt_per_token_ms": 0.2525263723383473
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 53,
+        "prompt_tokens": 10238,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10291
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score_pct",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_measurements",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": null,
+            "suffix": null,
+            "table": {
+              "column": 1,
+              "headers": [
+                "Experiment & Score (%)"
+              ],
+              "percent_symbol": true,
+              "row_prefix": [
+                "Cedar / VariantBlue / selected / test"
+              ]
+            }
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 3
+          },
+          "file": "paper/manuscript.docx",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "score_pct": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/manuscript.docx": "sha256:4e594158931e93525796ab060d4599e3a647410588e1f5319b81068f16442586",
+      "paperdelta.yaml": "sha256:314892779a706fe1e8b76cfddcf5adc990d3fd37bbd5d03106606baf8ac3f853",
+      "results/measurements.csv": "sha256:b222f3154bd9cbb72f43eafee2bb86edcd5dd3f23abb511b18153dd86cf1a5c3"
+    },
+    "proposal_id": "sha256:17673aef5b5a101a13dd634dc62b5cac9cf2f1939b75d03adbdbb5292aa70de8",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:mean_test_accuracy_value": "The mean test accuracy value is located in the Word document's table under the Score (%) column, and it is formatted as a percentage with three decimal places."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The original mean test accuracy result has been successfully bound to the correct location in the manuscript.docx file. The binding is justified by the evidence and the declared schema.",
+  "status": "proposed"
+}

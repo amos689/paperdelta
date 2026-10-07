@@ -1,0 +1,37 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 3.688000000000102,
+  "error": {
+    "code": "DRAFT_METRIC",
+    "fields": [
+      []
+    ],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "验证发现 1 个问题：\n$：计数指标必须使用 count 单位"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:2260e9182af0ca9dbf5bd07bdd24889c39f5be7fa5f3ac3398a298e9d0d05342",
+  "response_sha256": "sha256:041c53221d6c48c79785a3eddf846d337d4f58596903d600abfdcb25d75a91af",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1709.125,
+    "predicted_n": 156,
+    "predicted_per_second": 90.68968039201346,
+    "predicted_per_token_ms": 11.026612903225807,
+    "prompt_ms": 1810.67,
+    "prompt_n": 6990,
+    "prompt_per_second": 3860.4494468898247,
+    "prompt_per_token_ms": 0.25903719599427755
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 156,
+    "prompt_tokens": 6990,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7146
+  },
+  "valid": false
+}

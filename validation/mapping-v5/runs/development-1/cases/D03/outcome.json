@@ -1,0 +1,204 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.3590000000003783,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+        "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/measure...one, 'cell_range': None}, input_type=dict]"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:307e59d0f38ccaf38634a0a65f7966f19c538401e86887d34d652e2b29d2266e",
+      "response_sha256": "sha256:6a5f83123248a33385671995a95548b4b091c6eda767f71265d9f69f4d8b7de3",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1152.815,
+        "predicted_n": 107,
+        "predicted_per_second": 91.94883827847485,
+        "predicted_per_token_ms": 10.87561320754717,
+        "prompt_ms": 1500.833,
+        "prompt_n": 6230,
+        "prompt_per_second": 4151.02812904567,
+        "prompt_per_token_ms": 0.24090417335473516
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 107,
+        "prompt_tokens": 6230,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6337
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.858999999999469,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:2b7a481231fef4afd1efa273505c1810f2327fe0b3c635f3221ac0d305c4e9f0",
+      "response_sha256": "sha256:8b89f08a0d5bfee438c2d210f6f9fb641a9c4fa5ff26d500524efbfa4d634726",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1841.58,
+        "predicted_n": 166,
+        "predicted_per_second": 89.5969765093018,
+        "predicted_per_token_ms": 11.161090909090909,
+        "prompt_ms": 1780.514,
+        "prompt_n": 7262,
+        "prompt_per_second": 4078.5975285788263,
+        "prompt_per_token_ms": 0.2451823189204076
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 7262,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7428
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.203000000000429,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:d1a451b7ef7eab5fec0d49513191684da48de4bbf128498df09619167392f72f",
+      "response_sha256": "sha256:b184ca319d0133da878e1bfda7ffd8a5c890455b7108a07682dd49aea0b7394c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2077.224,
+        "predicted_n": 185,
+        "predicted_per_second": 88.57975836982433,
+        "predicted_per_token_ms": 11.289260869565219,
+        "prompt_ms": 1832.644,
+        "prompt_n": 7395,
+        "prompt_per_second": 4035.153581382964,
+        "prompt_per_token_ms": 0.24782204192021637
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 185,
+        "prompt_tokens": 7395,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7580
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 4,
+      "elapsed_seconds": 5.282000000000153,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:aa896fe231ac0e74cb615e2751e35742c7916a56d503f2fc35276fbde5bced04",
+      "response_sha256": "sha256:9e2959c0a7b3eb65c45c18b75d244451229e12b95451d611912e6b6d03f398f4",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2490.935,
+        "predicted_n": 216,
+        "predicted_per_second": 86.3129708322377,
+        "predicted_per_token_ms": 11.585744186046512,
+        "prompt_ms": 2299.379,
+        "prompt_n": 8895,
+        "prompt_per_second": 3868.4357820089685,
+        "prompt_per_token_ms": 0.25850241708825183
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 216,
+        "prompt_tokens": 8895,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9111
+      },
+      "valid": true
+    },
+    {
+      "action": "source",
+      "action_index": 5,
+      "elapsed_seconds": 3.9219999999995707,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "sources already contains results_measurements; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5f510edbe616f09e3969567bfa15535bd9d361cbc137e0ab884324c71c62c9c4",
+      "response_sha256": "sha256:1cca7d93e2bc854362e72b8306eef485f6da0f2f138924e88b6dbc8caba90c81",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 833.922,
+        "predicted_n": 72,
+        "predicted_per_second": 85.13985720487048,
+        "predicted_per_token_ms": 11.74538028169014,
+        "prompt_ms": 2739.237,
+        "prompt_n": 10339,
+        "prompt_per_second": 3774.4087130832418,
+        "prompt_per_token_ms": 0.26494216075055615
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 72,
+        "prompt_tokens": 10339,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10411
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 6,
+      "elapsed_seconds": 5.359000000000378,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "metrics already contains mean_test_accuracy; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a6b47774d72701ae33b58e710ab63b3307767b33deb8545ba72f002dc00c5f2d",
+      "response_sha256": "sha256:dfb3cebe9a2eea928139d1f57b88496e70990fc26d2fa8cf25fe7b7f14927e18",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2083.526,
+        "predicted_n": 174,
+        "predicted_per_second": 83.03232117093812,
+        "predicted_per_token_ms": 12.043502890173409,
+        "prompt_ms": 2698.172,
+        "prompt_n": 10276,
+        "prompt_per_second": 3808.5044244770165,
+        "prompt_per_token_ms": 0.26257026080186846
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 174,
+        "prompt_tokens": 10276,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10450
+      },
+      "valid": false
+    }
+  ],
+  "reason": "Binding the mean test accuracy metric from the results_measurements source, using the score_pct field with a percent unit, and aggregating over the three specified seeds.",
+  "status": "budget_exhausted"
+}

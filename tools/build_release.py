@@ -64,6 +64,8 @@ def main():
             "docs/zh-CN/v1.4.md",
             "docs/v1.8.md",
             "docs/zh-CN/v1.8.md",
+            "docs/v2.0.md",
+            "docs/zh-CN/v2.0.md",
         }
     )
     manifest = {
@@ -112,7 +114,11 @@ def main():
             "and first held-out results.\n\n"
             "The separate 1.8 native-v3 study retains twelve new licensed originals, "
             "whole-value gold, the public 1.7 baseline and all four outcomes. Read "
-            "validation/native-v3/README.md for the frozen replay and limitations.\n",
+            "validation/native-v3/README.md for the frozen replay and limitations.\n\n"
+            "The separate 2.0 mapping-v5 study preserves 24 authored bilingual tasks, "
+            "old-task regressions, real model requests/responses, first failures and the "
+            "implementation/prompt selection frozen before held-out inference. Read "
+            "validation/mapping-v5/README.md for results and reproduction limits.\n",
         )
         bundle.writestr(
             "EVALUATION_README.zh-CN.md",
@@ -133,7 +139,10 @@ def main():
             "`python tools/replay_native_v2.py --out build/native-v2-replay` 重放。"
             "保留二十份原文件、独立定位、冻结实现、基线、开发历史和首次留出结果。\n\n"
             "1.8 的 native-v3 试验独立保留十二份新许可原件、完整数值标注、公开 1.7 基线"
-            "及四类结果。冻结重放与限制见 validation/native-v3/README.zh-CN.md。\n",
+            "及四类结果。冻结重放与限制见 validation/native-v3/README.zh-CN.md。\n\n"
+            "2.0 的 mapping-v5 研究保留 24 个自建双语任务、旧任务回归、真实模型请求/响应、"
+            "首次失败及留出推理前冻结的实现/提示词选择。结果和复现限制见 "
+            "validation/mapping-v5/README.zh-CN.md。\n",
         )
     print(
         json.dumps(

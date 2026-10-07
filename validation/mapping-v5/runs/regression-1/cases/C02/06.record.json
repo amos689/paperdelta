@@ -1,0 +1,35 @@
+{
+  "action": "locations",
+  "action_index": 6,
+  "elapsed_seconds": 5.25,
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "occurrences already contains test_accuracy_data_a_value; choose another identifier."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:28c0f4aa8875fcd7da14c39025ca4c017d1f249a11e077536a631cc8d69b0784",
+  "response_sha256": "sha256:b681ddd2d54355b6b961dadf6b32b691005fa3a46f1c1b7c6895c7ffb7660cb0",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2649.965,
+    "predicted_n": 235,
+    "predicted_per_second": 88.30305305919134,
+    "predicted_per_token_ms": 11.324636752136753,
+    "prompt_ms": 2344.485,
+    "prompt_n": 9456,
+    "prompt_per_second": 4033.2951586382505,
+    "prompt_per_token_ms": 0.247936230964467
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 235,
+    "prompt_tokens": 9456,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9691
+  },
+  "valid": false
+}

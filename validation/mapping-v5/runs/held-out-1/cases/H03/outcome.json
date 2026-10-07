@@ -1,0 +1,142 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 4.07799999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7de5b443f5b507064760212bcedd6e03e5c37a7cbf4e9782068d15e96faabe1a",
+      "response_sha256": "sha256:43b7e01007ce9919b5dbd22e04df1b1a63f9e8602dd125871302da358a2346de",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1786.216,
+        "predicted_n": 165,
+        "predicted_per_second": 91.81420388127752,
+        "predicted_per_token_ms": 10.891560975609755,
+        "prompt_ms": 1690.733,
+        "prompt_n": 7066,
+        "prompt_per_second": 4179.25243075045,
+        "prompt_per_token_ms": 0.2392772431361449
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 7066,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7231
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.515000000001237,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:570f047cada4d0b92e8e8827ca61d52dcbf3baad7f158b003cf96370772d234a",
+      "response_sha256": "sha256:c3f6afe2dd9ec70759b7572f35aaeffbd024267d722d63d340a1da40a60b7cde",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1575.517,
+        "predicted_n": 143,
+        "predicted_per_second": 90.12914490925834,
+        "predicted_per_token_ms": 11.095190140845071,
+        "prompt_ms": 1790.392,
+        "prompt_n": 7462,
+        "prompt_per_second": 4167.8023583662125,
+        "prompt_per_token_ms": 0.23993460198338248
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 143,
+        "prompt_tokens": 7462,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7605
+      },
+      "valid": false
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 4.296999999998661,
+      "error": {
+        "code": "MAPPING_ORDER",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "请选择 allowed_actions 中的动作，只引用已声明的来源和指标。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0ef72da33ae642d260951972762112fa28b9a876736b12e40f4d0eeba0f31924",
+      "response_sha256": "sha256:b7936af796610191af5cd32a25b283a9993d70464784e0b1de1b819e3c2edd24",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2376.992,
+        "predicted_n": 216,
+        "predicted_per_second": 90.45045166327863,
+        "predicted_per_token_ms": 11.055776744186048,
+        "prompt_ms": 1795.073,
+        "prompt_n": 7517,
+        "prompt_per_second": 4187.573430161337,
+        "prompt_per_token_ms": 0.23880178262604765
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 216,
+        "prompt_tokens": 7517,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7733
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.610000000000582,
+      "error": {
+        "code": "MISSING_COLUMN",
+        "fields": [],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "指标选择了未声明的列"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a8b5b31dfdd59b013d3b9ff9d29607a15d696cc2e6bfd700068886b01370bf60",
+      "response_sha256": "sha256:e372a9fd5549251b91e1c5018f4141216ea0ceac3254ef87b599f152cf098000",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1630.601,
+        "predicted_n": 148,
+        "predicted_per_second": 90.15080942548177,
+        "predicted_per_token_ms": 11.09252380952381,
+        "prompt_ms": 1820.958,
+        "prompt_n": 7599,
+        "prompt_per_second": 4173.078127007871,
+        "prompt_per_token_ms": 0.23963126727200948
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 148,
+        "prompt_tokens": 7599,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7747
+      },
+      "valid": false
+    }
+  ],
+  "reason": "声明测试准确率均值的指标，使用已声明的 measurements 源和 score_pct 字段，单位为百分比，预期种子为 001、002、003，预期计数为 3。",
+  "status": "budget_exhausted"
+}

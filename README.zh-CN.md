@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="跨平台检查状态"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.9.0"><img src="docs/assets/badges/release.svg" alt="正式版 1.9.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v2.0.0"><img src="docs/assets/badges/release.svg" alt="正式版 2.0.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.zh-CN.svg" alt="原创代码采用 MIT 许可"></a>
 </p>
 
@@ -55,9 +55,10 @@
 [打开原尺寸动图](docs/assets/v1.3/demo.zh-CN.gif?raw=true) ·
 [查看静态截图](docs/assets/v1.3/report.zh-CN.png)。
 
-**1.9.0** 在 Studio 和持续检查中复用未变化的文档解析与精确指标结果，限制缓存大小，
-每次仍读取当前内容哈希。内容修改、删除、证据重排和配置更新后，判定与原始位置保持
-和完整重检一致。[增量检查指南](docs/zh-CN/v1.9.md) ·
+**2.0.0** 将声明的实验身份、精确来源哈希、原文上下文、单位、记录和冲突集中到
+Agent 建议审查中。Studio 与 CLI 共用这些证据；分阶段 Agent 可在固定预算内撤回
+错误声明。接受映射仍需明确复核和确认。
+[Agent 证据审查](docs/zh-CN/v2.0.md) · [增量检查](docs/zh-CN/v1.9.md) ·
 [批注副本指南](docs/zh-CN/v1.8.md) · [按任务开始](docs/zh-CN/tasks.md) ·
 [修订工作台](docs/zh-CN/v1.7.md) · [Notebook/Quarto 流程](docs/zh-CN/v1.6.md)。
 
@@ -90,7 +91,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 ```
 
 已[安装 uv](https://docs.astral.sh/uv/getting-started/installation/) 时，也可使用隔离环境：
-`uvx --python 3.12 paperdelta@1.9.0 --lang zh-CN demo --out paperdelta-demo --open`。
+`uvx --python 3.12 paperdelta@2.0.0 --lang zh-CN demo --out paperdelta-demo --open`。
 每次运行使用新输出目录。详见[可选原生读取与启动诊断](docs/zh-CN/v1.3.md)。
 
 如需先创建环境，运行 `python -m venv .venv`。Windows PowerShell 使用
@@ -107,7 +108,7 @@ paperdelta --lang zh-CN demo --out paperdelta-demo --open
 
 也可从 [GitHub Releases](https://github.com/amos689/paperdelta/releases) 下载 wheel、
 源码包及单独许可的评测材料。将 wheel 与发行页的 `SHA256SUMS` 核对后，运行
-`python -m pip install ./paperdelta-1.9.0-py3-none-any.whl`。
+`python -m pip install ./paperdelta-2.0.0-py3-none-any.whl`。
 
 ## 接入已有论文
 

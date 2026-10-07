@@ -1,0 +1,469 @@
+{
+  "actions_remaining": 11,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 2,
+  "deterministic_check": {
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:mean_test_loss_value/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 28,
+          "byte_start": 22,
+          "column": 23,
+          "end": 28,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 22,
+          "text": "0.6900"
+        },
+        "message": "'0.6900' should display '0.6832' from metric mean_test_loss",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:mean_test_loss_value"
+      }
+    ],
+    "exit_code": 1
+  },
+  "draft_id": "sha256:244ccffdbf3adb46f2438e9efb659c2cbf61a73ff7e0ba59a1c93e54da4e526f",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_loss": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_measurements",
+          "unit": "scalar",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_loss_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": " is ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 4
+          },
+          "file": "paper/manuscript.tex",
+          "metric": "mean_test_loss"
+        }
+      },
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "tsv",
+          "path": "results/measurements.tsv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_loss"
+    ],
+    "available_sources": [
+      "results_measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:244ccffdbf3adb46f2438e9efb659c2cbf61a73ff7e0ba59a1c93e54da4e526f",
+    "rationale": {
+      "occurrences:mean_test_loss_value": "The original text in the paper states the mean test loss as 0.6900, which corresponds to the computed mean of the three seed values in the results file."
+    }
+  },
+  "proposal_id": "sha256:4ae3644c835c750fa0bf8ade0b44cdeb02f1d4430e4e3b16bbdb18186e8a3503",
+  "proposal_json": "{\n  \"additions\": {\n    \"claims\": {},\n    \"figures\": {},\n    \"metrics\": {\n      \"mean_test_loss\": {\n        \"expected_count\": 3,\n        \"expected_seeds\": [\n          \"001\",\n          \"002\",\n          \"003\"\n        ],\n        \"field\": \"score\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"results_measurements\",\n        \"unit\": \"scalar\",\n        \"where\": {\n          \"checkpoint\": \"selected\",\n          \"dataset\": \"Juniper\",\n          \"model\": \"VariantAmber\",\n          \"split\": \"test\"\n        }\n      }\n    },\n    \"occurrences\": {\n      \"mean_test_loss_value\": {\n        \"anchor\": {\n          \"exact\": null,\n          \"prefix\": \" is \",\n          \"suffix\": \" \"\n        },\n        \"display\": {\n          \"kind\": \"decimal\",\n          \"percent_symbol\": false,\n          \"places\": 4\n        },\n        \"file\": \"paper/manuscript.tex\",\n        \"metric\": \"mean_test_loss\"\n      }\n    },\n    \"sources\": {\n      \"results_measurements\": {\n        \"columns\": {\n          \"checkpoint\": \"string\",\n          \"dataset\": \"string\",\n          \"model\": \"string\",\n          \"score\": \"decimal\",\n          \"seed\": \"string\",\n          \"split\": \"string\"\n        },\n        \"format\": \"tsv\",\n        \"path\": \"results/measurements.tsv\",\n        \"primary_key\": [\n          \"dataset\",\n          \"model\",\n          \"checkpoint\",\n          \"split\",\n          \"seed\"\n        ]\n      }\n    }\n  },\n  \"config_path\": \"paperdelta.yaml\",\n  \"input_hashes\": {\n    \"paper/manuscript.tex\": \"sha256:9d94fd6720e0f2fa354e73daa5d668165dceb71ca518d982e0263843295bb0b9\",\n    \"paperdelta.yaml\": \"sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172\",\n    \"results/measurements.tsv\": \"sha256:598cac4b1cc2ec51157ecf731cc7b00c2cdee9e80900f42ffc0f08cf8fdcacda\"\n  },\n  \"proposal_id\": \"sha256:4ae3644c835c750fa0bf8ade0b44cdeb02f1d4430e4e3b16bbdb18186e8a3503\",\n  \"proposal_schema_version\": 1,\n  \"rationale\": {\n    \"occurrences:mean_test_loss_value\": \"The original text in the paper states the mean test loss as 0.6900, which corresponds to the computed mean of the three seed values in the results file.\"\n  },\n  \"tool_version\": \"2.0.0\"\n}\n",
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [
+      {
+        "asserted_rationale": "The original text in the paper states the mean test loss as 0.6900, which corresponds to the computed mean of the three seed values in the results file.",
+        "binding": "occurrences:mean_test_loss_value",
+        "conflicts": [
+          {
+            "id": "occurrence:mean_test_loss_value/VALUE_MISMATCH",
+            "location": {
+              "byte_end": 28,
+              "byte_start": 22,
+              "column": 23,
+              "end": 28,
+              "file": "paper/manuscript.tex",
+              "line": 1,
+              "start": 22,
+              "text": "0.6900"
+            },
+            "message": "'0.6900' should display '0.6832' from metric mean_test_loss",
+            "rule": "VALUE_MISMATCH",
+            "severity": "error",
+            "subject": "occurrence:mean_test_loss_value"
+          }
+        ],
+        "context": {
+          "after": " on Juniper for VariantAmber.\n",
+          "before": "The mean test loss is ",
+          "column_header": "",
+          "kind": "text",
+          "row": "The mean test loss is [value] on Juniper for VariantAmber.\n",
+          "text": "0.6900"
+        },
+        "declared_binding": {
+          "anchor": {
+            "exact": null,
+            "prefix": " is ",
+            "suffix": " "
+          },
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 4
+          },
+          "file": "paper/manuscript.tex",
+          "metric": "mean_test_loss"
+        },
+        "deterministic_result": {
+          "actual": "0.6900",
+          "evidence_fingerprint": "sha256:efc740cdca8cd89f68575ef80d0d60c269786c0d7e3c373f09100e264ee8c1b6",
+          "expected": "0.6832",
+          "location": {
+            "byte_end": 28,
+            "byte_start": 22,
+            "column": 23,
+            "end": 28,
+            "file": "paper/manuscript.tex",
+            "line": 1,
+            "start": 22,
+            "text": "0.6900"
+          },
+          "metric": "mean_test_loss",
+          "status": "mismatch",
+          "suggestion": {
+            "blocked_by": [],
+            "replacement": "0.6832"
+          },
+          "usage": "prose"
+        },
+        "group": "occurrences",
+        "identity_status": "requires_author_review",
+        "label": "paper/manuscript.tex:1",
+        "location": {
+          "byte_end": 28,
+          "byte_start": 22,
+          "column": 23,
+          "end": 28,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 22,
+          "text": "0.6900"
+        },
+        "manuscript_sha256": "sha256:9d94fd6720e0f2fa354e73daa5d668165dceb71ca518d982e0263843295bb0b9",
+        "metrics": {
+          "mean_test_loss": {
+            "computed": {
+              "fingerprint": "sha256:efc740cdca8cd89f68575ef80d0d60c269786c0d7e3c373f09100e264ee8c1b6",
+              "status": "ok",
+              "unit": "scalar",
+              "value": "0.6832"
+            },
+            "declared_contract": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "scalar",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Juniper",
+                "model": "VariantAmber",
+                "split": "test"
+              }
+            },
+            "declared_identity": {
+              "cell_range": null,
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "format": "tsv",
+              "path": "results/measurements.tsv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ],
+              "reduce": "mean",
+              "seed_column": "seed",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Juniper",
+                "model": "VariantAmber",
+                "split": "test"
+              },
+              "sha256": "sha256:598cac4b1cc2ec51157ecf731cc7b00c2cdee9e80900f42ffc0f08cf8fdcacda",
+              "sheet": null,
+              "source": "results_measurements",
+              "unit": "scalar"
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "score",
+                "format": "tsv",
+                "inspect": {
+                  "cell_range": null,
+                  "field": "score",
+                  "full_report_pointer": "/preview/metrics/mean_test_loss/evidence",
+                  "path": "results/measurements.tsv",
+                  "selectors": {
+                    "checkpoint": "selected",
+                    "dataset": "Juniper",
+                    "model": "VariantAmber",
+                    "split": "test"
+                  },
+                  "sheet": null,
+                  "source": "results_measurements"
+                },
+                "locations": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "line": 4
+                  }
+                ],
+                "locations_total": 3,
+                "path": "results/measurements.tsv",
+                "records": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "value": "0.6812"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "value": "0.6832"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Juniper",
+                      "model": "VariantAmber",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "value": "0.6852"
+                  }
+                ],
+                "records_total": 3,
+                "reduce": "mean",
+                "sha256": "sha256:598cac4b1cc2ec51157ecf731cc7b00c2cdee9e80900f42ffc0f08cf8fdcacda",
+                "source": "results_measurements",
+                "source_contract": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "tsv",
+                  "path": "results/measurements.tsv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "checkpoint",
+                    "split",
+                    "seed"
+                  ]
+                },
+                "truncated": false,
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Juniper",
+                  "model": "VariantAmber",
+                  "split": "test"
+                }
+              }
+            ],
+            "name": "mean_test_loss",
+            "notices": [],
+            "verification": "evaluated_under_declared_contract"
+          }
+        },
+        "notices": [
+          "Review the declared experiment against the original context. Equal numbers alone do not establish identity.",
+          "The displayed value differs under this declaration. A stale paper value may still be the correct location; do not change units or selectors just to obtain a pass."
+        ],
+        "rationale_status": "unverified_assertion"
+      }
+    ],
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:mean_test_loss_value/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 28,
+          "byte_start": 22,
+          "column": 23,
+          "end": 28,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 22,
+          "text": "0.6900"
+        },
+        "message": "'0.6900' should display '0.6832' from metric mean_test_loss",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:mean_test_loss_value"
+      }
+    ],
+    "evidence_row_limit": 10,
+    "exit_code": 1,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.tex": "sha256:9d94fd6720e0f2fa354e73daa5d668165dceb71ca518d982e0263843295bb0b9",
+      "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+      "results/measurements.tsv": "sha256:598cac4b1cc2ec51157ecf731cc7b00c2cdee9e80900f42ffc0f08cf8fdcacda"
+    },
+    "proposal_id": "sha256:4ae3644c835c750fa0bf8ade0b44cdeb02f1d4430e4e3b16bbdb18186e8a3503",
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "The requested location is already bound; do not recreate its source, metric or location. Inspect review.bindings and finish with empty arguments if the identity and display are justified. A numeric mismatch can mean a stale manuscript. Undo a wrong declaration or abstain for missing evidence.",
+  "status": "proposed",
+  "undo": {
+    "last_action": "locations",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

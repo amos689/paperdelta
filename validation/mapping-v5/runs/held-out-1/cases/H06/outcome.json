@@ -1,0 +1,205 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.7810000000008586,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:fc3b6f02518aa19cc9ded02097c7c55935e5d23f67048a8bdc11d4ef46eddb49",
+      "response_sha256": "sha256:244df7e7aa076a592b4e87881e0d82f64f38cfcb01eac55105c3914e08386408",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1635.378,
+        "predicted_n": 152,
+        "predicted_per_second": 92.33339325831705,
+        "predicted_per_token_ms": 10.830317880794702,
+        "prompt_ms": 1606.952,
+        "prompt_n": 6783,
+        "prompt_per_second": 4221.034604642827,
+        "prompt_per_token_ms": 0.23690874244434615
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 152,
+        "prompt_tokens": 6783,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6935
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 4.0789999999997235,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a74c8ad590123c8a16d8d5b1d5cbaef525f829043404f3f46412fa3b1e981926",
+      "response_sha256": "sha256:193319397c4bc1b2c0b2106583765c1bffdc980678140d54fc3fc39d8d573af3",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2149.821,
+        "predicted_n": 197,
+        "predicted_per_second": 91.17038116196652,
+        "predicted_per_token_ms": 10.968474489795918,
+        "prompt_ms": 1702.976,
+        "prompt_n": 7144,
+        "prompt_per_second": 4195.009207411026,
+        "prompt_per_token_ms": 0.2383784994400896
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 197,
+        "prompt_tokens": 7144,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7341
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 3,
+      "elapsed_seconds": 5.2960000000002765,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:da53770c5ee760b6c20d902d1de01730172845e8fb4e31b191d3c86f22f8ddbe",
+      "response_sha256": "sha256:74c98a88c36536b2f9dee7b811d9060693d488fe65b7f0ca01aa9d96a2fd48af",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2700.648,
+        "predicted_n": 240,
+        "predicted_per_second": 88.49727917151735,
+        "predicted_per_token_ms": 11.299782426778243,
+        "prompt_ms": 2137.578,
+        "prompt_n": 8646,
+        "prompt_per_second": 4044.7646822712436,
+        "prompt_per_token_ms": 0.24723317140874393
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 240,
+        "prompt_tokens": 8646,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8886
+      },
+      "valid": true
+    },
+    {
+      "action": "finish",
+      "action_index": 4,
+      "elapsed_seconds": 3.8439999999991414,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:11f657182779ee55a170c5f258d81401bfda62fa5b4ce8e78182d4a3c32a0273",
+      "response_sha256": "sha256:71b37d061366ee53658ec3494bacd6d8618f2751d4467c5b30f2c43a3d4db6b1",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 856.244,
+        "predicted_n": 74,
+        "predicted_per_second": 85.25607186736491,
+        "predicted_per_token_ms": 11.7293698630137,
+        "prompt_ms": 2601.141,
+        "prompt_n": 10252,
+        "prompt_per_second": 3941.3472779830086,
+        "prompt_per_token_ms": 0.2537203472493172
+      },
+      "status": "proposed",
+      "usage": {
+        "completion_tokens": 74,
+        "prompt_tokens": 10252,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 10326
+      },
+      "valid": true
+    }
+  ],
+  "proposal": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_csv",
+          "unit": "percent",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Juniper",
+            "model": "VariantAmber",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_accuracy_value": {
+          "anchor": {
+            "block": "sha256:15b97fc877936a4b66ee54e03b1378f64ef9c0f230d4c0e11bf8c94dbfe15371",
+            "exact": null,
+            "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+            "prefix": "The mean test accuracy is ",
+            "suffix": " on Juniper for VariantAmber."
+          },
+          "display": {
+            "kind": "percent",
+            "percent_symbol": true,
+            "places": 3
+          },
+          "file": "paper/manuscript.pdf",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "results_csv": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "config_path": "paperdelta.yaml",
+    "input_hashes": {
+      "paper/manuscript.pdf": "sha256:e52b58d71a2482a81ba3851ca95805ae9c7c01927c03d7484f4922c494204339",
+      "paperdelta.yaml": "sha256:3261e4117164b021951942316c19bacbde3bc9eb026234c2ef0af0ade96b3c54",
+      "results/measurements.csv": "sha256:f51e93f727d02442f8a1fd1ff9f814ad91c63e426e783997eaf89758b552f238"
+    },
+    "proposal_id": "sha256:4296632945d4945378935c8a1871dd6e1d4d46151da9abfc0ce0871a8a49647b",
+    "proposal_schema_version": 1,
+    "rationale": {
+      "occurrences:mean_test_accuracy_value": "The original text in the manuscript states the mean test accuracy as 68.3% for VariantAmber on Juniper. This corresponds to the computed mean of the scores from seeds 001, 002, and 003."
+    },
+    "tool_version": "2.0.0"
+  },
+  "reason": "The original mean test accuracy result from the manuscript has been successfully bound to the computed mean of the scores from seeds 001, 002, and 003. The display format is confirmed as percent with three decimal places and a percent symbol.",
+  "status": "proposed"
+}

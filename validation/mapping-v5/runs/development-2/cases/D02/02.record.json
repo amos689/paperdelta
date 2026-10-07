@@ -1,0 +1,39 @@
+{
+  "action": "metric",
+  "action_index": 2,
+  "elapsed_seconds": 3.2660000000014406,
+  "error": {
+    "code": "MAPPING_ARGUMENTS",
+    "fields": [
+      [
+        "unit"
+      ]
+    ],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:9cb4312eb029dcf23fa3d377ab1eae56a155fe1f6425fc4a85c9fccd9984feb0",
+  "response_sha256": "sha256:946110a8ec85cae6a123cf48ab6612ae1a45abe4cf0745813069bf4121448419",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1461.266,
+    "predicted_n": 134,
+    "predicted_per_second": 91.01696747888474,
+    "predicted_per_token_ms": 10.986962406015039,
+    "prompt_ms": 1647.115,
+    "prompt_n": 6906,
+    "prompt_per_second": 4192.785567492251,
+    "prompt_per_token_ms": 0.23850492325514047
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 134,
+    "prompt_tokens": 6906,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7040
+  },
+  "valid": false
+}

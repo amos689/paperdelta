@@ -1,0 +1,468 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 3,
+  "deterministic_check": {
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:mean_test_accuracy_value/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 30,
+          "byte_start": 26,
+          "column": 27,
+          "end": 30,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4"
+        },
+        "message": "'71.4' should display '0.714' from metric mean_test_accuracy",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:mean_test_accuracy_value"
+      }
+    ],
+    "exit_code": 1
+  },
+  "draft_id": "sha256:9e8f1dfcc52213e5567b38984080fc44253cbdbfb15d22a00256b9adccf221e7",
+  "next": "Inspect each experiment and original location. A completed session produces an unaccepted proposal; explicit acceptance happens in Studio or the CLI.",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {
+        "mean_test_accuracy": {
+          "expected_count": 3,
+          "expected_seeds": [
+            "001",
+            "002",
+            "003"
+          ],
+          "field": "score",
+          "reduce": "mean",
+          "seed_column": "seed",
+          "source": "results_measurements",
+          "unit": "fraction",
+          "where": {
+            "checkpoint": "selected",
+            "dataset": "Cedar",
+            "model": "VariantBlue",
+            "split": "test"
+          }
+        }
+      },
+      "occurrences": {
+        "mean_test_accuracy_value": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": "\\"
+          },
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 3
+          },
+          "file": "paper/manuscript.tex",
+          "metric": "mean_test_accuracy"
+        }
+      },
+      "sources": {
+        "results_measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [
+      "mean_test_accuracy"
+    ],
+    "available_sources": [
+      "results_measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric",
+      "derived",
+      "locations",
+      "finish"
+    ],
+    "draft_id": "sha256:9e8f1dfcc52213e5567b38984080fc44253cbdbfb15d22a00256b9adccf221e7",
+    "rationale": {
+      "occurrences:mean_test_accuracy_value": "The original mean test accuracy value is located in the paper/manuscript.tex file at the specified position. The value is presented as a decimal with three places."
+    }
+  },
+  "proposal_id": "sha256:d8ac46650884ea5026ea82a52694b8e93fa28ee4afead17714cfe77c76410f7d",
+  "proposal_json": "{\n  \"additions\": {\n    \"claims\": {},\n    \"figures\": {},\n    \"metrics\": {\n      \"mean_test_accuracy\": {\n        \"expected_count\": 3,\n        \"expected_seeds\": [\n          \"001\",\n          \"002\",\n          \"003\"\n        ],\n        \"field\": \"score\",\n        \"reduce\": \"mean\",\n        \"seed_column\": \"seed\",\n        \"source\": \"results_measurements\",\n        \"unit\": \"fraction\",\n        \"where\": {\n          \"checkpoint\": \"selected\",\n          \"dataset\": \"Cedar\",\n          \"model\": \"VariantBlue\",\n          \"split\": \"test\"\n        }\n      }\n    },\n    \"occurrences\": {\n      \"mean_test_accuracy_value\": {\n        \"anchor\": {\n          \"exact\": null,\n          \"prefix\": \"s \",\n          \"suffix\": \"\\\\\"\n        },\n        \"display\": {\n          \"kind\": \"decimal\",\n          \"percent_symbol\": false,\n          \"places\": 3\n        },\n        \"file\": \"paper/manuscript.tex\",\n        \"metric\": \"mean_test_accuracy\"\n      }\n    },\n    \"sources\": {\n      \"results_measurements\": {\n        \"columns\": {\n          \"checkpoint\": \"string\",\n          \"dataset\": \"string\",\n          \"model\": \"string\",\n          \"score\": \"decimal\",\n          \"seed\": \"string\",\n          \"split\": \"string\"\n        },\n        \"format\": \"csv\",\n        \"path\": \"results/measurements.csv\",\n        \"primary_key\": [\n          \"dataset\",\n          \"model\",\n          \"checkpoint\",\n          \"split\",\n          \"seed\"\n        ]\n      }\n    }\n  },\n  \"config_path\": \"paperdelta.yaml\",\n  \"input_hashes\": {\n    \"paper/manuscript.tex\": \"sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603\",\n    \"paperdelta.yaml\": \"sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172\",\n    \"results/measurements.csv\": \"sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865\"\n  },\n  \"proposal_id\": \"sha256:d8ac46650884ea5026ea82a52694b8e93fa28ee4afead17714cfe77c76410f7d\",\n  \"proposal_schema_version\": 1,\n  \"rationale\": {\n    \"occurrences:mean_test_accuracy_value\": \"The original mean test accuracy value is located in the paper/manuscript.tex file at the specified position. The value is presented as a decimal with three places.\"\n  },\n  \"tool_version\": \"2.0.0\"\n}\n",
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [
+      {
+        "asserted_rationale": "The original mean test accuracy value is located in the paper/manuscript.tex file at the specified position. The value is presented as a decimal with three places.",
+        "binding": "occurrences:mean_test_accuracy_value",
+        "conflicts": [
+          {
+            "id": "occurrence:mean_test_accuracy_value/VALUE_MISMATCH",
+            "location": {
+              "byte_end": 30,
+              "byte_start": 26,
+              "column": 27,
+              "end": 30,
+              "file": "paper/manuscript.tex",
+              "line": 1,
+              "start": 26,
+              "text": "71.4"
+            },
+            "message": "'71.4' should display '0.714' from metric mean_test_accuracy",
+            "rule": "VALUE_MISMATCH",
+            "severity": "error",
+            "subject": "occurrence:mean_test_accuracy_value"
+          }
+        ],
+        "context": {
+          "after": "\\% on Cedar for VariantBlue.\n",
+          "before": "The mean test accuracy is ",
+          "column_header": "",
+          "kind": "text",
+          "row": "The mean test accuracy is [value]\\% on Cedar for VariantBlue.\n",
+          "text": "71.4"
+        },
+        "declared_binding": {
+          "anchor": {
+            "exact": null,
+            "prefix": "s ",
+            "suffix": "\\"
+          },
+          "display": {
+            "kind": "decimal",
+            "percent_symbol": false,
+            "places": 3
+          },
+          "file": "paper/manuscript.tex",
+          "metric": "mean_test_accuracy"
+        },
+        "deterministic_result": {
+          "actual": "71.4",
+          "evidence_fingerprint": "sha256:02cc859f3d932b3d9f3170fb69f457475872170a8e2c3d2a18179e18b729444c",
+          "expected": "0.714",
+          "location": {
+            "byte_end": 30,
+            "byte_start": 26,
+            "column": 27,
+            "end": 30,
+            "file": "paper/manuscript.tex",
+            "line": 1,
+            "start": 26,
+            "text": "71.4"
+          },
+          "metric": "mean_test_accuracy",
+          "status": "mismatch",
+          "suggestion": {
+            "blocked_by": [],
+            "replacement": "0.714"
+          },
+          "usage": "prose"
+        },
+        "group": "occurrences",
+        "identity_status": "requires_author_review",
+        "label": "paper/manuscript.tex:1",
+        "location": {
+          "byte_end": 30,
+          "byte_start": 26,
+          "column": 27,
+          "end": 30,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4"
+        },
+        "manuscript_sha256": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+        "metrics": {
+          "mean_test_accuracy": {
+            "computed": {
+              "fingerprint": "sha256:02cc859f3d932b3d9f3170fb69f457475872170a8e2c3d2a18179e18b729444c",
+              "status": "ok",
+              "unit": "fraction",
+              "value": "0.714"
+            },
+            "declared_contract": {
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "reduce": "mean",
+              "seed_column": "seed",
+              "source": "results_measurements",
+              "unit": "fraction",
+              "where": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              }
+            },
+            "declared_identity": {
+              "cell_range": null,
+              "columns": {
+                "checkpoint": "string",
+                "dataset": "string",
+                "model": "string",
+                "score": "decimal",
+                "seed": "string",
+                "split": "string"
+              },
+              "expected_count": 3,
+              "expected_seeds": [
+                "001",
+                "002",
+                "003"
+              ],
+              "field": "score",
+              "format": "csv",
+              "path": "results/measurements.csv",
+              "primary_key": [
+                "dataset",
+                "model",
+                "checkpoint",
+                "split",
+                "seed"
+              ],
+              "reduce": "mean",
+              "seed_column": "seed",
+              "selectors": {
+                "checkpoint": "selected",
+                "dataset": "Cedar",
+                "model": "VariantBlue",
+                "split": "test"
+              },
+              "sha256": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865",
+              "sheet": null,
+              "source": "results_measurements",
+              "unit": "fraction"
+            },
+            "evidence": [
+              {
+                "count": 3,
+                "field": "score",
+                "inspect": {
+                  "cell_range": null,
+                  "field": "score",
+                  "full_report_pointer": "/preview/metrics/mean_test_accuracy/evidence",
+                  "path": "results/measurements.csv",
+                  "selectors": {
+                    "checkpoint": "selected",
+                    "dataset": "Cedar",
+                    "model": "VariantBlue",
+                    "split": "test"
+                  },
+                  "sheet": null,
+                  "source": "results_measurements"
+                },
+                "locations": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "line": 2
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "line": 3
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "line": 4
+                  }
+                ],
+                "locations_total": 3,
+                "path": "results/measurements.csv",
+                "records": [
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "001",
+                      "split": "test"
+                    },
+                    "value": "0.712"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "002",
+                      "split": "test"
+                    },
+                    "value": "0.714"
+                  },
+                  {
+                    "key": {
+                      "checkpoint": "selected",
+                      "dataset": "Cedar",
+                      "model": "VariantBlue",
+                      "seed": "003",
+                      "split": "test"
+                    },
+                    "value": "0.716"
+                  }
+                ],
+                "records_total": 3,
+                "reduce": "mean",
+                "sha256": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865",
+                "source": "results_measurements",
+                "source_contract": {
+                  "columns": {
+                    "checkpoint": "string",
+                    "dataset": "string",
+                    "model": "string",
+                    "score": "decimal",
+                    "seed": "string",
+                    "split": "string"
+                  },
+                  "format": "csv",
+                  "path": "results/measurements.csv",
+                  "primary_key": [
+                    "dataset",
+                    "model",
+                    "checkpoint",
+                    "split",
+                    "seed"
+                  ]
+                },
+                "truncated": false,
+                "where": {
+                  "checkpoint": "selected",
+                  "dataset": "Cedar",
+                  "model": "VariantBlue",
+                  "split": "test"
+                }
+              }
+            ],
+            "name": "mean_test_accuracy",
+            "notices": [],
+            "verification": "evaluated_under_declared_contract"
+          }
+        },
+        "notices": [
+          "Review the declared experiment against the original context. Equal numbers alone do not establish identity.",
+          "The displayed value differs under this declaration. A stale paper value may still be the correct location; do not change units or selectors just to obtain a pass."
+        ],
+        "rationale_status": "unverified_assertion"
+      }
+    ],
+    "coverage": {
+      "candidate_numbers": 1,
+      "confirmed": 1,
+      "exclusions": [],
+      "mismatch": 1,
+      "outside_scope_numbers": [],
+      "pass": 0,
+      "review_scope": null,
+      "unbound_numbers": [],
+      "unknown": 0,
+      "unregistered_figures": [],
+      "unsupported": []
+    },
+    "diagnostics": [
+      {
+        "id": "occurrence:mean_test_accuracy_value/VALUE_MISMATCH",
+        "location": {
+          "byte_end": 30,
+          "byte_start": 26,
+          "column": 27,
+          "end": 30,
+          "file": "paper/manuscript.tex",
+          "line": 1,
+          "start": 26,
+          "text": "71.4"
+        },
+        "message": "'71.4' should display '0.714' from metric mean_test_accuracy",
+        "rule": "VALUE_MISMATCH",
+        "severity": "error",
+        "subject": "occurrence:mean_test_accuracy_value"
+      }
+    ],
+    "evidence_row_limit": 10,
+    "exit_code": 1,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "Each evidence sample reports its total and exact source path. After saving the proposal, the CLI preview includes all contributing records. Studio also provides the complete metric evidence.",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.tex": "sha256:412c35becd55224f2eebefc7fe6eef2525d45e147a0493fba03ac812473f6603",
+      "paperdelta.yaml": "sha256:52608fb4f5c86d63e67b6765bbdd266df15fc51235d1cc81019ac1e715466172",
+      "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+    },
+    "proposal_id": "sha256:d8ac46650884ea5026ea82a52694b8e93fa28ee4afead17714cfe77c76410f7d",
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "Checks resolve declared selectors, units, arithmetic and original positions against these input bytes. They do not establish the scientific identity or truth of a supplied rationale."
+  },
+  "stage_guidance": "The requested location is already bound; do not recreate its source, metric or location. Inspect review.bindings and finish with empty arguments if the identity and display are justified. A numeric mismatch can mean a stale manuscript. Undo a wrong declaration or abstain for missing evidence.",
+  "status": "proposed",
+  "undo": {
+    "last_action": "locations",
+    "notice": "undo with empty arguments and a reason reverts the last successful stage. It consumes one action and retains every observed input hash. At most four undo actions are allowed.",
+    "remaining": 4
+  }
+}

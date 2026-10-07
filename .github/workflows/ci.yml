@@ -73,6 +73,8 @@ jobs:
         run: node tools/validate_onboarding_browser.cjs build/reuse-browser --reuse
       - name: Replay recorded mapping model actions against frozen implementations
         run: python -X utf8 tools/replay_mapping_v4.py --out build/mapping-replay
+      - name: Replay all preserved bilingual Agent actions and strict scores
+        run: python -X utf8 tools/replay_mapping_v5.py --out build/mapping-v5-replay
       - name: Test bilingual statistical contracts and compound displays
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
@@ -152,6 +154,8 @@ jobs:
             build/experiment-browser/*.png
             build/experiment-browser/failure.json
             build/mapping-replay/*.json
+            build/mapping-v5-replay/*.json
+            build/mapping-v5-replay/*.log
             build/studio-statistics-browser/evidence.json
             build/studio-statistics-browser/*.png
             build/studio-statistics-browser/failure.json

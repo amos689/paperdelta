@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.9.0"><img src="docs/assets/badges/release.svg" alt="Release 1.9.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v2.0.0"><img src="docs/assets/badges/release.svg" alt="Release 2.0.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -57,10 +57,11 @@ abstract, table and claim, then open a separate source/PDF example with a stale 
 [Open the full-size animation](docs/assets/v1.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v1.3/report.png).
 
-**1.9.0** reuses unchanged document parses and exact metric results during Studio and
-watch sessions, with bounded memory and fresh content hashes on every check. Changes,
-deletions, reordered evidence and new configuration retain full-check verdicts and positions.
-[Incremental-check guide](docs/v1.9.md) ·
+**2.0.0** brings the declared experiment identity, exact source hashes, original context,
+units, records and conflicts into one Agent proposal review. Studio and the CLI share
+that evidence; staged agents can retract a mistaken declaration within a fixed budget.
+Mappings still require explicit review and confirmation.
+[Agent evidence review](docs/v2.0.md) · [Incremental checks](docs/v1.9.md) ·
 [Annotated-copy guide](docs/v1.8.md) · [Choose your task](docs/tasks.md) ·
 [Revision workbench](docs/v1.7.md) · [Notebook/Quarto workflows](docs/v1.6.md).
 
@@ -94,7 +95,7 @@ paperdelta demo --out paperdelta-demo --open
 ```
 
 With [uv installed](https://docs.astral.sh/uv/getting-started/installation/), try
-`uvx --python 3.12 paperdelta@1.9.0 demo --out paperdelta-demo --open` in an isolated
+`uvx --python 3.12 paperdelta@2.0.0 demo --out paperdelta-demo --open` in an isolated
 tool environment. Use a new output directory for each run. See
 [optional native readers and startup diagnostics](docs/v1.3.md#isolated-startup).
 
@@ -116,7 +117,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.9.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-2.0.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 

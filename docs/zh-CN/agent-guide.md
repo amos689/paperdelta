@@ -37,7 +37,7 @@ PaperDelta 提供确定性证据与提案校验。数字相同不能证明科学
 ## 可选 MCP
 
 安装 `python -m pip install 'paperdelta[mcp]'`（源码开发可使用 `-e '.[mcp]'`）。适配器使用官方
-[MCP Python SDK 2.2](https://github.com/modelcontextprotocol/python-sdk) 的 stdio API，
+[MCP Python SDK 2.x](https://github.com/modelcontextprotocol/python-sdk) 的 stdio API，
 额外依赖限定为 2.x；核心检查器不导入 SDK。按宿主文档配置以下命令和参数：
 
 ```json

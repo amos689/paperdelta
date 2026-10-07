@@ -214,3 +214,21 @@ Studio 与 watch 持续审查使用有界进程内缓存，复用未变的文档
 
 `Incremental checks <https://github.com/amos689/paperdelta/blob/main/docs/v1.9.md>`_ ·
 `增量检查 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.9.md>`_
+
+Agent evidence review (2.0)
+----------------------------------------
+
+Direct, staged and batch proposals expose a shared review of declared experiment
+identity, exact input hashes, source units, original context, selected records and
+conflicts. CLI and bilingual Studio show the same evidence. Supplied reasons remain
+assertions for review; matching numbers do not establish experiment identity.
+Staged sessions allow at most four explicit undo actions within the sixteen-action
+budget. Mapping tools never accept bindings or execute manuscript code.
+
+直接、分阶段和批量建议共用实验身份、精确输入哈希、来源单位、原文上下文、所选记录
+与冲突审查，CLI 和双语 Studio 展示相同证据。提供的理由仍需复核，数值相同不能证明
+实验身份正确。分阶段会话在十六次动作预算内最多允许四次明确撤回；映射工具不接受
+绑定，也不执行论文代码。
+
+`Agent evidence review <https://github.com/amos689/paperdelta/blob/main/docs/v2.0.md>`_ ·
+`Agent 证据审查 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v2.0.md>`_

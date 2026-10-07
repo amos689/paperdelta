@@ -1,0 +1,37 @@
+{
+  "action": "source",
+  "action_index": 1,
+  "elapsed_seconds": 4.031000000000859,
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [
+      []
+    ],
+    "hint": "CSV/TSV/XLSX 的 source 动作必须提供 columns 和 primary_key；JSON 则必须省略这两项。请核对声明格式与类型，保留前导零 ID 并解决重复身份。",
+    "message": "验证发现 1 个问题：\n$：JSON 来源使用 JSON Pointer，不使用表格列声明"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:aadce37cd897e40ec8361af3867a3b861e241074427dfa3ab6362c07741f0953",
+  "response_sha256": "sha256:8be67847223f82f07cdaff8adfe867241adf8a6c970c1314b1a6e1d8976d710b",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1843.119,
+    "predicted_n": 171,
+    "predicted_per_second": 92.23495607174577,
+    "predicted_per_token_ms": 10.841876470588234,
+    "prompt_ms": 1606.019,
+    "prompt_n": 6727,
+    "prompt_per_second": 4188.6179428761425,
+    "prompt_per_token_ms": 0.23874223279322135
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 171,
+    "prompt_tokens": 6727,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6898
+  },
+  "valid": false
+}

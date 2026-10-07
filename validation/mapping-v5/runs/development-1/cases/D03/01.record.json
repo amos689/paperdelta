@@ -1,0 +1,37 @@
+{
+  "action": "source",
+  "action_index": 1,
+  "elapsed_seconds": 3.3590000000003783,
+  "error": {
+    "code": "DRAFT_SOURCE",
+    "fields": [
+      []
+    ],
+    "hint": "Inspect the source contract, declared types and primary key. Preserve leading-zero identifiers and resolve duplicate identities before retrying.",
+    "message": "1 validation error for Source\n  Table sources require primary_key and explicit columns [type=validation.models.3, input_value={'path': 'results/measure...one, 'cell_range': None}, input_type=dict]"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:307e59d0f38ccaf38634a0a65f7966f19c538401e86887d34d652e2b29d2266e",
+  "response_sha256": "sha256:6a5f83123248a33385671995a95548b4b091c6eda767f71265d9f69f4d8b7de3",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1152.815,
+    "predicted_n": 107,
+    "predicted_per_second": 91.94883827847485,
+    "predicted_per_token_ms": 10.87561320754717,
+    "prompt_ms": 1500.833,
+    "prompt_n": 6230,
+    "prompt_per_second": 4151.02812904567,
+    "prompt_per_token_ms": 0.24090417335473516
+  },
+  "status": "needs_correction",
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 6230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6337
+  },
+  "valid": false
+}

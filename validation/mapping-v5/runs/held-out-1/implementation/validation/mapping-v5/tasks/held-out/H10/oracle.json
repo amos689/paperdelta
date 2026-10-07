@@ -1,0 +1,15 @@
+{
+  "case_id": "H10",
+  "expected_decision": "abstain",
+  "family": "missing_checkpoint_choice",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Both checkpoints exist and have the same values. The author did not record which checkpoint the manuscript used. Do not choose a checkpoint by number equality.",
+  "reference_controls": [],
+  "reference_inputs": [],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

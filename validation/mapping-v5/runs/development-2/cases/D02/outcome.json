@@ -1,0 +1,154 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.875,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:50fb987adef9ae29fb4fe68abbb41230950ba92d61cd7f4837730205d30fd415",
+      "response_sha256": "sha256:664574b719186332c17944db729bfb220b7eac1a3e684e7a59ef44d8ba486a09",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1548.861,
+        "predicted_n": 144,
+        "predicted_per_second": 92.32590916809191,
+        "predicted_per_token_ms": 10.831195804195804,
+        "prompt_ms": 1561.039,
+        "prompt_n": 6570,
+        "prompt_per_second": 4208.735335888469,
+        "prompt_per_token_ms": 0.23760106544901066
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 144,
+        "prompt_tokens": 6570,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 6714
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.2660000000014406,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "unit"
+          ]
+        ],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:9cb4312eb029dcf23fa3d377ab1eae56a155fe1f6425fc4a85c9fccd9984feb0",
+      "response_sha256": "sha256:946110a8ec85cae6a123cf48ab6612ae1a45abe4cf0745813069bf4121448419",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1461.266,
+        "predicted_n": 134,
+        "predicted_per_second": 91.01696747888474,
+        "predicted_per_token_ms": 10.986962406015039,
+        "prompt_ms": 1647.115,
+        "prompt_n": 6906,
+        "prompt_per_second": 4192.785567492251,
+        "prompt_per_token_ms": 0.23850492325514047
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 6906,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7040
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 3.2819999999992433,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "unit"
+          ]
+        ],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e6ce0adfeaef149cb1ae91a3a1994b9069f405e1c763ad14248dfda171ab53f1",
+      "response_sha256": "sha256:39cc53e1e1c2be5166027086cb4dc1f9caf641209fa7ad28d13a641428822d03",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1459.871,
+        "predicted_n": 134,
+        "predicted_per_second": 91.10394000565803,
+        "predicted_per_token_ms": 10.976473684210527,
+        "prompt_ms": 1672.901,
+        "prompt_n": 7012,
+        "prompt_per_second": 4191.521195814934,
+        "prompt_per_token_ms": 0.23857686822589846
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 7012,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7146
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 3.2810000000008586,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "unit"
+          ]
+        ],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:a1063b2fb8ef8250a12a7b0f30a3e9b139877362f99b4211f983c3e2b4d2a86e",
+      "response_sha256": "sha256:faffa27af55f5e68ae598214a276360530c84937ff6a52542b9ac46c4ad2f789",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1455.395,
+        "predicted_n": 134,
+        "predicted_per_second": 91.38412595893212,
+        "predicted_per_token_ms": 10.94281954887218,
+        "prompt_ms": 1670.747,
+        "prompt_n": 7012,
+        "prompt_per_second": 4196.92508799956,
+        "prompt_per_token_ms": 0.23826968054763265
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 7012,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7146
+      },
+      "valid": false
+    }
+  ],
+  "reason": "绑定测试损失的均值，使用 results_measurements 中的 score 字段，预期种子为 001、002、003，计算均值。",
+  "status": "budget_exhausted"
+}

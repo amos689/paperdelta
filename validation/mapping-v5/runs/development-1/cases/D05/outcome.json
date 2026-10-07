@@ -1,0 +1,239 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.70299999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:33ba3cd4440c8e828084cea4e825e2eaefbef85c892100b04101ac7d152e0cb5",
+      "response_sha256": "sha256:6a1f9766310aee9643dbef48f00e04adf83d459e2eddf531ed5bccf5d26d5e8c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1625.001,
+        "predicted_n": 153,
+        "predicted_per_second": 93.53840397636678,
+        "predicted_per_token_ms": 10.690796052631578,
+        "prompt_ms": 1430.272,
+        "prompt_n": 5793,
+        "prompt_per_second": 4050.2785484159663,
+        "prompt_per_token_ms": 0.2468965993440359
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 153,
+        "prompt_tokens": 5793,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5946
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 2,
+      "elapsed_seconds": 3.719000000000051,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "Inspect the contributing rows. Supply the declared count and exact seed set; abstain if the request does not justify them.",
+        "message": "An aggregation requires an explicitly expected record count."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:c4bfc2620242ff50683f08d0cc4ddfe123516fdf7ac4c6df8978f06d7c0cccdc",
+      "response_sha256": "sha256:d4e67978650753603cbc66a90f42355e5e6eae76cfe3b9589add6ec528c4c837",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1775.824,
+        "predicted_n": 161,
+        "predicted_per_second": 90.09901882168504,
+        "predicted_per_token_ms": 11.0989,
+        "prompt_ms": 1752.598,
+        "prompt_n": 6958,
+        "prompt_per_second": 3970.106093924562,
+        "prompt_per_token_ms": 0.25188243748203504
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 161,
+        "prompt_tokens": 6958,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7119
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.092999999999847,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:0f8159379e742f8ac9c6090a773d437cb24c87394bdd76951b82271500d97966",
+      "response_sha256": "sha256:2fe87a1170b5d94ceead7f9cd74ad1b2379866619f824d38d2211a6705e1b151",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2007.8,
+        "predicted_n": 183,
+        "predicted_per_second": 90.64647873294153,
+        "predicted_per_token_ms": 11.031868131868132,
+        "prompt_ms": 1775.928,
+        "prompt_n": 7041,
+        "prompt_per_second": 3964.6877576117945,
+        "prompt_per_token_ms": 0.2522266723476779
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 7041,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7224
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 4.438000000000102,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:70680e19724dcfe4839b5a1d089fa68bb63f72efbea27378ab4889c78d720730",
+      "response_sha256": "sha256:e64dbd198c1b40121fd001b4612598a6cf35ac6b4704eb5b6574b8a040485f2c",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2046.553,
+        "predicted_n": 180,
+        "predicted_per_second": 87.46414092378745,
+        "predicted_per_token_ms": 11.433256983240224,
+        "prompt_ms": 2123.629,
+        "prompt_n": 8445,
+        "prompt_per_second": 3976.6833095611332,
+        "prompt_per_token_ms": 0.25146583777383064
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 180,
+        "prompt_tokens": 8445,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 8625
+      },
+      "valid": true
+    },
+    {
+      "action": "derived",
+      "action_index": 5,
+      "elapsed_seconds": 4.061999999999898,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:5327ceebd21c378cf45c33ba469f47c43f04788d50543689bab4348f07f3cb85",
+      "response_sha256": "sha256:cfb33932561b894f1276a5f62340ebb43b1335f6c539399eb7118cc922043824",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1230.112,
+        "predicted_n": 106,
+        "predicted_per_second": 85.358081215369,
+        "predicted_per_token_ms": 11.715352380952382,
+        "prompt_ms": 2561.912,
+        "prompt_n": 9853,
+        "prompt_per_second": 3845.9556768538505,
+        "prompt_per_token_ms": 0.26001339693494363
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 106,
+        "prompt_tokens": 9853,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 9959
+      },
+      "valid": true
+    },
+    {
+      "action": "locations",
+      "action_index": 6,
+      "elapsed_seconds": 6.782000000000153,
+      "error": {
+        "code": "DRAFT_STATISTICS",
+        "fields": [
+          [
+            "component"
+          ],
+          [
+            "mean"
+          ]
+        ],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "2 validation errors for StatisticalDisplay\ncomponent\n  Field required [type=missing, input_value={'mean': Decimal('6.2')}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nmean\n  Extra inputs are not permitted [type=extra_forbidden, input_value=Decimal('6.2'), input_type=Decimal]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:e45e6abd4207b55c4c2db31d616de8837d34a90f84f34306a9066254724836c6",
+      "response_sha256": "sha256:15110603c41062a0d31357a58200b28ea88cd1b997a45b20267417a1cc27c3c3",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 3485.589,
+        "predicted_n": 285,
+        "predicted_per_second": 81.47833838126068,
+        "predicted_per_token_ms": 12.273200704225351,
+        "prompt_ms": 3053.664,
+        "prompt_n": 11506,
+        "prompt_per_second": 3767.9325557756188,
+        "prompt_per_token_ms": 0.2653975317225795
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 285,
+        "prompt_tokens": 11506,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11791
+      },
+      "valid": false
+    },
+    {
+      "action": "derived",
+      "action_index": 7,
+      "elapsed_seconds": 5.467999999999847,
+      "error": {
+        "code": "BINDING_CONFLICT",
+        "fields": [],
+        "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+        "message": "metrics already contains accuracy_gain; choose another identifier."
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:cb3c70d1c869fa25979cdb4a095447b88f527e677faaae279e8dcf59852c94a7",
+      "response_sha256": "sha256:e1288298463938f63c73a6b30b43343c41aec2fbd747f2680061704447245acf",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1244.619,
+        "predicted_n": 102,
+        "predicted_per_second": 81.14933164285617,
+        "predicted_per_token_ms": 12.322960396039603,
+        "prompt_ms": 3183.99,
+        "prompt_n": 11881,
+        "prompt_per_second": 3731.4815687235205,
+        "prompt_per_token_ms": 0.26799006817607945
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 102,
+        "prompt_tokens": 11881,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 11983
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The derived metric 'accuracy_gain' is calculated as the percentage-point difference between 'test_accuracy_variantblue' and 'test_accuracy_control', which are already defined as metrics based on the mean scores from the measurements.csv file.",
+  "status": "budget_exhausted"
+}

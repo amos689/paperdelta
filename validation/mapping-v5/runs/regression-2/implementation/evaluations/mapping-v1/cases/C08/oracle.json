@@ -1,0 +1,72 @@
+{
+  "category": "stale_manuscript",
+  "expected_decision": "map",
+  "expected_reference_status": "mismatch",
+  "reason": "Bind the paper's test accuracy to the new Ours result on Data-A, seeds 1, 2 and 3. The manuscript may still contain a value from an earlier run.",
+  "reference_inputs": [
+    {
+      "additions": {
+        "metrics": {
+          "target": {
+            "expected_seeds": [
+              1,
+              2,
+              3
+            ],
+            "field": "accuracy",
+            "reduce": "mean",
+            "source": "results",
+            "unit": "fraction",
+            "where": {
+              "dataset": "Data-A",
+              "model": "Ours",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "result": {
+            "anchor": {
+              "prefix": "The test accuracy is ",
+              "suffix": " on Data-A."
+            },
+            "display": {
+              "kind": "percent",
+              "places": 1
+            },
+            "file": "paper/main.tex",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "results": {
+            "columns": {
+              "accuracy": "decimal",
+              "dataset": "string",
+              "model": "string",
+              "seed": "integer",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/metrics.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:result": "Author-declared experimental identity, unit and aggregation."
+      }
+    }
+  ],
+  "target": {
+    "file": "paper/main.tex",
+    "literal": "86.0\\%",
+    "prefix": "The test accuracy is ",
+    "suffix": " on Data-A."
+  }
+}

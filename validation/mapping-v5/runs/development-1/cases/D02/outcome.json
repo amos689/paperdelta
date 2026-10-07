@@ -1,0 +1,148 @@
+{
+  "accepted_bindings": 0,
+  "actions": [
+    {
+      "action": "source",
+      "action_index": 1,
+      "elapsed_seconds": 3.25,
+      "error": {
+        "code": "DRAFT_SOURCE",
+        "fields": [
+          []
+        ],
+        "hint": "请检查来源约定、列类型与主键，保留前导零标识并解决重复身份后重试。",
+        "message": "验证发现 1 个问题：\n$：表格来源必须有 primary_key 和明确的列类型声明"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:06f470d95d4581f27c24327bfe65cb7c917a6bdc2dd20496d287f4faa03c4ac1",
+      "response_sha256": "sha256:cd4eaa304ec16f3655524337b59a1f75249e127244255ee2308256b17f0bfd89",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1216.076,
+        "predicted_n": 115,
+        "predicted_per_second": 93.74414099118805,
+        "predicted_per_token_ms": 10.667333333333334,
+        "prompt_ms": 1391.63,
+        "prompt_n": 5854,
+        "prompt_per_second": 4206.577897860781,
+        "prompt_per_token_ms": 0.23772292449607108
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 115,
+        "prompt_tokens": 5854,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 5969
+      },
+      "valid": false
+    },
+    {
+      "action": "source",
+      "action_index": 2,
+      "elapsed_seconds": 3.70299999999952,
+      "error": null,
+      "finish_reason": "stop",
+      "request_sha256": "sha256:474fa0d82bc71cad228c6955a137988f4a6a350a33a86be7a7ba34c69a588b6f",
+      "response_sha256": "sha256:ba5360353ca48bb0d71b66a32e5fbca0e9ef2b177ed1b68d3ea7ddca5e2f3f7e",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 1819.494,
+        "predicted_n": 166,
+        "predicted_per_second": 90.68455295813013,
+        "predicted_per_token_ms": 11.027236363636364,
+        "prompt_ms": 1653.491,
+        "prompt_n": 6868,
+        "prompt_per_second": 4153.636155261806,
+        "prompt_per_token_ms": 0.24075291205591148
+      },
+      "status": "draft",
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 6868,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7034
+      },
+      "valid": true
+    },
+    {
+      "action": "metric",
+      "action_index": 3,
+      "elapsed_seconds": 4.04700000000048,
+      "error": {
+        "code": "MAPPING_ARGUMENTS",
+        "fields": [
+          [
+            "unit"
+          ]
+        ],
+        "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+        "message": "验证发现 1 个问题：\nunit：值必须为 'scalar', 'fraction', 'percent', 'percentage_point', 'count' or 'ratio'"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:7fc4f49a5ee48d4883dacac552531f8b79eb4799547fd874774acd3ae702d466",
+      "response_sha256": "sha256:547426e324270214562c9a8ed59ee0bde65c23eb238025fd4d76de6f1195c1b9",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2200.905,
+        "predicted_n": 200,
+        "predicted_per_second": 90.41735104422952,
+        "predicted_per_token_ms": 11.059824120603016,
+        "prompt_ms": 1685.396,
+        "prompt_n": 7032,
+        "prompt_per_second": 4172.313213037173,
+        "prompt_per_token_ms": 0.23967519908987486
+      },
+      "status": "needs_correction",
+      "usage": {
+        "completion_tokens": 200,
+        "prompt_tokens": 7032,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7232
+      },
+      "valid": false
+    },
+    {
+      "action": "metric",
+      "action_index": 4,
+      "elapsed_seconds": 4.233999999999469,
+      "error": {
+        "code": "BUILDER_EXPECTATION",
+        "fields": [],
+        "hint": "请检查参与计算的记录，提供声明的数量和精确种子集合；请求没有足够依据时应拒绝映射。",
+        "message": "聚合操作必须明确指定预期记录数。"
+      },
+      "finish_reason": "stop",
+      "request_sha256": "sha256:b89dd61fb53682b18f48ec48b2d299714d847de85c3c8a9a8bd76c74eec75566",
+      "response_sha256": "sha256:53679fc1bd7ff3b45c6d8b953034a776c3ce72af6cf152881b14d633b276f7b4",
+      "server_timings": {
+        "cache_n": 0,
+        "predicted_ms": 2290.289,
+        "predicted_n": 207,
+        "predicted_per_second": 89.94498074260497,
+        "predicted_per_token_ms": 11.117907766990292,
+        "prompt_ms": 1738.971,
+        "prompt_n": 7182,
+        "prompt_per_second": 4130.028620373772,
+        "prompt_per_token_ms": 0.24212907268170425
+      },
+      "status": "budget_exhausted",
+      "usage": {
+        "completion_tokens": 207,
+        "prompt_tokens": 7182,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 7389
+      },
+      "valid": false
+    }
+  ],
+  "reason": "The unit has been corrected to 'scalar' as per the allowed enum values. The metric mapping selects the 'score' field from the 'test_loss_data' source, with the reduction operation set to 'mean'. The expected seeds are specified as '001', '002', and '003', with the where clause filtering for the correct dataset, model, checkpoint, and split.",
+  "status": "budget_exhausted"
+}

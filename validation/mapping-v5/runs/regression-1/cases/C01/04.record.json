@@ -1,0 +1,35 @@
+{
+  "action": "metric",
+  "action_index": 4,
+  "elapsed_seconds": 3.467999999999847,
+  "error": {
+    "code": "COLUMN_TYPE",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "seed: expected an unambiguous integer"
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:7d063cd9210de6594e2abd804efbeac587ca8f03537fe620c7976cbc08e7fb75",
+  "response_sha256": "sha256:92599d044d9856dbacc60ecb2c0b4fa0dfc4d9f6443b3d6c77aa2755c8d9ecff",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 1745.458,
+    "predicted_n": 166,
+    "predicted_per_second": 94.53106290727132,
+    "predicted_per_token_ms": 10.578533333333334,
+    "prompt_ms": 1572.007,
+    "prompt_n": 6725,
+    "prompt_per_second": 4277.9707723947795,
+    "prompt_per_token_ms": 0.233755687732342
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 166,
+    "prompt_tokens": 6725,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6891
+  },
+  "valid": false
+}

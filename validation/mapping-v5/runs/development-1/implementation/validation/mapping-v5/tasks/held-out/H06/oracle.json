@@ -1,0 +1,117 @@
+{
+  "case_id": "H06",
+  "expected_decision": "map",
+  "family": "pdf_raw_percentage",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:60e232752944199b798593b752550158c094dc6bf42727394c63c68f31a8e0aa",
+      "expected": "68.3%",
+      "location": {
+        "context": "The mean test accuracy is 68.3% on Juniper for VariantAmber.",
+        "end": 39,
+        "file": "paper/manuscript.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            183.388,
+            80.484,
+            217.408,
+            92.484
+          ],
+          "block": "sha256:15b97fc877936a4b66ee54e03b1378f64ef9c0f230d4c0e11bf8c94dbfe15371",
+          "offset": 26,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            900,
+            500
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 34,
+        "text": "68.3%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "percent",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "VariantAmber",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:15b97fc877936a4b66ee54e03b1378f64ef9c0f230d4c0e11bf8c94dbfe15371",
+              "exact": null,
+              "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Juniper for VariantAmber."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.pdf",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

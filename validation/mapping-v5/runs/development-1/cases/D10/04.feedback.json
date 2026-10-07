@@ -1,0 +1,90 @@
+{
+  "actions_remaining": 12,
+  "allowed_actions": [],
+  "applied": false,
+  "corrections_remaining": 0,
+  "draft_id": "sha256:03f4e6f3ec532888dd9b5c061e027fde6ae631495035b78e24922697e27d3d24",
+  "error": {
+    "code": "BINDING_CONFLICT",
+    "fields": [],
+    "hint": "请使用 stage_schemas 中的字段和枚举，并检查 preview.available_sources/available_metrics；失败参数未改变上一份草稿。",
+    "message": "sources 中已存在 measurements，请选择其他标识符。"
+  },
+  "next": "请复核每个实验和原文位置。完成会话只生成未接受提案，仍需在 Studio 或命令行明确接受。",
+  "preview": {
+    "additions": {
+      "claims": {},
+      "figures": {},
+      "metrics": {},
+      "occurrences": {},
+      "sources": {
+        "measurements": {
+          "columns": {
+            "checkpoint": "string",
+            "dataset": "string",
+            "model": "string",
+            "score": "decimal",
+            "seed": "string",
+            "split": "string"
+          },
+          "format": "csv",
+          "path": "results/measurements.csv",
+          "primary_key": [
+            "dataset",
+            "model",
+            "checkpoint",
+            "split",
+            "seed"
+          ]
+        }
+      }
+    },
+    "available_metrics": [],
+    "available_sources": [
+      "measurements"
+    ],
+    "available_stages": [
+      "source",
+      "metric"
+    ],
+    "draft_id": "sha256:03f4e6f3ec532888dd9b5c061e027fde6ae631495035b78e24922697e27d3d24",
+    "rationale": {}
+  },
+  "previous_draft_preserved": true,
+  "requires_confirmation": true,
+  "review": {
+    "bindings": [],
+    "draft_id": "sha256:03f4e6f3ec532888dd9b5c061e027fde6ae631495035b78e24922697e27d3d24",
+    "evidence_row_limit": 5,
+    "full_evidence": {
+      "cli_arguments": [
+        "paperdelta",
+        "bind",
+        "--proposal",
+        "<saved-proposal.json>",
+        "--format",
+        "json"
+      ],
+      "notice": "每份证据摘要列出总数和准确来源路径。保存提案后，命令行预览包含全部参与记录；Studio 也提供完整指标证据。",
+      "proposal_json_required": true
+    },
+    "identity_status": "requires_author_review",
+    "input_hashes": {
+      "paper/manuscript.pdf": "sha256:19c5e14802d0f8ed21a4a1fc898412a916ca3e8dffd859af8badf07fa1e4525f",
+      "paperdelta.yaml": "sha256:3261e4117164b021951942316c19bacbde3bc9eb026234c2ef0af0ade96b3c54",
+      "results/measurements.csv": "sha256:5a1f8701842a00776441d140542dd9fc9b923f37d6cccdecc67c07a8dfdd4865"
+    },
+    "metrics": {},
+    "rationale_status": "unverified_assertion",
+    "requires_confirmation": true,
+    "review_schema_version": 1,
+    "verification_scope": "检查按所声明的筛选、单位、计算方式和原文位置核对这些输入字节，不能据此证明科学身份或所提供解释的真实性。"
+  },
+  "stage_guidance": "请把来源字段单位与论文显示分开声明，提供明确的实验筛选、所需数量和准确种子集合。不要根据百分号或数值一致推断单位。",
+  "status": "budget_exhausted",
+  "undo": {
+    "last_action": "source",
+    "notice": "使用空参数和原因执行 undo，撤回最后一个成功阶段。它消耗一次动作并保留所有已读取输入的哈希，最多允许撤回四次。",
+    "remaining": 4
+  }
+}

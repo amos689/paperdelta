@@ -1,0 +1,88 @@
+{
+  "case_id": "D04",
+  "expected_decision": "map",
+  "family": "escaped_json_pointer",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:12bdffc76113b0926026b7db4218d64d2f169919f3fef04c168f6f6c3d19bf36",
+      "expected": "71.4%",
+      "location": {
+        "byte_end": 42,
+        "byte_start": 37,
+        "column": 27,
+        "context": "The mean test accuracy is 71.4% on Cedar for VariantBlue.",
+        "end": 42,
+        "file": "paper/manuscript.md",
+        "format": "markdown",
+        "line": 3,
+        "locator": {
+          "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+          "offset": 26,
+          "section": [
+            "Results"
+          ]
+        },
+        "parser": "paperdelta-markdown/1 markdown-it-py/4.2.0",
+        "start": 37,
+        "text": "71.4%"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "target": {
+            "expected_count": 1,
+            "expected_seeds": null,
+            "field": "/runs/evaluation~1test/score.mean",
+            "reduce": "unique",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {}
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "block": "sha256:6905756d270cfd9675df2a21a061f5d3f92394f6ca11f934e5ea65d97eb5c231",
+              "exact": null,
+              "prefix": "The mean test accuracy is ",
+              "suffix": " on Cedar for VariantBlue."
+            },
+            "display": {
+              "kind": "percent",
+              "percent_symbol": true,
+              "places": 1
+            },
+            "file": "paper/manuscript.md",
+            "metric": "target"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {},
+            "format": "json",
+            "path": "results/export.json",
+            "primary_key": []
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

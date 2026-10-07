@@ -1,0 +1,35 @@
+{
+  "action": "locations",
+  "action_index": 4,
+  "elapsed_seconds": 3.7190000000009604,
+  "error": {
+    "code": "MAPPING_ORDER",
+    "fields": [],
+    "hint": "Use the named fields and enums in stage_schemas and inspect preview.available_sources/available_metrics. Failed arguments did not alter the previous draft.",
+    "message": "Choose one of allowed_actions and reference only declared sources and metrics."
+  },
+  "finish_reason": "stop",
+  "request_sha256": "sha256:e6774b476fedcd12b000dbd01ae95000a295cb5735d7fe5909f29224082cb697",
+  "response_sha256": "sha256:3942170ac740e158d7dab47496d44acdc75b5a17757cbb0a48a97879663e60e0",
+  "server_timings": {
+    "cache_n": 0,
+    "predicted_ms": 2013.966,
+    "predicted_n": 187,
+    "predicted_per_second": 92.35508444531834,
+    "predicted_per_token_ms": 10.827774193548386,
+    "prompt_ms": 1562.996,
+    "prompt_n": 6557,
+    "prompt_per_second": 4195.148292126147,
+    "prompt_per_token_ms": 0.2383705963092878
+  },
+  "status": "budget_exhausted",
+  "usage": {
+    "completion_tokens": 187,
+    "prompt_tokens": 6557,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6744
+  },
+  "valid": false
+}
