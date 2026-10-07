@@ -1,0 +1,42 @@
+{
+  "locked_at": "2026-10-07T05:06:40.055457+00:00",
+  "phase": "after implementation freeze and independent original visual review; before any held-out product score",
+  "gold_sha256": "cd805c7737a7e57f3278c6082f03067caed78103026b0e510b076d60b0c059b0",
+  "font_boxes_sha256": "5820d87af60e82d742883559f862f2ae810cebbfb65942cce31fcbf8449baae1",
+  "implementation_lock_sha256": "375373d8c48526b1a5fa925ec1d576711091284719128e14e777d67a2784b621",
+  "scoring_contract_sha256": "89ac586e042e3b231f772c38496d03a7b497002a6bc3ec62919aa401fefc918e",
+  "scoring_amendment_sha256": "8b5aff7384eff25aa81917f47f4d359e8ec6965e8974ecd82093938d979c7d0d",
+  "planned_slots": 96,
+  "eligible_targets": 80,
+  "unfilled_slots": 16,
+  "viewed_page_renders_sha256": {
+    "review/held-out/peerj-pmc11748422-p7.png": "07e43528651d992ecb2359b4612385b31ed92cd850b20695a146ff6eb46c841f",
+    "review/held-out/peerj-pmc11748422-p8.png": "3650b31b8648955969d5a0b7b6926148d5fcf219ced0e92fec1f519f3d0b66d8",
+    "review/held-out/plosgenetics-1011507-p10.png": "722451de19617512837e2a24d2e9fe1defe19c3ca5c2eef02c7594b111aacf0c",
+    "review/held-out/plosgenetics-1011507-p5.png": "60fda79767b738315f8b1bedea119ca964f975473e479ef5397efc51b9445911",
+    "review/held-out/plosgenetics-1011507-p7.png": "0e782605b9c7a378f02d1ea1fe4d38ab96ce04072acca38f12a2559fdac957a4",
+    "review/held-out/plosgenetics-1011507-p8.png": "fe681ef64fa3ad8e712c4f1ee496a49a02984db004a61219dd8d616b9cec3ca7",
+    "review/held-out/plosgenetics-1011507-word-p1.png": "4f33ba5591af608e78bd52a21f51e28a5e0a4a661dba571d462dca84825bad0e",
+    "review/held-out/plosgenetics-1011507-word-p2.png": "7e185309b5f3b1c0c7fa9e731ea821ead79cfd45ef45f931402d1f180f95975e",
+    "review/held-out/plosgenetics-1011507-word-p3.png": "595923ef5656b113d21648740e3e52fc05059cee6e60d96ae26b7e479b281979",
+    "review/held-out/plosgenetics-1011507-word-p4.png": "adc6e726f246379f7bcd46ed02cfdd93029bce8307d058b4de51af18ff4411c2",
+    "review/held-out/plosgenetics-1011507-word-p5.png": "c6890bf7077686e8a3e3043e807efb8584312a7fd12e3d8cdb0ca8eced98680b",
+    "review/held-out/plosmedicine-1004504-p1.png": "c6f671d3ecd28a45d2447d05f71e1a4263bf689cba11f9efe9e2ec55e77deb11",
+    "review/held-out/plosmedicine-1004504-p2.png": "71e6201df218c60711bf0d2b1b1009ccc2eadeab1f95b6942090368978d88349",
+    "review/held-out/plosmedicine-1004504-p8.png": "a731ca69062b1cc0b25a1997a49dfcecac4c6b67cccc487d9c4246e3b095db2c",
+    "review/held-out/plosmedicine-1004504-word-p1.png": "318b6427193c6160a12acf14e864d00a80a9d282c0be7538cab1f6e12d4eba1f",
+    "review/held-out/scientific-reports-pmc11782508-p1.png": "6cdd9ad0b9cc8db21d621dbfabc78e2cf5a8803651ea230d2c1ff3ab89338cb2",
+    "review/held-out/scientific-reports-pmc11782508-p2.png": "4cfdd758468d919f00169b31ac5400062472e45a1f5c5e08512431d0fb44090d",
+    "review/held-out/scientific-reports-pmc11782508-p3.png": "0a15a376256aa3dba46b7a571956fce8770243ab69d68fc514fee093ccbf950f"
+  },
+  "visual_observations": [
+    "PLOS Genetics whole superscript e-06/e-05 expressions and observed founder, blastocyst and caption sample counts reviewed; prior-work percentages and graph ticks excluded.",
+    "PLOS Genetics five-page Word attachment contains allele descriptions/coordinates/sequences only. Zero eligible targets; retain all 16 unfilled slots separately.",
+    "PLOS Medicine first six table rows retain count-percent cells whole; abstract cohort sizes/induction rates checked; Word duplicate RR/CI cells distinguished by original paragraph.",
+    "PeerJ result correlations, full inequalities and whole pH range checked in original pages 7-8.",
+    "Scientific Reports full FTIR ranges, protein results and measured peaks checked; background statistics, isolate identifiers and method constants excluded.",
+    "PDFium text stream order can differ from rendered caption/body order within a page; all selected values remain within the first eligible 16 for each original."
+  ],
+  "annotator": "developer-operated; no independent human annotation claimed",
+  "annotation_script_sha256": "6e098adfb468f860d08c0d92c8211ffbbb14a491d23084d1d6c32b651cdbd1b9"
+}
