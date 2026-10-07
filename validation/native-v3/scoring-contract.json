@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-10-07T03:57:56.486085+00:00",
+  "phase": "before product baseline or parser changes",
+  "complete_value_policy": "Ranges, count-percent cells, count-total cells, regression estimate-SE and estimate-CI cells are single complete targets. Where no declared whole-value metric/display contract exists, record unknown: complete_compound_contract_unsupported. Never count subcomponents as successes.",
+  "coordinate_rule": "Same as native-v2: exact Word part/paragraph/offset; PDF font boxes at independent glyph indices, x edges within 1.2 points and vertical midpoint within the actual span plus 2 points. Keep ink boxes.",
+  "numeric_bound": "Keep the product exponent limit of 1000. If a complete located value exceeds it, report unknown/NUMBER_LIMIT; do not lower gold values or treat them as zero.",
+  "controls": "Synthetic scalar evidence is checked unchanged then changed by +1. It does not reproduce paper experiments.",
+  "comparability": "Different target shapes from native-v2; report by shape and never claim an overall cross-study accuracy gain."
+}

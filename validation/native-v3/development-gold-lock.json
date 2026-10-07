@@ -1,0 +1,39 @@
+{
+  "locked_at": "2026-10-07T03:57:56.486085+00:00",
+  "phase": "after independent selection and visual checks; before product scoring or parser edits",
+  "gold_sha256": "d1156017bc8c5f4f761c6c3f4483686c494bb1d5fd078768f0eea48b39e80eec",
+  "font_boxes_sha256": "90041a83e4d64bd9a5de7c9c82e0570c8d0258d1fc3fe3ae231fc45eed93bc03",
+  "source_selection_lock_sha256": "9130df7cd4d159e1abd501178cd53824ccd05d917f88f896e833df6ecdfa0bb3",
+  "scoring_contract_sha256": "89ac586e042e3b231f772c38496d03a7b497002a6bc3ec62919aa401fefc918e",
+  "targets": 96,
+  "viewed_page_renders_sha256": {
+    "plosgenetics-1011480/original-page-1.png": "e79ac8cb64aee90ff558ec2bbe64f2f7c76834d6366bae94dcca5db0d43ae448",
+    "plosgenetics-1011480/original-page-5.png": "8fc703b9c1ee1a57111c4fda4ccabd90a6509305a00ee7e3947cfca5b09773a2",
+    "plosgenetics-1011480/original-page-6.png": "bac325bc482d32f0701545ca7a3450b3d4eefbccbc02abd5eb305a581e18e197",
+    "plosgenetics-1011480/original-page-7.png": "882755eeeccfb63d93cf14da8b10671764a80ad618336c81ffb29047cbefdfc9",
+    "plosmedicine-1004501/original-page-1.png": "451577a68aaeed8a4efb50b7f23a2cab15951e945002c16df3b558d998208b9c",
+    "plosmedicine-1004501/original-page-8.png": "566c10620ca234bcbbda912a6144c08b9988c5975559e94384cad2b5b840e5d2",
+    "peerj-pmc11740737/original-page-1.png": "5a00b2023738fa71dfaf42e44bcd3ff029bdbe339e712091f3ff616248513488",
+    "peerj-pmc11740737/original-page-12.png": "09f77318dc4cdd86df8ad9ca347dab6b29d0005af800894eacdf0952a6deeddd",
+    "scientific-reports-pmc11782514/original-page-3.png": "479d22ebd7072d615c95872ed1cef5342e64e6aa01eec8bb9bafdbe515d8f343",
+    "scientific-reports-pmc11782514/original-page-6.png": "a9c58271ece997d722f01711e3d803eb80878e2c0a6e252281a735ec0037403f",
+    "plosgenetics-1011480/word-page-1.png": "9efb8f0821624e13359fa1e247ee34670746a5608d7a3dd284f5fa6b52ebf49b",
+    "plosmedicine-1004501/word-page-1.png": "75fa9a41520a266bd016e0ad398db4ce8cd8f44785fc999d11c71312edc173d4"
+  },
+  "visual_observations": [
+    "Original scientific superscripts match the complete Word values, including the exponent -1466.",
+    "PLOS Medicine merged year headers and count/CI cells checked whole; no fragments counted as complete values.",
+    "PeerJ table signs and decimal values checked; the prose estimate-SE remains one target.",
+    "Scientific Reports donor ages distinguish identical ages at separate columns; medication and figure IDs excluded.",
+    "PLOS Genetics percentages/ranges match the selected result prose; graph ticks and simulation settings excluded."
+  ],
+  "initial_parsers_unchanged": true,
+  "held_out_original_text_pages_and_gold_unseen": true,
+  "annotator": "developer-operated; no independent human annotation claimed",
+  "tools": {
+    "tools/prepare_native_v3.py": "2e0b5c2406e503f2da79af2bc807c0af42e70b7296a7cfbf8d2f5aff3ed67e85",
+    "tools/annotate_native_v3_development.py": "d3b98ed7bfc4db1c25e220051d7c619e89afae13a1b9f9835f66812096a379a4",
+    "tools/evaluate_native_v3.py": "dc370cbdb5e4e7e31dcd3c284c57229e523ccffa40ece7d0036cd6b94873e3e1",
+    "tools/render_native_v3.ps1": "7e5007403688bb5b98c3ea627f4c3dccd449296b787b9e2341b732b4747103b5"
+  }
+}
