@@ -1,0 +1,69 @@
+{
+  "purpose": "Visual verification of authored original inputs before implementation tuning",
+  "cases": [
+    {
+      "source_sha256": "4e594158931e93525796ab060d4599e3a647410588e1f5319b81068f16442586",
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "id": "D03",
+      "version": "16.0",
+      "original": "development/D03/project/paper/manuscript.docx",
+      "png_sha256": "33d1c239dc117d3749af48d77db297daf1fb1fbace578e429c3325b070596fe8"
+    },
+    {
+      "source_sha256": "0a8b90f34edc1afdce5cbb3482a6d3b8cd4aa7726f098c500d6933d6f0d63be7",
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "id": "D07",
+      "version": "16.0",
+      "original": "development/D07/project/paper/manuscript.docx",
+      "png_sha256": "a7c483ca144b96ab9c5c2517fae89f891bdacd6ff81651c059920ac7123ae3f6"
+    },
+    {
+      "source_sha256": "a4b282e2507d90486bda35768c61c90adfa6c5f6a26a6e4f757951ee9c132acf",
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "id": "H03",
+      "version": "16.0",
+      "original": "held-out/H03/project/paper/manuscript.docx",
+      "png_sha256": "4a7cf8fae04a2b821362669bd6850df2cae0e6270f967e37171236b4292bf092"
+    },
+    {
+      "source_sha256": "8adf05d1122ec464832ef376c654b3b8d048d512f86b5c2b021c96d0ddaa6d57",
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "id": "H09",
+      "version": "16.0",
+      "original": "held-out/H09/project/paper/manuscript.docx",
+      "png_sha256": "9ec6e321c46be9e1972974e216bcea717784645fb77e20e9f6beff86cc4eb172"
+    },
+    {
+      "id": "D06",
+      "png_sha256": "a0080cb08ec1372224266b67b212452309bffbabd5ced025edda30cb12d06dd7",
+      "source_sha256": "19c5e14802d0f8ed21a4a1fc898412a916ca3e8dffd859af8badf07fa1e4525f",
+      "original": "development/D06/project/paper/manuscript.pdf",
+      "engine": "Original PDF / Poppler"
+    },
+    {
+      "id": "D10",
+      "png_sha256": "a0080cb08ec1372224266b67b212452309bffbabd5ced025edda30cb12d06dd7",
+      "source_sha256": "19c5e14802d0f8ed21a4a1fc898412a916ca3e8dffd859af8badf07fa1e4525f",
+      "original": "development/D10/project/paper/manuscript.pdf",
+      "engine": "Original PDF / Poppler"
+    },
+    {
+      "id": "H06",
+      "png_sha256": "dd383d1933446a6fdf8d5b73419d3f16f2100af55d7a7b41c1e67401a414b62d",
+      "source_sha256": "e52b58d71a2482a81ba3851ca95805ae9c7c01927c03d7484f4922c494204339",
+      "original": "held-out/H06/project/paper/manuscript.pdf",
+      "engine": "Original PDF / Poppler"
+    },
+    {
+      "id": "H11",
+      "png_sha256": "dd383d1933446a6fdf8d5b73419d3f16f2100af55d7a7b41c1e67401a414b62d",
+      "source_sha256": "e52b58d71a2482a81ba3851ca95805ae9c7c01927c03d7484f4922c494204339",
+      "original": "held-out/H11/project/paper/manuscript.pdf",
+      "engine": "Original PDF / Poppler"
+    }
+  ]
+}

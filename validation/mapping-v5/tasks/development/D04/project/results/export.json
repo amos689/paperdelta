@@ -1,0 +1,17 @@
+{
+  "runs": {
+    "evaluation/test": {
+      "checkpoint": "selected",
+      "dataset": "Cedar",
+      "model": "VariantBlue",
+      "score.mean": 0.714,
+      "seeds": [
+        "001",
+        "002",
+        "003"
+      ],
+      "split": "test",
+      "unit": "fraction"
+    }
+  }
+}

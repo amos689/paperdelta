@@ -1,0 +1,20 @@
+{
+  "phase": "before product tuning; no model calls",
+  "native_visual_inspection": "Eight original rendered pages inspected; values and tables readable, no clipping, original bytes unchanged.",
+  "poppler_warning": "Word exports reported missing Symbol and ArialUnicode display fonts; authored ASCII text displayed correctly.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "generation failed: openpyxl absent",
+      "log_sha256": "245976bf978e395ded70387215d8cae6806f0b01b9155aac08b8ecd39e65343d",
+      "log": "Traceback (most recent call last):\n  File \"<checkout>\\tools\\create_mapping_v5.py\", line 483, in <module>\n    main()\n  File \"<checkout>\\tools\\create_mapping_v5.py\", line 460, in main\n    cases = [build_case(output, split, family) for split in FORMATS for family in range(1, 13)]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<checkout>\\tools\\create_mapping_v5.py\", line 300, in build_case\n    source = source_files(case, family, split, names, values)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<checkout>\\tools\\create_mapping_v5.py\", line 187, in source_files\n    from openpyxl import Workbook\nModuleNotFoundError: No module named 'openpyxl'\n"
+    },
+    {
+      "attempt": 2,
+      "status": "generation passed before full Chinese request and runtime provenance additions",
+      "log_sha256": "a5ec961428eaeb15105ce86e348511e34c8b6c2db4fdf182b82289dc0dcd860e",
+      "log": "{\"status\": \"created\", \"cases\": 24, \"files\": 148}\n"
+    }
+  ],
+  "final_manifest_sha256": "6218cd57aa0a49261873722ddb1f791879518559c5ec31897f82182ed4dc8852"
+}

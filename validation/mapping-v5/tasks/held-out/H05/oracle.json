@@ -1,0 +1,125 @@
+{
+  "case_id": "H05",
+  "expected_decision": "map",
+  "family": "percentage_point_difference",
+  "native_position_origin": "Authored template and pre-2.0 PaperDelta 1.9 positions; not independent native-parser gold.",
+  "reason": "Match the declared experiment contract and requested original position; a stale display remains mappable.",
+  "reference_controls": [
+    {
+      "candidate_id": "sha256:3a584b9b14d7d2e8c773eac8419cc98a0f6e54c8ec9c05af7106607f12f72e2c",
+      "expected": "3.1",
+      "location": {
+        "byte_end": 50,
+        "byte_start": 47,
+        "column": 48,
+        "end": 50,
+        "file": "paper/manuscript.tex",
+        "line": 1,
+        "start": 47,
+        "text": "3.1"
+      },
+      "status": "pass"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "additions": {
+        "claims": {},
+        "figures": {},
+        "metrics": {
+          "contrast": {
+            "args": [
+              "target",
+              "control"
+            ],
+            "op": "percentage_point_difference"
+          },
+          "control": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "Control",
+              "split": "test"
+            }
+          },
+          "target": {
+            "expected_count": 3,
+            "expected_seeds": [
+              "001",
+              "002",
+              "003"
+            ],
+            "field": "score",
+            "reduce": "mean",
+            "seed_column": "seed",
+            "source": "records",
+            "unit": "fraction",
+            "where": {
+              "checkpoint": "selected",
+              "dataset": "Juniper",
+              "model": "VariantAmber",
+              "split": "test"
+            }
+          }
+        },
+        "occurrences": {
+          "requested": {
+            "anchor": {
+              "exact": null,
+              "prefix": " is ",
+              "suffix": " "
+            },
+            "display": {
+              "kind": "decimal",
+              "percent_symbol": false,
+              "places": 1
+            },
+            "file": "paper/manuscript.tex",
+            "metric": "contrast"
+          }
+        },
+        "sources": {
+          "records": {
+            "columns": {
+              "checkpoint": "string",
+              "dataset": "string",
+              "model": "string",
+              "score": "decimal",
+              "seed": "string",
+              "split": "string"
+            },
+            "format": "csv",
+            "path": "results/measurements.csv",
+            "primary_key": [
+              "dataset",
+              "model",
+              "checkpoint",
+              "split",
+              "seed"
+            ]
+          }
+        }
+      },
+      "rationale": {
+        "occurrences:requested": "Authored fixture reference: independently specified source identity, units and requested original location."
+      }
+    }
+  ],
+  "required_seed_ids": [
+    "001",
+    "002",
+    "003"
+  ],
+  "schema_version": 1
+}

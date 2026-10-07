@@ -74,6 +74,9 @@ def check():
         for study in ("native-v1", "native-v2", "native-v3", "mapping-v4")
         for p in (ROOT / "validation" / study).glob("README*.md")
     )
+    actual.update(
+        p.relative_to(ROOT).as_posix() for p in (ROOT / "validation/mapping-v5").glob("*.md")
+    )
     assert actual == registered, {
         "unpaired": sorted(actual - registered),
         "missing": sorted(registered - actual),
