@@ -41,6 +41,10 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_studio_scale.cjs build/studio-scale
+      - name: Test reviewed bilingual Word and PDF annotation downloads
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_annotations_browser.cjs build/annotations-browser
       - name: Test bilingual batch binding, templates and CLI/MCP proposal imports
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
@@ -114,6 +118,9 @@ jobs:
             build/revisions-browser/evidence.json
             build/revisions-browser/*.png
             build/revisions-browser/*-failure.json
+            build/annotations-browser/evidence.json
+            build/annotations-browser/*.png
+            build/annotations-browser/*-failure.json
             build/studio-scale/evidence.json
             build/studio-scale/*.png
             build/studio-scale/*-errors.json

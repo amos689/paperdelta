@@ -163,14 +163,14 @@ async function runCase(browser, format, language) {
       fs.writeFileSync(data, evidence.toString('utf8').replaceAll('0.843', '0.807').replaceAll('0.845', '0.809').replaceAll('0.847', '0.811'));
       await waitChange(generation);
       await act('#revision-search', 'fill', 'abstract_accuracy');
-      assert.equal(await page.locator('#revision-tasks input').count(), 0);
+      assert.equal(await page.locator('#revision-tasks input[data-numeric-patch]').count(), 0);
       await act('#revision-tasks [data-subject="occurrence:abstract_accuracy"] .revision-focus');
       assert.match(await page.locator('#revision-detail').textContent(), /main_comparison/);
       await act('#revision-detail > button');
       assert(await page.locator('#claim-review-form').isVisible());
       assert.deepEqual(fs.readFileSync(source), original);
     } else {
-      assert.equal(await page.locator('#revision-tasks input').count(), 0);
+      assert.equal(await page.locator('#revision-tasks input[data-numeric-patch]').count(), 0);
       assert(await page.locator('#revision-preview-button').isDisabled());
       await act('#language', 'selectOption', language === 'en' ? 'zh-CN' : 'en');
       assert.equal(await page.locator('#revision-search').inputValue(), 'table_accuracy');

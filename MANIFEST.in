@@ -14,6 +14,7 @@ recursive-include validation/mapping-v4 LICENSE
 prune tests/corpus
 prune validation/native-v1
 prune validation/native-v2
+prune validation/native-v3
 exclude docs/evidence/corpus*.json
 # Artifact hashes are sidecars, avoiding self-referential distribution contents.
 exclude docs/evidence/package-audit*.json

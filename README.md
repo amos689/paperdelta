@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/amos689/paperdelta/actions/workflows/ci.yml"><img src="https://github.com/amos689/paperdelta/actions/workflows/ci.yml/badge.svg?branch=main" alt="Cross-platform checks"></a>
-  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.7.0"><img src="docs/assets/badges/release.svg" alt="Release 1.7.0"></a>
+  <a href="https://github.com/amos689/paperdelta/releases/tag/v1.8.0"><img src="docs/assets/badges/release.svg" alt="Release 1.8.0"></a>
   <a href="LICENSE"><img src="docs/assets/badges/license.en.svg" alt="MIT license for original code"></a>
 </p>
 
@@ -57,12 +57,11 @@ abstract, table and claim, then open a separate source/PDF example with a stale 
 [Open the full-size animation](docs/assets/v1.3/demo.en.gif?raw=true) ·
 [View the static screenshot](docs/assets/v1.3/report.png).
 
-**1.7.0** joins original context, experiment evidence and revision actions in Studio.
-Preview, explicitly apply and recover selected LaTeX/Markdown/Quarto numeric edits;
-reuse reviewed experiment definitions without repeating the form. Checking stays
-local and never executes paper code.
-[Choose your task](docs/tasks.md) · [Revision guide](docs/v1.7.md) ·
-[Notebook/Quarto workflows](docs/v1.6.md) · [Portable reviews](docs/review-bundle.md).
+**1.8.0** exports reviewed Word comment copies and PDF highlights after an exact-location
+preview and explicit confirmation, keeping originals unchanged. Complete raised-exponent
+scientific values and static PDF opening views gain support; unresolved structures remain unknown.
+[Annotated-copy guide](docs/v1.8.md) · [Choose your task](docs/tasks.md) ·
+[Revision workbench](docs/v1.7.md) · [Notebook/Quarto workflows](docs/v1.6.md).
 
 Use static [LaTeX](docs/rules.md), [Markdown/Quarto](docs/markdown-quarto.md),
 [Word](docs/word.md) or [PDF](docs/pdf.md) with the same declared
@@ -94,7 +93,7 @@ paperdelta demo --out paperdelta-demo --open
 ```
 
 With [uv installed](https://docs.astral.sh/uv/getting-started/installation/), try
-`uvx --python 3.12 paperdelta@1.7.0 demo --out paperdelta-demo --open` in an isolated
+`uvx --python 3.12 paperdelta@1.8.0 demo --out paperdelta-demo --open` in an isolated
 tool environment. Use a new output directory for each run. See
 [optional native readers and startup diagnostics](docs/v1.3.md#isolated-startup).
 
@@ -116,7 +115,7 @@ check result, normally 1 for the changed scenario. See [demo details](docs/workf
 A wheel, source archive and separately licensed evaluation bundle are also
 available from [GitHub Releases](https://github.com/amos689/paperdelta/releases).
 Verify the wheel with the release's `SHA256SUMS`, then run
-`python -m pip install ./paperdelta-1.7.0-py3-none-any.whl`.
+`python -m pip install ./paperdelta-1.8.0-py3-none-any.whl`.
 
 ## Connect an existing paper
 

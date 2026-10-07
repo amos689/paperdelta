@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-07T04:46:13.149040+00:00",
+  "phase": "after development run 1 and before implementation freeze or held-out access",
+  "original_contract_sha256": "89ac586e042e3b231f772c38496d03a7b497002a6bc3ec62919aa401fefc918e",
+  "changes": [
+    {
+      "boundary": "unknown versus missed only",
+      "reason": "Product PDF coordinates are rounded to four decimals. A quarantined glyph at x=395.5255648 is stored as 395.5256; exact lower-edge containment wrongly called dev-034 a miss. Permit 0.0001 point rounding only in the blocked-location predicate. Supported-position tolerances and target definitions do not change.",
+      "observed_first_run": "34 supported, 1 missed, 0 mislocated, 61 unknown; preserved in development-run1.json"
+    },
+    {
+      "boundary": "controlled scientific evidence perturbation",
+      "reason": "Adding 1 to 30000 leaves a one-significant-digit display 3e4 unchanged. To require a visible mismatch, scientific values use 10**max(0, adjusted decimal exponent); scalar values retain +1. This is fixed before held-out inspection and recorded per result. No changes to evidence values used by the unchanged pass test or gold."
+    }
+  ],
+  "old_studies": "No old study files, scores or original evaluators are edited. The separate v2 regression discloses this compatibility adapter."
+}

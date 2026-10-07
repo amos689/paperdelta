@@ -1,0 +1,65 @@
+schema_version: 1
+paper:
+  entry: paper/main.tex
+  macros: {score: 1}
+rounding: half_up
+sources:
+  benchmark:
+    path: results/metrics.csv
+    format: csv
+    primary_key: [dataset, model, split, seed]
+    columns: {dataset: string, model: string, split: string, seed: integer, accuracy: decimal}
+metrics:
+  ours:
+    source: benchmark
+    where: {dataset: Data-A, model: Ours, split: test}
+    field: accuracy
+    reduce: mean
+    expected_seeds: [1, 2, 3]
+    unit: fraction
+  baseline:
+    source: benchmark
+    where: {dataset: Data-A, model: Baseline, split: test}
+    field: accuracy
+    reduce: mean
+    expected_seeds: [1, 2, 3]
+    unit: fraction
+  gain:
+    op: percentage_point_difference
+    args: [ours, baseline]
+occurrences:
+  abstract_accuracy:
+    file: paper/abstract.tex
+    anchor: {prefix: 'Our method achieves ', suffix: ' accuracy on Data-A.'}
+    metric: ours
+    display: {kind: percent, places: 1}
+  table_accuracy:
+    file: paper/results.tex
+    anchor: {prefix: 'Ours & ', suffix: ' \\'}
+    metric: ours
+    display: {kind: percent, places: 1, percent_symbol: false}
+  table_baseline:
+    file: paper/results.tex
+    anchor: {prefix: 'Baseline & ', suffix: ' \\'}
+    metric: baseline
+    display: {kind: percent, places: 1, percent_symbol: false}
+  gain_text:
+    file: paper/results.tex
+    anchor: {prefix: 'Our method improves by ', suffix: ' percentage points over Baseline.'}
+    metric: gain
+    display: {kind: decimal, places: 1}
+  appendix_accuracy:
+    file: paper/appendix.tex
+    anchor: {prefix: 'Recorded accuracy: \score{', suffix: '} percent.'}
+    metric: ours
+    display: {kind: percent, places: 1, percent_symbol: false}
+claims:
+  main_comparison:
+    file: paper/results.tex
+    anchor: {exact: 'Our method outperforms Baseline on Data-A.'}
+    predicate: {op: greater_than, left: ours, right: baseline}
+    scope: {dataset: Data-A, split: test}
+
+
+figures:
+  accuracy: {path: paper/figures/accuracy.pdf, record: paper/figures/accuracy.record.json}

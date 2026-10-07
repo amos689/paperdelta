@@ -92,3 +92,25 @@ ReportLab 仅作为开发依赖生成原创 PDF 测试样例和演示，安装�
 - **elife-109903** (development): Pedro A Perez, Chung-Chih Liu, Alessandra Ferrari, Nicole K Littlejohn, John Paul Kennelly, Emma Marie Robinson, Vân TB Nguyen-Tran, Jon Athanacio, Sean B Joesph, Zaid Amso, Peter Tontonoz, Supriya Srinivasan. [NK2R signaling governs intestinal lipid mobilization and mucosal inflammation](https://elifesciences.org/articles/109903) (2026-10-05). DOI `10.7554/eLife.109903`.
 
 - **elife-110200** (held-out): Beth A Shen, Kyle L Asfahl, Bentley Lim, Savannah K Bertolli, Samuel S Minot, Matthew C Radey, Kelsi M Penewit, Billy Ngo, Stephen J Salipante, Christopher D Johnston, S Brook Peterson, Andrew L Goodman, Joseph D Mougous. [The type VI secretion system governs strain maintenance in a wild mammalian gut microbiome](https://elifesciences.org/articles/110200) (2026-10-02). DOI `10.7554/eLife.110200`.
+
+## 原生 Word/PDF 试验（1.8）
+
+`validation/native-v3/papers/` 的十二份未改动原件保留 **CC BY 4.0**，版权归各自作者，不代表作者背书。复用时保留署名、[许可](https://creativecommons.org/licenses/by/4.0/)及衍生改动说明。PaperDelta 的 MIT 许可覆盖原创代码，原件只包含在独立评测包中。[来源 URL、获取元数据和精确哈希](validation/native-v3/sources.json)及[试验协议与结果](validation/native-v3/README.zh-CN.md)保留完整历史。
+
+- **plosgenetics-1011480** (development): Christian Benner, Anubha Mahajan, Matti Pirinen. [Refining fine-mapping: Effect sizes and regional heritability](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011480). DOI `10.1371/journal.pgen.1011480`.
+
+- **plosgenetics-1011507** (held-out): Sara Formichetti, Agnieszka Sadowska, Michela Ascolani, Julia Hansen, Kerstin Ganter, Christophe Lancrin, Neil Humphreys, Mathieu Boulard. [Genetic gradual reduction of OGT activity unveils the essential role of O-GlcNAc in the mouse embryo](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011507). DOI `10.1371/journal.pgen.1011507`.
+
+- **plosmedicine-1004501** (development): Raphaele Houlbracq, Camille Le Ray, Béatrice Blondel, Nathalie Lelong, Anne Alice Chantry, Thomas Desplanches, ENP2021 Study Group. [Episiotomies and obstetric anal sphincter injuries following a restrictive episiotomy policy in France: An analysis of the 2010, 2016, and 2021 National Perinatal Surveys](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004501). DOI `10.1371/journal.pmed.1004501`.
+
+- **plosmedicine-1004504** (held-out): Karin Källén, Mikael Norman, Charlotte Elvander, Christina Bergh, Verena Sengpiel, Henrik Hagberg, Teresia Svanvik, Ulla-Britt Wennerholm. [Maternal and perinatal outcomes after implementation of a more active management in late- and postterm pregnancies in Sweden: A population-based cohort study](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004504). DOI `10.1371/journal.pmed.1004504`.
+
+- **peerj-pmc11740737** (development): . [Do goats recognise humans cross-modally?](https://doi.org/10.7717/peerj.18786). DOI `10.7717/peerj.18786`.
+
+- **peerj-pmc11748422** (held-out): Mitcov Ana, Ko Daegeun, Ko Kwanyoung, Kim Jaeho, Oh Neung-Hwan, Kim Hyun Seok, Choe Hyeyeong, Chung Haegeun. [Composition of soil fungal communities and microbial activity along an elevational gradient in Mt. Jiri, Republic of Korea.](https://doi.org/10.7717/peerj.18762). DOI `10.7717/peerj.18762`.
+
+- **scientific-reports-pmc11782514** (development): Sridhar Arun, Bakke Ingunn, Gopalakrishnan Shreya, Osoble Nimo Mukhtar Mohamud, Hammarqvist Emilie Prytz, Pettersen Henrik P. Sahlin, Sandvik Arne Kristian, Østvik Ann Elisabet, Hansen Marianne Doré, Bruland Torunn. [Tofacitinib and budesonide treatment affect stemness and chemokine release in IBD patient-derived colonoids.](https://doi.org/10.1038/s41598-025-86314-2). DOI `10.1038/s41598-025-86314-2`.
+
+- **scientific-reports-pmc11782508** (held-out): Zaghloul Nourhan A., Gouda Mona K., Elbahloul Yasser, El Halfawy Nancy M.. [Azurin a potent anticancer and antimicrobial agent isolated from a novel Pseudomonas aeruginosa strain.](https://doi.org/10.1038/s41598-025-86649-w). DOI `10.1038/s41598-025-86649-w`.
+
+可选 `pdf` 扩展也安装 pypdf 用于批注副本。该依赖单独安装、保留自身许可，不包含在仓库源码中。

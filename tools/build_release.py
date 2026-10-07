@@ -45,7 +45,7 @@ def main():
     )
     files.update(
         p.relative_to(ROOT).as_posix()
-        for study in ("native-v1", "native-v2", "mapping-v4")
+        for study in ("native-v1", "native-v2", "native-v3", "mapping-v4")
         for p in (ROOT / "validation" / study).rglob("*")
         if p.is_file() and "__pycache__" not in p.parts
     )
@@ -62,6 +62,8 @@ def main():
             "docs/zh-CN/v1.3.md",
             "docs/v1.4.md",
             "docs/zh-CN/v1.4.md",
+            "docs/v1.8.md",
+            "docs/zh-CN/v1.8.md",
         }
     )
     manifest = {
@@ -107,7 +109,10 @@ def main():
             "`python tools/replay_native_v2.py --out build/native-v2-replay`. "
             "It preserves twenty original files, independently selected positions, "
             "the frozen implementation, baseline, development history "
-            "and first held-out results.\n",
+            "and first held-out results.\n\n"
+            "The separate 1.8 native-v3 study retains twelve new licensed originals, "
+            "whole-value gold, the public 1.7 baseline and all four outcomes. Read "
+            "validation/native-v3/README.md for the frozen replay and limitations.\n",
         )
         bundle.writestr(
             "EVALUATION_README.zh-CN.md",
@@ -126,7 +131,9 @@ def main():
             "重放属于已见输入的回归验证。\n\n"
             "1.3 的新试验独立保存在 validation/native-v2/README.zh-CN.md，运行 "
             "`python tools/replay_native_v2.py --out build/native-v2-replay` 重放。"
-            "保留二十份原文件、独立定位、冻结实现、基线、开发历史和首次留出结果。\n",
+            "保留二十份原文件、独立定位、冻结实现、基线、开发历史和首次留出结果。\n\n"
+            "1.8 的 native-v3 试验独立保留十二份新许可原件、完整数值标注、公开 1.7 基线"
+            "及四类结果。冻结重放与限制见 validation/native-v3/README.zh-CN.md。\n",
         )
     print(
         json.dumps(

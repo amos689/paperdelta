@@ -6,7 +6,7 @@ Static `.md` and `.qmd` manuscripts use the same evidence and review workflows.
 See [Markdown/Quarto source support](markdown-quarto.md) for core demos, original
 positions, reviewed-write boundaries and explicit source/PDF comparisons.
 
-PaperDelta 1.3 reads supported text-based PDFs and checks their explicitly bound
+PaperDelta 1.8 reads supported text-based PDFs and checks their explicitly bound
 results against declared experiment evidence. The same configuration can contain LaTeX,
 Word and PDF manuscripts. PDF and Word files remain read-only.
 
@@ -177,3 +177,9 @@ See the [upgrade and diagnostics guide](v1.3.md) and
 [new native study](../validation/native-v2/README.md). The four historical misses
 above now pass a controlled regression; the new first held-out results remain
 separate. Neither result promises arbitrary scientific-notation or table support.
+
+## 1.8 annotated copies and complete scientific values
+
+Original files remain read-only. Select accepted occurrences in Studio or `paperdelta annotate`, preview the exact locations, then explicitly confirm to export new annotated copies. Word preserves existing comments and formatting; PDF preserves content, rotation and cropping. Unsupported comment locations, including note parts, remain explicit. Language switching retains selections and clears the old preview; changed inputs require a fresh preview.
+
+Raised `a × 10` exponents are supported when original runs or glyphs prove the complete value; other superscript and equation limits remain. Static local PDF opening views are no longer globally treated as dynamic content. See [1.8 scope, commands and the new study](v1.8.md). Earlier per-version measurements above remain historical records.

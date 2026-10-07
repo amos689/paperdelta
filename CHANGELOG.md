@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.8.0 — 2026-10-07
+
+- Preview and explicitly export native Word comment copies and PDF highlight/note copies in Studio and CLI. Preserve originals, existing comments, formatting and page geometry; revalidate current input identities.
+- Retain selections across bilingual switching while clearing stale previews and confirmation. List unsupported comment parts and signed/ambiguous inputs explicitly.
+- Recognize complete scientific values only when original run/glyph layout proves their raised exponent, and distinguish validated local PDF opening views from dynamic actions.
+- Add a separately licensed, preregistered twelve-original native study, complete-value scoring, old-input regressions and real-copy visual checks. Earlier frozen studies remain unchanged.
+- [Scope, limits and evidence](docs/v1.8.md).
+
 ## 1.7.0 — 2026-10-07
 
 - Join original context, experiment evidence and revision actions in a searchable bilingual Studio workbench; move detailed maintenance into expandable sections.

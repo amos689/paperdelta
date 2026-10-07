@@ -2,7 +2,7 @@
 
 [简体中文](zh-CN/word.md)
 
-PaperDelta 1.3 reads `.docx` manuscripts and checks explicitly bound numbers and
+PaperDelta 1.8 reads `.docx` manuscripts and checks explicitly bound numbers and
 comparisons against declared experiment evidence. It does not require Microsoft Word, a TeX
 installation, a model key or network access during checking.
 
@@ -124,3 +124,9 @@ report schema remains 8. Diagnostic messages distinguish unread content from
 ambiguous identity and suggest the next review action. See the [upgrade guide](v1.3.md)
 and [new native study](../validation/native-v2/README.md). The 1.1 figures above
 are preserved historical measurements, not the current version's score.
+
+## 1.8 annotated copies and complete scientific values
+
+Original files remain read-only. Select accepted occurrences in Studio or `paperdelta annotate`, preview the exact locations, then explicitly confirm to export new annotated copies. Word preserves existing comments and formatting; PDF preserves content, rotation and cropping. Unsupported comment locations, including note parts, remain explicit. Language switching retains selections and clears the old preview; changed inputs require a fresh preview.
+
+Raised `a × 10` exponents are supported when original runs or glyphs prove the complete value; other superscript and equation limits remain. Static local PDF opening views are no longer globally treated as dynamic content. See [1.8 scope, commands and the new study](v1.8.md). Earlier per-version measurements above remain historical records.

@@ -1,0 +1,2984 @@
+{
+  "by_file": [
+    {
+      "case": "plosgenetics-1011480",
+      "counts": {
+        "supported": 14,
+        "unknown": 2
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "counts": {
+        "supported": 4,
+        "unknown": 12
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "docx"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "docx"
+    }
+  ],
+  "coordinates": "font",
+  "counts": {
+    "mislocated": 0,
+    "missed": 0,
+    "supported": 18,
+    "unknown": 78
+  },
+  "created_at": "2026-10-07T04:00:09.483880+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "development": "d1156017bc8c5f4f761c6c3f4483686c494bb1d5fd078768f0eea48b39e80eec"
+  },
+  "implementation": {
+    "pyproject.toml": "60716d6b98a5c74d504304cd7f00878c6a42f46c244b0f881263893356cbb0c9",
+    "src/paperdelta/__init__.py": "f3a6e6ed0508041823bc7604af82bb5143e59a32364118c458133e75b18aad04",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "070f0cd9767331c460e7c8174530f71ee23cc1896c2d7479cd6017e5c2fb897e",
+    "src/paperdelta/agent.py": "818d327a4f6af8f1f8ece71f7b3c9dbf9e79893fd2c8e1027eee8738e44473b9",
+    "src/paperdelta/analysis.py": "625671017de41d69227751cf451796cbca320b033bdd8c2758acdd770b3e978c",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-batch.js": "dc96c22eb274c4c9b0815b2aca7a0b51dceea18f3c4d26e90ef9620ad4c4f091",
+    "src/paperdelta/assets/studio-review.js": "fb3278b71f583193e29a0b82064cb961c36766e3bfd9024415c35dec594895cd",
+    "src/paperdelta/assets/studio-revisions.js": "5e929d92024052bd39c048829903dcfdbe48a8d48ea37fbd6508e9514e13a712",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio-workflows.js": "29e78d1c32c1c0ee1ea2952d6de44c55e3f936249ae73056de6ab89f2a7928f3",
+    "src/paperdelta/assets/studio.css": "2c92c8f7fc44cde01ff3ffb5cabd80084c05d1c1f24054742e6150897541ff8b",
+    "src/paperdelta/assets/studio.js": "1bcee39da5ea7e3c922ba24b813c04c46531864228bab3650c30f22aa4a454b3",
+    "src/paperdelta/batch.py": "729769ea8e2d943b4c9d25431fa430f652e5b1435362902e572ad3e447381a06",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+    "src/paperdelta/cli.py": "f18d5b439c2744562e9b8bd53b9dcb8d35a9f7a0d8990392f1e0d219cc13ce19",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "4e170eeb843b7c20e2152852d986f32cbf3ee86b5a360eb86519a0d767654300",
+    "src/paperdelta/demo_markdown/paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_markdown/paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+    "src/paperdelta/demo_markdown/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_quarto/paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_quarto/paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+    "src/paperdelta/demo_quarto/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+    "src/paperdelta/docx_document.py": "1d416956b01e52815935d002200b7322af5d2201bafc612ac0ad0f17586a0f74",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_aliases.py": "941dbc4e522486ec32c6c54bed8e611ecd6781950560da5e91535cb25faaa8bf",
+    "src/paperdelta/experiment_definitions.py": "501da96211e515a5b67fe5e9256cc48f0551a8d382925c9ca49c0eb6f7788ac9",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/fragment_cli.py": "76c05806f6f40ab81b5edf1aff44f1ac1134ee2d066376715fe3ba193f0ac926",
+    "src/paperdelta/fragments.py": "39df6fc6014e8c7033ecc8405b820531bd948d3c1250f2ce89997e55d26faa5f",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "dbc00be086b608298d36276fcb30d102e6489ab611217d720c1440a0333f115d",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "4b0713cb7245b9aa4f6080a07e48c8a1005648732d6542c789486cec14b5483b",
+    "src/paperdelta/locales/zh-CN.json": "a872f0a50ac63e3a7610631e81511ac1f9d955115d4589449dbe3c0e86c69e03",
+    "src/paperdelta/locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+    "src/paperdelta/manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+    "src/paperdelta/markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+    "src/paperdelta/mcp_server.py": "5c8448bcfdc5f1da58a9cd5e4692787e4b723309b931bc6ead42b4ee46620e3d",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "e612f3b8caa71ed0f41383bcf6bce14fc4b687e60a6249efdb1659cbe976d02b",
+    "src/paperdelta/native_document.py": "2e9547e4d3b6a2336907cfc61718b5ba042b0a9598cf43499d192ffbbc405900",
+    "src/paperdelta/notebooks.py": "ab14f5fced2c26d8bbc8119885dfbffc823726923ea42ec9d785fb9f5be45d42",
+    "src/paperdelta/onboarding.py": "fee177d7887448c25b508ff835d01d13913bae9690c386a1ce62be802c7d1798",
+    "src/paperdelta/patches.py": "124e629dd30382c1a98883480c1185f1b2c3e10f80b4f9aa6262495b9d45ab7a",
+    "src/paperdelta/pdf_document.py": "7e2b6066dc16179d77699dc3ebeb671d5b45fa59ee9f68c93dea82b2669b6cbf",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/pr_review.py": "bfa680c254db2fe4afcffaa41c94ecdc268d62d0b74909823b99f94a3ace4e40",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/producer_run.py": "180240f126a08b816a3085b2ef5c5640b2f28780772c12c4472cdbaf41ef2138",
+    "src/paperdelta/provenance.py": "94086a8130112d2b751a11d7658696c9bbf7cd5724ef1399db8c8a09fb65f46e",
+    "src/paperdelta/provenance_cli.py": "b1c3a6d06fbb1ca0b7ee75c4395e88c39a33dfe9a866fe07b33bbf80a0ac52ea",
+    "src/paperdelta/records.py": "ff9202dbc7514d7ca8533c51de6c6a99f6fb8ca0dad94c0958c3011d77f258b9",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "a3f7d2f548bb4780607cb764036cab747dcb6162862ef093c9ad8611820481a9",
+    "src/paperdelta/review_bundle.py": "ce15e19a9789d4babf89aff3a3cf395b312c9fcee5a56452b1fb56b524992313",
+    "src/paperdelta/review_bundle_cli.py": "1fbdd3cfc429f30f267755303a71ff8e6e7bcc69d7e8be089a37d4c55ced796d",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/revisions.py": "ad2ebc1c60c2d35f622925e3bae89780a22ccbf770ba8b4950319214611ecc17",
+    "src/paperdelta/sarif.py": "ccad81b34bcb43c2a8c74ce2bcd4c1c613a64578d9470c28ddb0050d4c960073",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/source_advice.py": "6bcebeef6267a8a0c7f84d8dac61a1f47007eca360d01411080d7c4ff93c0237",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/staged_agent.py": "f34d3920632b9050f26cbd74470f7b40a6122bb01f233d6291b41437acac3ad1",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "be4db541e2239cf349c6abf204ef46a6960d68479e969052cdb8034d34870749",
+    "src/paperdelta/studio_batch.py": "cef3cc016c62daba1efc1d627f2355ce474f171e040bba7632d5381327344564",
+    "src/paperdelta/studio_recovery.py": "9674e4d8a93a792e9b211db6d4efc3b8485e1992b3f4e77c505fdb994e3a6b29",
+    "src/paperdelta/studio_review.py": "9150237b640a90f9bae5c6dc42275c3ccce6f83a0ac6e37ca9aacdcf51454baf",
+    "src/paperdelta/studio_revisions.py": "33a11c2675c58a310680c8060b3eeb0bb2289dfb1f075d3c0ac527dbb48e8656",
+    "src/paperdelta/studio_server.py": "58ae1b945e8d12222964986ef64110ed28b475be4720ca4aba27ba1fb51f9b19",
+    "src/paperdelta/studio_ui.py": "d599a3665ebd4a11dc5708f1d0cbc19444e5b1b3b8550d367dae58335c51b848",
+    "src/paperdelta/studio_workflows.py": "dcbe92d0839437fed020970b457139f4ea8cc114556f3f9945c16e188f34ccf5",
+    "src/paperdelta/tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+    "src/paperdelta/watch.py": "e819c612b52f990125ada246a11bb1aa2b96b939319565a4d53893838ee30654",
+    "src/paperdelta/word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/annotate_native_v3_development.py": "d3b98ed7bfc4db1c25e220051d7c619e89afae13a1b9f9835f66812096a379a4",
+    "tools/evaluate_native_v3.py": "dc370cbdb5e4e7e31dcd3c284c57229e523ccffa40ece7d0036cd6b94873e3e1",
+    "tools/prepare_native_v2.py": "b02c89d179cb1cf56e48fbcc1fcd995a16866d40554720371d530ed6ce8dcb7b",
+    "tools/prepare_native_v3.py": "2e0b5c2406e503f2da79af2bc807c0af42e70b7296a7cfbf8d2f5aff3ed67e85"
+  },
+  "matches_implementation_lock": false,
+  "mode": "regression",
+  "planned_slots": 96,
+  "python": "3.12.14",
+  "results": [
+    {
+      "actual": {
+        "context": "few causal variants in the fine-mapped region. Using data from 2,940 plasma proteins from",
+        "end": 2309,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            457.8496,
+            486.0335,
+            481.459,
+            495.5335
+          ],
+          "block": "sha256:7f7b7be09daaa3a0feb3d4bad4b447445830a7a3740ba7d6beaba4869e64856f",
+          "offset": 63,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2304,
+        "text": "2,940"
+      },
+      "anchor": {
+        "block": "sha256:7f7b7be09daaa3a0feb3d4bad4b447445830a7a3740ba7d6beaba4869e64856f",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "few causal variants in the fine-mapped region. Using data from ",
+        "suffix": " plasma proteins from"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          457.8497619628906,
+          486.7269592285156,
+          481.3356628417969,
+          495.2769470214844
+        ],
+        "ink_bbox": [
+          458.0967712402344,
+          486.8884582519531,
+          481.02215576171875,
+          494.9444580078125
+        ],
+        "page": 1
+      },
+      "id": "dev-001",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "2,940"
+    },
+    {
+      "actual": {
+        "context": "the UKB study, we observed that on average FINEMAP identified 2.5 causal variants at an",
+        "end": 2446,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            468.6786,
+            500.0365,
+            481.8038,
+            509.5365
+          ],
+          "block": "sha256:0328a7fd0e3a6f3f1ccada80cef48e945774bbec58fd2138bbf1d5c21823c913",
+          "offset": 62,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2443,
+        "text": "2.5"
+      },
+      "anchor": {
+        "block": "sha256:0328a7fd0e3a6f3f1ccada80cef48e945774bbec58fd2138bbf1d5c21823c913",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "the UKB study, we observed that on average FINEMAP identified ",
+        "suffix": " causal variants at an"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          468.67877197265625,
+          500.72991943359375,
+          481.7565002441406,
+          509.2799377441406
+        ],
+        "ink_bbox": [
+          468.9258117675781,
+          500.8914489746094,
+          481.3955078125,
+          507.7314453125
+        ],
+        "page": 1
+      },
+      "id": "dev-002",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "2.5"
+    },
+    {
+      "actual": {
+        "context": "association signal and captured 36% more regional heritability than the variant with the low-",
+        "end": 2547,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            331.9356,
+            514.0394,
+            342.4597,
+            523.5394
+          ],
+          "block": "sha256:7adf818ce35e4798912ee6cc2da819a4454d64e76c3a52ef4a8becb2bcc70f95",
+          "offset": 32,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2545,
+        "text": "36"
+      },
+      "anchor": {
+        "block": "sha256:7adf818ce35e4798912ee6cc2da819a4454d64e76c3a52ef4a8becb2bcc70f95",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "association signal and captured ",
+        "suffix": "% more regional heritability than the variant with the low-"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.9358215332031,
+          514.7329406738281,
+          342.3839416503906,
+          523.2829284667969
+        ],
+        "ink_bbox": [
+          332.2588195800781,
+          514.8944396972656,
+          342.0609130859375,
+          521.7344360351562
+        ],
+        "page": 1
+      },
+      "id": "dev-003",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "36"
+    },
+    {
+      "actual": {
+        "context": "bility, FINEMAP captures on average 13% and 40% more heritability than BOLT and HESS",
+        "end": 2867,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            354.216,
+            542.0464,
+            364.7401,
+            551.5464
+          ],
+          "block": "sha256:adcb5720cad9da64a4e0322c9ea191b8437cdf7ca670effeacdb0e863ed39789",
+          "offset": 36,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2865,
+        "text": "13"
+      },
+      "anchor": {
+        "block": "sha256:adcb5720cad9da64a4e0322c9ea191b8437cdf7ca670effeacdb0e863ed39789",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "bility, FINEMAP captures on average ",
+        "suffix": "% and "
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          354.21612548828125,
+          542.7398834228516,
+          364.66424560546875,
+          551.2898864746094
+        ],
+        "ink_bbox": [
+          355.1756286621094,
+          542.9013824462891,
+          364.37921142578125,
+          549.7413787841797
+        ],
+        "page": 1
+      },
+      "id": "dev-004",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "13"
+    },
+    {
+      "actual": {
+        "context": "bility, FINEMAP captures on average 13% and 40% more heritability than BOLT and HESS",
+        "end": 2875,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            392.823,
+            542.0464,
+            403.3471,
+            551.5464
+          ],
+          "block": "sha256:adcb5720cad9da64a4e0322c9ea191b8437cdf7ca670effeacdb0e863ed39789",
+          "offset": 44,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2873,
+        "text": "40"
+      },
+      "anchor": {
+        "block": "sha256:adcb5720cad9da64a4e0322c9ea191b8437cdf7ca670effeacdb0e863ed39789",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "% and ",
+        "suffix": "% more heritability than BOLT and HESS"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          392.82318115234375,
+          542.7398834228516,
+          403.27130126953125,
+          551.2898864746094
+        ],
+        "ink_bbox": [
+          393.0606689453125,
+          542.9013824462891,
+          402.9577941894531,
+          549.7413787841797
+        ],
+        "page": 1
+      },
+      "id": "dev-005",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "40"
+    },
+    {
+      "actual": {
+        "context": "heritability (S2B Table). For FINEMAP, the coverage was always at least 86% while for some of",
+        "end": 18962,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            487.218,
+            580.612,
+            496.758,
+            590.612
+          ],
+          "block": "sha256:2338d7d4b90f1b4ef0f1cbc31835e6ac83ace626909d07b58e03f8ec539e7bd2",
+          "offset": 72,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 18960,
+        "text": "86"
+      },
+      "anchor": {
+        "block": "sha256:2338d7d4b90f1b4ef0f1cbc31835e6ac83ace626909d07b58e03f8ec539e7bd2",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "heritability (S2B Table). For FINEMAP, the coverage was always at least ",
+        "suffix": "% while for some of"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          487.2179870605469,
+          581.6119995117188,
+          496.75799560546875,
+          590.6119995117188
+        ],
+        "ink_bbox": [
+          487.6679992675781,
+          582.4019927978516,
+          496.43798828125,
+          588.9120025634766
+        ],
+        "page": 5
+      },
+      "id": "dev-006",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "86"
+    },
+    {
+      "actual": {
+        "context": "the 95% intervals of BOLT the coverage dropped below 10%. For all sample sizes, the 95%",
+        "end": 19037,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            421.229,
+            593.651,
+            430.769,
+            603.651
+          ],
+          "block": "sha256:7fb8a79c978f231edc48f9f377ca84d8817e64e29eb18ce33a6f3167717bea47",
+          "offset": 53,
+          "page": 5,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 19035,
+        "text": "10"
+      },
+      "anchor": {
+        "block": "sha256:7fb8a79c978f231edc48f9f377ca84d8817e64e29eb18ce33a6f3167717bea47",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "% intervals of BOLT the coverage dropped below ",
+        "suffix": "%. For all sample sizes, the "
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          421.22900390625,
+          594.6510009765625,
+          430.76898193359375,
+          603.6510009765625
+        ],
+        "ink_bbox": [
+          422.3190002441406,
+          595.5009918212891,
+          430.40899658203125,
+          601.9510040283203
+        ],
+        "page": 5
+      },
+      "id": "dev-007",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "10"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          496.40203857421875,
+          685.6429901123047,
+          525.1019897460938,
+          694.6429901123047
+        ],
+        "ink_bbox": [
+          496.7520446777344,
+          686.4930038452148,
+          524.7120361328125,
+          692.943000793457
+        ],
+        "page": 5
+      },
+      "id": "dev-008",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "development",
+      "text": "0.8–1.2"
+    },
+    {
+      "actual": {
+        "context": "systematically above one and often clearly above 1.2, which indicates a worse frequentist cali-",
+        "end": 20029,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            393.673,
+            76.386,
+            405.463,
+            86.386
+          ],
+          "block": "sha256:5d025f256e7aebd18d2c50d7f9967fdf9e8e3b37fcae09172d70d8f460b22786",
+          "offset": 49,
+          "page": 6,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 20026,
+        "text": "1.2"
+      },
+      "anchor": {
+        "block": "sha256:5d025f256e7aebd18d2c50d7f9967fdf9e8e3b37fcae09172d70d8f460b22786",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "systematically above one and often clearly above ",
+        "suffix": ", which indicates a worse frequentist cali-"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          393.67303466796875,
+          77.385986328125,
+          405.4630432128906,
+          86.385986328125
+        ],
+        "ink_bbox": [
+          394.76300048828125,
+          78.23602294921875,
+          405.072998046875,
+          84.68597412109375
+        ],
+        "page": 6
+      },
+      "id": "dev-009",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "1.2"
+    },
+    {
+      "actual": {
+        "context": "For FINEMAP, the coverage (S3B Table) was below 30% for all sample sizes and heritabili-",
+        "end": 23328,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            419.299,
+            193.4,
+            428.839,
+            203.4
+          ],
+          "block": "sha256:3a6f29f094575cca15bd024eb085f7e58efe766bdcff5334091d75e15298a2ba",
+          "offset": 48,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23326,
+        "text": "30"
+      },
+      "anchor": {
+        "block": "sha256:3a6f29f094575cca15bd024eb085f7e58efe766bdcff5334091d75e15298a2ba",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "For FINEMAP, the coverage (S3B Table) was below ",
+        "suffix": "% for all sample sizes and heritabili-"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          419.2989807128906,
+          194.39996337890625,
+          428.8389587402344,
+          203.39996337890625
+        ],
+        "ink_bbox": [
+          419.73895263671875,
+          195.25,
+          428.47894287109375,
+          201.699951171875
+        ],
+        "page": 7
+      },
+      "id": "dev-010",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "30"
+    },
+    {
+      "actual": {
+        "context": "0.15% and n = 5,000 when coverage was above 84%. The coverage of BOLT was always above",
+        "end": 23506,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            386.25,
+            219.422,
+            395.79,
+            229.422
+          ],
+          "block": "sha256:ac0f03f1d8c9992e4a30b4cc2e198b8d943e53fb961e14b407e63a58b663d571",
+          "offset": 44,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23504,
+        "text": "84"
+      },
+      "anchor": {
+        "block": "sha256:ac0f03f1d8c9992e4a30b4cc2e198b8d943e53fb961e14b407e63a58b663d571",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " when coverage was above ",
+        "suffix": "%. The coverage of BOLT was always above"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          386.25,
+          220.4219970703125,
+          395.7900085449219,
+          229.4219970703125
+        ],
+        "ink_bbox": [
+          386.70001220703125,
+          221.27203369140625,
+          395.55999755859375,
+          227.72198486328125
+        ],
+        "page": 7
+      },
+      "id": "dev-011",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "84"
+    },
+    {
+      "actual": {
+        "context": "72%, except at",
+        "end": 23549,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            200.015,
+            232.404,
+            209.555,
+            242.404
+          ],
+          "block": "sha256:53a85428c9154aaca9373c4d251f7342f812025a6bded7de210702538c730835",
+          "offset": 0,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23547,
+        "text": "72"
+      },
+      "anchor": {
+        "block": "sha256:53a85428c9154aaca9373c4d251f7342f812025a6bded7de210702538c730835",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "%, except at"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          200.01498413085938,
+          233.40399169921875,
+          209.55499267578125,
+          242.40399169921875
+        ],
+        "ink_bbox": [
+          200.4849853515625,
+          234.2540283203125,
+          209.16497802734375,
+          240.7039794921875
+        ],
+        "page": 7
+      },
+      "id": "dev-012",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "72"
+    },
+    {
+      "actual": {
+        "context": "dropped below 60%. For all sample sizes, the 95% intervals from HESS with and without regu-",
+        "end": 23653,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            261.979,
+            245.387,
+            271.519,
+            255.387
+          ],
+          "block": "sha256:5a0917157e21013aa18fe70a1313cd4c008dbebcf08e44659901d24b2847e40a",
+          "offset": 14,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 23651,
+        "text": "60"
+      },
+      "anchor": {
+        "block": "sha256:5a0917157e21013aa18fe70a1313cd4c008dbebcf08e44659901d24b2847e40a",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "dropped below ",
+        "suffix": "%. For all sample sizes, the "
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          261.97900390625,
+          246.386962890625,
+          271.5190124511719,
+          255.386962890625
+        ],
+        "ink_bbox": [
+          262.3489990234375,
+          247.177001953125,
+          271.15899658203125,
+          253.68695068359375
+        ],
+        "page": 7
+      },
+      "id": "dev-013",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "60"
+    },
+    {
+      "actual": {
+        "context": "was systematically above one and often clearly above 1.2, which indicates a worse frequentist",
+        "end": 24151,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            410.684,
+            310.413,
+            422.474,
+            320.413
+          ],
+          "block": "sha256:85c2831dea0895a680e548f1be4d852d97ac0abdbac621479f3c88d57149719c",
+          "offset": 53,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24148,
+        "text": "1.2"
+      },
+      "anchor": {
+        "block": "sha256:85c2831dea0895a680e548f1be4d852d97ac0abdbac621479f3c88d57149719c",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "was systematically above one and often clearly above ",
+        "suffix": ", which indicates a worse frequentist"
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          410.68402099609375,
+          311.4129333496094,
+          422.4739990234375,
+          320.4129333496094
+        ],
+        "ink_bbox": [
+          411.77398681640625,
+          312.2629699707031,
+          422.083984375,
+          318.7129821777344
+        ],
+        "page": 7
+      },
+      "id": "dev-014",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "1.2"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          234.76699829101562,
+          337.3789367675781,
+          263.4670104980469,
+          346.3789367675781
+        ],
+        "ink_bbox": [
+          235.11700439453125,
+          338.2289733886719,
+          263.10699462890625,
+          344.6789855957031
+        ],
+        "page": 7
+      },
+      "id": "dev-015",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "development",
+      "text": "0.8–1.0"
+    },
+    {
+      "actual": {
+        "context": "GWAS of 2,490 unique proteins identified 14,189 genome-wide significant pQTL regions.",
+        "end": 24812,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            240.773,
+            453.791,
+            262.063,
+            463.791
+          ],
+          "block": "sha256:9c44acf63122a355ea334966631b4f7a73eb45b79689ef067589381ec898e709",
+          "offset": 8,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 24807,
+        "text": "2,490"
+      },
+      "anchor": {
+        "block": "sha256:9c44acf63122a355ea334966631b4f7a73eb45b79689ef067589381ec898e709",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "GWAS of ",
+        "suffix": " unique proteins identified "
+      },
+      "case": "plosgenetics-1011480",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          240.7729949951172,
+          454.7909851074219,
+          262.0630187988281,
+          463.7909851074219
+        ],
+        "ink_bbox": [
+          241.09300231933594,
+          455.6409912109375,
+          261.7030029296875,
+          463.1409912109375
+        ],
+        "page": 7
+      },
+      "id": "dev-016",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "2,490"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          271.5578308105469,
+          126.8446044921875,
+          309.3086242675781,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          272.4298400878906,
+          126.92462158203125,
+          308.76458740234375,
+          133.94854736328125
+        ],
+        "page": 8
+      },
+      "id": "dev-017",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "1,674 (16.2)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          385.90679931640625,
+          126.8446044921875,
+          423.6576232910156,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          386.77880859375,
+          126.92462158203125,
+          423.11358642578125,
+          133.94854736328125
+        ],
+        "page": 8
+      },
+      "id": "dev-018",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "1,385 (13.9)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          500.19903564453125,
+          126.8446044921875,
+          538.0065307617188,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          501.0710144042969,
+          126.92462158203125,
+          537.4625854492188,
+          133.94854736328125
+        ],
+        "page": 8
+      },
+      "id": "dev-019",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "1,131 (12.0)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          271.5578308105469,
+          139.37322998046875,
+          309.3086242675781,
+          146.57318115234375
+        ],
+        "ink_bbox": [
+          271.8538513183594,
+          139.45330810546875,
+          308.76458740234375,
+          146.47723388671875
+        ],
+        "page": 8
+      },
+      "id": "dev-020",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "6,680 (64.7)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          385.90679931640625,
+          139.37322998046875,
+          423.6576232910156,
+          146.57318115234375
+        ],
+        "ink_bbox": [
+          386.20281982421875,
+          139.45330810546875,
+          423.11358642578125,
+          146.47723388671875
+        ],
+        "page": 8
+      },
+      "id": "dev-021",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "6,634 (66.4)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          500.19903564453125,
+          139.37322998046875,
+          538.0065307617188,
+          146.57318115234375
+        ],
+        "ink_bbox": [
+          500.4950256347656,
+          139.45330810546875,
+          537.4625854492188,
+          146.47723388671875
+        ],
+        "page": 8
+      },
+      "id": "dev-022",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "6,198 (65.7)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          271.5578308105469,
+          151.84588623046875,
+          309.3086242675781,
+          159.04583740234375
+        ],
+        "ink_bbox": [
+          272.4298400878906,
+          151.9259033203125,
+          308.76458740234375,
+          158.9498291015625
+        ],
+        "page": 8
+      },
+      "id": "dev-023",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "1,883 (18.2)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          385.90679931640625,
+          151.84588623046875,
+          423.6576232910156,
+          159.04583740234375
+        ],
+        "ink_bbox": [
+          386.77880859375,
+          151.9259033203125,
+          423.11358642578125,
+          158.9498291015625
+        ],
+        "page": 8
+      },
+      "id": "dev-024",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "1,968 (19.7)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          500.19903564453125,
+          151.84588623046875,
+          538.0065307617188,
+          159.04583740234375
+        ],
+        "ink_bbox": [
+          500.4550476074219,
+          151.9259033203125,
+          537.4625854492188,
+          158.9498291015625
+        ],
+        "page": 8
+      },
+      "id": "dev-025",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "2,099 (22.3)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          276.3198547363281,
+          176.8480224609375,
+          304.5699157714844,
+          184.0479736328125
+        ],
+        "ink_bbox": [
+          276.67987060546875,
+          176.92803955078125,
+          304.02593994140625,
+          183.95196533203125
+        ],
+        "page": 8
+      },
+      "id": "dev-026",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "842 (8.1)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          390.612060546875,
+          176.8480224609375,
+          418.9189147949219,
+          184.0479736328125
+        ],
+        "ink_bbox": [
+          390.9880676269531,
+          176.92803955078125,
+          418.3749084472656,
+          183.95196533203125
+        ],
+        "page": 8
+      },
+      "id": "dev-027",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "737 (7.4)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          504.9610290527344,
+          176.8480224609375,
+          533.2678833007812,
+          184.0479736328125
+        ],
+        "ink_bbox": [
+          505.34503173828125,
+          176.92803955078125,
+          532.723876953125,
+          183.95196533203125
+        ],
+        "page": 8
+      },
+      "id": "dev-028",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "development",
+      "text": "526 (5.6)"
+    },
+    {
+      "actual": {
+        "context": "A total of 29,750 women who had given birth to a live infant by vaginal delivery were",
+        "end": 3292,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            238.1659,
+            589.4425,
+            267.0174,
+            598.9425
+          ],
+          "block": "sha256:f33ec6f1fa08fea07c01eb6f7c8d0c7d7442d7821b3d2cc44ae380ff83ee2454",
+          "offset": 11,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3286,
+        "text": "29,750"
+      },
+      "anchor": {
+        "block": "sha256:f33ec6f1fa08fea07c01eb6f7c8d0c7d7442d7821b3d2cc44ae380ff83ee2454",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "A total of ",
+        "suffix": " women who had given birth to a live infant by vaginal delivery were"
+      },
+      "case": "plosmedicine-1004501",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          238.16590881347656,
+          590.1360015869141,
+          266.8559265136719,
+          598.6860046386719
+        ],
+        "ink_bbox": [
+          238.4128875732422,
+          590.2975006103516,
+          266.5423889160156,
+          598.3535003662109
+        ],
+        "page": 1
+      },
+      "id": "dev-029",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "29,750"
+    },
+    {
+      "actual": {
+        "context": "included. For instance, in 2021, 22.3% of women were over 35 years old, 17.7% were born",
+        "end": 3443,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            330.4612,
+            603.4455,
+            348.8285,
+            612.9455
+          ],
+          "block": "sha256:53f825bd635688812fcba0ee387efdd46a2b366a7cb5c382b9df7eb1534b41a6",
+          "offset": 33,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3439,
+        "text": "22.3"
+      },
+      "anchor": {
+        "block": "sha256:53f825bd635688812fcba0ee387efdd46a2b366a7cb5c382b9df7eb1534b41a6",
+        "exact": null,
+        "numeric_only": true,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ", ",
+        "suffix": "% of women were over "
+      },
+      "case": "plosmedicine-1004501",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          330.46124267578125,
+          604.1390075683594,
+          348.7430725097656,
+          612.6890106201172
+        ],
+        "ink_bbox": [
+          330.708251953125,
+          604.3005065917969,
+          348.4580383300781,
+          611.1405029296875
+        ],
+        "page": 1
+      },
+      "id": "dev-030",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "22.3"
+    },
+    {
+      "actual": {
+        "context": "included. For instance, in 2021, 22.3% of women were over 35 years old, 17.7% were born",
+        "end": 3482,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            499.1223,
+            603.4455,
+            517.4896,
+            612.9455
+          ],
+          "block": "sha256:53f825bd635688812fcba0ee387efdd46a2b366a7cb5c382b9df7eb1534b41a6",
+          "offset": 72,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3478,
+        "text": "17.7"
+      },
+      "anchor": {
+        "block": "sha256:53f825bd635688812fcba0ee387efdd46a2b366a7cb5c382b9df7eb1534b41a6",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " years old, ",
+        "suffix": "% were born"
+      },
+      "case": "plosmedicine-1004501",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          499.122314453125,
+          604.1390075683594,
+          517.4041137695312,
+          612.6890106201172
+        ],
+        "ink_bbox": [
+          500.0818176269531,
+          604.3005065917969,
+          517.1286010742188,
+          610.97900390625
+        ],
+        "page": 1
+      },
+      "id": "dev-031",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "17.7"
+    },
+    {
+      "actual": {
+        "context": "Copyright: © 2025 Houlbracq et al. This is an open outside of France, 11.3% had a body mass index (BMI) of 30",
+        "end": 3568,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            276.3198,
+            617.4485,
+            294.6871,
+            626.9485
+          ],
+          "block": "sha256:ead6e29b56cc8e9f3230dc979bc3c2dcc394609b6a5870379c10d988a1d6cdd7",
+          "offset": 70,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3564,
+        "text": "11.3"
+      },
+      "anchor": {
+        "block": "sha256:ead6e29b56cc8e9f3230dc979bc3c2dcc394609b6a5870379c10d988a1d6cdd7",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " Houlbracq et al. This is an open outside of France, ",
+        "suffix": "% had a body mass index (BMI) of "
+      },
+      "case": "plosmedicine-1004501",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          276.3197937011719,
+          618.1419982910156,
+          294.60162353515625,
+          626.6920013427734
+        ],
+        "ink_bbox": [
+          277.279296875,
+          618.3034973144531,
+          294.31658935546875,
+          625.1434936523438
+        ],
+        "page": 1
+      },
+      "id": "dev-032",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "development",
+      "text": "11.3"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          326.9774475097656,
+          146.39141845703125,
+          346.34490966796875,
+          154.55084228515625
+        ],
+        "ink_bbox": [
+          327.30023193359375,
+          146.66937255859375,
+          346.0758972167969,
+          152.47064208984375
+        ],
+        "page": 12
+      },
+      "id": "dev-033",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.534"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          395.52557373046875,
+          146.39141845703125,
+          414.89306640625,
+          154.55084228515625
+        ],
+        "ink_bbox": [
+          395.848388671875,
+          146.66937255859375,
+          414.4267578125,
+          152.47064208984375
+        ],
+        "page": 12
+      },
+      "id": "dev-034",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.185"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          319.8970031738281,
+          159.94140625,
+          346.6166076660156,
+          168.100830078125
+        ],
+        "ink_bbox": [
+          320.6501770019531,
+          160.2193603515625,
+          346.1951904296875,
+          166.0206298828125
+        ],
+        "page": 12
+      },
+      "id": "dev-035",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "−0.005"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          395.5283203125,
+          159.977294921875,
+          415.29925537109375,
+          168.100830078125
+        ],
+        "ink_bbox": [
+          395.7973327636719,
+          160.2193603515625,
+          415.1468200683594,
+          166.04754638671875
+        ],
+        "page": 12
+      },
+      "id": "dev-036",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.097"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          465.5150146484375,
+          159.94140625,
+          492.2346496582031,
+          168.100830078125
+        ],
+        "ink_bbox": [
+          466.2681884765625,
+          160.2193603515625,
+          491.4007873535156,
+          166.0206298828125
+        ],
+        "page": 12
+      },
+      "id": "dev-037",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "−0.051"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          541.1463623046875,
+          159.977294921875,
+          560.9172973632812,
+          168.100830078125
+        ],
+        "ink_bbox": [
+          541.4153442382812,
+          160.16558837890625,
+          560.6483154296875,
+          166.04754638671875
+        ],
+        "page": 12
+      },
+      "id": "dev-038",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.960"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          319.98602294921875,
+          173.49041748046875,
+          346.347412109375,
+          181.64984130859375
+        ],
+        "ink_bbox": [
+          320.73919677734375,
+          173.76837158203125,
+          345.4687194824219,
+          179.56964111328125
+        ],
+        "page": 12
+      },
+      "id": "dev-039",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "−0.051"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          395.52813720703125,
+          173.49041748046875,
+          414.8955383300781,
+          181.64984130859375
+        ],
+        "ink_bbox": [
+          395.8509216308594,
+          173.76837158203125,
+          414.4472351074219,
+          179.5965576171875
+        ],
+        "page": 12
+      },
+      "id": "dev-040",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.098"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          465.60400390625,
+          173.49041748046875,
+          491.96539306640625,
+          181.64984130859375
+        ],
+        "ink_bbox": [
+          466.357177734375,
+          173.76837158203125,
+          491.5619201660156,
+          179.56964111328125
+        ],
+        "page": 12
+      },
+      "id": "dev-041",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "−0.522"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          541.1461181640625,
+          173.49041748046875,
+          560.5135498046875,
+          181.64984130859375
+        ],
+        "ink_bbox": [
+          541.4689331054688,
+          173.714599609375,
+          560.1100463867188,
+          179.56964111328125
+        ],
+        "page": 12
+      },
+      "id": "dev-042",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.602"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          326.9800109863281,
+          187.0394287109375,
+          346.347412109375,
+          195.1988525390625
+        ],
+        "ink_bbox": [
+          327.30279541015625,
+          187.3173828125,
+          345.4687194824219,
+          193.11865234375
+        ],
+        "page": 12
+      },
+      "id": "dev-043",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.001"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          395.52813720703125,
+          187.0394287109375,
+          414.8955383300781,
+          195.1988525390625
+        ],
+        "ink_bbox": [
+          395.8509216308594,
+          187.3173828125,
+          414.6355285644531,
+          193.11865234375
+        ],
+        "page": 12
+      },
+      "id": "dev-044",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.107"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          448.80841064453125,
+          363.05169677734375,
+          459.28118896484375,
+          372.9789733886719
+        ],
+        "ink_bbox": [
+          449.1575012207031,
+          363.3244323730469,
+          458.888427734375,
+          370.44805908203125
+        ],
+        "page": 1
+      },
+      "id": "dev-045",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "26"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          491.65936279296875,
+          363.05169677734375,
+          502.13214111328125,
+          372.9789733886719
+        ],
+        "ink_bbox": [
+          492.90301513671875,
+          363.3898620605469,
+          501.81573486328125,
+          370.44805908203125
+        ],
+        "page": 1
+      },
+      "id": "dev-046",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "17"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          387.8979797363281,
+          645.1327362060547,
+          449.1486511230469,
+          655.0709228515625
+        ],
+        "ink_bbox": [
+          388.4761657714844,
+          645.1327362060547,
+          448.0795593261719,
+          652.5727386474609
+        ],
+        "page": 12
+      },
+      "id": "dev-047",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_se",
+      "split": "development",
+      "text": "7.198 ± 1.641"
+    },
+    {
+      "case": "peerj-pmc11740737",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          496.72100830078125,
+          645.1436462402344,
+          520.28466796875,
+          655.0709228515625
+        ],
+        "ink_bbox": [
+          496.971923828125,
+          645.4818267822266,
+          519.7174072265625,
+          652.5400085449219
+        ],
+        "page": 12
+      },
+      "id": "dev-048",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "4.385"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          247.80279541015625,
+          74.83868408203125,
+          254.52279663085938,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          248.1317901611328,
+          77.40069580078125,
+          254.17979431152344,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-049",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "55"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          281.3431396484375,
+          74.83868408203125,
+          288.0631103515625,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          281.56011962890625,
+          77.31671142578125,
+          287.74810791015625,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-050",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "28"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          314.8833923339844,
+          74.83868408203125,
+          321.6033630371094,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          315.14239501953125,
+          77.27471923828125,
+          321.2604064941406,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-051",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "65"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          348.4236145019531,
+          74.83868408203125,
+          355.14361572265625,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          348.5636291503906,
+          77.31671142578125,
+          354.7516174316406,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-052",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "43"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          381.9638977050781,
+          74.83868408203125,
+          388.68389892578125,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          382.1039123535156,
+          77.31671142578125,
+          388.2919006347656,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-053",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "43"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          415.50421142578125,
+          74.83868408203125,
+          422.2242126464844,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          416.2672119140625,
+          77.31671142578125,
+          421.9092102050781,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-054",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "18"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          436.56353759765625,
+          74.83868408203125,
+          443.28350830078125,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          436.780517578125,
+          77.31671142578125,
+          443.0245056152344,
+          81.8387451171875
+        ],
+        "page": 3
+      },
+      "id": "dev-055",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "20"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          457.6227722167969,
+          74.83868408203125,
+          464.3427429199219,
+          84.28167724609375
+        ],
+        "ink_bbox": [
+          457.8397216796875,
+          77.31671142578125,
+          464.0627136230469,
+          81.8597412109375
+        ],
+        "page": 3
+      },
+      "id": "dev-056",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "29"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          288.28472900390625,
+          440.140869140625,
+          292.6047058105469,
+          452.2818603515625
+        ],
+        "ink_bbox": [
+          288.689697265625,
+          443.326904296875,
+          292.19970703125,
+          449.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-057",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          267.9835205078125,
+          540.1408996582031,
+          291.635498046875,
+          552.2819061279297
+        ],
+        "ink_bbox": [
+          268.2984924316406,
+          543.326904296875,
+          291.2754821777344,
+          549.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-058",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.0002"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          454.7786560058594,
+          550.1408843994141,
+          474.11065673828125,
+          562.2818908691406
+        ],
+        "ink_bbox": [
+          455.09368896484375,
+          553.326904296875,
+          473.606689453125,
+          559.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-059",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.003"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          231.88180541992188,
+          560.1408843994141,
+          246.89381408691406,
+          572.2818908691406
+        ],
+        "ink_bbox": [
+          232.19680786132812,
+          563.326904296875,
+          246.38980102539062,
+          569.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-060",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.13"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          221.4525146484375,
+          570.1408996582031,
+          225.77252197265625,
+          582.2819061279297
+        ],
+        "ink_bbox": [
+          221.85751342773438,
+          573.326904296875,
+          225.3675079345703,
+          579.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-061",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "8"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          202.4219970703125,
+          580.1408996582031,
+          237.34201049804688,
+          592.2819061279297
+        ],
+        "ink_bbox": [
+          202.7550048828125,
+          583.2729034423828,
+          237.00900268554688,
+          589.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-062",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "development",
+      "text": "600–1200"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          301.1466979980469,
+          610.1408996582031,
+          324.7987060546875,
+          622.2819061279297
+        ],
+        "ink_bbox": [
+          301.4617004394531,
+          613.326904296875,
+          323.9346923828125,
+          619.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-063",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "0.0001"
+    },
+    {
+      "case": "scientific-reports-pmc11782514",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          444.82537841796875,
+          680.1408920288086,
+          449.1453857421875,
+          692.2818908691406
+        ],
+        "ink_bbox": [
+          445.15838623046875,
+          683.2729034423828,
+          448.848388671875,
+          689.1408996582031
+        ],
+        "page": 6
+      },
+      "id": "dev-064",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "development",
+      "text": "6"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 9,
+        "offset": 0,
+        "paragraph": 9,
+        "part": "word/document.xml"
+      },
+      "id": "dev-065",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "5.8×10-1466"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 13,
+        "offset": 0,
+        "paragraph": 13,
+        "part": "word/document.xml"
+      },
+      "id": "dev-066",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "1.8×10-920"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 14,
+        "offset": 0,
+        "paragraph": 14,
+        "part": "word/document.xml"
+      },
+      "id": "dev-067",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "2.3×10-621"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 17,
+        "offset": 0,
+        "paragraph": 17,
+        "part": "word/document.xml"
+      },
+      "id": "dev-068",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "3.0×10-35"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 18,
+        "offset": 0,
+        "paragraph": 18,
+        "part": "word/document.xml"
+      },
+      "id": "dev-069",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "2.1×10-266"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 21,
+        "offset": 0,
+        "paragraph": 21,
+        "part": "word/document.xml"
+      },
+      "id": "dev-070",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "1.2×10-1042"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 22,
+        "offset": 0,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "dev-071",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "5.3×10-229"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 25,
+        "offset": 0,
+        "paragraph": 25,
+        "part": "word/document.xml"
+      },
+      "id": "dev-072",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "1.3×10-244"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 26,
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "dev-073",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "2.1×10-172"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 29,
+        "offset": 0,
+        "paragraph": 29,
+        "part": "word/document.xml"
+      },
+      "id": "dev-074",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "5.4×10-1"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 30,
+        "offset": 0,
+        "paragraph": 30,
+        "part": "word/document.xml"
+      },
+      "id": "dev-075",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "6.9×10-129"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 33,
+        "offset": 0,
+        "paragraph": 33,
+        "part": "word/document.xml"
+      },
+      "id": "dev-076",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "1.5×10-423"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 34,
+        "offset": 0,
+        "paragraph": 34,
+        "part": "word/document.xml"
+      },
+      "id": "dev-077",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "2.0×10-73"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 37,
+        "offset": 0,
+        "paragraph": 37,
+        "part": "word/document.xml"
+      },
+      "id": "dev-078",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "1.7×10-6"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 38,
+        "offset": 0,
+        "paragraph": 38,
+        "part": "word/document.xml"
+      },
+      "id": "dev-079",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "5.2×10-45"
+    },
+    {
+      "case": "plosgenetics-1011480",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 41,
+        "offset": 0,
+        "paragraph": 41,
+        "part": "word/document.xml"
+      },
+      "id": "dev-080",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "development",
+      "text": "2.8×10-271"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 20,
+        "offset": 0,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "dev-081",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "878 / 2 479"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 22,
+        "offset": 0,
+        "paragraph": 21,
+        "part": "word/document.xml"
+      },
+      "id": "dev-082",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "35.4 \n(33.5-37.3)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 23,
+        "offset": 0,
+        "paragraph": 23,
+        "part": "word/document.xml"
+      },
+      "id": "dev-083",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "674 / 2 688"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 25,
+        "offset": 0,
+        "paragraph": 24,
+        "part": "word/document.xml"
+      },
+      "id": "dev-084",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "25.1 \n(23.4-26.8)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 26,
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "dev-085",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "0.71 [0.65-0.77]"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 27,
+        "offset": 0,
+        "paragraph": 27,
+        "part": "word/document.xml"
+      },
+      "id": "dev-086",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "228 / 2 443"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 29,
+        "offset": 0,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "dev-087",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "9.3 \n(8.2-10.6)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 30,
+        "offset": 0,
+        "paragraph": 30,
+        "part": "word/document.xml"
+      },
+      "id": "dev-088",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "0.26 [0.23-0.30]"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 32,
+        "offset": 0,
+        "paragraph": 32,
+        "part": "word/document.xml"
+      },
+      "id": "dev-089",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "300 / 355"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 34,
+        "offset": 0,
+        "paragraph": 33,
+        "part": "word/document.xml"
+      },
+      "id": "dev-090",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "84.5 \n(80.3-87.9)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 35,
+        "offset": 0,
+        "paragraph": 35,
+        "part": "word/document.xml"
+      },
+      "id": "dev-091",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "254 / 313"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 37,
+        "offset": 0,
+        "paragraph": 36,
+        "part": "word/document.xml"
+      },
+      "id": "dev-092",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "81.2 \n(76.4-85.1)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 38,
+        "offset": 0,
+        "paragraph": 38,
+        "part": "word/document.xml"
+      },
+      "id": "dev-093",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "0.96 [0.90-1.03]"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 39,
+        "offset": 0,
+        "paragraph": 39,
+        "part": "word/document.xml"
+      },
+      "id": "dev-094",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_total",
+      "split": "development",
+      "text": "139 / 248"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 41,
+        "offset": 0,
+        "paragraph": 40,
+        "part": "word/document.xml"
+      },
+      "id": "dev-095",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "56.0 \n(49.8-62.1)"
+    },
+    {
+      "case": "plosmedicine-1004501",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 42,
+        "offset": 0,
+        "paragraph": 42,
+        "part": "word/document.xml"
+      },
+      "id": "dev-096",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "estimate_ci",
+      "split": "development",
+      "text": "0.66 [0.59-0.75]"
+    }
+  ],
+  "shortfalls": [],
+  "tool_version": "1.7.0"
+}
