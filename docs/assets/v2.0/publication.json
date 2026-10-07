@@ -1,0 +1,117 @@
+{
+  "version": "2.0.0",
+  "commit": "f58abb972f1f7b647f3a36cdd130de0e960e36d7",
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v2.0.0",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37602753519",
+  "passed_platform_jobs": 16,
+  "passed_browser_jobs": 1,
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-2.0.0-py3-none-any.whl": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+    "paperdelta-2.0.0.tar.gz": "45733eceb4504ebc98a8be54a3a9cd10c91720fb32481aa32592736650833e45",
+    "paperdelta-evaluation-2.0.0.zip": "5f4380de786693f6a2722a0cdc58d58cb72b1e86d7f3917a955244f8fae08a65"
+  },
+  "status": "passed",
+  "checked_at": "2026-10-07T10:46:29.761449+00:00",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37609366699",
+  "pypi": "https://pypi.org/project/paperdelta/2.0.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-2.0.0-py3-none-any.whl": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+    "paperdelta-2.0.0.tar.gz": "45733eceb4504ebc98a8be54a3a9cd10c91720fb32481aa32592736650833e45"
+  },
+  "downloaded_github_artifacts_sha256": {
+    "paperdelta-2.0.0-py3-none-any.whl": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+    "paperdelta-2.0.0.tar.gz": "45733eceb4504ebc98a8be54a3a9cd10c91720fb32481aa32592736650833e45",
+    "paperdelta-evaluation-2.0.0.zip": "5f4380de786693f6a2722a0cdc58d58cb72b1e86d7f3917a955244f8fae08a65"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true,
+  "public_demo_formats": [
+    "latex",
+    "markdown",
+    "quarto",
+    "docx",
+    "pdf"
+  ],
+  "public_demo_cases": [
+    {
+      "document": "latex",
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "document": "markdown",
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "document": "quarto",
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "document": "latex",
+      "language": "zh-CN",
+      "status": "passed"
+    },
+    {
+      "document": "markdown",
+      "language": "zh-CN",
+      "status": "passed"
+    },
+    {
+      "document": "quarto",
+      "language": "zh-CN",
+      "status": "passed"
+    },
+    {
+      "document": "docx",
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "document": "pdf",
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "document": "docx",
+      "language": "zh-CN",
+      "status": "passed"
+    },
+    {
+      "document": "pdf",
+      "language": "zh-CN",
+      "status": "passed"
+    }
+  ],
+  "public_agent_review_module_verified": true,
+  "duplicate_tag_ci": {
+    "conclusion": "cancelled",
+    "headSha": "f58abb972f1f7b647f3a36cdd130de0e960e36d7",
+    "status": "completed",
+    "url": "https://github.com/amos689/paperdelta/actions/runs/37609010776",
+    "reason": "The tag push repeated CI for the identical commit after all 17 named main-branch jobs had passed. Cancel only that duplicate run; retain the complete successful main-branch run."
+  },
+  "machine_scope": "Public artifact identity and isolated installed workflows; not human usability or model mapping accuracy.",
+  "scope": "Actual GitHub and PyPI archive downloads, exact commit CI and fresh public wheel installation; no human or autonomous mapping claim."
+}

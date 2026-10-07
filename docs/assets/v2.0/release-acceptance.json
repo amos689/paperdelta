@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0",
+  "commit": "f58abb972f1f7b647f3a36cdd130de0e960e36d7",
+  "checked_at": "2026-10-07T10:40:45.159281+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37602753519",
+  "passed_platform_jobs": 16,
+  "passed_browser_jobs": 1,
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-2.0.0-py3-none-any.whl": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+    "paperdelta-2.0.0.tar.gz": "45733eceb4504ebc98a8be54a3a9cd10c91720fb32481aa32592736650833e45",
+    "paperdelta-evaluation-2.0.0.zip": "5f4380de786693f6a2722a0cdc58d58cb72b1e86d7f3917a955244f8fae08a65"
+  },
+  "local_acceptance": {
+    "status": "passed",
+    "version": "2.0.0",
+    "wheel_sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d",
+    "suite": {
+      "tests": 1024,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    "passed_tests": 1021,
+    "browser_cases": 92,
+    "isolated_starts": 13,
+    "actual_public_previous_version": "1.9.0",
+    "recorded_model_replay_cases": 60,
+    "authored_controls": 13,
+    "config_schema_max": 10,
+    "report_schema_max": 9,
+    "mcp_tools": 22,
+    "remote_ci_and_public_downloads": "Still required before release."
+  },
+  "historical_frozen_files_unchanged": true,
+  "new_study_raw_records_and_selection_freeze_verified": {
+    "tasks": 24,
+    "runs": {
+      "regression-1": {
+        "split": "regression",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 9,
+        "expected_abstentions": 0,
+        "required_abstentions": 3,
+        "invalid_actions": 32
+      },
+      "development-1": {
+        "split": "development",
+        "complete_mapping_cases": 1,
+        "mappable_cases": 8,
+        "expected_abstentions": 0,
+        "required_abstentions": 4,
+        "invalid_actions": 33
+      },
+      "regression-2": {
+        "split": "regression",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 9,
+        "expected_abstentions": 0,
+        "required_abstentions": 3,
+        "invalid_actions": 20
+      },
+      "development-2": {
+        "split": "development",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 8,
+        "expected_abstentions": 1,
+        "required_abstentions": 4,
+        "invalid_actions": 21
+      },
+      "held-out-1": {
+        "split": "held-out",
+        "complete_mapping_cases": 1,
+        "mappable_cases": 8,
+        "expected_abstentions": 2,
+        "required_abstentions": 4,
+        "invalid_actions": 25
+      }
+    },
+    "raw_record_hashes_verified": true,
+    "held_out_selection_freeze_verified": true,
+    "scope": "Archive integrity and recorded totals; no fresh inference or human review."
+  },
+  "owner_only_noreply_commits_verified": true,
+  "state": "Prepublication acceptance; public downloads still required."
+}

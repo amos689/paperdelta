@@ -1,0 +1,2547 @@
+{
+  "conclusion": "success",
+  "headSha": "f58abb972f1f7b647f3a36cdd130de0e960e36d7",
+  "jobs": [
+    {
+      "completedAt": "2026-10-07T10:40:01Z",
+      "conclusion": "success",
+      "databaseId": 112730840987,
+      "name": "Local studio / browser",
+      "startedAt": "2026-10-07T09:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:16Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:38Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Test real experiment adapter protocols",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:46Z",
+          "conclusion": "success",
+          "name": "Run npm install --prefix build/browser-tools --no-audit --no-fund playwright@1.62.1",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:10Z",
+          "conclusion": "success",
+          "name": "Run node build/browser-tools/node_modules/playwright/cli.js install --with-deps chromium",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:49Z",
+          "conclusion": "success",
+          "name": "Test bilingual native binding workflows",
+          "number": 8,
+          "startedAt": "2026-10-07T09:46:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:47:10Z",
+          "conclusion": "success",
+          "name": "Test bilingual Agent evidence review and exact native identities",
+          "number": 9,
+          "startedAt": "2026-10-07T09:46:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:42Z",
+          "conclusion": "success",
+          "name": "Test bilingual ongoing review and restart recovery",
+          "number": 10,
+          "startedAt": "2026-10-07T09:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:59Z",
+          "conclusion": "success",
+          "name": "Test joined bilingual revisions, reviewed writes and exact recovery",
+          "number": 11,
+          "startedAt": "2026-10-07T09:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:40Z",
+          "conclusion": "success",
+          "name": "Measure complete candidate search and large-project interaction",
+          "number": 12,
+          "startedAt": "2026-10-07T09:49:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:52:16Z",
+          "conclusion": "success",
+          "name": "Compare bounded incremental and full checks on identical inputs",
+          "number": 13,
+          "startedAt": "2026-10-07T09:50:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:52:41Z",
+          "conclusion": "success",
+          "name": "Test reviewed bilingual Word and PDF annotation downloads",
+          "number": 14,
+          "startedAt": "2026-10-07T09:52:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:33Z",
+          "conclusion": "success",
+          "name": "Test bilingual batch binding, templates and CLI/MCP proposal imports",
+          "number": 15,
+          "startedAt": "2026-10-07T09:52:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:52Z",
+          "conclusion": "success",
+          "name": "Test bilingual TSV, Excel and offline experiment evidence",
+          "number": 16,
+          "startedAt": "2026-10-07T09:55:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:39Z",
+          "conclusion": "success",
+          "name": "Measure bilingual three-stage onboarding on identical inputs",
+          "number": 17,
+          "startedAt": "2026-10-07T09:55:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:56Z",
+          "conclusion": "success",
+          "name": "Test reviewed experiment definitions and identity labels",
+          "number": 18,
+          "startedAt": "2026-10-07T09:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:13Z",
+          "conclusion": "success",
+          "name": "Test direct reuse of reviewed experiment definitions",
+          "number": 19,
+          "startedAt": "2026-10-07T09:56:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:15Z",
+          "conclusion": "success",
+          "name": "Replay recorded mapping model actions against frozen implementations",
+          "number": 20,
+          "startedAt": "2026-10-07T09:57:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:24Z",
+          "conclusion": "success",
+          "name": "Replay all preserved bilingual Agent actions and strict scores",
+          "number": 21,
+          "startedAt": "2026-10-07T09:57:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:27Z",
+          "conclusion": "success",
+          "name": "Test bilingual statistical contracts and compound displays",
+          "number": 22,
+          "startedAt": "2026-10-07T09:57:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:58Z",
+          "conclusion": "success",
+          "name": "Test bilingual notes, merged tables and original PDF coordinates",
+          "number": 23,
+          "startedAt": "2026-10-07T09:58:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:02:57Z",
+          "conclusion": "success",
+          "name": "Replay frozen licensed native documents",
+          "number": 24,
+          "startedAt": "2026-10-07T09:58:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:21:02Z",
+          "conclusion": "success",
+          "name": "Replay frozen twenty-document native study",
+          "number": 25,
+          "startedAt": "2026-10-07T10:02:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:37:48Z",
+          "conclusion": "success",
+          "name": "Replay frozen native study 3 and verify reviewed native copies",
+          "number": 26,
+          "startedAt": "2026-10-07T10:21:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:38:25Z",
+          "conclusion": "success",
+          "name": "Test reviewed native identities and private diagnostic exports",
+          "number": 27,
+          "startedAt": "2026-10-07T10:37:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:38:30Z",
+          "conclusion": "success",
+          "name": "Test bilingual static source and exported PDF reports",
+          "number": 28,
+          "startedAt": "2026-10-07T10:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:39:03Z",
+          "conclusion": "success",
+          "name": "Test selected bilingual review archives and offline replay",
+          "number": 29,
+          "startedAt": "2026-10-07T10:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:39:09Z",
+          "conclusion": "success",
+          "name": "Install controlled Notebook execution dependencies",
+          "number": 30,
+          "startedAt": "2026-10-07T10:39:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:39:15Z",
+          "conclusion": "success",
+          "name": "Install Quarto for the authored render workflow",
+          "number": 31,
+          "startedAt": "2026-10-07T10:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:39:19Z",
+          "conclusion": "success",
+          "name": "Verify actual Notebook execution and Quarto PDF freshness",
+          "number": 32,
+          "startedAt": "2026-10-07T10:39:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:39:57Z",
+          "conclusion": "success",
+          "name": "Test bilingual workflow declarations, fragments and revision lists",
+          "number": 33,
+          "startedAt": "2026-10-07T10:39:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:40:00Z",
+          "conclusion": "success",
+          "name": "Keep all browser evidence",
+          "number": 34,
+          "startedAt": "2026-10-07T10:39:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:40:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 67,
+          "startedAt": "2026-10-07T10:40:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:40:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 68,
+          "startedAt": "2026-10-07T10:40:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:40:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 69,
+          "startedAt": "2026-10-07T10:40:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730840987"
+    },
+    {
+      "completedAt": "2026-10-07T09:49:50Z",
+      "conclusion": "success",
+      "databaseId": 112730841393,
+      "name": "macOS arm64 / Python 3.12",
+      "startedAt": "2026-10-07T09:45:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:25Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:25Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:27Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:54Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:57Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:37Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:46Z",
+          "conclusion": "success",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:49:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:47Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:49:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:47Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:49:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:47Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:49:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:49:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841393"
+    },
+    {
+      "completedAt": "2026-10-07T09:56:30Z",
+      "conclusion": "success",
+      "databaseId": 112730841527,
+      "name": "macOS x86_64 / Python 3.12",
+      "startedAt": "2026-10-07T09:45:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:34Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:39Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:44Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:49Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:35Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:25Z",
+          "conclusion": "success",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:54:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:26Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:56:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:56:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:56:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:56:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841527"
+    },
+    {
+      "completedAt": "2026-10-07T09:49:34Z",
+      "conclusion": "success",
+      "databaseId": 112730841548,
+      "name": "test (ubuntu-latest, 3.12)",
+      "startedAt": "2026-10-07T09:45:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:22Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:22Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:36Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:48:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:00Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:03Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:49:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:13Z",
+          "conclusion": "success",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:49:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:16Z",
+          "conclusion": "success",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:49:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:16Z",
+          "conclusion": "success",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:49:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:31Z",
+          "conclusion": "success",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:49:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:32Z",
+          "conclusion": "success",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:49:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:32Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:33Z",
+          "conclusion": "success",
+          "name": "Post Run ./",
+          "number": 32,
+          "startedAt": "2026-10-07T09:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:49:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:49:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:49:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:49:33Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841548"
+    },
+    {
+      "completedAt": "2026-10-07T09:58:42Z",
+      "conclusion": "success",
+      "databaseId": 112730841569,
+      "name": "macOS x86_64 / Python 3.11",
+      "startedAt": "2026-10-07T09:45:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:28Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:39Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:42Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:47:06Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:47:10Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:47:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:37Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:37Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:58:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:38Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:58:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:58:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:58:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:58:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:58:39Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841569"
+    },
+    {
+      "completedAt": "2026-10-07T09:56:13Z",
+      "conclusion": "success",
+      "databaseId": 112730841591,
+      "name": "test (windows-latest, 3.11)",
+      "startedAt": "2026-10-07T09:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:21Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:24Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:25Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:46:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:25Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:26Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:16Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:46:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:18Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:55:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:07Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:55:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:56:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:09Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:10Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:56:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:56:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:56:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841591"
+    },
+    {
+      "completedAt": "2026-10-07T10:04:15Z",
+      "conclusion": "success",
+      "databaseId": 112730841598,
+      "name": "test (windows-latest, 3.12)",
+      "startedAt": "2026-10-07T09:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:24Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:24Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:54Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:55Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:46:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:55Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:56Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:02:34Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:46:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:02:37Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T10:02:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:03:46Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T10:02:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:03:50Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T10:03:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:09Z",
+          "conclusion": "success",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T10:03:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:09Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T10:04:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:09Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T10:04:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:09Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T10:04:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:09Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T10:04:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:10Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T10:04:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T10:04:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T10:04:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:04:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T10:04:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841598"
+    },
+    {
+      "completedAt": "2026-10-07T10:00:27Z",
+      "conclusion": "success",
+      "databaseId": 112730841601,
+      "name": "macOS arm64 / Python 3.13",
+      "startedAt": "2026-10-07T09:55:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:55:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:55:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:55:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:15Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:55:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:18Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:55:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:52Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:55:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:55:55Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:55:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:18Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:55:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:18Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T10:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:20Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T10:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T10:00:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T10:00:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:00:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T10:00:21Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841601"
+    },
+    {
+      "completedAt": "2026-10-07T09:48:56Z",
+      "conclusion": "success",
+      "databaseId": 112730841638,
+      "name": "test (ubuntu-latest, 3.14)",
+      "startedAt": "2026-10-07T09:45:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:27Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:28Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:48:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:48:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:52Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:53Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:48:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:48:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:48:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:48:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841638"
+    },
+    {
+      "completedAt": "2026-10-07T09:54:56Z",
+      "conclusion": "success",
+      "databaseId": 112730841657,
+      "name": "macOS x86_64 / Python 3.14",
+      "startedAt": "2026-10-07T09:45:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:44Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:48Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:47Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:53Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:49Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:49Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:54:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:51Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:54:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:54:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:54:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:54:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841657"
+    },
+    {
+      "completedAt": "2026-10-07T09:48:52Z",
+      "conclusion": "success",
+      "databaseId": 112730841674,
+      "name": "test (ubuntu-latest, 3.13)",
+      "startedAt": "2026-10-07T09:45:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:39Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:39Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:39Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:40Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:24Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:45:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:25Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:48:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:46Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:48:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:48:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:49Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:50Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:48:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:48:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:48:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841674"
+    },
+    {
+      "completedAt": "2026-10-07T09:54:53Z",
+      "conclusion": "success",
+      "databaseId": 112730841712,
+      "name": "macOS arm64 / Python 3.14",
+      "startedAt": "2026-10-07T09:49:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:50:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:50:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:50:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:08Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:50:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:10Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:50:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:35Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:50:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:38Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:50:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:47Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:50:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:47Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:54:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:49Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:54:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:54:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:54:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:54:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:54:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841712"
+    },
+    {
+      "completedAt": "2026-10-07T09:57:57Z",
+      "conclusion": "success",
+      "databaseId": 112730841770,
+      "name": "test (windows-latest, 3.13)",
+      "startedAt": "2026-10-07T09:45:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:36Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:38Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:39Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:46:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:39Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:40Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:40Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:46:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:42Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:56:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:47Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:56:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:57:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:52Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:57:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:57:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841770"
+    },
+    {
+      "completedAt": "2026-10-07T09:48:40Z",
+      "conclusion": "success",
+      "databaseId": 112730841822,
+      "name": "test (ubuntu-latest, 3.11)",
+      "startedAt": "2026-10-07T09:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:34Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:34Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:34Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:35Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:12Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:45:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:13Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:48:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:35Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:48:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:48:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:37Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:38Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:48:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:48:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:48:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:48:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841822"
+    },
+    {
+      "completedAt": "2026-10-07T10:01:05Z",
+      "conclusion": "success",
+      "databaseId": 112730841825,
+      "name": "macOS x86_64 / Python 3.13",
+      "startedAt": "2026-10-07T09:51:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:51:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:51:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:51:59Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:51:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:51:59Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:51:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:52:03Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:51:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:53:05Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:52:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:53:16Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:53:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:01Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:53:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:01Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T10:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:02Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T10:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T10:01:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T10:01:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T10:01:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T10:01:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841825"
+    },
+    {
+      "completedAt": "2026-10-07T09:58:00Z",
+      "conclusion": "success",
+      "databaseId": 112730841849,
+      "name": "test (windows-latest, 3.14)",
+      "startedAt": "2026-10-07T09:45:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:34Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:35Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[dev,mcp,wandb]'",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:36Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff check src tests tools",
+          "number": 5,
+          "startedAt": "2026-10-07T09:46:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:37Z",
+          "conclusion": "success",
+          "name": "Run python -m ruff format --check src tests tools",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:38Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/check_docs.py",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:47Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/run_tests.py -q --junitxml=build/test-results.xml",
+          "number": 8,
+          "startedAt": "2026-10-07T09:46:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:56:49Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/validate_examples.py --out build/examples-validation",
+          "number": 9,
+          "startedAt": "2026-10-07T09:56:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:51Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 10,
+          "startedAt": "2026-10-07T09:56:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 11,
+          "startedAt": "2026-10-07T09:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "skipped",
+          "name": "Verify isolated uvx startup and optional native dependencies",
+          "number": 12,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "skipped",
+          "name": "Check PyPI description before tagging a release",
+          "number": 13,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "skipped",
+          "name": "Prepare a fresh paper checkout for the composite action",
+          "number": 14,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "skipped",
+          "name": "Run ./",
+          "number": 15,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:55Z",
+          "conclusion": "skipped",
+          "name": "Verify the actual action result, preserved inputs and code isolation",
+          "number": 16,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:56Z",
+          "conclusion": "success",
+          "name": "Keep test evidence",
+          "number": 17,
+          "startedAt": "2026-10-07T09:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 33,
+          "startedAt": "2026-10-07T09:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 34,
+          "startedAt": "2026-10-07T09:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:57:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "startedAt": "2026-10-07T09:57:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841849"
+    },
+    {
+      "completedAt": "2026-10-07T09:51:00Z",
+      "conclusion": "success",
+      "databaseId": 112730841983,
+      "name": "macOS arm64 / Python 3.11",
+      "startedAt": "2026-10-07T09:45:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T09:45:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T09:45:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:53Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-07T09:45:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:54Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 3,
+          "startedAt": "2026-10-07T09:45:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:45:56Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-07T09:45:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:37Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/build_release.py --out build/release-candidate",
+          "number": 5,
+          "startedAt": "2026-10-07T09:45:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:46:43Z",
+          "conclusion": "success",
+          "name": "Run python -X utf8 tools/audit_release.py --directory build/release-candidate",
+          "number": 6,
+          "startedAt": "2026-10-07T09:46:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:55Z",
+          "conclusion": "success",
+          "name": "Validate native installed wheel, filesystem and terminal",
+          "number": 7,
+          "startedAt": "2026-10-07T09:46:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:55Z",
+          "conclusion": "skipped",
+          "name": "Verify native macOS isolated uvx startup",
+          "number": 8,
+          "startedAt": "2026-10-07T09:50:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:57Z",
+          "conclusion": "success",
+          "name": "Keep macOS evidence",
+          "number": 9,
+          "startedAt": "2026-10-07T09:50:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "number": 17,
+          "startedAt": "2026-10-07T09:50:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-07T09:50:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T09:50:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T09:50:57Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519/job/112730841983"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/amos689/paperdelta/actions/runs/37602753519"
+}

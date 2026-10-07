@@ -223,7 +223,7 @@ and documentation commit `692b18d`.
 | 1.7 | A joined evidence/location/impact/revision workspace; reuse accepted experiment definitions; fewer repeated inputs; task-oriented bilingual tutorials; reviewed Markdown/Quarto numeric patches with recovery and claim guards | Compare the same authored onboarding and revision tasks before/after; real bilingual browser workflows; preview is read-only, stale/forged/overlapping patches are refused, UTF-8/CRLF preserved, interrupted and completed writes recover, false/unknown claims block mechanical edits | Released 1.7.0 |
 | 1.8 | Word comment-copy and PDF annotation-copy exports; improve complex headers, notes and multi-column native positioning using recorded failures | Original files unchanged; annotations point to the reviewed exact original locations; edited inputs invalidate previews; re-run existing misses/unknowns without rewriting frozen results; additional licensed document families with a development/held-out split fixed before parser changes and published all-outcome results | Released 1.8.0 |
 | 1.9 | File/configuration identity based incremental checks, dependency invalidation and bounded caches in ongoing review | Cold/warm/change/delete/config/parser-version cases equal full-check verdicts, positions and coverage; measured repeated checks on large authored projects; bounded memory and no stale passing results after missing or changed evidence | Released 1.9.0 |
-| 2.0 | Agent suggestions with explicit experiment identity, original positions, evidence, conflicts and abstention; explicit user confirmation remains required | Diagnose the recorded real-model failures, evaluate actual model calls independently of deterministic validators and UI scripts, preserve failures and costs, repeat previous tasks as regression and add separately held-out tasks; no unattended acceptance claims | Required |
+| 2.0 | Agent suggestions with explicit experiment identity, original positions, evidence, conflicts and abstention; explicit user confirmation remains required | Diagnose the recorded real-model failures, evaluate actual model calls independently of deterministic validators and UI scripts, preserve failures and costs, repeat previous tasks as regression and add separately held-out tasks; no unattended acceptance claims | Released 2.0.0; see delivery record below |
 
 Version numbers follow the owner's decimal rollover convention: the minor number
 runs from 0 through 9, then the next release increments the major number and resets
@@ -289,3 +289,25 @@ performance archive has identical runtime files but different description
 metadata; its original hash is preserved. The first Intel Mac / Python 3.12 uvx
 native-extras timeout and successful unchanged rerun are retained, without claiming
 a cause for the first timeout. Approved 2.0 Agent work remains required.
+
+### 2.0 delivery record
+
+Released from `f58abb972f1f7b647f3a36cdd130de0e960e36d7`:
+[GitHub](https://github.com/amos689/paperdelta/releases/tag/v2.0.0), [PyPI](https://pypi.org/project/paperdelta/2.0.0/) and the
+[public verification receipt](assets/v2.0/publication.json). All
+[17 named CI jobs](https://github.com/amos689/paperdelta/actions/runs/37602753519) passed. The exact released wheel passed 1,021 Windows
+tests with three POSIX-only skips, 92 installed-browser cases, 13 isolated starts,
+and actual public 1.9 draft/transaction recovery. All three actual GitHub downloads
+and both actual PyPI downloads match the release hashes; a fresh public install
+passed five formats in both languages. The 60 recorded model cases replay with
+their frozen implementations, and 13 authored controls make no model calls.
+
+Agent proposals share declared experiment identity, original positions, source
+bytes, evidence and conflicts across CLI and bilingual Studio. Bounded stage undo
+and typed statistical contracts retain input freshness and explicit acceptance.
+The first held-out Qwen3-8B Q4_K_M run completed 1/8 mappings and explicitly
+abstained on 2/4 required cases. Both development rounds and all failures remain
+published; these results do not establish reliable autonomous mapping or
+independently assessed abstention reasoning. No binding was accepted in the study.
+All approved 1.7, 1.8, 1.9 and 2.0 delivery work is complete. The version follows
+the 1.9 → 2.0 rollover rule with configuration/report schemas and MCP tools compatible.

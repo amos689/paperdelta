@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-10-07T09:44:03.719508+00:00",
+  "artifacts": [
+    {
+      "path": "build/release-v2.0.0-final3/paperdelta-2.0.0-py3-none-any.whl",
+      "bytes": 434773,
+      "sha256": "627b00f10d7982d9598f3787ddb3d3e26242c0617742b6ffcfc6a9aae7b3c23d"
+    },
+    {
+      "path": "build/release-v2.0.0-final3/paperdelta-2.0.0.tar.gz",
+      "bytes": 27585324,
+      "sha256": "45733eceb4504ebc98a8be54a3a9cd10c91720fb32481aa32592736650833e45"
+    },
+    {
+      "path": "build/release-v2.0.0-final3/paperdelta-evaluation-2.0.0.zip",
+      "bytes": 83151078,
+      "sha256": "5f4380de786693f6a2722a0cdc58d58cb72b1e86d7f3917a955244f8fae08a65"
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "requires_python": ">=3.11",
+    "license_expression": "MIT",
+    "extras": [
+      "dev",
+      "docx",
+      "pdf",
+      "spike",
+      "mcp",
+      "wandb",
+      "demo"
+    ],
+    "requirements": [
+      "pydantic<3,>=2.10",
+      "PyYAML<7,>=6.0.2",
+      "pylatexenc<3,>=2.11",
+      "mpmath<1.5,>=1.4.1",
+      "markdown-it-py<4.3,>=4.2",
+      "pytest<10,>=8; extra == \"dev\"",
+      "ruff>=0.12; extra == \"dev\"",
+      "build>=1.2; extra == \"dev\"",
+      "python-docx<2,>=1.2; extra == \"dev\"",
+      "pdfplumber<0.12,>=0.11.10; extra == \"dev\"",
+      "reportlab<5,>=4.4; extra == \"dev\"",
+      "pypdf<6.20,>=6.19; extra == \"dev\"",
+      "python-docx<2,>=1.2; extra == \"docx\"",
+      "pdfplumber<0.12,>=0.11.10; extra == \"pdf\"",
+      "pypdf<6.20,>=6.19; extra == \"pdf\"",
+      "TexSoup==0.3.3; extra == \"spike\"",
+      "mcp<3,>=2.2; extra == \"mcp\"",
+      "wandb<0.31,>=0.30.0; extra == \"wandb\"",
+      "matplotlib<4,>=3.9; extra == \"demo\""
+    ],
+    "maintainer_email": "101008326+amos689@users.noreply.github.com"
+  },
+  "wheel_files": 128,
+  "sdist_files": 5168,
+  "evaluation_bundle_files": 4386,
+  "evaluation_license_expression": "MIT AND CC-BY-4.0 AND CC-BY-SA-4.0",
+  "core_source_files_match_checkout": 120,
+  "required_support_files_match_checkout": 4254,
+  "owned_mapping_suite_files_match_checkout": 157,
+  "mapping_protocol_identity_count": 179,
+  "historical_implementation_identity_counts": {
+    "a2": 27,
+    "staged-v2": 34,
+    "staged-v3": 34
+  },
+  "bilingual_document_pairs": 70,
+  "corpus": {
+    "papers": 10,
+    "files": 48,
+    "bytes": 650293,
+    "every_retained_file_digest_matches": true,
+    "license_notices_present": true
+  },
+  "frozen_protocol_identity_count": 25,
+  "study": {
+    "study_id": "interactive-confirmation-v2",
+    "kind": "regression",
+    "protocol_lock": "tests/corpus/protocol-interactive-v2.json",
+    "previous_protocol": "tests/corpus/protocol-lock.json",
+    "previous_implementation": "tests/corpus/history/original-v1",
+    "scope": "Previously seen corpus, reused after adding terminal confirmation. This is not a fresh held-out evaluation."
+  },
+  "retained_original_protocol_identity_count": 23,
+  "wheel_record_verified": true,
+  "native_v2": {
+    "families": 12,
+    "original_files": 20,
+    "implementation_files": 102,
+    "first_held_out_counts": {
+      "mislocated": 0,
+      "missed": 3,
+      "supported": 82,
+      "unknown": 25
+    },
+    "original_hashes_licenses_and_locks_verified": true
+  },
+  "excluded": [
+    "virtual environments",
+    "scratch trees",
+    "transactions",
+    "native executables"
+  ],
+  "scope": "Content and metadata inspection of these exact locally built artifacts.",
+  "native_study": {
+    "papers": 4,
+    "original_files": 8,
+    "originals_and_frozen_implementation_match": true,
+    "first_held_out_counts": {
+      "mislocated": 0,
+      "missed": 4,
+      "supported": 4,
+      "unknown": 56
+    },
+    "python_distributions_exclude_native_corpus": true
+  },
+  "native_v3": {
+    "families": 8,
+    "original_files": 12,
+    "implementation_files": 125,
+    "first_held_out_counts": {
+      "mislocated": 0,
+      "missed": 1,
+      "supported": 29,
+      "unknown": 50
+    },
+    "unfilled_held_out_slots": 16,
+    "original_hashes_licenses_gold_locks_and_renders_verified": true
+  },
+  "mapping_v5": {
+    "tasks": 24,
+    "runs": {
+      "regression-1": {
+        "split": "regression",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 9,
+        "expected_abstentions": 0,
+        "required_abstentions": 3,
+        "invalid_actions": 32
+      },
+      "development-1": {
+        "split": "development",
+        "complete_mapping_cases": 1,
+        "mappable_cases": 8,
+        "expected_abstentions": 0,
+        "required_abstentions": 4,
+        "invalid_actions": 33
+      },
+      "regression-2": {
+        "split": "regression",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 9,
+        "expected_abstentions": 0,
+        "required_abstentions": 3,
+        "invalid_actions": 20
+      },
+      "development-2": {
+        "split": "development",
+        "complete_mapping_cases": 0,
+        "mappable_cases": 8,
+        "expected_abstentions": 1,
+        "required_abstentions": 4,
+        "invalid_actions": 21
+      },
+      "held-out-1": {
+        "split": "held-out",
+        "complete_mapping_cases": 1,
+        "mappable_cases": 8,
+        "expected_abstentions": 2,
+        "required_abstentions": 4,
+        "invalid_actions": 25
+      }
+    },
+    "raw_record_hashes_verified": true,
+    "held_out_selection_freeze_verified": true,
+    "scope": "Archive integrity and recorded totals; no fresh inference or human review."
+  }
+}
