@@ -14,6 +14,7 @@ from paperdelta.analysis import _diagnostic, _finish, check_project, empty_repor
 from paperdelta.config import load_config
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg, tr
+from paperdelta.incremental import CheckCache
 from paperdelta.patches import _write_lock
 from paperdelta.reports import write_reports
 from paperdelta.snapshots import read_snapshot, snapshot_path
@@ -31,6 +32,7 @@ class Watcher:
         debounce=0.5,
         publish=None,
         write_output=True,
+        use_cache=True,
     ):
         self.project, self.config_path = project, config_path
         self.directory = project.relative(project.path(directory))
@@ -42,6 +44,7 @@ class Watcher:
         self.due = None
         self.generation = 0
         self.changed = []
+        self.cache = (getattr(project, "check_cache", None) or CheckCache()) if use_cache else None
 
     def inputs(self, extra=()):
         paths = {self.config_path, *extra}
@@ -132,7 +135,7 @@ class Watcher:
     def _check(self):
         try:
             baseline = read_snapshot(self.project, self.baseline) if self.baseline else None
-            return check_project(self.project.root, self.config_path, baseline)
+            return check_project(self.project.root, self.config_path, baseline, cache=self.cache)
         except PaperDeltaError as exc:
             report = empty_report(self.config_path)
             report["diagnostics"].append(_diagnostic(exc.code, "project", "unknown", str(exc)))
@@ -229,6 +232,7 @@ def register_commands(commands):
     child.add_argument("--debounce", type=float, default=0.5, help=tr("watch.debounce"))
     child.add_argument("--max-checks", type=int, default=0, help=tr("watch.max_checks"))
     child.add_argument("--once", action="store_true", help=tr("watch.once"))
+    child.add_argument("--no-cache", action="store_true", help=tr("watch.no_cache"))
     child.add_argument("--open", action="store_true", help=tr("watch.open"))
     child.add_argument("--format", choices=["text", "json"], default="text", help=tr("cli.format"))
 
@@ -277,6 +281,7 @@ def run_command(project, arguments):
         baseline=arguments.baseline,
         debounce=arguments.debounce,
         publish=publish,
+        use_cache=not arguments.no_cache,
     )
     limit = 1 if arguments.once else arguments.max_checks
     lock_path = ".paperdelta/watch-locks/" + fingerprint(watcher.directory)[7:] + ".lock"

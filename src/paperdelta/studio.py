@@ -420,6 +420,10 @@ def project_files(project):
 
 class StudioSession:
     def __init__(self, project: Project, config_path="paperdelta.yaml"):
+        from paperdelta.incremental import CheckCache
+
+        if project.check_cache is None:
+            project.check_cache = CheckCache()
         self.project = project
         self.config_path = project.relative(project.path(config_path))
         self.revision = secrets.token_hex(16)
@@ -450,7 +454,9 @@ class StudioSession:
         if self.project.path(self.config_path).exists():
             draft = builder.start_draft(self.project, self.config_path)
             scan = scan_project(self.project, self.config_path)
-            report = check_project(self.project.root, self.config_path)
+            report = check_project(
+                self.project.root, self.config_path, cache=self.project.check_cache
+            )
             builder.resume_draft(self.project, draft)
             if any(draft["input_hashes"].get(k) != v for k, v in scan["input_hashes"].items()):
                 raise PaperDeltaError("STALE_DRAFT", msg("studio.changed"))
@@ -1060,7 +1066,9 @@ class StudioSession:
             elif action == "report":
                 from paperdelta.i18n import current_language
 
-                report = check_project(self.project.root, self.config_path)
+                report = check_project(
+                    self.project.root, self.config_path, cache=self.project.check_cache
+                )
                 return {
                     "html": html_report(report, previews=pdf_previews(self.project, report)),
                     "language": current_language(),

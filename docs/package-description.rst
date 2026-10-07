@@ -196,3 +196,21 @@ LaTeX、Markdown 和 Quarto 共用保留原始字节的受保护补丁；错误/
 
 `Task guide <https://github.com/amos689/paperdelta/blob/main/docs/tasks.md>`_ ·
 `按任务开始 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/tasks.md>`_
+
+
+Incremental ongoing checks (1.9)
+----------------------------------------
+
+Studio and watch sessions reuse unchanged document parses and exact metric results
+within a bounded process-local cache. Current contents are still read and hashed,
+and final reports, positions, coverage and review status are rebuilt.
+Use ``paperdelta watch --no-cache`` for full rechecks. The cache retains no decisions
+or disk files; upgrading starts empty.
+
+Studio 与 watch 持续审查使用有界进程内缓存，复用未变的文档解析和精确指标结果。
+每次仍读取、哈希当前文件，并重建报告、位置、覆盖率和复核状态。
+使用 ``paperdelta watch --no-cache`` 可以完整重检；缓存不保存接受决定或磁盘状态，
+升级后从空缓存开始。
+
+`Incremental checks <https://github.com/amos689/paperdelta/blob/main/docs/v1.9.md>`_ ·
+`增量检查 <https://github.com/amos689/paperdelta/blob/main/docs/zh-CN/v1.9.md>`_

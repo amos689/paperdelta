@@ -2,6 +2,14 @@
 
 [简体中文](CHANGELOG.zh-CN.md)
 
+## 1.9.0 — 2026-10-07
+
+- Reuse content-addressed document parses, typed evidence and dependency-aware metric results in Studio and ongoing checks, with bounded process-local caches.
+- Keep full report recomputation, current file reads, include discovery, baseline/review freshness, original locations and pending-state safeguards; provide `watch --no-cache`.
+- Preserve private copies and native table identities, release completed Markdown parser state, and revalidate compatible 1.8 draft recovery.
+- Compare full and incremental results under edits/deletions/reordering/configuration/engine changes, and measure cold/warm checks on identical large and PDF workloads.
+- [Scope and evidence](docs/v1.9.md).
+
 ## 1.8.0 — 2026-10-07
 
 - Preview and explicitly export native Word comment copies and PDF highlight/note copies in Studio and CLI. Preserve originals, existing comments, formatting and page geometry; revalidate current input identities.

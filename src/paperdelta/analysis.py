@@ -103,9 +103,13 @@ def empty_report(config_path: str) -> dict:
 
 
 def check_project(
-    root: Path | str, config_path: str = "paperdelta.yaml", baseline: dict | None = None
+    root: Path | str,
+    config_path: str = "paperdelta.yaml",
+    baseline: dict | None = None,
+    *,
+    cache=None,
 ) -> dict:
-    return check_stored_project(Project(root), config_path, baseline)
+    return check_stored_project(Project(root, check_cache=cache), config_path, baseline)
 
 
 def check_stored_project(

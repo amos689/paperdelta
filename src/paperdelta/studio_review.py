@@ -32,6 +32,7 @@ class StudioReview:
                 self.project.root,
                 self.config_path,
                 read_snapshot(self.project, self.watcher.baseline),
+                cache=self.watcher.cache,
             )
         self.watcher.previous = report
         self.watcher.seen = self.watcher.inputs(report["input_hashes"])
@@ -92,7 +93,7 @@ class StudioReview:
     def create_snapshot(self, name):
         snapshot_path(name)
         with _write_lock(self.project):
-            report = check_project(self.project.root, self.config_path)
+            report = check_project(self.project.root, self.config_path, cache=self.watcher.cache)
             if observe(self.project, report["input_hashes"]) != report["input_hashes"]:
                 raise PaperDeltaError("STALE_REVIEW", msg("maintenance.stale"))
             path = create_snapshot(self.project, name, report)

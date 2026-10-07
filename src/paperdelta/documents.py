@@ -6,14 +6,16 @@ read model is never a byte offset into a DOCX or PDF file.
 
 from __future__ import annotations
 
+from functools import partial
 from pathlib import Path
 from typing import Protocol
 
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
+from paperdelta.incremental import reuse
 from paperdelta.latex import PaperIndex as LatexIndex
 from paperdelta.models import Anchor, Paper
-from paperdelta.storage import Project
+from paperdelta.storage import Project, sha256
 
 
 class LocatedText(Protocol):
@@ -69,18 +71,13 @@ class PaperIndex:
             else:
                 if manuscript.macros:
                     raise PaperDeltaError("DOCUMENT_MACROS", msg("document.macros"))
-                if format == "docx":
-                    from paperdelta.docx_document import DocxDocument
-
-                    document = DocxDocument(file, project.read(file))
-                elif format == "pdf":
-                    from paperdelta.pdf_document import PdfDocument
-
-                    document = PdfDocument(file, project.read(file), manuscript.pdf_regions)
-                else:
-                    from paperdelta.markdown_document import MarkdownDocument
-
-                    document = MarkdownDocument(file, project.read(file), format)
+                raw = project.read(file)
+                document = reuse(
+                    project,
+                    "document",
+                    [file, format, sha256(raw), manuscript.pdf_regions],
+                    partial(_parse_document, file, raw, format, manuscript.pdf_regions),
+                )
                 documents, issues = {file: document}, document.issues
             for name, document in documents.items():
                 if name in self.documents:
@@ -101,3 +98,17 @@ class PaperIndex:
             key = "error.UNREACHABLE_TEX" if self.format == "latex" else "document.unreachable"
             raise PaperDeltaError(code, msg(key, file=file))
         return self.documents[relative]
+
+
+def _parse_document(file, raw, format, regions):
+    if format == "docx":
+        from paperdelta.docx_document import DocxDocument
+
+        return DocxDocument(file, raw)
+    if format == "pdf":
+        from paperdelta.pdf_document import PdfDocument
+
+        return PdfDocument(file, raw, regions)
+    from paperdelta.markdown_document import MarkdownDocument
+
+    return MarkdownDocument(file, raw, format)

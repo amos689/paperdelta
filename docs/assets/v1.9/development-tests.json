@@ -1,0 +1,74 @@
+[
+  {
+    "attempt": "v19-target2.xml",
+    "suites": [
+      {
+        "tests": "107",
+        "failures": "8",
+        "errors": "0",
+        "skipped": "0",
+        "time": "132.505"
+      }
+    ],
+    "failures": [
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-pdf]",
+        "message": "AssertionError: assert {'report_sche...ta.yaml', ...} == {'report_sche...ta.yaml', ...}\n  \n  Omitting 12 identical items, use -vv to show\n  Differing items:\n  {'exit_code': 2} != {'exit_code': 0}\n  {'diagnostics': [{'id': 'occurrence:table_accuracy/ANCHOR_MISSING', 'rule': 'ANCHOR_MISSING', 'subject': 'occurrence:t...ne/EXPORT_UNCHECKED', 'rule': 'EXPORT_UNCHECKED', 'subject': 'export:paper.pdf:baseline', 'severity': 'unknown', ...}]} != {'diagnostics': []}\n  {'coverage': {'confirmed': 6, 'pass': 4, 'mismatch': 0, 'unknown': 2, ...}} != {'coverage': {'confirmed': 6, 'pass': 6, 'mismatch': 0, 'unknown': 0, ...}}\n  {'actions': [{'kind': 'resolve_evidence', 'subjects': ['export:...\n  \n  ...Full output truncated (4 lines hidden), use '-vv' to show"
+      },
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-markdown]",
+        "message": "KeyError: 'document.hit'"
+      },
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-quarto]",
+        "message": "KeyError: 'document.hit'"
+      },
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-pdf]",
+        "message": "AssertionError: assert {'report_sche...ta.yaml', ...} == {'report_sche...ta.yaml', ...}\n  \n  Omitting 12 identical items, use -vv to show\n  Differing items:\n  {'exit_code': 2} != {'exit_code': 0}\n  {'diagnostics': [{'id': 'occurrence:table_accuracy/ANCHOR_MISSING', 'rule': 'ANCHOR_MISSING', 'subject': 'occurrence:t...ne/EXPORT_UNCHECKED', 'rule': 'EXPORT_UNCHECKED', 'subject': 'export:paper.pdf:baseline', 'severity': 'unknown', ...}]} != {'diagnostics': []}\n  {'coverage': {'confirmed': 6, 'pass': 4, 'mismatch': 0, 'unknown': 2, ...}} != {'coverage': {'confirmed': 6, 'pass': 6, 'mismatch': 0, 'unknown': 0, ...}}\n  {'actions': [{'kind': 'resolve_evidence', 'subjects': ['export:...\n  \n  ...Full output truncated (4 lines hidden), use '-vv' to show"
+      },
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-markdown]",
+        "message": "KeyError: 'document.hit'"
+      },
+      {
+        "test": "test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-quarto]",
+        "message": "KeyError: 'document.hit'"
+      },
+      {
+        "test": "test_config_selectors_units_anchors_scope_and_macros_invalidate",
+        "message": "assert 1 == 0"
+      },
+      {
+        "test": "test_cache_eviction_and_oversized_inputs_preserve_results_and_bounds",
+        "message": "KeyError: 'evictions'"
+      }
+    ]
+  },
+  {
+    "attempt": "v19-target3.xml",
+    "suites": [
+      {
+        "tests": "95",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "30.167"
+      }
+    ],
+    "failures": []
+  },
+  {
+    "attempt": "v19-target5.xml",
+    "suites": [
+      {
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.566"
+      }
+    ],
+    "failures": []
+  }
+]

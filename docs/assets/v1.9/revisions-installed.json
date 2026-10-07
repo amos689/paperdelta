@@ -1,0 +1,1042 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "latex-en",
+      "format": "latex",
+      "language": "en",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+        "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+        "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+        "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+        "results/metrics.csv": "3d29012bbaa0f04a4c3d7c43659a19659ff578a003ba0fe9d1fb2230d077968c"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "latex-zh-CN",
+      "format": "latex",
+      "language": "zh-CN",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+        "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+        "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+        "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+        "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+        "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+        "results/metrics.csv": "3d29012bbaa0f04a4c3d7c43659a19659ff578a003ba0fe9d1fb2230d077968c"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "markdown-en",
+      "format": "markdown",
+      "language": "en",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "markdown-zh-CN",
+      "format": "markdown",
+      "language": "zh-CN",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "quarto-en",
+      "format": "quarto",
+      "language": "en",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "quarto-zh-CN",
+      "format": "quarto",
+      "language": "zh-CN",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": true,
+      "restart_recovery": true,
+      "changed_inputs_invalidate_preview": true,
+      "false_claim_blocks_patch": true,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": false,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-tasks input[value=table_accuracy]",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-preview-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-apply",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history > summary",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-history-load",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-transaction",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-recovery-button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-recovery-attest",
+          "method": "check"
+        },
+        {
+          "selector": "#revision-recover",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-detail > button",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "docx-en",
+      "format": "docx",
+      "language": "en",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": false,
+      "restart_recovery": false,
+      "changed_inputs_invalidate_preview": false,
+      "false_claim_blocks_patch": false,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": true,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "docx-zh-CN",
+      "format": "docx",
+      "language": "zh-CN",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": false,
+      "restart_recovery": false,
+      "changed_inputs_invalidate_preview": false,
+      "false_claim_blocks_patch": false,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": true,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "pdf-en",
+      "format": "pdf",
+      "language": "en",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "source.tex": "3d39d07342ec5e00d5b0fbd1e431e7474cb9c186288c75adaecb951a53b57687",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": false,
+      "restart_recovery": false,
+      "changed_inputs_invalidate_preview": false,
+      "false_claim_blocks_patch": false,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": true,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    },
+    {
+      "name": "pdf-zh-CN",
+      "format": "pdf",
+      "language": "zh-CN",
+      "version": "1.9.0",
+      "status": "passed",
+      "input_sha256": {
+        "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+        "source.tex": "3d39d07342ec5e00d5b0fbd1e431e7474cb9c186288c75adaecb951a53b57687",
+        "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+      },
+      "required_interfaces": [
+        "browser"
+      ],
+      "selected_numeric_apply": false,
+      "restart_recovery": false,
+      "changed_inputs_invalidate_preview": false,
+      "false_claim_blocks_patch": false,
+      "language_preserves_selection_and_clears_acceptance": true,
+      "original_native_unchanged": true,
+      "narrow_viewport": true,
+      "remote_requests": [],
+      "steps": [
+        {
+          "selector": "#revision-coverage-report",
+          "method": "click"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        },
+        {
+          "selector": "#revision-filter",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+          "method": "click"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#language",
+          "method": "selectOption"
+        },
+        {
+          "selector": "#revision-search",
+          "method": "fill"
+        }
+      ]
+    }
+  ],
+  "scope": "Authored local browser workflows on five formats in both languages. Not independent human usability or a population accuracy measurement."
+}

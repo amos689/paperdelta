@@ -1,0 +1,72 @@
+..FFF..FFF.F....F....................................................... [ 67%]
+...................................                                      [100%]
+================================== FAILURES ===================================
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-pdf] _
+tests\test_incremental.py:45: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    equivalent(root, cache)
+tests\test_incremental.py:31: in equivalent
+    assert normalized(reused) == normalized(full)
+E   AssertionError: assert {'report_sche...ta.yaml', ...} == {'report_sche...ta.yaml', ...}
+E
+E     Omitting 12 identical items, use -vv to show
+E     Differing items:
+E     {'exit_code': 2} != {'exit_code': 0}
+E     {'diagnostics': [{'id': 'occurrence:table_accuracy/ANCHOR_MISSING', 'rule': 'ANCHOR_MISSING', 'subject': 'occurrence:t...ne/EXPORT_UNCHECKED', 'rule': 'EXPORT_UNCHECKED', 'subject': 'export:paper.pdf:baseline', 'severity': 'unknown', ...}]} != {'diagnostics': []}
+E     {'coverage': {'confirmed': 6, 'pass': 4, 'mismatch': 0, 'unknown': 2, ...}} != {'coverage': {'confirmed': 6, 'pass': 6, 'mismatch': 0, 'unknown': 0, ...}}
+E     {'actions': [{'kind': 'resolve_evidence', 'subjects': ['export:...
+E
+E     ...Full output truncated (4 lines hidden), use '-vv' to show
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-markdown] _
+tests\test_incremental.py:46: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    assert cache.stats()["counts"]["document.hit"] > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'document.hit'
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-quarto] _
+tests\test_incremental.py:46: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    assert cache.stats()["counts"]["document.hit"] > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'document.hit'
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-pdf] _
+tests\test_incremental.py:45: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    equivalent(root, cache)
+tests\test_incremental.py:31: in equivalent
+    assert normalized(reused) == normalized(full)
+E   AssertionError: assert {'report_sche...ta.yaml', ...} == {'report_sche...ta.yaml', ...}
+E
+E     Omitting 12 identical items, use -vv to show
+E     Differing items:
+E     {'exit_code': 2} != {'exit_code': 0}
+E     {'diagnostics': [{'id': 'occurrence:table_accuracy/ANCHOR_MISSING', 'rule': 'ANCHOR_MISSING', 'subject': 'occurrence:t...ne/EXPORT_UNCHECKED', 'rule': 'EXPORT_UNCHECKED', 'subject': 'export:paper.pdf:baseline', 'severity': 'unknown', ...}]} != {'diagnostics': []}
+E     {'coverage': {'confirmed': 6, 'pass': 4, 'mismatch': 0, 'unknown': 2, ...}} != {'coverage': {'confirmed': 6, 'pass': 6, 'mismatch': 0, 'unknown': 0, ...}}
+E     {'actions': [{'kind': 'resolve_evidence', 'subjects': ['export:...
+E
+E     ...Full output truncated (4 lines hidden), use '-vv' to show
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-markdown] _
+tests\test_incremental.py:46: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    assert cache.stats()["counts"]["document.hit"] > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'document.hit'
+_ test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-quarto] _
+tests\test_incremental.py:46: in test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies
+    assert cache.stats()["counts"]["document.hit"] > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'document.hit'
+_______ test_config_selectors_units_anchors_scope_and_macros_invalidate _______
+tests\test_incremental.py:108: in test_config_selectors_units_anchors_scope_and_macros_invalidate
+    assert equivalent(project, cache)["coverage"]["confirmed"] == 0
+E   assert 1 == 0
+____ test_cache_eviction_and_oversized_inputs_preserve_results_and_bounds _____
+tests\test_incremental.py:193: in test_cache_eviction_and_oversized_inputs_preserve_results_and_bounds
+    assert cache.stats()["counts"]["evictions"] > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'evictions'
+=========================== short test summary info ===========================
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-pdf]
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-markdown]
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[en-quarto]
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-pdf]
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-markdown]
+FAILED tests/test_incremental.py::test_all_formats_cold_warm_changes_deleted_inputs_and_private_copies[zh-CN-quarto]
+FAILED tests/test_incremental.py::test_config_selectors_units_anchors_scope_and_macros_invalidate
+FAILED tests/test_incremental.py::test_cache_eviction_and_oversized_inputs_preserve_results_and_bounds
+8 failed, 99 passed in 132.51s (0:02:12)

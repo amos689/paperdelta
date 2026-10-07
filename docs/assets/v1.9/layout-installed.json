@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "kind": "docx-table",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "577012f6b400b49222e28a5a430d7c2b40918fda2f95469000a0c89d8a599ef2",
+      "locator": {
+        "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+        "cell": 3,
+        "offset": 0,
+        "paragraph": 9,
+        "part": "word/document.xml",
+        "row": 3,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-table",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "1e0fcd9f61942002990607e09a8343f4e59e68aa99d05684b5dc584a1b77c6bc",
+      "locator": {
+        "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+        "cell": 3,
+        "offset": 0,
+        "paragraph": 9,
+        "part": "word/document.xml",
+        "row": 3,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-note",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "711d09dcae65a4bbf974315509f31da08bb1d51d26c46a409548fca40230bf9c",
+      "locator": {
+        "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+        "note_id": 7,
+        "offset": 20,
+        "paragraph": 1,
+        "part": "word/footnotes.xml",
+        "section": [],
+        "style": ""
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-note",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "2324be8b10a5df9fab21dc0ff43bd9067f3dbec5d4fd8e9ae27e942afd434697",
+      "locator": {
+        "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+        "note_id": 7,
+        "offset": 20,
+        "paragraph": 1,
+        "part": "word/footnotes.xml",
+        "section": [],
+        "style": ""
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-rotated",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+      "locator": {
+        "bbox": [
+          297.516,
+          87.344,
+          309.516,
+          110.696
+        ],
+        "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+        "offset": 7,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          500,
+          400
+        ]
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-rotated",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+      "locator": {
+        "bbox": [
+          297.516,
+          87.344,
+          309.516,
+          110.696
+        ],
+        "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+        "offset": 7,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          500,
+          400
+        ]
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-merged",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+      "locator": {
+        "bbox": [
+          170,
+          165.484,
+          193.352,
+          177.484
+        ],
+        "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+        "cell": 2,
+        "offset": 0,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          600,
+          800
+        ],
+        "row": 2,
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-merged",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+      "locator": {
+        "bbox": [
+          170,
+          165.484,
+          193.352,
+          177.484
+        ],
+        "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+        "cell": 2,
+        "offset": 0,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          600,
+          800
+        ],
+        "row": 2,
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "errors": [],
+      "remote_requests": []
+    }
+  ]
+}

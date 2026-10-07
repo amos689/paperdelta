@@ -121,7 +121,8 @@ def parse_json(text: str) -> Any:
 
 
 class Project:
-    def __init__(self, root: Path | str):
+    def __init__(self, root: Path | str, *, check_cache=None):
+        self.check_cache = check_cache
         self.root = Path(root).resolve()
 
     def path(self, relative: str) -> Path:

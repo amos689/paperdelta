@@ -41,6 +41,8 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_studio_scale.cjs build/studio-scale
+      - name: Compare bounded incremental and full checks on identical inputs
+        run: python -X utf8 tools/validate_incremental.py --out build/incremental-check --runs 3
       - name: Test reviewed bilingual Word and PDF annotation downloads
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
@@ -107,7 +109,7 @@ jobs:
       - name: Test bilingual workflow declarations, fragments and revision lists
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
-        run: node tools/validate_workflows_browser.cjs build/workflows-browser
+        run: node tools/validate_workflows_browser.cjs build/workflows-browser --delayed-review
       - name: Keep all browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -126,6 +128,7 @@ jobs:
             build/annotations-browser/*.png
             build/annotations-browser/*-failure.json
             build/studio-scale/evidence.json
+            build/incremental-check/evidence.json
             build/studio-scale/*.png
             build/studio-scale/*-errors.json
             build/studio-batch-browser/evidence.json

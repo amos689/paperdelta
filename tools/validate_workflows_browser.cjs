@@ -2,6 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {createHash} = require('node:crypto');
 const {spawn, execFileSync} = require('node:child_process');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..'), python = process.env.PAPERDELTA_PYTHON || 'python';
@@ -9,6 +10,7 @@ const out = path.resolve(process.argv[2] || path.join(root, 'build', 'workflows-
 assert(out.startsWith(path.join(root, 'build') + path.sep) && !fs.existsSync(out));
 fs.mkdirSync(out, {recursive:true});
 const cases = [];
+const delayedReview = process.argv.includes('--delayed-review');
 const py = args => execFileSync(python, ['-X','utf8',...args], {cwd:root,encoding:'utf8',windowsHide:true});
 async function start(directory, language) {
   const child = spawn(python,['-X','utf8','-m','paperdelta','--lang',language,'-C',directory,'studio','--no-open'],{cwd:root,windowsHide:true});
@@ -30,6 +32,23 @@ async function runCase(browser, format, language) {
   const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
   page.setDefaultTimeout(45000);
   const errors=[],remote=[];
+  let holdReview=false, releaseReview, heldReview, receiveHeldReview;
+  const held = new Promise(resolve=>{receiveHeldReview=resolve;});
+  if(delayedReview)await page.route('**/api',async route=>{
+    const request=route.request();
+    if(!holdReview || request.postDataJSON()?.action!=='review')return route.continue();
+    const response=await route.fetch();
+    const detail=await response.json();
+    // An earlier poll may overlap the final fragment acceptance. Delay only
+    // the real report that includes that write, never an unrelated old poll.
+    if(!detail.report?.fragments.results)return route.fulfill({response});
+    holdReview=false;
+    heldReview=detail;
+    const gate=new Promise(resolve=>{releaseReview=resolve;});
+    receiveHeldReview();
+    await gate;
+    await route.fulfill({response});
+  });
   page.on('pageerror',error=>errors.push(String(error)));
   page.on('request',request=>{if(!request.url().startsWith(new URL(url).origin)) remote.push(request.url());});
   async function ready(){await page.waitForFunction(()=>!document.body.hasAttribute('aria-busy'));if(await page.locator('#error').isVisible()) throw new Error(await page.locator('#error').textContent());}
@@ -70,13 +89,31 @@ async function runCase(browser, format, language) {
     await act('#language','selectOption',language);
     await act('#fragment-form button[type=submit]');
     await page.locator('#workflow-preview').screenshot({path:path.join(out,name+'-preview.png')});
+    holdReview=delayedReview;
     await accept();assert.match(fs.readFileSync(path.join(directory,generated),'utf8'),/84\.1/);
     for(const file of inputs)assert.deepEqual(fs.readFileSync(path.join(directory,file)),originals[file]);
     assert(!fs.existsSync(path.join(directory,'.paperdelta/example-executions.log')));
+    if(delayedReview)await Promise.race([held,new Promise((_,reject)=>{const timer=setTimeout(()=>reject(new Error('No real background review response to delay')),15000);timer.unref();})]);
     const generation=Number(await page.locator('#review-workspace').getAttribute('data-generation'));
     const csv=path.join(directory,'results/metrics.csv');
-    fs.writeFileSync(csv,fs.readFileSync(csv,'utf8').replace('0.839','0.807').replace('0.841','0.809').replace('0.843','0.811'));
-    await page.waitForFunction(before=>Number(document.querySelector('#review-workspace').dataset.generation)>before && document.querySelector('#review-workspace').dataset.reviewState==='current',generation);
+    const changed=fs.readFileSync(csv,'utf8').replace('0.839','0.807').replace('0.841','0.809').replace('0.843','0.811');
+    const expectedHash='sha256:'+createHash('sha256').update(changed).digest('hex');
+    const currentReview=page.waitForResponse(async response=>{
+      if(response.request().postDataJSON()?.action!=='review' || !response.ok())return false;
+      const detail=await response.json();
+      return detail.report?.input_hashes['results/metrics.csv']===expectedHash && detail.summary.state==='current';
+    });
+    fs.writeFileSync(csv,changed);
+    let generationOnlyWouldFinishEarly=false;
+    if(delayedReview){
+      assert(heldReview.summary.generation>generation);
+      assert.notEqual(heldReview.report.input_hashes['results/metrics.csv'],expectedHash);
+      releaseReview();
+      await page.waitForFunction(before=>Number(document.querySelector('#review-workspace').dataset.generation)>before && document.querySelector('#review-workspace').dataset.reviewState==='current',generation);
+      generationOnlyWouldFinishEarly=true;
+    }
+    const checked=await (await currentReview).json();
+    await page.waitForFunction(checkedGeneration=>Number(document.querySelector('#review-workspace').dataset.generation)>=checkedGeneration && document.querySelector('#review-workspace').dataset.reviewState==='current',checked.summary.generation);
     await act('#workflow-load');
     for(const subject of ['provenance:training','provenance:render','fragments:results'])assert(await page.locator('#workflow-states [data-subject="'+subject+'"] .status-mismatch').count());
     assert.match(await page.locator('#workflow-revisions').innerText(),/80\.9/);
@@ -84,11 +121,11 @@ async function runCase(browser, format, language) {
     await page.setViewportSize({width:390,height:844});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
     assert.deepEqual(errors,[]);assert.deepEqual(remote,[]);
-    cases.push({name,status:'passed',format,language,language_switch_preserved_fields_and_selection:true,explicit_acceptance:true,declared_only:true,no_project_execution:true,source_files_preserved_before_authored_change:true,changed_evidence_marks_notebook_render_and_fragment_stale:true,remote_requests:remote});
+    cases.push({name,status:'passed',format,language,language_switch_preserved_fields_and_selection:true,explicit_acceptance:true,declared_only:true,no_project_execution:true,source_files_preserved_before_authored_change:true,changed_evidence_marks_notebook_render_and_fragment_stale:true,checked_input_sha256:expectedHash,delayed_real_review:delayedReview,generation_only_would_finish_early:generationOnlyWouldFinishEarly,remote_requests:remote});
   } catch(error) {
     await page.screenshot({path:path.join(out,name+'-failure.png'),fullPage:true}).catch(()=>{});
     fs.writeFileSync(path.join(out,'failure.json'),JSON.stringify({name,error:String(error),errors,cases},null,2));throw error;
-  } finally {await context.close();child.kill();}
+  } finally {releaseReview?.();await context.close();child.kill();}
 }
 (async()=>{
   const browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});

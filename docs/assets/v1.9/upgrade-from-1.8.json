@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "from_version": "1.8.0",
+  "to_version": "1.9.0",
+  "source": "Exact tested 1.8.0 wheel installed in an isolated environment produced the original persisted draft.",
+  "bindings_preserved": 2,
+  "preview_passed": 2,
+  "accepted": 0,
+  "input_and_config_sha256_unchanged": {
+    "paper.tex": "b3b6f188b820ae7a5de14b7220e89b975b562f35257595a3d8cead612b46a890",
+    "results.csv": "bd6ae7da4fcd3fc953d1b19758cdfcb610aa9c015e19d5fffe5cdf88c0557fdb",
+    "paperdelta.yaml": "17eed2027b6fe0f5118e6eac726ad3ced83ac28c91a0dca509091d2c9c2d691d"
+  },
+  "scope": "One actual LaTeX upgrade; five-format contract migration and stale-input tests are separate authored regressions."
+}

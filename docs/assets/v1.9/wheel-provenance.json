@@ -1,0 +1,13 @@
+{
+  "version": "1.9.0",
+  "earlier_tested_wheel_sha256": "8295ecdd72cea52083f33c3aaef50042f5b7dd980adc72911612edf03a406baa",
+  "final_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+  "identical_internal_files": 125,
+  "changed_internal_files": [
+    "paperdelta-1.9.0.dist-info/METADATA",
+    "paperdelta-1.9.0.dist-info/RECORD"
+  ],
+  "all_runtime_source_and_assets_identical": true,
+  "package_identity_and_dependency_headers_identical": true,
+  "reason": "Correct a strict PyPI RST-rendering heading and add the corresponding Chinese paragraph. Only description payload and archive RECORD changed. Repeat final-wheel installed acceptance; performance measurements retain their original measured archive identity."
+}

@@ -110,7 +110,7 @@ def test_patch_release_migration_verifies_original_hashes(project, monkeypatch, 
 @pytest.mark.parametrize(
     "previous,current",
     [(v, "1.6.0") for v in ["1.2.1", "1.3.0", "1.4.0", "1.5.0"]]
-    + [("1.6.0", "1.8.0"), ("1.7.0", "1.8.0")],
+    + [("1.6.0", "1.8.0"), ("1.7.0", "1.8.0"), ("1.8.0", "1.9.0")],
 )
 def test_migration_preserves_compatible_contracts_and_requires_original_inputs(
     studio_project, monkeypatch, previous, current

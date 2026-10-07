@@ -113,6 +113,11 @@ class MarkdownDocument(NativeDocument):
                 ),
             )
 
+        # Parsing is complete. Drop observer closures and their parser state;
+        # only the immutable source read model is needed for later checks.
+        self.md = self._inline_state = None
+        self.environment = {}
+
     def _problem(self, reason, start):
         line = bisect.bisect_right(self.line_starts, start)
         if (reason, line) not in self._problems:

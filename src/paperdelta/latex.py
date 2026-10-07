@@ -387,7 +387,15 @@ class PaperIndex:
             return
         if len(self.documents) >= 200 or len(self._active) >= 40:
             raise PaperDeltaError("INCLUDE_LIMIT", msg("error.INCLUDE_LIMIT"))
-        doc = TexDocument(file, self.project.read(file, 4 * 1024 * 1024), self.paper.macros)
+        from paperdelta.incremental import reuse
+
+        raw = self.project.read(file, 4 * 1024 * 1024)
+        doc = reuse(
+            self.project,
+            "document",
+            [file, "latex", sha256(raw), self.paper.macros],
+            lambda: TexDocument(file, raw, self.paper.macros),
+        )
         self.documents[file] = doc
         self.issues.extend(doc.issues)
         self._active.add(file)

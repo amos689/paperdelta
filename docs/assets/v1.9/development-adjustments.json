@@ -1,0 +1,55 @@
+{
+  "version": "1.9.0",
+  "scope": "Authored development evidence, not independent human validation. Later final installed receipts supersede these development attempts without deleting them.",
+  "adjustments": [
+    {
+      "observed": "The first cold/warm comparisons exposed lost PDF table metadata after deepcopy because its integer keys were row object identities.",
+      "change": "Rebind Word/PDF/Markdown table metadata to copied row identities and compare complete reports, including exact positions."
+    },
+    {
+      "observed": "Markdown parser objects retained callbacks and unsupported native state, so they bypassed bounded caching.",
+      "change": "Release parser callbacks and state after the read model is complete. Preserve static checking semantics and verify cold/warm reports."
+    },
+    {
+      "observed": "Two initial tests incorrectly treated a figure as zero confirmed coverage after deleting occurrences and selected cache limits too small to exercise eviction.",
+      "change": "Check the occurrence group directly and use a fitting small cache plus a separate oversized input case."
+    },
+    {
+      "observed": "The first portable-evidence cache test used a .json filename rejected by the existing export contract.",
+      "change": "Use .pdevidence.json for both initial and updated export fixtures, preserving integrity validation."
+    },
+    {
+      "observed": "Final memory review found parsed evidence retained both raw byte/text buffers and its read model, and typed PDF-region objects have additional Pydantic slot containers.",
+      "change": "Drop no-longer-needed raw buffers after successful source parsing, account for hidden typed-model containers, rebuild the wheel and repeat final installed acceptance."
+    },
+    {
+      "observed": "Two source aliases could read different snapshots of the same file during one check while the last alias overwrote its recorded hash.",
+      "change": "Reject inconsistent repeated source-path hashes as INPUT_CHANGED in both full and cached checks; retain separate race regressions."
+    },
+    {
+      "observed": "One final-wheel platform run ended during the suite with process exit 1073807364 after 149.781 seconds. No completed JUnit or assertion failure was produced; the external termination cause is unverified.",
+      "change": "Preserve the failed receipt and rerun the same wheel in a new isolated environment. The completed run has 1010 passed tests and three POSIX-only Windows skips.",
+      "receipt": "installed-interrupted.json"
+    },
+    {
+      "observed": "The first 1.8 remote browser run failed because the workflow harness treated any later review generation as proof that a CSV edit had been read. Delaying a real pre-edit response reproduces the early completion in all four bilingual cases.",
+      "change": "Wait for the exact changed CSV hash in a current review response, then its rendered generation. CI delays the genuine fragment-inclusive response and verifies that all three dependent workflow states become stale. No product response is fabricated or acceptance assertion removed.",
+      "first_ci": "https://github.com/amos689/paperdelta/actions/runs/37577011131"
+    },
+    {
+      "observed": "The first diagnostic hash wait omitted the product sha256: prefix and timed out.",
+      "change": "Compare the documented complete identity string; retain the failed local diagnostic and the subsequent successful four-case run."
+    },
+    {
+      "observed": "Strict PyPI rendering rejected the initial 1.9 heading underline. The initial package description also lacked the matching Chinese incremental paragraph.",
+      "change": "Fix the RST heading, add the Chinese paragraph and both guide links, rebuild the distribution and verify the final package. Runtime source/assets remain identical; archive metadata changes are recorded separately."
+    }
+  ],
+  "hardware": {
+    "cpu": "Intel Core Ultra 9 275HX",
+    "physical_cores": 24,
+    "logical_processors": 24
+  },
+  "initial_baseline_note": "The original benchmark records checkout file hashes as auxiliary metadata. baseline-1.8-runtime.json identifies the actual installed 1.8.0 wheel used for all baseline checks; no editable 1.9 code was loaded.",
+  "public_log_note": "Public test log excerpts replace checkout paths and strip trailing whitespace; original local logs and JUnit files are retained under build. Frozen historical studies are unchanged."
+}

@@ -1,0 +1,11 @@
+.......................F.                                                [100%]
+================================== FAILURES ===================================
+_ test_each_evidence_format_keeps_exact_values_positions_and_provenance[records] _
+tests\test_incremental.py:261: in test_each_evidence_format_keeps_exact_values_positions_and_provenance
+    imported = import_evidence(
+src\paperdelta\experiment_imports.py:167: in import_evidence
+    raise export_error("suffix")
+E   paperdelta.errors.PaperDeltaError: Save the portable export with the .pdevidence.json suffix.
+=========================== short test summary info ===========================
+FAILED tests/test_incremental.py::test_each_evidence_format_keeps_exact_values_positions_and_provenance[records]
+1 failed, 24 passed in 17.87s

@@ -12,6 +12,7 @@ from typing import Any
 
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
+from paperdelta.incremental import reuse
 from paperdelta.metrics import Quantity, derive
 from paperdelta.models import Config, DerivedMetric, Source, SourceMetric
 from paperdelta.storage import Project, canonical, decimal_value, fingerprint, parse_json, sha256
@@ -82,17 +83,44 @@ class EvidenceStore:
         self.errors: dict[str, PaperDeltaError] = {}
         self.csv_indexes: dict[str, dict[str, dict[Any, list[dict]]]] = {}
         self.export_info: dict[str, dict] = {}
+        self._source_inputs: dict[str, tuple] = {}
 
-    def load_source(self, name: str) -> Any:
-        if name in self.sources:
-            return self.sources[name]
+    def _read_source(self, name: str) -> tuple:
+        if name in self._source_inputs:
+            return self._source_inputs[name]
         source = self.config.sources[name]
         if source.format == "xlsx":
             raw = self.project.read(source.path)
             text = None
         else:
             text, raw = self.project.text(source.path)
-        self.hashes[source.path] = sha256(raw)
+        identity = sha256(raw)
+        if source.path in self.hashes and self.hashes[source.path] != identity:
+            raise PaperDeltaError("INPUT_CHANGED", msg("error.INPUT_CHANGED", path=source.path))
+        self.hashes[source.path] = identity
+        self._source_inputs[name] = (text, raw)
+        return text, raw
+
+    def load_source(self, name: str) -> Any:
+        if name in self.sources:
+            return self.sources[name]
+        text, raw = self._read_source(name)
+        source = self.config.sources[name]
+        data, provenance = reuse(
+            self.project,
+            "source",
+            [name, source, self.hashes[source.path]],
+            lambda: self._parse_source(name, source, text, raw),
+        )
+        if provenance is not None:
+            self.export_info[name] = provenance
+        self.sources[name] = data
+        # Once parsed, this store only needs the fresh hash and read model.
+        # Do not retain a second full byte/text copy beside a large result table.
+        self._source_inputs[name] = (None, None)
+        return data
+
+    def _parse_source(self, name, source, text, raw):
         if source.format == "json":
             data = parse_json(text)
         elif source.format == "records":
@@ -106,8 +134,7 @@ class EvidenceStore:
                 raise PaperDeltaError(
                     "INVALID_CSV", msg("error.INVALID_CSV.2", value1=source.path, exc=exc)
                 ) from exc
-        self.sources[name] = data
-        return data
+        return data, self.export_info.get(name)
 
     def _csv(self, source: Source, text: str) -> list[dict]:
         reader = csv.DictReader(
@@ -259,21 +286,37 @@ class EvidenceStore:
             metric = self.config.metrics[name]
             if isinstance(metric, DerivedMetric):
                 left, right = [self.resolve(ref) for ref in metric.args]
-                quantity = derive(metric.op, left.quantity, right.quantity)
-                evidence = {fingerprint(item): item for item in [*left.evidence, *right.evidence]}
-                result = Result(
-                    quantity,
-                    fingerprint({"rule": metric, "inputs": [left.fingerprint, right.fingerprint]}),
-                    list(evidence.values()),
-                    metric.args,
+                result = reuse(
+                    self.project,
+                    "derived_metric",
+                    [name, metric, left.to_dict(), right.to_dict()],
+                    lambda: self._derived_metric(metric, left, right),
                 )
             else:
-                result = self._source_metric(metric)
+                self._read_source(metric.source)
+                source = self.config.sources[metric.source]
+                result = reuse(
+                    self.project,
+                    "source_metric",
+                    [name, metric, source, self.hashes[source.path]],
+                    lambda: self._source_metric(metric),
+                )
             self.results[name] = result
             return result
         except PaperDeltaError as exc:
             self.errors[name] = exc
             raise
+
+    @staticmethod
+    def _derived_metric(metric, left, right):
+        quantity = derive(metric.op, left.quantity, right.quantity)
+        evidence = {fingerprint(item): item for item in [*left.evidence, *right.evidence]}
+        return Result(
+            quantity,
+            fingerprint({"rule": metric, "inputs": [left.fingerprint, right.fingerprint]}),
+            list(evidence.values()),
+            metric.args,
+        )
 
     def _source_metric(self, metric: SourceMetric) -> Result:
         source = self.config.sources[metric.source]

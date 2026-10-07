@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "wheel_sha256": "8295ecdd72cea52083f33c3aaef50042f5b7dd980adc72911612edf03a406baa",
+  "cases": 82,
+  "flows": {
+    "revisions": {
+      "cases": 10,
+      "status": "passed"
+    },
+    "reuse": {
+      "cases": 2,
+      "status": "passed"
+    },
+    "studio": {
+      "cases": 10,
+      "status": "passed"
+    },
+    "review": {
+      "cases": 6,
+      "status": "passed"
+    },
+    "batch": {
+      "cases": 6,
+      "status": "passed"
+    },
+    "scale": {
+      "cases": 2,
+      "status": "passed"
+    },
+    "evidence": {
+      "cases": 6,
+      "status": "passed"
+    },
+    "statistics": {
+      "cases": 16,
+      "status": "passed"
+    },
+    "layout": {
+      "cases": 8,
+      "status": "passed"
+    },
+    "workflows": {
+      "cases": 4,
+      "status": "passed"
+    },
+    "annotations": {
+      "cases": 4,
+      "status": "passed"
+    },
+    "reliability": {
+      "cases": 8,
+      "status": "passed"
+    }
+  },
+  "scope": "Authored real-browser workflows using the exact installed candidate wheel, not independent usability."
+}

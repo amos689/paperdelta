@@ -267,3 +267,5 @@ directory must be new. The scale tool records actual local browser wall time;
 those samples are not a latency promise for arbitrary projects.
 
 See [generation workflows](v1.6.md) for saved Notebook cells, reviewed input/output records, result fragments and revision lists.
+
+From 1.9, the session and its watcher reuse unchanged parsed inputs and metric results within a bounded process-local cache. Every check still reads current contents and recomputes verdicts and original positions. See [incremental checks](v1.9.md) for invalidation rules, the full-check comparison and memory limits.
