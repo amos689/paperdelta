@@ -220,7 +220,7 @@ and documentation commit `692b18d`.
 
 | Delivery | Required scope | Acceptance evidence | Status |
 | --- | --- | --- | --- |
-| 1.7 | A joined evidence/location/impact/revision workspace; reuse accepted experiment definitions; fewer repeated inputs; task-oriented bilingual tutorials; reviewed Markdown/Quarto numeric patches with recovery and claim guards | Compare the same authored onboarding and revision tasks before/after; real bilingual browser workflows; preview is read-only, stale/forged/overlapping patches are refused, UTF-8/CRLF preserved, interrupted and completed writes recover, false/unknown claims block mechanical edits | In development |
+| 1.7 | A joined evidence/location/impact/revision workspace; reuse accepted experiment definitions; fewer repeated inputs; task-oriented bilingual tutorials; reviewed Markdown/Quarto numeric patches with recovery and claim guards | Compare the same authored onboarding and revision tasks before/after; real bilingual browser workflows; preview is read-only, stale/forged/overlapping patches are refused, UTF-8/CRLF preserved, interrupted and completed writes recover, false/unknown claims block mechanical edits | Released 1.7.0 |
 | 1.8 | Word comment-copy and PDF annotation-copy exports; improve complex headers, notes and multi-column native positioning using recorded failures | Original files unchanged; annotations point to the reviewed exact original locations; edited inputs invalidate previews; re-run existing misses/unknowns without rewriting frozen results; additional licensed document families with a development/held-out split fixed before parser changes and published all-outcome results | Required |
 | 1.9 | File/configuration identity based incremental checks, dependency invalidation and bounded caches in ongoing review | Cold/warm/change/delete/config/parser-version cases equal full-check verdicts, positions and coverage; measured repeated checks on large authored projects; bounded memory and no stale passing results after missing or changed evidence | Required |
 | 2.0 | Agent suggestions with explicit experiment identity, original positions, evidence, conflicts and abstention; explicit user confirmation remains required | Diagnose the recorded real-model failures, evaluate actual model calls independently of deterministic validators and UI scripts, preserve failures and costs, repeat previous tasks as regression and add separately held-out tasks; no unattended acceptance claims | Required |
@@ -237,3 +237,19 @@ checks and verified public artifacts. Only the owner's noreply Git identity is
 used. Previously frozen studies and implementation snapshots retain exact bytes;
 new studies and evidence receive new versioned directories. No independent human
 recruitment is required for release, and authored tests are not described as such.
+
+### 1.7 delivery record
+
+Released 2026-10-07 from `e5afa66988a64dc640e5bfe5b4cdd91d70dd02a2`:
+[GitHub](https://github.com/amos689/paperdelta/releases/tag/v1.7.0),
+[PyPI](https://pypi.org/project/paperdelta/1.7.0/), and
+[public verification](assets/v1.7/publication.json). All 17 named
+[CI jobs](https://github.com/amos689/paperdelta/actions/runs/37565566327) passed.
+The exact release wheel passed 924 Windows tests with three POSIX-only skips,
+70 browser cases (68 bilingual flows and two scale cases), and 13 isolated starts.
+Actual published 1.6 drafts and transaction recovery were checked. Public downloads
+match all three artifact hashes; a fresh public install ran five formats in both
+languages. The same-input comparison records reviewed-definition reuse decreasing
+from three actions to one, and the complete authored flow from 75 to 73 actions.
+These checks do not establish independent usability or general extraction accuracy.
+The approved 1.8, 1.9 and 2.0 work remains required.
