@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "scope": "Four authored saved-state browser workflows; actual Jupyter execution and Quarto rendering are measured separately. Not independent usability or scientific validity.",
+  "cases": [
+    {
+      "name": "latex-en",
+      "status": "passed",
+      "format": "latex",
+      "language": "en",
+      "language_switch_preserved_fields_and_selection": true,
+      "explicit_acceptance": true,
+      "declared_only": true,
+      "no_project_execution": true,
+      "source_files_preserved_before_authored_change": true,
+      "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+      "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+      "delayed_real_review": true,
+      "generation_only_would_finish_early": true,
+      "remote_requests": []
+    },
+    {
+      "name": "latex-zh-CN",
+      "status": "passed",
+      "format": "latex",
+      "language": "zh-CN",
+      "language_switch_preserved_fields_and_selection": true,
+      "explicit_acceptance": true,
+      "declared_only": true,
+      "no_project_execution": true,
+      "source_files_preserved_before_authored_change": true,
+      "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+      "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+      "delayed_real_review": true,
+      "generation_only_would_finish_early": true,
+      "remote_requests": []
+    },
+    {
+      "name": "markdown-en",
+      "status": "passed",
+      "format": "markdown",
+      "language": "en",
+      "language_switch_preserved_fields_and_selection": true,
+      "explicit_acceptance": true,
+      "declared_only": true,
+      "no_project_execution": true,
+      "source_files_preserved_before_authored_change": true,
+      "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+      "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+      "delayed_real_review": true,
+      "generation_only_would_finish_early": true,
+      "remote_requests": []
+    },
+    {
+      "name": "markdown-zh-CN",
+      "status": "passed",
+      "format": "markdown",
+      "language": "zh-CN",
+      "language_switch_preserved_fields_and_selection": true,
+      "explicit_acceptance": true,
+      "declared_only": true,
+      "no_project_execution": true,
+      "source_files_preserved_before_authored_change": true,
+      "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+      "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+      "delayed_real_review": true,
+      "generation_only_would_finish_early": true,
+      "remote_requests": []
+    }
+  ]
+}

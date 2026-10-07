@@ -38,6 +38,20 @@
         112648060744,
         112648060774
       ]
+    },
+    {
+      "observed": "The second public verification completed all downloads and ten demos, then failed an auxiliary JavaScript marker check because the local release helper guessed annotation-export-button instead of the implemented annotation-download control.",
+      "change": "Inspect the shipped script, require both the actual annotation-download control and annotation-export API markers, and repeat public verification without changing the released package. Earlier logs remain retained."
+    },
+    {
+      "observed": "First remote run 37577011131 also failed the final Markdown/Chinese workflow check while showing the previous all-passing report. Its wait condition accepted any newer generation rather than the edited CSV identity.",
+      "change": "The final exact-commit CI passed all 17 jobs. An additional real-browser delay experiment on the unchanged installed 1.8 wheel reproduced early completion of the generation-only wait in all four cases; waiting for the edited CSV hash verified correct eventual producer/render/fragment invalidation. The strengthened harness is delivered in 1.9; the frozen 1.8 runtime is unchanged.",
+      "diagnostic": "workflow-wait-diagnostic.json"
+    },
+    {
+      "observed": "PyPI returned HTTP 500 for the source archive twice; the publisher succeeded on its third attempt. The first post-publication JSON-index query still listed only the wheel, so strict verification failed.",
+      "change": "Preserve the failed query log. A subsequent fresh verification requires both Python distributions, matching downloaded hashes, and ten successful bilingual five-format demos before recording publication.",
+      "workflow": "https://github.com/amos689/paperdelta/actions/runs/37583138698"
     }
   ]
 }
