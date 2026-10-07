@@ -14,7 +14,13 @@ from pydantic import ConfigDict, Field, ValidationError, create_model
 from paperdelta import builder
 from paperdelta.errors import PaperDeltaError, error_message
 from paperdelta.i18n import current_language, language_context, msg, tr
-from paperdelta.models import Hash, Identifier, ReviewedTableIdentity
+from paperdelta.models import (
+    Hash,
+    Identifier,
+    ReviewedTableIdentity,
+    StatisticalContract,
+    StatisticalDisplay,
+)
 from paperdelta.onboarding import inspect_proposal, scan_project
 from paperdelta.proposal_review import draft_review, from_checked
 from paperdelta.storage import json_text
@@ -56,6 +62,8 @@ def _stage_models(language):
                 kind = list[Hash]
             elif key == "table_identity":
                 kind = ReviewedTableIdentity | None
+            elif key == "statistics":
+                kind = (StatisticalContract if name == "metric" else StatisticalDisplay) | None
             description = {
                 "name": "identifier",
                 "source": "reference",
@@ -74,6 +82,8 @@ def _stage_models(language):
                 "places": "places",
                 "candidate_ids": "candidate_ids",
                 "table_identity": "table_identity",
+                "expected_seeds": "expected_seeds",
+                "statistics": "statistics",
             }.get(key)
             with language_context(language):
                 fields[key] = (
@@ -102,6 +112,8 @@ def _hint(code, action):
         return msg("mapping.hint_unit")
     if code == "BUILDER_SELECTION" and action == "locations":
         return msg("mapping.hint_selection")
+    if code == "BINDING_CONFLICT":
+        return msg("mapping.hint_existing")
     return msg("mapping.hint_arguments")
 
 

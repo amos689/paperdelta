@@ -63,7 +63,22 @@ At most 16 total actions, 3 invalid actions and 2048 completion tokens per actio
 Each call includes the original task, initial schemas and latest authoritative cumulative
 state plus your last action. Older turns are omitted. No gold answer, scorer feedback, code
 execution, file write or acceptance tool is available. finish uses empty arguments and
-only produces a proposal for author review. /no_think"""
+only produces a proposal for author review.
+
+Before the first action, read the author's export notes. If a required experiment identity,
+source unit, run, observation or statistical method is absent or explicitly unknown,
+choose abstain immediately. Do not invent evidence from a matching manuscript number.
+CSV/TSV/XLSX sources require columns and primary_key on the FIRST source action. JSON
+sources must omit table columns and primary_key; field is an exact escaped JSON pointer.
+Every mean/sum/count aggregation needs expected_count. where values are SINGLE strings;
+a seed collection belongs in expected_seeds, a list of strings, never where.seed.
+For a simple value omit statistics at BOTH metric and locations stages; statistics is
+a declared statistical method/display contract, not a place to enter computed numbers.
+Read CURRENT STATE as authoritative. An existing source or metric is already declared:
+reference its name, do not add it again. Undo successful later stages before correcting it.
+After the requested location is bound, review it and finish with empty arguments.
+Answer ONLY the next action JSON. Do not restart the workflow or repeat an unchanged error.
+/no_think"""
 
 
 def cases_for(split):
@@ -161,6 +176,40 @@ def project_context(project, agent):
     }
 
 
+def static_input(request, session, context):
+    """Render original notes plainly; do not bury them in escaped nested strings."""
+    sections = ["REQUEST.md\n" + request]
+    for name, value in context["project_files"].items():
+        sections.append(
+            "ORIGINAL FILE " + name + "\n" + (value if isinstance(value, str) else json_text(value))
+        )
+    for label, value in (
+        ("NATIVE READ MODELS", context["native_read_models"]),
+        ("SOURCE CONTRACT SUGGESTIONS", context["source_contract_suggestions"]),
+        ("STAGE SCHEMAS", session["stage_schemas"]),
+        ("ORIGINAL DISCOVERY", session["discovery"]),
+    ):
+        sections.append(label + "\n" + json_text(value))
+    return "\n\n".join(sections)
+
+
+def current_message(state):
+    current = {
+        key: value
+        for key, value in visible(state).items()
+        if key not in {"stage_schemas", "discovery", "instructions", "limits"}
+    }
+    return {
+        "role": "user",
+        "content": (
+            "CURRENT STATE (authoritative; existing declarations must not be added again):\n"
+            + json_text(current)
+            + "\nReturn the next allowed action only. Read the task and original evidence notes. "
+            "Abstain for missing evidence; use exact existing IDs, units and schemas."
+        ),
+    }
+
+
 def prepare(directory, split, model, provenance, freeze=None):
     assert not directory.exists(), "Use a new directory; preserve all earlier attempts"
     cases, hashes = cases_for(split)
@@ -176,17 +225,17 @@ def prepare(directory, split, model, provenance, freeze=None):
         with language_context(case["language"]):
             project = Project(case["path"] / "project")
             agent = AgentSession(project)
-            context = {
-                "REQUEST.md": (case["path"] / "request.md").read_text("utf-8"),
-                "initial_session": visible(agent.mapping_call("start")),
-                **project_context(project, agent),
-            }
+            context = static_input(
+                (case["path"] / "request.md").read_text("utf-8"),
+                agent.mapping_call("start"),
+                project_context(project, agent),
+            )
         target = directory / "initial-prompts" / f"{name}.json"
         write_new(
             target,
             [
                 {"role": "system", "content": SYSTEM},
-                {"role": "user", "content": json_text(context)},
+                {"role": "user", "content": context},
             ],
         )
         prompts[name] = sha256(target.read_bytes())
@@ -227,9 +276,11 @@ def prepare(directory, split, model, provenance, freeze=None):
             "top_p": 0.8,
             "seed": 20261006,
             "context": (
-                "Original request, evidence bytes/read models, schemas, source advice, "
-                "latest cumulative state and last action. Shared review replaces duplicated "
-                "preview evidence. No oracle, score feedback or answer repair."
+                "Original request and evidence notes rendered as plain sections, original "
+                "bytes/read models, schemas and source advice. Each actual request appends "
+                "only the latest cumulative state and last action; no obsolete initial state. "
+                "Shared review replaces duplicated preview evidence. No oracle, score feedback "
+                "or answer repair."
             ),
             "scope": "Old observed regression"
             if split == "regression"
@@ -283,7 +334,7 @@ def run(directory, endpoint):
             initial = parse_json(
                 (directory / "initial-prompts" / f"{name}.json").read_text("utf-8")
             )
-            messages = initial
+            messages = [*initial, current_message(state)]
             outcome = {"status": "action_limit", "actions": [], "accepted_bindings": 0}
             for index in range(1, protocol["max_actions_per_case"] + 1):
                 base = directory / "cases" / name / f"{index:02d}"
@@ -365,7 +416,7 @@ def run(directory, endpoint):
                     messages = [
                         *initial,
                         {"role": "assistant", "content": content},
-                        {"role": "user", "content": json_text(feedback)},
+                        current_message(state),
                     ]
                 except urllib.error.HTTPError as exc:
                     raw = exc.read(2 * 1024 * 1024)

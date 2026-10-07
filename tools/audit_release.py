@@ -17,6 +17,8 @@ from email.parser import BytesParser
 from hashlib import sha256
 from pathlib import Path, PurePosixPath
 
+from audit_mapping_v5 import audit_mapping_v5
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -256,6 +258,8 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.6").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.7").glob("*")]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.8").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.9").glob("*")]
+    required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v2.0").glob("*")]
     required += [
         p.relative_to(ROOT).as_posix()
         for study in ("mapping-v4", "mapping-v5")
@@ -482,6 +486,7 @@ def main():
         "python_distributions_exclude_native_corpus": True,
     }
     record["native_v3"] = audit_native_v3(evaluation, notices)
+    record["mapping_v5"] = audit_mapping_v5(evaluation)
     target = directory / "package-audit.json"
     target.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(record, indent=2))

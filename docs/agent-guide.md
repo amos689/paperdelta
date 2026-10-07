@@ -16,6 +16,13 @@ See [Word support and read-only limits](word.md); the LaTeX examples below remai
 PaperDelta supplies deterministic evidence and proposal validation. Matching
 numbers alone do not establish a correct scientific mapping.
 
+The [2.0 evidence review](v2.0.md) joins declared identity, exact input hashes,
+source units, original context and conflicts across direct/staged/batch proposals,
+CLI and Studio. Read `review` alongside the proposal; provided reasons remain
+unverified assertions. Bounded sessions support explicit `undo` of at most four
+successful stages within the existing sixteen-action budget. Review all source
+records before explicitly accepting a saved proposal.
+
 ## Suggested agent instruction
 
 > Read `paperdelta scan --format json` and the proposal-input schema. Suggest

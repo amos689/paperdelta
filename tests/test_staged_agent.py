@@ -137,3 +137,51 @@ def test_session_handles_are_process_local_and_expire(mapping):
     with pytest.raises(PaperDeltaError) as error:
         mapping.mapping_call("inspect", state["session_id"])
     assert error.value.code == "MAPPING_SESSION"
+
+
+def test_statistical_method_and_display_are_typed_without_accepting_computed_values(mapping):
+    start = mapping.mapping_call("start")
+    state = source(mapping, start)
+    state = mapping.mapping_call(
+        "advance",
+        state["session_id"],
+        state["revision"],
+        "metric",
+        {
+            "name": "accuracy",
+            "source": "results",
+            "field": "accuracy",
+            "where": {"model": "001"},
+            "unit": "fraction",
+            "reduce": "statistics",
+            "expected_count": 2,
+            "expected_seeds": ["1", "2"],
+            "statistics": {"ddof": 1, "unit_of_analysis": "seed"},
+        },
+    )
+    assert state["applied"]
+    previous = state["draft_id"]
+    candidate = next(c for c in start["discovery"]["candidates"] if c["text"] == "80.0")
+    arguments = {
+        "metric": "accuracy",
+        "candidate_ids": [candidate["candidate_id"]],
+        "names": ["accuracy_text"],
+        "display_kind": "percent",
+        "places": 1,
+        "percent_symbol": True,
+        "rationale": "Mean across both declared model 001 seeds.",
+        "statistics": {"mean": "0.80"},
+    }
+    state = mapping.mapping_call(
+        "advance", state["session_id"], state["revision"], "locations", arguments
+    )
+    assert not state["applied"] and state["draft_id"] == previous
+    assert ["statistics", "mean"] in state["error"]["fields"]
+    arguments["statistics"] = {"component": "mean"}
+    state = mapping.mapping_call(
+        "advance", state["session_id"], state["revision"], "locations", arguments
+    )
+    assert state["applied"]
+    state = mapping.mapping_call("advance", state["session_id"], state["revision"], "finish", {})
+    assert state["status"] == "proposed" and state["requires_confirmation"]
+    assert state["review"]["bindings"][0]["deterministic_result"]["status"] == "pass"

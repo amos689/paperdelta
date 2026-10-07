@@ -29,5 +29,13 @@
     }
   ],
   "authored_control_receipt": "build/v20-mapping-controls1/evidence.json",
-  "control_scope": "13 development reference/adversarial controls, zero model calls; these do not measure model success."
+  "control_scope": "13 development reference/adversarial controls, zero model calls; these do not measure model success.",
+  "development_round_1": {
+    "regression": "0/9 complete, 0/3 required abstentions; 57 actions, 32 invalid",
+    "development": "1/8 complete, 0/4 required abstentions; 57 actions, 33 invalid",
+    "diagnosis": "D02 omitted count and used an unsupported unit; D03 re-added existing declarations; D04 supplied table columns for JSON repeatedly; D05-D07 put computed mean into a statistics contract; D10 ignored missing checkpoint; D11 invented fraction units despite explicit unknown; D12 tried to derive a p-value from counts without observations.",
+    "response": "Provide actual typed statistical schemas and clearer general field/stage guidance; display original notes as plain text; remove obsolete initial-session state from follow-up requests; retain the latest cumulative state and one previous action. No task/oracle/scoring/budget/model change.",
+    "concurrent_workload": "The complete development pytest suite also ran on this host. Inference timings are observed call costs, not isolated performance benchmarks.",
+    "scope": "The first implementation, prompts, raw outputs and scores remain separately preserved. No held-out inference has run."
+  }
 }
