@@ -1,0 +1,3195 @@
+{
+  "by_file": [
+    {
+      "case": "plosgenetics-1011507",
+      "counts": {
+        "unknown": 16
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "counts": {
+        "supported": 4,
+        "unknown": 12
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "counts": {
+        "supported": 6,
+        "unknown": 10
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "counts": {
+        "missed": 1,
+        "supported": 11,
+        "unknown": 4
+      },
+      "format": "pdf"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "counts": {
+        "supported": 8,
+        "unknown": 8
+      },
+      "format": "docx"
+    }
+  ],
+  "coordinates": "font",
+  "counts": {
+    "mislocated": 0,
+    "missed": 1,
+    "supported": 29,
+    "unknown": 50
+  },
+  "created_at": "2026-10-07T05:08:57.634927+00:00",
+  "dependencies": {
+    "lxml": "6.1.3",
+    "pdfminer.six": "20260107",
+    "pdfplumber": "0.11.10",
+    "python-docx": "1.2.0"
+  },
+  "gold": {
+    "held-out": "cd805c7737a7e57f3278c6082f03067caed78103026b0e510b076d60b0c059b0"
+  },
+  "implementation": {
+    "pyproject.toml": "d2d967639744a379108d40bd47746b614cc3fbdc5a77a730c1a82bba892164ca",
+    "src/paperdelta/__init__.py": "7f1c4414a9bc424aa07d7dd685709e4503315419c9f7eaf7158cd08b15eb98f4",
+    "src/paperdelta/__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd",
+    "src/paperdelta/actions.py": "070f0cd9767331c460e7c8174530f71ee23cc1896c2d7479cd6017e5c2fb897e",
+    "src/paperdelta/agent.py": "818d327a4f6af8f1f8ece71f7b3c9dbf9e79893fd2c8e1027eee8738e44473b9",
+    "src/paperdelta/analysis.py": "ef24116cde45ebfcb5878e4530b9e97c1b01859b3e57deaadc4c6a894fe7d51b",
+    "src/paperdelta/annotation_cli.py": "7f6e5600850b8a102e4bb7ca7c65f83848acc4376aac744fa3ec32b5041e4e25",
+    "src/paperdelta/annotations.py": "d12836fe062cc8871ca725e023deb4b1238ef073b13ded4c850ded2d4976aea4",
+    "src/paperdelta/arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+    "src/paperdelta/assets/report.css": "6e8d4c3a2c09c32e3d9a38f6e4e102d54ab1e913466a98c7d882a81ff8d8f77d",
+    "src/paperdelta/assets/report.js": "0bbdbf871808403044fff8c9fe854809453ae5f53f065921f584f600b0bcf2e6",
+    "src/paperdelta/assets/studio-annotations.js": "6cbf0cffb96609b998455cdeab055e1baa2893b6f07ce59ff5b3637de6451689",
+    "src/paperdelta/assets/studio-batch.js": "dc96c22eb274c4c9b0815b2aca7a0b51dceea18f3c4d26e90ef9620ad4c4f091",
+    "src/paperdelta/assets/studio-review.js": "fb3278b71f583193e29a0b82064cb961c36766e3bfd9024415c35dec594895cd",
+    "src/paperdelta/assets/studio-revisions.js": "3542d21acc4b8b11f15e743deff13733f8cfd1a3e54c9d683c8b7946976bffdb",
+    "src/paperdelta/assets/studio-statistics.js": "fa2bb269a2b92d61a943f31f588ca7d3926bec6d9203182a4f73db11c7d91942",
+    "src/paperdelta/assets/studio-workflows.js": "29e78d1c32c1c0ee1ea2952d6de44c55e3f936249ae73056de6ab89f2a7928f3",
+    "src/paperdelta/assets/studio.css": "2c92c8f7fc44cde01ff3ffb5cabd80084c05d1c1f24054742e6150897541ff8b",
+    "src/paperdelta/assets/studio.js": "e6947f8430d9fa19589183d6183a74c0993535aa023f335a68ba34d56fb1b6d2",
+    "src/paperdelta/batch.py": "729769ea8e2d943b4c9d25431fa430f652e5b1435362902e572ad3e447381a06",
+    "src/paperdelta/batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+    "src/paperdelta/batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+    "src/paperdelta/builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+    "src/paperdelta/cli.py": "38b00fa9aed4ca05f8a5f5705671b9d193efbb142a8f86d135480b9afb5cd077",
+    "src/paperdelta/config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+    "src/paperdelta/config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+    "src/paperdelta/coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+    "src/paperdelta/declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+    "src/paperdelta/demo.py": "4e170eeb843b7c20e2152852d986f32cbf3ee86b5a360eb86519a0d767654300",
+    "src/paperdelta/demo_markdown/paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_markdown/paperdelta.yaml": "682ef1ea195e32c78a67a1e6093a23f0ee71ea7ba0ab88d7e1cc5cfc41d5d508",
+    "src/paperdelta/demo_markdown/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+    "src/paperdelta/demo_pdf/paperdelta.yaml": "829ff349e6333e5bd7be71ea79a485a4c5badfc34830e367b85e27523d2d201b",
+    "src/paperdelta/demo_pdf/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_pdf/source.tex": "4e7b1c6fdb95bf8e15ea67a9acaa23749ba779a2b1b853b1469467cc2adb4c09",
+    "src/paperdelta/demo_project/paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+    "src/paperdelta/demo_project/paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+    "src/paperdelta/demo_project/paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+    "src/paperdelta/demo_project/paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+    "src/paperdelta/demo_project/paper/figures/accuracy.record.json": "0065cda3bb9f88175b7e1fc9df2b269b66768f303d4051ee712e229c01b5aef9",
+    "src/paperdelta/demo_project/paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+    "src/paperdelta/demo_project/paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+    "src/paperdelta/demo_project/paperdelta.yaml": "d581236ae0c1a93950efed3402cfad881f846461829f350d3ed3b61fd12676ac",
+    "src/paperdelta/demo_project/results/metrics.csv": "ea17095e068c1fd06b412f9f48d912ebf5864c52e7a188a1e7a516c53335db46",
+    "src/paperdelta/demo_project/scripts/plot_accuracy.py": "145099040e5cfd40ae2b3f33240246bd2c6b91c34d2559b9ae3457c242f74907",
+    "src/paperdelta/demo_quarto/paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+    "src/paperdelta/demo_quarto/paperdelta.yaml": "ceec6221d92adf3656f561fbd468ef39e2df003a5dc6ed109d5ed3d4f27688a7",
+    "src/paperdelta/demo_quarto/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/demo_word/paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+    "src/paperdelta/demo_word/paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+    "src/paperdelta/demo_word/results/metrics.csv": "1753b0ceafc24dd84968e914968c98511cc92fe8962548892c7f3673234556f7",
+    "src/paperdelta/diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+    "src/paperdelta/doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+    "src/paperdelta/documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+    "src/paperdelta/docx_document.py": "449d9eafa111c61f590353a0482a364b9b876d95f5bf2817142ee4a7e375a501",
+    "src/paperdelta/errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+    "src/paperdelta/evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+    "src/paperdelta/evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+    "src/paperdelta/experiment_aliases.py": "941dbc4e522486ec32c6c54bed8e611ecd6781950560da5e91535cb25faaa8bf",
+    "src/paperdelta/experiment_definitions.py": "501da96211e515a5b67fe5e9256cc48f0551a8d382925c9ca49c0eb6f7788ac9",
+    "src/paperdelta/experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+    "src/paperdelta/experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+    "src/paperdelta/fragment_cli.py": "76c05806f6f40ab81b5edf1aff44f1ac1134ee2d066376715fe3ba193f0ac926",
+    "src/paperdelta/fragments.py": "39df6fc6014e8c7033ecc8405b820531bd948d3c1250f2ce89997e55d26faa5f",
+    "src/paperdelta/guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+    "src/paperdelta/html_report.py": "dbc00be086b608298d36276fcb30d102e6489ab611217d720c1440a0333f115d",
+    "src/paperdelta/i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+    "src/paperdelta/interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+    "src/paperdelta/latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+    "src/paperdelta/locales/en.json": "3a848dc1c7097b1316c8532bbcc2ef8f4ea29ef9b02cdd1bf46dedc77df04bd7",
+    "src/paperdelta/locales/zh-CN.json": "d2f558d031ed230ef7d7b0ed063e5ca437b79b8b68be713618729b4f037b4da4",
+    "src/paperdelta/locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+    "src/paperdelta/manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+    "src/paperdelta/markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+    "src/paperdelta/mcp_server.py": "5c8448bcfdc5f1da58a9cd5e4692787e4b723309b931bc6ead42b4ee46620e3d",
+    "src/paperdelta/metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+    "src/paperdelta/models.py": "e612f3b8caa71ed0f41383bcf6bce14fc4b687e60a6249efdb1659cbe976d02b",
+    "src/paperdelta/native_comments.py": "6ddce0dfb76513b23d512c81cecbd5dda06b3c031aeb3757fc4cf012fac7b444",
+    "src/paperdelta/native_document.py": "abcb05fc181a479a59a7518716a387ff1d6755efbef2671f80134ac98de94eba",
+    "src/paperdelta/native_scientific.py": "d00e982ff640ada9149e3dbe17e3373a918d1f8c59b90d830ee99d2d28ee0ac4",
+    "src/paperdelta/notebooks.py": "ab14f5fced2c26d8bbc8119885dfbffc823726923ea42ec9d785fb9f5be45d42",
+    "src/paperdelta/onboarding.py": "fee177d7887448c25b508ff835d01d13913bae9690c386a1ce62be802c7d1798",
+    "src/paperdelta/patches.py": "124e629dd30382c1a98883480c1185f1b2c3e10f80b4f9aa6262495b9d45ab7a",
+    "src/paperdelta/pdf_document.py": "029ae81435f69edf4616ce8c831f538c77db1de6f28399254e421f5a02cbd342",
+    "src/paperdelta/pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+    "src/paperdelta/pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+    "src/paperdelta/pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "src/paperdelta/pr_review.py": "bfa680c254db2fe4afcffaa41c94ecdc268d62d0b74909823b99f94a3ace4e40",
+    "src/paperdelta/preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+    "src/paperdelta/producer_run.py": "180240f126a08b816a3085b2ef5c5640b2f28780772c12c4472cdbaf41ef2138",
+    "src/paperdelta/provenance.py": "94086a8130112d2b751a11d7658696c9bbf7cd5724ef1399db8c8a09fb65f46e",
+    "src/paperdelta/provenance_cli.py": "b1c3a6d06fbb1ca0b7ee75c4395e88c39a33dfe9a866fe07b33bbf80a0ac52ea",
+    "src/paperdelta/records.py": "ff9202dbc7514d7ca8533c51de6c6a99f6fb8ca0dad94c0958c3011d77f258b9",
+    "src/paperdelta/repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+    "src/paperdelta/reports.py": "a3f7d2f548bb4780607cb764036cab747dcb6162862ef093c9ad8611820481a9",
+    "src/paperdelta/review_bundle.py": "ce15e19a9789d4babf89aff3a3cf395b312c9fcee5a56452b1fb56b524992313",
+    "src/paperdelta/review_bundle_cli.py": "1fbdd3cfc429f30f267755303a71ff8e6e7bcc69d7e8be089a37d4c55ced796d",
+    "src/paperdelta/reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+    "src/paperdelta/revisions.py": "ad2ebc1c60c2d35f622925e3bae89780a22ccbf770ba8b4950319214611ecc17",
+    "src/paperdelta/sarif.py": "ccad81b34bcb43c2a8c74ce2bcd4c1c613a64578d9470c28ddb0050d4c960073",
+    "src/paperdelta/snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+    "src/paperdelta/source_advice.py": "6bcebeef6267a8a0c7f84d8dac61a1f47007eca360d01411080d7c4ff93c0237",
+    "src/paperdelta/sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+    "src/paperdelta/staged_agent.py": "f34d3920632b9050f26cbd74470f7b40a6122bb01f233d6291b41437acac3ad1",
+    "src/paperdelta/statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+    "src/paperdelta/statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+    "src/paperdelta/statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+    "src/paperdelta/storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+    "src/paperdelta/studio.py": "46ee12301ab65cb8ed17ee21122d0481d83bdd4d8a546382bd814c1413851e1c",
+    "src/paperdelta/studio_batch.py": "cef3cc016c62daba1efc1d627f2355ce474f171e040bba7632d5381327344564",
+    "src/paperdelta/studio_recovery.py": "101354b8a9e6c77632afa69ad5be39dc39938c734496215a9932f384e3766d73",
+    "src/paperdelta/studio_review.py": "9150237b640a90f9bae5c6dc42275c3ccce6f83a0ac6e37ca9aacdcf51454baf",
+    "src/paperdelta/studio_revisions.py": "491e697e9f0c0838b82500f3ea7867db67d1879f7f90d6c5a0a33f8a46609c66",
+    "src/paperdelta/studio_server.py": "93851feac390418872b948dd2761044abca180d0939ddac423df2d67a7ba1cc2",
+    "src/paperdelta/studio_ui.py": "87a0dc66e0fefa5dcfefa4ba3ab3ea0b6149d8011719612e53fb858a5bd9e0d0",
+    "src/paperdelta/studio_workflows.py": "dcbe92d0839437fed020970b457139f4ea8cc114556f3f9945c16e188f34ccf5",
+    "src/paperdelta/tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+    "src/paperdelta/watch.py": "e819c612b52f990125ada246a11bb1aa2b96b939319565a4d53893838ee30654",
+    "src/paperdelta/word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+    "src/paperdelta/xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+    "tools/annotate_native_v3_development.py": "d3b98ed7bfc4db1c25e220051d7c619e89afae13a1b9f9835f66812096a379a4",
+    "tools/evaluate_native_v3.py": "974ac2be7d3d080bd5bdba5b6a22e9dde37c5b7d75c966baedcced1f3c940c61",
+    "tools/prepare_native_v2.py": "b02c89d179cb1cf56e48fbcc1fcd995a16866d40554720371d530ed6ce8dcb7b",
+    "tools/prepare_native_v3.py": "2e0b5c2406e503f2da79af2bc807c0af42e70b7296a7cfbf8d2f5aff3ed67e85"
+  },
+  "matches_implementation_lock": true,
+  "mode": "first-held-out",
+  "planned_slots": 96,
+  "python": "3.12.14",
+  "results": [
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          346.7770080566406,
+          129.37298583984375,
+          351.5670166015625,
+          138.37298583984375
+        ],
+        "ink_bbox": [
+          347.2169494628906,
+          130.2230224609375,
+          351.0169677734375,
+          136.6729736328125
+        ],
+        "page": 5
+      },
+      "id": "held-001",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "3"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          396.1109619140625,
+          129.37298583984375,
+          400.9009704589844,
+          138.37298583984375
+        ],
+        "ink_bbox": [
+          397.2009582519531,
+          130.2230224609375,
+          399.9509582519531,
+          136.572998046875
+        ],
+        "page": 5
+      },
+      "id": "held-002",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "1"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          326.947021484375,
+          218.34356689453125,
+          359.66937255859375,
+          229.42095947265625
+        ],
+        "ink_bbox": [
+          328.0370178222656,
+          218.87017822265625,
+          359.42938232421875,
+          227.7509765625
+        ],
+        "page": 5
+      },
+      "id": "held-003",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "held-out",
+      "text": "1.94 e -06"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          511.9909973144531,
+          582.7655639648438,
+          544.3113403320312,
+          593.7870025634766
+        ],
+        "ink_bbox": [
+          512.4710083007812,
+          583.3321533203125,
+          543.951416015625,
+          592.0870056152344
+        ],
+        "page": 5
+      },
+      "id": "held-004",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scientific",
+      "split": "held-out",
+      "text": "5.13 e -05"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          245.7090301513672,
+          597.8270111083984,
+          250.49903869628906,
+          606.8270111083984
+        ],
+        "ink_bbox": [
+          245.9090118408203,
+          598.7070007324219,
+          250.26901245117188,
+          605.0270080566406
+        ],
+        "page": 5
+      },
+      "id": "held-005",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "4"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          355.7489929199219,
+          597.8270111083984,
+          360.53900146484375,
+          606.8270111083984
+        ],
+        "ink_bbox": [
+          356.0690002441406,
+          598.677001953125,
+          360.14898681640625,
+          605.0270080566406
+        ],
+        "page": 5
+      },
+      "id": "held-006",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "2"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          513.1849975585938,
+          597.8270111083984,
+          522.6650390625,
+          606.8270111083984
+        ],
+        "ink_bbox": [
+          513.625,
+          598.677001953125,
+          522.2750244140625,
+          605.1570129394531
+        ],
+        "page": 5
+      },
+      "id": "held-007",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "39"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          489.4271545410156,
+          680.3130187988281,
+          503.7171630859375,
+          689.3130187988281
+        ],
+        "ink_bbox": [
+          490.51715087890625,
+          681.1630172729492,
+          503.3571472167969,
+          687.6130142211914
+        ],
+        "page": 7
+      },
+      "id": "held-008",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "120"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          144.45510864257812,
+          172.5389404296875,
+          152.0790252685547,
+          179.7388916015625
+        ],
+        "ink_bbox": [
+          145.32711791992188,
+          173.21893310546875,
+          151.79103088378906,
+          178.37890625
+        ],
+        "page": 7
+      },
+      "id": "held-009",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          500.0300598144531,
+          324.5331115722656,
+          503.86199951171875,
+          331.7330017089844
+        ],
+        "ink_bbox": [
+          500.33404541015625,
+          325.21307373046875,
+          503.5500183105469,
+          330.3970031738281
+        ],
+        "page": 7
+      },
+      "id": "held-010",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "9"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          521.6865844726562,
+          324.5331115722656,
+          529.3104858398438,
+          331.7330017089844
+        ],
+        "ink_bbox": [
+          522.55859375,
+          325.21307373046875,
+          529.0225219726562,
+          330.37298583984375
+        ],
+        "page": 7
+      },
+      "id": "held-011",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "10"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          376.3250427246094,
+          77.385986328125,
+          389.1550598144531,
+          86.385986328125
+        ],
+        "ink_bbox": [
+          376.64501953125,
+          77.93597412109375,
+          388.6050109863281,
+          85.0059814453125
+        ],
+        "page": 8
+      },
+      "id": "held-012",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "fraction",
+      "split": "held-out",
+      "text": "2/3"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          519.9840698242188,
+          77.385986328125,
+          529.5240478515625,
+          86.385986328125
+        ],
+        "ink_bbox": [
+          520.364013671875,
+          78.23602294921875,
+          529.1640014648438,
+          84.71600341796875
+        ],
+        "page": 8
+      },
+      "id": "held-013",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "90"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          145.9842529296875,
+          678.3528366088867,
+          153.608154296875,
+          685.5527420043945
+        ],
+        "ink_bbox": [
+          146.24024963378906,
+          679.0328216552734,
+          153.32015991210938,
+          684.1927642822266
+        ],
+        "page": 10
+      },
+      "id": "held-014",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "20"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          195.4763946533203,
+          678.3528366088867,
+          199.308349609375,
+          685.5527420043945
+        ],
+        "ink_bbox": [
+          195.83641052246094,
+          679.0328216552734,
+          198.95635986328125,
+          684.1927642822266
+        ],
+        "page": 10
+      },
+      "id": "held-015",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "8"
+    },
+    {
+      "case": "plosgenetics-1011507",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          289.6438293457031,
+          678.3530731201172,
+          293.47576904296875,
+          685.552978515625
+        ],
+        "ink_bbox": [
+          289.9398193359375,
+          678.9850616455078,
+          293.21978759765625,
+          684.193000793457
+        ],
+        "page": 10
+      },
+      "id": "held-016",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "6"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          326.72137451171875,
+          126.8446044921875,
+          372.976806640625,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          326.9773864746094,
+          126.92462158203125,
+          372.43280029296875,
+          133.94854736328125
+        ],
+        "page": 8
+      },
+      "id": "held-017",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "24,123 (33.7)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          477.693115234375,
+          126.8446044921875,
+          523.8916625976562,
+          134.0445556640625
+        ],
+        "ink_bbox": [
+          477.8531188964844,
+          126.92462158203125,
+          523.3477172851562,
+          133.94854736328125
+        ],
+        "page": 8
+      },
+      "id": "held-018",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "41,297 (52.4)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          326.71966552734375,
+          139.37396240234375,
+          372.9742736816406,
+          146.57391357421875
+        ],
+        "ink_bbox": [
+          327.5916442871094,
+          139.45404052734375,
+          372.4302673339844,
+          146.47796630859375
+        ],
+        "page": 8
+      },
+      "id": "held-019",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "17,202 (24.0)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          481.490478515625,
+          139.37396240234375,
+          520.0580444335938,
+          146.57391357421875
+        ],
+        "ink_bbox": [
+          481.7864990234375,
+          139.45404052734375,
+          519.5140380859375,
+          146.47796630859375
+        ],
+        "page": 8
+      },
+      "id": "held-020",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "6,034 (7.7)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          330.5180358886719,
+          164.375244140625,
+          372.9742736816406,
+          171.5751953125
+        ],
+        "ink_bbox": [
+          330.8940124511719,
+          164.455322265625,
+          372.4302673339844,
+          171.479248046875
+        ],
+        "page": 8
+      },
+      "id": "held-021",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "7,907 (11.0)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          481.490478515625,
+          164.375244140625,
+          520.0580444335938,
+          171.5751953125
+        ],
+        "ink_bbox": [
+          481.7864990234375,
+          164.455322265625,
+          519.5140380859375,
+          171.479248046875
+        ],
+        "page": 8
+      },
+      "id": "held-022",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "6,681 (8.5)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          326.7196350097656,
+          176.84716796875,
+          372.9742431640625,
+          184.047119140625
+        ],
+        "ink_bbox": [
+          326.879638671875,
+          176.92718505859375,
+          372.43023681640625,
+          183.95111083984375
+        ],
+        "page": 8
+      },
+      "id": "held-023",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "48,721 (68.1)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          477.692138671875,
+          176.84716796875,
+          523.8899536132812,
+          184.047119140625
+        ],
+        "ink_bbox": [
+          478.0761413574219,
+          176.92718505859375,
+          523.3460083007812,
+          183.95111083984375
+        ],
+        "page": 8
+      },
+      "id": "held-024",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "55,165 (70.0)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          326.7196350097656,
+          189.37664794921875,
+          372.9742431640625,
+          196.57659912109375
+        ],
+        "ink_bbox": [
+          327.59161376953125,
+          189.45660400390625,
+          372.43023681640625,
+          196.48052978515625
+        ],
+        "page": 8
+      },
+      "id": "held-025",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "10,904 (15.2)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          477.692138671875,
+          189.37664794921875,
+          523.8899536132812,
+          196.57659912109375
+        ],
+        "ink_bbox": [
+          478.5641174316406,
+          189.45660400390625,
+          523.3460083007812,
+          196.48052978515625
+        ],
+        "page": 8
+      },
+      "id": "held-026",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "12,706 (16.1)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          330.5180358886719,
+          201.8492431640625,
+          369.14227294921875,
+          209.0491943359375
+        ],
+        "ink_bbox": [
+          330.7740173339844,
+          201.92926025390625,
+          368.59832763671875,
+          208.95318603515625
+        ],
+        "page": 8
+      },
+      "id": "held-027",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "2,546 (3.6)"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          481.490478515625,
+          201.8492431640625,
+          520.0580444335938,
+          209.0491943359375
+        ],
+        "ink_bbox": [
+          481.74652099609375,
+          201.92926025390625,
+          519.5140380859375,
+          208.95318603515625
+        ],
+        "page": 8
+      },
+      "id": "held-028",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "count_percent",
+      "split": "held-out",
+      "text": "2,713 (3.4)"
+    },
+    {
+      "actual": {
+        "context": "sentation (N = 150,370) were included in a nationwide, register-based cohort study. Elective",
+        "end": 2526,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            259.8251,
+            575.4395,
+            293.9187,
+            584.9395
+          ],
+          "block": "sha256:a24420a9a8b39099f68a199ec4886a29bccb575027ab331d64dbcb1d6f8fe4bb",
+          "offset": 15,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 2519,
+        "text": "150,370"
+      },
+      "anchor": {
+        "block": "sha256:a24420a9a8b39099f68a199ec4886a29bccb575027ab331d64dbcb1d6f8fe4bb",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "sentation (N = ",
+        "suffix": ") were included in a nationwide, register-based cohort study. Elective"
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          259.8251037597656,
+          576.1329956054688,
+          293.7192077636719,
+          584.6829986572266
+        ],
+        "ink_bbox": [
+          260.7846374511719,
+          576.2944946289062,
+          293.4057312011719,
+          584.3504943847656
+        ],
+        "page": 1
+      },
+      "id": "held-029",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "150,370"
+    },
+    {
+      "actual": {
+        "context": "weeks (N = 358,548) were also studied.",
+        "end": 3131,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            268.8938,
+            631.4525,
+            302.9874,
+            640.9525
+          ],
+          "block": "sha256:934ca3ed27687afb5acd8a290b0a6c1dbfc641f2229c096de0a77c17ee22752e",
+          "offset": 11,
+          "page": 1,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 3124,
+        "text": "358,548"
+      },
+      "anchor": {
+        "block": "sha256:934ca3ed27687afb5acd8a290b0a6c1dbfc641f2229c096de0a77c17ee22752e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "weeks (N = ",
+        "suffix": ") were also studied."
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          268.893798828125,
+          632.14599609375,
+          302.78790283203125,
+          640.6959991455078
+        ],
+        "ink_bbox": [
+          269.216796875,
+          632.3074951171875,
+          302.45538330078125,
+          640.3634948730469
+        ],
+        "page": 1
+      },
+      "id": "held-030",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "358,548"
+    },
+    {
+      "actual": {
+        "context": "weeks or more increased from 33.7% in",
+        "end": 4812,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            535.3501,
+            146.7275,
+            553.7174,
+            156.2275
+          ],
+          "block": "sha256:500930e84966bb3f975ed6f644371f1b8ca6e72d66b82d9d6ebf60de0ce29943",
+          "offset": 29,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4808,
+        "text": "33.7"
+      },
+      "anchor": {
+        "block": "sha256:500930e84966bb3f975ed6f644371f1b8ca6e72d66b82d9d6ebf60de0ce29943",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "weeks or more increased from ",
+        "suffix": "% in"
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          535.3500366210938,
+          147.42095947265625,
+          553.6318359375,
+          155.97100830078125
+        ],
+        "ink_bbox": [
+          535.673095703125,
+          147.58245849609375,
+          553.3563842773438,
+          154.4224853515625
+        ],
+        "page": 2
+      },
+      "id": "held-031",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "33.7"
+    },
+    {
+      "actual": {
+        "context": "period 1 to 52.4% in period 2. Mean (standard deviation) gestational age at birth decreased",
+        "end": 4923,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            245.3674,
+            160.7305,
+            263.7347,
+            170.2305
+          ],
+          "block": "sha256:3046c54b6550d4dcd8cc02ac79c200598b16bb31fdd93dec61d5f9d3f632cea7",
+          "offset": 12,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 4919,
+        "text": "52.4"
+      },
+      "anchor": {
+        "block": "sha256:3046c54b6550d4dcd8cc02ac79c200598b16bb31fdd93dec61d5f9d3f632cea7",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " to ",
+        "suffix": "% in period "
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          245.36734008789062,
+          161.4239501953125,
+          263.6491394042969,
+          169.9739990234375
+        ],
+        "ink_bbox": [
+          245.6713409423828,
+          161.58544921875,
+          263.3736267089844,
+          168.42547607421875
+        ],
+        "page": 2
+      },
+      "id": "held-032",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "52.4"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          331.3704528808594,
+          577.41357421875,
+          361.0495910644531,
+          590.1917724609375
+        ],
+        "ink_bbox": [
+          331.9403076171875,
+          580.4930267333984,
+          360.44683837890625,
+          587.6054229736328
+        ],
+        "page": 7
+      },
+      "id": "held-033",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "−0.923"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          374.5127258300781,
+          579.6492156982422,
+          406.7431335449219,
+          590.1917724609375
+        ],
+        "ink_bbox": [
+          375.1702575683594,
+          580.4930267333984,
+          405.7020263671875,
+          587.5725402832031
+        ],
+        "page": 7
+      },
+      "id": "held-034",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          440.6744384765625,
+          577.41357421875,
+          470.296630859375,
+          590.1917724609375
+        ],
+        "ink_bbox": [
+          441.2442932128906,
+          580.4930267333984,
+          469.77056884765625,
+          587.5725402832031
+        ],
+        "page": 7
+      },
+      "id": "held-035",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "−0.445"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          483.7597351074219,
+          579.6492156982422,
+          515.9901123046875,
+          590.1917724609375
+        ],
+        "ink_bbox": [
+          484.4172668457031,
+          580.4930267333984,
+          514.9490356445312,
+          587.5725402832031
+        ],
+        "page": 7
+      },
+      "id": "held-036",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "actual": {
+        "context": "water content was positively correlated with elevation (Spearman’s correlation: R = 0.702,",
+        "end": 21128,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            552.3565,
+            594.2762,
+            575.743,
+            605.2352
+          ],
+          "block": "sha256:005ae595f8a2c7a13cc68d60ce2536ff18bd4d99b27b1b4700b1f9e995d27168",
+          "offset": 84,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21123,
+        "text": "0.702"
+      },
+      "anchor": {
+        "block": "sha256:005ae595f8a2c7a13cc68d60ce2536ff18bd4d99b27b1b4700b1f9e995d27168",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "water content was positively correlated with elevation (Spearman’s correlation: R = ",
+        "suffix": ","
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          552.3565063476562,
+          594.6159362792969,
+          575.7430419921875,
+          605.1584930419922
+        ],
+        "ink_bbox": [
+          552.7400512695312,
+          595.4597473144531,
+          575.3156127929688,
+          602.5392608642578
+        ],
+        "page": 7
+      },
+      "id": "held-037",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.702"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          194.738037109375,
+          609.5825958251953,
+          226.62872314453125,
+          620.1251525878906
+        ],
+        "ink_bbox": [
+          195.3955841064453,
+          610.4264373779297,
+          225.58761596679688,
+          617.5059509277344
+        ],
+        "page": 7
+      },
+      "id": "held-038",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          369.23931884765625,
+          608.2565612792969,
+          411.07305908203125,
+          620.1251525878906
+        ],
+        "ink_bbox": [
+          369.45849609375,
+          610.3606872558594,
+          410.59088134765625,
+          617.5059509277344
+        ],
+        "page": 7
+      },
+      "id": "held-039",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "held-out",
+      "text": "4.23–6.08"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          419.5257568359375,
+          622.2566986083984,
+          449.2049255371094,
+          635.0348968505859
+        ],
+        "ink_bbox": [
+          420.0956115722656,
+          625.2704162597656,
+          448.77752685546875,
+          632.4485626220703
+        ],
+        "page": 7
+      },
+      "id": "held-040",
+      "outcome": "unknown",
+      "reason": "blocked_original_location",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "−0.689"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          462.89599609375,
+          624.4923400878906,
+          495.2403869628906,
+          635.0348968505859
+        ],
+        "ink_bbox": [
+          463.55352783203125,
+          625.3361663818359,
+          494.19927978515625,
+          632.4156799316406
+        ],
+        "page": 7
+      },
+      "id": "held-041",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "actual": {
+        "context": "correlated with CEC (Spearman’s correlation: R = 0.622, p = 0.031), and TN and TC were",
+        "end": 21724,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            406.8265,
+            698.8722,
+            430.213,
+            709.8312
+          ],
+          "block": "sha256:805509984c0bf311788d1d5dcc30dc3b0ad6b4528c8dbc83d5c101d7ca7bf54e",
+          "offset": 49,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21719,
+        "text": "0.622"
+      },
+      "anchor": {
+        "block": "sha256:805509984c0bf311788d1d5dcc30dc3b0ad6b4528c8dbc83d5c101d7ca7bf54e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "correlated with CEC (Spearman’s correlation: R = ",
+        "suffix": ", p = "
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          406.8264465332031,
+          699.2118759155273,
+          430.21295166015625,
+          709.7544403076172
+        ],
+        "ink_bbox": [
+          407.21002197265625,
+          699.9899673461914,
+          429.78558349609375,
+          707.1352386474609
+        ],
+        "page": 7
+      },
+      "id": "held-042",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.622"
+    },
+    {
+      "actual": {
+        "context": "correlated with CEC (Spearman’s correlation: R = 0.622, p = 0.031), and TN and TC were",
+        "end": 21735,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            452.5211,
+            698.8722,
+            475.9076,
+            709.8312
+          ],
+          "block": "sha256:805509984c0bf311788d1d5dcc30dc3b0ad6b4528c8dbc83d5c101d7ca7bf54e",
+          "offset": 60,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21730,
+        "text": "0.031"
+      },
+      "anchor": {
+        "block": "sha256:805509984c0bf311788d1d5dcc30dc3b0ad6b4528c8dbc83d5c101d7ca7bf54e",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ", p = ",
+        "suffix": "), and TN and TC were"
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          452.5211181640625,
+          699.2118759155273,
+          475.90765380859375,
+          709.7544403076172
+        ],
+        "ink_bbox": [
+          452.9046630859375,
+          700.0557250976562,
+          474.86651611328125,
+          707.1352386474609
+        ],
+        "page": 7
+      },
+      "id": "held-043",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.031"
+    },
+    {
+      "actual": {
+        "context": "likewise positively correlated (Spearman’s correlation: R = 0.829, p < 0.001). Soil organic",
+        "end": 21822,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            446.1156,
+            713.8389,
+            469.5021,
+            724.7979
+          ],
+          "block": "sha256:d5fb3c73bc0fafb866c68c6724377c7ec5c21dc6774b7be9a8944c675f63a763",
+          "offset": 60,
+          "page": 7,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 21817,
+        "text": "0.829"
+      },
+      "anchor": {
+        "block": "sha256:d5fb3c73bc0fafb866c68c6724377c7ec5c21dc6774b7be9a8944c675f63a763",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "likewise positively correlated (Spearman’s correlation: R = ",
+        "suffix": ", p < "
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          446.1156005859375,
+          714.1785888671875,
+          469.5020751953125,
+          724.7211456298828
+        ],
+        "ink_bbox": [
+          446.4991149902344,
+          715.0224304199219,
+          469.0746765136719,
+          722.1348266601562
+        ],
+        "page": 7
+      },
+      "id": "held-044",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.829"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          483.7027587890625,
+          714.1785888671875,
+          516.3298950195312,
+          724.7211456298828
+        ],
+        "ink_bbox": [
+          484.36029052734375,
+          715.0224304199219,
+          515.288818359375,
+          722.1019515991211
+        ],
+        "page": 7
+      },
+      "id": "held-045",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "actual": {
+        "context": "differences among the elevation levels (Kruskal–Wallis: H CBH = 21.81, p < 0.001;",
+        "end": 22439,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            470.4948,
+            190.7931,
+            493.8813,
+            201.7521
+          ],
+          "block": "sha256:5e27bc0aa62bad9330857f8ae2a9af8609b9aaf82e5ba8837eea626a24187902",
+          "offset": 64,
+          "page": 8,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 22434,
+        "text": "21.81"
+      },
+      "anchor": {
+        "block": "sha256:5e27bc0aa62bad9330857f8ae2a9af8609b9aaf82e5ba8837eea626a24187902",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "differences among the elevation levels (Kruskal–Wallis: H CBH = ",
+        "suffix": ", p < "
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          470.4947814941406,
+          191.1328125,
+          493.8812561035156,
+          201.6754150390625
+        ],
+        "ink_bbox": [
+          470.83447265625,
+          191.97662353515625,
+          492.84014892578125,
+          199.05615234375
+        ],
+        "page": 8
+      },
+      "id": "held-046",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "21.81"
+    },
+    {
+      "case": "peerj-pmc11748422",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          508.0819091796875,
+          191.1328125,
+          540.6531372070312,
+          201.6754150390625
+        ],
+        "ink_bbox": [
+          508.7394714355469,
+          191.97662353515625,
+          539.612060546875,
+          199.05615234375
+        ],
+        "page": 8
+      },
+      "id": "held-047",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "inequality",
+      "split": "held-out",
+      "text": "< 0.001"
+    },
+    {
+      "actual": {
+        "context": "H BG = 14.75, p = 0.002; H BX = 18.93, p < 0.001) (Fig. 3B), with pairwise comparison test",
+        "end": 22464,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            218.041,
+            205.7033,
+            241.4275,
+            216.6623
+          ],
+          "block": "sha256:0ee0e17bd10f3a9b0d3aafa7a3806aed211d8e66c5bef60cc344512c939f3a03",
+          "offset": 7,
+          "page": 8,
+          "page_box": [
+            0,
+            0,
+            612,
+            792
+          ]
+        },
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 22459,
+        "text": "14.75"
+      },
+      "anchor": {
+        "block": "sha256:0ee0e17bd10f3a9b0d3aafa7a3806aed211d8e66c5bef60cc344512c939f3a03",
+        "exact": null,
+        "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "H BG = ",
+        "suffix": ", p = "
+      },
+      "case": "peerj-pmc11748422",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          218.04095458984375,
+          206.04302978515625,
+          241.42745971679688,
+          216.5855712890625
+        ],
+        "ink_bbox": [
+          219.23548889160156,
+          206.8868408203125,
+          240.90142822265625,
+          213.96636962890625
+        ],
+        "page": 8
+      },
+      "id": "held-048",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "14.75"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          158.6595001220703,
+          419.4040222167969,
+          200.99549865722656,
+          430.13201904296875
+        ],
+        "ink_bbox": [
+          159.11849975585938,
+          421.8879699707031,
+          200.635498046875,
+          428.07098388671875
+        ],
+        "page": 1
+      },
+      "id": "held-049",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "held-out",
+      "text": "1500–1700"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          234.10470581054688,
+          370.1408996582031,
+          249.11668395996094,
+          382.2818908691406
+        ],
+        "ink_bbox": [
+          234.41970825195312,
+          373.326904296875,
+          248.90069580078125,
+          379.1408996582031
+        ],
+        "page": 2
+      },
+      "id": "held-050",
+      "outcome": "missed",
+      "reason": "no_unique_original_position",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.54"
+    },
+    {
+      "actual": {
+        "context": "revealed 99.65% similarity with the published azurin.",
+        "end": 7728,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            188.0346,
+            403.2819,
+            207.3666,
+            412.2819
+          ],
+          "block": "sha256:d5c7415dce0582690df5aae42900d7e793a1317d1d6ad9d39a7301786be79199",
+          "offset": 9,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 7723,
+        "text": "99.65"
+      },
+      "anchor": {
+        "block": "sha256:d5c7415dce0582690df5aae42900d7e793a1317d1d6ad9d39a7301786be79199",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "revealed ",
+        "suffix": "% similarity with the published azurin."
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          188.03460693359375,
+          400.1408996582031,
+          207.36660766601562,
+          412.2818908691406
+        ],
+        "ink_bbox": [
+          188.37660217285156,
+          403.27288818359375,
+          206.92559814453125,
+          409.16790771484375
+        ],
+        "page": 2
+      },
+      "id": "held-051",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "99.65"
+    },
+    {
+      "actual": {
+        "context": "sequence revealed a protein with a theoretical pI of 6.39, an aliphatic index of 84.32, and a grand average of",
+        "end": 7981,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            347.7459,
+            423.2819,
+            362.7579,
+            432.2819
+          ],
+          "block": "sha256:2761d207ab218c8cd7924261ecd40b641e976812efcca5f9cc9dd2116f326cb5",
+          "offset": 53,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 7977,
+        "text": "6.39"
+      },
+      "anchor": {
+        "block": "sha256:2761d207ab218c8cd7924261ecd40b641e976812efcca5f9cc9dd2116f326cb5",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "sequence revealed a protein with a theoretical pI of ",
+        "suffix": ", an aliphatic index of "
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          347.74591064453125,
+          420.1408996582031,
+          362.7579040527344,
+          432.2818908691406
+        ],
+        "ink_bbox": [
+          348.07891845703125,
+          423.27288818359375,
+          362.39794921875,
+          429.16790771484375
+        ],
+        "page": 2
+      },
+      "id": "held-052",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "6.39"
+    },
+    {
+      "actual": {
+        "context": "sequence revealed a protein with a theoretical pI of 6.39, an aliphatic index of 84.32, and a grand average of",
+        "end": 8010,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            445.89,
+            423.2819,
+            465.222,
+            432.2819
+          ],
+          "block": "sha256:2761d207ab218c8cd7924261ecd40b641e976812efcca5f9cc9dd2116f326cb5",
+          "offset": 81,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 8005,
+        "text": "84.32"
+      },
+      "anchor": {
+        "block": "sha256:2761d207ab218c8cd7924261ecd40b641e976812efcca5f9cc9dd2116f326cb5",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": ", an aliphatic index of ",
+        "suffix": ", and a grand average of"
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          445.89007568359375,
+          420.1408996582031,
+          465.2220458984375,
+          432.2818908691406
+        ],
+        "ink_bbox": [
+          446.2950439453125,
+          423.326904296875,
+          464.86199951171875,
+          429.1408996582031
+        ],
+        "page": 2
+      },
+      "id": "held-053",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "84.32"
+    },
+    {
+      "actual": {
+        "context": "hydropathicity (GRAVY) of -0.099. Furthermore, the maximum likelihood phylogenetic relationship between",
+        "end": 8067,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            259.1886,
+            433.2819,
+            281.7246,
+            442.2819
+          ],
+          "block": "sha256:d352b57a362ceaf270ae29ef777f348855582bb2001cae6596d5d6912a8dfd8f",
+          "offset": 26,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 8061,
+        "text": "-0.099"
+      },
+      "anchor": {
+        "block": "sha256:d352b57a362ceaf270ae29ef777f348855582bb2001cae6596d5d6912a8dfd8f",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "hydropathicity (GRAVY) of ",
+        "suffix": ". Furthermore, the maximum likelihood phylogenetic relationship between"
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          259.1886291503906,
+          430.1408996582031,
+          281.7245788574219,
+          442.2818908691406
+        ],
+        "ink_bbox": [
+          259.7016296386719,
+          433.326904296875,
+          281.3646240234375,
+          439.16790771484375
+        ],
+        "page": 2
+      },
+      "id": "held-054",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "-0.099"
+    },
+    {
+      "actual": {
+        "context": "97% probability (Supplementary Table 2).",
+        "end": 8592,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            155.9056,
+            483.2819,
+            164.5456,
+            492.2819
+          ],
+          "block": "sha256:9319b483cecd63b772e6f696279eee7a0322409f7df106a3098d611177169bad",
+          "offset": 0,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 8590,
+        "text": "97"
+      },
+      "anchor": {
+        "block": "sha256:9319b483cecd63b772e6f696279eee7a0322409f7df106a3098d611177169bad",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": "% probability (Supplementary Table "
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          155.9055938720703,
+          480.1408996582031,
+          164.54559326171875,
+          492.2818908691406
+        ],
+        "ink_bbox": [
+          156.24758911132812,
+          483.326904296875,
+          164.32058715820312,
+          489.16790771484375
+        ],
+        "page": 2
+      },
+      "id": "held-055",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "97"
+    },
+    {
+      "actual": {
+        "context": "36 h, coinciding with an",
+        "end": 10066,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            466.1176,
+            653.2819,
+            474.7576,
+            662.2819
+          ],
+          "block": "sha256:b2277943503fb1648feb627ead1227f243fa3851580fdd60429b87b4264cee33",
+          "offset": 0,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 10064,
+        "text": "36"
+      },
+      "anchor": {
+        "block": "sha256:b2277943503fb1648feb627ead1227f243fa3851580fdd60429b87b4264cee33",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "",
+        "suffix": " h, coinciding with an"
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          466.11767578125,
+          650.1408996582031,
+          474.75762939453125,
+          662.2818908691406
+        ],
+        "ink_bbox": [
+          466.51361083984375,
+          653.2729034423828,
+          474.46063232421875,
+          659.1408996582031
+        ],
+        "page": 2
+      },
+      "id": "held-056",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "36"
+    },
+    {
+      "actual": {
+        "context": "ratio of approximately 0.54.",
+        "end": 10129,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            272.9763,
+            663.2819,
+            287.9883,
+            672.2819
+          ],
+          "block": "sha256:05a544337d899f7649317ff898b1232f704ae6eb1e1ea2f39227b8320d9909a1",
+          "offset": 23,
+          "page": 2,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 10125,
+        "text": "0.54"
+      },
+      "anchor": {
+        "block": "sha256:05a544337d899f7649317ff898b1232f704ae6eb1e1ea2f39227b8320d9909a1",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "ratio of approximately ",
+        "suffix": "."
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          272.976318359375,
+          660.1408920288086,
+          287.98828125,
+          672.2818908691406
+        ],
+        "ink_bbox": [
+          273.29132080078125,
+          663.3268966674805,
+          287.77227783203125,
+          669.1408996582031
+        ],
+        "page": 2
+      },
+      "id": "held-057",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.54"
+    },
+    {
+      "actual": {
+        "context": "revealed a protein band with a corresponding molecular weight of approximately 14 kDa (Fig. 4b).",
+        "end": 11314,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            446.2878,
+            559.6969,
+            454.9278,
+            568.6969
+          ],
+          "block": "sha256:25e60711a5ab5a2559306e7169bf97afb15e465ab5c731375027e77d3d07e8d6",
+          "offset": 79,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 11312,
+        "text": "14"
+      },
+      "anchor": {
+        "block": "sha256:25e60711a5ab5a2559306e7169bf97afb15e465ab5c731375027e77d3d07e8d6",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "revealed a protein band with a corresponding molecular weight of approximately ",
+        "suffix": " kDa (Fig. 4b)."
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          446.287841796875,
+          556.555908203125,
+          454.9278564453125,
+          568.6969146728516
+        ],
+        "ink_bbox": [
+          447.26885986328125,
+          559.7418975830078,
+          454.71185302734375,
+          565.4568939208984
+        ],
+        "page": 3
+      },
+      "id": "held-058",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "14"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          342.71112060546875,
+          606.5558929443359,
+          381.95111083984375,
+          618.6968994140625
+        ],
+        "ink_bbox": [
+          343.692138671875,
+          609.6878967285156,
+          381.61810302734375,
+          615.5558929443359
+        ],
+        "page": 3
+      },
+      "id": "held-059",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "held-out",
+      "text": "1657–1650"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          419.8893737792969,
+          606.5558929443359,
+          459.1294250488281,
+          618.6968994140625
+        ],
+        "ink_bbox": [
+          420.87042236328125,
+          609.7418975830078,
+          458.7964172363281,
+          615.5558929443359
+        ],
+        "page": 3
+      },
+      "id": "held-060",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "held-out",
+      "text": "1550–1540"
+    },
+    {
+      "case": "scientific-reports-pmc11782508",
+      "format": "pdf",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "bbox": [
+          279.95159912109375,
+          626.5558929443359,
+          333.4925537109375,
+          638.6968994140625
+        ],
+        "ink_bbox": [
+          280.9326171875,
+          629.0488891601562,
+          333.15960693359375,
+          635.5558929443359
+        ],
+        "page": 3
+      },
+      "id": "held-061",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "range",
+      "split": "held-out",
+      "text": "1400 and 1000"
+    },
+    {
+      "actual": {
+        "context": "strong N-H stretching bands observed at 3439 cm⁻¹ and 3429 cm⁻¹",
+        "end": 11985,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            459.3549,
+            639.6969,
+            476.6349,
+            648.6969
+          ],
+          "block": "sha256:f72eb2915f4f3b77e4d3b9556d38bcb407d87ada41102c1bca6cc176dfd129d8",
+          "offset": 40,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 11981,
+        "text": "3439"
+      },
+      "anchor": {
+        "block": "sha256:f72eb2915f4f3b77e4d3b9556d38bcb407d87ada41102c1bca6cc176dfd129d8",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "strong N-H stretching bands observed at ",
+        "suffix": " cm⁻¹ and "
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          459.35491943359375,
+          636.5558929443359,
+          476.63494873046875,
+          648.6968994140625
+        ],
+        "ink_bbox": [
+          459.75091552734375,
+          639.7418975830078,
+          476.27490234375,
+          645.5829010009766
+        ],
+        "page": 3
+      },
+      "id": "held-062",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "3439"
+    },
+    {
+      "actual": {
+        "context": "strong N-H stretching bands observed at 3439 cm⁻¹ and 3429 cm⁻¹",
+        "end": 11999,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            516.5878,
+            639.6969,
+            533.8678,
+            648.6969
+          ],
+          "block": "sha256:f72eb2915f4f3b77e4d3b9556d38bcb407d87ada41102c1bca6cc176dfd129d8",
+          "offset": 54,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 11995,
+        "text": "3429"
+      },
+      "anchor": {
+        "block": "sha256:f72eb2915f4f3b77e4d3b9556d38bcb407d87ada41102c1bca6cc176dfd129d8",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": " cm⁻¹ and ",
+        "suffix": " cm⁻¹"
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          516.5878295898438,
+          636.5558929443359,
+          533.8677368164062,
+          648.6968994140625
+        ],
+        "ink_bbox": [
+          516.9838256835938,
+          639.7418975830078,
+          533.5078125,
+          645.5829010009766
+        ],
+        "page": 3
+      },
+      "id": "held-063",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "3429"
+    },
+    {
+      "actual": {
+        "context": "revealed a copper-rich protein, as evidenced by two strong peaks at approximately 8.0 keV and 9.0",
+        "end": 12263,
+        "file": "article.pdf",
+        "format": "pdf",
+        "locator": {
+          "bbox": [
+            461.6049,
+            689.6969,
+            472.2969,
+            698.6969
+          ],
+          "block": "sha256:afff331a05864167302407a1bbc98525d8fdb4ecc7645c29abad4c120d2e0c9b",
+          "offset": 82,
+          "page": 3,
+          "page_box": [
+            0,
+            0,
+            595.276,
+            782.362
+          ]
+        },
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "start": 12260,
+        "text": "8.0"
+      },
+      "anchor": {
+        "block": "sha256:afff331a05864167302407a1bbc98525d8fdb4ecc7645c29abad4c120d2e0c9b",
+        "exact": null,
+        "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+        "prefix": "revealed a copper-rich protein, as evidenced by two strong peaks at approximately ",
+        "suffix": " keV and "
+      },
+      "case": "scientific-reports-pmc11782508",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "pdf",
+      "gold": {
+        "bbox": [
+          461.60491943359375,
+          686.5559005737305,
+          472.296875,
+          698.6968994140625
+        ],
+        "ink_bbox": [
+          462.0098876953125,
+          689.7418975830078,
+          471.96392822265625,
+          695.5559005737305
+        ],
+        "page": 3
+      },
+      "id": "held-064",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "8.0"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Peri/Neonatal death | 0.60 | 0.44; 0.82 | 0.60 | 0.44; 0.82",
+        "end": 255,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 19,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 251,
+        "text": "0.60"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 2,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Peri/Neonatal death"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 19,
+        "offset": 0,
+        "paragraph": 19,
+        "part": "word/document.xml"
+      },
+      "id": "held-065",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.60"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 20,
+        "offset": 0,
+        "paragraph": 20,
+        "part": "word/document.xml"
+      },
+      "id": "held-066",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.44; 0.82"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Peri/Neonatal death | 0.60 | 0.44; 0.82 | 0.60 | 0.44; 0.82",
+        "end": 271,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 21,
+          "part": "word/document.xml",
+          "row": 4,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 267,
+        "text": "0.60"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 4,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Peri/Neonatal death"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 21,
+        "offset": 0,
+        "paragraph": 21,
+        "part": "word/document.xml"
+      },
+      "id": "held-067",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.60"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 22,
+        "offset": 0,
+        "paragraph": 22,
+        "part": "word/document.xml"
+      },
+      "id": "held-068",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.44; 0.82"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Composite outcome* | 0.94 | 0.90; 0.98 | 0.92 | 0.88; 0.96",
+        "end": 307,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 25,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 303,
+        "text": "0.94"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 2,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Composite outcome*"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 25,
+        "offset": 0,
+        "paragraph": 25,
+        "part": "word/document.xml"
+      },
+      "id": "held-069",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.94"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 26,
+        "offset": 0,
+        "paragraph": 26,
+        "part": "word/document.xml"
+      },
+      "id": "held-070",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.90; 0.98"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Composite outcome* | 0.94 | 0.90; 0.98 | 0.92 | 0.88; 0.96",
+        "end": 323,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 27,
+          "part": "word/document.xml",
+          "row": 5,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 319,
+        "text": "0.92"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 4,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Composite outcome*"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 27,
+        "offset": 0,
+        "paragraph": 27,
+        "part": "word/document.xml"
+      },
+      "id": "held-071",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.92"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 28,
+        "offset": 0,
+        "paragraph": 28,
+        "part": "word/document.xml"
+      },
+      "id": "held-072",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.88; 0.96"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Composite II† | 0.83 | 0.77; 0.89 | 0.80 | 0.75; 0.86",
+        "end": 354,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 31,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 350,
+        "text": "0.83"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 2,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Composite II†"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 31,
+        "offset": 0,
+        "paragraph": 31,
+        "part": "word/document.xml"
+      },
+      "id": "held-073",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.83"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 32,
+        "offset": 0,
+        "paragraph": 32,
+        "part": "word/document.xml"
+      },
+      "id": "held-074",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.77; 0.89"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Composite II† | 0.83 | 0.77; 0.89 | 0.80 | 0.75; 0.86",
+        "end": 370,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 33,
+          "part": "word/document.xml",
+          "row": 6,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 366,
+        "text": "0.80"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 4,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Composite II†"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 33,
+        "offset": 0,
+        "paragraph": 33,
+        "part": "word/document.xml"
+      },
+      "id": "held-075",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "0.80"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 34,
+        "offset": 0,
+        "paragraph": 34,
+        "part": "word/document.xml"
+      },
+      "id": "held-076",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "0.75; 0.86"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Emergency caesarean section | 1.12 | 1.09; 1.16 | 1.07 | 1.04; 1.10",
+        "end": 421,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 3,
+          "offset": 0,
+          "paragraph": 43,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 417,
+        "text": "1.12"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 2,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Emergency caesarean section"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 43,
+        "offset": 0,
+        "paragraph": 43,
+        "part": "word/document.xml"
+      },
+      "id": "held-077",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "1.12"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 44,
+        "offset": 0,
+        "paragraph": 44,
+        "part": "word/document.xml"
+      },
+      "id": "held-078",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "1.09; 1.16"
+    },
+    {
+      "actual": {
+        "context": " |  | Crude | Crude | Adjusted | Adjusted\n | Emergency caesarean section | 1.12 | 1.09; 1.16 | 1.07 | 1.04; 1.10",
+        "end": 437,
+        "file": "supplement.docx",
+        "format": "docx",
+        "locator": {
+          "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+          "cell": 5,
+          "offset": 0,
+          "paragraph": 45,
+          "part": "word/document.xml",
+          "row": 8,
+          "section": [],
+          "style": "",
+          "table": 1
+        },
+        "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+        "start": 433,
+        "text": "1.07"
+      },
+      "anchor": {
+        "exact": null,
+        "prefix": null,
+        "suffix": null,
+        "table": {
+          "caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (RR) (period 2 versus period 1). Significant findings are indicated in bold text. ",
+          "column": 4,
+          "header_rows": 3,
+          "headers": [
+            " &  & Crude & Crude & Adjusted & Adjusted",
+            " &  & RR & 95% CI & RR & 95% CI",
+            "Primary outcomes & Primary outcomes &  &  &  & "
+          ],
+          "percent_symbol": false,
+          "row_prefix": [
+            "",
+            "Emergency caesarean section"
+          ]
+        }
+      },
+      "case": "plosmedicine-1004504",
+      "changed_evidence_status": "mismatch",
+      "check_status": "pass",
+      "evidence_increment": "1",
+      "format": "docx",
+      "gold": {
+        "last_paragraph": 45,
+        "offset": 0,
+        "paragraph": 45,
+        "part": "word/document.xml"
+      },
+      "id": "held-079",
+      "outcome": "supported",
+      "shape": "scalar",
+      "split": "held-out",
+      "text": "1.07"
+    },
+    {
+      "case": "plosmedicine-1004504",
+      "format": "docx",
+      "fragment_successes_counted": 0,
+      "full_target_retained": true,
+      "gold": {
+        "last_paragraph": 46,
+        "offset": 0,
+        "paragraph": 46,
+        "part": "word/document.xml"
+      },
+      "id": "held-080",
+      "outcome": "unknown",
+      "reason": "complete_compound_contract_unsupported",
+      "shape": "interval",
+      "split": "held-out",
+      "text": "1.04; 1.10"
+    }
+  ],
+  "shortfalls": [
+    {
+      "case": "plosgenetics-1011507",
+      "eligible_targets": 0,
+      "file": "supplement.docx",
+      "reason": "Allele-description table contains mutation identifiers, targeted exons, genomic coordinates and sequences, not measured outcomes. Original retained; no replacement.",
+      "unfilled_slots": 16
+    }
+  ],
+  "tool_version": "1.8.0"
+}

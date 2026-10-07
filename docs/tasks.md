@@ -63,8 +63,9 @@ The HTML opens offline; including the required inputs allows the documented
 replay workflow. The preview explains missing inputs and the resulting scope.
 Recipients can switch report language. [Portable review bundles](review-bundle.md).
 
-The current release does not export Word comment copies or PDF annotation copies.
-Those are subsequent work; original Word/PDF manuscripts stay read-only.
+For Word or PDF recipients, select bound occurrences in the revision workbench,
+preview the exact locations, then explicitly export new annotated copies. The
+originals stay unchanged. [Word comments and PDF highlights](v1.8.md).
 
 ## Check before submission
 

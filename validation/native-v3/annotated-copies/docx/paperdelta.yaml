@@ -1,0 +1,51 @@
+schema_version: 10
+paper:
+  entry: supplement.docx
+  macros: {}
+rounding: half_up
+sources:
+  data:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  selected:
+    source: data
+    field: value
+    where:
+      id: selected
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  selected:
+    file: supplement.docx
+    anchor:
+      table:
+        headers:
+        - S1 Table & Marginal and conditional P-values from the PON1 GWAS for the
+          cis-pQTL with 27,607 individuals from UKB & Marginal and conditional P-values
+          from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB & Marginal
+          and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607
+          individuals from UKB
+        - Iteration & Variant & Marginal P- value & P-value after conditioning on
+          all variants from previous rounds
+        row_prefix:
+        - '6'
+        - rs2240026
+        column: 2
+        percent_symbol: false
+        header_rows: 2
+    metric: selected
+    display:
+      kind: scientific
+      places: 1
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

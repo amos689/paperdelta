@@ -1,0 +1,454 @@
+{
+  "cases": [
+    {
+      "changed_evidence": "mismatch",
+      "check": "pass",
+      "copy_sha256": "sha256:f822bb0555dcb961cf3382d89f9a6714346a609f6ae8ed5d051fe66269d9b98c",
+      "format": "pdf",
+      "gold_id": "dev-001",
+      "language": "en",
+      "original_unchanged": true,
+      "plan": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "article.pdf",
+            "path": "copies/001-article.review.pdf"
+          }
+        ],
+        "entries": [
+          {
+            "actual": "2,940",
+            "definition": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "value",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": "data",
+              "unit": "scalar",
+              "where": {
+                "id": "selected"
+              }
+            },
+            "evidence": [
+              {
+                "count": 1,
+                "field": "value",
+                "locations": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "line": 2
+                  }
+                ],
+                "path": "results.csv",
+                "records": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "value": 2941
+                  }
+                ],
+                "reduce": "unique",
+                "source": "data",
+                "where": {
+                  "id": "selected"
+                }
+              }
+            ],
+            "expected": "2941",
+            "location": {
+              "context": "few causal variants in the fine-mapped region. Using data from 2,940 plasma proteins from",
+              "end": 2309,
+              "file": "article.pdf",
+              "format": "pdf",
+              "locator": {
+                "bbox": [
+                  457.8496,
+                  486.0335,
+                  481.459,
+                  495.5335
+                ],
+                "block": "sha256:7f7b7be09daaa3a0feb3d4bad4b447445830a7a3740ba7d6beaba4869e64856f",
+                "offset": 63,
+                "page": 1,
+                "page_box": [
+                  0,
+                  0,
+                  612,
+                  792
+                ]
+              },
+              "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+              "start": 2304,
+              "text": "2,940"
+            },
+            "metric": "selected",
+            "note": "PaperDelta review: selected\nCheck status: Differs from declared evidence\nWritten value: 2,940\nExpected display: 2941\nDeclared metric: selected\nEvidence: results.csv\nRelated claims requiring attention: —\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+            "occurrence": "selected",
+            "position": "article.pdf · page 1",
+            "related_claims": [],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "article.pdf": "sha256:b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc",
+          "paperdelta.yaml": "sha256:ce8be3dbd95f543bd88bd8839df16a979c84eb782efef1f3a4ee901d9992ceb1",
+          "results.csv": "sha256:b5ebe3d4799ae8e45287866fc0a2464ea92b5f9f2cbaab231c24b9b3488fd857"
+        },
+        "language": "en",
+        "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+        "preview_id": "sha256:dc26c264c91e2b68c1244c87cdaebabcd59bebdbc44d665af9a60a14501ddd09",
+        "refused": [],
+        "report_fingerprint": "sha256:9e3a4dd63b367749efa8e724fdbe1a05f9ce864a6a37fb489e6008a1f2b70b81",
+        "selection": {
+          "occurrences": [
+            "selected"
+          ]
+        },
+        "tool_version": "1.8.0"
+      },
+      "source_sha256": "b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc"
+    },
+    {
+      "changed_evidence": "mismatch",
+      "check": "pass",
+      "copy_sha256": "sha256:916b892cbf44c654c627e21fd09aaa46008da43b6f6702e04cd18dd3a66d99e9",
+      "format": "pdf",
+      "gold_id": "dev-001",
+      "language": "zh-CN",
+      "original_unchanged": true,
+      "plan": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "article.pdf",
+            "path": "copies/001-article.review.pdf"
+          }
+        ],
+        "entries": [
+          {
+            "actual": "2,940",
+            "definition": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "value",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": "data",
+              "unit": "scalar",
+              "where": {
+                "id": "selected"
+              }
+            },
+            "evidence": [
+              {
+                "count": 1,
+                "field": "value",
+                "locations": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "line": 2
+                  }
+                ],
+                "path": "results.csv",
+                "records": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "value": 2941
+                  }
+                ],
+                "reduce": "unique",
+                "source": "data",
+                "where": {
+                  "id": "selected"
+                }
+              }
+            ],
+            "expected": "2941",
+            "location": {
+              "context": "few causal variants in the fine-mapped region. Using data from 2,940 plasma proteins from",
+              "end": 2309,
+              "file": "article.pdf",
+              "format": "pdf",
+              "locator": {
+                "bbox": [
+                  457.8496,
+                  486.0335,
+                  481.459,
+                  495.5335
+                ],
+                "block": "sha256:7f7b7be09daaa3a0feb3d4bad4b447445830a7a3740ba7d6beaba4869e64856f",
+                "offset": 63,
+                "page": 1,
+                "page_box": [
+                  0,
+                  0,
+                  612,
+                  792
+                ]
+              },
+              "parser": "paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107",
+              "start": 2304,
+              "text": "2,940"
+            },
+            "metric": "selected",
+            "note": "PaperDelta 复核：selected\n核对状态：与已声明证据不一致\n原文数值：2,940\n预期显示：2941\n已声明指标：selected\n证据：results.csv\n需关注的相关结论：—\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+            "occurrence": "selected",
+            "position": "article.pdf · 第 1 页",
+            "related_claims": [],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "article.pdf": "sha256:b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc",
+          "paperdelta.yaml": "sha256:ce8be3dbd95f543bd88bd8839df16a979c84eb782efef1f3a4ee901d9992ceb1",
+          "results.csv": "sha256:b5ebe3d4799ae8e45287866fc0a2464ea92b5f9f2cbaab231c24b9b3488fd857"
+        },
+        "language": "zh-CN",
+        "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+        "preview_id": "sha256:e7c82586e5c0e6f9ac0ea996cfac07d31197ecf50a00642b04c550b5337c773a",
+        "refused": [],
+        "report_fingerprint": "sha256:9e3a4dd63b367749efa8e724fdbe1a05f9ce864a6a37fb489e6008a1f2b70b81",
+        "selection": {
+          "occurrences": [
+            "selected"
+          ]
+        },
+        "tool_version": "1.8.0"
+      },
+      "source_sha256": "b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc"
+    },
+    {
+      "changed_evidence": "mismatch",
+      "check": "pass",
+      "copy_sha256": "sha256:c7d01fe62be544fa4884feb4796ecbd4b58c256534e4468c00eb592550b6a681",
+      "format": "docx",
+      "gold_id": "dev-074",
+      "language": "en",
+      "original_unchanged": true,
+      "plan": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "supplement.docx",
+            "path": "copies/001-supplement.review.docx"
+          }
+        ],
+        "entries": [
+          {
+            "actual": "5.4×10-1",
+            "definition": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "value",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": "data",
+              "unit": "scalar",
+              "where": {
+                "id": "selected"
+              }
+            },
+            "evidence": [
+              {
+                "count": 1,
+                "field": "value",
+                "locations": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "line": 2
+                  }
+                ],
+                "path": "results.csv",
+                "records": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "value": 0.55
+                  }
+                ],
+                "reduce": "unique",
+                "source": "data",
+                "where": {
+                  "id": "selected"
+                }
+              }
+            ],
+            "expected": "5.5E-1",
+            "location": {
+              "context": "S1 Table | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB\n6 | rs2240026 | 5.4×10-1 | 6.9×10-129",
+              "end": 385,
+              "file": "supplement.docx",
+              "format": "docx",
+              "locator": {
+                "block": "sha256:1516de85274ab22a949f91df54e89d9a98bbce2e9e2a23b5ac08d829b881dd86",
+                "cell": 3,
+                "offset": 0,
+                "paragraph": 29,
+                "part": "word/document.xml",
+                "row": 8,
+                "section": [],
+                "style": "",
+                "table": 1
+              },
+              "parser": "paperdelta-docx/3;python-docx/1.2.0;lxml/6.1.3",
+              "start": 377,
+              "text": "5.4×10-1"
+            },
+            "metric": "selected",
+            "note": "PaperDelta review: selected\nCheck status: Differs from declared evidence\nWritten value (complete scientific notation): 5.4e-1\nExpected display: 5.5E-1\nDeclared metric: selected\nEvidence: results.csv\nRelated claims requiring attention: —\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+            "occurrence": "selected",
+            "position": "supplement.docx · table 1, row 8, cell 3 · paragraph 29",
+            "related_claims": [],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paperdelta.yaml": "sha256:bd90d1e28ba26cc20848e6d32c7c57d6cfe008af6c0beecfd385d685fda82f8b",
+          "results.csv": "sha256:b28ee8efd0415e95957026aa910bd12277dc22c11f0b546156ba8d6346873d95",
+          "supplement.docx": "sha256:d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d"
+        },
+        "language": "en",
+        "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+        "preview_id": "sha256:0652300f35a49e64b3dbb9f36340e24e5aa20aed12660b4faa50498f5f19408f",
+        "refused": [],
+        "report_fingerprint": "sha256:592f3321bdddf7cb45e288c193cada9b3f83df8b659a35158317ba131bb5d8ed",
+        "selection": {
+          "occurrences": [
+            "selected"
+          ]
+        },
+        "tool_version": "1.8.0"
+      },
+      "source_sha256": "d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d"
+    },
+    {
+      "changed_evidence": "mismatch",
+      "check": "pass",
+      "copy_sha256": "sha256:152969ad294b64d9e43237ea3db34ef1a716c84677adebe907c1803b68282110",
+      "format": "docx",
+      "gold_id": "dev-074",
+      "language": "zh-CN",
+      "original_unchanged": true,
+      "plan": {
+        "annotation_schema_version": 1,
+        "config_path": "paperdelta.yaml",
+        "copies": [
+          {
+            "annotations": 1,
+            "original": "supplement.docx",
+            "path": "copies/001-supplement.review.docx"
+          }
+        ],
+        "entries": [
+          {
+            "actual": "5.4×10-1",
+            "definition": {
+              "expected_count": null,
+              "expected_seeds": null,
+              "field": "value",
+              "reduce": "unique",
+              "seed_column": "seed",
+              "source": "data",
+              "unit": "scalar",
+              "where": {
+                "id": "selected"
+              }
+            },
+            "evidence": [
+              {
+                "count": 1,
+                "field": "value",
+                "locations": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "line": 2
+                  }
+                ],
+                "path": "results.csv",
+                "records": [
+                  {
+                    "key": {
+                      "id": "selected"
+                    },
+                    "value": 0.55
+                  }
+                ],
+                "reduce": "unique",
+                "source": "data",
+                "where": {
+                  "id": "selected"
+                }
+              }
+            ],
+            "expected": "5.5E-1",
+            "location": {
+              "context": "S1 Table | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB | Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB\n6 | rs2240026 | 5.4×10-1 | 6.9×10-129",
+              "end": 385,
+              "file": "supplement.docx",
+              "format": "docx",
+              "locator": {
+                "block": "sha256:1516de85274ab22a949f91df54e89d9a98bbce2e9e2a23b5ac08d829b881dd86",
+                "cell": 3,
+                "offset": 0,
+                "paragraph": 29,
+                "part": "word/document.xml",
+                "row": 8,
+                "section": [],
+                "style": "",
+                "table": 1
+              },
+              "parser": "paperdelta-docx/3;python-docx/1.2.0;lxml/6.1.3",
+              "start": 377,
+              "text": "5.4×10-1"
+            },
+            "metric": "selected",
+            "note": "PaperDelta 复核：selected\n核对状态：与已声明证据不一致\n原文数值（完整科学计数表示）：5.4e-1\n预期显示：5.5E-1\n已声明指标：selected\n证据：results.csv\n需关注的相关结论：—\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+            "occurrence": "selected",
+            "position": "supplement.docx · 表 1，第 8 行、第 3 列 · 第 29 段",
+            "related_claims": [],
+            "status": "mismatch"
+          }
+        ],
+        "input_hashes": {
+          "paperdelta.yaml": "sha256:bd90d1e28ba26cc20848e6d32c7c57d6cfe008af6c0beecfd385d685fda82f8b",
+          "results.csv": "sha256:b28ee8efd0415e95957026aa910bd12277dc22c11f0b546156ba8d6346873d95",
+          "supplement.docx": "sha256:d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d"
+        },
+        "language": "zh-CN",
+        "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+        "preview_id": "sha256:0b3d4836ca62f9e4b805e9d0b7d250af83d31cebfbf3a3aa0e9e39b04962847b",
+        "refused": [],
+        "report_fingerprint": "sha256:592f3321bdddf7cb45e288c193cada9b3f83df8b659a35158317ba131bb5d8ed",
+        "selection": {
+          "occurrences": [
+            "selected"
+          ]
+        },
+        "tool_version": "1.8.0"
+      },
+      "source_sha256": "d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d"
+    }
+  ],
+  "scope": "Four authored bilingual exports on two development originals. The Word identity is explicitly reviewed; this is separate from automatic-anchor study results.",
+  "tool_version": "1.8.0"
+}

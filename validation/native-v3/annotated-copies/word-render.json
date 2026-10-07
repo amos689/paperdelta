@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "version": "16.0",
+      "language": "en",
+      "comments": [
+        {
+          "text": "PaperDelta review: selected\rCheck status: Differs from declared evidence\rWritten value (complete scientific notation): 5.4e-1\rExpected display: 5.5E-1\rDeclared metric: selected\rEvidence: results.csv\rRelated claims requiring attention: —\rReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+          "scope": "5.4×10-1",
+          "author": "PaperDelta"
+        }
+      ],
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "source_sha256": "c7d01fe62be544fa4884feb4796ecbd4b58c256534e4468c00eb592550b6a681"
+    },
+    {
+      "version": "16.0",
+      "language": "zh-CN",
+      "comments": [
+        {
+          "text": "PaperDelta 复核：selected\r核对状态：与已声明证据不一致\r原文数值（完整科学计数表示）：5.4e-1\r预期显示：5.5E-1\r已声明指标：selected\r证据：results.csv\r需关注的相关结论：—\r请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+          "scope": "5.4×10-1",
+          "author": "PaperDelta"
+        }
+      ],
+      "engine": "Microsoft Word",
+      "rendered_pages": 1,
+      "source_sha256": "152969ad294b64d9e43237ea3db34ef1a716c84677adebe907c1803b68282110"
+    }
+  ],
+  "role": "Authored visual verification of comment copies; not product runtime"
+}

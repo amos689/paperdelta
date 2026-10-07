@@ -189,18 +189,10 @@ def main():
                 "file": "supplement.docx",
                 "eligible_targets": 0,
                 "unfilled_slots": 16,
-                "reason": (
-                    "Allele-description table contains mutation identifiers, targeted exons, "
-                    "genomic coordinates and sequences, not measured outcomes. "
-                    "Original retained; no replacement."
-                ),
+                "reason": "Allele-description table contains mutation identifiers, targeted exons, genomic coordinates and sequences, not measured outcomes. Original retained; no replacement.",
             }
         ],
-        "annotation": (
-            "Developer-selected independent original positions after implementation freeze "
-            "and before held-out product scores. Complete compounds are single targets, "
-            "not fragment successes."
-        ),
+        "annotation": "Developer-selected independent original positions after implementation freeze and before held-out product scores. Complete compounds are single targets, not fragment successes.",
     }
     path = original.CORPUS / "held-out-gold.json"
     with path.open("x", encoding="utf-8", newline="\n") as stream:
@@ -212,10 +204,7 @@ def main():
             json.dumps(
                 {
                     "gold_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
-                    "method": (
-                        "PDFium loose font boxes at independent original glyph indices; "
-                        "ink boxes retained."
-                    ),
+                    "method": "PDFium loose font boxes at independent original glyph indices; ink boxes retained.",
                     "boxes": boxes,
                 },
                 indent=2,

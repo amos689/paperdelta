@@ -133,7 +133,7 @@ visible coordinates and original-page rendering. Extraction uses
 rendering uses the PDFium dependency distributed with pdfplumber.
 
 The adapter fails closed for recognized unsupported content: scanned/blank pages,
-OCR text over images, undecodable glyphs, superscripts/subscripts, overlapping or
+OCR text over images, undecodable glyphs, superscripts/subscripts outside the verified scientific-value case below, overlapping or
 arbitrarily rotated text, hidden/translucent/clipped content, forms/layers and complex table
 cells. Scoped rectangular clipping can retain fully visible glyphs; clipped or
 unknown paths, text clipping and uncertain graphics states are unverified. Image and Form XObject areas remain unverified; ordinary prose outside

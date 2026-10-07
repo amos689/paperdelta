@@ -1,0 +1,40 @@
+schema_version: 10
+paper:
+  entry: article.pdf
+  macros: {}
+rounding: half_up
+sources:
+  data:
+    path: results.csv
+    format: csv
+    primary_key:
+    - id
+    columns:
+      id: string
+      value: decimal
+metrics:
+  selected:
+    source: data
+    field: value
+    where:
+      id: selected
+    reduce: unique
+    seed_column: seed
+    unit: scalar
+occurrences:
+  selected:
+    file: article.pdf
+    anchor:
+      prefix: 'few causal variants in the fine-mapped region. Using data from '
+      suffix: ' plasma proteins from'
+      block: sha256:7f7b7be09daaa3a0feb3d4bad4b447445830a7a3740ba7d6beaba4869e64856f
+      parser: paperdelta-pdf/4;pdfplumber/0.11.10;pdfminer/20260107
+    metric: selected
+    display:
+      kind: decimal
+      places: 0
+      percent_symbol: false
+claims: {}
+figures: {}
+require_complete_coverage: false
+coverage_exclusions: {}

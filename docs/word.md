@@ -83,7 +83,7 @@ digits into a new number. A note can be selected, bound, checked and repaired us
 the same explicit workflow as body prose.
 
 Tracked revisions, fields/generated results, equations, drawings, text boxes,
-hidden formatting, automatic list numbering, superscript/subscript numeric runs,
+hidden formatting, automatic list numbering, superscript/subscript numeric runs outside the verified scientific-value case below,
 nested/revised/irregular tables and unresolvable merges remain unverified. Headers,
 footers and comments are outside the supported read model. Unsupported structures
 stay visible in diagnostics and coverage. Legacy `.doc`, `.docm`, encrypted or

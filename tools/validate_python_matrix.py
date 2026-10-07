@@ -66,7 +66,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--python", action="append", required=True)
     parser.add_argument("--out", required=True)
-    parser.add_argument("--timeout-seconds", type=int, default=480)
+    parser.add_argument("--timeout-seconds", type=int, default=900)
     args = parser.parse_args()
     if not 1 <= args.timeout_seconds <= 1800:
         parser.error("--timeout-seconds must be between 1 and 1800")

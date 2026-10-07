@@ -1,0 +1,104 @@
+{
+  "started_at": "2026-10-07T05:14:23.204869+00:00",
+  "host": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "macos_version": null,
+    "rosetta_translated": null
+  },
+  "wheel": {
+    "name": "paperdelta-1.8.0-py3-none-any.whl",
+    "sha256": "f280742555fd6884f8b06aa7a7637dd569036f5b7711078a6a17048b171fd40d"
+  },
+  "commands": [
+    {
+      "step": "install-core",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-core\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-v1.8.0-candidate1\\paperdelta-1.8.0-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "seconds": 1.812
+    },
+    {
+      "step": "core-smoke",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-core\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/package_smoke.py",
+        "--out",
+        "build\\v18-installed1\\core-smoke.json"
+      ],
+      "exit_code": 0,
+      "seconds": 6.188
+    },
+    {
+      "step": "install-full",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-full\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "<checkout>\\build\\release-v1.8.0-candidate1\\paperdelta-1.8.0-py3-none-any.whl[dev,mcp,wandb]"
+      ],
+      "exit_code": 0,
+      "seconds": 9.687
+    },
+    {
+      "step": "lint",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0,
+      "seconds": 0.61
+    },
+    {
+      "step": "format",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-full\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0,
+      "seconds": 0.062
+    },
+    {
+      "step": "tests",
+      "args": [
+        "<checkout>\\build\\v18-installed1\\venv-full\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tools/validate_python_matrix.py",
+        "--python",
+        "<checkout>\\build\\v18-installed1\\venv-full\\Scripts\\python.exe",
+        "--out",
+        "build\\v18-installed1\\suite"
+      ],
+      "exit_code": 1,
+      "seconds": 500.047
+    }
+  ],
+  "status": "failed",
+  "scope": "Actual installed-wheel execution on the recorded host, not independent users.",
+  "error": "RuntimeError: tests failed with exit 1; see tests.log",
+  "finished_at": "2026-10-07T05:23:04.872448+00:00"
+}

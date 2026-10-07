@@ -162,6 +162,7 @@ def main():
                 "--out",
                 (output / "suite").relative_to(ROOT),
             ],
+            timeout=1200,
         )
         suite = json.loads((output / "suite/evidence.json").read_text("utf-8"))
         evidence["suite"] = suite

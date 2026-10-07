@@ -1,0 +1,185 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "kind": "docx-omitted",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "06d165d80dbb28a6357722a5bfa718315e6769cb6eaf3b2ee964e7b0112b85b5",
+      "locator": {
+        "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+        "cell": 2,
+        "offset": 0,
+        "paragraph": 4,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-omitted",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "d6751ed460831bfb16c450dedfd65cef983475f9d8f12295897350119c2d1e94",
+      "locator": {
+        "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+        "cell": 2,
+        "offset": 0,
+        "paragraph": 4,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-multivalue",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "e50b9d192921ac1cb885bf2b02ace94ce0b72c167467cd606dc5cdb4205f64b9",
+      "locator": {
+        "block": "sha256:9aeaa2163050e2a324289e130a31041bb37f00ad9ebcd2803b2197c5f5d3e3a6",
+        "cell": 2,
+        "offset": 7,
+        "paragraph": 6,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-multivalue",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "e6a0f30b8e4c27cc876afc3cedb2aa9cc7f8cfd0f27e94828f49e52d83866632",
+      "locator": {
+        "block": "sha256:9aeaa2163050e2a324289e130a31041bb37f00ad9ebcd2803b2197c5f5d3e3a6",
+        "cell": 2,
+        "offset": 7,
+        "paragraph": 6,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-reviewed",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "89c21bb692e7f2bf7472958432096d5c262d86d625d53d28e47397f49cd14162",
+      "locator": {
+        "block": "sha256:6de25fd913880e9dc9f02aab8181a131bd3cec884a16f215b37188acd3554d9f",
+        "cell": 2,
+        "offset": 0,
+        "paragraph": 6,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "docx-reviewed",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "c295c0b0b4242614de67dfcb82c790091bf0e8cecc1fc5163368adc96a3695d7",
+      "locator": {
+        "block": "sha256:6de25fd913880e9dc9f02aab8181a131bd3cec884a16f215b37188acd3554d9f",
+        "cell": 2,
+        "offset": 0,
+        "paragraph": 6,
+        "part": "word/document.xml",
+        "row": 2,
+        "section": [],
+        "style": "",
+        "table": 1
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-superscript",
+      "language": "en",
+      "status": "passed",
+      "source_sha256": "ae4f39fc80084bff5689b9a248e237af7539eb894d886eb9121295e0c0ce8788",
+      "locator": {
+        "bbox": [
+          175.176,
+          70.484,
+          198.528,
+          82.484
+        ],
+        "block": "sha256:80b72ba48316b9a9c27a6eb66153897ea58f1be2146e147ea4c483733f17fb92",
+        "offset": 9,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          600,
+          800
+        ]
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    },
+    {
+      "kind": "pdf-superscript",
+      "language": "zh-CN",
+      "status": "passed",
+      "source_sha256": "ae4f39fc80084bff5689b9a248e237af7539eb894d886eb9121295e0c0ce8788",
+      "locator": {
+        "bbox": [
+          175.176,
+          70.484,
+          198.528,
+          82.484
+        ],
+        "block": "sha256:80b72ba48316b9a9c27a6eb66153897ea58f1be2146e147ea4c483733f17fb92",
+        "offset": 9,
+        "page": 1,
+        "page_box": [
+          0,
+          0,
+          600,
+          800
+        ]
+      },
+      "changed_evidence": "mismatch",
+      "diagnostic_preview_matches_export": true,
+      "errors": [],
+      "remote_requests": []
+    }
+  ]
+}

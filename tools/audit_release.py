@@ -94,6 +94,70 @@ def check_metadata(raw, project):
     }
 
 
+def audit_native_v3(evaluation, notices):
+    prefix = "validation/native-v3/"
+
+    def read(name):
+        return json.loads(evaluation[prefix + name])
+
+    def digest(name):
+        return sha256(evaluation[prefix + name]).hexdigest()
+
+    sources = read("sources.json")["papers"]
+    assert len(sources) == 8 and len({p["doi"] for p in sources}) == 8
+    previous = {
+        p["doi"]
+        for version in (1, 2)
+        for p in json.loads(evaluation[f"validation/native-v{version}/sources.json"])["papers"]
+    }
+    assert not previous & {p["doi"] for p in sources}
+    originals = {}
+    for paper in sources:
+        assert paper["license"] == "CC-BY-4.0" and paper["doi"] in notices
+        assert paper["license_url"] == "https://creativecommons.org/licenses/by/4.0/"
+        for name, identity in paper["files"].items():
+            path = f"papers/{paper['id']}/{name}"
+            assert digest(path) == identity["sha256"]
+            assert len(evaluation[prefix + path]) == identity["bytes"]
+            originals[paper["id"], name] = identity["sha256"]
+    assert len(originals) == 12
+    implementation = read("implementation-lock.json")
+    for name, expected in implementation["files"].items():
+        assert digest("implementation/" + name) == expected
+    for split, expected_targets in (("development", 96), ("held-out", 80)):
+        gold, lock = read(split + "-gold.json"), read(split + "-gold-lock.json")
+        assert lock["gold_sha256"] == digest(split + "-gold.json")
+        assert lock["font_boxes_sha256"] == digest(split + "-font-boxes.json")
+        assert len(gold["targets"]) == expected_targets
+        assert len({t["id"] for t in gold["targets"]}) == expected_targets
+        for target in gold["targets"]:
+            assert target["source_sha256"] == originals[target["case"], target["file"]]
+    held, first = read("held-out-gold-lock.json"), read("results/held-out-first.json")
+    assert held["implementation_lock_sha256"] == digest("implementation-lock.json")
+    assert held["annotation_script_sha256"] == digest("annotation-tools/held-out-at-lock.py")
+    for name, expected in held["viewed_page_renders_sha256"].items():
+        assert digest(name) == expected
+    assert (
+        read("development-gold-lock.json")["locked_at"]
+        < implementation["locked_at"]
+        < held["locked_at"]
+        < read("first-run-start.json")["started_at"]
+    )
+    assert first["mode"] == "first-held-out" and first["matches_implementation_lock"]
+    assert first["implementation"] == implementation["files"]
+    assert first["gold"]["held-out"] == held["gold_sha256"]
+    assert first["shortfalls"] == read("held-out-gold.json")["shortfalls"]
+    assert sum(first["counts"].values()) == 80 and first["planned_slots"] == 96
+    return {
+        "families": len(sources),
+        "original_files": len(originals),
+        "implementation_files": len(implementation["files"]),
+        "first_held_out_counts": first["counts"],
+        "unfilled_held_out_slots": 16,
+        "original_hashes_licenses_gold_locks_and_renders_verified": True,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--directory", required=True)
@@ -416,6 +480,7 @@ def main():
         "first_held_out_counts": first["counts"],
         "python_distributions_exclude_native_corpus": True,
     }
+    record["native_v3"] = audit_native_v3(evaluation, notices)
     target = directory / "package-audit.json"
     target.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(record, indent=2))
