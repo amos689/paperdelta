@@ -10,6 +10,7 @@ from paperdelta import builder
 from paperdelta.batch import build_proposal, create_catalog, inspect_catalog
 from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import msg
+from paperdelta.proposal_review import inspect_review
 from paperdelta.storage import fingerprint, json_text
 
 
@@ -133,5 +134,7 @@ class BatchSessions:
             "status": "proposed",
             "proposal_id": proposal["proposal_id"],
             "proposal_json": json_text(proposal),
+            "review": inspect_review(self.project, proposal),
+            "requires_confirmation": True,
             "next": msg("agent.next_binding"),
         }

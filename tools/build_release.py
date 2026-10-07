@@ -45,7 +45,7 @@ def main():
     )
     files.update(
         p.relative_to(ROOT).as_posix()
-        for study in ("native-v1", "native-v2", "native-v3", "mapping-v4")
+        for study in ("native-v1", "native-v2", "native-v3", "mapping-v4", "mapping-v5")
         for p in (ROOT / "validation" / study).rglob("*")
         if p.is_file() and "__pycache__" not in p.parts
     )

@@ -1,0 +1,33 @@
+{
+  "stage": "initial implementation, before real model inference",
+  "old_failure_details": {
+    "C05": "First source action omitted columns and primary_key. After correction the model declared both source metrics scalar; percentage_point_diff then returned UNIT_MISMATCH. Repeating the same derived action consumed the remaining error budget.",
+    "C09": "First metric action omitted expected_count. After correction locations supplied two candidate IDs and only one name; repeating that selection error exhausted the budget."
+  },
+  "general_product_changes": [
+    "Shared declared identity and computed evidence review for staged, direct and batch proposals, CLI and Studio; numeric equality is not proof of experimental identity.",
+    "Current-stage guidance covers source-field units, typed selectors, complete count/seeds, original display precision, JSON pointers and native table identity.",
+    "At most four explicit undo actions within the existing 16-action budget; original observed hashes remain guarded and invalid actions retain the last valid draft.",
+    "No automatic acceptance, task-specific gold, scorer feedback or manuscript execution."
+  ],
+  "machine_failures_preserved": [
+    {
+      "receipt": "build/v20-first-targeted.xml",
+      "result": "80 passed, 5 failed",
+      "cause": "A literal brace pair in localized guidance was interpreted as a format field.",
+      "correction": "Describe empty arguments in words; staged rerun passed 5 tests."
+    },
+    {
+      "receipt": "build/v20-review-browser1",
+      "cause": "Switching languages retained the prior author confirmation when the proposal ID stayed the same.",
+      "correction": "Clear confirmation at the start of language switching while retaining selected bindings."
+    },
+    {
+      "receipt": "build/v20-review-browser2",
+      "cause": "Importing a stale proposal hid the prior preview but left its hidden acceptance button enabled.",
+      "correction": "Update acceptance state when no preview is present, and clear confirmation before every import attempt."
+    }
+  ],
+  "authored_control_receipt": "build/v20-mapping-controls1/evidence.json",
+  "control_scope": "13 development reference/adversarial controls, zero model calls; these do not measure model success."
+}

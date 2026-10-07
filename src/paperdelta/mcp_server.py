@@ -14,6 +14,7 @@ from paperdelta.models import (
     ColumnType,
     DerivedOperation,
     DisplayKind,
+    ReviewedTableIdentity,
     SourceFormat,
     StatisticalContract,
     StatisticalDisplay,
@@ -254,6 +255,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
         percent_symbol: bool,
         rationale: str,
         statistics: StatisticalDisplay | None = None,
+        table_identity: ReviewedTableIdentity | None = None,
     ) -> dict[str, Any]:
         return call(
             session.add_draft_locations,
@@ -266,6 +268,7 @@ def create_server(project: Project, config_path="paperdelta.yaml"):
             percent_symbol,
             rationale,
             statistics.model_dump() if statistics else None,
+            table_identity.model_dump() if table_identity else None,
         )
 
     @server.tool(annotations=annotations, description=tr("agent.draft_finish"))

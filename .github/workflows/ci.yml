@@ -29,6 +29,10 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
         run: node tools/validate_studio_browser.cjs build/studio-browser
+      - name: Test bilingual Agent evidence review and exact native identities
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
+        run: node tools/validate_agent_review_browser.cjs build/agent-review-browser
       - name: Test bilingual ongoing review and restart recovery
         env:
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/build/browser-tools/node_modules/playwright
@@ -169,6 +173,8 @@ jobs:
             build/workflows-browser/evidence.json
             build/workflows-browser/*.png
             build/workflows-browser/failure.json
+            build/agent-review-browser/evidence.json
+            build/agent-review-browser/*.png
             build/notebook-workflow/evidence.json
             build/notebook-workflow/paper/reports/**
             build/notebook-workflow/paper/.paperdelta/run-logs/**

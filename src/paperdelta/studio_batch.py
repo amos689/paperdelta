@@ -15,6 +15,7 @@ from paperdelta.locations import location_label
 from paperdelta.models import ColumnType, Hash, Identifier, StrictModel, VersionOne
 from paperdelta.onboarding import inspect_proposal
 from paperdelta.patches import _write_lock
+from paperdelta.proposal_review import from_checked
 from paperdelta.records import validate_record
 from paperdelta.storage import fingerprint, json_text, parse_json
 
@@ -135,7 +136,9 @@ def proposal_draft(project, current, value):
 
 
 def proposal_preview(project, proposal, candidates):
-    parsed, _, report = inspect_proposal(project, proposal)
+    parsed, config, report = inspect_proposal(project, proposal)
+    review = from_checked(project, parsed, config, report)
+    reviewed = {item["binding"]: item for item in review["bindings"]}
     positions = {(item["file"], item["start"], item["end"]): item for item in candidates}
     items = []
     for binding, rationale in parsed.rationale.items():
@@ -152,6 +155,7 @@ def proposal_preview(project, proposal, candidates):
             {
                 **entry,
                 "binding": binding,
+                "review": reviewed[binding],
                 "group": group,
                 "rationale": rationale,
                 "definition_json": json_text(definition),
@@ -163,6 +167,7 @@ def proposal_preview(project, proposal, candidates):
         )
     return {
         "proposal_id": parsed.proposal_id,
+        "review": review,
         "items": items,
         "metrics": report["metrics"],
         "coverage": report["coverage"],

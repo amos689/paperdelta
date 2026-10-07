@@ -59,6 +59,7 @@ def _compatible_draft(value):
             (1, 6),
             (1, 7),
             (1, 8),
+            (1, 9),
         }
     ):
         raise PaperDeltaError("DRAFT_IDENTITY", msg("builder.identity"))

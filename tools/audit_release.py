@@ -258,7 +258,8 @@ def main():
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/v1.8").glob("*")]
     required += [
         p.relative_to(ROOT).as_posix()
-        for p in (ROOT / "validation/mapping-v4").rglob("*")
+        for study in ("mapping-v4", "mapping-v5")
+        for p in (ROOT / "validation" / study).rglob("*")
         if p.is_file() and "__pycache__" not in p.parts
     ]
     required += [p.relative_to(ROOT).as_posix() for p in (ROOT / "docs/assets/brand").glob("*.svg")]

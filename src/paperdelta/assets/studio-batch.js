@@ -379,6 +379,7 @@ window.createPaperDeltaBatch = function (ctx) {
   $('proposal-import').onclick = () => $('proposal-file').click();
   $('proposal-file').onchange = () => task(async () => {
     const file = $('proposal-file').files[0]; $('proposal-file').value = ''; if (!file) return;
+    $('attest').checked = false; $('accept').disabled = true;
     if (file.size > 850000) throw new Error(t('draft_limit'));
     update((await api('proposal-import', { value_json: await file.text() })).state);
     ctx.setStep('review'); notice(t('proposal_loaded'));

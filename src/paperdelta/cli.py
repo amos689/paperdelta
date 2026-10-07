@@ -445,8 +445,15 @@ def _main(argv: list[str]) -> int:
             elif arguments.accept:
                 result = accept_bindings(project, value, arguments.accept)
             else:
-                proposal, _, report = inspect_proposal(project, value)
-                result = {"status": "proposed", "rationale": proposal.rationale, "preview": report}
+                from paperdelta.proposal_review import from_checked
+
+                proposal, config, report = inspect_proposal(project, value)
+                result = {
+                    "status": "proposed",
+                    "rationale": proposal.rationale,
+                    "preview": report,
+                    "review": from_checked(project, proposal, config, report),
+                }
             _output(
                 arguments,
                 result,

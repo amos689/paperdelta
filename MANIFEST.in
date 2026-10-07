@@ -11,6 +11,8 @@ recursive-include tests *.py
 recursive-include evaluations *.md *.json *.tex *.csv *.yaml *.py *.css *.js
 recursive-include validation/mapping-v4 *.md *.json *.tex *.csv *.yaml *.py *.css *.js *.log
 recursive-include validation/mapping-v4 LICENSE
+recursive-include validation/mapping-v5 *.md *.json *.tex *.csv *.tsv *.xlsx *.docx *.pdf *.png *.qmd *.yaml *.py *.css *.js *.ps1 *.log *.bin
+recursive-include validation/mapping-v5 LICENSE
 prune tests/corpus
 prune validation/native-v1
 prune validation/native-v2

@@ -409,12 +409,56 @@
     box.append(svg);
     if (focused) for (const rect of svg.children) if (rect.dataset.pdfCandidate === focused) rect.focus({ preventScroll: true });
   }
+  function proposalEvidence(review) {
+    const box = node("section", undefined, "proposal-evidence");
+    box.dataset.proposalEvidence = review.binding;
+    box.append(node("h3", t("review_identity")), node("p", t("review_scope"), "muted"));
+    for (const notice of review.notices || []) box.append(node("p", notice, "notice"));
+    const original = node("details"); original.append(node("summary", t("review_original_hash")), node("code", review.manuscript_sha256 || "—"), node("pre", text(review.location)));
+    box.append(original);
+    if (review.declared_binding.display) {
+      const display = review.declared_binding.display;
+      box.append(node("p", `${t("review_display")}: ${t(display.kind)} · ${t("places")}: ${display.places} · %: ${display.percent_symbol ? "✓" : "—"}`));
+    }
+    for (const metric of Object.values(review.metrics || {})) {
+      const card = node("div", undefined, "review-evidence-metric"); card.dataset.reviewMetric = metric.name;
+      card.append(node("strong", metric.name));
+      const identity = metric.declared_identity, summary = node("dl", undefined, "selector-summary");
+      const add = (label, value) => summary.append(node("dt", t(label)), node("dd", text(value)));
+      if (identity) {
+        add("review_source", identity.path); add("review_source_unit", t(identity.unit));
+        add("review_identity_types", identity.primary_key.map((key) => `${key}: ${identity.columns[key]}`).join(" · ") || "—");
+        add("review_selectors", identity.selectors);
+        add("review_runs", { count: identity.expected_count, seed_column: identity.seed_column, seeds: identity.expected_seeds });
+        card.append(node("code", identity.sha256 || "—"));
+      } else if (metric.derivation) {
+        card.append(node("p", t(metric.derivation.operation) + ": " + metric.derivation.arguments.join(" → ")));
+      }
+      add("review_computed", `${metric.computed.value ?? "—"} · ${t(metric.computed.unit || "unknown")}`); card.append(summary);
+      const declared = node("details"); declared.append(node("summary", t("review_contract")), node("pre", text(metric.declared_contract))); card.append(declared);
+      for (const notice of metric.notices || []) card.append(node("p", notice, "notice"));
+      for (const evidence of metric.evidence || []) {
+        const rows = node("details"); rows.append(node("summary", evidence.path + " · " + t("review_sample", { shown: evidence.records.length, total: evidence.records_total })));
+        rows.append(table(evidence.records, ["key", "value"], { key: t("record_key"), value: t("record_value") }));
+        rows.append(node("p", t("review_locations")), node("pre", text(evidence.locations)));
+        card.append(rows);
+      }
+      const complete = state.metrics[metric.name];
+      if (complete) {
+        const details = node("details"); details.dataset.completeEvidence = metric.name;
+        details.append(node("summary", t("review_complete")), metricDetails(complete)); card.append(details);
+      }
+      box.append(card);
+    }
+    return box;
+  }
   function renderReview() {
     const additions = state.additions;
     $("staged-count").textContent = ["occurrences", "claims", "figures"].reduce((total, group) => total + Object.keys(additions[group]).length, 0);
     $("draft-summary").replaceChildren(); $("review-items").replaceChildren(); $("review-diagnostics").replaceChildren();
     for (const group of ["sources", "metrics", "occurrences", "claims", "figures"]) for (const name of Object.keys(additions[group])) $("draft-summary").append(node("span", t(group) + ": " + name, "draft-chip"));
     const preview = state.preview; $("accept-controls").hidden = !preview;
+    updateAccept();
     if (!preview) { $("review-items").append(node("p", t("preview_empty"), "empty")); return; }
     for (const item of preview.items) {
       const card = node("article", undefined, "preview-card"), label = node("label", undefined, "check"), checkbox = node("input");
@@ -422,13 +466,14 @@
       checkbox.onchange = () => { if (checkbox.checked) accepted.add(item.binding); else accepted.delete(item.binding); updateAccept(); };
       label.append(checkbox, node("span", item.binding)); card.append(label, node("p", item.label));
       const context = node("p", undefined, "candidate-context");
-      context.append(node("span", contextText(item.context_before)), node("mark", item.candidate_text), node("span", contextText(item.context_after))); card.append(context);
+      context.append(node("span", contextText(item.review?.context.before ?? item.context_before)), node("mark", item.candidate_text), node("span", contextText(item.review?.context.after ?? item.context_after))); card.append(context);
       const values = node("div", undefined, "preview-values");
       if (item.group === "occurrences") values.append(node("code", item.actual ?? item.location?.text ?? ""), node("span", "→"), node("code", item.expected ?? ""));
       values.append(node("span", t(item.status), "status status-" + item.status));
-      card.append(values, node("p", t("rationale") + ": " + item.rationale));
+      card.append(values, node("p", t("review_assertion") + ": " + item.rationale));
+      if (item.review) card.append(proposalEvidence(item.review));
       if (item.definition_json) { const definition = node("details"); definition.append(node("summary", t("proposal_definition")), node("pre", item.definition_json)); card.append(definition); }
-      const metric = state.metrics[item.metric]; if (metric) card.append(metricDetails(metric));
+      const metric = state.metrics[item.metric]; if (metric && !item.review) card.append(metricDetails(metric));
       $("review-items").append(card);
     }
     for (const issue of preview.diagnostics) $("review-diagnostics").append(node("p", `${issue.rule}: ${issue.message}`, "issue"));
@@ -579,6 +624,7 @@
   $("download-report").onclick = () => task(async () => { download((await api("report")).html, "paperdelta-report.html", "text/html"); notice(t("report_saved")); });
   $("pdf-zoom").onclick = () => { const zoomed = $("pdf-view").classList.toggle("zoomed"); $("pdf-zoom").textContent = t(zoomed ? "fit" : "zoom"); };
   $("language").onchange = () => task(async () => {
+    $("attest").checked = false; updateAccept();
     language = $("language").value; try { sessionStorage.setItem("paperdelta-language", language); } catch (_) { /* Optional preference. */ }
     localize(); notice(""); update((await api("state")).state); renderSelectors(true); renderSourceSample();
     $("column-types").querySelectorAll("select").forEach((s) => options(s, ["string", "integer", "decimal"], true));

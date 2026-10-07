@@ -11,6 +11,7 @@ from paperdelta.errors import PaperDeltaError
 from paperdelta.i18n import current_language, msg, tr, translated
 from paperdelta.onboarding import propose_bindings, scan_project
 from paperdelta.patches import create_patch
+from paperdelta.proposal_review import draft_review, inspect_review
 from paperdelta.snapshots import read_snapshot
 from paperdelta.storage import Project, json_text, parse_json
 
@@ -83,6 +84,8 @@ class AgentSession:
             "status": "proposed",
             "proposal_id": value["proposal_id"],
             "proposal_json": json_text(value),
+            "review": _wire(translated(inspect_review(self.project, value))),
+            "requires_confirmation": True,
             "next": tr("agent.next_binding"),
         }
 
@@ -90,12 +93,14 @@ class AgentSession:
         preview = builder.inspect_draft(self.project, value)
         for state in preview["metrics"].values():
             for source in state["evidence"]:
-                source["records"] = source["records"][:10]
-                source["locations"] = source["locations"][:10]
+                for key in ("records", "locations"):
+                    source[key + "_total"] = len(source[key])
+                    source[key] = source[key][:10]
         return {
             "status": "draft",
             "draft_json": json_text(value),
             "preview": _wire(preview),
+            "review": _wire(translated(draft_review(self.project, value))),
             "next": tr("agent.next_draft"),
         }
 
@@ -174,6 +179,7 @@ class AgentSession:
         percent_symbol,
         rationale,
         statistics=None,
+        table_identity=None,
     ):
         return self._draft_view(
             builder.add_occurrences(
@@ -187,6 +193,7 @@ class AgentSession:
                 percent_symbol=percent_symbol,
                 rationale=rationale,
                 statistics=statistics,
+                table_identity=table_identity,
             )
         )
 
@@ -196,6 +203,8 @@ class AgentSession:
             "status": "proposed",
             "proposal_id": value["proposal_id"],
             "proposal_json": json_text(value),
+            "review": _wire(translated(inspect_review(self.project, value))),
+            "requires_confirmation": True,
             "next": tr("agent.next_binding"),
         }
 
