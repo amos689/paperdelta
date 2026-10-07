@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "tool": "PaperDelta 1.9.0",
+  "host": "Windows",
+  "architecture": "AMD64",
+  "python": "3.12.14",
+  "wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+  "runs": [
+    {
+      "extras": false,
+      "arguments": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.328
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "latex",
+        "--out",
+        "latex-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.688
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "markdown",
+        "--out",
+        "markdown-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "quarto",
+        "--out",
+        "quarto-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.468
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "docx",
+        "--out",
+        "docx-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.922
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "en",
+        "demo",
+        "--document",
+        "pdf",
+        "--out",
+        "pdf-en",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.25
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "en",
+        "-C",
+        "pdf-en",
+        "scan",
+        "--format",
+        "json"
+      ],
+      "exit_code": 2,
+      "seconds": 0.344
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "latex",
+        "--out",
+        "latex-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.641
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "markdown",
+        "--out",
+        "markdown-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.484
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "quarto",
+        "--out",
+        "quarto-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.469
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "docx",
+        "--out",
+        "docx-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5
+    },
+    {
+      "extras": true,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "demo",
+        "--document",
+        "pdf",
+        "--out",
+        "pdf-zh-CN",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.812
+    },
+    {
+      "extras": false,
+      "arguments": [
+        "--lang",
+        "zh-CN",
+        "-C",
+        "pdf-zh-CN",
+        "scan",
+        "--format",
+        "json"
+      ],
+      "exit_code": 2,
+      "seconds": 0.36
+    }
+  ]
+}

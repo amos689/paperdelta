@@ -1,0 +1,564 @@
+﻿2026-10-07T07:09:34.2827550Z Current runner version: '2.337.0'
+2026-10-07T07:09:34.3065140Z ##[group]Runner Image Provisioner
+2026-10-07T07:09:34.3070220Z Hosted Compute Agent
+2026-10-07T07:09:34.3072290Z Version: 20260819.586
+2026-10-07T07:09:34.3074000Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+2026-10-07T07:09:34.3078360Z Build Date: 2026-08-18T23:20:18Z
+2026-10-07T07:09:34.3082050Z Worker ID: {7bd7c7ca-2a5a-4597-a56d-c33062242287}
+2026-10-07T07:09:34.3085040Z Azure Region: westus
+2026-10-07T07:09:34.3086820Z ##[endgroup]
+2026-10-07T07:09:34.3151380Z ##[group]Operating System
+2026-10-07T07:09:34.3154120Z macOS
+2026-10-07T07:09:34.3163030Z 15.7.9
+2026-10-07T07:09:34.3203320Z 24G830
+2026-10-07T07:09:34.3224390Z ##[endgroup]
+2026-10-07T07:09:34.3226330Z ##[group]Runner Image
+2026-10-07T07:09:34.3229230Z Image: macos-15
+2026-10-07T07:09:34.3231410Z Version: 20260824.0482.1
+2026-10-07T07:09:34.3235800Z Included Software: https://github.com/actions/runner-images/blob/macos-15/20260824.0482/images/macos/macos-15-Readme.md
+2026-10-07T07:09:34.3240880Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15%2F20260824.0482
+2026-10-07T07:09:34.3243910Z ##[endgroup]
+2026-10-07T07:09:34.3279180Z ##[group]GITHUB_TOKEN Permissions
+2026-10-07T07:09:34.3288680Z Contents: read
+2026-10-07T07:09:34.3290970Z Metadata: read
+2026-10-07T07:09:34.3293210Z ##[endgroup]
+2026-10-07T07:09:34.3300300Z Secret source: Actions
+2026-10-07T07:09:34.3309110Z Cache mode: write
+2026-10-07T07:09:34.3334980Z Prepare workflow directory
+2026-10-07T07:09:35.1021560Z Prepare all required actions
+2026-10-07T07:09:35.1231610Z Getting action download info
+2026-10-07T07:09:35.8980350Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-07T07:09:38.3009890Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-07T07:09:39.8070760Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-07T07:09:41.0336600Z Complete job name: macOS x86_64 / Python 3.12
+2026-10-07T07:09:41.2313230Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-10-07T07:09:41.2316220Z with:
+2026-10-07T07:09:41.2317330Z   persist-credentials: false
+2026-10-07T07:09:41.2318640Z   repository: amos689/paperdelta
+2026-10-07T07:09:41.2331100Z   token: ***
+2026-10-07T07:09:41.2332390Z   ssh-strict: true
+2026-10-07T07:09:41.2333690Z   ssh-user: git
+2026-10-07T07:09:41.2335320Z   clean: true
+2026-10-07T07:09:41.2337730Z   sparse-checkout-cone-mode: true
+2026-10-07T07:09:41.2340150Z   fetch-depth: 1
+2026-10-07T07:09:41.2341870Z   fetch-tags: false
+2026-10-07T07:09:41.2343710Z   show-progress: true
+2026-10-07T07:09:41.2382470Z   lfs: false
+2026-10-07T07:09:41.2383990Z   submodules: false
+2026-10-07T07:09:41.2385070Z   set-safe-directory: true
+2026-10-07T07:09:41.2386490Z   allow-unsafe-pr-checkout: false
+2026-10-07T07:09:41.2389710Z ##[endgroup]
+2026-10-07T07:09:42.6607770Z Syncing repository: amos689/paperdelta
+2026-10-07T07:09:42.6612940Z ##[group]Getting Git version info
+2026-10-07T07:09:42.6615020Z Working directory is '/Users/runner/work/paperdelta/paperdelta'
+2026-10-07T07:09:42.6617940Z [command]/usr/local/bin/git version
+2026-10-07T07:09:42.7226210Z git version 2.55.0
+2026-10-07T07:09:42.7284760Z ##[endgroup]
+2026-10-07T07:09:42.7312740Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/8da3e785-a4c4-4c72-b071-76975bc85941/.gitconfig'
+2026-10-07T07:09:42.7338700Z Temporarily overriding HOME='/Users/runner/work/_temp/8da3e785-a4c4-4c72-b071-76975bc85941' before making global git config changes
+2026-10-07T07:09:42.7342910Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T07:09:42.7351640Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/paperdelta/paperdelta
+2026-10-07T07:09:42.7597120Z Deleting the contents of '/Users/runner/work/paperdelta/paperdelta'
+2026-10-07T07:09:42.7609480Z ##[group]Determining repository object format
+2026-10-07T07:09:42.7612590Z ##[endgroup]
+2026-10-07T07:09:42.7614930Z ##[group]Initializing the repository
+2026-10-07T07:09:42.7625160Z [command]/usr/local/bin/git init /Users/runner/work/paperdelta/paperdelta
+2026-10-07T07:09:42.8273880Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-07T07:09:42.8277020Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-07T07:09:42.8279710Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-07T07:09:42.8281690Z hint: call:
+2026-10-07T07:09:42.8282780Z hint:
+2026-10-07T07:09:42.8287340Z hint: 	git config --global init.defaultBranch <name>
+2026-10-07T07:09:42.8289240Z hint:
+2026-10-07T07:09:42.8291080Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-07T07:09:42.8294220Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-07T07:09:42.8296710Z hint:
+2026-10-07T07:09:42.8297980Z hint: 	git branch -m <name>
+2026-10-07T07:09:42.8299380Z hint:
+2026-10-07T07:09:42.8301300Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-07T07:09:42.8304390Z Initialized empty Git repository in /Users/runner/work/paperdelta/paperdelta/.git/
+2026-10-07T07:09:42.8310250Z [command]/usr/local/bin/git remote add origin https://github.com/amos689/paperdelta
+2026-10-07T07:09:42.8555020Z ##[endgroup]
+2026-10-07T07:09:42.8557340Z ##[group]Disabling automatic garbage collection
+2026-10-07T07:09:42.8562240Z [command]/usr/local/bin/git config --local gc.auto 0
+2026-10-07T07:09:42.8779520Z ##[endgroup]
+2026-10-07T07:09:42.8781550Z ##[group]Setting up auth
+2026-10-07T07:09:42.8782710Z Removing SSH command configuration
+2026-10-07T07:09:42.8796020Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T07:09:42.8999650Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T07:09:43.2177400Z Removing HTTP extra header
+2026-10-07T07:09:43.2224510Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T07:09:43.2331440Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T07:09:43.6767140Z Removing includeIf entries pointing to credentials config files
+2026-10-07T07:09:43.6810760Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T07:09:43.6932400Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T07:09:44.2630240Z [command]/usr/local/bin/git config --file /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-07T07:09:44.2681870Z [command]/usr/local/bin/git config --local includeIf.gitdir:/Users/runner/work/paperdelta/paperdelta/.git.path /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:44.2698350Z [command]/usr/local/bin/git config --local includeIf.gitdir:/Users/runner/work/paperdelta/paperdelta/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:44.2721190Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:44.2814010Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:44.3100970Z ##[endgroup]
+2026-10-07T07:09:44.3104280Z ##[group]Fetching the repository
+2026-10-07T07:09:44.3117570Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a55f93a78f4ebabdfde172bbe88808e4ac483fc3:refs/remotes/origin/main
+2026-10-07T07:09:49.2457290Z From https://github.com/amos689/paperdelta
+2026-10-07T07:09:49.2461930Z  * [new ref]         a55f93a78f4ebabdfde172bbe88808e4ac483fc3 -> origin/main
+2026-10-07T07:09:49.2496680Z [command]/usr/local/bin/git branch --list --remote origin/main
+2026-10-07T07:09:49.2752240Z   origin/main
+2026-10-07T07:09:49.2776000Z [command]/usr/local/bin/git rev-parse refs/remotes/origin/main
+2026-10-07T07:09:49.2986300Z a55f93a78f4ebabdfde172bbe88808e4ac483fc3
+2026-10-07T07:09:49.2998600Z ##[endgroup]
+2026-10-07T07:09:49.3000150Z ##[group]Determining the checkout info
+2026-10-07T07:09:49.3002380Z ##[endgroup]
+2026-10-07T07:09:49.3011420Z [command]/usr/local/bin/git sparse-checkout disable
+2026-10-07T07:09:49.3296150Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-07T07:09:49.3537930Z ##[group]Checking out the ref
+2026-10-07T07:09:49.3539820Z [command]/usr/local/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-07T07:09:50.6119240Z Updating files:  19% (616/3115)
+2026-10-07T07:09:50.6288950Z Updating files:  20% (623/3115)
+2026-10-07T07:09:50.6941350Z Updating files:  21% (655/3115)
+2026-10-07T07:09:50.7897180Z Updating files:  22% (686/3115)
+2026-10-07T07:09:50.8782160Z Updating files:  23% (717/3115)
+2026-10-07T07:09:50.9008660Z Updating files:  24% (748/3115)
+2026-10-07T07:09:50.9358690Z Updating files:  25% (779/3115)
+2026-10-07T07:09:50.9737450Z Updating files:  26% (810/3115)
+2026-10-07T07:09:51.1147090Z Updating files:  27% (842/3115)
+2026-10-07T07:09:51.1617940Z Updating files:  28% (873/3115)
+2026-10-07T07:09:51.1998310Z Updating files:  29% (904/3115)
+2026-10-07T07:09:51.2548270Z Updating files:  30% (935/3115)
+2026-10-07T07:09:51.2932570Z Updating files:  31% (966/3115)
+2026-10-07T07:09:51.3227280Z Updating files:  32% (997/3115)
+2026-10-07T07:09:51.3676850Z Updating files:  33% (1028/3115)
+2026-10-07T07:09:51.5404610Z Updating files:  34% (1060/3115)
+2026-10-07T07:09:51.5823820Z Updating files:  34% (1063/3115)
+2026-10-07T07:09:51.5986080Z Updating files:  35% (1091/3115)
+2026-10-07T07:09:51.6192310Z Updating files:  36% (1122/3115)
+2026-10-07T07:09:51.6434520Z Updating files:  37% (1153/3115)
+2026-10-07T07:09:51.6641890Z Updating files:  38% (1184/3115)
+2026-10-07T07:09:51.6945560Z Updating files:  39% (1215/3115)
+2026-10-07T07:09:51.7114190Z Updating files:  40% (1246/3115)
+2026-10-07T07:09:51.7349320Z Updating files:  41% (1278/3115)
+2026-10-07T07:09:51.7615390Z Updating files:  42% (1309/3115)
+2026-10-07T07:09:51.7859660Z Updating files:  43% (1340/3115)
+2026-10-07T07:09:51.8025240Z Updating files:  44% (1371/3115)
+2026-10-07T07:09:51.8209650Z Updating files:  45% (1402/3115)
+2026-10-07T07:09:51.8375860Z Updating files:  46% (1433/3115)
+2026-10-07T07:09:51.8569390Z Updating files:  47% (1465/3115)
+2026-10-07T07:09:51.8740830Z Updating files:  48% (1496/3115)
+2026-10-07T07:09:51.8948050Z Updating files:  49% (1527/3115)
+2026-10-07T07:09:51.9143930Z Updating files:  50% (1558/3115)
+2026-10-07T07:09:51.9341070Z Updating files:  51% (1589/3115)
+2026-10-07T07:09:51.9530530Z Updating files:  52% (1620/3115)
+2026-10-07T07:09:51.9726020Z Updating files:  53% (1651/3115)
+2026-10-07T07:09:51.9991240Z Updating files:  54% (1683/3115)
+2026-10-07T07:09:52.0221510Z Updating files:  55% (1714/3115)
+2026-10-07T07:09:52.0428460Z Updating files:  56% (1745/3115)
+2026-10-07T07:09:52.0618470Z Updating files:  57% (1776/3115)
+2026-10-07T07:09:52.0833320Z Updating files:  58% (1807/3115)
+2026-10-07T07:09:52.1312130Z Updating files:  59% (1838/3115)
+2026-10-07T07:09:52.1413530Z Updating files:  60% (1869/3115)
+2026-10-07T07:09:52.1557740Z Updating files:  61% (1901/3115)
+2026-10-07T07:09:52.1769660Z Updating files:  62% (1932/3115)
+2026-10-07T07:09:52.1993850Z Updating files:  63% (1963/3115)
+2026-10-07T07:09:52.2191840Z Updating files:  64% (1994/3115)
+2026-10-07T07:09:52.2432270Z Updating files:  65% (2025/3115)
+2026-10-07T07:09:52.2608190Z Updating files:  66% (2056/3115)
+2026-10-07T07:09:52.2804790Z Updating files:  67% (2088/3115)
+2026-10-07T07:09:52.3129530Z Updating files:  68% (2119/3115)
+2026-10-07T07:09:52.3212580Z Updating files:  69% (2150/3115)
+2026-10-07T07:09:52.3390500Z Updating files:  70% (2181/3115)
+2026-10-07T07:09:52.3545980Z Updating files:  71% (2212/3115)
+2026-10-07T07:09:52.3743910Z Updating files:  72% (2243/3115)
+2026-10-07T07:09:52.3951140Z Updating files:  73% (2274/3115)
+2026-10-07T07:09:52.4123910Z Updating files:  74% (2306/3115)
+2026-10-07T07:09:52.4341640Z Updating files:  75% (2337/3115)
+2026-10-07T07:09:52.4584290Z Updating files:  76% (2368/3115)
+2026-10-07T07:09:52.4731570Z Updating files:  76% (2392/3115)
+2026-10-07T07:09:52.4838040Z Updating files:  77% (2399/3115)
+2026-10-07T07:09:52.5047750Z Updating files:  78% (2430/3115)
+2026-10-07T07:09:52.5269970Z Updating files:  79% (2461/3115)
+2026-10-07T07:09:52.5479400Z Updating files:  80% (2492/3115)
+2026-10-07T07:09:52.5706480Z Updating files:  81% (2524/3115)
+2026-10-07T07:09:52.6593500Z Updating files:  82% (2555/3115)
+2026-10-07T07:09:52.6842050Z Updating files:  83% (2586/3115)
+2026-10-07T07:09:52.7070950Z Updating files:  84% (2617/3115)
+2026-10-07T07:09:52.7755010Z Updating files:  85% (2648/3115)
+2026-10-07T07:09:52.8179460Z Updating files:  86% (2679/3115)
+2026-10-07T07:09:52.9437180Z Updating files:  87% (2711/3115)
+2026-10-07T07:09:52.9818120Z Updating files:  88% (2742/3115)
+2026-10-07T07:09:53.0122440Z Updating files:  89% (2773/3115)
+2026-10-07T07:09:53.0368280Z Updating files:  90% (2804/3115)
+2026-10-07T07:09:53.0601400Z Updating files:  91% (2835/3115)
+2026-10-07T07:09:53.2567770Z Updating files:  92% (2866/3115)
+2026-10-07T07:09:53.3115140Z Updating files:  93% (2897/3115)
+2026-10-07T07:09:53.3294350Z Updating files:  94% (2929/3115)
+2026-10-07T07:09:53.3539220Z Updating files:  95% (2960/3115)
+2026-10-07T07:09:53.3754040Z Updating files:  96% (2991/3115)
+2026-10-07T07:09:53.3940550Z Updating files:  97% (3022/3115)
+2026-10-07T07:09:53.5498330Z Updating files:  98% (3053/3115)
+2026-10-07T07:09:53.7250760Z Updating files:  98% (3065/3115)
+2026-10-07T07:09:54.0526280Z Updating files:  99% (3084/3115)
+2026-10-07T07:09:54.0528250Z Updating files: 100% (3115/3115)
+2026-10-07T07:09:54.0530390Z Updating files: 100% (3115/3115), done.
+2026-10-07T07:09:54.0827730Z Switched to a new branch 'main'
+2026-10-07T07:09:54.0852550Z branch 'main' set up to track 'origin/main'.
+2026-10-07T07:09:54.0999500Z ##[endgroup]
+2026-10-07T07:09:54.1376000Z [command]/usr/local/bin/git log -1 --format=%H
+2026-10-07T07:09:54.1686150Z a55f93a78f4ebabdfde172bbe88808e4ac483fc3
+2026-10-07T07:09:54.1739200Z ##[group]Removing auth
+2026-10-07T07:09:54.1740650Z Removing SSH command configuration
+2026-10-07T07:09:54.1758660Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T07:09:54.2113590Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T07:09:54.8092130Z Removing HTTP extra header
+2026-10-07T07:09:54.8263250Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T07:09:54.8515610Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T07:09:55.4623720Z Removing includeIf entries pointing to credentials config files
+2026-10-07T07:09:55.4737330Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T07:09:55.4803700Z includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git.path
+2026-10-07T07:09:55.4904140Z includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git/worktrees/*.path
+2026-10-07T07:09:55.4969380Z includeif.gitdir:/github/workspace/.git.path
+2026-10-07T07:09:55.5046190Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-07T07:09:55.5270130Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git.path
+2026-10-07T07:09:55.5329660Z /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.5475110Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git.path /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.5610570Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git/worktrees/*.path
+2026-10-07T07:09:55.5659240Z /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.5779560Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/Users/runner/work/paperdelta/paperdelta/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.5846580Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-07T07:09:55.5914620Z /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.6031460Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.6203450Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-07T07:09:55.6386140Z /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.6422230Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config
+2026-10-07T07:09:55.6633610Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T07:09:55.9180750Z Removing credentials config '/Users/runner/work/_temp/git-credentials-99ff3993-24ef-49d8-a676-5cff4da6a331.config'
+2026-10-07T07:09:55.9222390Z ##[endgroup]
+2026-10-07T07:09:56.0101190Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+2026-10-07T07:09:56.0102860Z with:
+2026-10-07T07:09:56.0103520Z   python-version: 3.12
+2026-10-07T07:09:56.0104480Z   check-latest: false
+2026-10-07T07:09:56.0115220Z   token: ***
+2026-10-07T07:09:56.0116380Z   update-environment: true
+2026-10-07T07:09:56.0117470Z   allow-prereleases: false
+2026-10-07T07:09:56.0118850Z   freethreaded: false
+2026-10-07T07:09:56.0119560Z ##[endgroup]
+2026-10-07T07:09:56.4987100Z ##[group]Installed versions
+2026-10-07T07:09:56.5211100Z Successfully set up CPython (3.12.10)
+2026-10-07T07:09:56.5214340Z ##[endgroup]
+2026-10-07T07:09:56.5549380Z ##[group]Run python -m pip install build
+2026-10-07T07:09:56.5550780Z [36;1mpython -m pip install build[0m
+2026-10-07T07:09:56.5750820Z shell: /bin/bash -e {0}
+2026-10-07T07:09:56.5751780Z env:
+2026-10-07T07:09:56.5752970Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:09:56.5754960Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:09:56.5757090Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:09:56.5759050Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:09:56.5761060Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:09:56.5762930Z ##[endgroup]
+2026-10-07T07:09:59.9299730Z Collecting build
+2026-10-07T07:10:00.0763990Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-10-07T07:10:00.1666380Z Collecting packaging>=24.0 (from build)
+2026-10-07T07:10:00.1818980Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-07T07:10:00.2356940Z Collecting pyproject_hooks (from build)
+2026-10-07T07:10:00.2506860Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-10-07T07:10:00.2824830Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-10-07T07:10:00.3229030Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-07T07:10:00.3790420Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-10-07T07:10:00.4933220Z Installing collected packages: pyproject_hooks, packaging, build
+2026-10-07T07:10:00.8502900Z 
+2026-10-07T07:10:00.8534450Z Successfully installed build-1.6.1 packaging-26.3 pyproject_hooks-1.3.3
+2026-10-07T07:10:01.0013270Z ##[group]Run python -X utf8 tools/build_release.py --out build/release-candidate
+2026-10-07T07:10:01.0015800Z [36;1mpython -X utf8 tools/build_release.py --out build/release-candidate[0m
+2026-10-07T07:10:01.0152800Z shell: /bin/bash -e {0}
+2026-10-07T07:10:01.0153690Z env:
+2026-10-07T07:10:01.0154820Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:01.0156970Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:10:01.0159010Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:01.0160800Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:01.0162600Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:01.0164210Z ##[endgroup]
+2026-10-07T07:10:54.1496570Z {
+2026-10-07T07:10:54.1807740Z   "artifacts": [
+2026-10-07T07:10:54.1851950Z     "build/release-candidate/build.log",
+2026-10-07T07:10:54.1856370Z     "build/release-candidate/paperdelta-1.9.0-py3-none-any.whl",
+2026-10-07T07:10:54.1864100Z     "build/release-candidate/paperdelta-1.9.0.tar.gz",
+2026-10-07T07:10:54.1869180Z     "build/release-candidate/paperdelta-evaluation-1.9.0.zip"
+2026-10-07T07:10:54.1872490Z   ],
+2026-10-07T07:10:54.1875370Z   "evaluation_files": 1694
+2026-10-07T07:10:54.1878790Z }
+2026-10-07T07:10:54.2150640Z ##[group]Run python -X utf8 tools/audit_release.py --directory build/release-candidate
+2026-10-07T07:10:54.2153200Z [36;1mpython -X utf8 tools/audit_release.py --directory build/release-candidate[0m
+2026-10-07T07:10:54.2308070Z shell: /bin/bash -e {0}
+2026-10-07T07:10:54.2309000Z env:
+2026-10-07T07:10:54.2310130Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:54.2312580Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:10:54.2314650Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:54.2316470Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:54.2318280Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:10:54.2319730Z ##[endgroup]
+2026-10-07T07:11:03.1064810Z {
+2026-10-07T07:11:03.1094360Z   "checked_at": "2026-10-07T07:11:02.207051+00:00",
+2026-10-07T07:11:03.1123970Z   "artifacts": [
+2026-10-07T07:11:03.1152720Z     {
+2026-10-07T07:11:03.1195700Z       "path": "build/release-candidate/paperdelta-1.9.0-py3-none-any.whl",
+2026-10-07T07:11:03.1226620Z       "bytes": 426615,
+2026-10-07T07:11:03.1256980Z       "sha256": "a4267cf7ea1a06e90809f661d99f0288d4144eb37cd2e2822caaba9073246581"
+2026-10-07T07:11:03.1258980Z     },
+2026-10-07T07:11:03.1287220Z     {
+2026-10-07T07:11:03.1313870Z       "path": "build/release-candidate/paperdelta-1.9.0.tar.gz",
+2026-10-07T07:11:03.1341380Z       "bytes": 21214957,
+2026-10-07T07:11:03.1370260Z       "sha256": "9a6f0c6613845f66e1f4e56e49805c2013c2a51e501800602d115fe1398e1cbc"
+2026-10-07T07:11:03.1374280Z     },
+2026-10-07T07:11:03.1399840Z     {
+2026-10-07T07:11:03.1407230Z       "path": "build/release-candidate/paperdelta-evaluation-1.9.0.zip",
+2026-10-07T07:11:03.1422940Z       "bytes": 75319386,
+2026-10-07T07:11:03.1440710Z       "sha256": "f745d049d84df069167b527e9516ed8301387a179b05915d7dff3222def0ce39"
+2026-10-07T07:11:03.1448670Z     }
+2026-10-07T07:11:03.1457640Z   ],
+2026-10-07T07:11:03.1472300Z   "metadata": {
+2026-10-07T07:11:03.1479150Z     "version": "1.9.0",
+2026-10-07T07:11:03.1485070Z     "requires_python": ">=3.11",
+2026-10-07T07:11:03.1500630Z     "license_expression": "MIT",
+2026-10-07T07:11:03.1506610Z     "extras": [
+2026-10-07T07:11:03.1511570Z       "dev",
+2026-10-07T07:11:03.1514870Z       "docx",
+2026-10-07T07:11:03.1535420Z       "pdf",
+2026-10-07T07:11:03.1541100Z       "spike",
+2026-10-07T07:11:03.1566000Z       "mcp",
+2026-10-07T07:11:03.1575550Z       "wandb",
+2026-10-07T07:11:03.1597050Z       "demo"
+2026-10-07T07:11:03.1622470Z     ],
+2026-10-07T07:11:03.1634170Z     "requirements": [
+2026-10-07T07:11:03.1655200Z       "pydantic<3,>=2.10",
+2026-10-07T07:11:03.1673960Z       "PyYAML<7,>=6.0.2",
+2026-10-07T07:11:03.1695930Z       "pylatexenc<3,>=2.11",
+2026-10-07T07:11:03.1712190Z       "mpmath<1.5,>=1.4.1",
+2026-10-07T07:11:03.1731770Z       "markdown-it-py<4.3,>=4.2",
+2026-10-07T07:11:03.1751760Z       "pytest<10,>=8; extra == \"dev\"",
+2026-10-07T07:11:03.1768760Z       "ruff>=0.12; extra == \"dev\"",
+2026-10-07T07:11:03.1786280Z       "build>=1.2; extra == \"dev\"",
+2026-10-07T07:11:03.1805810Z       "python-docx<2,>=1.2; extra == \"dev\"",
+2026-10-07T07:11:03.1829930Z       "pdfplumber<0.12,>=0.11.10; extra == \"dev\"",
+2026-10-07T07:11:03.1845540Z       "reportlab<5,>=4.4; extra == \"dev\"",
+2026-10-07T07:11:03.1860420Z       "pypdf<6.20,>=6.19; extra == \"dev\"",
+2026-10-07T07:11:03.1864350Z       "python-docx<2,>=1.2; extra == \"docx\"",
+2026-10-07T07:11:03.1868180Z       "pdfplumber<0.12,>=0.11.10; extra == \"pdf\"",
+2026-10-07T07:11:03.1879790Z       "pypdf<6.20,>=6.19; extra == \"pdf\"",
+2026-10-07T07:11:03.2226980Z       "TexSoup==0.3.3; extra == \"spike\"",
+2026-10-07T07:11:03.2233010Z       "mcp<3,>=2.2; extra == \"mcp\"",
+2026-10-07T07:11:03.2246530Z       "wandb<0.31,>=0.30.0; extra == \"wandb\"",
+2026-10-07T07:11:03.2249990Z       "matplotlib<4,>=3.9; extra == \"demo\""
+2026-10-07T07:11:03.2252820Z     ],
+2026-10-07T07:11:03.2256650Z     "maintainer_email": "101008326+amos689@users.noreply.github.com"
+2026-10-07T07:11:03.2258380Z   },
+2026-10-07T07:11:03.2259180Z   "wheel_files": 127,
+2026-10-07T07:11:03.2260290Z   "sdist_files": 2432,
+2026-10-07T07:11:03.2263370Z   "evaluation_bundle_files": 1697,
+2026-10-07T07:11:03.2266290Z   "evaluation_license_expression": "MIT AND CC-BY-4.0 AND CC-BY-SA-4.0",
+2026-10-07T07:11:03.2272210Z   "core_source_files_match_checkout": 119,
+2026-10-07T07:11:03.2275570Z   "required_support_files_match_checkout": 1492,
+2026-10-07T07:11:03.2277060Z   "owned_mapping_suite_files_match_checkout": 157,
+2026-10-07T07:11:03.2281060Z   "mapping_protocol_identity_count": 179,
+2026-10-07T07:11:03.2283370Z   "historical_implementation_identity_counts": {
+2026-10-07T07:11:03.2284670Z     "a2": 27,
+2026-10-07T07:11:03.2285530Z     "staged-v2": 34,
+2026-10-07T07:11:03.2286490Z     "staged-v3": 34
+2026-10-07T07:11:03.2287340Z   },
+2026-10-07T07:11:03.2289480Z   "bilingual_document_pairs": 67,
+2026-10-07T07:11:03.2298780Z   "corpus": {
+2026-10-07T07:11:03.2299720Z     "papers": 10,
+2026-10-07T07:11:03.2304330Z     "files": 48,
+2026-10-07T07:11:03.2306830Z     "bytes": 650293,
+2026-10-07T07:11:03.2308270Z     "every_retained_file_digest_matches": true,
+2026-10-07T07:11:03.2311160Z     "license_notices_present": true
+2026-10-07T07:11:03.2312960Z   },
+2026-10-07T07:11:03.2314060Z   "frozen_protocol_identity_count": 25,
+2026-10-07T07:11:03.2315130Z   "study": {
+2026-10-07T07:11:03.2316060Z     "study_id": "interactive-confirmation-v2",
+2026-10-07T07:11:03.2317800Z     "kind": "regression",
+2026-10-07T07:11:03.2319110Z     "protocol_lock": "tests/corpus/protocol-interactive-v2.json",
+2026-10-07T07:11:03.2320820Z     "previous_protocol": "tests/corpus/protocol-lock.json",
+2026-10-07T07:11:03.2322520Z     "previous_implementation": "tests/corpus/history/original-v1",
+2026-10-07T07:11:03.2326410Z     "scope": "Previously seen corpus, reused after adding terminal confirmation. This is not a fresh held-out evaluation."
+2026-10-07T07:11:03.2331210Z   },
+2026-10-07T07:11:03.2332200Z   "retained_original_protocol_identity_count": 23,
+2026-10-07T07:11:03.2333510Z   "wheel_record_verified": true,
+2026-10-07T07:11:03.2334530Z   "native_v2": {
+2026-10-07T07:11:03.2335410Z     "families": 12,
+2026-10-07T07:11:03.2336440Z     "original_files": 20,
+2026-10-07T07:11:03.2337500Z     "implementation_files": 102,
+2026-10-07T07:11:03.2338560Z     "first_held_out_counts": {
+2026-10-07T07:11:03.2340210Z       "mislocated": 0,
+2026-10-07T07:11:03.2341150Z       "missed": 3,
+2026-10-07T07:11:03.2342030Z       "supported": 82,
+2026-10-07T07:11:03.2342990Z       "unknown": 25
+2026-10-07T07:11:03.2345130Z     },
+2026-10-07T07:11:03.2347050Z     "original_hashes_licenses_and_locks_verified": true
+2026-10-07T07:11:03.2348950Z   },
+2026-10-07T07:11:03.2349750Z   "excluded": [
+2026-10-07T07:11:03.2350850Z     "virtual environments",
+2026-10-07T07:11:03.2351880Z     "scratch trees",
+2026-10-07T07:11:03.2353340Z     "transactions",
+2026-10-07T07:11:03.2355250Z     "native executables"
+2026-10-07T07:11:03.2358390Z   ],
+2026-10-07T07:11:03.2360500Z   "scope": "Content and metadata inspection of these exact locally built artifacts.",
+2026-10-07T07:11:03.2363950Z   "native_study": {
+2026-10-07T07:11:03.2364830Z     "papers": 4,
+2026-10-07T07:11:03.2365670Z     "original_files": 8,
+2026-10-07T07:11:03.2366800Z     "originals_and_frozen_implementation_match": true,
+2026-10-07T07:11:03.2368080Z     "first_held_out_counts": {
+2026-10-07T07:11:03.2369060Z       "mislocated": 0,
+2026-10-07T07:11:03.2369930Z       "missed": 4,
+2026-10-07T07:11:03.2370770Z       "supported": 4,
+2026-10-07T07:11:03.2371680Z       "unknown": 56
+2026-10-07T07:11:03.2372480Z     },
+2026-10-07T07:11:03.2373430Z     "python_distributions_exclude_native_corpus": true
+2026-10-07T07:11:03.2374650Z   },
+2026-10-07T07:11:03.2375380Z   "native_v3": {
+2026-10-07T07:11:03.2376260Z     "families": 8,
+2026-10-07T07:11:03.2377110Z     "original_files": 12,
+2026-10-07T07:11:03.2379270Z     "implementation_files": 125,
+2026-10-07T07:11:03.2380410Z     "first_held_out_counts": {
+2026-10-07T07:11:03.2381380Z       "mislocated": 0,
+2026-10-07T07:11:03.2382270Z       "missed": 1,
+2026-10-07T07:11:03.2383180Z       "supported": 29,
+2026-10-07T07:11:03.2384050Z       "unknown": 50
+2026-10-07T07:11:03.2384850Z     },
+2026-10-07T07:11:03.2385650Z     "unfilled_held_out_slots": 16,
+2026-10-07T07:11:03.2387230Z     "original_hashes_licenses_gold_locks_and_renders_verified": true
+2026-10-07T07:11:03.2388670Z   }
+2026-10-07T07:11:03.2389370Z }
+2026-10-07T07:11:03.2714570Z ##[group]Run python -X utf8 tools/validate_platform.py --wheel build/release-candidate/*.whl --out build/macos-validation --require-system Darwin --expected-arch x86_64
+2026-10-07T07:11:03.2719870Z [36;1mpython -X utf8 tools/validate_platform.py --wheel build/release-candidate/*.whl --out build/macos-validation --require-system Darwin --expected-arch x86_64[0m
+2026-10-07T07:11:03.2867150Z shell: /bin/bash -e {0}
+2026-10-07T07:11:03.2868080Z env:
+2026-10-07T07:11:03.2869160Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:11:03.2871190Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:11:03.2873180Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:11:03.2874950Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:11:03.2876800Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:11:03.2878250Z ##[endgroup]
+2026-10-07T07:11:13.2168100Z Running install-core
+2026-10-07T07:11:24.5670340Z Running core-smoke
+2026-10-07T07:12:30.6425170Z Running install-full
+2026-10-07T07:16:08.8275720Z Running lint
+2026-10-07T07:16:09.6277330Z Running format
+2026-10-07T07:16:10.3680770Z Running tests
+2026-10-07T07:25:07.5820330Z Running examples
+2026-10-07T07:25:10.5654930Z Running ci-demo
+2026-10-07T07:25:13.0152090Z {
+2026-10-07T07:25:13.0156360Z   "status": "passed",
+2026-10-07T07:25:13.0157620Z   "host": {
+2026-10-07T07:25:13.0162590Z     "system": "Darwin",
+2026-10-07T07:25:13.0163480Z     "release": "24.6.0",
+2026-10-07T07:25:13.0164600Z     "machine": "x86_64",
+2026-10-07T07:25:13.0165710Z     "python": "3.12.10",
+2026-10-07T07:25:13.0167050Z     "macos_version": "15.7.9",
+2026-10-07T07:25:13.0168250Z     "rosetta_translated": null,
+2026-10-07T07:25:13.0169350Z     "rosetta_probe": {
+2026-10-07T07:25:13.0170660Z       "exit_code": 0,
+2026-10-07T07:25:13.0171650Z       "stdout": "",
+2026-10-07T07:25:13.0172650Z       "stderr": ""
+2026-10-07T07:25:13.0173550Z     }
+2026-10-07T07:25:13.0174370Z   },
+2026-10-07T07:25:13.0175470Z   "evidence": "build/macos-validation/evidence.json",
+2026-10-07T07:25:13.0176990Z   "error": null
+2026-10-07T07:25:13.0177880Z }
+2026-10-07T07:25:13.0702760Z ##[group]Run python -m pip install uv==0.12.22
+2026-10-07T07:25:13.0704620Z [36;1mpython -m pip install uv==0.12.22[0m
+2026-10-07T07:25:13.0706370Z [36;1mpython -X utf8 tools/validate_uvx.py --out build/uvx-validation[0m
+2026-10-07T07:25:13.0852830Z shell: /bin/bash -e {0}
+2026-10-07T07:25:13.0853690Z env:
+2026-10-07T07:25:13.0854730Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:25:13.0856640Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:25:13.0858520Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:25:13.0860250Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:25:13.0862000Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:25:13.0863310Z ##[endgroup]
+2026-10-07T07:25:15.4265470Z Collecting uv==0.12.22
+2026-10-07T07:25:15.6603670Z   Downloading uv-0.12.22-py3-none-macosx_10_12_x86_64.whl.metadata (11 kB)
+2026-10-07T07:25:15.7938040Z Downloading uv-0.12.22-py3-none-macosx_10_12_x86_64.whl (21.4 MB)
+2026-10-07T07:25:17.2613680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.4/21.4 MB 15.2 MB/s  0:00:01
+2026-10-07T07:25:17.3958210Z Installing collected packages: uv
+2026-10-07T07:25:17.6877940Z Successfully installed uv-0.12.22
+2026-10-07T07:28:28.5472640Z Traceback (most recent call last):
+2026-10-07T07:28:28.6174430Z   File "/Users/runner/work/paperdelta/paperdelta/tools/validate_uvx.py", line 112, in <module>
+2026-10-07T07:28:28.6836070Z     main()
+2026-10-07T07:28:28.7224130Z   File "/Users/runner/work/paperdelta/paperdelta/tools/validate_uvx.py", line 86, in main
+2026-10-07T07:28:28.7702680Z     run(kind in {"docx", "pdf"}, args)
+2026-10-07T07:28:28.8012130Z   File "/Users/runner/work/paperdelta/paperdelta/tools/validate_uvx.py", line 48, in run
+2026-10-07T07:28:28.8244020Z     result = subprocess.run(
+2026-10-07T07:28:28.8366370Z              ^^^^^^^^^^^^^^^
+2026-10-07T07:28:28.8788220Z   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 550, in run
+2026-10-07T07:28:28.9277470Z     stdout, stderr = process.communicate(input, timeout=timeout)
+2026-10-07T07:28:28.9400580Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-07T07:28:29.0060410Z   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1209, in communicate
+2026-10-07T07:28:29.0770680Z     stdout, stderr = self._communicate(input, endtime, timeout)
+2026-10-07T07:28:29.0998720Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-07T07:28:29.1181220Z   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 2116, in _communicate
+2026-10-07T07:28:29.1519490Z     self._check_timeout(endtime, orig_timeout, stdout, stderr)
+2026-10-07T07:28:29.2118600Z   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+2026-10-07T07:28:29.2308090Z     raise TimeoutExpired(
+2026-10-07T07:28:29.2519210Z subprocess.TimeoutExpired: Command '['/Users/runner/hostedtoolcache/Python/3.12.10/x64/bin/uvx', '--isolated', '--python', '/Library/Frameworks/Python.framework/Versions/3.12/bin/python', '--from', 'paperdelta[docx,pdf] @ file:///Users/runner/work/paperdelta/paperdelta/build/release-candidate/paperdelta-1.9.0-py3-none-any.whl', 'paperdelta', '--lang', 'en', 'demo', '--document', 'docx', '--out', 'docx-en', '--format', 'json']' timed out after 180 seconds
+2026-10-07T07:28:29.2900680Z ##[error]Process completed with exit code 1.
+2026-10-07T07:28:29.3389390Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-07T07:28:29.3391260Z with:
+2026-10-07T07:28:29.3392130Z   name: macos-x86_64-python-3.12
+2026-10-07T07:28:29.3401370Z   path: build/macos-validation/evidence.json
+build/macos-validation/core-smoke.json
+build/macos-validation/*.log
+build/macos-validation/suite/**/*.json
+build/macos-validation/suite/**/*.log
+build/macos-validation/suite/**/*.xml
+build/macos-validation/examples/evidence.json
+build/macos-validation/ci-demo/evidence.json
+build/release-candidate/package-audit.json
+build/uvx-validation/evidence.json
+build/uvx-validation/*.log
+
+2026-10-07T07:28:29.3410040Z   if-no-files-found: warn
+2026-10-07T07:28:29.3411060Z   compression-level: 6
+2026-10-07T07:28:29.3411980Z   overwrite: false
+2026-10-07T07:28:29.3412840Z   include-hidden-files: false
+2026-10-07T07:28:29.3414130Z env:
+2026-10-07T07:28:29.3415290Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:28:29.3417550Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.12.10/x64/lib/pkgconfig
+2026-10-07T07:28:29.3419570Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:28:29.3421390Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:28:29.3423230Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.12.10/x64
+2026-10-07T07:28:29.3424680Z ##[endgroup]
+2026-10-07T07:28:30.7453830Z (node:36202) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T07:28:30.8464210Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T07:28:31.5354690Z (node:36202) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-07T07:28:32.1318360Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-07T07:28:32.2349050Z The least common ancestor is /Users/runner/work/paperdelta/paperdelta/build. This will be the root directory of the artifact
+2026-10-07T07:28:32.2507450Z With the provided path, there will be 21 files uploaded
+2026-10-07T07:28:32.3458060Z Artifact name is valid!
+2026-10-07T07:28:32.3720740Z Root directory input is valid!
+2026-10-07T07:28:32.6935500Z Beginning upload of artifact content to blob storage
+2026-10-07T07:28:32.7817770Z Uploaded bytes 55632
+2026-10-07T07:28:32.7950390Z Finished uploading artifact content to blob storage!
+2026-10-07T07:28:32.8565900Z SHA256 digest of uploaded artifact zip is ee7acdce642e9bcc52add075e21bb14989109100b091802f55cbdf7bc2523ea8
+2026-10-07T07:28:32.8568640Z Finalizing artifact upload
+2026-10-07T07:28:32.9983130Z Artifact macos-x86_64-python-3.12.zip successfully finalized. Artifact ID 11467222796
+2026-10-07T07:28:33.0668800Z Artifact macos-x86_64-python-3.12 has been successfully uploaded! Final size is 55632 bytes. Artifact ID is 11467222796
+2026-10-07T07:28:33.0968060Z Artifact download URL: https://github.com/amos689/paperdelta/actions/runs/37585616470/artifacts/11467222796
+2026-10-07T07:28:33.1624300Z Post job cleanup.
+2026-10-07T07:28:33.8066720Z [command]/usr/local/bin/git version
+2026-10-07T07:28:33.8105830Z git version 2.55.0
+2026-10-07T07:28:33.9162340Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/bcd08fe1-41ce-4aec-8542-3f6ab669ebd4/.gitconfig'
+2026-10-07T07:28:33.9257000Z Temporarily overriding HOME='/Users/runner/work/_temp/bcd08fe1-41ce-4aec-8542-3f6ab669ebd4' before making global git config changes
+2026-10-07T07:28:33.9292810Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T07:28:33.9440220Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/paperdelta/paperdelta
+2026-10-07T07:28:33.9864610Z Removing SSH command configuration
+2026-10-07T07:28:34.0006890Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T07:28:34.0294760Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T07:28:34.2815490Z Removing HTTP extra header
+2026-10-07T07:28:34.3092780Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T07:28:34.3337400Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T07:28:34.6896650Z Removing includeIf entries pointing to credentials config files
+2026-10-07T07:28:34.7312140Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T07:28:34.7611370Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T07:28:35.1119750Z Cleaning up orphan processes
+2026-10-07T07:28:35.7760650Z Terminate orphan process: pid (34462) (rustc)
+2026-10-07T07:28:35.8271530Z Terminate orphan process: pid (31862) (cargo)
+2026-10-07T07:28:36.0388110Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,4721 @@
+{
+  "version": "1.9.0",
+  "commit": "a55f93a78f4ebabdfde172bbe88808e4ac483fc3",
+  "checked_at": "2026-10-07T08:32:19.181317+00:00",
+  "ci": "https://github.com/amos689/paperdelta/actions/runs/37585616470",
+  "verified_job_names": [
+    "Local studio / browser",
+    "macOS arm64 / Python 3.11",
+    "macOS arm64 / Python 3.12",
+    "macOS arm64 / Python 3.13",
+    "macOS arm64 / Python 3.14",
+    "macOS x86_64 / Python 3.11",
+    "macOS x86_64 / Python 3.12",
+    "macOS x86_64 / Python 3.13",
+    "macOS x86_64 / Python 3.14",
+    "test (ubuntu-latest, 3.11)",
+    "test (ubuntu-latest, 3.12)",
+    "test (ubuntu-latest, 3.13)",
+    "test (ubuntu-latest, 3.14)",
+    "test (windows-latest, 3.11)",
+    "test (windows-latest, 3.12)",
+    "test (windows-latest, 3.13)",
+    "test (windows-latest, 3.14)"
+  ],
+  "artifacts_sha256": {
+    "paperdelta-1.9.0-py3-none-any.whl": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "paperdelta-1.9.0.tar.gz": "7e5f1d308f8509a44801f7dd1e22e16a9f7112080599631451096a31d4c65dac",
+    "paperdelta-evaluation-1.9.0.zip": "bd7303d65b14ffaab65c09faf51c14869f0947796199cb6d143b499216611e26"
+  },
+  "status": "passed",
+  "canonical_source_bytes_match_git": true,
+  "installed_wheel_is_exact_release_archive": true,
+  "installed_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+  "wheel_provenance": {
+    "version": "1.9.0",
+    "identical_internal_files": 127,
+    "tested_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "rebuilt_archive_sha256": "b069fdce1560ed22a0bd4c0eb17669a67540c857134298e75d0650129899ae19",
+    "release_wheel_is_exact_tested_archive": true,
+    "metadata_correction": {
+      "version": "1.9.0",
+      "earlier_tested_wheel_sha256": "8295ecdd72cea52083f33c3aaef50042f5b7dd980adc72911612edf03a406baa",
+      "final_wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+      "identical_internal_files": 125,
+      "changed_internal_files": [
+        "paperdelta-1.9.0.dist-info/METADATA",
+        "paperdelta-1.9.0.dist-info/RECORD"
+      ],
+      "all_runtime_source_and_assets_identical": true,
+      "package_identity_and_dependency_headers_identical": true,
+      "reason": "Correct a strict PyPI RST-rendering heading and add the corresponding Chinese paragraph. Only description payload and archive RECORD changed. Repeat final-wheel installed acceptance; performance measurements retain their original measured archive identity."
+    },
+    "reason": "Final documentation, CI workflow wait and release receipts changed after testing; all wheel member names and bytes are identical. Preserve the exact installed archive."
+  },
+  "local_installed_suite": {
+    "tests": 1013,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 1010,
+    "seconds": 539.885
+  },
+  "installed_browser_flows": {
+    "revisions": {
+      "status": "passed",
+      "cases": [
+        {
+          "name": "latex-en",
+          "format": "latex",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+            "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+            "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+            "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+            "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+            "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+            "results/metrics.csv": "3d29012bbaa0f04a4c3d7c43659a19659ff578a003ba0fe9d1fb2230d077968c"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "latex-zh-CN",
+          "format": "latex",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper/abstract.tex": "b54afec15a57e164fd1f3c93f2205db774e016ffda855756539cc11e7f19b493",
+            "paper/appendix.tex": "292447c3bf065143309346d7aa9bf9e6fdb90ab24c8adcc526ddab71a79292bf",
+            "paper/figure.tex": "92e40113796a7cff6dd8d0c27d023b0cb9a5c8713d043f2f6fe8deb0b0e37225",
+            "paper/figures/accuracy.pdf": "80d0c220f1ec3c3cb4435896f40a532025132b2079f7f289ed469db6a2a47e9c",
+            "paper/main.tex": "2b64f45290914e08aad2b7228d8aebcba8041f3cba71cf71a8b60af533100ab7",
+            "paper/results.tex": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+            "results/metrics.csv": "3d29012bbaa0f04a4c3d7c43659a19659ff578a003ba0fe9d1fb2230d077968c"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "markdown-en",
+          "format": "markdown",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "markdown-zh-CN",
+          "format": "markdown",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.md": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "quarto-en",
+          "format": "quarto",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "quarto-zh-CN",
+          "format": "quarto",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.qmd": "c9d58c8bedc9d736ed53024f47e2e6c12bcf096c4e69aa6a974179e00fa07821",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": true,
+          "restart_recovery": true,
+          "changed_inputs_invalidate_preview": true,
+          "false_claim_blocks_patch": true,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": false,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-tasks input[value=table_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-apply",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history > summary",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-history-load",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-transaction",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-recovery-button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-recovery-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#revision-recover",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:abstract_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-detail > button",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "docx-en",
+          "format": "docx",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": false,
+          "restart_recovery": false,
+          "changed_inputs_invalidate_preview": false,
+          "false_claim_blocks_patch": false,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": true,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "docx-zh-CN",
+          "format": "docx",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": false,
+          "restart_recovery": false,
+          "changed_inputs_invalidate_preview": false,
+          "false_claim_blocks_patch": false,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": true,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "pdf-en",
+          "format": "pdf",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+            "source.tex": "3d39d07342ec5e00d5b0fbd1e431e7474cb9c186288c75adaecb951a53b57687",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": false,
+          "restart_recovery": false,
+          "changed_inputs_invalidate_preview": false,
+          "false_claim_blocks_patch": false,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": true,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        },
+        {
+          "name": "pdf-zh-CN",
+          "format": "pdf",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "input_sha256": {
+            "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+            "source.tex": "3d39d07342ec5e00d5b0fbd1e431e7474cb9c186288c75adaecb951a53b57687",
+            "results/metrics.csv": "1c3aa104934775bc42a13992e06d2d2d5f4c918c8301fddfe6bd0376fe7b2796"
+          },
+          "required_interfaces": [
+            "browser"
+          ],
+          "selected_numeric_apply": false,
+          "restart_recovery": false,
+          "changed_inputs_invalidate_preview": false,
+          "false_claim_blocks_patch": false,
+          "language_preserves_selection_and_clears_acceptance": true,
+          "original_native_unchanged": true,
+          "narrow_viewport": true,
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-coverage-report",
+              "method": "click"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "#revision-filter",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-tasks [data-subject=\"occurrence:table_accuracy\"] .revision-focus",
+              "method": "click"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            }
+          ]
+        }
+      ],
+      "scope": "Authored local browser workflows on five formats in both languages. Not independent human usability or a population accuracy measurement."
+    },
+    "reuse": {
+      "status": "passed",
+      "scope": "Developer-operated browser action count, not a human usability study. Same unchanged fixture; equal values never establish identity.",
+      "cases": [
+        {
+          "name": "reuse-tex-en",
+          "status": "passed",
+          "version": "1.9.0",
+          "input_sha256": {
+            "paper.tex": "79ae9de97cddea59c47718a0b1e4ec3c22c8bad48ce7fe47540d550bce2a093e",
+            "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+          },
+          "non_no_op_actions": 73,
+          "actions": [
+            {
+              "control": "#add-source summary",
+              "action": "click"
+            },
+            {
+              "control": "#source-path-form [name=path]",
+              "action": "fill",
+              "value": "results.csv"
+            },
+            {
+              "control": "#source-path-form button",
+              "action": "click"
+            },
+            {
+              "control": "#source-form [name=name]",
+              "action": "fill",
+              "value": "results"
+            },
+            {
+              "control": "#source-advice-show",
+              "action": "click"
+            },
+            {
+              "control": "#source-advice input[type=radio][value=\"0\"]",
+              "action": "check"
+            },
+            {
+              "control": "#source-advice button",
+              "action": "click"
+            },
+            {
+              "control": "#source-form button[type=submit]",
+              "action": "click"
+            },
+            {
+              "control": "nav [data-step=batch]",
+              "action": "click"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"accuracy\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"precision\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"recall\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"f1\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-groups input[data-column=model]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-filters [data-column=split] input[type=checkbox]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-filters [data-column=split] input[type=text]",
+              "action": "fill",
+              "value": "test"
+            },
+            {
+              "control": "#batch-form [name=reduce]",
+              "action": "selectOption",
+              "value": "mean"
+            },
+            {
+              "control": "#batch-form [name=expected_count]",
+              "action": "fill",
+              "value": "3"
+            },
+            {
+              "control": "#batch-form [name=expected_seeds]",
+              "action": "fill",
+              "value": "1\n2\n3"
+            },
+            {
+              "control": "#experiment-aliases summary",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-add",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=column]",
+              "action": "fill",
+              "value": "model"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=value]",
+              "action": "fill",
+              "value": "001"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=label]",
+              "action": "fill",
+              "value": "Ours"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=rationale]",
+              "action": "fill",
+              "value": "The experiment log explicitly identifies this model label."
+            },
+            {
+              "control": "#experiment-alias-add",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=column]",
+              "action": "fill",
+              "value": "model"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=value]",
+              "action": "fill",
+              "value": "1"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=label]",
+              "action": "fill",
+              "value": "Baseline"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=rationale]",
+              "action": "fill",
+              "value": "The experiment log explicitly identifies this model label."
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "zh-CN"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "en"
+            },
+            {
+              "control": "#experiment-definitions summary",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-definition-form [name=name]",
+              "action": "fill",
+              "value": "reviewed_test_results"
+            },
+            {
+              "control": "#experiment-definition-form [name=rationale]",
+              "action": "fill",
+              "value": "Reviewed four fraction metrics, test split, mean over seeds 1–3, and each explicit model label."
+            },
+            {
+              "control": "#experiment-definition-form button",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-definition-attest",
+              "action": "check"
+            },
+            {
+              "control": "#experiment-definition-save",
+              "action": "click"
+            },
+            {
+              "control": "#batch-form [name=unit]",
+              "action": "selectOption",
+              "value": "scalar"
+            },
+            {
+              "control": "#experiment-definition-review",
+              "action": "click"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "zh-CN"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "en"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-joint-pages button:last-child",
+              "action": "click"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-rationale",
+              "action": "fill",
+              "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+            },
+            {
+              "control": "#batch-stage",
+              "action": "click"
+            },
+            {
+              "control": "#preview",
+              "action": "click"
+            },
+            {
+              "control": "#select-reviewed",
+              "action": "click"
+            },
+            {
+              "control": "#attest",
+              "action": "check"
+            },
+            {
+              "control": "#accept",
+              "action": "click"
+            }
+          ],
+          "checked_metrics": 24,
+          "explicit_positions": 24,
+          "language_switch_preserves_fields": true,
+          "manuscripts_and_data_unchanged": true,
+          "reviewed_shared_definition": "sha256:1bddfc5d9b06664f7d27455fd9b0792b728d9afafc9980877d7730b9929e58f7",
+          "reuse_actions": [
+            {
+              "control": "#experiment-definition-review",
+              "action": "click"
+            }
+          ],
+          "reuse_action_count": 1,
+          "errors": [],
+          "remote": []
+        },
+        {
+          "name": "reuse-tex-zh-CN",
+          "status": "passed",
+          "version": "1.9.0",
+          "input_sha256": {
+            "paper.tex": "79ae9de97cddea59c47718a0b1e4ec3c22c8bad48ce7fe47540d550bce2a093e",
+            "results.csv": "e1dac8b7b21d667ee6b8eb7cc3501533159e7eff79338d17fb27ede3cde0f6fa"
+          },
+          "non_no_op_actions": 73,
+          "actions": [
+            {
+              "control": "#add-source summary",
+              "action": "click"
+            },
+            {
+              "control": "#source-path-form [name=path]",
+              "action": "fill",
+              "value": "results.csv"
+            },
+            {
+              "control": "#source-path-form button",
+              "action": "click"
+            },
+            {
+              "control": "#source-form [name=name]",
+              "action": "fill",
+              "value": "results"
+            },
+            {
+              "control": "#source-advice-show",
+              "action": "click"
+            },
+            {
+              "control": "#source-advice input[type=radio][value=\"0\"]",
+              "action": "check"
+            },
+            {
+              "control": "#source-advice button",
+              "action": "click"
+            },
+            {
+              "control": "#source-form button[type=submit]",
+              "action": "click"
+            },
+            {
+              "control": "nav [data-step=batch]",
+              "action": "click"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"accuracy\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"precision\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"recall\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-fields input[data-column=\"f1\"]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-groups input[data-column=model]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-filters [data-column=split] input[type=checkbox]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-filters [data-column=split] input[type=text]",
+              "action": "fill",
+              "value": "test"
+            },
+            {
+              "control": "#batch-form [name=reduce]",
+              "action": "selectOption",
+              "value": "mean"
+            },
+            {
+              "control": "#batch-form [name=expected_count]",
+              "action": "fill",
+              "value": "3"
+            },
+            {
+              "control": "#batch-form [name=expected_seeds]",
+              "action": "fill",
+              "value": "1\n2\n3"
+            },
+            {
+              "control": "#experiment-aliases summary",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-add",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=column]",
+              "action": "fill",
+              "value": "model"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=value]",
+              "action": "fill",
+              "value": "001"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=label]",
+              "action": "fill",
+              "value": "Ours"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(1) input[data-alias-field=rationale]",
+              "action": "fill",
+              "value": "The experiment log explicitly identifies this model label."
+            },
+            {
+              "control": "#experiment-alias-add",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=column]",
+              "action": "fill",
+              "value": "model"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=value]",
+              "action": "fill",
+              "value": "1"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=label]",
+              "action": "fill",
+              "value": "Baseline"
+            },
+            {
+              "control": "#experiment-alias-rows .alias-row:nth-child(2) input[data-alias-field=rationale]",
+              "action": "fill",
+              "value": "The experiment log explicitly identifies this model label."
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "en"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "zh-CN"
+            },
+            {
+              "control": "#experiment-definitions summary",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-definition-form [name=name]",
+              "action": "fill",
+              "value": "reviewed_test_results"
+            },
+            {
+              "control": "#experiment-definition-form [name=rationale]",
+              "action": "fill",
+              "value": "Reviewed four fraction metrics, test split, mean over seeds 1–3, and each explicit model label."
+            },
+            {
+              "control": "#experiment-definition-form button",
+              "action": "click"
+            },
+            {
+              "control": "#experiment-definition-attest",
+              "action": "check"
+            },
+            {
+              "control": "#experiment-definition-save",
+              "action": "click"
+            },
+            {
+              "control": "#batch-form [name=unit]",
+              "action": "selectOption",
+              "value": "scalar"
+            },
+            {
+              "control": "#experiment-definition-review",
+              "action": "click"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:4bfd9f5c421ae4d1536efd95ea1bc4f28c4e0f4a609473db7add2954ac3de317\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6c21a75517a050017e5f8efddec9478109634c6b3ef6b4cf6764079f54dd7666\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "en"
+            },
+            {
+              "control": "#language",
+              "action": "selectOption",
+              "value": "zh-CN"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:4a6dd67f281f4739058cdfd2ca9a483f0e5ad38d6810137e0e57381f46551d47\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:0087046419a3ac4be920670b749ab61305630922c09c68e577efd1793c944065\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6bb31e0695a208cd63453a0d3ded482fa40079808d42a9ccc8a763f9835ee6f8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:cc73fb2b296e4f70d0d2b57bceea66327b7fe7042557cc413716dc54e17cd8a4\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:970e6d5390aa7324b80280de9f743ffd9cf28cd74112af2ff126e70e66c27b1c\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:f10dfb8de3789d5833860885c77177f0ba88db3418adc5da1aac13621d193042\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:5bd8011c4eeefacde35da3bfef0d470046d290d9a2587ba61926d8d9424c7d33\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:97fdf9e67da6125d4e62adc31109d4e4b9b48e9ba9861bdfa5ffdb03914bfcd8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:28c10fb2a37938d28b798ffc0d021aa6897541c6e83d16b870c51647b15b45a0\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:8c90e2ba457bc71c5454ef073f5c65ae31047603996083874ae2feb2f9219233\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3b5a65825fa32e258efae3181882671111ff818b5b2a8eb30890026e04f32d44\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3a0a8067e0743115eba2c919f1272e2eb9351d642fc4ece175455776edbe47a8\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3e550f5e012e9373f69c27c01e30cd66604b1543b20fb3c05fd1d1607cd8c6d6\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:07e7fc7f165681cfb924f122a4b053a82d33189a53cd15c453d58ede3e869e28\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:a8857d319ee4c89625079ba45cc38b8a716872f14c715a4db76144255e41837b\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:81753e181c6182b24f90f094aef1f0f803b6431c348c4867b2962e38b65eebe1\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:6b56651b42fe776e3eb15d7d31bced25b0b51c66672e373185e6aceecc3385aa\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:d65260105f93cb02423f691f2d2ce4bdbb53236b85f5ab9c680325f265f4e6de\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-joint-pages button:last-child",
+              "action": "click"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:afff6b897b2d053a7b0c81fa91e0f45019d77233b434a10b9bc6f92fb9d41daa\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:f9a5b4a998930cc729f0af4576d3b3f5f59f77dab56e36ccd5084be7232c593c\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:3598881f3fece6d3d9bd2d7079a46192af9dcaccbce8ae35a61a07cf4d933322\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": ".joint-choice[data-choice=\"sha256:8643e0ebf4353f5867f1ec1e1f76a99ad95e5dcb9d1ddf0c2add8cfe9aadc482\"] input[data-joint-candidate]",
+              "action": "check"
+            },
+            {
+              "control": "#batch-rationale",
+              "action": "fill",
+              "value": "Reviewed explicit model and result column, test split, fraction unit, mean of seeds 1–3, and each original position."
+            },
+            {
+              "control": "#batch-stage",
+              "action": "click"
+            },
+            {
+              "control": "#preview",
+              "action": "click"
+            },
+            {
+              "control": "#select-reviewed",
+              "action": "click"
+            },
+            {
+              "control": "#attest",
+              "action": "check"
+            },
+            {
+              "control": "#accept",
+              "action": "click"
+            }
+          ],
+          "checked_metrics": 24,
+          "explicit_positions": 24,
+          "language_switch_preserves_fields": true,
+          "manuscripts_and_data_unchanged": true,
+          "reviewed_shared_definition": "sha256:1bddfc5d9b06664f7d27455fd9b0792b728d9afafc9980877d7730b9929e58f7",
+          "reuse_actions": [
+            {
+              "control": "#experiment-definition-review",
+              "action": "click"
+            }
+          ],
+          "reuse_action_count": 1,
+          "errors": [],
+          "remote": []
+        }
+      ]
+    },
+    "studio": {
+      "results": [
+        {
+          "document": "tex",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "tex",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "md",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "md",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "qmd",
+          "language": "en",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        },
+        {
+          "document": "qmd",
+          "language": "zh-CN",
+          "accepted": 1,
+          "exact_decimal_preserved": true,
+          "original_files_unchanged_before_test_edit": true,
+          "desktop_and_mobile": true,
+          "stale_acceptance_refused": true,
+          "browser_errors_before_test_edit": [],
+          "expected_conflict_console_messages": 1,
+          "remote_requests": []
+        }
+      ]
+    },
+    "review": {
+      "suite": "ongoing-review",
+      "flows": [
+        {
+          "document": "tex",
+          "language": "en",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "tex",
+          "language": "zh-CN",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "en",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "zh-CN",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "en",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "zh-CN",
+          "snapshot_comparison": true,
+          "false_claim_review": true,
+          "declaration_preview_accept": true,
+          "native_visual_repair": true,
+          "dependency_aware_deletion": true,
+          "restart_recovery": true,
+          "changed_input_rebuild": true,
+          "original_manuscript_not_written": true,
+          "explicit_dependent_group_removal": true,
+          "desktop_mobile": true,
+          "browser_errors": [],
+          "remote_requests": []
+        }
+      ]
+    },
+    "batch": {
+      "suite": "studio-batch",
+      "results": [
+        {
+          "document": "tex",
+          "language": "en",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": null,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "tex",
+          "language": "zh-CN",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": null,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "en",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": null,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "docx",
+          "language": "zh-CN",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": null,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "en",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": true,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "document": "pdf",
+          "language": "zh-CN",
+          "batch_metrics": 24,
+          "explicit_subset_acceptance": true,
+          "template_reuse": true,
+          "template_file_import": true,
+          "pdf_original_page_preview": true,
+          "cli_proposal_import": true,
+          "mcp_proposal_import": true,
+          "language_preserves_choices": true,
+          "cross_page_choices": true,
+          "manuscript_and_data_unchanged": true,
+          "mobile_no_overflow": true,
+          "browser_errors": [],
+          "remote_requests": []
+        }
+      ],
+      "effort": [],
+      "scope": "Recorded machine browser workflows. Actions include filling, selecting, checking and clicking; they do not measure human time or error rates."
+    },
+    "scale": {
+      "suite": "studio-scale",
+      "results": [
+        {
+          "kind": "candidates",
+          "server_start_ms": 1419.0963000000002,
+          "first_view_ms": 264.6238000000003,
+          "next_page_ms": 64.59999999999991,
+          "search_after_5000_ms": 299.7393000000002,
+          "candidate_count": 5101,
+          "cross_page_acceptance": 3,
+          "language_switch_preserves_selection": true,
+          "browser_errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "metrics",
+          "server_start_ms": 3692.9156999999977,
+          "first_view_ms": 1717.7965000000004,
+          "impact_search_ms": 7.718799999998737,
+          "metrics": 500,
+          "displayed_per_page": 20,
+          "all_metrics_searchable": true,
+          "browser_errors": [],
+          "remote_requests": []
+        }
+      ],
+      "scope": "Local Chrome browser wall time; includes DOM and local HTTP. Single samples, not a population latency guarantee."
+    },
+    "evidence": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "tsv",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "tsv",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.tsv": "717ec6460afd61371c817cb45fced33a04a40c9303072e74a0ef7874ea67d0f9"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "xlsx",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "xlsx",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.xlsx": "6208113a8043106b939c808b5058d907afe0d749d12b1c315ecb6bea5ef8a205"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "records",
+          "language": "en",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.pdevidence.json": "31b919651e5d9ad1e3ede0add65ca895b7f34f84a68cd88249a752d5149bd751"
+          },
+          "remote_requests": [],
+          "errors": []
+        },
+        {
+          "kind": "records",
+          "language": "zh-CN",
+          "status": "passed",
+          "schema": 5,
+          "accepted": 2,
+          "inputs": {
+            "paper.tex": "9f97dfd4e66c36102fd8850cf0d16b4754949a16c86c81ec3599d18176db15d0",
+            "results.pdevidence.json": "5bbd49a7ec7ec75ddb41d27954e8e8d85375a94d4834826ffa7132c911c0188e"
+          },
+          "remote_requests": [],
+          "errors": []
+        }
+      ]
+    },
+    "statistics": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "tex",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.docx": "c601c3617075ab68a5869f9a0004d475b7ded5cbca9f2e3f703b64cc639714b7",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.docx": "a10d3cf3a94d3882787bb2ce1a3a72758b5281d1d9edeaff707207ef6d31e04e",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.pdf": "70923e2e3ed11e1b8c7f8bba1271cba898bc4482a46e572c2c242979c4db4d1f",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.pdf": "b44be2b3c7cd6e5d6d105c09407d77f1505a6eebc957de69fcb365747f14c034",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "en",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "zh-CN",
+          "batch": false,
+          "status": "passed",
+          "bindings": 3,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "tex",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.tex": "582c3921264cc59b46cda7b538b5d2f2c5b01c604bf86a26adc0bb3c70920d66",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "md",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.md": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "en",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "qmd",
+          "language": "zh-CN",
+          "batch": true,
+          "status": "passed",
+          "bindings": 1,
+          "inputs": {
+            "paper.qmd": "94fdb230709ccbc72da609db92eb665b3f41f4f0f0768d5197c24f332ed90dc9",
+            "results.tsv": "42a343ac8a83a2a4c1ab0b3c2fd76e51326675df8b2197e3682b04e004297423"
+          },
+          "errors": [],
+          "remote_requests": []
+        }
+      ]
+    },
+    "layout": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "docx-table",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "91d3a2b8caaab0ef68dfc977bad0b0eb32cb2a75869adb22c6691cf4707038fb",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 3,
+            "offset": 0,
+            "paragraph": 9,
+            "part": "word/document.xml",
+            "row": 3,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-table",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "7fa1b299b478285e591c03165837cac1a0b8a7b35f222ca091a56274951cd9b2",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 3,
+            "offset": 0,
+            "paragraph": 9,
+            "part": "word/document.xml",
+            "row": 3,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-note",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "da550003b9f1dd1dd7d82478d9cbc6683dccbf01654b541a52dbb859c39bddd8",
+          "locator": {
+            "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+            "note_id": 7,
+            "offset": 20,
+            "paragraph": 1,
+            "part": "word/footnotes.xml",
+            "section": [],
+            "style": ""
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-note",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "b684b8266596b4f70eb7433d5044ae8110607101b11f2ae935b84e797f2b1091",
+          "locator": {
+            "block": "sha256:5ebfe9a6f5cc9b0a5c9de63a42e8f48b6215945c33ffd0de63f0bc3cd348e8df",
+            "note_id": 7,
+            "offset": 20,
+            "paragraph": 1,
+            "part": "word/footnotes.xml",
+            "section": [],
+            "style": ""
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-rotated",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+          "locator": {
+            "bbox": [
+              297.516,
+              87.344,
+              309.516,
+              110.696
+            ],
+            "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+            "offset": 7,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              500,
+              400
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-rotated",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "d9cc0586174fcc554db9afa224e1abdeea6beb0571c2f957b80885989169e6cf",
+          "locator": {
+            "bbox": [
+              297.516,
+              87.344,
+              309.516,
+              110.696
+            ],
+            "block": "sha256:0fac60c856d7547a33c5ea6d58554611f084323a38efea8b14d71c30c2ccca9e",
+            "offset": 7,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              500,
+              400
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-merged",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+          "locator": {
+            "bbox": [
+              170,
+              165.484,
+              193.352,
+              177.484
+            ],
+            "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+            "cell": 2,
+            "offset": 0,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ],
+            "row": 2,
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-merged",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "33e4e8a2ac49303ae7cb21b2ade999470613769790b55f2b00a6ad9593230558",
+          "locator": {
+            "bbox": [
+              170,
+              165.484,
+              193.352,
+              177.484
+            ],
+            "block": "sha256:f26a6d6cc7b6bae8aad57bd61b70e26891f73d8653131a983d7fd02152d53c6b",
+            "cell": 2,
+            "offset": 0,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ],
+            "row": 2,
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "errors": [],
+          "remote_requests": []
+        }
+      ]
+    },
+    "workflows": {
+      "status": "passed",
+      "scope": "Four authored saved-state browser workflows; actual Jupyter execution and Quarto rendering are measured separately. Not independent usability or scientific validity.",
+      "cases": [
+        {
+          "name": "latex-en",
+          "status": "passed",
+          "format": "latex",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+          "delayed_real_review": true,
+          "generation_only_would_finish_early": true,
+          "remote_requests": []
+        },
+        {
+          "name": "latex-zh-CN",
+          "status": "passed",
+          "format": "latex",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+          "delayed_real_review": true,
+          "generation_only_would_finish_early": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-en",
+          "status": "passed",
+          "format": "markdown",
+          "language": "en",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+          "delayed_real_review": true,
+          "generation_only_would_finish_early": true,
+          "remote_requests": []
+        },
+        {
+          "name": "markdown-zh-CN",
+          "status": "passed",
+          "format": "markdown",
+          "language": "zh-CN",
+          "language_switch_preserved_fields_and_selection": true,
+          "explicit_acceptance": true,
+          "declared_only": true,
+          "no_project_execution": true,
+          "source_files_preserved_before_authored_change": true,
+          "changed_evidence_marks_notebook_render_and_fragment_stale": true,
+          "checked_input_sha256": "sha256:0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+          "delayed_real_review": true,
+          "generation_only_would_finish_early": true,
+          "remote_requests": []
+        }
+      ]
+    },
+    "annotations": {
+      "status": "passed",
+      "cases": [
+        {
+          "format": "docx",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "source_sha256": {
+            "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+            "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+            "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "archive_sha256": "ae358258b39435b09437301f0cb4e89ef916a2562b4b52b13a73b776f9fed2f8",
+          "manifest": {
+            "annotation_schema_version": 1,
+            "config_path": "paperdelta.yaml",
+            "copies": [
+              {
+                "annotations": 1,
+                "original": "paper.docx",
+                "path": "copies/001-paper.review.docx"
+              }
+            ],
+            "copies_sha256": {
+              "copies/001-paper.review.docx": "sha256:943226f6d676c5a5b11891867bbcc8c199b0a9deb92402af3e1b208a2f370011"
+            },
+            "entries": [
+              {
+                "actual": "84.1%",
+                "definition": {
+                  "expected_count": 3,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": "results",
+                  "unit": "fraction",
+                  "where": {
+                    "model": "Ours"
+                  }
+                },
+                "evidence": [
+                  {
+                    "count": 3,
+                    "field": "accuracy",
+                    "locations": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "line": 2
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "line": 3
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "line": 4
+                      }
+                    ],
+                    "path": "results/metrics.csv",
+                    "records": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "value": 0.807
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "value": 0.809
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "value": 0.811
+                      }
+                    ],
+                    "reduce": "mean",
+                    "source": "results",
+                    "where": {
+                      "model": "Ours"
+                    }
+                  }
+                ],
+                "expected": "80.9%",
+                "location": {
+                  "context": "Our method achieves 84.1% accuracy on Data-A.",
+                  "end": 74,
+                  "file": "paper.docx",
+                  "format": "docx",
+                  "locator": {
+                    "block": "sha256:4798a9c1bb86fe86eace2be7e1c79c42a71c5a9703ebc5c386c97244a15f8c96",
+                    "offset": 20,
+                    "paragraph": 3,
+                    "part": "word/document.xml",
+                    "section": [
+                      "Abstract"
+                    ],
+                    "style": ""
+                  },
+                  "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+                  "start": 69,
+                  "text": "84.1%"
+                },
+                "metric": "accuracy",
+                "note": "PaperDelta review: abstract_accuracy\nCheck status: Differs from declared evidence\nWritten value: 84.1%\nExpected display: 80.9%\nDeclared metric: accuracy\nEvidence: results/metrics.csv\nRelated claims requiring attention: claim:main_comparison\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+                "occurrence": "abstract_accuracy",
+                "position": "paper.docx · paragraph 3",
+                "related_claims": [
+                  "claim:main_comparison"
+                ],
+                "status": "mismatch"
+              }
+            ],
+            "input_hashes": {
+              "paper.docx": "sha256:e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+              "paperdelta.yaml": "sha256:0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+              "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b"
+            },
+            "language": "en",
+            "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+            "preview_id": "sha256:3afc6ad33de6c0781355dc4e0e7f4291062ffe0d377aea2e3448a4d18af90912",
+            "refused": [],
+            "report_fingerprint": "sha256:96fbb77cdbed4b7e38d0f058412eedb9c4aacaeacc7334a2ae8132ff98a3d167",
+            "selection": {
+              "occurrences": [
+                "abstract_accuracy"
+              ]
+            },
+            "tool_version": "1.9.0"
+          },
+          "input_change_clears_preview": true,
+          "language_retains_selection": true,
+          "explicit_confirmation": true,
+          "originals_unchanged": true,
+          "narrow_viewport": true,
+          "errors": [],
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "[data-native-annotation][value=abstract_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-download",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            }
+          ]
+        },
+        {
+          "format": "docx",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "source_sha256": {
+            "paper.docx": "e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+            "paperdelta.yaml": "0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+            "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f"
+          },
+          "archive_sha256": "bb9ae2cf9e66778be61919336fb233ddb09d07fdaf6bafaf9f283e2a661a70c9",
+          "manifest": {
+            "annotation_schema_version": 1,
+            "config_path": "paperdelta.yaml",
+            "copies": [
+              {
+                "annotations": 1,
+                "original": "paper.docx",
+                "path": "copies/001-paper.review.docx"
+              }
+            ],
+            "copies_sha256": {
+              "copies/001-paper.review.docx": "sha256:d4172c9cf074637d04e9387a16bd22d175ab248952f8a63ff475a6a25f6693bb"
+            },
+            "entries": [
+              {
+                "actual": "84.1%",
+                "definition": {
+                  "expected_count": 3,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": "results",
+                  "unit": "fraction",
+                  "where": {
+                    "model": "Ours"
+                  }
+                },
+                "evidence": [
+                  {
+                    "count": 3,
+                    "field": "accuracy",
+                    "locations": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "line": 2
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "line": 3
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "line": 4
+                      }
+                    ],
+                    "path": "results/metrics.csv",
+                    "records": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "value": 0.807
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "value": 0.809
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "value": 0.811
+                      }
+                    ],
+                    "reduce": "mean",
+                    "source": "results",
+                    "where": {
+                      "model": "Ours"
+                    }
+                  }
+                ],
+                "expected": "80.9%",
+                "location": {
+                  "context": "Our method achieves 84.1% accuracy on Data-A.",
+                  "end": 74,
+                  "file": "paper.docx",
+                  "format": "docx",
+                  "locator": {
+                    "block": "sha256:4798a9c1bb86fe86eace2be7e1c79c42a71c5a9703ebc5c386c97244a15f8c96",
+                    "offset": 20,
+                    "paragraph": 3,
+                    "part": "word/document.xml",
+                    "section": [
+                      "Abstract"
+                    ],
+                    "style": ""
+                  },
+                  "parser": "paperdelta-docx/2;python-docx/1.2.0;lxml/6.1.3",
+                  "start": 69,
+                  "text": "84.1%"
+                },
+                "metric": "accuracy",
+                "note": "PaperDelta 复核：abstract_accuracy\n核对状态：与已声明证据不一致\n原文数值：84.1%\n预期显示：80.9%\n已声明指标：accuracy\n证据：results/metrics.csv\n需关注的相关结论：claim:main_comparison\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+                "occurrence": "abstract_accuracy",
+                "position": "paper.docx · 第 3 段",
+                "related_claims": [
+                  "claim:main_comparison"
+                ],
+                "status": "mismatch"
+              }
+            ],
+            "input_hashes": {
+              "paper.docx": "sha256:e8b05cd247f326303af02ece27d926b0fb09d4e6af4bdfa6480bb5b3e7f2426a",
+              "paperdelta.yaml": "sha256:0bec5417bc0656c18315a1ac220a085bde49f177eb3db62a67567eb09901be8d",
+              "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b"
+            },
+            "language": "zh-CN",
+            "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+            "preview_id": "sha256:b389036291060a2025e467bfa848f9495cbc93c9a8a2a05d3648b96587acc4d2",
+            "refused": [],
+            "report_fingerprint": "sha256:96fbb77cdbed4b7e38d0f058412eedb9c4aacaeacc7334a2ae8132ff98a3d167",
+            "selection": {
+              "occurrences": [
+                "abstract_accuracy"
+              ]
+            },
+            "tool_version": "1.9.0"
+          },
+          "input_change_clears_preview": true,
+          "language_retains_selection": true,
+          "explicit_confirmation": true,
+          "originals_unchanged": true,
+          "narrow_viewport": true,
+          "errors": [],
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "[data-native-annotation][value=abstract_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-download",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            }
+          ]
+        },
+        {
+          "format": "pdf",
+          "language": "en",
+          "version": "1.9.0",
+          "status": "passed",
+          "source_sha256": {
+            "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+            "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+            "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+          },
+          "archive_sha256": "bc0c0e9d3866b8ee239a6b78db36c2df2e0f1bd0e64ded9bc81e3fda4acf92b6",
+          "manifest": {
+            "annotation_schema_version": 1,
+            "config_path": "paperdelta.yaml",
+            "copies": [
+              {
+                "annotations": 1,
+                "original": "paper.pdf",
+                "path": "copies/001-paper.review.pdf"
+              }
+            ],
+            "copies_sha256": {
+              "copies/001-paper.review.pdf": "sha256:cfcc0bbd117b59489365198bacff9242308033adc5c1661574727176a7754835"
+            },
+            "entries": [
+              {
+                "actual": "84.1%",
+                "definition": {
+                  "expected_count": 3,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": "results",
+                  "unit": "fraction",
+                  "where": {
+                    "model": "Ours"
+                  }
+                },
+                "evidence": [
+                  {
+                    "count": 3,
+                    "field": "accuracy",
+                    "locations": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "line": 2
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "line": 3
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "line": 4
+                      }
+                    ],
+                    "path": "results/metrics.csv",
+                    "records": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "value": 0.807
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "value": 0.809
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "value": 0.811
+                      }
+                    ],
+                    "reduce": "mean",
+                    "source": "results",
+                    "where": {
+                      "model": "Ours"
+                    }
+                  }
+                ],
+                "expected": "80.9%",
+                "location": {
+                  "context": "Our method achieves 84.1% accuracy on Data-A.",
+                  "end": 173,
+                  "file": "paper.pdf",
+                  "format": "pdf",
+                  "locator": {
+                    "bbox": [
+                      165.384,
+                      190.484,
+                      199.404,
+                      202.484
+                    ],
+                    "block": "sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6",
+                    "offset": 20,
+                    "page": 1,
+                    "page_box": [
+                      0,
+                      0,
+                      600,
+                      800
+                    ]
+                  },
+                  "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+                  "start": 168,
+                  "text": "84.1%"
+                },
+                "metric": "accuracy",
+                "note": "PaperDelta review: abstract_accuracy\nCheck status: Differs from declared evidence\nWritten value: 84.1%\nExpected display: 80.9%\nDeclared metric: accuracy\nEvidence: results/metrics.csv\nRelated claims requiring attention: claim:main_comparison\nReview the evidence and manuscript together. This annotation changes no values and does not mark the finding resolved. See review.json for the declared identity and participating evidence.",
+                "occurrence": "abstract_accuracy",
+                "position": "paper.pdf · page 1",
+                "related_claims": [
+                  "claim:main_comparison"
+                ],
+                "status": "mismatch"
+              }
+            ],
+            "input_hashes": {
+              "paper.pdf": "sha256:633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+              "paperdelta.yaml": "sha256:3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+              "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b",
+              "source.tex": "sha256:a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+            },
+            "language": "en",
+            "notice": "This download includes complete copies of the selected manuscripts and a review manifest with declared evidence. Originals stay unchanged. Comments do not resolve findings or validate scientific claims. Review the listed omissions before sharing.",
+            "preview_id": "sha256:443119bb25a54be78ee9cfeefb0cbafdc3ebf61cee6a4f8afdd3a8d73e431c49",
+            "refused": [],
+            "report_fingerprint": "sha256:7d3e5f039247fb7cb4b576fd4af001ef22d91561f5379a63ad6b5c51b63e1631",
+            "selection": {
+              "occurrences": [
+                "abstract_accuracy"
+              ]
+            },
+            "tool_version": "1.9.0"
+          },
+          "input_change_clears_preview": true,
+          "language_retains_selection": true,
+          "explicit_confirmation": true,
+          "originals_unchanged": true,
+          "narrow_viewport": true,
+          "errors": [],
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "[data-native-annotation][value=abstract_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-download",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            }
+          ]
+        },
+        {
+          "format": "pdf",
+          "language": "zh-CN",
+          "version": "1.9.0",
+          "status": "passed",
+          "source_sha256": {
+            "paper.pdf": "633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+            "paperdelta.yaml": "3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+            "results/metrics.csv": "0eb37e7f3e58cfe2985b3b14b835942809b5e0da03e6915f79538176e10cd18f",
+            "source.tex": "a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+          },
+          "archive_sha256": "be022771e080eac766755fac1068b5aae426b7b8fa1e61609353f66b09fcdded",
+          "manifest": {
+            "annotation_schema_version": 1,
+            "config_path": "paperdelta.yaml",
+            "copies": [
+              {
+                "annotations": 1,
+                "original": "paper.pdf",
+                "path": "copies/001-paper.review.pdf"
+              }
+            ],
+            "copies_sha256": {
+              "copies/001-paper.review.pdf": "sha256:dad02f92b29d1f463445fcedc0910da155da23fc7b3e9be20a1e6e0e5fdc1d3f"
+            },
+            "entries": [
+              {
+                "actual": "84.1%",
+                "definition": {
+                  "expected_count": 3,
+                  "expected_seeds": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "field": "accuracy",
+                  "reduce": "mean",
+                  "seed_column": "seed",
+                  "source": "results",
+                  "unit": "fraction",
+                  "where": {
+                    "model": "Ours"
+                  }
+                },
+                "evidence": [
+                  {
+                    "count": 3,
+                    "field": "accuracy",
+                    "locations": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "line": 2
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "line": 3
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "line": 4
+                      }
+                    ],
+                    "path": "results/metrics.csv",
+                    "records": [
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 1
+                        },
+                        "value": 0.807
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 2
+                        },
+                        "value": 0.809
+                      },
+                      {
+                        "key": {
+                          "model": "Ours",
+                          "seed": 3
+                        },
+                        "value": 0.811
+                      }
+                    ],
+                    "reduce": "mean",
+                    "source": "results",
+                    "where": {
+                      "model": "Ours"
+                    }
+                  }
+                ],
+                "expected": "80.9%",
+                "location": {
+                  "context": "Our method achieves 84.1% accuracy on Data-A.",
+                  "end": 173,
+                  "file": "paper.pdf",
+                  "format": "pdf",
+                  "locator": {
+                    "bbox": [
+                      165.384,
+                      190.484,
+                      199.404,
+                      202.484
+                    ],
+                    "block": "sha256:7775a30d20bc3e196f474de6f678fc56e6e7d70d8788154a0bd5165ade703ef6",
+                    "offset": 20,
+                    "page": 1,
+                    "page_box": [
+                      0,
+                      0,
+                      600,
+                      800
+                    ]
+                  },
+                  "parser": "paperdelta-pdf/3;pdfplumber/0.11.10;pdfminer/20260107",
+                  "start": 168,
+                  "text": "84.1%"
+                },
+                "metric": "accuracy",
+                "note": "PaperDelta 复核：abstract_accuracy\n核对状态：与已声明证据不一致\n原文数值：84.1%\n预期显示：80.9%\n已声明指标：accuracy\n证据：results/metrics.csv\n需关注的相关结论：claim:main_comparison\n请结合证据与原文复核。本批注不修改数值，也不将问题标为已解决。已声明身份与参与计算的证据见 review.json。",
+                "occurrence": "abstract_accuracy",
+                "position": "paper.pdf · 第 1 页",
+                "related_claims": [
+                  "claim:main_comparison"
+                ],
+                "status": "mismatch"
+              }
+            ],
+            "input_hashes": {
+              "paper.pdf": "sha256:633929499128ec38ce2deb21739235da37e1758430a96ef08173e64c41be4954",
+              "paperdelta.yaml": "sha256:3ff0b3da1107ead83b39305042541cb36d83e5b9ed5a95f5220d98baf8762667",
+              "results/metrics.csv": "sha256:b312e9d1670ceb09f4503f568f7c72dec7ae84bfc3ac4869d856e03e60eedc6b",
+              "source.tex": "sha256:a6a06817724c803fcd763590ad1b3dd244f933857df93b9f3b3d2eaa6a6710fc"
+            },
+            "language": "zh-CN",
+            "notice": "下载包含所选论文的完整副本，以及含已声明证据的复核清单。原件保持不变。批注不代表问题已解决或科学结论已验证。分享前请复核列出的未导出项。",
+            "preview_id": "sha256:20c876130a93c8e7eb15fa618fd4dd1b48a551e5c62fbbb97dd9539c086bb409",
+            "refused": [],
+            "report_fingerprint": "sha256:7d3e5f039247fb7cb4b576fd4af001ef22d91561f5379a63ad6b5c51b63e1631",
+            "selection": {
+              "occurrences": [
+                "abstract_accuracy"
+              ]
+            },
+            "tool_version": "1.9.0"
+          },
+          "input_change_clears_preview": true,
+          "language_retains_selection": true,
+          "explicit_confirmation": true,
+          "originals_unchanged": true,
+          "narrow_viewport": true,
+          "errors": [],
+          "remote_requests": [],
+          "steps": [
+            {
+              "selector": "#revision-search",
+              "method": "fill"
+            },
+            {
+              "selector": "[data-native-annotation][value=abstract_accuracy]",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#language",
+              "method": "selectOption"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-attest",
+              "method": "check"
+            },
+            {
+              "selector": "#annotation-download",
+              "method": "click"
+            },
+            {
+              "selector": "#annotation-preview-button",
+              "method": "click"
+            }
+          ]
+        }
+      ],
+      "scope": "Authored browser flows; original files are unchanged and every copy is explicitly reviewed. Not independent usability evidence."
+    },
+    "reliability": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "docx-omitted",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "d1286a503d46c6a66bd41168228105b717c2344730f7690dddaec956ab64fce1",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 4,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-omitted",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "cc4e4959c841e67142cc7272f5e9ae955b2bf38d644416abcff7043e41ba68d3",
+          "locator": {
+            "block": "sha256:4f50c30fc52143ffca6427aabf9335c76cf64df33591fcf0fb38176d3abe12ef",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 4,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-multivalue",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "a3d3a59909bd52c3ffeb88c6e99defd0d732b1cea0d8cb3761b95260725ac8c9",
+          "locator": {
+            "block": "sha256:9aeaa2163050e2a324289e130a31041bb37f00ad9ebcd2803b2197c5f5d3e3a6",
+            "cell": 2,
+            "offset": 7,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-multivalue",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "fae6f6f2c534db5550a0402b961fb08c50b9e08e10d5924b14e15457bfb70904",
+          "locator": {
+            "block": "sha256:9aeaa2163050e2a324289e130a31041bb37f00ad9ebcd2803b2197c5f5d3e3a6",
+            "cell": 2,
+            "offset": 7,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-reviewed",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "3cbcd67252f53b2d13d0b2fe1e82bc4c58ff05a12d210da5f0ac846457b6ea37",
+          "locator": {
+            "block": "sha256:6de25fd913880e9dc9f02aab8181a131bd3cec884a16f215b37188acd3554d9f",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "docx-reviewed",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "41bf026b7dcb1d02ad7fc20800bdabdb0292dc8ecb61789e33c7380511134c86",
+          "locator": {
+            "block": "sha256:6de25fd913880e9dc9f02aab8181a131bd3cec884a16f215b37188acd3554d9f",
+            "cell": 2,
+            "offset": 0,
+            "paragraph": 6,
+            "part": "word/document.xml",
+            "row": 2,
+            "section": [],
+            "style": "",
+            "table": 1
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-superscript",
+          "language": "en",
+          "status": "passed",
+          "source_sha256": "ae4f39fc80084bff5689b9a248e237af7539eb894d886eb9121295e0c0ce8788",
+          "locator": {
+            "bbox": [
+              175.176,
+              70.484,
+              198.528,
+              82.484
+            ],
+            "block": "sha256:80b72ba48316b9a9c27a6eb66153897ea58f1be2146e147ea4c483733f17fb92",
+            "offset": 9,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        },
+        {
+          "kind": "pdf-superscript",
+          "language": "zh-CN",
+          "status": "passed",
+          "source_sha256": "ae4f39fc80084bff5689b9a248e237af7539eb894d886eb9121295e0c0ce8788",
+          "locator": {
+            "bbox": [
+              175.176,
+              70.484,
+              198.528,
+              82.484
+            ],
+            "block": "sha256:80b72ba48316b9a9c27a6eb66153897ea58f1be2146e147ea4c483733f17fb92",
+            "offset": 9,
+            "page": 1,
+            "page_box": [
+              0,
+              0,
+              600,
+              800
+            ]
+          },
+          "changed_evidence": "mismatch",
+          "diagnostic_preview_matches_export": true,
+          "errors": [],
+          "remote_requests": []
+        }
+      ]
+    }
+  },
+  "installed_browser_cases": 82,
+  "remote_composite_action": {
+    "expected_exit_code": 1,
+    "fresh_paper_git_repository": true,
+    "language": "en",
+    "new_failures": 5,
+    "only_evidence_changed": true,
+    "original_inputs_preserved": true,
+    "paper_code_executed": false,
+    "sarif_written": true,
+    "status": "passed"
+  },
+  "actual_public_previous_version_upgrades": {
+    "upgrade": {
+      "status": "passed",
+      "from_version": "1.8.0",
+      "to_version": "1.9.0",
+      "source": "Exact tested 1.8.0 wheel installed in an isolated environment produced the original persisted draft.",
+      "bindings_preserved": 2,
+      "preview_passed": 2,
+      "accepted": 0,
+      "input_and_config_sha256_unchanged": {
+        "paper.tex": "b3b6f188b820ae7a5de14b7220e89b975b562f35257595a3d8cead612b46a890",
+        "results.csv": "bd6ae7da4fcd3fc953d1b19758cdfcb610aa9c015e19d5fffe5cdf88c0557fdb",
+        "paperdelta.yaml": "17eed2027b6fe0f5118e6eac726ad3ced83ac28c91a0dca509091d2c9c2d691d"
+      },
+      "scope": "One actual LaTeX upgrade; five-format contract migration and stale-input tests are separate authored regressions."
+    },
+    "transaction": {
+      "from_version": "1.8.0",
+      "transaction_id": "fb65320326de4d3697bce3ac80b97ee9",
+      "file": "paper/results.tex",
+      "original_sha256": "0d79af94e11f620edaa5d8046799847ee99d3d9f5c776dbaf760e559889941ac",
+      "written_sha256": "2b7dd45aa1c8a3814b8112759035a01a922256a394fc43e336fada5125227acd",
+      "status": "passed",
+      "to_version": "1.9.0",
+      "preview_read_only": true,
+      "exact_original_restored": true,
+      "scope": "Actual 1.8 installed-wheel LaTeX transaction recovered by the installed 1.9 candidate."
+    }
+  },
+  "uvx": {
+    "status": "passed",
+    "tool": "PaperDelta 1.9.0",
+    "host": "Windows",
+    "architecture": "AMD64",
+    "python": "3.12.14",
+    "wheel_sha256": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "runs": [
+      {
+        "extras": false,
+        "arguments": [
+          "--version"
+        ],
+        "exit_code": 0,
+        "seconds": 1.328
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "latex",
+          "--out",
+          "latex-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.688
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "markdown",
+          "--out",
+          "markdown-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.5
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "quarto",
+          "--out",
+          "quarto-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.468
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "docx",
+          "--out",
+          "docx-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.922
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "en",
+          "demo",
+          "--document",
+          "pdf",
+          "--out",
+          "pdf-en",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.25
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "en",
+          "-C",
+          "pdf-en",
+          "scan",
+          "--format",
+          "json"
+        ],
+        "exit_code": 2,
+        "seconds": 0.344
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "latex",
+          "--out",
+          "latex-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.641
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "markdown",
+          "--out",
+          "markdown-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.484
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "quarto",
+          "--out",
+          "quarto-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.469
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "docx",
+          "--out",
+          "docx-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.5
+      },
+      {
+        "extras": true,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "demo",
+          "--document",
+          "pdf",
+          "--out",
+          "pdf-zh-CN",
+          "--format",
+          "json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.812
+      },
+      {
+        "extras": false,
+        "arguments": [
+          "--lang",
+          "zh-CN",
+          "-C",
+          "pdf-zh-CN",
+          "scan",
+          "--format",
+          "json"
+        ],
+        "exit_code": 2,
+        "seconds": 0.36
+      }
+    ]
+  },
+  "performance": {
+    "version": "1.9.0",
+    "started_at": "2026-10-07T06:54:04.484521+00:00",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "same_large_project_input_hashes": {
+      "paperdelta.yaml": "5989eabc38b0a89a3f5af9a00468c38fc82be9c0b38dd5bfabe7aee90f8e9510",
+      "results.csv": "f1d24ea0fb28b6c8b9000a85b2ca2c4a2637f251070e5a91a7125dbc0e9accd3",
+      "paper/main.tex": "fdfe01c4d326e314e5a98a39b5193d74bdcb928d8cb04a1530f4d0568ee225af",
+      "paper/part-01.tex": "7db4224a59e281536a6e76caf12c86f8a7ef315dd10cd4f005a39fbd9f3c6b11",
+      "paper/part-02.tex": "d5782b0c8bc5527e5cb49f7512d74d37b6ec67bd6acfad66530f04980f8a9bab",
+      "paper/part-03.tex": "703bcda758537eef6cce599ad7cef81379b02dde200207aadeb1961712a40cc7",
+      "paper/part-04.tex": "8409782a538d510e22e06dc9be7b25552eac77187be76fc9a503babba5eaa18c",
+      "paper/part-05.tex": "d330d5b52be334b4e0dd888f81f332a15aea7fda5b3a76e3ea803dea533bfb1d",
+      "paper/part-06.tex": "be36f91d07e57b3f68a137aa60762ab0fc27b67aa214eafb3b6969541187dc05",
+      "paper/part-07.tex": "17e1159e96295c67a64678938dca2a9480432bf32bed37bcac5337dd95b1f4ad",
+      "paper/part-08.tex": "0b55af276f8a6c6b65048ec6809947ac6f6dda312b754b0f69084fc294074045",
+      "paper/part-09.tex": "8bff5527e82902a06c5614c7e4a5126a5c9dab51bf6f63ff101c71e5a0292447",
+      "paper/part-10.tex": "a9d7d6c1b48494637028da2a9fc51e9bf86b28364250382606292539cc9a0a92",
+      "paper/part-11.tex": "433c94abb71e9cf0fda5a4c8470eb441b42cbbd4e83a1c28e24a3e57fa0e9fd8",
+      "paper/part-12.tex": "2340cd5c736b730e3d17a13317c2b9bf1de3b047df1e4bb9ffca1ee5c681856b",
+      "paper/part-13.tex": "0701578495a950ea4112065d830192c9cd1c43b18ef734a2ea3cc53a18164c38",
+      "paper/part-14.tex": "672d14db92971300e39c739c178092aef7656b86dc341caec05aea27819371ae",
+      "paper/part-15.tex": "d93e2c198d6738a05733406857f7bb0c800148da8ae03e20a64797db13cea5c2",
+      "paper/part-16.tex": "81f98ba7c4925e602ad1e170ab3266a1117c05b403ab691ad41089bc8e9c8496",
+      "paper/part-17.tex": "a518bc04144ba6ada49571bb58cafc8b32acd39a2ade33929785ca9fddbd73af",
+      "paper/part-18.tex": "3c9fd989e3e26255235f286262bf715fe471dd2711db9cabc1d367e821f2288e",
+      "paper/part-19.tex": "cb8a2438797fde1012bf8f8f23b0a752d35ead593516beda0b162597a88ef23e"
+    },
+    "large_project": {
+      "workload": {
+        "tex_files": 20,
+        "bindings": 500,
+        "distinct_metrics": 500,
+        "csv_bytes": 10000047,
+        "csv_records": 101611,
+        "selected_records": 1500,
+        "background_records": 100111
+      },
+      "reference": {
+        "version": "1.8.0",
+        "python": "3.12.14",
+        "full_checks": {
+          "samples_seconds": [
+            1.417528600000196,
+            1.3858185999999932,
+            1.6486626000000797,
+            1.7907823000000462,
+            1.5814428999999564,
+            1.584504700000025,
+            1.6796348000000307,
+            1.727475400000003,
+            1.6187082999999802,
+            1.5885380000001987,
+            1.6374393000000964,
+            1.6380778000000191,
+            1.6816885000000639,
+            1.5591799999999694,
+            1.7293419000000085,
+            1.676639299999806,
+            1.6411983000000419,
+            1.580277199999955,
+            1.5735865000001468,
+            1.558560899999975
+          ],
+          "median_seconds": 1.6280738000000383,
+          "p95_seconds": 1.7293419000000085
+        },
+        "report_hashes_without_version_or_clock": [
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234",
+          "eff019b315b69f83dee9f694b91d59d8c49aee3782aab8299f8b80410f434234"
+        ],
+        "loaded_source_files_sha256": {
+          "actions.py": "070f0cd9767331c460e7c8174530f71ee23cc1896c2d7479cd6017e5c2fb897e",
+          "agent.py": "818d327a4f6af8f1f8ece71f7b3c9dbf9e79893fd2c8e1027eee8738e44473b9",
+          "analysis.py": "ef24116cde45ebfcb5878e4530b9e97c1b01859b3e57deaadc4c6a894fe7d51b",
+          "annotations.py": "d12836fe062cc8871ca725e023deb4b1238ef073b13ded4c850ded2d4976aea4",
+          "annotation_cli.py": "7f6e5600850b8a102e4bb7ca7c65f83848acc4376aac744fa3ec32b5041e4e25",
+          "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+          "batch.py": "729769ea8e2d943b4c9d25431fa430f652e5b1435362902e572ad3e447381a06",
+          "batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+          "batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+          "builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+          "cli.py": "38b00fa9aed4ca05f8a5f5705671b9d193efbb142a8f86d135480b9afb5cd077",
+          "config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+          "config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+          "coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+          "declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+          "demo.py": "4e170eeb843b7c20e2152852d986f32cbf3ee86b5a360eb86519a0d767654300",
+          "diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+          "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+          "documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+          "docx_document.py": "449d9eafa111c61f590353a0482a364b9b876d95f5bf2817142ee4a7e375a501",
+          "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+          "evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+          "evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+          "experiment_aliases.py": "941dbc4e522486ec32c6c54bed8e611ecd6781950560da5e91535cb25faaa8bf",
+          "experiment_definitions.py": "501da96211e515a5b67fe5e9256cc48f0551a8d382925c9ca49c0eb6f7788ac9",
+          "experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+          "experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+          "fragments.py": "39df6fc6014e8c7033ecc8405b820531bd948d3c1250f2ce89997e55d26faa5f",
+          "fragment_cli.py": "76c05806f6f40ab81b5edf1aff44f1ac1134ee2d066376715fe3ba193f0ac926",
+          "guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+          "html_report.py": "dbc00be086b608298d36276fcb30d102e6489ab611217d720c1440a0333f115d",
+          "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+          "interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+          "latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+          "locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+          "manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+          "markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+          "mcp_server.py": "5c8448bcfdc5f1da58a9cd5e4692787e4b723309b931bc6ead42b4ee46620e3d",
+          "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+          "models.py": "e612f3b8caa71ed0f41383bcf6bce14fc4b687e60a6249efdb1659cbe976d02b",
+          "native_comments.py": "6ddce0dfb76513b23d512c81cecbd5dda06b3c031aeb3757fc4cf012fac7b444",
+          "native_document.py": "abcb05fc181a479a59a7518716a387ff1d6755efbef2671f80134ac98de94eba",
+          "native_scientific.py": "d00e982ff640ada9149e3dbe17e3373a918d1f8c59b90d830ee99d2d28ee0ac4",
+          "notebooks.py": "ab14f5fced2c26d8bbc8119885dfbffc823726923ea42ec9d785fb9f5be45d42",
+          "onboarding.py": "fee177d7887448c25b508ff835d01d13913bae9690c386a1ce62be802c7d1798",
+          "patches.py": "124e629dd30382c1a98883480c1185f1b2c3e10f80b4f9aa6262495b9d45ab7a",
+          "pdf_document.py": "029ae81435f69edf4616ce8c831f538c77db1de6f28399254e421f5a02cbd342",
+          "pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+          "pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+          "pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+          "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+          "producer_run.py": "180240f126a08b816a3085b2ef5c5640b2f28780772c12c4472cdbaf41ef2138",
+          "provenance.py": "94086a8130112d2b751a11d7658696c9bbf7cd5724ef1399db8c8a09fb65f46e",
+          "provenance_cli.py": "b1c3a6d06fbb1ca0b7ee75c4395e88c39a33dfe9a866fe07b33bbf80a0ac52ea",
+          "pr_review.py": "bfa680c254db2fe4afcffaa41c94ecdc268d62d0b74909823b99f94a3ace4e40",
+          "records.py": "ff9202dbc7514d7ca8533c51de6c6a99f6fb8ca0dad94c0958c3011d77f258b9",
+          "repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+          "reports.py": "a3f7d2f548bb4780607cb764036cab747dcb6162862ef093c9ad8611820481a9",
+          "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+          "review_bundle.py": "ce15e19a9789d4babf89aff3a3cf395b312c9fcee5a56452b1fb56b524992313",
+          "review_bundle_cli.py": "1fbdd3cfc429f30f267755303a71ff8e6e7bcc69d7e8be089a37d4c55ced796d",
+          "revisions.py": "ad2ebc1c60c2d35f622925e3bae89780a22ccbf770ba8b4950319214611ecc17",
+          "sarif.py": "ccad81b34bcb43c2a8c74ce2bcd4c1c613a64578d9470c28ddb0050d4c960073",
+          "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+          "sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+          "source_advice.py": "6bcebeef6267a8a0c7f84d8dac61a1f47007eca360d01411080d7c4ff93c0237",
+          "staged_agent.py": "f34d3920632b9050f26cbd74470f7b40a6122bb01f233d6291b41437acac3ad1",
+          "statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+          "statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+          "statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+          "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+          "studio.py": "46ee12301ab65cb8ed17ee21122d0481d83bdd4d8a546382bd814c1413851e1c",
+          "studio_batch.py": "cef3cc016c62daba1efc1d627f2355ce474f171e040bba7632d5381327344564",
+          "studio_recovery.py": "101354b8a9e6c77632afa69ad5be39dc39938c734496215a9932f384e3766d73",
+          "studio_review.py": "9150237b640a90f9bae5c6dc42275c3ccce6f83a0ac6e37ca9aacdcf51454baf",
+          "studio_revisions.py": "491e697e9f0c0838b82500f3ea7867db67d1879f7f90d6c5a0a33f8a46609c66",
+          "studio_server.py": "93851feac390418872b948dd2761044abca180d0939ddac423df2d67a7ba1cc2",
+          "studio_ui.py": "87a0dc66e0fefa5dcfefa4ba3ab3ea0b6149d8011719612e53fb858a5bd9e0d0",
+          "studio_workflows.py": "dcbe92d0839437fed020970b457139f4ea8cc114556f3f9945c16e188f34ccf5",
+          "tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+          "watch.py": "e819c612b52f990125ada246a11bb1aa2b96b939319565a4d53893838ee30654",
+          "word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+          "xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+          "__init__.py": "7f1c4414a9bc424aa07d7dd685709e4503315419c9f7eaf7158cd08b15eb98f4",
+          "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd"
+        }
+      },
+      "cold_incremental_seconds": 1.9266712999999527,
+      "full": {
+        "samples_seconds": [
+          1.6081681000000572,
+          1.63116819999982,
+          1.728351499999917,
+          1.669980599999917,
+          1.6488259999998718,
+          1.6657579000000169,
+          1.629932700000154,
+          1.5577378999998928,
+          1.7585913000000346,
+          1.6606742999999824,
+          1.6290782999999465,
+          1.7964368000000377,
+          1.427019099999825,
+          1.4175719999998364,
+          1.4145776000000296,
+          1.4812640000000101,
+          1.4189649999998437,
+          1.43185840000001,
+          1.3956748000000516,
+          1.4162796999999046
+        ],
+        "median_seconds": 1.6186232000000018,
+        "p95_seconds": 1.7585913000000346
+      },
+      "warm_incremental": {
+        "samples_seconds": [
+          0.8268977999998697,
+          0.8043526999999813,
+          0.8277645000000575,
+          0.8408610999999837,
+          0.7997224999999162,
+          0.8519675999998526,
+          0.849836299999879,
+          0.8310538999999153,
+          0.8525821999999152,
+          0.7940233999997872,
+          0.8676539000000503,
+          0.7976105000000189,
+          0.7837620000000243,
+          0.7253856999998334,
+          0.7387724999998682,
+          0.7545239999999467,
+          0.7046095000000605,
+          0.7168028999999478,
+          0.7195415999999568,
+          0.7150174000000789
+        ],
+        "median_seconds": 0.7986664999999675,
+        "p95_seconds": 0.8525821999999152
+      },
+      "report_sha256_without_clock": "93cf3c622ef5c6755b318e724294f330154dc53d786fc22c80a0d2909a4ab604",
+      "all_reports_equal": true,
+      "cache": {
+        "entries": 520,
+        "retained_bytes": 6892499,
+        "max_entries": 4096,
+        "max_bytes": 67108864,
+        "counts": {
+          "document.miss": 20,
+          "source_metric.miss": 500,
+          "source.miss": 1,
+          "source.bypass": 1,
+          "document.hit": 400,
+          "source_metric.hit": 10000
+        }
+      },
+      "memory_before": {
+        "rss_bytes": 46555136,
+        "peak_rss_bytes": 74412032
+      },
+      "memory_after": {
+        "rss_bytes": 207343616,
+        "peak_rss_bytes": 267542528
+      }
+    },
+    "pdf_project": {
+      "workload": {
+        "pages": 8,
+        "bindings": 320,
+        "pdf_bytes": 7076
+      },
+      "reference": {
+        "version": "1.8.0",
+        "python": "3.12.14",
+        "full_checks": {
+          "samples_seconds": [
+            1.3572444999999789,
+            1.203896400000076,
+            1.196162200000117,
+            1.1950666000000183,
+            1.217206600000054,
+            1.255365700000084,
+            1.2647809000000052,
+            1.2507671999999275,
+            1.2608479000000443,
+            1.2123487000001205,
+            1.2456392999999935,
+            1.2270445999999993,
+            1.2458189000001312,
+            1.2462328000001435,
+            1.2566157000001112,
+            1.2344194999998308,
+            1.2409464999998363,
+            1.2386842000000797,
+            1.205066400000078,
+            1.2029391000000942
+          ],
+          "median_seconds": 1.239815349999958,
+          "p95_seconds": 1.2647809000000052
+        },
+        "report_hashes_without_version_or_clock": [
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2",
+          "b6449f6343c6a121d2c76d4907a54e216b10dbb3da103673a6560dd1183539a2"
+        ],
+        "loaded_source_files_sha256": {
+          "actions.py": "070f0cd9767331c460e7c8174530f71ee23cc1896c2d7479cd6017e5c2fb897e",
+          "agent.py": "818d327a4f6af8f1f8ece71f7b3c9dbf9e79893fd2c8e1027eee8738e44473b9",
+          "analysis.py": "ef24116cde45ebfcb5878e4530b9e97c1b01859b3e57deaadc4c6a894fe7d51b",
+          "annotations.py": "d12836fe062cc8871ca725e023deb4b1238ef073b13ded4c850ded2d4976aea4",
+          "annotation_cli.py": "7f6e5600850b8a102e4bb7ca7c65f83848acc4376aac744fa3ec32b5041e4e25",
+          "arguments.py": "a866259f58a21512b2b1db8018d4f86c1770691a456ecf6da84c9148dbd6358c",
+          "batch.py": "729769ea8e2d943b4c9d25431fa430f652e5b1435362902e572ad3e447381a06",
+          "batch_agent.py": "f9dbe3ddd1b41ed330814c745bce22f59dc53930ce9f0da252f8c6421c56c5dd",
+          "batch_cli.py": "fc3e79c62c496022a90c13e877452587c887d51cc9ca556f27359d5931e29c12",
+          "builder.py": "e127c6f0dfab4bf9b24002e987617cf30345e6f6b670c54775a585311463b7b5",
+          "cli.py": "38b00fa9aed4ca05f8a5f5705671b9d193efbb142a8f86d135480b9afb5cd077",
+          "config.py": "d82ab001a881b7ca568af765193f4e6aaf6e8c4eb8a845d7bd16a9ec7933d300",
+          "config_versions.py": "0a63bf8196912bbc3a9854fec52119f6e20b6016b3fb35710938cf9cd5886403",
+          "coverage.py": "b6ac775b52c2396dd9dc86a6c7ed2e3c2dda85d89117844400d17f290a53c389",
+          "declarations.py": "55f67f7fa6593dd2636788c8f8e7dcea7d6eab506822048dcd163a8ca1e0d342",
+          "demo.py": "4e170eeb843b7c20e2152852d986f32cbf3ee86b5a360eb86519a0d767654300",
+          "diagnostic_bundle.py": "c9745aaeb067b0b69194c4ed2cbc20a2473a6cfde9c14781416b9dec534b901a",
+          "doctor.py": "4c8fe560669b4e92e2244370d5dab44fe7f14e21f8db3fd346698fe194b88a23",
+          "documents.py": "8a9a1ce89f80f8491a0cee2759827aa9c7faa9d39b061ad4098411e162a8e66f",
+          "docx_document.py": "449d9eafa111c61f590353a0482a364b9b876d95f5bf2817142ee4a7e375a501",
+          "errors.py": "e15e1f5e9884d12e5872327b673c10b5f6a15ac4ee1cdda63ff44385d74634a5",
+          "evidence_cli.py": "24c8c1e6cad9cdf1b9ca7e025da9b7bc7069a26243c964935503fe3947078953",
+          "evidence_models.py": "33d48bf7813eb77c506152de5020fdea6bca8f044d531a60f64f0e7472d8c445",
+          "experiment_aliases.py": "941dbc4e522486ec32c6c54bed8e611ecd6781950560da5e91535cb25faaa8bf",
+          "experiment_definitions.py": "501da96211e515a5b67fe5e9256cc48f0551a8d382925c9ca49c0eb6f7788ac9",
+          "experiment_exports.py": "c5dcc569e29a523b7eec5391ba1ce58d0873bee9dfbc2002973edb1744ae0bce",
+          "experiment_imports.py": "64718fdf0c737ca63ae9808abfbe023eabce5a00ea823a4b5d30bb27788b0e80",
+          "fragments.py": "39df6fc6014e8c7033ecc8405b820531bd948d3c1250f2ce89997e55d26faa5f",
+          "fragment_cli.py": "76c05806f6f40ab81b5edf1aff44f1ac1134ee2d066376715fe3ba193f0ac926",
+          "guided.py": "4db9dded8b3f5d1291c8f7abe051320cf1f60aa7f8d5510e793292129a0e337f",
+          "html_report.py": "dbc00be086b608298d36276fcb30d102e6489ab611217d720c1440a0333f115d",
+          "i18n.py": "13e3a15e57abbf0f0595267fca62feba32666c0b437dc231a46044c931c39a43",
+          "interactive.py": "283a4f5357f16a95cc98ecc19f6c19b2d8d96424eed562faac41ee1cb5242a68",
+          "latex.py": "0c5eb3eb31968b761f28f77f7e85e5663bd2ad26b3b6b4cb4e719649c240aa77",
+          "locations.py": "ad0336bb57d16191d1eadddf2db3ad031999e76b8728568fa303d351c248e982",
+          "manuscripts.py": "51378af67f1b3389551cb6e6dd393978c1c9491935442da665487c2294b2fb2f",
+          "markdown_document.py": "fddd458bf89ca5ccc277493b48f9fd0e8200b0c8740e18715a40eb4c7aff6614",
+          "mcp_server.py": "5c8448bcfdc5f1da58a9cd5e4692787e4b723309b931bc6ead42b4ee46620e3d",
+          "metrics.py": "f322bca7d41e0527979ca0a6b624820fad2d856db95121a0b3cd6917af295b3c",
+          "models.py": "e612f3b8caa71ed0f41383bcf6bce14fc4b687e60a6249efdb1659cbe976d02b",
+          "native_comments.py": "6ddce0dfb76513b23d512c81cecbd5dda06b3c031aeb3757fc4cf012fac7b444",
+          "native_document.py": "abcb05fc181a479a59a7518716a387ff1d6755efbef2671f80134ac98de94eba",
+          "native_scientific.py": "d00e982ff640ada9149e3dbe17e3373a918d1f8c59b90d830ee99d2d28ee0ac4",
+          "notebooks.py": "ab14f5fced2c26d8bbc8119885dfbffc823726923ea42ec9d785fb9f5be45d42",
+          "onboarding.py": "fee177d7887448c25b508ff835d01d13913bae9690c386a1ce62be802c7d1798",
+          "patches.py": "124e629dd30382c1a98883480c1185f1b2c3e10f80b4f9aa6262495b9d45ab7a",
+          "pdf_document.py": "029ae81435f69edf4616ce8c831f538c77db1de6f28399254e421f5a02cbd342",
+          "pdf_layout.py": "4099231c9ba7cd4febd088c99bea52a644e4dfa45d9ca1c54d2ad6dfa05133b0",
+          "pdf_previews.py": "0663f6fef5e137038a82e61e70f4b868b53d7b68f0904af08b83b323b31aab21",
+          "pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+          "preferences.py": "6342ef234a86eb6ccb41ca9eb4eef5170be53a4a8ead87d9cf85c87a69d6f69f",
+          "producer_run.py": "180240f126a08b816a3085b2ef5c5640b2f28780772c12c4472cdbaf41ef2138",
+          "provenance.py": "94086a8130112d2b751a11d7658696c9bbf7cd5724ef1399db8c8a09fb65f46e",
+          "provenance_cli.py": "b1c3a6d06fbb1ca0b7ee75c4395e88c39a33dfe9a866fe07b33bbf80a0ac52ea",
+          "pr_review.py": "bfa680c254db2fe4afcffaa41c94ecdc268d62d0b74909823b99f94a3ace4e40",
+          "records.py": "ff9202dbc7514d7ca8533c51de6c6a99f6fb8ca0dad94c0958c3011d77f258b9",
+          "repairs.py": "99b70790ce64d8713c921e9d6070a7eda17c4f0f4fe60734e101742ca18366c1",
+          "reports.py": "a3f7d2f548bb4780607cb764036cab747dcb6162862ef093c9ad8611820481a9",
+          "reviews.py": "1c3e64cb872533b17f788f7551a5c3d48dab8e7a31db875fb7aa9adfe38360eb",
+          "review_bundle.py": "ce15e19a9789d4babf89aff3a3cf395b312c9fcee5a56452b1fb56b524992313",
+          "review_bundle_cli.py": "1fbdd3cfc429f30f267755303a71ff8e6e7bcc69d7e8be089a37d4c55ced796d",
+          "revisions.py": "ad2ebc1c60c2d35f622925e3bae89780a22ccbf770ba8b4950319214611ecc17",
+          "sarif.py": "ccad81b34bcb43c2a8c74ce2bcd4c1c613a64578d9470c28ddb0050d4c960073",
+          "snapshots.py": "880ff53f00942b29aa9c5e8da72cccb4f3995712a151a00a47c640db916f4363",
+          "sources.py": "d3a41fb54ddaebd8d080e7217432dfb349e179fc2d22671b04a435d8134e35a4",
+          "source_advice.py": "6bcebeef6267a8a0c7f84d8dac61a1f47007eca360d01411080d7c4ff93c0237",
+          "staged_agent.py": "f34d3920632b9050f26cbd74470f7b40a6122bb01f233d6291b41437acac3ad1",
+          "statistical_display.py": "1601c0f214ef47505a18b06e9439b3c0bc1e6f8525d490ffe62c086d40d4ea11",
+          "statistical_guide.py": "9ad8c71e4ca10fca5448135bb2666cf27b96b3c9236f9da2b202f14de6e18ff3",
+          "statistics.py": "c2398af7b666ecd144aa7aad995a075f3059bc72bb88595ec0159a9af6817ef6",
+          "storage.py": "d27300ff0b032e697d2e1676f7723ef8cd5e22193d9aae944e28a0c859c70e7c",
+          "studio.py": "46ee12301ab65cb8ed17ee21122d0481d83bdd4d8a546382bd814c1413851e1c",
+          "studio_batch.py": "cef3cc016c62daba1efc1d627f2355ce474f171e040bba7632d5381327344564",
+          "studio_recovery.py": "101354b8a9e6c77632afa69ad5be39dc39938c734496215a9932f384e3766d73",
+          "studio_review.py": "9150237b640a90f9bae5c6dc42275c3ccce6f83a0ac6e37ca9aacdcf51454baf",
+          "studio_revisions.py": "491e697e9f0c0838b82500f3ea7867db67d1879f7f90d6c5a0a33f8a46609c66",
+          "studio_server.py": "93851feac390418872b948dd2761044abca180d0939ddac423df2d67a7ba1cc2",
+          "studio_ui.py": "87a0dc66e0fefa5dcfefa4ba3ab3ea0b6149d8011719612e53fb858a5bd9e0d0",
+          "studio_workflows.py": "dcbe92d0839437fed020970b457139f4ea8cc114556f3f9945c16e188f34ccf5",
+          "tables.py": "d5913d1b26a88715b8596a0696035a1834768423c625e78398ec1b18de0eef7b",
+          "watch.py": "e819c612b52f990125ada246a11bb1aa2b96b939319565a4d53893838ee30654",
+          "word_tables.py": "98e6bc56ee30a690017fe1edc4c639103f119be1cde01a0a4bb37c802c942996",
+          "xlsx_evidence.py": "eda3bf07b433f6f835363d55c5c81333125375530bf141fe9ccfcd6806f236f7",
+          "__init__.py": "7f1c4414a9bc424aa07d7dd685709e4503315419c9f7eaf7158cd08b15eb98f4",
+          "__main__.py": "47178fc3b69b810c9da5fe479ef6b9224f17c9884e69d0a70d701ed4b13f6fdd"
+        }
+      },
+      "cold_incremental_seconds": 1.262165399999958,
+      "full": {
+        "samples_seconds": [
+          1.211674500000072,
+          1.1931859999999688,
+          1.1960509999998976,
+          1.2053452000000107,
+          1.1960997999999563,
+          1.234097299999803,
+          1.248085600000195,
+          1.2420854000001782,
+          1.2315521000000444,
+          1.2020262999999431,
+          1.205479799999921,
+          1.190922799999953,
+          1.2454818999999588,
+          1.265326899999991,
+          1.2748902000000726,
+          1.2653310999999121,
+          1.204372800000101,
+          1.2586295999999493,
+          1.2514166000000841,
+          1.2548013000000537
+        ],
+        "median_seconds": 1.2328246999999237,
+        "p95_seconds": 1.2653310999999121
+      },
+      "warm_incremental": {
+        "samples_seconds": [
+          0.22558539999999994,
+          0.2364534000000731,
+          0.235821900000019,
+          0.22608629999990626,
+          0.24432000000001608,
+          0.23079759999995986,
+          0.2266073000000688,
+          0.24330959999997503,
+          0.22384740000006786,
+          0.23948179999979402,
+          0.23416279999992184,
+          0.22649259999980131,
+          0.24553629999991244,
+          0.23250230000007832,
+          0.23851169999988997,
+          0.24483829999985574,
+          0.23035509999999704,
+          0.24374280000006365,
+          0.2468868000000839,
+          0.24030649999986053
+        ],
+        "median_seconds": 0.23613765000004605,
+        "p95_seconds": 0.24553629999991244
+      },
+      "report_sha256_without_clock": "c64d9f66931de498956faa9fa74e0fa95b29e482b562e1b02b1c275dd00e3a63",
+      "all_reports_equal": true,
+      "cache": {
+        "entries": 3,
+        "retained_bytes": 2219161,
+        "max_entries": 4096,
+        "max_bytes": 67108864,
+        "counts": {
+          "document.miss": 1,
+          "source_metric.miss": 1,
+          "source.miss": 1,
+          "document.hit": 20,
+          "source_metric.hit": 20
+        }
+      },
+      "memory_before": {
+        "rss_bytes": 205561856,
+        "peak_rss_bytes": 267542528
+      },
+      "memory_after": {
+        "rss_bytes": 208175104,
+        "peak_rss_bytes": 267542528
+      }
+    },
+    "invalidation": [
+      {
+        "case": "cold",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.493031799999926,
+        "incremental_seconds": 1.7002267999998821,
+        "report_sha256_without_clock": "93cf3c622ef5c6755b318e724294f330154dc53d786fc22c80a0d2909a4ab604",
+        "cache": {
+          "entries": 520,
+          "retained_bytes": 6892499,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 20,
+            "source_metric.miss": 500,
+            "source.miss": 1,
+            "source.bypass": 1
+          }
+        }
+      },
+      {
+        "case": "warm",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4513438999999835,
+        "incremental_seconds": 0.7463631000000532,
+        "report_sha256_without_clock": "93cf3c622ef5c6755b318e724294f330154dc53d786fc22c80a0d2909a4ab604",
+        "cache": {
+          "entries": 520,
+          "retained_bytes": 6892499,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 20,
+            "source_metric.miss": 500,
+            "source.miss": 1,
+            "source.bypass": 1,
+            "document.hit": 20,
+            "source_metric.hit": 500
+          }
+        }
+      },
+      {
+        "case": "one_document_edited",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4083568999999443,
+        "incremental_seconds": 0.7372953999999936,
+        "report_sha256_without_clock": "3316b3da1a083590d81e1d64ba01c5fff4c99eb5db09f12bbbe2b2af280c533a",
+        "cache": {
+          "entries": 521,
+          "retained_bytes": 7088538,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 500,
+            "source.miss": 1,
+            "source.bypass": 1,
+            "document.hit": 39,
+            "source_metric.hit": 1000
+          }
+        }
+      },
+      {
+        "case": "evidence_value_changed",
+        "exit_code": 1,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4469873999998981,
+        "incremental_seconds": 1.5827080999999907,
+        "report_sha256_without_clock": "c56ca458895884584292ef7ac3c57ef1fc72f1b20ec9471d90e4470ad0556265",
+        "cache": {
+          "entries": 1021,
+          "retained_bytes": 10058982,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 1000,
+            "source.miss": 2,
+            "source.bypass": 2,
+            "document.hit": 59,
+            "source_metric.hit": 1000
+          }
+        }
+      },
+      {
+        "case": "evidence_deleted",
+        "exit_code": 2,
+        "all_report_fields_equal": true,
+        "full_seconds": 0.6897009000001617,
+        "incremental_seconds": 0.6972395000000233,
+        "report_sha256_without_clock": "f5fe21cdd1b107c575c74d1e0991505716bce2827e4a2856a72e80b0ed53aab6",
+        "cache": {
+          "entries": 1021,
+          "retained_bytes": 10058982,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 1000,
+            "source.miss": 2,
+            "source.bypass": 2,
+            "document.hit": 79,
+            "source_metric.hit": 1000
+          }
+        }
+      },
+      {
+        "case": "evidence_restored",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.455302999999958,
+        "incremental_seconds": 0.7477538999999069,
+        "report_sha256_without_clock": "3316b3da1a083590d81e1d64ba01c5fff4c99eb5db09f12bbbe2b2af280c533a",
+        "cache": {
+          "entries": 1021,
+          "retained_bytes": 10058982,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 1000,
+            "source.miss": 2,
+            "source.bypass": 2,
+            "document.hit": 99,
+            "source_metric.hit": 1500
+          }
+        }
+      },
+      {
+        "case": "evidence_rows_reordered",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4589869999999792,
+        "incremental_seconds": 1.5950704000001679,
+        "report_sha256_without_clock": "546a9dc2e47b7f8693d87dc266a0e76c216afe4be81389a1db0c98e7084ba809",
+        "cache": {
+          "entries": 1521,
+          "retained_bytes": 13029482,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 1500,
+            "source.miss": 3,
+            "source.bypass": 3,
+            "document.hit": 119,
+            "source_metric.hit": 1500
+          }
+        }
+      },
+      {
+        "case": "config_selector_changed",
+        "exit_code": 2,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4144311000000016,
+        "incremental_seconds": 1.5211931000001186,
+        "report_sha256_without_clock": "c8edbaf8cf25ea47ae151a74e5c894958ab75387c752b10d05c7806101728a19",
+        "cache": {
+          "entries": 1521,
+          "retained_bytes": 13029482,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 21,
+            "source_metric.miss": 1501,
+            "source.miss": 4,
+            "source.bypass": 4,
+            "document.hit": 139,
+            "source_metric.hit": 1999
+          }
+        }
+      },
+      {
+        "case": "parser_identity_changed",
+        "exit_code": 2,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4475012000000334,
+        "incremental_seconds": 1.686063699999977,
+        "report_sha256_without_clock": "c8edbaf8cf25ea47ae151a74e5c894958ab75387c752b10d05c7806101728a19",
+        "cache": {
+          "entries": 2040,
+          "retained_bytes": 19917012,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 41,
+            "source_metric.miss": 2001,
+            "source.miss": 5,
+            "source.bypass": 5,
+            "document.hit": 139,
+            "source_metric.hit": 1999
+          }
+        }
+      },
+      {
+        "case": "all_inputs_restored",
+        "exit_code": 0,
+        "all_report_fields_equal": true,
+        "full_seconds": 1.4515685000001213,
+        "incremental_seconds": 1.594121899999891,
+        "report_sha256_without_clock": "93cf3c622ef5c6755b318e724294f330154dc53d786fc22c80a0d2909a4ab604",
+        "cache": {
+          "entries": 2541,
+          "retained_bytes": 23082579,
+          "max_entries": 4096,
+          "max_bytes": 67108864,
+          "counts": {
+            "document.miss": 42,
+            "source_metric.miss": 2501,
+            "source.miss": 6,
+            "source.bypass": 6,
+            "document.hit": 158,
+            "source_metric.hit": 1999
+          }
+        }
+      }
+    ],
+    "status": "passed",
+    "finished_at": "2026-10-07T06:56:58.532798+00:00",
+    "protocol": "Authored local workloads; cold reuse includes cache population. Full and warm checks alternate order. Interpreter startup, UI rendering and models are excluded; OS caches are not flushed. P95 is an empirical nearest rank, not a guarantee. Cached retained bytes are bounded; RSS includes live checks, libraries and allocator retention and has no 64 MiB promise. Existing report fields including positions and coverage agree after excluding only created_at; cross-version comparisons also exclude tool_version.",
+    "installed_candidate_sha256": "8295ecdd72cea52083f33c3aaef50042f5b7dd980adc72911612edf03a406baa"
+  },
+  "configuration_schema_max": 10,
+  "report_schema_max": 9,
+  "mcp_tools": 22,
+  "strict_package_description": "passed",
+  "frozen_previous_materials_unchanged": true,
+  "development_adjustments": "docs/assets/v1.9/development-adjustments.json",
+  "scope": "Authored installed-package workflows, content/config/dependency invalidation and complete-report parity. Exact-commit remote CI and downloaded public artifacts remain separate from local measurements. All runtime files in the original performance archive equal the final wheel; only its bilingual PyPI description and checksum record changed. Not independent usability or arbitrary-project latency guarantees. Approved 2.0 Agent work remains required.",
+  "release": "https://github.com/amos689/paperdelta/releases/tag/v1.9.0",
+  "publication_workflow": "https://github.com/amos689/paperdelta/actions/runs/37593425645",
+  "pypi": "https://pypi.org/project/paperdelta/1.9.0/",
+  "pypi_artifacts_sha256": {
+    "paperdelta-1.9.0-py3-none-any.whl": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "paperdelta-1.9.0.tar.gz": "7e5f1d308f8509a44801f7dd1e22e16a9f7112080599631451096a31d4c65dac"
+  },
+  "github_asset_digests_match": true,
+  "public_fresh_install": true,
+  "public_bilingual_bundled_demo": true,
+  "public_demo_formats": [
+    "latex",
+    "markdown",
+    "quarto",
+    "docx",
+    "pdf"
+  ],
+  "downloaded_github_evaluation_sha256": "bd7303d65b14ffaab65c09faf51c14869f0947796199cb6d143b499216611e26",
+  "ci_first_failure": {
+    "job": "macOS x86_64 / Python 3.12",
+    "job_id": 112674922631,
+    "first_run_log": "macos312-first.log",
+    "failure": "First docx uvx native-extras command exceeded its 180-second timeout after the complete native platform suite and four earlier uvx commands passed.",
+    "diagnostic_limit": "The earlier uvx harness did not retain TimeoutExpired partial stdout/stderr. The cause of the timeout is not established.",
+    "rerun": "Only this failed job was rerun at the identical release commit, without changing assertions. It passed; the final named 17-job set passed."
+  },
+  "redundant_tag_ci": {
+    "run": "https://github.com/amos689/paperdelta/actions/runs/37593204937",
+    "reason": "The same exact commit already passed all 17 main-branch jobs before tagging; redundant tag-triggered CI was cancelled."
+  },
+  "downloaded_github_distribution_sha256": {
+    "paperdelta-1.9.0-py3-none-any.whl": "a3714325632d87fb83c8322df145c744ab417d33915b80278afc6fcc6585b02b",
+    "paperdelta-1.9.0.tar.gz": "7e5f1d308f8509a44801f7dd1e22e16a9f7112080599631451096a31d4c65dac"
+  }
+}
