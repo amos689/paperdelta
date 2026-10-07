@@ -1,0 +1,55 @@
+{
+  "locked_at": "2026-10-07T03:35:09.031485+00:00",
+  "protocol_sha256": "3398dfdb8821587585a3c283107c88c87b8f7e929d6cc742042784504c1c3f04",
+  "families": [
+    {
+      "id": "plosgenetics-1011480",
+      "doi": "10.1371/journal.pgen.1011480",
+      "split": "development"
+    },
+    {
+      "id": "plosgenetics-1011507",
+      "doi": "10.1371/journal.pgen.1011507",
+      "split": "held-out"
+    },
+    {
+      "id": "plosmedicine-1004501",
+      "doi": "10.1371/journal.pmed.1004501",
+      "split": "development"
+    },
+    {
+      "id": "plosmedicine-1004504",
+      "doi": "10.1371/journal.pmed.1004504",
+      "split": "held-out"
+    },
+    {
+      "id": "peerj-pmc11740737",
+      "doi": "10.7717/peerj.18786",
+      "split": "development"
+    },
+    {
+      "id": "peerj-pmc11748422",
+      "doi": "10.7717/peerj.18762",
+      "split": "held-out"
+    },
+    {
+      "id": "scientific-reports-pmc11782514",
+      "doi": "10.1038/s41598-025-86314-2",
+      "split": "development"
+    },
+    {
+      "id": "scientific-reports-pmc11782508",
+      "doi": "10.1038/s41598-025-86649-w",
+      "split": "held-out"
+    }
+  ],
+  "selection_sha256": {
+    "peerj-2025.json": "c78d7ef36532d64fc2598abe0f47950c7b0ad489e2ba80b8070c3f5ba857c452",
+    "plos-genetics-2025.json": "1741a3ee198cc4317d981f99f694b26a802f1fff5dbe612e7317f623a65590a1",
+    "plos-medicine-2025.json": "a99aaf70266a046bff51075a762f683acd7fdbce1486c45e1e68237d02e10976",
+    "scientific-reports-2025.json": "b297c58d9d5206d8de4ac19480f82780b5f0fd0fb053ce3ec937d73608222192"
+  },
+  "planned_families": 8,
+  "selected_families": 8,
+  "before_original_layout_access_and_parser_changes": true
+}

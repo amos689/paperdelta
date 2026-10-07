@@ -1,0 +1,119 @@
+{
+  "study": "native-review-v3",
+  "planned_at": "2026-10-07T03:20:47.903816+00:00",
+  "baseline": {
+    "version": "1.7.0",
+    "commit": "e5afa66988a64dc640e5bfe5b4cdd91d70dd02a2",
+    "wheel_sha256": "018cdf98a1e60ba1966233d36cb2f88c6a1b360172f5bcdd515f6932f794aed3"
+  },
+  "purpose": [
+    "Evaluate original native positions and explicit value bindings on new licensed article families.",
+    "Evaluate reviewed Word comment copies and PDF annotation copies separately from parser accuracy."
+  ],
+  "strata": [
+    {
+      "id": "plos-genetics-2025",
+      "publisher": "PLOS Genetics",
+      "journal_key": "PLoSGenetics",
+      "route": "plosgenetics",
+      "from": "2025-01-01",
+      "to": "2025-03-31",
+      "formats": [
+        "pdf",
+        "docx"
+      ],
+      "metadata_limit": 100
+    },
+    {
+      "id": "plos-medicine-2025",
+      "publisher": "PLOS Medicine",
+      "journal_key": "PLoSMedicine",
+      "route": "plosmedicine",
+      "from": "2025-01-01",
+      "to": "2025-03-31",
+      "formats": [
+        "pdf",
+        "docx"
+      ],
+      "metadata_limit": 100
+    },
+    {
+      "id": "peerj-2025",
+      "publisher": "PeerJ",
+      "issn": "2167-8359",
+      "from": "2025-01-01",
+      "to": "2025-01-31",
+      "formats": [
+        "pdf"
+      ],
+      "metadata_limit": 100
+    },
+    {
+      "id": "scientific-reports-2025",
+      "publisher": "Scientific Reports",
+      "issn": "2045-2322",
+      "from": "2025-01-01",
+      "to": "2025-01-31",
+      "formats": [
+        "pdf"
+      ],
+      "metadata_limit": 100
+    }
+  ],
+  "selection": {
+    "per_stratum": 2,
+    "split": [
+      "development",
+      "held-out"
+    ],
+    "ordering": "Sort the bounded metadata response by publication date then DOI. Select the first two eligible families; retain each inspected eligibility or transport failure.",
+    "exclude_previous_families": true,
+    "eligibility": "Published research article with a CC-BY-4.0 original PDF. PLOS strata also require an original DOCX table supplement; exclude checklist, questionnaire, search strategy, quality assessment, primer, antibody and protocol captions before content inspection.",
+    "failure_rule": "Do not replace selected files after layout access or parser outcomes. Record unavailable or empty inputs and unfilled target slots.",
+    "access_rule": "Filter source responses to bibliographic/licensing and download-link fields. Do not expose article bodies, abstract results, original DOCX text or PDF pages from held-out families until implementation freeze."
+  },
+  "annotation": {
+    "planned_targets_per_file": 16,
+    "table_targets": 12,
+    "prose_targets": 4,
+    "selection": "Measured outcomes from the first result table, then abstract/result prose, with documented fallbacks. Exclude IDs, dates, citations, graph ticks and method constants. Preserve complete compound/scientific values.",
+    "independent_positions": "PDFium original glyph/font boxes and rendered pages; original OOXML part, paragraph and character offsets. Never use PaperDelta candidate positions as gold.",
+    "zero_target_policy": "Retain zero-target originals and count unfilled planned slots separately, never as supported or fabricated unknown targets.",
+    "annotator": "Developer-operated annotation and visual checks; not independent human review."
+  },
+  "evaluation": {
+    "outcomes": [
+      "supported",
+      "missed",
+      "mislocated",
+      "unknown"
+    ],
+    "supported": "Unique correct original position plus an explicit binding that passes controlled synthetic evidence and mismatches after changing it.",
+    "unknown_not_success": true,
+    "baseline_same_originals_and_gold": true,
+    "freeze_implementation_before_held_out_annotation": true,
+    "retain_first_held_out_failures": true,
+    "prior_studies": "Re-runs of native-v1/native-v2 are separate observed-input regressions; their originals, gold and results remain byte-identical."
+  },
+  "annotation_export_acceptance": {
+    "original_bytes_unchanged": true,
+    "review_exact_locations_before_export": true,
+    "edited_inputs_invalidate_preview": true,
+    "word": "Anchored comments in a new DOCX copy; preserve text, formatting and existing relationships/comments. Unsupported original parts require explicit abstention.",
+    "pdf": "Highlights and notes in a new PDF copy at validated original page coordinates; preserve content and geometry.",
+    "visual_checks": "Render produced copies and original pages; verify positions, clipping and text preservation.",
+    "bilingual": true
+  },
+  "initial_parser_sha256": {
+    "docx_document.py": "1d416956b01e52815935d002200b7322af5d2201bafc612ac0ad0f17586a0f74",
+    "pdf_document.py": "7e2b6066dc16179d77699dc3ebeb671d5b45fa59ee9f68c93dea82b2669b6cbf",
+    "pdf_tables.py": "d2976be27aea918df75785bea6be496ad0eaaadc15f19993c3b0d61e685c243f",
+    "native_document.py": "2e9547e4d3b6a2336907cfc61718b5ba042b0a9598cf43499d192ffbbc405900"
+  },
+  "references": [
+    "https://python-docx.readthedocs.io/en/latest/user/comments.html",
+    "https://pypdf.readthedocs.io/en/stable/user/adding-pdf-annotations.html",
+    "https://europepmc.org/RestfulWebService",
+    "https://api.plos.org/"
+  ]
+}

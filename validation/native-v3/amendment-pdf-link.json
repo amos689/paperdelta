@@ -1,0 +1,19 @@
+{
+  "amended_at": "2026-10-07T03:28:04.975100+00:00",
+  "reason": "Europe PMC JATS uses content-type pmc-pdf for publisher PDF self-uri links. Treat pdf and pmc-pdf as download links to the same required original format.",
+  "metadata_only_probes": [
+    {
+      "pmcid": "PMC11740737",
+      "license": "CC-BY-4.0",
+      "self_uri_type": "pmc-pdf"
+    },
+    {
+      "pmcid": "PMC11782533",
+      "license": "CC-BY-NC-ND-4.0",
+      "eligible": false,
+      "self_uri_type": "pmc-pdf"
+    }
+  ],
+  "unchanged": "The original CC-BY-4.0 requirement, sample windows, bounded ordering and family-level split remain unchanged. No original pages or result text have been read.",
+  "before_parser_changes": true
+}

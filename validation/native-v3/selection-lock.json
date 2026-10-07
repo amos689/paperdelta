@@ -1,0 +1,35 @@
+{
+  "locked_at": "2026-10-07T03:23:08.449284+00:00",
+  "protocol_sha256": "3398dfdb8821587585a3c283107c88c87b8f7e929d6cc742042784504c1c3f04",
+  "families": [
+    {
+      "id": "plosgenetics-1011480",
+      "doi": "10.1371/journal.pgen.1011480",
+      "split": "development"
+    },
+    {
+      "id": "plosgenetics-1011507",
+      "doi": "10.1371/journal.pgen.1011507",
+      "split": "held-out"
+    },
+    {
+      "id": "plosmedicine-1004501",
+      "doi": "10.1371/journal.pmed.1004501",
+      "split": "development"
+    },
+    {
+      "id": "plosmedicine-1004504",
+      "doi": "10.1371/journal.pmed.1004504",
+      "split": "held-out"
+    }
+  ],
+  "selection_sha256": {
+    "peerj-2025.json": "4132ef3157341d2808a968485031d83edc8ea4124bae1a85a4fc20ac12b392c9",
+    "plos-genetics-2025.json": "1741a3ee198cc4317d981f99f694b26a802f1fff5dbe612e7317f623a65590a1",
+    "plos-medicine-2025.json": "a99aaf70266a046bff51075a762f683acd7fdbce1486c45e1e68237d02e10976",
+    "scientific-reports-2025.json": "3edfd97850d288081cb4a436a120ae42f2e577aabc869e365dea2f7dc8be6374"
+  },
+  "planned_families": 8,
+  "selected_families": 4,
+  "before_original_layout_access_and_parser_changes": true
+}

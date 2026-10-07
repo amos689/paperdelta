@@ -1,0 +1,23 @@
+{
+  "amended_at": "2026-10-07T03:25:45.339656+00:00",
+  "protocol_sha256": "3398dfdb8821587585a3c283107c88c87b8f7e929d6cc742042784504c1c3f04",
+  "reason": "The Europe PMC field JOURNAL_ISSN is invalid; the official fields endpoint lists ISSN. Both original bounded queries returned zero candidates before any original layout access.",
+  "original_field": "JOURNAL_ISSN",
+  "corrected_field": "ISSN",
+  "field_reference": "https://www.ebi.ac.uk/europepmc/webservices/rest/fields?format=json",
+  "probe": {
+    "PeerJ_original_hit_count": 0,
+    "PeerJ_corrected_hit_count": 173
+  },
+  "unchanged": [
+    "journals",
+    "dates",
+    "bounded result size",
+    "CC-BY-4.0 eligibility",
+    "article family exclusion",
+    "first eligible development / second held-out split",
+    "gold and outcome criteria"
+  ],
+  "preservation": "Original selection files and four-family shortage lock remain unchanged. Reuse both already selected PLOS pairs byte-for-byte; correct only the two zero-result queries.",
+  "before_parser_changes_and_original_layout_access": true
+}

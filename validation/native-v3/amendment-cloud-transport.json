@@ -1,0 +1,22 @@
+{
+  "amended_at": "2026-10-07T03:33:44.515443+00:00",
+  "reason": "The PMC OA Web Service and FTP packages were retired in August 2026. The documented replacement is anonymous HTTPS access to PMC Article Datasets on S3. The old endpoint returned HTTP 404.",
+  "official_references": [
+    "https://pmc.ncbi.nlm.nih.gov/tools/oa-service/",
+    "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+    "https://pmc-oa-opendata.s3.amazonaws.com/README.txt"
+  ],
+  "transport": "List the bounded metadata prefix for the same PMCID, then select the lowest numbered available non-manuscript version with the matching DOI, CC BY metadata, a CC-BY-4.0 JATS license, and a PDF object. Download only that original PDF after selection lock.",
+  "unchanged": [
+    "journals",
+    "dates",
+    "bounded article metadata query",
+    "article-family exclusion",
+    "licensing requirement",
+    "first eligible development and second held-out split",
+    "gold selection and outcome rules"
+  ],
+  "prior_attempt": "Stopped during metadata eligibility checks after confirming service retirement. No PeerJ/Scientific Reports family had been selected and no original document had been downloaded. Per-candidate in-memory observations from the interrupted attempt were not completely persisted. Existing PLOS pairs and original zero-result records are retained.",
+  "source_notice": "NIH NLM NCBI PubMed Central Article Datasets is the distribution source for PMC originals; this frozen study is a dated snapshot, not a current-data service, and implies no NLM endorsement.",
+  "before_original_layout_access_and_parser_changes": true
+}

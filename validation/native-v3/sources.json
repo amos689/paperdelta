@@ -1,0 +1,469 @@
+{
+  "study": "native-review-v3",
+  "papers": [
+    {
+      "id": "plosgenetics-1011480",
+      "doi": "10.1371/journal.pgen.1011480",
+      "title": "Refining fine-mapping: Effect sizes and regional heritability",
+      "published": "2025-01-09T00:00:00Z",
+      "authors": [
+        "Christian Benner",
+        "Anubha Mahajan",
+        "Matti Pirinen"
+      ],
+      "article_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011480",
+      "metadata_sha256": "760fb3d326b1b60059bb20940e549774401473669ddf186e9d7948399c4b8271",
+      "attachment_caption": "S1 Table. Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB.",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011480&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011480.s001"
+      },
+      "publisher": "PLOS Genetics",
+      "stratum": "plos-genetics-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc",
+          "bytes": 2403812,
+          "transport": {
+            "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011480&type=printable",
+            "resolved_url": "https://journals.plos.org/plosgenetics/article/file",
+            "sha256": "b358357c7f885b72b3e5e7c7bcf6c470f88db121dfac1e7e9b15aae4be1142bc"
+          }
+        },
+        "supplement.docx": {
+          "sha256": "d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d",
+          "bytes": 13576,
+          "transport": {
+            "url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011480.s001",
+            "resolved_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1011480/2/pgen.1011480.s001.docx",
+            "sha256": "d32a7046a2c6da03bb5eed57b9f51b8949de67b3f1148f7c14db658abe7b2b7d"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "plosgenetics-1011507",
+      "doi": "10.1371/journal.pgen.1011507",
+      "title": "Genetic gradual reduction of OGT activity unveils the essential role of O-GlcNAc in the mouse embryo",
+      "published": "2025-01-09T00:00:00Z",
+      "authors": [
+        "Sara Formichetti",
+        "Agnieszka Sadowska",
+        "Michela Ascolani",
+        "Julia Hansen",
+        "Kerstin Ganter",
+        "Christophe Lancrin",
+        "Neil Humphreys",
+        "Mathieu Boulard"
+      ],
+      "article_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011507",
+      "metadata_sha256": "038ef2276ed50cdd73c2093facaeaa6a75bf1067187249047169d0c137d62bec",
+      "attachment_caption": "S1 Table. Description of the murine alleles generated.",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011507&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011507.s007"
+      },
+      "publisher": "PLOS Genetics",
+      "stratum": "plos-genetics-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "50cd8c8006fd2ef9c945fcda3611152456baa13b994a6a4c4a67d3d68409c03c",
+          "bytes": 2562420,
+          "transport": {
+            "url": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011507&type=printable",
+            "resolved_url": "https://journals.plos.org/plosgenetics/article/file",
+            "sha256": "50cd8c8006fd2ef9c945fcda3611152456baa13b994a6a4c4a67d3d68409c03c"
+          }
+        },
+        "supplement.docx": {
+          "sha256": "11004164148b1adf7b60c393c191d34aebb0cab5f94442e320e47a4adf9717bc",
+          "bytes": 16781,
+          "transport": {
+            "url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011507.s007",
+            "resolved_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1011507/1/pgen.1011507.s007.docx",
+            "sha256": "11004164148b1adf7b60c393c191d34aebb0cab5f94442e320e47a4adf9717bc"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "plosmedicine-1004501",
+      "doi": "10.1371/journal.pmed.1004501",
+      "title": "Episiotomies and obstetric anal sphincter injuries following a restrictive episiotomy policy in France: An analysis of the 2010, 2016, and 2021 National Perinatal Surveys",
+      "published": "2025-01-14T00:00:00Z",
+      "authors": [
+        "Raphaele Houlbracq",
+        "Camille Le Ray",
+        "Béatrice Blondel",
+        "Nathalie Lelong",
+        "Anne Alice Chantry",
+        "Thomas Desplanches",
+        "ENP2021 Study Group"
+      ],
+      "article_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004501",
+      "metadata_sha256": "b3ef88b596604fdb75358b3be261b68b496aeae9aabec795ef55962573d9e830",
+      "attachment_caption": "S1 Table. Variations in the prevalence of episiotomy in France between 2010 and 2021 according to the classification for episiotomy practices (Crude Risk Ratio).",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1004501&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosmedicine/article/file?type=supplementary&id=10.1371/journal.pmed.1004501.s002"
+      },
+      "publisher": "PLOS Medicine",
+      "stratum": "plos-medicine-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "a19d4352db87d3ebd4c544cd3926bf305391e27a17839b15c7a04b945d27866d",
+          "bytes": 741206,
+          "transport": {
+            "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1004501&type=printable",
+            "resolved_url": "https://journals.plos.org/plosmedicine/article/file",
+            "sha256": "a19d4352db87d3ebd4c544cd3926bf305391e27a17839b15c7a04b945d27866d"
+          }
+        },
+        "supplement.docx": {
+          "sha256": "3658fcf92f61f4bedf937a31bb4f0f1697c94a4eaed87e25cff5b0e607cdd1b0",
+          "bytes": 17853,
+          "transport": {
+            "url": "https://journals.plos.org/plosmedicine/article/file?type=supplementary&id=10.1371/journal.pmed.1004501.s002",
+            "resolved_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pmed.1004501/1/pmed.1004501.s002.docx",
+            "sha256": "3658fcf92f61f4bedf937a31bb4f0f1697c94a4eaed87e25cff5b0e607cdd1b0"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "plosmedicine-1004504",
+      "doi": "10.1371/journal.pmed.1004504",
+      "title": "Maternal and perinatal outcomes after implementation of a more active management in late- and postterm pregnancies in Sweden: A population-based cohort study",
+      "published": "2025-01-16T00:00:00Z",
+      "authors": [
+        "Karin Källén",
+        "Mikael Norman",
+        "Charlotte Elvander",
+        "Christina Bergh",
+        "Verena Sengpiel",
+        "Henrik Hagberg",
+        "Teresia Svanvik",
+        "Ulla-Britt Wennerholm"
+      ],
+      "article_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004504",
+      "metadata_sha256": "a7db572610be515e7657c79265cdf7643c886ebc558207ec9dd82957a04fdfda",
+      "attachment_caption": "S1 Table. Results from analyses based on weighted summary of unit-specific Risk Ratios (period 2 versus period 1).",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1004504&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosmedicine/article/file?type=supplementary&id=10.1371/journal.pmed.1004504.s004"
+      },
+      "publisher": "PLOS Medicine",
+      "stratum": "plos-medicine-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "07cc36c2e6f818302cb8df819154d0edea92a3a427a38445a0ddb32524933fac",
+          "bytes": 967246,
+          "transport": {
+            "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1004504&type=printable",
+            "resolved_url": "https://journals.plos.org/plosmedicine/article/file",
+            "sha256": "07cc36c2e6f818302cb8df819154d0edea92a3a427a38445a0ddb32524933fac"
+          }
+        },
+        "supplement.docx": {
+          "sha256": "af5842dbcd7acd2dda2385213fb9d4d4263841f44b2d7beb892c6e12c63631a8",
+          "bytes": 24870,
+          "transport": {
+            "url": "https://journals.plos.org/plosmedicine/article/file?type=supplementary&id=10.1371/journal.pmed.1004504.s004",
+            "resolved_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pmed.1004504/1/pmed.1004504.s004.docx",
+            "sha256": "af5842dbcd7acd2dda2385213fb9d4d4263841f44b2d7beb892c6e12c63631a8"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "peerj-pmc11740737",
+      "doi": "10.7717/peerj.18786",
+      "title": "Do goats recognise humans cross-modally?",
+      "published": "2025-01-14",
+      "authors": [],
+      "article_url": "https://doi.org/10.7717/peerj.18786",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11740737/fullTextXML",
+      "metadata_sha256": "ea04fb67e66a98b3944769abd2e993833214abf6a33e14a36c811f6d631ffca8",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11740737.1.json",
+      "download_metadata_sha256": "37e628279f09e35c73afbd5159c28eb73ab5c7d2f9778ffb2f551c35e1c47b91",
+      "download_metadata": {
+        "pmcid": "PMC11740737",
+        "version": 1,
+        "pmid": 39830959,
+        "doi": "10.7717/peerj.18786",
+        "mid": null,
+        "title": "Do goats recognise humans cross-modally?",
+        "citation": "PeerJ. 2025 Jan 14;13:e18786. doi: 10.7717/peerj.18786",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11740737.1/PMC11740737.1.pdf?md5=4033f718dd4687dc54cf5880fc3658c0",
+        "xml_url": "s3://pmc-oa-opendata/PMC11740737.1/PMC11740737.1.xml?md5=0f758c8a377670fdda254210f87c37b0",
+        "text_url": "s3://pmc-oa-opendata/PMC11740737.1/PMC11740737.1.txt?md5=2d1a766b6bcebae059a109470b2aa0ca",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g001.jpg?md5=0ff852ef4129e9aab0a220064982b458",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g002.jpg?md5=588cbd1f0c0bc613bd867f21008b7687",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g003.jpg?md5=c392371cb974020dad9ba1483e29410e",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g004.jpg?md5=ca9628dfa30ef82052c1c0debd68ec11",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g005.jpg?md5=b087035f45941ad97af40ad97529f76d",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-g006.jpg?md5=c30174af1a7390f81acde22d36ae35e5",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s001.docx?md5=de5395d694098c25dd3925b0c07cfc76",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s002.xlsx?md5=64a365a87e3386e80a370fbc24f9970c",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s003.csv?md5=36018cad6422559104b70a7165bc3dc8",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s004.r?md5=1806c73683a64b6bac4a0d779a54cf90",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s005.csv?md5=a201d05c7422a1d92a61ead8923924da",
+          "s3://pmc-oa-opendata/PMC11740737.1/peerj-13-18786-s006.r?md5=445cccb891202f7d5fa8295828aaeb38"
+        ]
+      },
+      "original_pdf_name": "peerj-13-18786.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11740737.1/PMC11740737.1.pdf?md5=4033f718dd4687dc54cf5880fc3658c0"
+      },
+      "publisher": "PeerJ",
+      "stratum": "peerj-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "29c496b41adbd466eb97eb923d1576486137c5cb1613981a35fbd89a684a1e2f",
+          "bytes": 2117187,
+          "transport": {
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11740737.1/PMC11740737.1.pdf?md5=4033f718dd4687dc54cf5880fc3658c0",
+            "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11740737.1/PMC11740737.1.pdf",
+            "sha256": "29c496b41adbd466eb97eb923d1576486137c5cb1613981a35fbd89a684a1e2f"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "peerj-pmc11748422",
+      "doi": "10.7717/peerj.18762",
+      "title": "Composition of soil fungal communities and microbial activity along an elevational gradient in Mt. Jiri, Republic of Korea.",
+      "published": "2025-01-15",
+      "authors": [
+        "Mitcov Ana",
+        "Ko Daegeun",
+        "Ko Kwanyoung",
+        "Kim Jaeho",
+        "Oh Neung-Hwan",
+        "Kim Hyun Seok",
+        "Choe Hyeyeong",
+        "Chung Haegeun"
+      ],
+      "article_url": "https://doi.org/10.7717/peerj.18762",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11748422/fullTextXML",
+      "metadata_sha256": "2a5959a2ff077e11257896aeafb54f060abf3f42c06c3cd1d71bbbe13c248e2e",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11748422.1.json",
+      "download_metadata_sha256": "6100f6f67e2c3752f9f7e0feeee0295cddc8a81b693ac0eff4673c3cdd3db858",
+      "download_metadata": {
+        "pmcid": "PMC11748422",
+        "version": 1,
+        "pmid": 39839660,
+        "doi": "10.7717/peerj.18762",
+        "mid": null,
+        "title": "Composition of soil fungal communities and microbial activity along an elevational gradient in Mt. Jiri, Republic of Korea",
+        "citation": "PeerJ. 2025 Jan 15;13:e18762. doi: 10.7717/peerj.18762",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11748422.1/PMC11748422.1.pdf?md5=c402198ce98152bf081f4bd8f345317e",
+        "text_url": "s3://pmc-oa-opendata/PMC11748422.1/PMC11748422.1.txt?md5=828440019c21f093bc86566984a4bc8b",
+        "xml_url": "s3://pmc-oa-opendata/PMC11748422.1/PMC11748422.1.xml?md5=a7b3e22baed188a9c21c7847a6fc10de",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g001.jpg?md5=b551df6529a5d37a00399f289888042f",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g002.jpg?md5=ed7f40f3cc96e9f457da715c203820d0",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g003.jpg?md5=94951cb913703138efd646a924bcf85a",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g004.jpg?md5=624502492aeaf4e3daf285ee2759dc95",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g005.jpg?md5=1e105dbb5d8565992088bc4dab5cc7ed",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g006.jpg?md5=3cb9495dbcaea2f652052157feb1a47d",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-g007.jpg?md5=050f3e8f6883347b7538b2b283565ba4",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-s001.xlsx?md5=158330d9e7466f8b8b73888f99857d5e",
+          "s3://pmc-oa-opendata/PMC11748422.1/peerj-13-18762-s002.txt?md5=a5b8ed7c6b0438bba3eb39d4a39eae6a"
+        ]
+      },
+      "original_pdf_name": "peerj-13-18762.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11748422.1/PMC11748422.1.pdf?md5=c402198ce98152bf081f4bd8f345317e"
+      },
+      "publisher": "PeerJ",
+      "stratum": "peerj-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "7f88f248b3193544db703a5a95d3df7300c1ae40fea696cd65f5d8ff9133cb2e",
+          "bytes": 15069874,
+          "transport": {
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11748422.1/PMC11748422.1.pdf?md5=c402198ce98152bf081f4bd8f345317e",
+            "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11748422.1/PMC11748422.1.pdf",
+            "sha256": "7f88f248b3193544db703a5a95d3df7300c1ae40fea696cd65f5d8ff9133cb2e"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "scientific-reports-pmc11782514",
+      "doi": "10.1038/s41598-025-86314-2",
+      "title": "Tofacitinib and budesonide treatment affect stemness and chemokine release in IBD patient-derived colonoids.",
+      "published": "2025-01-30",
+      "authors": [
+        "Sridhar Arun",
+        "Bakke Ingunn",
+        "Gopalakrishnan Shreya",
+        "Osoble Nimo Mukhtar Mohamud",
+        "Hammarqvist Emilie Prytz",
+        "Pettersen Henrik P. Sahlin",
+        "Sandvik Arne Kristian",
+        "Østvik Ann Elisabet",
+        "Hansen Marianne Doré",
+        "Bruland Torunn"
+      ],
+      "article_url": "https://doi.org/10.1038/s41598-025-86314-2",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11782514/fullTextXML",
+      "metadata_sha256": "60c3169c5c451345d6b03a32a88beaffcbbece2f3d76303457875823c2734212",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11782514.1.json",
+      "download_metadata_sha256": "a1b2c354be894d5604451b438b199bd5ea85fb877eaf30d3fdc3ac69a2cd47d2",
+      "download_metadata": {
+        "pmcid": "PMC11782514",
+        "version": 1,
+        "pmid": 39885201,
+        "doi": "10.1038/s41598-025-86314-2",
+        "mid": null,
+        "title": "Tofacitinib and budesonide treatment affect stemness and chemokine release in IBD patient-derived colonoids",
+        "citation": "Sci Rep. 2025 Jan 30;15:3753. doi: 10.1038/s41598-025-86314-2",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.pdf?md5=e1541589afbc07fc2092e3df8fe30674",
+        "text_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.txt?md5=de9aa1b4ec54a525d7cbe0181241944e",
+        "xml_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.xml?md5=d40d67860dac6c187522b5351b5356ec",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig1_HTML.jpg?md5=080eb395532fb36922be22552e2b1196",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig2_HTML.jpg?md5=ddbef4bdb3103fed2010e1792f0a894a",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig3_HTML.jpg?md5=46e5deee3469a02aca6b34a995349000",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig4_HTML.jpg?md5=86153065a76b6a34976c83b6c157b24a",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig5_HTML.jpg?md5=487ad7d1dd8be97e1a1b96684287b9c7",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig6_HTML.jpg?md5=802e853f51c577b16e4e9106ae5a1633",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig7_HTML.jpg?md5=6fb3e6d816f6e4cb2698e689a00504ed",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig8_HTML.jpg?md5=9c0ff918e7c47411ef6195299b3d519f",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_MOESM1_ESM.xlsx?md5=2e5b303735c3eae052a5c171e252e19c",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_MOESM2_ESM.pdf?md5=c6c6744049374e24fbf8765498d227f6"
+        ]
+      },
+      "original_pdf_name": "41598_2025_Article_86314.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782514.1/PMC11782514.1.pdf?md5=e1541589afbc07fc2092e3df8fe30674"
+      },
+      "publisher": "Scientific Reports",
+      "stratum": "scientific-reports-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "a26060293b901a600abe4ef5d0c3afdcce75e06e3592ae6b326d8f0ab8ddd956",
+          "bytes": 13693717,
+          "transport": {
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782514.1/PMC11782514.1.pdf?md5=e1541589afbc07fc2092e3df8fe30674",
+            "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782514.1/PMC11782514.1.pdf",
+            "sha256": "a26060293b901a600abe4ef5d0c3afdcce75e06e3592ae6b326d8f0ab8ddd956"
+          }
+        }
+      },
+      "status": "downloaded"
+    },
+    {
+      "id": "scientific-reports-pmc11782508",
+      "doi": "10.1038/s41598-025-86649-w",
+      "title": "Azurin a potent anticancer and antimicrobial agent isolated from a novel Pseudomonas aeruginosa strain.",
+      "published": "2025-01-30",
+      "authors": [
+        "Zaghloul Nourhan A.",
+        "Gouda Mona K.",
+        "Elbahloul Yasser",
+        "El Halfawy Nancy M."
+      ],
+      "article_url": "https://doi.org/10.1038/s41598-025-86649-w",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11782508/fullTextXML",
+      "metadata_sha256": "6dc0de2bb52bce5d81b945ab183cc002d82c6ca66b9f03d07352f91a81b407d7",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11782508.1.json",
+      "download_metadata_sha256": "33926e76dae86123a4d4599fb6f512e422f5028bf44ef780194f18afc320d171",
+      "download_metadata": {
+        "pmcid": "PMC11782508",
+        "version": 1,
+        "pmid": 39885219,
+        "doi": "10.1038/s41598-025-86649-w",
+        "mid": null,
+        "title": "Azurin a potent anticancer and antimicrobial agent isolated from a novel Pseudomonas aeruginosa strain",
+        "citation": "Sci Rep. 2025 Jan 30;15:3735. doi: 10.1038/s41598-025-86649-w",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "text_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.txt?md5=01e0a94a145f26601f4d8f09a4b8e9c5",
+        "xml_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.xml?md5=decbf849746db3816ada6c6c58b01899",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.pdf?md5=0c7e721e6f5dc53c9610e1fd4fe5db8c",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig1_HTML.jpg?md5=96ec7e7ce9391ff18d8edc2cbc877ec4",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig2_HTML.jpg?md5=7367f8a363747341fa2550f03bc0e822",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig3_HTML.jpg?md5=269c1c01c44f8d482280d734e39c9d0f",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig4_HTML.jpg?md5=42d5ff1e7a274dae5200c849a6ef3aac",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig5_HTML.jpg?md5=320a351777bb62e176f5a6a3294c7266",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig6_HTML.jpg?md5=3378eb3edf9bbc8390e699a6cefec1ac",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig7_HTML.jpg?md5=58ec7e6045ca474217658b821ed9df25",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig8_HTML.jpg?md5=10443c7e8a181ff8c29e6b7cae2b180a",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_MOESM1_ESM.pdf?md5=dce5facf5d5f35686c7f79e994468afd",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_MOESM2_ESM.docx?md5=e20d0bd653ec1115ef15fe60379f9e21"
+        ]
+      },
+      "original_pdf_name": "41598_2025_Article_86649.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782508.1/PMC11782508.1.pdf?md5=0c7e721e6f5dc53c9610e1fd4fe5db8c"
+      },
+      "publisher": "Scientific Reports",
+      "stratum": "scientific-reports-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": {
+        "article.pdf": {
+          "sha256": "5e92ef98ea1df471be5f036d7db974594a5da47c3442c2ad2e1b19224e6fed9e",
+          "bytes": 3314626,
+          "transport": {
+            "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782508.1/PMC11782508.1.pdf?md5=0c7e721e6f5dc53c9610e1fd4fe5db8c",
+            "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782508.1/PMC11782508.1.pdf",
+            "sha256": "5e92ef98ea1df471be5f036d7db974594a5da47c3442c2ad2e1b19224e6fed9e"
+          }
+        }
+      },
+      "status": "downloaded"
+    }
+  ]
+}

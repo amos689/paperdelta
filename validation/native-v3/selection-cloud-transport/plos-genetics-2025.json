@@ -1,0 +1,85 @@
+{
+  "stratum": "plos-genetics-2025",
+  "query_url": "https://api.plos.org/search?q=publication_date%3A%5B2025-01-01T00%3A00%3A00Z+TO+2025-03-31T23%3A59%3A59Z%5D+AND+doc_type%3Afull+AND+article_type%3A%22Research+Article%22&fq=journal_key%3APLoSGenetics&fl=id%2Ctitle%2Cpublication_date&sort=publication_date+asc%2Cid+asc&rows=100",
+  "response_sha256": "51cb8ea52ff62acd4d98386aecd425b469a7141321df0bc2dddc7e2de7b4ffe4",
+  "inspected": [
+    {
+      "doi": "10.1371/journal.pgen.1011538",
+      "eligible": false
+    },
+    {
+      "doi": "10.1371/journal.pgen.1011220",
+      "eligible": false
+    },
+    {
+      "doi": "10.1371/journal.pgen.1011540",
+      "eligible": false
+    },
+    {
+      "doi": "10.1371/journal.pgen.1011545",
+      "eligible": false
+    },
+    {
+      "doi": "10.1371/journal.pgen.1011480",
+      "eligible": true
+    },
+    {
+      "doi": "10.1371/journal.pgen.1011507",
+      "eligible": true
+    }
+  ],
+  "selected": [
+    {
+      "id": "plosgenetics-1011480",
+      "doi": "10.1371/journal.pgen.1011480",
+      "title": "Refining fine-mapping: Effect sizes and regional heritability",
+      "published": "2025-01-09T00:00:00Z",
+      "authors": [
+        "Christian Benner",
+        "Anubha Mahajan",
+        "Matti Pirinen"
+      ],
+      "article_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011480",
+      "metadata_sha256": "760fb3d326b1b60059bb20940e549774401473669ddf186e9d7948399c4b8271",
+      "attachment_caption": "S1 Table. Marginal and conditional P-values from the PON1 GWAS for the cis-pQTL with 27,607 individuals from UKB.",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011480&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011480.s001"
+      },
+      "publisher": "PLOS Genetics",
+      "stratum": "plos-genetics-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "plosgenetics-1011507",
+      "doi": "10.1371/journal.pgen.1011507",
+      "title": "Genetic gradual reduction of OGT activity unveils the essential role of O-GlcNAc in the mouse embryo",
+      "published": "2025-01-09T00:00:00Z",
+      "authors": [
+        "Sara Formichetti",
+        "Agnieszka Sadowska",
+        "Michela Ascolani",
+        "Julia Hansen",
+        "Kerstin Ganter",
+        "Christophe Lancrin",
+        "Neil Humphreys",
+        "Mathieu Boulard"
+      ],
+      "article_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011507",
+      "metadata_sha256": "038ef2276ed50cdd73c2093facaeaa6a75bf1067187249047169d0c137d62bec",
+      "attachment_caption": "S1 Table. Description of the murine alleles generated.",
+      "urls": {
+        "article.pdf": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1011507&type=printable",
+        "supplement.docx": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1011507.s007"
+      },
+      "publisher": "PLOS Genetics",
+      "stratum": "plos-genetics-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "status": "selected"
+}

@@ -1,0 +1,154 @@
+{
+  "stratum": "scientific-reports-2025",
+  "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2045-2322+FIRST_PDATE%3A%5B2025-01-01+TO+2025-01-31%5D+OPEN_ACCESS%3AY+HAS_PDF%3AY&format=json&resultType=lite&pageSize=100",
+  "response_sha256": "7b4a52a509ce10327f28fedfb9419a2cf10f061cb6b622c1b6779a0dfc47a82c",
+  "inspected": [
+    {
+      "doi": "10.1038/s41598-024-73456-y",
+      "eligible": false
+    },
+    {
+      "doi": "10.1038/s41598-024-74750-5",
+      "eligible": false
+    },
+    {
+      "doi": "10.1038/s41598-024-85082-9",
+      "eligible": false
+    },
+    {
+      "doi": "10.1038/s41598-025-85586-y",
+      "eligible": false
+    },
+    {
+      "doi": "10.1038/s41598-025-86314-2",
+      "eligible": true
+    },
+    {
+      "doi": "10.1038/s41598-025-86572-0",
+      "eligible": false
+    },
+    {
+      "doi": "10.1038/s41598-025-86649-w",
+      "eligible": true
+    }
+  ],
+  "selected": [
+    {
+      "id": "scientific-reports-pmc11782514",
+      "doi": "10.1038/s41598-025-86314-2",
+      "title": "Tofacitinib and budesonide treatment affect stemness and chemokine release in IBD patient-derived colonoids.",
+      "published": "2025-01-30",
+      "authors": [
+        "Sridhar Arun",
+        "Bakke Ingunn",
+        "Gopalakrishnan Shreya",
+        "Osoble Nimo Mukhtar Mohamud",
+        "Hammarqvist Emilie Prytz",
+        "Pettersen Henrik P. Sahlin",
+        "Sandvik Arne Kristian",
+        "Østvik Ann Elisabet",
+        "Hansen Marianne Doré",
+        "Bruland Torunn"
+      ],
+      "article_url": "https://doi.org/10.1038/s41598-025-86314-2",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11782514/fullTextXML",
+      "metadata_sha256": "60c3169c5c451345d6b03a32a88beaffcbbece2f3d76303457875823c2734212",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11782514.1.json",
+      "download_metadata_sha256": "a1b2c354be894d5604451b438b199bd5ea85fb877eaf30d3fdc3ac69a2cd47d2",
+      "download_metadata": {
+        "pmcid": "PMC11782514",
+        "version": 1,
+        "pmid": 39885201,
+        "doi": "10.1038/s41598-025-86314-2",
+        "mid": null,
+        "title": "Tofacitinib and budesonide treatment affect stemness and chemokine release in IBD patient-derived colonoids",
+        "citation": "Sci Rep. 2025 Jan 30;15:3753. doi: 10.1038/s41598-025-86314-2",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.pdf?md5=e1541589afbc07fc2092e3df8fe30674",
+        "text_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.txt?md5=de9aa1b4ec54a525d7cbe0181241944e",
+        "xml_url": "s3://pmc-oa-opendata/PMC11782514.1/PMC11782514.1.xml?md5=d40d67860dac6c187522b5351b5356ec",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig1_HTML.jpg?md5=080eb395532fb36922be22552e2b1196",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig2_HTML.jpg?md5=ddbef4bdb3103fed2010e1792f0a894a",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig3_HTML.jpg?md5=46e5deee3469a02aca6b34a995349000",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig4_HTML.jpg?md5=86153065a76b6a34976c83b6c157b24a",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig5_HTML.jpg?md5=487ad7d1dd8be97e1a1b96684287b9c7",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig6_HTML.jpg?md5=802e853f51c577b16e4e9106ae5a1633",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig7_HTML.jpg?md5=6fb3e6d816f6e4cb2698e689a00504ed",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_Fig8_HTML.jpg?md5=9c0ff918e7c47411ef6195299b3d519f",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_MOESM1_ESM.xlsx?md5=2e5b303735c3eae052a5c171e252e19c",
+          "s3://pmc-oa-opendata/PMC11782514.1/41598_2025_86314_MOESM2_ESM.pdf?md5=c6c6744049374e24fbf8765498d227f6"
+        ]
+      },
+      "original_pdf_name": "41598_2025_Article_86314.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782514.1/PMC11782514.1.pdf?md5=e1541589afbc07fc2092e3df8fe30674"
+      },
+      "publisher": "Scientific Reports",
+      "stratum": "scientific-reports-2025",
+      "split": "development",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "scientific-reports-pmc11782508",
+      "doi": "10.1038/s41598-025-86649-w",
+      "title": "Azurin a potent anticancer and antimicrobial agent isolated from a novel Pseudomonas aeruginosa strain.",
+      "published": "2025-01-30",
+      "authors": [
+        "Zaghloul Nourhan A.",
+        "Gouda Mona K.",
+        "Elbahloul Yasser",
+        "El Halfawy Nancy M."
+      ],
+      "article_url": "https://doi.org/10.1038/s41598-025-86649-w",
+      "metadata_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11782508/fullTextXML",
+      "metadata_sha256": "6dc0de2bb52bce5d81b945ab183cc002d82c6ca66b9f03d07352f91a81b407d7",
+      "download_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11782508.1.json",
+      "download_metadata_sha256": "33926e76dae86123a4d4599fb6f512e422f5028bf44ef780194f18afc320d171",
+      "download_metadata": {
+        "pmcid": "PMC11782508",
+        "version": 1,
+        "pmid": 39885219,
+        "doi": "10.1038/s41598-025-86649-w",
+        "mid": null,
+        "title": "Azurin a potent anticancer and antimicrobial agent isolated from a novel Pseudomonas aeruginosa strain",
+        "citation": "Sci Rep. 2025 Jan 30;15:3735. doi: 10.1038/s41598-025-86649-w",
+        "is_pmc_openaccess": true,
+        "is_manuscript": false,
+        "is_historical_ocr": false,
+        "is_retracted": false,
+        "license_code": "CC BY",
+        "text_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.txt?md5=01e0a94a145f26601f4d8f09a4b8e9c5",
+        "xml_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.xml?md5=decbf849746db3816ada6c6c58b01899",
+        "pdf_url": "s3://pmc-oa-opendata/PMC11782508.1/PMC11782508.1.pdf?md5=0c7e721e6f5dc53c9610e1fd4fe5db8c",
+        "media_urls": [
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig1_HTML.jpg?md5=96ec7e7ce9391ff18d8edc2cbc877ec4",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig2_HTML.jpg?md5=7367f8a363747341fa2550f03bc0e822",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig3_HTML.jpg?md5=269c1c01c44f8d482280d734e39c9d0f",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig4_HTML.jpg?md5=42d5ff1e7a274dae5200c849a6ef3aac",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig5_HTML.jpg?md5=320a351777bb62e176f5a6a3294c7266",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig6_HTML.jpg?md5=3378eb3edf9bbc8390e699a6cefec1ac",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig7_HTML.jpg?md5=58ec7e6045ca474217658b821ed9df25",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_Fig8_HTML.jpg?md5=10443c7e8a181ff8c29e6b7cae2b180a",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_MOESM1_ESM.pdf?md5=dce5facf5d5f35686c7f79e994468afd",
+          "s3://pmc-oa-opendata/PMC11782508.1/41598_2025_86649_MOESM2_ESM.docx?md5=e20d0bd653ec1115ef15fe60379f9e21"
+        ]
+      },
+      "original_pdf_name": "41598_2025_Article_86649.pdf",
+      "urls": {
+        "article.pdf": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11782508.1/PMC11782508.1.pdf?md5=0c7e721e6f5dc53c9610e1fd4fe5db8c"
+      },
+      "publisher": "Scientific Reports",
+      "stratum": "scientific-reports-2025",
+      "split": "held-out",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "status": "selected"
+}
